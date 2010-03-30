@@ -1,14 +1,17 @@
 * Script
 
-In this tutorial, we will cover the basics of Plotting features available in Python. We shall use Ipython and pylab. Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion, help etc. pylab is python library which provides plotting functionality. 
+Hello, in this tutorial, we will cover the basics of Plotting features available in Python. We shall use Ipython and pylab. Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion, help etc. pylab is python library which provides plotting functionality. 
+
+I am assuming that you have them installed on your system.
 
 Lets start ipython. Open up your terminal and type the following. 
 
 $ ipython -pylab
+press RETURN
 
 This will give us a prompt where we can get started. 
 
-First, we create an array with equally spaced points from 0 to 2*pi
+First, we create a sequence of equally spaced points from 0 to 2*pi
 In []: x = linspace(0, 2*pi, 100)
 
 We have passed three arguments to linspace function - the first point, the last point and the total number of points. 

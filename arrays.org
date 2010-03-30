@@ -57,21 +57,22 @@
 
     We could also use a.shape to change the shape of the array a. 
     In []: a.shape = 2,5
-    Note that the total size of new array must be unchanged. 
+    Note that the total size(number of elements) of new array must 
+    be unchanged. 
 
-    We type a, to see what it looks like
+    We check re-shaped 'a' by
     In []: a
 
-    ones command can be used to get an array with all the entries as
-    1s. We pass it the shape of the array that we require. 
+    'ones' function can be used to get an array with all the entries as
+    1s. We pass it the shape of the required array. For ex. 
     
     In []: b = ones((3, 4))
 
-    Look at b, by printing it out. 
+    b is 3(cross)4 array with all 1s
     In []: b 
 
     To create an array with all entries as ones, with a shape similar to
-    an already existing array, we use the ones_like command. 
+    an already existing array, we use the ones_like function.
     In []: b = ones_like(a)
 
     zeros and zeros_like are similar commands that can give you arrays
@@ -91,20 +92,22 @@
 
     ---
     
-    Now that we have learnt how to create arrays, let move on to
+    Now that we have learnt how to create arrays, lets move on to
     accessing elements and changing them. 
     
     Let's work with the c, array which we had already created. 
 
     In []: c 
 
-    Let's say we want to access the element 23 in c, we say
+    Let's say we want to access the element 23 in c(second row 
+    third column), we say
 
     In []: c[1][2]
     Note that this is similar to accessing an element inside a list of
     lists. Also, note that counting again starts from 0. 
     
-    But arrays provide a more convenient way to access the elements. 
+    Additionally arrays provide a more convenient way to access the 
+    elements. 
     In []: c[1, 2]
     
     Now, we can also change the element using a simple assignment. 
@@ -126,6 +129,7 @@
     
     We could use the colon to access specific portions of an array. 
     In []: c[1,1:2]
+    second column, from second row(1) till third(2) and excluding it
     In []: c[1:2,1]
     In []: c[1:2,1:2]
     ...
