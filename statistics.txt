@@ -1,0 +1,52 @@
+Hello welcome to the tutorial on statistics and dictionaries in Python.
+
+In the previous tutorial we saw the `for' loop and lists. Here we shall look into
+calculating mean for the same pendulum experiment and then move on to calculate
+the mean, median and mode for a very large data set.
+
+
+In []: g_list = []
+In []: for line in open('pendulum.txt'):
+  ....     point = line.split()
+  ....     L = float(point[0])
+  ....     t = float(point[1])
+  ....     g = 4 * pi * pi * L / (t * t)
+  ....     g_list.append(g)
+
+In []: total = 0
+In []: for g in g_list:
+ ....:     total += g
+ ....:
+
+In []: g_mean = total / len(g_list)
+In []: print 'Mean: ', g_mean
+
+In []: g_mean = sum(g_list) / len(g_list)
+In []: print 'Mean: ', g_mean
+
+In []: g_mean = mean(g_list)
+In []: print 'Mean: ', g_mean
+
+
+In []: d = {'png' : 'image file',
+      'txt' : 'text file', 
+      'py' : 'python code'
+      'java': 'bad code', 
+      'cpp': 'complex code'}
+
+In []: d['txt']
+Out[]: 'text file'
+
+In []: 'py' in d
+Out[]: True
+
+In []: 'jpg' in d
+Out[]: False
+
+In []: d.keys()
+Out[]: ['cpp', 'py', 'txt', 'java', 'png']
+
+In []: d.values()
+Out[]: ['complex code', 'python code',
+        'text file', 'bad code', 
+        'image file']
