@@ -1,0 +1,165 @@
+* Arrays
+*** Outline
+***** Introduction
+******* Why do we want to do that?
+******* We shall use arrays (introduced before) for matrices
+******* Arsenal Required
+********* working knowledge of lists
+***** Initializing matrices
+******* Entering element-wise
+******* using special functions
+***** Accessing and Changing elements
+******* Slicing
+******* Striding
+***** {{Simple operations??}}
+*** Script
+    Welcome to the Tutorial on arrays. 
+
+    As mentioned in [the previous tutorial] arrays are much faster and
+    more efficient. In this tutorial we shall look at creating arrays,
+    accessing elements and changing them. 
+
+    ---
+
+    Let's start with creating simple arrays. We've already seen how to
+    convert lists to arrays. Entering an array is similar to that. 
+
+    a = array([5, 8, 10, 13])
+    
+    We enter a multi-dimensional array this way -
+    
+    In []: c = array([[11,12,13],
+                      [21,22,23],
+                      [31,32,33]])
+
+    To see what c is, we just type c in the prompt. 
+		      
+    In []: c
+
+    To see the dimensions of the array c, we use c.shape
+    In []: c.shape 
+
+    Now let us look at some special methods of creating an
+    array. There are various functions that allow us to create special
+    arrays. 
+
+    The first one we shall look at is, arange. arange is similar to
+    the range command, except that it returns an array and accepts
+    float arguments. [is range covered?]
+    
+    In []: a = arange(10)
+    
+    In []: a
+    This is the array we just created. 
+    
+    In []: a.shape
+    Note that a is one dimensional and has 10 elements, as expected. 
+
+    We could also use a.shape to change the shape of the array a. 
+    In []: a.shape = 2,5
+    Note that the total size(number of elements) of new array must 
+    be unchanged. 
+
+    We check re-shaped 'a' by
+    In []: a
+
+    'ones' function can be used to get an array with all the entries as
+    1s. We pass it the shape of the required array. For ex. 
+    
+    In []: b = ones((3, 4))
+
+    b is 3(cross)4 array with all 1s
+    In []: b 
+
+    To create an array with all entries as ones, with a shape similar to
+    an already existing array, we use the ones_like function.
+    In []: b = ones_like(a)
+
+    zeros and zeros_like are similar commands that can give you arrays
+    with all zeros. empty and empty_like give you empty arrays (arrays
+    with no initialization done.)
+
+    {Do an up arrow and quickly show them a couple of examples?}
+
+    The identity command can be used to obtain a square array with
+    ones on the main diagonal. 
+    
+    In []: identity(3)
+
+    To obtain a 2-D array, that is not necessarily square, eye command
+    can be used. Look at the documentation of eye (using eye?) for
+    more info. 
+
+    ---
+    
+    Now that we have learnt how to create arrays, lets move on to
+    accessing elements and changing them. 
+    
+    Let's work with the c, array which we had already created. 
+
+    In []: c 
+
+    Let's say we want to access the element 23 in c(second row 
+    third column), we say
+
+    In []: c[1][2]
+    Note that this is similar to accessing an element inside a list of
+    lists. Also, note that counting again starts from 0. 
+    
+    Additionally arrays provide a more convenient way to access the 
+    elements. 
+    In []: c[1, 2]
+    
+    Now, we can also change the element using a simple assignment. 
+    In []: c[1, 2] = -23
+
+    Let's look at accessing more than one elements at a time. We begin
+    with accessing rows. 
+    In []: c[1] gives us the second row. (counting starts from 0)
+
+    To get a column, we use a syntax that is similar to the one used
+    to access a single element. 
+    In []: c[:,1], gives us the first column. 
+    
+    The colon is a way to tell python to get all elements in that
+    dimension from the array. 
+
+    So, we could use a more explicit way to access a row of a
+    In []: c[1,:]
+    
+    We could use the colon to access specific portions of an array. 
+    In []: c[1,1:2]
+    second column, from second row(1) till third(2) and excluding it
+    In []: c[1:2,1]
+    In []: c[1:2,1:2]
+    ...
+    [Oh, by the way this is termed as slicing. :)]
+    {How many examples should we show here?}
+
+    --- 
+    
+    You may have observed the similarity of the semi-colon notation to
+    the range command. As expected, the semi-colon notation also
+    provides a way to specify a jump. This {concept/idea} is termed as
+    Striding. 
+
+    To get every alternate row of c, starting from the first one, we say
+    In []: c[::2,:]
+
+    To get every alternate row of c, starting from the second one, we
+    say
+    In []: c[1::2,:]
+
+
+    In []: c[:,::2]
+    In []: c[::2,::2]
+    {How many examples should we show here?}
+
+    ---
+
+    We come to the end of this tutorial on arrays. In this tutorial,
+    you've learnt how to create arrays and access, change elements. 
+
+    Thank you. 
+
+*** Notes

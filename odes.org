@@ -1,0 +1,10 @@
+* Solving ODEs
+*** Outline
+***** Introduction
+******* What are we going to do?
+******* How are we going to do?
+******* Arsenal Required
+********* working knowledge of arrays
+********* working knowledge of functions
+*** Script
+*** Notes

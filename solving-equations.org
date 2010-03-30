@@ -1,0 +1,121 @@
+* Solving Equations
+*** Outline
+***** Introduction
+******* What are we going to do?
+******* How are we going to do?
+******* Arsenal Required
+********* working knowledge of arrays
+
+*** Script
+    Welcome. 
+    
+    In this tutorial we shall look at solving linear equations, roots
+    of polynomials and other non-linear equations. In the process, we
+    shall look at defining functions. 
+
+    Let's begin with solving linear equations. 
+    {show a slide of the equations}
+    We shall use the solve function, to solve this system of linear
+    equations.  Solve requires the coefficients and the constants to
+    be in the form of matrices to solve the system of linear equations. 
+
+    We begin by entering the coefficients and the constants as
+    matrices. 
+
+    In []: A = array([[3,2,-1],
+                      [2,-2,4],                   
+                      [-1, 0.5, -1]])
+    In []: b = array([1, -2, 0])
+
+    Now, we can use the solve function to solve the given system. 
+    
+    In []: x = solve(A, b)
+
+    Type x, to look at the solution obtained. 
+
+    Next, we verify the solution by obtaining a product of A and x,
+    and comparing it with b. Note that we should use the dot function
+    here, and not the * operator. 
+
+    In []: Ax = dot(A, x)
+    In []: Ax
+
+    The result Ax, doesn't look exactly like b, but if you carefully
+    observe, you will see that it is the same as b. To save yourself
+    this trouble, you can use the allclose function. 
+
+    allclose checks if two matrices are close enough to each other
+    (with-in the specified tolerance level). Here we shall use the
+    default tolerance level of the function. 
+
+    In []: allclose(Ax, b)
+    The function returns True, which implies that the product of A &
+    x, and b are close enough. This validates our solution x. 
+
+    Let's move to finding the roots of polynomials. We shall use the
+    roots function to calculate the roots of the polynomial x^2-5x+6. 
+
+    The function requires an array of the coefficients of the
+    polynomial in the descending order of powers. 
+    
+    In []: coeffs = [1, -5, 6]
+    In []: roots(coeffs)
+    As you can see, roots returns the coefficients in an array. 
+
+    To find the roots of any arbitrary function, we use the fsolve
+    function. We shall use the function sin(x)+cos^2(x) as our
+    function, in this tutorial. First, of all we import fsolve, since it
+    is not already available to us. 
+
+    In []: from scipy.optimize import fsolve
+
+    Now, let's look at the arguments of fsolve using fsolve?
+    
+    In []: fsolve?
+
+    The first argument, func, is a python function that takes atleast
+    one argument. So, we should now define a python function for the
+    given mathematical expression sin(x)+cos^2(x). 
+
+    The second argument, x0, is the initial estimate of the roots of
+    the function. Based on this initial guess, fsolve returns a root. 
+
+    Before, going ahead to get a root of the given expression, we
+    shall first learn how to define a function in python. 
+    Let's define a function called f, which returns values of the
+    given mathematical expression (sin(x)+cos^2(x)) for a each input. 
+
+    In []: def f(x):
+               return sin(x)+cos(x)*cos(x)
+   
+    def, is a key word in python that tells the interpreter that a
+    function definition is beginning. f, here, is the name of the
+    function and x is the lone argument of the function. The whole
+    definition of the function is done with in an indented block. Our
+    function f has just one line in it's definition. 
+
+    You can test your function, by calling it with an argument for
+    which the output value is know, say x = 0. We can see that
+    sin(x) + cos^2(x) has a value of 1, when x = 0. 
+
+    Let's check our function definition, by calling it with 0 as an
+    argument. 
+    In []: f(0)
+    We can see that the output is as expected. 
+
+    Now, that we have our function, we can use fsolve to obtain a root
+    of the expression sin(x)+cos^2(x). Recall that fsolve takes
+    another argument, the initial guess. Let's use 0 as our initial
+    guess. 
+
+    In []: fsolve(f, 0)
+    fsolve has returned a root of sin(x)+cos^2(x) that is close to 0. 
+
+    That brings us to the end of this tutorial on solving linear
+    equations, finding roots of polynomials and other non-linear
+    equations. We have also learnt how to define functions and call
+    them. 
+
+    Thank you!
+
+*** Notes
