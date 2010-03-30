@@ -1,0 +1,57 @@
+* Script
+
+In this tutorial, we will cover the basics of Plotting features available in Python. We shall use Ipython and pylab. Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion, help etc. pylab is python library which provides plotting functionality. 
+
+Lets start ipython. Open up your terminal and type the following. 
+
+$ ipython -pylab
+
+This will give us a prompt where we can get started. 
+
+First, we create an array with equally spaced points from 0 to 2*pi
+In []: x = linspace(0, 2*pi, 100)
+
+We have passed three arguments to linspace function - the first point, the last point and the total number of points. 
+lets see what is x
+In []: x
+ x is a sequence of 100 points starting from 0 to 2*pi. 
+In []: len(x)
+ Shows the length of x to be 100 points. 
+
+To obtain the plot we say, 
+In []: plot(x, sin(x))
+
+It gives a plot of x vs y, where y is sin values of x, with the default color and line properties. 
+
+Both 'pi' and 'sin' come from 'pylab'. 
+
+Now that we have a basic plot, we can label and title the plot. 
+In []: xlabel('x') adds a label to the x-axis. Note that 'x' is enclosed in quotes. 
+In []: ylabel('sin(x)') adds a label to the y-axis. 
+In []: title('Sinusoid') adds a title to the plot. 
+
+Now we add a legend to the plot. 
+In []: legend(['sin(x)'])
+
+We can specify the location of the legend, by passing an additional argument to the function. 
+In []: legend(['sin(2y)'], loc = 'center')
+
+other positions which can be tried are 
+'best' 
+'right'
+
+We now annotate, i.e add a comment at, the point with maximum sin value. 
+In []: annotate('local max', xy=(1.5, 1))
+
+The first argument is the comment and second one is the position for it. 
+
+Now, we save the plot 
+In []: savefig('sin.png') saves the figure as sin.png in current directory. 
+
+?#other supported formats are: eps, emf, ps, pdf, ps, raw, rgba, svg
+
+and finally to close the plot
+In []: close()
+
+
+****************
