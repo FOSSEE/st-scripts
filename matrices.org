@@ -1,0 +1,77 @@
+* Matrices
+*** Outline
+***** Introduction
+******* Why do we want to do that?
+******* We shall use arrays (introduced before) for matrices
+******* Arsenal Required
+********* working knowledge of arrays
+***** Various matrix operations
+******* Transpose
+******* Sum of all elements
+******* Element wise operations
+******* Matrix multiplication
+******* Inverse of a matrix
+******* Determinant
+******* eigen values/vectors
+******* svd
+***** Other things available?
+*** Script
+    Welcome. 
+    
+    In this tutorial, you will learn how to perform some common matrix
+    operations. We shall look at some of the functions available in
+    pylab. Note that, this tutorial just scratches the surface and
+    there is a lot more that can be done. 
+
+    Let's begin with finding the transpose of a matrix. 
+    
+    In []: a = array([[ 1,  1,  2, -1],
+    ...:            [ 2,  5, -1, -9],
+    ...:            [ 2,  1, -1,  3],
+    ...:            [ 1, -3,  2,  7]])
+
+    In []: a.T
+
+    Type a, to observe the change in a. 
+    In []: a
+    
+    Now we shall look at adding another matrix b, to a. It doesn't
+    require anything special, just use the + operator. 
+    
+    In []: b = array([[3, 2, -1, 5],
+                      [2, -2, 4, 9],
+                      [-1, 0.5, -1, -7],
+                      [9, -5, 7, 3]])
+    In []: a + b
+
+    What do you expect would be the result, if we used * instead of
+    the + operator? 
+
+    In []: a*b
+    
+    You get an element-wise product of the two arrays and not a matrix
+    product. To get a matrix product, we use the dot function. 
+    
+    In []: dot(a, b)
+
+    The sum function returns the sum of all the elements of the
+    array. 
+    
+    In []: sum(a)
+
+    The inv command returns the inverse of the matrix. 
+    In []: inv(a)
+
+    In []: det(a)
+
+    In []: eig(a)
+    Returns the eigenvalues and the eigen vectors. 
+    
+    In []: eigvals(a)
+    Returns only the eigenvalues. 
+
+    In []: svd(a)
+    Singular Value Decomposition 
+
+*** Notes
+

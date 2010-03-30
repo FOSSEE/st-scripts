@@ -1,0 +1,109 @@
+* Plotting Experimental Data
+*** Outline
+***** Introduction
+******* Why do we want to do that?
+******* Inputting data
+********* Lists
+********* Files
+******* Arsenal Required
+********* Lists
+*********** initializing
+*********** appending to lists
+********* for loops
+*********** iterating over a list
+********* basic plotting
+***** Inputting data as lists
+******* Input the dependent and independent variables in two lists
+******* Plot the points
+***** Plotting from files
+******* Look at the file
+******* Read the file and get data into variables
+******* Do any massaging required
+******* Plot the points
+
+*** Script
+
+This video will teach you how to plot experimental data, with two
+variables. 
+
+In general, we don't plot (analytical) functions. We often have
+experimental data points, that we wish to plot. We shall look at
+inputting this data and plotting it. 
+
+The data could be input (or entered) in two formats. For smaller data
+sets we could use lists to input the data and use plain text files for
+(somewhat?) larger ones. (Binary files?)
+
+[[[Before starting with this video, you should be comfortable with
+  - Lists
+    - initializing them
+    - appending elements to lists
+  - for command
+    - iterating over a list
+  - split command
+  - plot command
+    - plotting two variables
+]]]
+
+Let's begin with inputting the data as lists and plotting it. 
+
+x = [0, 1, 2.1, 3.1, 4.2, 5.2]
+y = [0, 0.8, 0.9, 0, -0.9, -0.8]
+Now we have two lists x and y, with the values that we wish to plot. 
+
+We say:
+plot (x, y, 'o')
+
+and there, we have our plot!
+
+[We close the plot window. ]
+
+Now, that we know how to plot data which is in lists, we will look at
+plotting data which is in a text file. Essentially, we read the data
+from the file and massage it into lists again. Then we can easily
+plot it, as we already did. 
+
+As an example we will use the data collected from a simple pendulum
+experiment. We have the data of, the length of pendulum vs. the time
+period of the pendulum in the file pendulum.txt
+
+In []: cat pendulum.txt (windows?)
+
+The cat command, shows the contents of the file. 
+
+The first column is the length of the pendulum and the second column
+is the time. We read the file line-by-line, collect the data into
+lists and plot them. 
+
+We begin with initializing three empty lists for length, time-period
+and square of the time-period. 
+
+l = []
+t = []
+tsq = []
+
+Now we open the file and read it line by line. 
+for line in open('pendulum.txt'):
+
+We split each line at the space 
+    point = line.split()
+
+Then we append the length and time values to the corresponding
+lists. Note that they are converted from strings to floats, before
+appending to the lists
+    l.append(float(point[0])
+    t.append(float(point[1])
+We also calculate the squares of the time-period and append to the end
+of the tsq list. 
+    tsq.append(t[-1]*t[-1])
+As you might be aware, t[-1] gives the last element of the list t. 
+
+Now the lists l, t have the required data. We can simply plot them, as
+we did already. 
+
+plot(l, t, 'o')
+
+Enjoy!
+
+*** Notes
+    - Also put in code snippets?
