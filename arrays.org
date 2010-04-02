@@ -1,16 +1,17 @@
 * Arrays
 *** Outline
 ***** Introduction
-******* Why do we want to do that?
-******* We shall use arrays (introduced before) for matrices
+******* What do we want to do
+********* We shall use arrays (mentioned before) which
+********* shall be used for matrices in future
 ******* Arsenal Required
 ********* working knowledge of lists
 ***** Initializing matrices
 ******* Entering element-wise
 ******* using special functions
 ***** Accessing and Changing elements
-******* Slicing
-******* Striding
+******* Slicing??
+******* Striding??
 ***** {{Simple operations??}}
 *** Script
     Welcome to the Tutorial on arrays. 
@@ -22,14 +23,18 @@
     ---
 
     Let's start with creating simple arrays. We've already seen how to
-    convert lists to arrays. Entering an array is similar to that. 
+    convert lists to arrays. Inputting a new array is similar to that. 
 
-    a = array([5, 8, 10, 13])
+    In []: a = array([5, 8, 10, 13])
+
+    Type /a/, to see what it is. 
+
+    In []: a
     
     We enter a multi-dimensional array this way -
     
     In []: c = array([[11,12,13],
-                      [21,22,23],
+                     [21,22,23],
                       [31,32,33]])
 
     To see what c is, we just type c in the prompt. 
@@ -43,9 +48,9 @@
     array. There are various functions that allow us to create special
     arrays. 
 
-    The first one we shall look at is, arange. arange is similar to
+    The first one we shall look at is, /arange/. /arange/ is similar to
     the range command, except that it returns an array and accepts
-    float arguments. [is range covered?]
+    float arguments. 
     
     In []: a = arange(10)
     
@@ -53,33 +58,34 @@
     This is the array we just created. 
     
     In []: a.shape
-    Note that a is one dimensional and has 10 elements, as expected. 
+    Note that /a/ is one dimensional and has 10 elements, as expected. 
 
     We could also use a.shape to change the shape of the array a. 
     In []: a.shape = 2,5
-    Note that the total size(number of elements) of new array must 
-    be unchanged. 
+    Note that the total size of new array must be unchanged. 
 
-    We check re-shaped 'a' by
+    We type a, to see what it looks like
     In []: a
 
-    'ones' function can be used to get an array with all the entries as
-    1s. We pass it the shape of the required array. For ex. 
+    ones command can be used to get an array with all the entries as
+    ones. We pass it the shape of the array that we require. 
     
     In []: b = ones((3, 4))
 
-    b is 3(cross)4 array with all 1s
+    Look at b, by printing it out. 
     In []: b 
 
-    To create an array with all entries as ones, with a shape similar to
-    an already existing array, we use the ones_like function.
+    To create an array with all entries as ones, with it's shape
+    similar to an already existing array, we use the ones_like
+    command.  
     In []: b = ones_like(a)
 
     zeros and zeros_like are similar commands that can give you arrays
     with all zeros. empty and empty_like give you empty arrays (arrays
     with no initialization done.)
 
-    {Do an up arrow and quickly show them a couple of examples?}
+    In []: b = zeros((3, 4))
+    In []: b = zeros_like(a)
 
     The identity command can be used to obtain a square array with
     ones on the main diagonal. 
@@ -92,22 +98,20 @@
 
     ---
     
-    Now that we have learnt how to create arrays, lets move on to
+    Now that we have learnt how to create arrays, let's move on to
     accessing elements and changing them. 
     
     Let's work with the c, array which we had already created. 
 
     In []: c 
 
-    Let's say we want to access the element 23 in c(second row 
-    third column), we say
+    Let's say we want to access the element 23 in c, we say
 
     In []: c[1][2]
     Note that this is similar to accessing an element inside a list of
     lists. Also, note that counting again starts from 0. 
     
-    Additionally arrays provide a more convenient way to access the 
-    elements. 
+    But arrays provide a more convenient way to access the elements. 
     In []: c[1, 2]
     
     Now, we can also change the element using a simple assignment. 
@@ -121,39 +125,57 @@
     to access a single element. 
     In []: c[:,1], gives us the first column. 
     
-    The colon is a way to tell python to get all elements in that
-    dimension from the array. 
+    The colon specifies that we wish to obtain all elements in that
+    dimension from the array.  
 
-    So, we could use a more explicit way to access a row of a
+    So, we could use a more explicit way to access the second row of
+    the array. 
     In []: c[1,:]
     
-    We could use the colon to access specific portions of an array. 
-    In []: c[1,1:2]
-    second column, from second row(1) till third(2) and excluding it
-    In []: c[1:2,1]
-    In []: c[1:2,1:2]
-    ...
-    [Oh, by the way this is termed as slicing. :)]
-    {How many examples should we show here?}
+    The colon can be used to access specific portions of the array,
+    similar to the way we do with lists. 
+    In []: c[1,1:3]
+    Observe that we get the second and third columns from the second
+    row. As with lists, the number after the colon is excluded when
+    slicing a portion of the array. 
+
+    In []: c[1:3,1]
+    Now, we get the second and third rows from the first column. 
+
+    In []: c[1:3,1:3]
+    We get the second and third rows and the second and third
+    columns. 
+
+    The numbers before and after the colons are optional. If the
+    number before the colon is omitted, it is assumed to be zero by
+    default. If the element after the colon is omitted, it is assumed
+    to be until the end. 
+
+    In []: c[1:, 1:]
+    This is essentially similar to the previous example. We are using
+    the default value i.e, the end, instead of specifying 3,
+    explicitly. 
+
+    In []: c[:2, :2]
+    We have omitted specifying the zero before the colon, explicitly. 
 
     --- 
     
     You may have observed the similarity of the semi-colon notation to
-    the range command. As expected, the semi-colon notation also
-    provides a way to specify a jump. This {concept/idea} is termed as
-    Striding. 
+    the notation used in lists. As expected, the semi-colon notation
+    also provides a way to specify a jump. This {concept/idea} is
+    termed as Striding. 
 
     To get every alternate row of c, starting from the first one, we say
     In []: c[::2,:]
 
     To get every alternate row of c, starting from the second one, we
-    say
+    say 
     In []: c[1::2,:]
 
 
     In []: c[:,::2]
     In []: c[::2,::2]
-    {How many examples should we show here?}
 
     ---
 
