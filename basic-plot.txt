@@ -1,35 +1,59 @@
 * Script
 **********
-Some greeting - Hi or Hello or Welcome - would be polite to start with
+Some greeting-- Hi or Hello or Welcome - would be polite to start with
 **********
 
-Hello, in this tutorial, we will cover the basics of the Plotting features available in Python. We shall use Ipython and pylab. Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion, help etc. pylab is python library which provides plotting functionality. 
+Hello and welcome to the first tutorial in a series of tutorials on Python for Scientific Computing . 
+In this tutorial, we will cover the basics of the Plotting features available in Python. 
+For this we shall use  Ipython and pylab. 
+Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features.
+Pylab is python library which provides plotting functionality. 
 
-I am assuming that you have both of them installed on your system.
+I am assuming that you have both Ipython and Pylab installed on your system .
 
+On your terminal type in the command Ipython -pylab
 $ ipython -pylab
 press RETURN
 
-This will give us a prompt where we can get started. 
+We will first start with the absolute basic i.e how to print hello world
 
-First, we create a sequence of equally spaced points starting from 0 to 2*pi
+In []: print 'hello world'
 
-In []: x = lins<Tab> will automatically complete the function. This is one of the many useful features of IPython.
+Now to exit ipython type Ctrl-D . It will ask if you wish to exit type y to exit
 
-In []: x = linspace(0, 2*pi, 100)
+Now we will get back to plotting .
+
+type :
+$ ipython -pylab
+press RETURN
+
+First, we will create a sequence of equally spaced points starting from 0 to 2*pi
+
+For this type:
+
+In []: x = linspace(0, 2*pi, 50)
+
+You can also do :
+In []: x = lins<Tab> This is an Ipython feature that will auto-suggest the word
+
+
+
 
 To know more about the 'linspace' function type
 
-In []: lins<Tab>pace?
+In []: lins<Tab>pace  linspace?
 
-It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. (To scroll down the page use 'SPACE' key and to scroll up use 'b')To navigate through content use arrow(/Page Up and Page Down) keys. ':See Also' section hints about other related or similar functions which might be useful. To exit help (mode) press 'q'.
+It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage.
 
-In this case, we have passed three arguments to the linspace function - the starting point, the last point and the total number of points. 
-Check value of x by
+as you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
+ 
+
+
+You can Check value of x by
 In []: x
- x is a sequence of 100 points starting from 0 to 2*pi. Length of x can be seen via function
+ x is a sequence of 50 points starting from 0 to 2*pi. Length of x can be seen via function
 In []: len(x)
-which shows it to be 100 points.
+which shows it to be 50 points.
 
 To obtain the plot we say,
 In []: plot(x, sin(x))
@@ -52,14 +76,14 @@ In []: legend(['sin(x)'])
 
 To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us (in reverse order)/back.
 We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
-In []: legend(['sin(2y)'], loc = 'center')
+In []: legend(['sin(x)'], loc = 'center')
 
 other positions which can be tried are
 'best' 
 'right'
 
 We now annotate, i.e add a comment, at a specific position in the graph. In this case, let's add a comment at the point with maximum sin value. 
-In []: annotate('local max', xy=(1.5, 1))
+In []: annotate('origin', xy=(0, 0))
 
 The first argument is the comment string and second one is the position for it. 
 
@@ -102,7 +126,7 @@ figure(1) shifts the focus back to figure(1).
 In []: figure(1)
 
 title() sets the title of figure(1) 
-In []: title('sin(y)')
+In []: title('sin(x)')
 
 Here we save the plot of figure(1). 
 In []: savefig('sine.png')
@@ -114,14 +138,11 @@ In []: close()
 close() now closes the figure(2).
 In []: close()
 
-The plot command takes the following optional parameters such as 'r' which generates the plot in red color. 
-Use up arrow key to get till this command
-In []: plot(x, cos(x), 'r') and add argument.
-
-In []: clf()
+The plot command takes the following optional parameters such as 'g' which generates the plot in green color. 
 
 Passing the linewidth=2 option to plot, generates the plot with linewidth of two units.
-In []: plot(x, sin(x), 'g', linewidth=2)
+Use Up arrow to get to the previous commands 
+In []: plot(x, sin(x), 'g', linewidth=2) and add arguments
 
 In []: clf()
 
@@ -145,6 +166,9 @@ In []: clf()
 and finally to close the plot
 In []: close()
 
+
+
+
 ****************
-This brings us to the end of this tutorial.  This tutorial is first in the series of Python for Scientific Computing Tutorials.
+This brings us to the end of this tutorial.  Thank you for attending this first tutorial on Python for Scientific Computing 
 ****************
