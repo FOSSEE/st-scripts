@@ -7,4 +7,117 @@
 ********* working knowledge of arrays
 ********* working knowledge of functions
 *** Script
+    Welcome. 
+    
+    In this tutorial we shall look at solving Ordinary Differential Equations
+    using odeints in Python.
+
+    Let's consider a classical problem of the spread of epidemic in a
+    population.
+    This is given by dy/dt = ky(L-y) where L is the total population.
+    For our problem Let us use L=25000, k=0.00003.
+    Let the boundary condition be y(0)=250.
+
+    First of all run the magic command to import odeint to our program.
+
+    In []: from scipy.integrate import odeint
+
+
+    For now just remember this as a command that does some magic to obtain
+    the function odeint in to our program.
+    We will come back to the details of this command in subsequent sessions.
+
+    We can represent the given ODE as a Python function.
+    This function takes the dependent variable y and the independent variable t
+    as arguments and returns the ODE.
+    Our function looks like this:
+    (Showing the slide should be sufficient)
+
+    In []: def epid(y, t):
+      ....     k = 0.00003
+      ....     L = 25000
+      ....     return k*y*(L-y)
+
+
+    Independent variable t can have be assigned the values in the interval of
+    0 and 12 with 61 points using linspace:
+
+    In []: t = linspace(0, 12, 61)
+
+    Now obtaining the odeint of the ode we have already defined is as simple as
+    calling the Python's odeint function which we imported:
+    
+    In []: y = odeint(epid, 250, t)
+
+    We can plot the the values of y against t to get a graphical picture our ODE.
+
+
+    Let us move on to solving a system of two ordinary differential equations.
+    Here we shall take the example ODEs of a simple pendulum.
+
+    The equations can be written as a system of two first order ODEs
+
+    d(theta)/dt = omega
+
+    and
+
+    d(omega)/dt = - g/L sin(theta)
+
+    Let us define the boundary conditions as: at t = 0, 
+    theta = theta 0 (10 degrees) and omega = 0
+
+    Let us first define our system of equations as a Python function, pend_int.
+    As in the earlier case of single ODE we shall use odeint function of Python
+    to solve this system of equations by passing pend_int to odeint.
+
+    pend_int is defined as shown:
+
+    In []: def pend_int(initial, t):
+      ....     theta = initial[0]
+      ....     omega = initial[1]
+      ....     g = 9.81
+      ....     L = 0.2
+      ....     f=[omega, -(g/L)*sin(theta)]
+      ....     return f
+      ....
+
+    It takes two arguments. The first argument is a 2-tuple containing the two
+    dependent variables in the system, theta and omega.
+    The second argument is the independent variable t.
+
+    In the function we assign theta and omega to first and second values of the
+    initial argument respectively.
+    Acceleration due to gravity, as we know is 9.8 meter per second sqaure.
+    Let the length of the the pendulum be 0.2 meter.
+
+    We create a list, f, of two equations which corresponds to our two ODEs,
+    that is d(theta)/dt = omega and d(omega)/dt = - g/L sin(theta).
+    We return this list of equations f.
+
+    Now we can create a set of values for our time variable t over which we need
+    to integrate our system of ODEs. Let us say,
+
+    In []: t = linspace(0, 20, 101)
+
+    We shall assign the boundary conditions to the variable initial.
+
+    In []: initial = [10*2*pi/360, 0]
+
+    Now solving this system is just a matter of calling the odeint function with
+    the correct arguments.
+    So first let us import odeint function into our program using the magic
+    import command
+
+    In []: from scipy.integrate import odeint
+
+    We can call ode_int as:
+
+    In []: pend_sol = odeint(pend_int, initial,t)
+
+    Plotting theta against t and omega against t we obtain the plots as shown
+    in the slide.
+
+    Thus we come to the end of this session on solving ordinary differential
+    equations in Python. Thanks for listening to this tutorial.
+
 *** Notes
