@@ -3,15 +3,23 @@
 Some greeting-- Hi or Hello or Welcome - would be polite to start with
 **********
 
-Hello and welcome to the first tutorial in a series of tutorials on Python for Scientific Computing . 
-In this tutorial, we will cover the basics of the Plotting features available in Python. 
+*Hello and welcome to this  tutorial on Basic Plotting using Python in a series of tutorials on Python for Scientific Computing .This tutorial is created by the FOSSEE team , IIT Bombay .  
+
+*The intended audience for this tutorial are Engineering , mathematics and science teachers and students
+
+*The goals are to
+help one use Python as a basic plotting tool.
+and understand python as a scripting language.
+
+
+*In this tutorial, we will cover the basics of the Plotting features available in Python. 
 For this we shall use  Ipython and pylab. 
 Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features.
 Pylab is python library which provides plotting functionality. 
 
 I am assuming that you have both Ipython and Pylab installed on your system .
 
-On your terminal type in the command Ipython -pylab
+*On your terminal type in the command Ipython -pylab
 $ ipython -pylab
 press RETURN
 
@@ -19,76 +27,89 @@ We will first start with the absolute basic i.e how to print hello world
 
 In []: print 'hello world'
 
-Now to exit ipython type Ctrl-D . It will ask if you wish to exit type y to exit
+Voila we have got hello world output 
 
-Now we will get back to plotting .
+To exit ipython type Ctrl-D . It will ask if you wish to exit ipython .
 
-type :
+*Now we will get back to plotting .
+
+type again :
 $ ipython -pylab
 press RETURN
 
-First, we will create a sequence of equally spaced points starting from 0 to 2*pi
+First, we will create a sequence of equally spaced points starting from 0 to 2*pi , we will use function linspace for that
 
-For this type:
+Type:
+In []: x = lins<Tab> This is an Ipython feature that will auto-suggest the word
+
+In []  x=linspace(
+oops  I made a mistake . As you can see I made the mistake of not writing command correctly
+and Ipython changed the prompt . To get the old prompt back type crtl-c
 
 In []: x = linspace(0, 2*pi, 50)
 
-You can also do :
-In []: x = lins<Tab> This is an Ipython feature that will auto-suggest the word
-
-
-
-
-To know more about the 'linspace' function type
-
-In []: lins<Tab>pace  linspace?
-
-It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage.
-
-as you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
- 
-
-
-You can Check value of x by
-In []: x
- x is a sequence of 50 points starting from 0 to 2*pi. Length of x can be seen via function
-In []: len(x)
-which shows it to be 50 points.
 
 To obtain the plot we say,
 In []: plot(x, sin(x))
 ***
 As you can see a plot has appeared on the screen. 
 ***
+
 The plot has the default color and line properties. 
 
-Both 'pi' and 'sin' come from 'pylab'. 
+*To know more about any function,  example for the 'linspace' function you can type ? after it .
 
-Now that we have a basic plot, we can label and title the plot. 
+In []: linspace?
+
+It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up , down and pageup and pagedown arrows and q for quitting . See how easy to get help in python .  
+
+*As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
+
+
+In this case we have used two commands 
+'pi' and 'sin' these come from 'pylab'library called using -pylab. 
+
+*Now that we have a basic plot, we can label and title the plot. 
 In []: xla<TAB>bel('x') will add a label to the x-axis. Note that 'x' is enclosed in quotes. 
 Similarly
 In []: ylabel('sin(x)') adds a label to the y-axis.
 To add a title to plot we simply use 
 In []: tit<TAB>le('Sinusoid').
 
-Now we will add a legend to the plot. 
+Hmm we also got the axis's nicely labeled and the plot titled but there is still a important detail left.That might leave a teacher seeing this unsatisfied , it lacks a legend. 
+
+Add a legend to the plot by typing 
 In []: legend(['sin(x)'])
 
+Ok what if I want the legend to be in the centre . It just requires us to define one extra parameter. 
+
+We have just typed legend command can we reuse it . Yes 
+
 To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us (in reverse order)/back.
+
 We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
+#Ask madhu how to describe the feature here.
 In []: legend(['sin(x)'], loc = 'center')
 
+Note that once 
 other positions which can be tried are
 'best' 
 'right'
 
-We now annotate, i.e add a comment, at a specific position in the graph. In this case, let's add a comment at the point with maximum sin value. 
+
+Very often in mathematical plots we have define certain points abd there meaning also called annotating . We next look at how to annotate
+In this case, let's add a comment at the point of origin. 
 In []: annotate('origin', xy=(0, 0))
 
 The first argument is the comment string and second one is the position for it. 
 
-Now, we save the plot as follows
+Ok, what do I do with all this effort . I obviously have to save it . 
+
+We save the plot by the function savefig
 In []: savefig('sin.png') saves the figure with the name 'sin.png' in the current directory. 
+
+
+
 
 #other supported formats are: eps, ps, pdf etc.
 
@@ -105,30 +126,33 @@ In []: legend( [ 'sin(x)' , 'cos(x)'] )
 In []: clf()
 clears the plot area and starts afresh.
 
-In case we want to create multiple plots rather than overlaid plots, we use 'figure' function.
+
+
+*In case we want to create multiple plots rather than overlaid plots, we use 'figure' function.
 The figure command is used to open a plain figure window without any plot.
 In []: figure(1)
 
-plot() plot command plots a sin plot on figure(1)
+We will use plot() plot again to plot a sin curve on figure(1)
 In []: plot(x, sin(x))
 
-to creates a new plain figure window without any plot. 
+to creates a new plain figure window without any plot type: 
 In []: figure(2)
 figure() is also used to shift the focus between multiple windows. 
 
-Any command issued henceforth applies to this window only.
+Any command issued henceforth applies to this window only so typing
 In []: plot(x, cos(x))
+plots cos curve on second window now.
 The previous plot window remains unchanged to these commands.
 
-In []: savefig('cosine.png')
 
-figure(1) shifts the focus back to figure(1).
+
+calling function figure using argument 1 shifts the focus back to figure(1).
 In []: figure(1)
 
 title() sets the title of figure(1) 
 In []: title('sin(x)')
 
-Here we save the plot of figure(1). 
+Now we save the plot of figure(1) by typing 
 In []: savefig('sine.png')
 
 close() closes figure(1). Now there is just one figure that is open and hence 
@@ -138,7 +162,7 @@ In []: close()
 close() now closes the figure(2).
 In []: close()
 
-The plot command takes the following optional parameters such as 'g' which generates the plot in green color. 
+The plot command takes the  parameters such as 'g' which generates the plot in green color. 
 
 Passing the linewidth=2 option to plot, generates the plot with linewidth of two units.
 Use Up arrow to get to the previous commands 
@@ -159,7 +183,7 @@ In []: clf()
 A plot using dashed lines can be generated by passing the '--' parameter
 In []: plot(x, sin(x), '--')
 
-You may look at more options related to colors and type of lines using plot?
+You may look at more options related to colors and type of lines using plot?(question mark)
 
 In []: clf()
 
