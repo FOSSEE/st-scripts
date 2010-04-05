@@ -3,9 +3,9 @@
 Some greeting-- Hi or Hello or Welcome - would be polite to start with
 **********
 
-*Hello and welcome to this  tutorial on Basic Plotting using Python in a series of tutorials on Python for Scientific Computing .This tutorial is created by the FOSSEE team , IIT Bombay .  
+*Hello and welcome to the tutorial on Basic Plotting using Python. This is the first tutorial in a series of tutorials on Python for Scientific Computing. This tutorial is created by the FOSSEE team, IIT Bombay .  
 
-*The intended audience for this tutorial are Engineering , mathematics and science teachers and students
+*The intended audience for this tutorial are Engineering, mathematics and science teachers and students
 
 *The goals are to
 help one use Python as a basic plotting tool.
@@ -14,7 +14,7 @@ and understand python as a scripting language.
 
 *In this tutorial, we will cover the basics of the Plotting features available in Python. 
 For this we shall use  Ipython and pylab. 
-Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features.
+Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features which are not present in the vanilla Python interpreter.
 Pylab is python library which provides plotting functionality. 
 
 I am assuming that you have both Ipython and Pylab installed on your system .
@@ -23,15 +23,15 @@ I am assuming that you have both Ipython and Pylab installed on your system .
 $ ipython -pylab
 press RETURN
 
-We will first start with the absolute basic i.e how to print hello world
+We will first start with the absolute basic, that is how to print hello world
 
 In []: print 'hello world'
 
-Voila we have got hello world output 
+Voila we have got hello world as the output 
 
-To exit ipython type Ctrl-D . It will ask if you wish to exit ipython .
+To exit ipython press Ctrl-D.
 
-*Now we will get back to plotting .
+*Now we will get back to plotting.
 
 type again :
 $ ipython -pylab
@@ -61,7 +61,9 @@ The plot has the default color and line properties.
 
 In []: linspace?
 
-It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up , down and pageup and pagedown arrows and q for quitting . See how easy to get help in python .  
+It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up , down arrows ,  pageup and pagedown keys .
+At any time you want to come out of the help use q key . 
+See how easy it is  to get help in python .  
 
 *As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
 
@@ -89,6 +91,7 @@ To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us (in
 
 We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
 #Ask madhu how to describe the feature here.
+Once you start editing a previous command and then you try to use 'Up arrow key ' you can get commands that are only similar to the command you are editing . But if you move your cursor to the beginning of the line you can get all the previous commands using up and down arrow keys .
 In []: legend(['sin(x)'], loc = 'center')
 
 Note that once 
