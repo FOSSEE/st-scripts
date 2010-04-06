@@ -1,7 +1,4 @@
 * Script
-**********
-Some greeting-- Hi or Hello or Welcome - would be polite to start with
-**********
 
 *Hello and welcome to the tutorial on Basic Plotting using Python. This is the first tutorial in a series of tutorials on Python for Scientific Computing. This tutorial is created by the FOSSEE team, IIT Bombay .  
 
@@ -9,8 +6,6 @@ Some greeting-- Hi or Hello or Welcome - would be polite to start with
 
 *The goals are to
 help one use Python as a basic plotting tool.
-and understand python as a scripting language.
-
 
 *In this tutorial, we will cover the basics of the Plotting features available in Python. 
 For this we shall use  Ipython and pylab. 
@@ -42,14 +37,14 @@ First, we will create a sequence of equally spaced points starting from 0 to 2*p
 Type:
 In []: x = lins<Tab> This is an Ipython feature that will auto-suggest the word
 
-In []  x=linspace(
+In []  x=linspace( RETURN
 oops  I made a mistake . As you can see I made the mistake of not writing command correctly
 and Ipython changed the prompt . To get the old prompt back type crtl-c
 
 In []: x = linspace(0, 2*pi, 50)
 
 
-To obtain the plot we say,
+To obtain the plot we use,
 In []: plot(x, sin(x))
 ***
 As you can see a plot has appeared on the screen. 
@@ -61,15 +56,15 @@ The plot has the default color and line properties.
 
 In []: linspace?
 
-It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up , down arrows ,  pageup and pagedown keys .
-At any time you want to come out of the help use q key . 
-See how easy it is  to get help in python .  
+It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up, and down arrows keys.
+At any time you want to come out of the help use 'q' key. 
+See how easy it is  to get help in IPython.  
 
 *As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
 
 
 In this case we have used two commands 
-'pi' and 'sin' these come from 'pylab'library called using -pylab. 
+'pi' and 'sin' these come from 'pylab' library called using -pylab. 
 
 *Now that we have a basic plot, we can label and title the plot. 
 In []: xla<TAB>bel('x') will add a label to the x-axis. Note that 'x' is enclosed in quotes. 
@@ -78,12 +73,12 @@ In []: ylabel('sin(x)') adds a label to the y-axis.
 To add a title to plot we simply use 
 In []: tit<TAB>le('Sinusoid').
 
-Hmm we also got the axis's nicely labeled and the plot titled but there is still a important detail left.That might leave a teacher seeing this unsatisfied , it lacks a legend. 
+Hmm we also got the axis's nicely labeled and the plot titled but there is still a important detail left.That might leave a teacher unsatisfied, it lacks a legend. 
 
 Add a legend to the plot by typing 
 In []: legend(['sin(x)'])
 
-Ok what if I want the legend to be in the centre . It just requires us to define one extra parameter. 
+Ok what if I want the legend to be in different location. It just requires us to define one extra parameter. 
 
 We have just typed legend command can we reuse it . Yes 
 
@@ -91,7 +86,7 @@ To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us (in
 
 We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
 #Ask madhu how to describe the feature here.
-Once you start editing a previous command and then you try to use 'Up arrow key ' you can get commands that are only similar to the command you are editing . But if you move your cursor to the beginning of the line you can get all the previous commands using up and down arrow keys .
+Once you start editing a previous command and then you try to use 'Up arrow key ' you can get commands that are only similar to the command you are editing. But if you move your cursor to the beginning of the line you can get all the previous commands using up and down arrow keys.
 In []: legend(['sin(x)'], loc = 'center')
 
 Note that once 
@@ -99,8 +94,7 @@ other positions which can be tried are
 'best' 
 'right'
 
-
-Very often in mathematical plots we have define certain points abd there meaning also called annotating . We next look at how to annotate
+Very often in mathematical plots we have to define certain points and their meaning also called annotating . We next look at how to annotate
 In this case, let's add a comment at the point of origin. 
 In []: annotate('origin', xy=(0, 0))
 
@@ -111,11 +105,7 @@ Ok, what do I do with all this effort . I obviously have to save it .
 We save the plot by the function savefig
 In []: savefig('sin.png') saves the figure with the name 'sin.png' in the current directory. 
 
-
-
-
 #other supported formats are: eps, ps, pdf etc.
-
 When we use plot again by default plots get overlaid.
 In []: plot(x, cos(x))
 
@@ -128,8 +118,6 @@ In []: legend( [ 'sin(x)' , 'cos(x)'] )
 
 In []: clf()
 clears the plot area and starts afresh.
-
-
 
 *In case we want to create multiple plots rather than overlaid plots, we use 'figure' function.
 The figure command is used to open a plain figure window without any plot.
@@ -146,8 +134,6 @@ Any command issued henceforth applies to this window only so typing
 In []: plot(x, cos(x))
 plots cos curve on second window now.
 The previous plot window remains unchanged to these commands.
-
-
 
 calling function figure using argument 1 shifts the focus back to figure(1).
 In []: figure(1)
@@ -178,10 +164,9 @@ In []: plot(x, sin(x), '.')
 
 In []: clf()
 
-
 You may look at more options related to colors and type of lines using plot?(question mark)
 
-quit the documentation using Plot.
+quit the documentation using 'q'
 
 In []: clf()
 
@@ -215,3 +200,9 @@ and last closing plot using close()
 ****************
 This brings us to the end of this tutorial.  Thank you for attending this on Python for Scientific Computing .Hope you enjoyed it and found it useful.
 ****************
+
+************
+A slide of review of what has been covered and sequentially/rapidly going through them.
+************
+
+Various problems of Ipython, navigation and enter, exit.
