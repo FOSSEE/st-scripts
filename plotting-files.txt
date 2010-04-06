@@ -16,7 +16,7 @@ You could input the data either as a list or read from a plain text/binary file.
 #   - How to plot two variables
  
 So let's begin.  First we will input the data as lists and then we will plot it. 
-So on the Terminal window type
+So on the IPython Interpreter we will type
 x = [0, 1, 2.1, 3.1, 4.2, 5.2]
 here x is a list. In python, list is a container that holds a number of objects. Various functions related to lists will be covered in more detail later. 
 
