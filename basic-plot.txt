@@ -1,6 +1,6 @@
 * Script
 
-*Hello and welcome to the tutorial on Basic Plotting using Python. This is the first tutorial in a series of tutorials on Python for Scientific Computing. This tutorial is created by the FOSSEE team, IIT Bombay .  
+*Hello and welcome to the tutorial on Basic Plotting using Python. 
 
 *The intended audience for this tutorial are Engineering, mathematics and science teachers and students
 
@@ -198,7 +198,7 @@ and last closing plot using close()
 
 
 ****************
-This brings us to the end of this tutorial.  Thank you for attending this on Python for Scientific Computing .Hope you enjoyed it and found it useful.
+This brings us to the end of this tutorial. This is the first tutorial in a series of tutorials on Python for Scientific Computing. This tutorial is created by the FOSSEE team, IIT Bombay. Hope you enjoyed it and found it useful.
 ****************
 
 ************
