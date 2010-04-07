@@ -4,9 +4,6 @@
 
 *The intended audience for this tutorial are Engineering, mathematics and science teachers and students
 
-*The goals are to
-help one use Python as a basic plotting tool.
-
 *In this tutorial, we will cover the basics of the Plotting features available in Python. 
 For this we shall use  Ipython and pylab. 
 Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features which are not present in the vanilla Python interpreter.
@@ -43,14 +40,8 @@ and Ipython changed the prompt . To get the old prompt back type crtl-c
 
 In []: x = linspace(0, 2*pi, 50)
 
+*As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
 
-To obtain the plot we use,
-In []: plot(x, sin(x))
-***
-As you can see a plot has appeared on the screen. 
-***
-
-The plot has the default color and line properties. 
 
 *To know more about any function,  example for the 'linspace' function you can type ? after it .
 
@@ -60,8 +51,13 @@ It shows documentation related to linspace function. 'help' talks in detail abou
 At any time you want to come out of the help use 'q' key. 
 See how easy it is  to get help in IPython.  
 
-*As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
+To obtain the plot we use,
+In []: plot(x, sin(x))
+***
+As you can see a plot has appeared on the screen. 
+***
 
+The plot has the default color and line properties. 
 
 In this case we have used two commands 
 'pi' and 'sin' these come from 'pylab' library called using -pylab. 
