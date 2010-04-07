@@ -12,13 +12,13 @@ For this we shall use  Ipython and pylab.
 Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features which are not present in the vanilla Python interpreter.
 Pylab is python library which provides plotting functionality. 
 
-I am assuming that you have both Ipython and Pylab installed on your system .
+I am assuming that both Ipython and Pylab are installed on your system .
 
 *On your terminal type in the command Ipython -pylab
 $ ipython -pylab
 press RETURN
 
-We will first start with the absolute basic, that is how to print hello world
+We will first start with the customary Hello world program. print hello world
 
 In []: print 'hello world'
 
