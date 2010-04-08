@@ -96,6 +96,14 @@ In []: annotate('origin', xy=(0, 0))
 
 The first argument is the comment string and second one is the position for it. 
 
+As you can see, the boundary along the x-axis extends after the graph and there is an ugly blank space left on the right. Also along the y-axis, the sine plot in fact is cut by the boundary. We want to make the graph fit better. For this we shall use xlim() and ylim() to set the boundaries on the figure.
+
+In []: xlim(0, 2*pi)
+
+In []: ylim(-1.2, 1.2)
+
+The first value passed is the lower limit and the second is the upper limit. Hence when we do xlim(0, 2*pi) the boundary is set from x-value 0 to x-value 2*pi. Similarly for the y-axis.
+
 Ok, what do I do with all this effort . I obviously have to save it . 
 
 We save the plot by the function savefig
