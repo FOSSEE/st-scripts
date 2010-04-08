@@ -20,7 +20,7 @@ plot (x, y, 'o')
 Here, we have our plot! 
 [We close the plot window. ] 
 
-Now, that we know how to plot data from lists, we will look at plotting data from a text file. Essentially, we read the data from the file and fit them into lists again. Then we can easily plot it, as we already did before. 
+Now, that we know how to plot data from lists, we will look at plotting data from a text file. Essentially, we read the data from the file and fit them into lists again. Then we can easily plot it, as we  did before. 
 
 As an example we will use the data collected from a simple pendulum experiment. 
 
@@ -59,7 +59,7 @@ for time in t:
 Now lists l(en) and tsq have the required data. We can simply plot them, as we did earlier. 
 plot(l, tsq, 'o')
 
-So here is the required plot. In this way, you can plot data from files.  Hope this information was helpful. See you. 
+So here is the required plot. In this way, you can plot data from files.  Hope this information was helpful. See you in the next tutorial 
 
 ******************
 
