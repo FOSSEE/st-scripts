@@ -29,27 +29,31 @@ type again :
 $ ipython -pylab
 press RETURN
 
-First, we will create a sequence of equally spaced points starting from 0 to 2*pi , we will use function linspace for that
+In order to plot, we need a set of points. Let us create a sequence of equally spaced points starting from 0 to 2*pi. For this we use linspace
 
 Type:
 In []: x = lins<Tab> This is an Ipython feature that will auto-suggest the word
 
 In []  x=linspace( RETURN
-oops  I made a mistake . As you can see I made the mistake of not writing command correctly
-and Ipython changed the prompt . To get the old prompt back type crtl-c
+Ouch! I made a mistake . As you can see I made the mistake of not writing command correctly
+and Ipython changed the prompt . To get the old prompt back press crtl-c
 
 In []: x = linspace(0, 2*pi, 100)
 
-*As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
-
-
-*To know more about any function,  example for the 'linspace' function you can type ? after it .
+*To know more about any function,  in this case say, for 'linspace' you can type ? after it .
 
 In []: linspace?
 
-It shows documentation related to linspace function. 'help' talks in detail about arguments to be passed, return values, some examples on usage. You can scroll the help using up, and down arrows keys.
-At any time you want to come out of the help use 'q' key. 
-See how easy it is  to get help in IPython.  
+It shows documentation related to linspace function. 'help' gives details about arguments to be passed, return values and also some examples on usage. You can scroll the help using up, and down arrows keys.
+To exit from the help menu type 'q'.
+
+*As you can see linspace can take three parameters the starting point, the ending point and the number of points.
+
+Let us see what x contains now. Type 'x' and hit enter.
+
+We see that x is a sequence of numbers from 0 to 2*pi. We can check the length of x by typing 
+
+In []: len(x)
 
 To obtain the plot we use,
 In []: plot(x, sin(x))
@@ -74,14 +78,10 @@ Hmm we also got the axis's nicely labeled and the plot titled but there is still
 Add a legend to the plot by typing 
 In []: legend(['sin(x)'])
 
-Ok what if I want the legend to be in different location. It just requires us to define one extra parameter. 
-
-We have just typed legend command can we reuse it . Yes 
+We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
 
 To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us back.
 
-We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
-#Ask madhu how to describe the feature here.
 Once you start editing a previous command and then you try to use 'Up arrow key ' you can get commands that are only similar to the command you are editing. But if you move your cursor to the beginning of the line you can get all the previous commands using up and down arrow keys.
 In []: legend(['sin(x)'], loc = 'center')
 
@@ -92,7 +92,7 @@ other positions which can be tried are
 
 Very often in mathematical plots we have to define certain points and their meaning also called annotating . We next look at how to annotate
 In this case, let's add a comment at the point of origin. 
-In []: annotate('origin', xy=(0, 0))
+In []: annotate('local max', xy=(1.5, 1))
 
 The first argument is the comment string and second one is the position for it. 
 
@@ -109,8 +109,9 @@ Ok, what do I do with all this effort . I obviously have to save it .
 We save the plot by the function savefig
 In []: savefig('sin.png') saves the figure with the name 'sin.png' in the current directory. 
 
-#other supported formats are: eps, ps, pdf etc.
-When we use plot again 
+other supported formats are: eps, ps, pdf etc.
+
+Let's see what happens when we use plot again 
 In []: plot(x, cos(x)) by default plots get overlaid.
 
 we update Y axis label 
@@ -120,8 +121,12 @@ Now in these situations with overlaid graphs, legend becomes absolutely essentia
 
 In []: legend( [ 'sin(x)' , 'cos(x)'] )
 
+Please note that the previous legend is overwritten.
+
 In []: clf()
 clears the plot area and starts afresh.
+
+# Close the figure manually.
 
 *In case we want to create multiple plots rather than overlaid plots, we use 'figure' function.
 The figure command is used to open a plain figure window without any plot.
@@ -155,21 +160,21 @@ In []: close()
 close() now closes the figure(2).
 In []: close()
 
-The plot command can take the additional parameters such as 'g' which generates the plot in green color. 
+Now, what if we want to plot in a different color? The plot command can take the additional parameters such as 'g' which generates the plot in green color. 
 
-Passing the linewidth=2 option to plot, generates the plot with linewidth of two units.
-Use Up arrow to get to the previous commands 
+What if we want a thicker line? Passing the linewidth=2 option to plot, generates the plot with linewidth of two units.
+
 In []: plot(x, sin(x), 'g', linewidth=2) and add arguments
 
 In []: clf()
 
-In order to plot points you may pass '.' as a parameter to plot
+If we want to  plot points we may pass '.' as a parameter to plot
 In []: plot(x, sin(x), '.')
 
 In []: clf()
 
 You may look at more options related to colors and type of lines using plot?(question mark)
-
+There are numerous options and various combinations available.
 quit the documentation using 'q'
 
 In []: clf()
