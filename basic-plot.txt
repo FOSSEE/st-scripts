@@ -11,11 +11,11 @@ Pylab is python library which provides plotting functionality.
 
 I am assuming that both Ipython and Pylab are installed on your system .
 
-*On your terminal type in the command Ipython -pylab
+*On your terminal type in the command
 $ ipython -pylab
 press RETURN
 
-We will first start with the customary Hello world program. print hello world
+We will first start with the customary Hello world program by writing:
 
 In []: print 'hello world'
 
@@ -38,7 +38,7 @@ In []  x=linspace( RETURN
 oops  I made a mistake . As you can see I made the mistake of not writing command correctly
 and Ipython changed the prompt . To get the old prompt back type crtl-c
 
-In []: x = linspace(0, 2*pi, 50)
+In []: x = linspace(0, 2*pi, 100)
 
 *As you can see linspace can take three parameters start, stop, and num and returns num evenly space points . You can scroll through the help to know more about the function
 
@@ -78,7 +78,7 @@ Ok what if I want the legend to be in different location. It just requires us to
 
 We have just typed legend command can we reuse it . Yes 
 
-To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us (in reverse order)/back.
+To go to previous command, we can use 'UP Arrow key' and 'DOWN' will take us back.
 
 We can modify previous command to specify the location of the legend, by passing an additional argument to the function. 
 #Ask madhu how to describe the feature here.
@@ -102,8 +102,8 @@ We save the plot by the function savefig
 In []: savefig('sin.png') saves the figure with the name 'sin.png' in the current directory. 
 
 #other supported formats are: eps, ps, pdf etc.
-When we use plot again by default plots get overlaid.
-In []: plot(x, cos(x))
+When we use plot again 
+In []: plot(x, cos(x)) by default plots get overlaid.
 
 we update Y axis label 
 In []: ylabel('f(x)')
@@ -147,7 +147,7 @@ In []: close()
 close() now closes the figure(2).
 In []: close()
 
-The plot command can take the  parameters such as 'g' which generates the plot in green color. 
+The plot command can take the additional parameters such as 'g' which generates the plot in green color. 
 
 Passing the linewidth=2 option to plot, generates the plot with linewidth of two units.
 Use Up arrow to get to the previous commands 
@@ -169,29 +169,17 @@ In []: clf()
 and finally to close the plot
 In []: close()
 
-In this tutorial You learned 
+In this tutorial we learned 
 
-Ipython Features
-Tab for autocompletion.
-function? to look at documention
-q to quit documentation.
-escapping from ... prompt using Ctrl -C
-quitting ipython using Ctrl-D
+Some IPython Features
+Starting and exiting.
+autocompletion.
+help functionality.
 
-The functions and commands you learnt were :
-print for outping things
-linspace to create equally space points
-plot to get a plot
-xlabel to label x-axis of plot
-ylabel to label y-axis of plot
-title to title a plot
-legend for placing  appropriate legend
-annotating a plot
-saving a plot
-multiple plots using figure
-clearing plots using clf()
-and last closing plot using close()
-
+Regarding plotting we covered:
+How to create basic plots.
+Adding labels, legends annotation etc.
+How to change looks of the plot like colors, linewidth formats etc
 
 ****************
 This brings us to the end of this tutorial. This is the first tutorial in a series of tutorials on Python for Scientific Computing. This tutorial is created by the FOSSEE team, IIT Bombay. Hope you enjoyed it and found it useful.
@@ -202,3 +190,4 @@ A slide of review of what has been covered and sequentially/rapidly going throug
 ************
 
 Various problems of Ipython, navigation and enter, exit.
+What about xlim and ylim?
