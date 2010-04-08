@@ -9,7 +9,7 @@ For this we shall use  Ipython and pylab.
 Ipython is An Enhanced Interactive Python interpreter. It provides additional features like tab completion,easier access to help , and many other useful features which are not present in the vanilla Python interpreter.
 Pylab is python library which provides plotting functionality. 
 
-I am assuming that both Ipython and Pylab are installed on your system .
+I am assuming that both Ipython and Pylab are installed on your system. If not please refer to our tutorial on how to install IPython and pylab. 
 
 *On your terminal type in the command
 $ ipython -pylab
