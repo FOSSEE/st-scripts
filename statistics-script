@@ -1,48 +1,49 @@
 Hello friends and welcome to the third tutorial in the series of tutorials on "Python for scientific computing."
 
-In the previous tutorial we learnt how to read data from a file and plot the data
-We used 'for' loops and lists to get data in desired format.
-IPython -Pylab also provides with a function 'loadtxt' which can get us data without much hustle.
+In the previous tutorial we learnt how to read data from a file and plot it.
+We used 'for' loops and lists to get data in the desired format.
+IPython -Pylab also provides a function called 'loadtxt' that can get us the same data in the desired format without much hustle.
 
 We know that, pendulum.txt contains two columns, with length being first and time period is second column, so to get both columns in two separate variables we type
 
 l, t = loadtxt('pendulum.txt', unpack=True)
 
-(unpack = True)? will give us all of first column(length) in l and second column(time) in t
+(unpack = True) will give us all of first column(length) in l and second column(time) in t
 
-to get more help type 
+to know more about loadtxt type 
 
 loadtxt?
-This is really powerful tool to load data directly from files which are well structured and formatted. It supports many features like getting particular columns. 
-now to get squared values of t we can simply do
+This is a really powerful tool to load data directly from files which are well structured and formatted. It supports many features like getting selected columns only, or skipping rows. 
+
+Getting back to the problem, now to get squared values of t we can simply do
 
 tsq = t*t
 
-and we dont have to use for loop anymore. This is benefit of arrays. If we try to something similar to lists we cant escape a 'for' loop.
+Note we dont have to use the 'for' loop anymore. This is the benefit of arrays. If we try to do the something similar using lists we won't be able to escape the 'for' loop.
 
-Now to plot l vs tsq is same as we did in previous session
+Let's now plot l vs tsq just as we did in the previous session
 
 plot(l, tsq, 'o')
 
-Additionally the basic equation for finding Time period of simple pendulum we use equation:
+The basic equation for finding Time period of simple pendulum is:
 
 T = 2*pi*sqrt(L/g)
 
-In our case we have t and l already, so to find g value for each element we can simply use:
+In this case we have the values of t and l already, so to find g value for each element we can simply use:
 
 g = 4*pi^2*L/T^2
 
-g is array with 90 elements, so we take average of all these values to get acceleration due to gravity('g') by
+g is array with 90 elements, we can take the average of all these values to get the acceleration due to gravity('g') by
 
 print mean(g)
 
-Mean again is provided by pylab module which calculates average of given set of values.
+Mean again is provided by pylab module which calculates the average of the given set of values.
 There are other handy statistical functions available, such as median, mode, std(for standard deviation) etc.
 
-So in this small session we have covered 'better' way of loading data from text files.
-Why arrays are better choice then lists in some cases, and how they are helpful during some mathematical operations.
+In this small session we have covered 'better' way of loading data from text files.
+Why arrays are a better choice than lists in some cases, and how they are more helpful with mathematical operations.
 
-Thank you!
+Hope it was useful to you. Thank you!
 -----------------------------------------------------------------------------------------------------------
 In this tutorial we shall learn how to compute statistics using python.
 We also shall learn how to represent data in the form of pie charts.
