@@ -35,7 +35,7 @@ Windows users just double click on the file to open it. Please be careful not to
 The first column is the length of the pendulum and the second column is the time. We read the file line-by-line, collect the data into lists and plot them.
 
 Let's begin with initializing three empty lists for length, time-period and square of the time-period.
-L = []
+l = []
 t = []
 tsq = []
  
@@ -55,7 +55,7 @@ the split function returns a list of elements from the 'line' variable split ove
 
 Note the indentation here. Everything inside the 'for' loop has to be indented by 4 spaces.
 Then we append the length and time values to the appropriate lists. Since we cannot perform mathematical operations on strings, we need to convert the strings to floats, before appending to the lists. 
-    L.append(float(point[0]))
+    l.append(float(point[0]))
 append is a function used to append a single element to a list.
     t.append(float(point[1]))
 
@@ -64,10 +64,10 @@ Now we have the time and length values in two lists. Now to get the square of th
 for time in t:
     tsq.append(time*time) 
 
-Let us now verify if L, t and tsq have the same number of elements. Type
-print len(L), len(t), len(tsq)
+Let us now verify if l, t and tsq have the same number of elements. Type
+print len(l), len(t), len(tsq)
 
-Now we have verified that all three have the same dimensions. Lists l and tsq have the required data. Let's now plot them, as we did earlier. 
+Now we have verified that all three have the same dimensions. lists l and tsq have the required data. Let's now plot them, as we did earlier. 
 plot(l, tsq, 'o')
 
 So here is the required plot. 
