@@ -1,7 +1,7 @@
 **********************************************************************************
 Hello friends and welcome to the second tutorial in the series of spoken tutorials on Python for Scientific computing. 
 
-In the previous tutorial we learnt how to obtain basic plots by plotting a set of points. 
+In the previous tutorial we learnt how to obtain basic plots using a set of points. 
 We plot experimental data more often that we plot mathematical curves. 
 So here we shall learn how to plot experimental data.
 
