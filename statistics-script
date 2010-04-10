@@ -4,6 +4,7 @@ In the previous tutorial we learnt how to read data from a file and plot it.
 We used 'for' loops and lists to get data in the desired format.
 IPython -Pylab also provides a function called 'loadtxt' that can get us the same data in the desired format without much hustle.
 
+We shall use the same pendulum.txt file that we used in the previous session.
 We know that, pendulum.txt contains two columns, with length being first and time period is second column, so to get both columns in two separate variables we type
 
 l, t = loadtxt('pendulum.txt', unpack=True)
