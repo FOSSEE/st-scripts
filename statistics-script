@@ -24,7 +24,26 @@ Now to plot l vs tsq is same as we did in previous session
 
 plot(l, tsq, 'o')
 
+Additionally the basic equation for finding Time period of simple pendulum we use equation:
 
+T = 2*pi*sqrt(L/g)
+
+In our case we have t and l already, so to find g value for each element we can simply use:
+
+g = 4*pi^2*L/T^2
+
+g is array with 90 elements, so we take average of all these values to get acceleration due to gravity('g') by
+
+print mean(g)
+
+Mean again is provided by pylab module which calculates average of given set of values.
+There are other handy statistical functions available, such as median, mode, std(for standard deviation) etc.
+
+So in this small session we have covered 'better' way of loading data from text files.
+Why arrays are better choice then lists in some cases, and how they are helpful during some mathematical operations.
+
+Thank you!
+-----------------------------------------------------------------------------------------------------------
 In this tutorial we shall learn how to compute statistics using python.
 We also shall learn how to represent data in the form of pie charts.
 
