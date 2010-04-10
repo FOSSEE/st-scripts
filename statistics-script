@@ -1,0 +1,99 @@
+Hello friends and welcome to the third tutorial in the series of tutorials on "Python for scientific computing."
+
+In the previous tutorial we learnt how to read data from a file and plot the data
+We used 'for' loops and lists to get data in desired format.
+IPython -Pylab also provides with a function 'loadtxt' which can get us data without much hustle.
+
+We know that, pendulum.txt contains two columns, with length being first and time period is second column, so to get both columns in two separate variables we type
+
+l, t = loadtxt('pendulum.txt', unpack=True)
+
+(unpack = True)? will give us all of first column(length) in l and second column(time) in t
+
+to get more help type 
+
+loadtxt?
+This is really powerful tool to load data directly from files which are well structured and formatted. It supports many features like getting particular columns. 
+now to get squared values of t we can simply do
+
+tsq = t*t
+
+and we dont have to use for loop anymore. This is benefit of arrays. If we try to something similar to lists we cant escape a 'for' loop.
+
+Now to plot l vs tsq is same as we did in previous session
+
+plot(l, tsq, 'o')
+
+
+In this tutorial we shall learn how to compute statistics using python.
+We also shall learn how to represent data in the form of pie charts.
+
+Let us start with the most basic need in statistics, the mean.
+
+We shall calculate the mean acceleration due to gravity using the same 'pendulum.txt' that we used in the previous session.
+
+As we know, 'pendulum.txt' contains two values in each line. The first being length of pendulum and second the time period.
+To calculate acceleration due to gravity from these values, we shall use the expression T = 2*pi*sqrt(L/g)
+So re-arranging this equation, we get g = 4*pi**2*L/T**2 .
+
+We shall calculate the value of g for each pair of L and t and then calculate mean of all those g values.
+
+## if we do loadtxt and numpy arrays then this part will change
+	First we need something to store each value of g that we are going to compute.
+	So we start with initialising an empty list called `g_list'.
+
+	Now we read each line from the file 'pendulum.txt' and calculate g value for that pair of L and t and then append the computed g to our `g_list'.
+
+	In []: for line in open('pendulum.txt'):
+	  ....     point = line.split()
+	  ....     L = float(point[0])
+	  ....     t = float(point[1])
+	  ....     g = 4 * pi * pi * L / (t * t)
+	  ....     g_list.append(g)
+
+	The first four lines of this code must be trivial. We read the file and store the values. 
+	The fifth line where we do g equals to 4 star pi star and so on is the line which calculates g for each pair of L and t values from teh file. The last line simply stores the computed g value. In technical terms appends the computed value to g_list.
+
+	Let us type this code in and see what g_list contains.
+###############################
+
+Each value in g_list is the g value computed from a pair of L and t values.
+
+Now we have all the values for g. We must find the mean of these values. That is the sum of all these values divided by the total no.of values.
+
+The no.of values can be found using len(g_list)
+
+So we are left with the problem of finding the sum.
+We shall create a variable and loop over the list and add each g value to that variable.
+lets call it total.
+
+In []: total = 0 
+In []: for g in g_list:
+ ....:     total += g
+ ....:
+
+So at of this piece of code we will have the sum of all the g values in the variable total.
+
+Now calculating mean of g is as simple as doing total divided by len(g_list)
+
+In []: g_mean = total / len(g_list)
+In []: print 'Mean: ', g_mean
+
+If we observe, we have to write a loop to do very simple thing such as finding sum of a list of values.
+Python has a built-in function called sum to ease things.
+
+sum takes a list of values and returns the sum of those values.
+now calculating mean is much simpler.
+we don't have to write any for loop.
+we can directly use mean = sum(g_list) / len(g_list)
+
+Still calculating mean needs writing an expression.
+What if we had a built-in for calculating mean directly.
+We do have and it is available through the pylab library.
+
+Now the job of calculating mean is just a function away.
+Call mean(g_list) directly and it gives you the mean of values in g_list.
+
+Isn't that sweet. Ya and that is why I use python.
+
+

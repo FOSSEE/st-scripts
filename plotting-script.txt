@@ -12,27 +12,27 @@ So we navigate to the desktop, using cd Desktop. Now let's start IPython by typi
 
 First we shall look into using lists to input the data and then we shall plot it. 
 Type
-x = 0, 1, 2.1, 3.1, 4.2, 5.2 within square brackets.
+x = open square bracket 0, 1, 2.1, 3.1, 4.2, 5.2 close square bracket.
 here x is a list. In python, list is a container that holds a number of objects in the given order. 
 We shall look into other functions related to lists a little later. 
 
 Now for the corresponding Y values type
-y = 0, 0.8, 0.9, 0, -0.9, -0.8 within square brackets.
+y = open square bracket 0, 0.8, 0.9, 0, -0.9, -0.8 close square bracket.
  
 Now that we have x and y in two separate lists and we plot x vs. y using
-plot (x, y, 'o') The o within quotes plots with filled circles. We saw the various style options in the previous tutorial.
+plot (x, y, 'o') The o within quotes plots with filled circles. And lo! We have our plot! 
 
-And lo! We have our plot! 
+
 [We close the plot window. ] 
 
 Now, that we know how to plot data from lists, we will look at plotting data from a text file. Essentially, if we read the data from the file and fit them into lists, we can easily plot the data, just as we did previously. 
 
-Here we shall use the data collected from a simple pendulum experiment as an example. 
+Here we shall use the data collected from a simple pendulum experiment as an example. The aim of the experiment is to plot the length versus square of the time period.
 Let us check out what pendulum.txt contains. Type cat pendulum.txt
 
 Windows users just double click on the file to open it. Please be careful not to edit the file.
 
-The first column is the length of the pendulum and the second column is the time. We read the file line-by-line, collect the data into lists and plot them.
+The first column is the length of the pendulum and the second column is the time period. We read the file line-by-line, collect the data into lists and plot them.
 
 Let's begin with initializing three empty lists for length, time-period and square of the time-period.
 l = []
@@ -42,22 +42,24 @@ tsq = []
 Initializing an empty list is done as shown above using just a pair of square brackets without any content in them.
 
 Now we open the file and read it line by line. 
-for line in open('pendulum.txt'): 
+for line in open (within quotes the file name. )('pendulum.txt'): 
 
 The ':' at the end of the 'for' statement marks the beginning of the for block.
 'open' returns an iterable object which we traverse using the 'for' loop. In  python, 'for' iterates over items of a sequence.
 For more details regarding the for loop refer to our tutorial on loops and data structures.
-'line' here is a string variable that contains one line of the file at a time as the 'for' loop iterates through the file.
+Whatever we read from a file is in the form of strings. Thus 'line' here is a string variable that contains one line of the file at a time as the 'for' loop iterates through the file.
 
 We split each line at the space using
      point = line.split() 
-the split function returns a list of elements from the 'line' variable split over spaces. In this case it will have two elements, first is length and second is time. 
+the split function returns a list of elements from the 'line' variable split over spaces. In this case it will have two elements, first is length and second is time. point here contains 2 elements, the first one is the length and the second one is the time period
 
 Note the indentation here. Everything inside the 'for' loop has to be indented by 4 spaces.
 Then we append the length and time values to the appropriate lists. Since we cannot perform mathematical operations on strings, we need to convert the strings to floats, before appending to the lists. 
     l.append(float(point[0]))
 append is a function used to append a single element to a list.
     t.append(float(point[1]))
+
+That's it, now we need to exit the loop. Hit the enter key twice.
 
 Now we have the time and length values in two lists. Now to get the square of the time values, we shall write one more 'for' loop which will iterate through list 't'
 
@@ -70,5 +72,9 @@ print len(l), len(t), len(tsq)
 Now we have verified that all three have the same dimensions. lists l and tsq have the required data. Let's now plot them, as we did earlier. 
 plot(l, tsq, 'o')
 
-So here is the required plot. 
-In this way, you can plot data from files.  Hope this information was helpful. Thank you.
+So here is the required plot. We may proceed to label the axes, title the plot and save it. 
+
+In this tutorial we have learnt how to create lists and append items to them. We have learnt how to process data using lists, how to open and read files and the 'for' loop.
+
+That brings us to the end of this session.
+Hope this information was helpful. Thank you.
