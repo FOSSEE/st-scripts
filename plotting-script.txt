@@ -1,0 +1,74 @@
+**********************************************************************************
+Hello friends and welcome to the second tutorial in the series of spoken tutorials on Python for Scientific computing. 
+
+In the previous tutorial we learnt how to obtain basic plots by plotting a set of points. 
+We plot experimental data more often that we plot mathematical curves. 
+So here we shall learn how to plot experimental data.
+
+You can input the data either as a list or read from a plain text/binary file. We shall cover both one by one.
+Please make sure you have pendulum.txt file, as mentioned on requirement list of the session.
+As you can see the pendulum.txt file in our case is on the desktop and we are currently in the home directory. 
+So we navigate to the desktop, using cd Desktop. Now let's start IPython by typing ipython -pylab.
+
+First we shall look into using lists to input the data and then we shall plot it. 
+Type
+x = 0, 1, 2.1, 3.1, 4.2, 5.2 within square brackets.
+here x is a list. In python, list is a container that holds a number of objects in the given order. 
+We shall look into other functions related to lists a little later. 
+
+Now for the corresponding Y values type
+y = 0, 0.8, 0.9, 0, -0.9, -0.8 within square brackets.
+ 
+Now that we have x and y in two separate lists and we plot x vs. y using
+plot (x, y, 'o') The o within quotes plots with filled circles. We saw the various style options in the previous tutorial.
+
+And lo! We have our plot! 
+[We close the plot window. ] 
+
+Now, that we know how to plot data from lists, we will look at plotting data from a text file. Essentially, if we read the data from the file and fit them into lists, we can easily plot the data, just as we did previously. 
+
+Here we shall use the data collected from a simple pendulum experiment as an example. 
+Let us check out what pendulum.txt contains. Type cat pendulum.txt
+
+Windows users just double click on the file to open it. Please be careful not to edit the file.
+
+The first column is the length of the pendulum and the second column is the time. We read the file line-by-line, collect the data into lists and plot them.
+
+Let's begin with initializing three empty lists for length, time-period and square of the time-period.
+L = []
+t = []
+tsq = []
+ 
+Initializing an empty list is done as shown above using just a pair of square brackets without any content in them.
+
+Now we open the file and read it line by line. 
+for line in open('pendulum.txt'): 
+
+The ':' at the end of the 'for' statement marks the beginning of the for block.
+'open' returns an iterable object which we traverse using the 'for' loop. In  python, 'for' iterates over items of a sequence.
+For more details regarding the for loop refer to our tutorial on loops and data structures.
+'line' here is a string variable that contains one line of the file at a time as the 'for' loop iterates through the file.
+
+We split each line at the space using
+     point = line.split() 
+the split function returns a list of elements from the 'line' variable split over spaces. In this case it will have two elements, first is length and second is time. 
+
+Note the indentation here. Everything inside the 'for' loop has to be indented by 4 spaces.
+Then we append the length and time values to the appropriate lists. Since we cannot perform mathematical operations on strings, we need to convert the strings to floats, before appending to the lists. 
+    L.append(float(point[0]))
+append is a function used to append a single element to a list.
+    t.append(float(point[1]))
+
+Now we have the time and length values in two lists. Now to get the square of the time values, we shall write one more 'for' loop which will iterate through list 't'
+
+for time in t:
+    tsq.append(time*time) 
+
+Let us now verify if L, t and tsq have the same number of elements. Type
+print len(L), len(t), len(tsq)
+
+Now we have verified that all three have the same dimensions. Lists l and tsq have the required data. Let's now plot them, as we did earlier. 
+plot(l, tsq, 'o')
+
+So here is the required plot. 
+In this way, you can plot data from files.  Hope this information was helpful. Thank you.
