@@ -1,5 +1,9 @@
 Hello friends and welcome to the third tutorial in the series of tutorials on "Python for scientific computing."
 
+This session is a continuation of the tutorial on Plotting Experimental data.
+
+We shall look at plotting experimental data using slightly advanced methods here. And then look into some statistical operations.
+
 In the previous tutorial we learnt how to read data from a file and plot it.
 We used 'for' loops and lists to get data in the desired format.
 IPython -Pylab also provides a function called 'loadtxt' that can get us the same data in the desired format without much hustle.
@@ -9,32 +13,35 @@ We know that, pendulum.txt contains two columns, with length being first and tim
 
 l, t = loadtxt('pendulum.txt', unpack=True)
 
-(unpack = True) will give us all of first column(length) in l and second column(time) in t
+(unpack = True) will give us all the data in the first column which is the length in l and all the data in the second column which is the time period in t. Here both l and t are arrays. We shall look into what arrays are in subsequent tutorials.
 
 to know more about loadtxt type 
 
 loadtxt?
 This is a really powerful tool to load data directly from files which are well structured and formatted. It supports many features like getting selected columns only, or skipping rows. 
 
-Getting back to the problem, now to get squared values of t we can simply do
+Let's back to the problem, hit q to exit. Now to get squared values of t we can simply do
 
 tsq = t*t
 
-Note we dont have to use the 'for' loop anymore. This is the benefit of arrays. If we try to do the something similar using lists we won't be able to escape the 'for' loop.
+Note that we don't have to use the 'for' loop anymore. This is the benefit of arrays. If we try to do the something similar using lists we won't be able to escape the use of the 'for' loop.
 
 Let's now plot l vs tsq just as we did in the previous session
 
 plot(l, tsq, 'o')
 
-The basic equation for finding Time period of simple pendulum is:
+Let's continue with the pendulum expt to obtain the value of the acceleration due to gravity. The basic equation for finding Time period of simple pendulum is:
 
 T = 2*pi*sqrt(L/g)
+
+rearranging this equation we obtain the value of as
+g = 4 pi squared into l by t squared.
 
 In this case we have the values of t and l already, so to find g value for each element we can simply use:
 
 g = 4*pi^2*L/T^2
 
-g is array with 90 elements, we can take the average of all these values to get the acceleration due to gravity('g') by
+g here is array, we can take the average of all these values to get the acceleration due to gravity('g') by
 
 print mean(g)
 

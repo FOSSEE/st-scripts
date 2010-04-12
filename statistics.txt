@@ -1,52 +1,61 @@
 Hello welcome to the tutorial on statistics and dictionaries in Python.
 
-In the previous tutorial we saw the `for' loop and lists. Here we shall look into
-calculating mean for the same pendulum experiment and then move on to calculate
-the mean, median and standard deviation for a very large data set.
+Till now we have covered:
+* How to create plots.
+* How to read data from file and process it.
 
-Let's start with calculating the mean acceleration due to gravity based on the data from pendulum.txt.
+In this session, we will use them and some new concepts to solve a problem/exercise. 
 
-We first create an empty list `g_list' to which we shall append the values of `g'.
-In []: g_list = []
+We have a file named sslc1.txt.
+It contains record of students and their performance in one of the State Secondary Board Examination.
+We can see the content of file by opening with any text editor.
+Please don't edit the data.
+It is arranged in a particular format.
+One particular line being:
+A;015163;JOSEPH RAJ S;083;042;47;AA;72;244;;;
+It has following fields:
+* Region Code which is 'A'
+* Roll Number 015163
+* Name JOSEPH RAJ S
+* Marks of 5 subjects: 
+  ** English 083
+  ** Hindi 042
+  ** Maths 47
+  ** Science AA (Absent)
+  ** Social 72
+* Total marks 244
+* Pass/Fail Blank cause he was absent in one exam or else it will be(P/F)
+* Withheld Blank in this case(W)
 
-For each pair of `L' and `t' values in the file `pendulum.txt' we calculate the 
-value of `g' and append it to the list `g_list'
-In []: for line in open('pendulum.txt'):
-  ....     point = line.split()
-  ....     L = float(point[0])
-  ....     t = float(point[1])
-  ....     g = 4 * pi * pi * L / (t * t)
-  ....     g_list.append(g)
+So problem we are going to solve is:
+Draw a pie chart representing proportion of students who scored more than 90% in each region in Science.
 
-We proceed to calculate the mean of the value of `g' from the list `g_list'. 
-Here we shall show three ways of calculating the mean. 
-Firstly, we calculate the sum `total' of the values in `g_list'.
-In []: total = 0
-In []: for g in g_list:
- ....:     total += g
- ....:
+The result would be something like this:
+slide of result.
 
-Once we have the total we calculate by dividing the `total' by the length of `g_list'
+We would be using following machinery:
+File Reading(done already)
+parsing (done partly)
+Dictionaries (new)
+Arrays
+Plot (done already)
 
-In []: g_mean = total / len(g_list)
-In []: print 'Mean: ', g_mean
+Dictionaries
 
-The second method is slightly simpler. Python provides a built-in function called "sum()" that computes the sum of all the elements in a list. 
-In []: g_mean = sum(g_list) / len(g_list)
-In []: print 'Mean: ', g_mean
+We earlier used lists, we just created them and appended items to list. 
+x = [1, 4, 2, 7, 6]
+to access the first element we use index number, and it starts from 0 so
+x[0] will give
+1 and
+x[3] will
+7
 
-The third method is the simplest. Python provides a built-in function `mean' that
-calculates the mean of all the elements in a list.
-In []: g_mean = mean(g_list)
-In []: print 'Mean: ', g_mean
+At times we don't have index to relate things. For example consider a telephone directory, we give it a name and it should return back corresponding number. List is not the best kind of data structure for such problems, and hence Python provides support for dictionaries. Dictionaries are key value pairs. Lists are indexed by integers while dictionaries are indexed by strings. For example:
 
-Python provides support for dictionaries. Dictionaries are key value pairs. Lists are indexed by integers while dictionaries are indexed by strings. For example:
 In []: d = {'png' : 'image',
       'txt' : 'text', 
       'py' : 'python'} 
-is a dictionary. The first element in the pair is called the `key' and the second 
-is called the `value'. The key always has to be a string while the value can be 
-of any type.
+d is a dictionary. The first element in the pair is called the `key' and the second is called the `value'. The key always has to be a string while the value can be of any type.
 
 Dictionaries are indexed using their keys as shown
 In []: d['txt']
@@ -56,22 +65,86 @@ In []: d['png']
 Out[]: 'image'
 
 The dictionaries can be searched for the presence of a certain key by typing
-In []: 'py' in d
-Out[]: True
+'py' in d
+True
 
-In []: 'jpg' in d
-Out[]: False
+'jpg' in d
+False
 Please note the values cannot be searched in a dictionaries.
 
-In []: d.keys()
-Out[]: ['py', 'txt', 'png']
+d.keys()
+['py', 'txt', 'png']
 is used to obtain the list of all keys in a dictionary
 
-In []: d.values()
-Out[]: ['python', 'text', 'image']
+d.values()
+['python', 'text', 'image']
 is used to obtain the list of all values in a dictionary
 
-In []: d
-Out[]: {'png': 'image', 'py': 'python', 'txt': 'text'}
-Please observe that dictionaries do not preserve the order in which the items
-were entered. The order of the elements in a dictionary should not be relied upon.
+d
+
+Please observe that dictionaries do not preserve the order in which the items were entered. The order of the elements in a dictionary should not be relied upon.
+
+------------------------------------------------------------------------------------------------------------------
+
+Parsing and string processing
+
+As we saw previously we will be dealing with lines with such content
+A;015162;JENIL T P;081;060;77;41;74;333;P;;
+so ';' is delimiter we have to look for.
+We will create one string variable to see how can we process it get the desired output.
+
+line = 'A;015162;JENIL T P;081;060;77;41;74;333;P;;'
+a = line.split(';')
+we have used split earlier to split on empty spaces.
+a 
+
+is list with all elements separated.
+a[0] is the region we want.
+and a[6] will give us the science marks of a particular region.
+So we create a dictionary of all the regions with number of students having more then 90 marks.
+Something like 
+d = {'A': 729, 'C': 764, 'B': 1120,'E': 414, 'D': 603, 'F': 500}
+
+------------------------------------------------------------------------------------------------------------------
+
+code
+
+We first create an empty dictionary
+
+science = {}
+now we read the record data one by one
+
+for record in open('sslc1.txt'):
+
+    we split the record on ';' and store the list in 'fields'
+    fields = record.split(';')
+
+    now we strip this string for leading and trailing white spaces
+    region_code = fields[0].strip()
+
+    now we check if the region code is always there in dictionary by writing 'if' statement
+    if region_code not in science:    
+       when this statement is true, we add new entry to dictionary with 
+       science[region_code] = 0
+
+    we again strip(ing is good) the string
+    score_str = fields[6].strip()
+
+    we check if student was not absent
+    if score_str != 'AA':
+       then we check if his marks are above 90 or not
+       if int(score_str) > 90:
+       	  science[region_code] += 1
+
+    Hit return twice
+
+by end of this loop we will have our desired output in the dictionary 'science'
+we can check the values by
+science
+
+now to create a pie chart we use
+
+pie(science.values(),labels = science.keys())
+title('Students scoring 90% and above in science by region')
+savefig('science.png')
+
