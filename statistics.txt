@@ -1,4 +1,4 @@
-Hello welcome to the tutorial on statistics and dictionaries in Python.
+Hello and welcome to the tutorial on handling large data files and processing them to get desired results.
 
 Till now we have covered:
 * How to create plots.
@@ -6,8 +6,8 @@ Till now we have covered:
 
 In this session, we will use them and some new concepts to solve a problem/exercise. 
 
-We have a file named sslc1.txt.
-It contains record of students and their performance in one of the State Secondary Board Examination.
+We have a file named sslc1.txt. 
+It contains record of students and their performance in one of the State Secondary Board Examination. It has 180, 000 lines of record. We are going to read it and process this data.
 We can see the content of file by opening with any text editor.
 Please don't edit the data.
 It is arranged in a particular format.
@@ -42,7 +42,7 @@ Plot (done already)
 
 Dictionaries
 
-We earlier used lists, we just created them and appended items to list. 
+We earlier used lists, back then we just created them and appended items to list. 
 x = [1, 4, 2, 7, 6]
 to access the first element we use index number, and it starts from 0 so
 x[0] will give
@@ -52,9 +52,12 @@ x[3] will
 
 At times we don't have index to relate things. For example consider a telephone directory, we give it a name and it should return back corresponding number. List is not the best kind of data structure for such problems, and hence Python provides support for dictionaries. Dictionaries are key value pairs. Lists are indexed by integers while dictionaries are indexed by strings. For example:
 
-In []: d = {'png' : 'image',
+d = {'png' : 'image',
       'txt' : 'text', 
       'py' : 'python'} 
+
+d
+
 d is a dictionary. The first element in the pair is called the `key' and the second is called the `value'. The key always has to be a string while the value can be of any type.
 
 Dictionaries are indexed using their keys as shown
@@ -68,13 +71,14 @@ The dictionaries can be searched for the presence of a certain key by typing
 'py' in d
 True
 
+Please note the values cannot be searched in a dictionaries.
 'jpg' in d
 False
-Please note the values cannot be searched in a dictionaries.
+'In telephone directory searching number is not a option'
 
+to obtain the list of all keys in a dictionary
 d.keys()
 ['py', 'txt', 'png']
-is used to obtain the list of all keys in a dictionary
 
 d.values()
 ['python', 'text', 'image']
@@ -91,19 +95,23 @@ Parsing and string processing
 As we saw previously we will be dealing with lines with such content
 A;015162;JENIL T P;081;060;77;41;74;333;P;;
 so ';' is delimiter we have to look for.
+
 We will create one string variable to see how can we process it get the desired output.
 
 line = 'A;015162;JENIL T P;081;060;77;41;74;333;P;;'
 a = line.split(';')
-we have used split earlier to split on empty spaces.
+we have used split earlier to split on empty spaces, but in this case we will split line for each ';'
+
 a 
 
-is list with all elements separated.
-a[0] is the region we want.
-and a[6] will give us the science marks of a particular region.
+is list containing all the fields separately.
+
+a[0] is the region code.
+and a[6] will give us the science marks of that particular region.
+
 So we create a dictionary of all the regions with number of students having more then 90 marks.
-Something like 
-d = {'A': 729, 'C': 764, 'B': 1120,'E': 414, 'D': 603, 'F': 500}
+# Something like 
+# d = {'A': 729, 'C': 764, 'B': 1120,'E': 414, 'D': 603, 'F': 500}
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -114,26 +122,29 @@ We first create an empty dictionary
 science = {}
 now we read the record data one by one
 
-for record in open('sslc1.txt'):
+for record in open('sslc.txt'):
 
-    we split the record on ';' and store the list in 'fields'
-    fields = record.split(';')
+    we split the record on ';' and store the list as fields equals record.split(';')
+#    fields = record.split(';')
 
-    now we strip this string for leading and trailing white spaces
-    region_code = fields[0].strip()
+    now get region code of particular entry by region_code equal to fields[0].strip. strip with remove all leading and trailing white spaces from the string
+#    region_code = fields[0].strip()
 
-    now we check if the region code is always there in dictionary by writing 'if' statement
+    now we check if the region code is always there in dictionary by writing 'if' statement, 
     if region_code not in science:    
-       when this statement is true, we add new entry to dictionary with 
+       when this statement is true, we add new entry to dictionary with initial value 0 and key being the region code.
        science[region_code] = 0
+       
+    Note that this if statement is inside the for loop so for if block we will have to give additional indentation.
 
-    we again strip(ing is good) the string
+    we again come back to older for loop indentation and we again strip(ing is good) the string and get science marks by
     score_str = fields[6].strip()
 
     we check if student was not absent
     if score_str != 'AA':
        then we check if his marks are above 90 or not
        if int(score_str) > 90:
+       	  if true we add it to the value of dictionary for that region by
        	  science[region_code] += 1
 
     Hit return twice
@@ -147,4 +158,3 @@ now to create a pie chart we use
 pie(science.values(),labels = science.keys())
 title('Students scoring 90% and above in science by region')
 savefig('science.png')
-
