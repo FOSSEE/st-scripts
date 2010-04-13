@@ -1,16 +1,16 @@
-Hello and welcome to the tutorial on handling large data files and processing them to get desired results.
+Hello and welcome to the tutorial on handling large data files and processing them.
 
 Till now we have covered:
 * How to create plots.
-* How to read data from file and process it.
+* How to read data from files and process it.
 
-In this session, we will use them and some new concepts to solve a problem/exercise. 
+In this session, we will use these concepts and some new ones, to solve a problem/exercise. 
 
 We have a file named sslc.txt. 
 It contains record of students and their performance in one of the State Secondary Board Examination. It has 180, 000 lines of record. We are going to read it and process this data.
 We can see the content of file by opening with any text editor.
 Please don't edit the data.
-This file has a particular structure. Each line in the file is a set of 11 fields:
+This file has a particular structure. Each line in the file is a set of 11 fields separated by semi-colons
 A;015163;JOSEPH RAJ S;083;042;47;AA;72;244;;;
 The following are the fields in any given line.
 * Region Code which is 'A'
@@ -47,9 +47,9 @@ Let's first start off with dictionaries.
 We earlier used lists briefly. Back then we just created lists and appended items into them. 
 x = [1, 4, 2, 7, 6]
 In order to access any element in a list, we use its index number. Index starts from 0.
-For eg. x[0] will give 1 and x[3] will 7.
+For eg. x[0] will give 1 and x[3] will give 7.
 
-There are times when we can't access things through integer indexes. For example consider a telephone directory, we give it a name and it should return back corresponding number. List is not the best kind of data structure for such problems, and hence Python provides support for dictionaries. Dictionaries are key value pairs. Lists are indexed by integers while dictionaries are indexed by strings. For example:
+But, using integer indexes isn't always convenient. For example, consider a telephone directory. We give it a name and it should return a corresponding number. A list is not well suited for such problems. Python's dictionaries are better, for such problems. Dictionaries are just key-value pairs. For example:
 
 d = {'png' : 'image',
       'txt' : 'text', 
@@ -59,7 +59,7 @@ d
 
 d is a dictionary. The first element in the pair is called the `key' and the second is called the `value'. The key always has to be a string while the value can be of any type.
 
-Dictionaries are indexed using their keys as shown
+Lists are indexed by integers while dictionaries are indexed by strings. They are indexed using their keys as shown
 In []: d['txt']
 Out[]: 'text'
 
@@ -73,10 +73,10 @@ True
 'jpg' in d
 False
 
-Please note the values cannot be searched in a dictionaries.
+Please note that keys, and not values, are searched. 
 'In a telephone directory one can search for a number based on a name, but not for a name based on a number'
 
-to obtain the list of all keys in a dictionary type
+to obtain the list of all keys in a dictionary, type
 d.keys()
 ['py', 'txt', 'png']
 
@@ -123,11 +123,11 @@ Let's now start off with the code
 We first create an empty dictionary
 
 science = {}
-now we read the record data one by one from the file sslc.txt
+now we read the records, one by one from the file sslc.txt
 
 for record in open('sslc.txt'):
 
-    we split the record on ';' and store them in a list by: fields equals record.split(';')
+    we split each record on ';' and store it in a list by: fields equals record.split(';')
 
     now we get the region code of a particular entry by region_code equal to fields[0].strip.
 The strip() is used to remove all leading and trailing white spaces from a given string
@@ -139,7 +139,7 @@ The strip() is used to remove all leading and trailing white spaces from a given
        
     Note that this if statement is inside the for loop so for the if block we will have to give additional indentation.
 
-    we again come back to the older 'for' loop indentation and we again strip the string and to get the science marks by
+    we again come back to the older, 'for' loop's, indentation and get the science marks by
     score_str = fields[6].strip()
 
     we check if student was not absent
@@ -165,3 +165,4 @@ title('Students scoring 90% and above in science by region')
 savefig('science.png')
 
 That brings us to the end of this tutorial. We have learnt about dictionaries, some basic string parsing and plotting pie chart in this tutorial. Hope you have enjoyed it. Thank you.
+#slide of summary. 
