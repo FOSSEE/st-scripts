@@ -38,6 +38,10 @@ parsing  - which we have looked at partially.
 Dictionaries - we shall be introducing the concept of dictionaries here.
 And finally plotting - which we have been doing all along.
 
+Let's get started, by opening the IPython prompt by typing, 
+
+ipython -pylab
+
 Let's first start off with dictionaries.
 
 We earlier used lists briefly. Back then we just created lists and appended items into them. 
