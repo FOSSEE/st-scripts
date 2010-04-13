@@ -119,11 +119,11 @@ Let's now start off with the code
 We first create an empty dictionary
 
 science = {}
-now we read the record data one by one from the file sslc.txt
+now we read the records, one by one from the file sslc.txt
 
 for record in open('sslc.txt'):
 
-    we split the record on ';' and store them in a list by: fields equals record.split(';')
+    we split each record on ';' and store it in a list by: fields equals record.split(';')
 
     now we get the region code of a particular entry by region_code equal to fields[0].strip.
 The strip() is used to remove all leading and trailing white spaces from a given string
@@ -135,7 +135,7 @@ The strip() is used to remove all leading and trailing white spaces from a given
        
     Note that this if statement is inside the for loop so for the if block we will have to give additional indentation.
 
-    we again come back to the older 'for' loop indentation and we again strip the string and to get the science marks by
+    we again come back to the older, 'for' loop's, indentation and get the science marks by
     score_str = fields[6].strip()
 
     we check if student was not absent
@@ -161,3 +161,4 @@ title('Students scoring 90% and above in science by region')
 savefig('science.png')
 
 That brings us to the end of this tutorial. We have learnt about dictionaries, some basic string parsing and plotting pie chart in this tutorial. Hope you have enjoyed it. Thank you.
+#slide of summary. 
