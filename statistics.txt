@@ -6,7 +6,7 @@ Till now we have covered:
 
 In this session, we will use them and some new concepts to solve a problem/exercise. 
 
-We have a file named sslc1.txt. 
+We have a file named sslc.txt. 
 It contains record of students and their performance in one of the State Secondary Board Examination. It has 180, 000 lines of record. We are going to read it and process this data.
 We can see the content of file by opening with any text editor.
 Please don't edit the data.
@@ -119,7 +119,7 @@ Let's now start off with the code
 We first create an empty dictionary
 
 science = {}
-now we read the record data one by one from the file sslc1.txt
+now we read the record data one by one from the file sslc.txt
 
 for record in open('sslc.txt'):
 
