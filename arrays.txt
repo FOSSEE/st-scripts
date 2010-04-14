@@ -100,7 +100,75 @@ c[::2,:] returns 2x3 array with first and third row
 
 and c[::2, ::2] will give us 2x2 array with first and third row and column 
 
-With 
+Lets us try to use these concepts of slicing and striding for doing some basic image manipulation
+
+pylab has a function imread to read images. We will use '(in)famous' lena image for our experimentation. Its there on desktop. 
+
+a = imread('lena.png')
+a is a numpy array with the 'RGB' values of each pixel
+a.shape
+
+its a 512x512x3 array.
+
+to view the image write
+imshow(a)
+
+lets try to crop the image to top left quarter. Since a is a normal array we can use slicing to get top left quarter by
+imshow(a[:255,:255]) (half of 512 is 256)
+
+But hat is not 'interesting' part of lena. Lets crop the image so that only her face is visible. for that we will need some rough estimates of pixels. 
+imshow(a)
+now move your mouse cursor over the image, it will give us x, y coordinates where ever we take our cursor. We can get rough estimate of lena's face now cropping to those boundaries is simple
+imshow(a[200:400, 200:400])
+
+Next we will try striding on this image. We will resize the image by skipping each alternate pixel. We have already seen how to skip alternate elements so,
+imshow(a[::2, ::2])
+note now the size of image is just 256x256 and still quality of image is not much compromised.
+-------------------------
+
+Till now we have covered initializing and accessing elements of arrays. Now we shall concentrate on functions available for arrays. We start this by creating 4x4 array by
+
+a = array([[ 1, 1, 2, -1],[ 2, 5, -1, -9], [ 2, 1, -1, 3], [ 1, -3, 2, 7]])
+a
+
+To get transpose of this matrix write
+a.T
+sum() function returns sum of all the elements of a matrix.
+sum(a)
+
+lets create one more array for checking more operations
+b = array([[3,2,-1,5], [2,-2,4,9], [-1,0.5,-1,-7], [9,-5,7,3]])
+
++ will take care of matrix additions
+a + b
+
+lets try multiplication now, 
+a * b will return element wise product of two matrices.
+
+To get matrix product of a and b we use
+dot(a, b)
+
+and to get inverse of matrix 
+
+inv(a)
+
+det(a) returns determinant of matrix a
+
+we shall create one array e
+e = array([[3,2,4],[2,0,2],[4,2,3]])
+and then to evaluate eigenvalues of array
+eig(a)
+it returns both eigen values and eigen vector of given matrix
+to get only eigen values use
+eigvals(a)
+
+This brings us to end of this session. We have covered Matrices
+Initialization
+Slicing
+Striding
+A bit of image processing
+Functions available for arrays
+Thank you
 
 ----------------
 We have seen 
