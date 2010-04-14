@@ -32,6 +32,77 @@ i
 i = identity(5)
 i
 
+----------------
+Now that we have covered creation of arrays, we will see how to access and change values of particular elements. 
+We created one 3x3 matrix earlier, 
+c
+
+to access the element 23 we type
+c[1][2]
+
+It is second row third column of c. Note that index values of arrays also start from 0.
+Alternative and popular way of doing this is
+c[1, 2]
+
+here ',' is used as separator for row and column value. Similarly any value from the array can be accessed.
+
+to access particular row completely we simply skip the column value
+c[1]
+will give us the entire second row.
+
+The way by which we access one element of array, we use that itself to assign new value
+c[1, 1] = -22
+c
+
+and same thing can be used for entire row
+c[1] = 0
+c
+as we can see, second row all elements are now 0
+
+Accessing a row is straight forward we skip column part
+but to access whole column we have to use
+c[:,2]
+will return third column.
+here the ':' part mentioned for row value symbolises entire row.
+the c[1] we were using earlier can also be written as c[1,:]
+
+':' actually takes two value. for any row or column we can mention
+start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
+c[0:2,:]
+will result in rows starting from first(0) till second and all columns. Note here that 'end' in our case, '2' would not be included in resulting array.
+
+c[1:3,:] 
+gives second and third row.
+
+similarly we can try this on columns also:
+c[:, 0:2] gives us first two column
+This whole concept of accessing chunks of arrays is known as 'slicing'
+
+There is one more interesting and handy feature of slicing. We saw earlier that how only ':' means entire row or column.
+It actually means if we don't specify start and end part of slice default is from zero to end.
+
+so
+c[:, :2]
+will also give us first two columns
+and c[:, 1:] will return last columns.
+
+c[1:, :2]
+returns first two columns of last two rows
+
+Now we will look into one more powerful feature of arrays: 'striding'.
+Striding allows us to jump or skip rows or columns by certain interval. We can specify the step size.
+c[:,:] will give us entire array
+we add one more ':' to row or column part to specify a step size.
+c[:, ::2]
+will give us first and third column. Since step size is two, it start with first column(blank before : means 0) and then we jump one column and then third(blank after : means end)
+similarly 
+c[::2,:] returns 2x3 array with first and third row
+
+and c[::2, ::2] will give us 2x2 array with first and third row and column 
+
+With 
+
+----------------
 We have seen 
     Welcome to the Tutorial on arrays. 
 
