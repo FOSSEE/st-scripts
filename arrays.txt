@@ -40,7 +40,7 @@ c
 to access the element 23 we type
 c[1][2]
 
-It is second row third column of c. Note that index values of arrays also start from 0.
+It is the second row, third column of c. Note that index values of arrays also start from 0.
 Alternative and popular way of doing this is
 c[1, 2]
 
@@ -62,14 +62,13 @@ as we can see, second row all elements are now 0
 Accessing a row is straight forward we skip column part
 but to access whole column we have to use
 c[:,2]
-will return third column.
-here the ':' part mentioned for row value symbolises entire row.
+it returns third column.
+here the ':' part mentioned for row value means entire row.
 the c[1] we were using earlier can also be written as c[1,:]
 
-':' actually takes two value. for any row or column we can mention
-start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
+':' actually takes two value. for any row or column we can mention start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
 c[0:2,:]
-will result in rows starting from first(0) till second and all columns. Note here that 'end' in our case, '2' would not be included in resulting array.
+will result in 2x3 array with rows starting from first(0) till second and all columns. Note here that 'end', in our case, '2' would not be included in resulting array.
 
 c[1:3,:] 
 gives second and third row.
@@ -83,8 +82,8 @@ It actually means if we don't specify start and end part of slice default is fro
 
 so
 c[:, :2]
-will also give us first two columns
-and c[:, 1:] will return last columns.
+will also give us the first two columns
+and c[:, 1:] will return last columns of c
 
 c[1:, :2]
 returns first two columns of last two rows
