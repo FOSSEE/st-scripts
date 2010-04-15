@@ -1,11 +1,11 @@
 Hello and welcome to the tutorial on Matrices.
 All matrices operations are done using arrays.
-We have already seen in previous session that how arrays are better suited for particular mathematical operations. In this session we are going to cover more details on Arrays, how to create/initialize them, how to manipulate and use them for solving given problem.
+We have already seen in previous session that how arrays are better suited for particular mathematical operations. In this session we are going to cover more details on Arrays(matrices), how to create/initialize them, how to manipulate and use them for solving given problem.
 
 First thing first, we start with creating a normal array by:
 a (equal to)= array([5, 8, 10, 13])
 
-and we have a as array. we can cross the content by
+and we have a as array, check the value by
 a
 
 Here a is single dimension array, that is it has only one row. We can create multi-dimensional arrays by
@@ -18,11 +18,11 @@ a.shape
 c.shape
 
 some other handy array initialization methods are also available to make life easier.
-say we want to create a array of size 3x4 with all values initialized to be 1, we can use
+say we want to create an array of size 3x4 with all the values initialized to be 1, we can use
 b = ones((3, 4))
-check value by
+and b will be
 b
-similarly, we already have a array, and we want to create one more array with same shape and initial values to be one, for that we will use
+similarly, if we already have an array, and we want to create one more array with the same shape and initial values to be one, for that we will use
 d = ones_like(c)
 and d will be 3x3 array with all values 1
 
@@ -168,6 +168,7 @@ Slicing
 Striding
 A bit of image processing
 Functions available for arrays
+
 Thank you
 
 ----------------
