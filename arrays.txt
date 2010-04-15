@@ -1,11 +1,11 @@
 Hello and welcome to the tutorial on Matrices.
 All matrices operations are done using arrays.
-We have already seen in previous session that how arrays are better suited for particular mathematical operations. In this session we are going to cover more details on Arrays, how to create/initialize them, how to manipulate and use them for solving given problem.
+We have already seen in previous session that how arrays are better suited for particular mathematical operations. In this session we are going to cover more details on Arrays(matrices), how to create/initialize them, how to manipulate and use them for solving given problem.
 
 First thing first, we start with creating a normal array by:
 a (equal to)= array([5, 8, 10, 13])
 
-and we have a as array. we can cross the content by
+and we have a as array, check the value by
 a
 
 Here a is single dimension array, that is it has only one row. We can create multi-dimensional arrays by
@@ -18,11 +18,11 @@ a.shape
 c.shape
 
 some other handy array initialization methods are also available to make life easier.
-say we want to create a array of size 3x4 with all values initialized to be 1, we can use
+say we want to create an array of size 3x4 with all the values initialized to be 1, we can use
 b = ones((3, 4))
-check value by
+and b will be
 b
-similarly, we already have a array, and we want to create one more array with same shape and initial values to be one, for that we will use
+similarly, if we already have an array, and we want to create one more array with the same shape and initial values to be one, for that we will use
 d = ones_like(c)
 and d will be 3x3 array with all values 1
 
@@ -32,6 +32,146 @@ i
 i = identity(5)
 i
 
+----------------
+Now that we have covered creation of arrays, we will see how to access and change values of particular elements. 
+We created one 3x3 matrix earlier, 
+c
+
+to access the element 23 we type
+c[1][2]
+
+It is second row third column of c. Note that index values of arrays also start from 0.
+Alternative and popular way of doing this is
+c[1, 2]
+
+here ',' is used as separator for row and column value. Similarly any value from the array can be accessed.
+
+to access particular row completely we simply skip the column value
+c[1]
+will give us the entire second row.
+
+The way by which we access one element of array, we use that itself to assign new value
+c[1, 1] = -22
+c
+
+and same thing can be used for entire row
+c[1] = 0
+c
+as we can see, second row all elements are now 0
+
+Accessing a row is straight forward we skip column part
+but to access whole column we have to use
+c[:,2]
+will return third column.
+here the ':' part mentioned for row value symbolises entire row.
+the c[1] we were using earlier can also be written as c[1,:]
+
+':' actually takes two value. for any row or column we can mention
+start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
+c[0:2,:]
+will result in rows starting from first(0) till second and all columns. Note here that 'end' in our case, '2' would not be included in resulting array.
+
+c[1:3,:] 
+gives second and third row.
+
+similarly we can try this on columns also:
+c[:, 0:2] gives us first two column
+This whole concept of accessing chunks of arrays is known as 'slicing'
+
+There is one more interesting and handy feature of slicing. We saw earlier that how only ':' means entire row or column.
+It actually means if we don't specify start and end part of slice default is from zero to end.
+
+so
+c[:, :2]
+will also give us first two columns
+and c[:, 1:] will return last columns.
+
+c[1:, :2]
+returns first two columns of last two rows
+
+Now we will look into one more powerful feature of arrays: 'striding'.
+Striding allows us to jump or skip rows or columns by certain interval. We can specify the step size.
+c[:,:] will give us entire array
+we add one more ':' to row or column part to specify a step size.
+c[:, ::2]
+will give us first and third column. Since step size is two, it start with first column(blank before : means 0) and then we jump one column and then third(blank after : means end)
+similarly 
+c[::2,:] returns 2x3 array with first and third row
+
+and c[::2, ::2] will give us 2x2 array with first and third row and column 
+
+Lets us try to use these concepts of slicing and striding for doing some basic image manipulation
+
+pylab has a function imread to read images. We will use '(in)famous' lena image for our experimentation. Its there on desktop. 
+
+a = imread('lena.png')
+a is a numpy array with the 'RGB' values of each pixel
+a.shape
+
+its a 512x512x3 array.
+
+to view the image write
+imshow(a)
+
+lets try to crop the image to top left quarter. Since a is a normal array we can use slicing to get top left quarter by
+imshow(a[:255,:255]) (half of 512 is 256)
+
+But hat is not 'interesting' part of lena. Lets crop the image so that only her face is visible. for that we will need some rough estimates of pixels. 
+imshow(a)
+now move your mouse cursor over the image, it will give us x, y coordinates where ever we take our cursor. We can get rough estimate of lena's face now cropping to those boundaries is simple
+imshow(a[200:400, 200:400])
+
+Next we will try striding on this image. We will resize the image by skipping each alternate pixel. We have already seen how to skip alternate elements so,
+imshow(a[::2, ::2])
+note now the size of image is just 256x256 and still quality of image is not much compromised.
+-------------------------
+
+Till now we have covered initializing and accessing elements of arrays. Now we shall concentrate on functions available for arrays. We start this by creating 4x4 array by
+
+a = array([[ 1, 1, 2, -1],[ 2, 5, -1, -9], [ 2, 1, -1, 3], [ 1, -3, 2, 7]])
+a
+
+To get transpose of this matrix write
+a.T
+sum() function returns sum of all the elements of a matrix.
+sum(a)
+
+lets create one more array for checking more operations
+b = array([[3,2,-1,5], [2,-2,4,9], [-1,0.5,-1,-7], [9,-5,7,3]])
+
++ will take care of matrix additions
+a + b
+
+lets try multiplication now, 
+a * b will return element wise product of two matrices.
+
+To get matrix product of a and b we use
+dot(a, b)
+
+and to get inverse of matrix 
+
+inv(a)
+
+det(a) returns determinant of matrix a
+
+we shall create one array e
+e = array([[3,2,4],[2,0,2],[4,2,3]])
+and then to evaluate eigenvalues of array
+eig(a)
+it returns both eigen values and eigen vector of given matrix
+to get only eigen values use
+eigvals(a)
+
+This brings us to end of this session. We have covered Matrices
+Initialization
+Slicing
+Striding
+A bit of image processing
+Functions available for arrays
+
+Thank you
+
+----------------
 We have seen 
     Welcome to the Tutorial on arrays. 
 
