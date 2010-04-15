@@ -1,0 +1,45 @@
+*Script
+
+
+*Hello and welcome to this tutorial on Basic Python using Python.
+
+This tutorial formally introduces Python as a language . Through this tutorial we will be able to understand Basic Data types like number , Boolean and strings .Some basic operators , simple input/output and basic conditional flow . 
+
+In numbers Python supports three kinds of data types ,
+
+floats,integers and complex numbers
+
+An integer can be defined as follows :
+a=13
+
+This make a an integer variable with value 13 .
+
+You can also type 9 around 20 times 
+
+a=99999999999999999999999 . as you can see Python does not have a limit on how long an integer has to be . Isn't that great . 
+
+Now will try a float.
+
+let's type 
+p=3.141592  if you type out p now you will notice that it is not absolutely equal to p you typed in . The reason for that is how a computer saves decimal values . 
+
+Apart from integer and float, Python has an in-built support for complex numbers. Now we try to assign a complex value to a variable .
+Type:
+c = 3+4j
+As you can see ,the notation for complex numbers is similar to the one used in electric engineering. 
+We will now try some operations on complex numbers . First we will try to get the absolute value of the complex number . For this we will use the abs built in function . For this do :
+abs in parenthesis c . 
+
+Do get the imaginary part of c you can do :
+
+c.imag
+
+and similarly for real part do :
+
+c.real
+
+Python also has Boolean as a built-in type .
+
+Try it out just type ..
+ t=True , note that T in true is capitalized .    
+ 
