@@ -20,56 +20,58 @@ c.shape
 A few other handy array initialization methods are also available to make life easier.
 say we want to create an array of size 3x4 with all the elements initialized to 1, we use
 b = ones((3, 4))
-and b will be
+and b is
 b
-similarly, say we already have an array, and we want to create one more array with the same shape and initial values to be one, for that we will use
+similarly, suppose we already have an array, and we want to create another array with the same shape but with initial values equal to one, for eg, to get an array similar in shape to the array 'c' but with all elements as 1 we type:
 d = ones_like(c)
-and d will be 3x3 array with all values 1
+and d is a 3x3 array with all values equal to 1
 
-Similarly there are functions like zeros and zeros_like which initialize array with all values being 0. One more useful function available is 'identity', it create identity matrix(array) of given order
+Similarly there are functions like zeros and zeros_like which initialize array with all values being 0. One more useful function available is 'identity', it create identity matrix of given order
 i = identity(3)
 i
 i = identity(5)
 i
 
+Note that identity takes just one argument since identity matrix is always a square matrix.
+
 ----------------
-Now that we have covered creation of arrays, we will see how to access and change values of particular elements. 
-We created one 3x3 matrix earlier, 
+Now that we have covered creation of arrays, we shall see how to access and change values of particular elements. 
+Remember we created a 3x3 matrix earlier, 
 c
 
 to access the element 23 we type
 c[1][2]
 
-It is second row third column of c. Note that index values of arrays also start from 0.
-Alternative and popular way of doing this is
+It is at the second row of the third column of the matrix/array c. Note that index values of arrays also start from 0.
+Alternatively, the more popular way of doing the same is
 c[1, 2]
 
 here ',' is used as separator for row and column value. Similarly any value from the array can be accessed.
 
 to access particular row completely we simply skip the column value
 c[1]
-will give us the entire second row.
+gives us the entire second row. 
 
-The way by which we access one element of array, we use that itself to assign new value
+We can assign a new value to an element, the same way we accessed it. For eg., 
 c[1, 1] = -22
 c
 
-and same thing can be used for entire row
+In order to change an entire row we type:
 c[1] = 0
 c
-as we can see, second row all elements are now 0
+as we can see, all elements of the second row are now 0
 
 Accessing a row is straight forward we skip column part
-but to access whole column we have to use
+but the same cannot be done to access columns. In order to access the whole column we have to use ':'
 c[:,2]
-will return third column.
+returns the third column.
 here the ':' part mentioned for row value symbolises entire row.
 the c[1] we were using earlier can also be written as c[1,:]
 
 ':' actually takes two value. for any row or column we can mention
 start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
 c[0:2,:]
-will result in rows starting from first(0) till second and all columns. Note here that 'end' in our case, '2' would not be included in resulting array.
+results in rows starting from row zero(0) upto the second row and all columns. Note here that 'end', in this case, '2' will not be included in resulting array.
 
 c[1:3,:] 
 gives second and third row.
@@ -83,26 +85,26 @@ It actually means if we don't specify start and end part of slice default is fro
 
 so
 c[:, :2]
-will also give us first two columns
-and c[:, 1:] will return last columns.
+also gives us first two columns
+and c[:, 1:] returns all columns excluding the 0th column.
 
 c[1:, :2]
-returns first two columns of last two rows
+returns first two columns of all rows excepting the 0th row.
 
-Now we will look into one more powerful feature of arrays: 'striding'.
-Striding allows us to jump or skip rows or columns by certain interval. We can specify the step size.
-c[:,:] will give us entire array
+Now we shall look into one more powerful feature of arrays: 'striding'.
+Striding allows us to jump or skip, rows or columns by a certain interval. We can specify the step size.
+c[:,:] gives us entire array
 we add one more ':' to row or column part to specify a step size.
 c[:, ::2]
-will give us first and third column. Since step size is two, it start with first column(blank before : means 0) and then we jump one column and then third(blank after : means end)
+gives us first and third column. Since step size is two, it starts with the first column(blank before : means 0) and then we jump one column and then third(blank after : means end)
 similarly 
-c[::2,:] returns 2x3 array with first and third row
+c[::2,:] returns a 2x3 array with the first and the third row
 
-and c[::2, ::2] will give us 2x2 array with first and third row and column 
+and c[::2, ::2] gives us a 2x2 array with the first and the third row and column 
 
 Lets us try to use these concepts of slicing and striding for doing some basic image manipulation
 
-pylab has a function imread to read images. We will use '(in)famous' lena image for our experimentation. Its there on desktop. 
+pylab has a function named imread to read images. We shall use the '(in)famous' lena image for our experimentation. Its there on desktop. 
 
 a = imread('lena.png')
 a is a numpy array with the 'RGB' values of each pixel
@@ -113,15 +115,15 @@ its a 512x512x3 array.
 to view the image write
 imshow(a)
 
-lets try to crop the image to top left quarter. Since a is a normal array we can use slicing to get top left quarter by
+lets try to crop the image to top left quarter. Since a is a normal array we can use slicing to get the top left quarter by
 imshow(a[:255,:255]) (half of 512 is 256)
 
-But hat is not 'interesting' part of lena. Lets crop the image so that only her face is visible. for that we will need some rough estimates of pixels. 
+Lena's hat is not of much interest for us. Let's crop the image so that only her face is visible. And to do that we'll need some rough estimates of pixels. 
 imshow(a)
-now move your mouse cursor over the image, it will give us x, y coordinates where ever we take our cursor. We can get rough estimate of lena's face now cropping to those boundaries is simple
+now move your mouse pointer over the image, it gives us x, y coordinates of the mouse pointer's current location. We can get rough estimate of lena's face. We can observe that Lena's face begins from somewhere around 200, 200 and ends at 400, 400. Now cropping to these boundaries is simple
 imshow(a[200:400, 200:400])
 
-Next we will try striding on this image. We will resize the image by skipping each alternate pixel. We have already seen how to skip alternate elements so,
+Next we shall try striding on this image. We shall resize the image by skipping alternate pixels. We have already seen how to skip alternate elements so,
 imshow(a[::2, ::2])
 note now the size of image is just 256x256 and still quality of image is not much compromised.
 -------------------------
@@ -133,34 +135,35 @@ a
 
 To get transpose of this matrix write
 a.T
-sum() function returns sum of all the elements of a matrix.
+
+The sum() function returns sum of all the elements of a matrix.
 sum(a)
 
-lets create one more array for checking more operations
+let's create one more array for checking more operations
 b = array([[3,2,-1,5], [2,-2,4,9], [-1,0.5,-1,-7], [9,-5,7,3]])
 
-+ will take care of matrix additions
++ takes care of matrix additions
 a + b
 
 lets try multiplication now, 
-a * b will return element wise product of two matrices.
+a * b returns the element wise product of two matrices.
 
 To get matrix product of a and b we use
 dot(a, b)
 
-and to get inverse of matrix 
+To get the inverse of a matrix we use,
 
 inv(a)
 
 det(a) returns determinant of matrix a
 
-we shall create one array e
+we shall create an array e
 e = array([[3,2,4],[2,0,2],[4,2,3]])
 and then to evaluate eigenvalues of array
-eig(a)
+eig(e)
 it returns both eigen values and eigen vector of given matrix
 to get only eigen values use
-eigvals(a)
+eigvals(e)
 
 This brings us to end of this session. We have covered Matrices
 Initialization
@@ -351,12 +354,12 @@ In the previous tutorial we learnt about arrays and we told you that numpy array
 Let's start with creating simple arrays. We've already seen how to convert lists to arrays. Inputting a new array is similarto that. 
 
 On your Ipython terminal type a = array open parenthesis and then open square brackets 5,8,10,13 close square brackets and close parenthesis . This create an array a . You can see what a is by typing a on the terminal .
-Now we will try to create a multi-dimensional array type in your ipython terminal
-c= array open parenthesis , then open square brackets 11,12,13 close square bracket 'comma' start square bracket 21 , 22 ,23close square bracket 'comma' open 31,32,33 close square bracket another close square bracket which closes the first sqaure bracket and parenthesis which closes the first parenthesis . Now to see the dimensions of the array c we will do c.shape . We can see that c is a 3 by 3 matrix .
+Now we shall try to create a multi-dimensional array type in your ipython terminal
+c= array open parenthesis , then open square brackets 11,12,13 close square bracket 'comma' start square bracket 21 , 22 ,23close square bracket 'comma' open 31,32,33 close square bracket another close square bracket which closes the first sqaure bracket and parenthesis which closes the first parenthesis . Now to see the dimensions of the array c we do c.shape . We can see that c is a 3 by 3 matrix .
 
-There are other special methods of creating arrays as well we will now look at them .
+There are other special methods of creating arrays as well we shall now look at them .
 The first one is the command arange which is similar to range except that it returns an array.
-We will type on our Ipython interpreter a = arange(10). We will see what a is now . Type a . As we can see This returns us an array of one dimension and has 10 elements .  
+We type on our Ipython interpreter a = arange(10). We see what a is now . Type a . As we can see This returns us an array of one dimension and has 10 elements .  
 Ones can be use to get all entries as ones . We can pass it the shape of the array as required .
 type b=ones open parenthesis , another open parenthesis , 3,4 , close second parenthesis and close first parenthesis . Look at b , by printing it out .
 To create an array with all entries as ones, with it's shape similar to an already existing array, we use the ones_like
