@@ -2,6 +2,10 @@ Hello friends and welcome to this tutorial on Matrices.
 In python all matrix operations are done using arrays.
 We have already seen in previous session that how arrays are better suited for certain mathematical operations. In this session we are going to cover more details on using Arrays as matrices, such as, how to create them, how to initialize them, how to manipulate and use them for solving given problem.
 
+Let's now start off. As you can see our lena image is on the desktop, so first let's navigate to the desktop by cd Desktop.
+
+Let's now fire up Ipython, ipython -pylab
+
 First things first, let's start by creating a normal array, type:
 a equal to array([5, 8, 10, 13])
 
