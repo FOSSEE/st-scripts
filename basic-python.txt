@@ -42,4 +42,49 @@ Python also has Boolean as a built-in type .
 
 Try it out just type ..
  t=True , note that T in true is capitalized .    
+  
+You can apply different Boolean operations on t now for example :
+
+
+f=not t , this saves the value of not t that is False in f. 
+
+We can apply other operators like or and and ,
+
+f or t gives us the value True while 
+f and t gives us the value false.
+
+You can use parenthesis for precedence , 
+
+Lets write some piece of code to check this out .
+
+a=False
+b=True
+c=True
+
+To check how precedence changes with parenthesis . We will try two expressions and their evaluation.
+
+do
+(a and b) or c 
+ 
+This expression gives the value True
+
+where as the expression a and (b or c) gives the value False .
+
+Now we will have a look at strings 
+
+type 
+w="hello"
+
+w is now a string variable with the value "hello"
+
+printing out w[0] + w[2] + w[-1] gives hlo if you notice the expression for accessing characters of a string is similar to lists . 
+
+Also functions like len work with strings just like the way they did with lists
+
+Now lets try changing a character in the string in the same way we change lists .
+
+type :
+w[0]='Capital H'  
+
+oops this gives us a Type Error . Why? Because string are immutable . You can change a string simply by assigning a new element to it . This and some other features specific to string processing make string a different kind of data structure than lists .  
  
