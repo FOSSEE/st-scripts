@@ -20,7 +20,7 @@
     
     In this tutorial we shall look at obtaining the least squares fit
     of a given data-set. For this purpose, we shall use the same
-    pendulum data used in the tutorial on plotting from files.
+    pendulum data that we used in the tutorial on plotting from files.
 
     To be able to follow this tutorial comfortably, you should have a
     working knowledge of arrays, plotting and file reading. 
@@ -42,7 +42,7 @@
     {Show a slide here?}
     
     We have already seen (in a previous tutorial), how to read a file
-    and obtain the data set. We shall quickly get the required data
+    and obtain the data set. Let's quickly get the required data
     from our file. 
 
     In []: l = []
@@ -79,8 +79,8 @@
     information. 
     In []: result = lstsq(A,tsq)
 
-    We take put the required coefficients, which are the first thing
-    in the list of things that lstsq returns, into the variable coef. 
+    We extract the required coefficients, which is the first element
+    in the list of things that lstsq returns, and store them into the variable coef. 
     In []: coef = result[0]
 
     To obtain the plot of the line, we simply use the equation of the

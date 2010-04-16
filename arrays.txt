@@ -1,6 +1,6 @@
 Hello friends and welcome to this tutorial on Matrices.
 In python all matrix operations are done using arrays.
-We have already seen in previous session that how arrays are better suited for certain mathematical operations. In this session we are going to cover more details on using Arrays as matrices, such as, how to create them, how to initialize them, how to manipulate and use them for solving given problem.
+We have already seen in previous session that how arrays are better suited for certain mathematical operations. In this session we shall see how to perform efficient matrix operations using arrays. We shall see how to create them, how to initialize them, how to manipulate and use them to perform some basic image processing. For this tutorial we shall need the lena.png image. Hope you have the image with you. 
 
 Let's now start off. As you can see our lena image is on the desktop, so first let's navigate to the desktop by cd Desktop.
 
@@ -32,8 +32,6 @@ and d is a 3x3 array with all values equal to 1
 
 Similarly there are functions like zeros and zeros_like which initialize array with all values being 0. One more useful function available is 'identity', it create identity matrix of given order
 i = identity(3)
-i
-i = identity(5)
 i
 
 Note that identity takes just one argument since identity matrix is always a square matrix.
@@ -73,7 +71,7 @@ here the ':' part mentioned for row value symbolises entire row.
 the c[1] we were using earlier can also be written as c[1,:]
 
 ':' actually takes two value. for any row or column we can mention
-start:end values, and rows/columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
+start:end values, and rows or columns starting for 'start' till 'end' will be returned. Lets try some examples for better understanding
 c[0:2,:]
 results in rows starting from row zero(0) upto the second row and all columns. Note here that 'end', in this case, '2' will not be included in resulting array.
 
