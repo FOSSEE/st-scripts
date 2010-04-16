@@ -21,6 +21,7 @@
     In this tutorial we shall look at obtaining the least squares fit
     of a given data-set. For this purpose, we shall use the same
     pendulum data that we used in the tutorial on plotting from files.
+    Hope you have the file with you. 
 
     To be able to follow this tutorial comfortably, you should have a
     working knowledge of arrays, plotting and file reading. 
@@ -38,59 +39,59 @@
     of values for L and the corresponding T^2 values. Using this, we
     wish to obtain the equation of the straight line. 
 
-    In matrix form...
-    {Show a slide here?}
-    
+    In matrix form the equation is represented as shown, 
+    Tsq = A.p where Tsq is an NX1 matrix, and A is an NX2 as shown.
+    And p is a 2X1 matrix of the slope and Y-intercept. In order to 
+    obtain the least square fit curve we need to find the matrix p
+
+    Let's get started. As you can see, the file pendulum.txt
+    is on our Desktop and hence we navigate to the Desktop by typing 
+    cd Desktop. Let's now fire up IPython: ipython -pylab
+
     We have already seen (in a previous tutorial), how to read a file
-    and obtain the data set. Let's quickly get the required data
+    and obtain the data set using loadtxt(). Let's quickly get the required data
     from our file. 
 
-    In []: l = []
-    In []: t = []
-    In []: for line in open('pendulum.txt'):
-    ....     point = line.split()
-    ....     l.append(float(point[0]))
-    ....     t.append(float(point[1]))
-    ....
-    ....
+    l, t = loadtxt('pendulum.txt', unpack=True)
 
-    Since, we have learnt to use arrays and know that they are more
-    efficient, we shall use them. We convert the lists l and t to
-    arrays and calculate the values of time-period squared. 
+    loadtxt() directly stores the values in the pendulum.txt into arrays l and t
+    Let's now calculate the values of square of the time-period. 
 
-    In []: l = array(l)
-    In []: t = array(t)
-    In []: tsq = t*t
+    tsq = t*t
 
     Now we shall obtain A, in the desired form using some simple array
     manipulation 
 
-    In []: A = array([l, ones_like(l)])
-    In []: A = A.T
+    A = array([l, ones_like(l)])
+
+    As we have seen in a previous tutorial, ones_like() gives an array similar
+    in shape to the given array, in this case l, with all the elements as 1.
+
+    A = A.T to get the transpose of the given array.
     
     Type A, to confirm that we have obtained the desired array. 
-    In []: A
+    A
     Also note the shape of A. 
-    In []: A.shape
+    A.shape
 
     We shall now use the lstsq function, to obtain the coefficients m
     and c. lstsq returns a lot of things along with these
-    coefficients. Look at the documentation of lstsq, for more
-    information. 
-    In []: result = lstsq(A,tsq)
+    coefficients. We may look at the documentation of lstsq, for more
+    information by typing lstsq? 
+    result = lstsq(A,tsq)
 
     We extract the required coefficients, which is the first element
     in the list of things that lstsq returns, and store them into the variable coef. 
-    In []: coef = result[0]
+    coef = result[0]
 
     To obtain the plot of the line, we simply use the equation of the
     line, we have noted before. T^2 = mL + c. 
 
-    In []: Tline = coef[0]*l + coef[1]
-    In []: plot(l, Tline)
+    Tline = coef[0]*l + coef[1]
+    plot(l, Tline)
 
     Also, it would be nice to have a plot of the points. So, 
-    In []: plot(l, tsq, 'o')
+    plot(l, tsq, 'o')
 
     This brings us to the end of this tutorial. In this tutorial,
     you've learnt how to obtain a least squares fit curve for a given
