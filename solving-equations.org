@@ -13,13 +13,17 @@
     of polynomials and other non-linear equations. In the process, we
     shall look at defining functions. 
 
+    We would be using concepts related to arrays which we have covered
+    in previous session
+
     Let's begin with solving linear equations. 
     {show a slide of the equations}
     We shall use the solve function, to solve this system of linear
-    equations.  Solve requires the coefficients and the constants to
+    equations. Solve requires the coefficients and the constants to
     be in the form of matrices to solve the system of linear equations. 
 
-    We begin by entering the coefficients and the constants as
+    Lets start ipython -pylab interpreter.    
+    Then we begin by entering the coefficients and the constants as
     matrices. 
 
     In []: A = array([[3,2,-1],
@@ -33,8 +37,9 @@
 
     Type x, to look at the solution obtained. 
 
-    Next, we verify the solution by obtaining a product of A and x,
-    and comparing it with b. Note that we should use the dot function
+    Equation is of the form Ax = b, so we verify the solution by 
+    obtaining a matrix product of A and x, and comparing it with b. 
+    As we have covered earlier that we should use the dot function 
     here, and not the * operator. 
 
     In []: Ax = dot(A, x)
@@ -60,22 +65,26 @@
     
     In []: coeffs = [1, -5, 6]
     In []: roots(coeffs)
-    As you can see, roots returns the coefficients in an array. 
+    As you can see, roots returns the result in an array. 
+    # It even works for polynomials with imaginary solutions.
+    # roots([1, 1, 1])
 
-    To find the roots of any arbitrary function, we use the fsolve
+    To find the roots of non linear equations, we use the fsolve
     function. We shall use the function sin(x)+cos^2(x) as our
-    function, in this tutorial. First, of all we import fsolve, since it
-    is not already available to us. 
+    function, in this tutorial. This function is not part of pylab
+    package which we import during starting, so we will have to 
+    import it. It is part of scipy package.
 
     In []: from scipy.optimize import fsolve
 
-    Now, let's look at the arguments of fsolve using fsolve?
+    Now, let's look at the documentation of fsolve using fsolve?    
     
     In []: fsolve?
 
-    The first argument, func, is a python function that takes atleast
-    one argument. So, we should now define a python function for the
-    given mathematical expression sin(x)+cos^2(x). 
+    As mentioned in docs the first argument, func, is a python 
+    function that takes atleast one argument. So, we should now 
+    define a python function for the given mathematical expression
+    sin(x)+cos^2(x). 
 
     The second argument, x0, is the initial estimate of the roots of
     the function. Based on this initial guess, fsolve returns a root. 
@@ -86,16 +95,21 @@
     given mathematical expression (sin(x)+cos^2(x)) for a each input. 
 
     In []: def f(x):
-               return sin(x)+cos(x)*cos(x)
+    ...        return sin(x)+cos(x)*cos(x)
+    ...
+    ...
+    hit return thrice for coming out of function definition. 
    
     def, is a key word in python that tells the interpreter that a
     function definition is beginning. f, here, is the name of the
     function and x is the lone argument of the function. The whole
-    definition of the function is done with in an indented block. Our
-    function f has just one line in it's definition. 
+    definition of the function is done with in an indented block same
+    as for loops and conditional statements we have used in our 
+    earlier sessions. Our function f has just one line in it's 
+    definition. 
 
     You can test your function, by calling it with an argument for
-    which the output value is know, say x = 0. We can see that
+    which the output value is known, say x = 0. We can see that
     sin(x) + cos^2(x) has a value of 1, when x = 0. 
 
     Let's check our function definition, by calling it with 0 as an
@@ -111,8 +125,9 @@
     In []: fsolve(f, 0)
     fsolve has returned a root of sin(x)+cos^2(x) that is close to 0. 
 
-    That brings us to the end of this tutorial on solving linear
-    equations, finding roots of polynomials and other non-linear
+    That brings us to the end of this tutorial. We have covered solution
+    of linear equations, finding roots of polynomials and other 
+    non-linear
     equations. We have also learnt how to define functions and call
     them. 
 

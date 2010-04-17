@@ -83,75 +83,61 @@ Finding least square fit of given data-set
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{$L$ vs. $T^2$ - Scatter}
-  \vspace{-0.15in}
-  \begin{figure}
-    \includegraphics[width=4in]{data/L-Tsq-points}
-  \end{figure}
+\frametitle{Solution of equations}
+Consider,
+  \begin{align*}
+    3x + 2y - z  & = 1 \\
+    2x - 2y + 4z  & = -2 \\
+    -x + \frac{1}{2}y -z & = 0
+  \end{align*}
+Solution:
+  \begin{align*}
+    x & = 1 \\
+    y & = -2 \\
+    z & = -2
+  \end{align*}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{$L$ vs. $T^2$ - Line}
-  \vspace{-0.15in}
-  \begin{figure}
-    \includegraphics[width=4in]{data/L-Tsq-Line}
-  \end{figure}
+\frametitle{Scipy Methods - \typ{roots}}
+\begin{itemize}
+\item Calculates the roots of polynomials
+\item To calculate the roots of $x^2-5x+6$ 
+\end{itemize}
+\begin{lstlisting}
+  In []: coeffs = [1, -5, 6]
+  In []: roots(coeffs)
+  Out[]: array([3., 2.])
+\end{lstlisting}
+\vspace*{-.2in}
+\begin{center}
+\includegraphics[height=1.6in, interpolate=true]{data/roots}    
+\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{$L$ vs. $T^2$ }
-  \frametitle{$L$ vs. $T^2$ - Least Square Fit}
-  \vspace{-0.15in}
-  \begin{figure}
-    \includegraphics[width=4in]{data/least-sq-fit}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Least Square Fit Curve}
-  \begin{center}
-    \begin{itemize}
-    \item $L \alpha T^2$
-    \item Best Fit Curve $\rightarrow$ Linear
-  \begin{itemize}
-  \item Least Square Fit
-  \end{itemize}
-\item \typ{lstsq()} 
-    \end{itemize}
-  \end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{\typ{lstsq}}
-  \begin{itemize}
-  \item We need to fit a line through points for the equation $T^2 = m \cdot L+c$
-  \item In matrix form, the equation can be represented as $T_{sq} = A \cdot p$, where $T_{sq}$ is
-  $\begin{bmatrix}
-  T^2_1 \\
-  T^2_2 \\
-  \vdots\\
-  T^2_N \\
-  \end{bmatrix}$
-, A is   
-  $\begin{bmatrix}
-  L_1 & 1 \\
-  L_2 & 1 \\
-  \vdots & \vdots\\
-  L_N & 1 \\
-  \end{bmatrix}$
-  and p is 
-  $\begin{bmatrix}
-  m\\
-  c\\
-  \end{bmatrix}$
-  \item We need to find $p$ to plot the line
-  \end{itemize}
+\frametitle{Scipy Methods - \typ{fsolve}}
+\begin{small}
+\begin{lstlisting}
+  In []: from scipy.optimize import fsolve
+\end{lstlisting}
+\end{small}
+\begin{itemize}
+\item Finds the roots of a system of non-linear equations
+\item Input arguments - Function and initial estimate
+\item Returns the solution
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Summary}
   \begin{block}{}
-    Obtaining the least fit curve from a data set
+    \begin{itemize}
+    \item Solving linear equations
+    \item Finding roots
+    \item Roots of non linear equations
+    \item Basics of Functions
+    \end{itemize}
   \end{block}    
 \end{frame}
 
