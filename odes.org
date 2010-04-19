@@ -18,14 +18,18 @@
     For our problem Let us use L=25000, k=0.00003.
     Let the boundary condition be y(0)=250.
 
-    First of all run the magic command to import odeint to our program.
+    Lets start ipython -pylab interpreter.    
+    
+    As we saw in one of earlier session, sometime pylab wont 'import' all
+    packages. For solving 'ordinary differential equations' also we shall
+    import 'odeint' function which is part SciPy package. So we run the 
+    magic command:
 
     In []: from scipy.integrate import odeint
 
-
-    For now just remember this as a command that does some magic to obtain
-    the function odeint in to our program.
-    We will come back to the details of this command in subsequent sessions.
+    # For now just remember this as a command that does some magic to obtain
+    # the function odeint in to our program.
+    We will cover more details regarding 'import' in subsequent sessions.
 
     We can represent the given ODE as a Python function.
     This function takes the dependent variable y and the independent variable t
@@ -51,20 +55,22 @@
 
     We can plot the the values of y against t to get a graphical picture our ODE.
 
-
-    Let us move on to solving a system of two ordinary differential equations.
+    plot(y, t)
+    Lets close this plot and move on to solving ordinary differential equation of 
+    second order.
     Here we shall take the example ODEs of a simple pendulum.
 
     The equations can be written as a system of two first order ODEs
 
     d(theta)/dt = omega
-
+    
     and
 
     d(omega)/dt = - g/L sin(theta)
 
     Let us define the boundary conditions as: at t = 0, 
-    theta = theta 0 (10 degrees) and omega = 0
+    theta = theta naught = 10 degrees and 
+    omega = 0
 
     Let us first define our system of equations as a Python function, pend_int.
     As in the earlier case of single ODE we shall use odeint function of Python
@@ -81,7 +87,7 @@
       ....     return f
       ....
 
-    It takes two arguments. The first argument is a 2-tuple containing the two
+    It takes two arguments. The first argument itself containing two
     dependent variables in the system, theta and omega.
     The second argument is the independent variable t.
 
@@ -105,15 +111,11 @@
 
     Now solving this system is just a matter of calling the odeint function with
     the correct arguments.
-    So first let us import odeint function into our program using the magic
-    import command
-
-    In []: from scipy.integrate import odeint
-
-    We can call ode_int as:
 
     In []: pend_sol = odeint(pend_int, initial,t)
 
+    In []: plot(pend_sol[0], t) plot theta against t
+    In []: plot(pend_sol[1], t) will plot omega against t
     Plotting theta against t and omega against t we obtain the plots as shown
     in the slide.
 
