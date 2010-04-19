@@ -10,7 +10,7 @@
     Welcome. 
     
     In this tutorial we shall look at solving linear equations, obtaining
-    roots of polynomial and other non-linear equations. In the process, we
+    roots of polynomial and non-linear equations. In the process, we
     shall look at defining functions as well. 
 
     We would be using concepts related to arrays which we have covered
@@ -18,17 +18,22 @@
 
     Let's begin with solving linear equations. 
     {show a slide of the equations}
-    We shall use the solve function, to solve this system of linear
+    Consider the set of equations,
+    3x + 2y -z = 1, 2x-2y + 4z = -2, -x+ half y-z = 0.
+    We shall use the solve function, to solve the given system of linear
     equations. Solve requires the coefficients and the constants to
-    be in the form of matrices to solve the system of linear equations. 
+    be in the form of matrices of the form Ax = b to solve the system of linear equations. 
 
     Lets start ipython -pylab interpreter.    
     We begin by entering the coefficients and the constants as
     matrices. 
 
-    In []: A = array([[3,2,-1],
-                      [2,-2,4],                   
+    In []: A = array([[3,2,-1], 
+                      [2,-2,4],
                       [-1, 0.5, -1]])
+
+    A is a 3X3 matrix of the coefficients of x, y and z
+
     In []: b = array([1, -2, 0])
 
     Now, we can use the solve function to solve the given system. 
@@ -55,27 +60,27 @@
 
     In []: allclose(Ax, b)
     The function returns True, which implies that the product of A &
-    x, and b are close enough. This validates our solution x. 
+    x is very close to the value of b. This validates our solution x. 
 
-    Let's move to finding the roots of polynomials. We shall use the
-    roots function to calculate the roots of a polynomial. 
+    Let's move to finding the roots of a polynomial. We shall use the
+    roots function for this.
 
     The function requires an array of the coefficients of the
     polynomial in the descending order of powers. 
-    Consider the polynomial x^2-5x+6
+    Consider the polynomial x^2-5x+6 = 0
     
     In []: coeffs = [1, -5, 6]
     In []: roots(coeffs)
     As we can see, roots returns the result in an array. 
     It even works for polynomials with imaginary roots.
     roots([1, 1, 1])
+    As you can see, the roots of that equation are of the form a + bj
 
     What if I want the solution of non linear equations?
-    For that we use the fsolve function. We shall use the function
-    sin(x)+cos^2(x) as our function, in this tutorial. This function 
-    is not part of pylab package which we import at the beginning,
-    so we will have to import it. It is part of scipy package. Let's
-    import it using.
+    For that we use the fsolve function. In this tutorial, we shall use
+    the equation sin(x)+cos^2(x). fsolve is not part of the pylab
+    package which we imported at the beginning, so we will have to import
+    it. It is part of scipy package. Let's import it using.
 
     In []: from scipy.optimize import fsolve
 
@@ -100,13 +105,13 @@
     ...        return sin(x)+cos(x)*cos(x)
     ...
     ...
-    hit the enter key thrice for coming out of function definition. 
+    hit the enter key to come out of function definition. 
    
     def, is a key word in python that tells the interpreter that a
     function definition is beginning. f, here, is the name of the
     function and x is the lone argument of the function. The whole
-    definition of the function is done with in an indented block same
-    as the loops and conditional statements we have used in our 
+    definition of the function is done with in an indented block similar
+    to the loops and conditional statements we have used in our 
     earlier tutorials. Our function f has just one line in it's 
     definition. 
 
