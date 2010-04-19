@@ -7,29 +7,30 @@
 ********* working knowledge of arrays
 ********* working knowledge of functions
 *** Script
-    Welcome. 
+    Welcome friends. 
     
-    In this tutorial we shall look at solving Ordinary Differential Equations
-    using odeints in Python.
+    In this tutorial we shall look at solving Ordinary Differential Equations,
+    ODE henceforth using odeint in Python.
 
-    Let's consider a classical problem of the spread of epidemic in a
+    Let's consider the classic problem of the spread of an epidemic in a
     population.
-    This is given by dy/dt = ky(L-y) where L is the total population.
-    For our problem Let us use L=25000, k=0.00003.
+    This is given by the ordinary differential equation dy/dt = ky(L-y) 
+    where L is the total population and k is an arbitrary constant. For our
+    problem Let us use L=25000, k=0.00003.
     Let the boundary condition be y(0)=250.
 
-    Lets start ipython -pylab interpreter.    
+    Lets fire up IPython by typing ipython -pylab interpreter.    
     
-    As we saw in one of earlier session, sometime pylab wont 'import' all
+    As we saw in one of earlier session, sometimes pylab wont 'import' all
     packages. For solving 'ordinary differential equations' also we shall
-    import 'odeint' function which is part SciPy package. So we run the 
-    magic command:
+    have to import 'odeint' function which is a part of the SciPy package.
+    So we run the magic command:
 
     In []: from scipy.integrate import odeint
 
-    # For now just remember this as a command that does some magic to obtain
-    # the function odeint in to our program.
-    We will cover more details regarding 'import' in subsequent sessions.
+    For now just remember this as a command that does some magic to obtain
+    the function odeint in to our program.
+    The details regarding `import' shall be covered in a subsequent tutorial.
 
     We can represent the given ODE as a Python function.
     This function takes the dependent variable y and the independent variable t
@@ -37,26 +38,27 @@
     Our function looks like this:
     (Showing the slide should be sufficient)
 
+    Let us now define our function.
+
     In []: def epid(y, t):
       ....     k = 0.00003
       ....     L = 25000
       ....     return k*y*(L-y)
 
-
-    Independent variable t can have be assigned the values in the interval of
+    Independent variable t can be assigned the values in the interval of
     0 and 12 with 61 points using linspace:
 
     In []: t = linspace(0, 12, 61)
 
-    Now obtaining the odeint of the ode we have already defined is as simple as
-    calling the Python's odeint function which we imported:
+    Now obtaining the solution of the ode we defined, is as simple as
+    calling the Python's odeint function which we just imported:
     
     In []: y = odeint(epid, 250, t)
 
     We can plot the the values of y against t to get a graphical picture our ODE.
 
     plot(y, t)
-    Lets close this plot and move on to solving ordinary differential equation of 
+    Lets now close this plot and move on to solving ordinary differential equation of 
     second order.
     Here we shall take the example ODEs of a simple pendulum.
 
@@ -91,9 +93,9 @@
     dependent variables in the system, theta and omega.
     The second argument is the independent variable t.
 
-    In the function we assign theta and omega to first and second values of the
-    initial argument respectively.
-    Acceleration due to gravity, as we know is 9.8 meter per second sqaure.
+    In the function we assign the first and second values of the
+    initial argument to theta and omega respectively.
+    Acceleration due to gravity, as we know is 9.81 meter per second sqaure.
     Let the length of the the pendulum be 0.2 meter.
 
     We create a list, f, of two equations which corresponds to our two ODEs,
@@ -119,7 +121,7 @@
     Plotting theta against t and omega against t we obtain the plots as shown
     in the slide.
 
-    Thus we come to the end of this session on solving ordinary differential
-    equations in Python. Thanks for listening to this tutorial.
+    Thus we come to the end of this tutorial on solving ordinary differential
+    equations in Python. In this tutorial we have learnt, 
 
 *** Notes
