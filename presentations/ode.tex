@@ -78,10 +78,36 @@ Solving ordinary differential equations.
   \begin{block}{Prerequisite}
     \begin{itemize}
     \item Understanding of Arrays.
-    \item Python functions.
-    \item lists.
+    \item functions and lists
     \end{itemize}    
   \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Solving ODEs using SciPy}
+\begin{itemize}
+\item Let's consider the spread of an epidemic in a population
+\item $\frac{dy}{dt} = ky(L-y)$ gives the spread of the disease
+\item L is the total population.
+\item Use L = 25000, k = 0.00003, y(0) = 250
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{ODEs - Simple Pendulum}
+We shall use the simple ODE of a simple pendulum. 
+\begin{equation*}
+\ddot{\theta} = -\frac{g}{L}sin(\theta)
+\end{equation*}
+\begin{itemize}
+\item This equation can be written as a system of two first order ODEs
+\end{itemize}
+\begin{align}
+\dot{\theta} &= \omega \\
+\dot{\omega} &= -\frac{g}{L}sin(\theta) \\
+ \text{At}\ t &= 0 : \nonumber \\
+ \theta = \theta_0(10^o)\quad & \&\quad  \omega = 0\ (Initial\ values)\nonumber 
+\end{align}
 \end{frame}
 
 \begin{frame}[fragile]
