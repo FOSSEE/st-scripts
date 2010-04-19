@@ -10,7 +10,9 @@
     Welcome friends. 
     
     In this tutorial we shall look at solving Ordinary Differential Equations,
-    ODE henceforth using odeint in Python.
+    ODE henceforth using odeint in Python. In this tutorial we shall be using
+    the concepts of arrays, functions and lists which we have covered in various
+    previous tutorials.
 
     Let's consider the classic problem of the spread of an epidemic in a
     population.
@@ -19,7 +21,7 @@
     problem Let us use L=25000, k=0.00003.
     Let the boundary condition be y(0)=250.
 
-    Lets fire up IPython by typing ipython -pylab interpreter.    
+    Let's now fire up IPython by typing ipython -pylab interpreter.    
     
     As we saw in one of earlier session, sometimes pylab wont 'import' all
     packages. For solving 'ordinary differential equations' also we shall
@@ -122,6 +124,7 @@
     in the slide.
 
     Thus we come to the end of this tutorial on solving ordinary differential
-    equations in Python. In this tutorial we have learnt, 
+    equations in Python. In this tutorial we have learnt how to solve ordinary
+    differential equations of first and second order.
 
 *** Notes
