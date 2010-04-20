@@ -15,7 +15,7 @@
     For conditional statements 'Booleans' are supported.
     
     Lets start by covering one by one, firstly 'numbers'
-    All 'whole numbers' irrespective of how big they are, are of 'int'
+    All integer numbers irrespective of how big they are, are of 'int'
     data type
     Lets get started by opening IPython interpreter. Now we will create
     some variables say:
@@ -28,8 +28,89 @@
     b = 999999999999
     print b
     
-    And 
+    Floating point numbers comes under 'float'
+    p = 3.141592
+    type(p)
 
+    Python by default provides support to complex numbers. 
+    c = 3+4j 
+    c is a complex number. 'j' is used to specify the imaginary part.
+    type(c)
+    Python also provides basic functions for their manipulations like
+    abs(c) will return the absolute value of c(sqrt(a^2 + b^2))
+    c.imag returns imaginary part of the variable
+    and similarly c.real gives real part.
+
+    Next we will look at Boolean data types:
+    Its a primitive datatype having one of two values: True or False.
+    t = True
+    print t
+
+    Python is case sensitive language, so True with 'T' is boolean type but
+    true with 't' would be a variable. 
+    
+    f = not True
+    
+    we can do binary operation like 'or' and 'not' with these variables
+    f or t
+    f and t
+    
+    in case of multiple binary operations to make sure of precedence use 
+    'brackets ()'
+    a = False
+    b = True
+    c = True
+    (a and b) or c    
+    True
+    first a and b is evaluated and then the 'or' statement
+    a and (b or c)
+    False
+
+    Now we shall look at Python Strings.
+    In python anything enclosed inside quotes(single or double) is a string
+    so 
+    a = 'This is a string'
+    print a
+    b = "This too!"
+    print b
+    c = '''This one too!'''
+    print c
+    d = """And one more."""
+    print d
+    
+    Similar to lists we covered earlier even string elements can be accessed 
+    via index numbers starting from 0
+
+    print a[0]    
+    print a[5]
+    will 
+    To access last element we can use a[-1] which is one of Pythons feature.
+    print a[-1]
+    len function works with the strings also as it does with the arrays and 
+    returns length of the string.
+    
+    One thing to notice about the string variables is that they are 
+    immutable, that is
+    a[0] = 't'
+    will throw an error
+    
+    Some of methods available for string are:
+    a.startswith('Thi')
+    returns true if initial of the string is same
+    similarly there is endswith
+    a.endswith('ING')
+    a.upper() returns a string will all letters capitalized.
+    and a.lower() returns a string with all smaller case letters.
+    As we have seen earlier use of split function, it returns the list after
+    splitting the string, so
+    a.split()
+    will give list with three elements.
+    Opposite to this function, we also have 'join' function.
+    ''.join(['a','b','c']) will return a joined string of the list we pass
+    to it. Since join is performed on '' that is empty string we get 'abc'
+    if we do something like
+    '-'.join(['a','b','c'])
+    
     Thus we come to the end of this tutorial on introduction of Data types in
     Python. In this tutorial we have learnt what are supported data types, 
     supported operations and performing simple IO operations in Python.
