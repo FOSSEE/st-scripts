@@ -1,0 +1,37 @@
+* Data Types
+*** Outline
+***** Introduction
+******* What are we going to do?
+******* How are we going to do?
+******* Arsenal Required
+********* None
+*** Script
+    Welcome friends. 
+    
+    In this tutorial we shall look at data types available in Python and 
+    how to perform simple Input and Output operations. 
+    for dealing with 'Numbers' we have: int, float, complex
+    'Strings' are there for handling Text content.
+    For conditional statements 'Booleans' are supported.
+    
+    Lets start by covering one by one, firstly 'numbers'
+    All 'whole numbers' irrespective of how big they are, are of 'int'
+    data type
+    Lets get started by opening IPython interpreter. Now we will create
+    some variables say:
+    a = 13
+    print a
+
+    To check the data type of any variable Python provides 'type' function
+    type(a)
+    
+    b = 999999999999
+    print b
+    
+    And 
+
+    Thus we come to the end of this tutorial on introduction of Data types in
+    Python. In this tutorial we have learnt what are supported data types, 
+    supported operations and performing simple IO operations in Python.
+
+*** Notes
