@@ -84,7 +84,72 @@ Also functions like len work with strings just like the way they did with lists
 Now lets try changing a character in the string in the same way we change lists .
 
 type :
-w[0]='Capital H'  
+w[0]='H'  
 
 oops this gives us a Type Error . Why? Because string are immutable . You can change a string simply by assigning a new element to it . This and some other features specific to string processing make string a different kind of data structure than lists .  
  
+Now lets see some of the ways in which you can modify strings and other methods related to strings .
+
+Type :
+
+a = 'Hello world' 
+
+To check if a particular string starts with a particular substring you can check that with startswith method
+
+a.startswith('Hell')
+
+Depending on whether the string starts with that substring the function returns true or false
+
+same is the case a.endwith('ld')
+
+a.upper()
+ returns another string that is all the letters of given string capitalized
+
+similarly a.lower returns all small letters .
+
+Earlier we showed you how to see documentations of functions . You can see the documentation of the lower function by doing a.lower?
+
+You can use a.join to joing a list of strings to one string using a given string as connector . 
+
+for example 
+
+type :
+', '.join(['a','b','c'])
+
+In this case strings are joined over , and space
+
+Python supports formatting values into strings. Although this can include very complicated expressions, the most basic usage is to insert values into a string with the %s placeholder. %d can be used for formatting things like integers and %f for floats
+
+
+Their are many other string formatting options you can look at http://docs.python.org/library/stdtypes.html for more information on other options available for string formatting.
+
+
+Operators ---- Probably can be a different chapter .
+
+We will start the discussion on operators first with arithmetic operators .
+
+% can be used for remainder for example
+
+864675 % 10 gives remainder 5 
+
+
+you can use 2 *'s for power operation 
+
+for example 4 ** 3 gives the result 64
+
+One thing one should notice is the type of result depends on the types of input for example :
+
+17 / 2 both the values being integer gives the integer result 2
+
+however the result when one or two of the operators are float is float for example:
+
+17/2.0 
+8.5
+17.0/2.0 
+8.5 
+
+ 
+ 
+
+
+  
