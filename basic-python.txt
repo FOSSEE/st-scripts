@@ -146,10 +146,4 @@ however the result when one or two of the operators are float is float for examp
 17/2.0 
 8.5
 17.0/2.0 
-8.5 
-
- 
- 
-
-
-  
+8.5   
