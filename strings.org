@@ -1,10 +1,21 @@
-* Data Types
+* Strings
 *** Outline
-***** Introduction
-******* What are we going to do?
-******* How are we going to do?
-******* Arsenal Required
-********* None
+***** Strings
+******* basic manipulation
+******* operations
+******* immutability
+******* string methods
+******* split and join
+******* formatting - printf style
+***** Odds and Ends
+******* dynamic typing
+******* comments
+***** Simple IO
+******* raw_input
+******* console output
+***** Arsenal Required
+******* lists
+******* writing to files
 *** Script
     Welcome friends. 
     
