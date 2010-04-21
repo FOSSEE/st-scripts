@@ -55,7 +55,8 @@
     Similarly, we could access other elements with corresponding -ve
     indexes. This is a very handy feature of python. 
 
-    The len function, which we used with lists, works with strings too. 
+    The len function, which we used with lists and arrays, works with
+    strings too. 
     len(a)
 
     Python's strings support the operations + and *
@@ -94,12 +95,18 @@
     ' '.join(alist) will return the original string a. 
     '-'.join(alist) will return a string with the spaces in the string
     'a' replaced with hyphens. 
-
+    
+    At times we want our output or message in a particular
+    format with variables embedded, something like printf in C. For 
+    those situations python provides a provision. First lets create some 
+    variables
     * formatting - printf style *
       In []: x, y = 1, 1.234
       
-      In []: 'x is %s, y is %s' %(x, y)
+      In []: print 'x is %s, y is %s' %(x, y)
       Out[]: 'x is 1, y is 1.234'
+      Here %s means string, you can also try %d or %f for integer and 
+      float values.
     * formatting - printf style *
 
 
