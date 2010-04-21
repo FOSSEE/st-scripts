@@ -24,11 +24,13 @@
     look at how to do elementary string manipulation, and simple input
     and output operations. 
     
-    As, we have seen in previous tutorials, anything enclosed within
-    quotes is a string. For example -
+    In Python anything enclosed within quotes is a string. Lets get 
+    started by starting ipython interpreter. We shall create some 
+    string variables by:
 
     a = 'This is a string'
     print a
+    type(a) shows it is 'str'
     b = "This too!"
     print b
 
@@ -44,11 +46,12 @@
     These are special type of strings, called docstrings, which shall
     be discussed along with functions. 
     
-    Like lists, which we already saw, string elements can be accessed
-    with their indexes. The indexing here, also, begins from 0. 
+    Like lists and arrays, which we have already seen, string elements 
+    can also be accessed with their indexes. The indexing here, also, 
+    begins from 0. 
 
-    print a[0]    
-    print a[5]
+    print a[0] gives us 'T'
+    print a[5] gives us 'i' which is 6th character.
 
     To access the last element, we can use -1 as the index!
     print a[-1]
@@ -60,7 +63,9 @@
     len(a)
 
     Python's strings support the operations + and *
+    + concatenates two strings.
     a + b
+    and * is used for replicating a string for given number of times.
     a * 4
     What do you think would happen when you do a * a?
     It's obviously an error since, it doesn't make any logical sense. 
@@ -93,20 +98,21 @@
     Python also has a 'join' function, which does the opposite of what
     split does. 
     ' '.join(alist) will return the original string a. 
+    This function takes list of elements(in our case alist) to be joined.
     '-'.join(alist) will return a string with the spaces in the string
     'a' replaced with hyphens. 
     
     At times we want our output or message in a particular
     format with variables embedded, something like printf in C. For 
     those situations python provides a provision. First lets create some 
-    variables
+    variables say
     * formatting - printf style *
       In []: x, y = 1, 1.234
       
       In []: print 'x is %s, y is %s' %(x, y)
       Out[]: 'x is 1, y is 1.234'
       Here %s means string, you can also try %d or %f for integer and 
-      float values.
+      float values respectively.
     * formatting - printf style *
 
 
@@ -151,11 +157,11 @@
     Before we wind up, a couple of miscellaneous things. 
     As you may have already noticed, Python is a dynamically typed
     language, that is you don't have to specify the type of a variable
-    when using a new one. You don't have to do anything special, to use
+    when using a new one. You don't have to do anything special, to 'reuse'
     a variable that was of int type as a float or string. 
     
-    a = 1
-    a = 1.1
+    a = 1 here a is integer
+    a = 1.1 now a float
     a = "Now I am a string!"
 
     Comments in Python start with a pound or hash sign. Anything after
@@ -166,7 +172,7 @@
     a = "# not a comment"
 
     we come to the end of this tutorial on strings introduction of Data types in
-    Python. In this tutorial we have learnt what are supported data types, 
-    supported operations and performing simple IO operations in Python.
+    Python. In this tutorial we have learnt what are supported operations and 
+    performing simple IO operations in Python.
 
 *** Notes
