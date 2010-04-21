@@ -1,0 +1,72 @@
+* Data Types
+*** Outline
+***** Introduction
+******* What are we going to do?
+******* How are we going to do?
+******* Arsenal Required
+********* None
+*** Script
+    Welcome friends. 
+    
+    In this tutorial we shall look at data types available in Python and 
+    how to perform simple Input and Output operations. 
+    for 'Numbers' we have: int, float, complex datatypes
+    for Text content we have strings.
+    For conditional statements, 'Booleans'.
+    
+    Lets get started by opening IPython interpreter. 
+    Lets start with  'numbers'
+    All integers irrespective of how big they are, are of 'int'
+    data type
+    Now we will create a variable, say
+    x = 13
+    print x
+
+    To check the data type of any variable Python provides 'type' function
+    type(x)
+    
+    y = 999999999999
+    print y
+    
+    Floating point numbers comes under 'float'
+    p = 3.141592
+    type(p)
+
+    Python by default provides support for complex numbers. 
+    c = 3+4j 
+    c is a complex number. 'j' is used to specify the imaginary part.
+    type(c)
+    Python also provides basic functions for their manipulations like
+    abs(c) will return the absolute value of c(sqrt(a^2 + b^2))
+    c.imag returns imaginary part and c.real gives the real part. 
+
+    Next we will look at Boolean datatype:
+    Its a primitive datatype having one of two values: True or False.
+    t = True
+    print t
+
+    Python is case sensitive language, so True with 'T' is boolean type but
+    true with 't' would be a variable. 
+    
+    f = not True
+    
+    we can do binary operation like 'or' and 'not' with these variables
+    f or t
+    f and t
+    
+    in case of multiple binary operations to make sure of precedence use 
+    'brackets ()'
+    a = False
+    b = True
+    c = True
+    (a and b) or c    
+    True
+    first a and b is evaluated and then the 'or' statement
+    a and (b or c)
+    False
+
+    we come to the end of this tutorial on introduction of Data types in
+    Python. In this tutorial we have learnt what are supported data types, 
+    supported operations and performing simple IO operations in Python.
+
+*** Notes
