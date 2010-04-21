@@ -7,71 +7,158 @@
 ******* string methods
 ******* split and join
 ******* formatting - printf style
-***** Odds and Ends
-******* dynamic typing
-******* comments
 ***** Simple IO
 ******* raw_input
 ******* console output
+***** Odds and Ends
+******* dynamic typing
+******* comments
 ***** Arsenal Required
 ******* lists
 ******* writing to files
 *** Script
     Welcome friends. 
     
-    In this tutorial we shall look at data types available in Python and 
-    how to perform simple Input and Output operations. 
-    for 'Numbers' we have: int, float, complex datatypes
-    for Text content we have strings.
-    For conditional statements, 'Booleans'.
+    In the previous tutorial we have looked at data types for dealing
+    with numbers. In this tutorial we shall look at strings. We shall
+    look at how to do elementary string manipulation, and simple input
+    and output operations. 
     
-    Now we shall look at Python Strings.
-    In python anything enclosed inside quotes(single or double) is a string
-    so 
+    As, we have seen in previous tutorials, anything enclosed within
+    quotes is a string. For example -
+
     a = 'This is a string'
     print a
     b = "This too!"
     print b
+
+    They could either be enclosed in single or double quotes. There is
+    also a special type of string enclosed in triple single or double
+    quotes. 
+
     c = '''This one too!'''
     print c
     d = """And one more."""
     print d
+
+    These are special type of strings, called docstrings, which shall
+    be discussed along with functions. 
     
-    Similar to lists we covered earlier even string elements can be accessed 
-    via index numbers starting from 0
+    Like lists, which we already saw, string elements can be accessed
+    with their indexes. The indexing here, also, begins from 0. 
 
     print a[0]    
     print a[5]
-    will 
-    To access last element we can use a[-1] which is one of Pythons feature.
+
+    To access the last element, we can use -1 as the index!
     print a[-1]
-    len function works with the strings also as it does with the arrays and 
-    returns length of the string.
+    Similarly, we could access other elements with corresponding -ve
+    indexes. This is a very handy feature of python. 
+
+    The len function, which we used with lists, works with strings too. 
+    len(a)
+
+    Python's strings support the operations + and *
+    a + b
+    a * 4
+    What do you think would happen when you do a * a?
+    It's obviously an error since, it doesn't make any logical sense. 
     
-    One thing to notice about the string variables is that they are 
-    immutable, that is
+    One thing to note about strings, is that they are immutable, that
+    is 
     a[0] = 't'
-    will throw an error
+    throws an error
     
-    Some of methods available for string are:
-    a.startswith('Thi')
-    returns true if initial of the string is same
-    similarly there is endswith
-    a.endswith('ING')
+    Then how does one go about changing strings? Python provides
+    'methods' for doing various manipulations on strings. For example - 
+
     a.upper() returns a string with all letters capitalized.
+
     and a.lower() returns a string with all smaller case letters.
-    As we have seen earlier use of split function, it returns the list after
-    splitting the string, so
-    a.split()
-    will give list with three elements.
-    we also have 'join' function, which does the opposite of what
+
+    a.startswith('Thi')
+    returns True if the string starts with the argument passed. 
+
+    similarly there's endswith
+    a.endswith('ING')
+
+    We've seen the use of split function in the previous
+    tutorials. split returns a list after splitting the string on the
+    given argument. 
+    alist = a.split()
+    will give list with four elements.
+    print alist
+
+    Python also has a 'join' function, which does the opposite of what
     split does. 
-    ''.join(['a','b','c']) will return a joined string of the list we pass
-    to it. Since join is performed on '' that is empty string we get 'abc'
-    if we do something like
-    '-'.join(['a','b','c'])
+    ' '.join(alist) will return the original string a. 
+    '-'.join(alist) will return a string with the spaces in the string
+    'a' replaced with hyphens. 
+
+    * formatting - printf style *
+      In []: x, y = 1, 1.234
+      
+      In []: 'x is %s, y is %s' %(x, y)
+      Out[]: 'x is 1, y is 1.234'
+    * formatting - printf style *
+
+
+    Now we shall look at simple input from and output to the
+    console. 
+    The raw_input function allows us to give input from the console. 
+    a = raw_input()
+    it is now waiting for the user input. 
+    5
+    a
+    raw_input also allows us to give a prompt string, as shown 
+    a = raw_input("Enter a value: ")
+    Enter a value: 5
+    Note that a, is now a string variable and not an integer. 
+    type(a)
+    we could use type conversion similar to that shown in the tutorial
+    on numeric datatypes. 
+    a = int(a)
+    a has now been converted to an integer. 
+    type(a)
+
+    For console output, we use print which is pretty straightforward. 
+    We shall look at a subtle feature of the print statement. 
+    We shall first put the following code snippet in the file
+    "hello1.py"
+    print "Hello"
+    print "World"
+    We save the file and run it from the ipython interpreter. Make
+    sure you navigate to the place, where you have saved it. 
+    %run -i hello1.py
+
+    Now we make a small change to the code snippet and save it in the
+    file named "hello2.py"
+    print "Hello", 
+    print "World"
+    We now run this file, from the ipython interpreter. 
+    %run -i hello2.py
+    Note the difference in the output of the two files that we
+    executed. The comma adds a space at the end of the line, instead
+    of a new line character that is normally added. 
+
+    Before we wind up, a couple of miscellaneous things. 
+    As you may have already noticed, Python is a dynamically typed
+    language, that is you don't have to specify the type of a variable
+    when using a new one. You don't have to do anything special, to use
+    a variable that was of int type as a float or string. 
     
-    we come to the end of this tutorial on introduction of Data types in
+    a = 1
+    a = 1.1
+    a = "Now I am a string!"
+
+    Comments in Python start with a pound or hash sign. Anything after
+    a #, until the end of the line is considered a comment, except of
+    course, if the hash is in a string. 
+    a = 1 # in-line comments
+    # a comment line
+    a = "# not a comment"
+
+    we come to the end of this tutorial on strings introduction of Data types in
     Python. In this tutorial we have learnt what are supported data types, 
     supported operations and performing simple IO operations in Python.
 
