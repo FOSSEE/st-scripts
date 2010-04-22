@@ -140,7 +140,7 @@
     
     This brings us to the end of tutorial on introduction of Data types 
     related to numbers in Python. In this tutorial we have learnt what are 
-    supported data types, supported operations and operators. How to convert 
-    one data type to other.
+    supported data types for numbers, operations and operators and how to 
+    convert one data type to other. Thank you!
 
 *** Notes
