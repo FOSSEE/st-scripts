@@ -15,8 +15,8 @@
     
     Lets get started by opening IPython interpreter. 
     Lets start with  'numbers'
-    All integers irrespective of how big they are of 'int' data 
-    type. Now we will create a variable, say
+    All integers are of 'int' data type, irrespective of how big they
+    are. Now we will create a variable, say
     x = 13
     print x
 
@@ -25,8 +25,6 @@
     
     lets create one more variable
     y = 999999999999
-    (what about large value? and it is Long and not int, should we mention
-    that?)
     print y
     
     Floating point numbers come under 'float'
@@ -39,26 +37,18 @@
     part.
     type(c)
     Python also provides basic functions for their manipulations like
-    abs(c) will return the absolute value of c(sqrt(a^2 + b^2))
+    abs(c) will return the absolute value of c.
     c.imag returns imaginary part and c.real gives the real part. 
     
     All the basic operators work with Python data types, without any
     surprises. When we try to add two numbers like x and y Python takes 
-    cares of returning 'right' answer and we dont have to worry about
-    boundary conditions.
+    cares of returning 'right' answer 
     x + y
     
-    % operator is for modulo operations
-    1786 % 12 gives 10
-    45 % 2 returns 1
-
     Same as additions multiplication also works just right:
     3124 * 126789
     396088836
     
-    x ** y returns x raised to power y. For example lets try:
-    big = 1234567891234567890 ** 3
-
     Division in Python truncates, that is, when we divide a integer 
     variable with another integer result is also integer and decimal 
     value is truncated. So
@@ -68,6 +58,13 @@
     17 / 2.0 will return the correct 8.5, similarly
     17.0 / 2 will also give correct answer.
     
+    x ** y returns x raised to power y. For example lets try:
+    big = 1234567891234567890 ** 3
+
+    % operator is for modulo operations
+    1786 % 12 gives 10
+    45 % 2 returns 1
+
     Other operators which comes handy are:
     += 
     lets create one variable a with
@@ -77,9 +74,9 @@
     similarly 
     a -= 1 will decrement.
     we can also use 
-    a *= 2
+    a *= a
     a 
-    answer is multiplied by 2
+    a is multiplied by itself.
     
     a /= 5    
     a is divided by 5
@@ -94,12 +91,12 @@
     
     f = not True
     
-    we can do binary operation like 'or', 'and', 'not' with these variables
+    we can do binary operations like 'or', 'and', 'not' with these variables
     f or t
     f and t
     
-    in case of multiple binary operations to make sure of precedence use 
-    'brackets ()'
+    in case of multiple binary operations to make sure of precedence use
+    'parenthesis ()'
     a = False
     b = True
     c = True
@@ -124,7 +121,7 @@
     True.
     This statement checks if 'z' is smaller then 'p' and greater then 'n'
     For inequality testing we use '!'
-    p + n != z will add 'p' and 'n' and check the equivalency with z
+    p + n != z will add 'p' and 'n' and check the equivalence with z
 
     We have already covered briefly in some of the previous sessions, 
     conversion of data among different types.
@@ -133,10 +130,9 @@
     But if we try something like 
     float(17 / 2) we get 8.0 as 17/2 is already truncated to int
     and converting that to float wont restore the lost decimal digits.
-    To rounding off a floating number to a given precision 'round' function
-    can be used.
-    round(7.5) returns 
-    8.
+    To round off a float to a given precision 'round' function can be
+    used. 
+    round(7.5) returns 8.
     
     This brings us to the end of tutorial on introduction of Data types 
     related to numbers in Python. In this tutorial we have learnt what are 
