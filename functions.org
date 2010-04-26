@@ -1,0 +1,106 @@
+* Functions
+*** Outline
+***** Functions
+******* review of what's been done in solving equations tutorial
+********* def
+********* name
+********* arguments
+********* indented block
+********* calling a function
+******* arguments are local to a function
+******* return values
+******* doc strings - with example.
+******* code reading exercises?
+******* default arguments
+******* keyword arguments
+******* availability library functions
+*** Script
+    Welcome friends. 
+
+    In this tutorial we shall be looking at Functions. We already have
+    looked at the basics of functions in the tutorial on solving
+    equations. We shall first review these basics. Next we shall look
+    at other details like doc-strings, default arguments and keyword
+    arguments. 
+
+    Let's write a simple function that prints a Hello message, after
+    accepting a name. 
+
+        def welcome(name):
+	    print "Hello", name 
+
+    You would recall that def is a keyword that indicates a function
+    definition. 'welcome' is the name of the function and 'name' is
+    the lone argument to the function. Note that the function is
+    defined within an indented block, similar to any other block. Our
+    function welcome just has one line in it's definition.  
+    
+    We can call our function by passing, as follows -
+        welcome("World")
+
+    (arguments are local to a function)
+
+    In general functions should be accompanied by documentation on how
+    to use it. Python provides a convenient way of writing within the
+    function itself, using doc strings. They were mentioned in the
+    tutorial on strings. Let's look at how to write them here. 
+
+    Let us add a simple doc string to our welcome function. 
+
+        def welcome(name):
+	    """ Prints a hello message to a person, given a name. """
+	    print "Hello", name 
+    
+    Notice that the doc string uses triple quotes. If the doc-string
+    exceeded one line, we could have used new line characters in
+    it. Also, as expected the doc-string is indented as is required
+    for anything within a block. 
+
+    We shall now look at default arguments. 
+    [show slide with examples of functions with default arguments]
+    The strip function has been used in two different ways in the
+    previous tutorials - one for splitting on spaces and the other for
+    splitting on commas. 
+
+    The function split is being called with no arguments and one
+    argument, respectively. In the first case, white space is being
+    used as a default value. Let's now edit our function, welcome, to
+    use default values. (For convenience, we have dropped the doc-string)
+
+        def welcome(name="World!"):
+	    print "Hello", name 
+    
+    Now, we call the function 'welcome' without passing any arguments
+    to it. 
+        welcome()
+
+    "World!" is used as a default argument, when no name argument is
+    passed to 'welcome'. 
+
+    Let's now look at the use of keyword arguments. 
+    [show slide with examples of functions with keyword arguments]
+    We have already looked at functions and keyword arguments in these
+    examples. loc, linewidth, xy, labels are all keywords. 
+
+    Let's now see, how we can call our function 'welcome', using
+    keyword arguments. We can call the function in a variety of ways.
+        welcome("Hello", "James")
+	welcome("Hi", name="Guido")
+	welcome(name="Guido", greet="Hello")
+
+    Keyword arguments allow us to call functions by passing arguments
+    in any order and removes need to remember the order of arguments
+    in the function definition. 
+
+
+***** return values
+***** arguments are local to a function
+***** availability library functions
+***** code reading exercises?
+  
+    We come to the end of this tutorial on functions. In this tutorial
+    we have learnt about functions in a greater detail. We looked at
+    how to define functions, calling them, default and keyword
+    arguments. 
+
+*** Notes
