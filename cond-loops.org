@@ -99,10 +99,9 @@
     ....
     ....
         
-    That brings us to the end of this tutorial. We have covered solution
-    of linear equations, finding roots of polynomials and non-linear
-    equations. We have also learnt how to define functions and call
-    them. 
+    That brings us to the end of this tutorial. We have covered more
+    details on conditional statements in Python. How to write loops
+    using 'while' loops. Range function and using for loop with range
 
     Thank you!
 
