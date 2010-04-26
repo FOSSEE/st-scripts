@@ -1,0 +1,109 @@
+* Control statements
+*** Outline
+***** Introduction
+******* What are we going to do?
+******* How are we going to do?
+******* Arsenal Required
+********* working knowledge of arrays
+
+*** Script
+    Welcome. 
+    
+    In this tutorial we shall be covering conditional statements and
+    control loops. We have used them already in some of our previous
+    sessions with brief introduction. We shall be covering 'if-else' 
+    statement, 'while' and 'for' loops.
+    For understanding of conditional statement we will write a python
+    script. Open Scite text editor by going to Applications->
+    Programming->Scite:
+    First we prompt user for entering a integer by using raw_input
+    x = int(raw_input("Enter an integer: "))
+    we convert the input string to 'int'
+    if x < 0:
+    We check if number is less then zero
+        if condition is true we print 
+        print 'Be positive!'	
+	note the indentation
+    elif x == 0:
+        This is else-if condition and corresponding message
+	end of previous indentation indicates ending of a block
+        print 'Zero'
+    elif x == 1:
+        print 'Single'
+    else:
+        This is else block which is executed when all if, and else
+	if statements fails.
+        print 'More'
+    Save this script in home folder with name '.py'	
+    To run this script inside IPython we first start interpreter and 
+    type 
+    %run '.py'
+    It will prompt us to enter a integer and based on our input it 
+    prints appropriate message. 
+
+    Python supports only if-elif-else conditional constructs, 
+    switch-case statements are not available/supported in Python.
+    We can use binary operators like and/or/not to check for multiple
+    conditions.
+
+    Now lets look at loop constructs available. Python supports 'while'
+    and 'for' statements. We will write a script to understand 'while'
+    statement. In Scite click on 'new' file shortcut to open a new tab
+    We shall write a script for printing all fabonacci numbers less then
+    10. In this series Sum of previous two elements defines the next 
+    element.
+    
+    First we initialize two variable to first and second number of 
+    series
+    a, b = 0, 1
+    while b < 10:
+        This block will be executed till this condition holds True
+        print b,
+	Note ',' here for printing values in one continues line.
+	a, b = b, a+b
+	This is one powerful feature of Python, swapping and assigning
+	new values at the same time. After this statement a will have 
+	present 'b' value and b will have value of 'a+b'(phew this can be close)
+	
+    Save this file as 'fabonacci.py' and lets run it from IPython 
+    interpreter by
+    %run fabonacci.py
+
+    'for' in python works any kind of iterable objects. In our 
+    previous sessions we used 'for' to iterate through files and lists.
+    So in case we want to get square of say first five numbers using 
+    'for' loop, we will have to create a list. For this we will use 
+    'range' function available. Lets take a look at documentation 
+    available for 'range' function by typing
+    range?
+    It takes three arguments, first being the start/initial value
+    second one being stop/last value and third being the step size. 
+    Out of these 'start' and 'step' arguments are optional.
+    So if we use range to get first five number it would be 
+    range(5)
+    Note here that last/stop value is not included in resulting 
+    list. So to get square of first five number all we have to do is
+    iterate over this list.
+    for i in range(5):
+    ....print i, i*i
+    ....
+    ....
+    Similarly to get square of all odd numbers from 3 to 9 we can do 
+    something like
+
+    for i in range(3, 10, 2):
+    so the list returned from range this time will start from 3 and 
+    end at 10(excluding it) with step size of 2 so we get odd numbers
+    only
+    ....print i, i*i
+    ....
+    ....
+        
+    That brings us to the end of this tutorial. We have covered more
+    details on conditional statements in Python. How to write loops
+    using 'while' loops. Range function and using for loop with range
+
+    Thank you!
+
+*** Notes
+    
