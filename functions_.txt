@@ -1,0 +1,13 @@
+While we have talked about how you can do simple tasks in Python we haven't started to talk about how you can organize your code . One of the first techniques we use to break a task into  relatively independent subtask . These can share data with  other parts of the program . These code blocks clubbed together are called functions or subroutines . 
+
+def keyword in Python is used to define a function. 
+Arguments are local to a function , i.e you can access the arguments only in a particular function in other places it shall raise a Name error . 
+
+One of the great things about python is that a function can return multiple values . Essentialy it does it by  packing the multiple values in a tuple .
+
+Lets look at how to write functions by writing one out .
+
+We have given the function the name signum . Essentially what it does is that based on whether the no is 0 , negative or positive , it returns 0 , -1 and +1 respectively . In this case it recieves value of the no in variable r .    
+
+In the beginning of the function you can see a triple quoted string . This is called a docstring . You can write some documentation related to your function. In this you can have the function parameters and what it returns . A python function returns a value by using the keyword return .
+

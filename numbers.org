@@ -8,66 +8,75 @@
 *** Script
     Welcome friends. 
     
-    In this tutorial we shall look at data types in Python and 
-    mathematical operators available.
-    For 'Numbers' we have: int, float, complex datatypes    
-    For conditional statements, 'Booleans'.
-    
-    Lets get started by opening IPython interpreter. 
+    This session is about numbers and mathematical operations
+
+    In this tutorial we shall be covering data types, operators and
+    type conversion.
+    To represent 'Numbers' in python, we have int, float, complex
+    datatypes     
+    For conditional statements, we have 'Bool' datatype
+       
+    type ipython on terminal to start the interpreter.
     Lets start with  'numbers'
-    All integers irrespective of how big they are of 'int' data 
-    type. Now we will create a variable, say
-    x = 13
+    Now we will create a variable, say
+    x = 13 lets confirm the value of x by
     print x
 
     To check the data type of any variable Python provides 'type' function
     type(x)
+    which tells us that the x is of type 'int'
     
     lets create one more variable
     y = 999999999999
-    (what about large value? and it is Long and not int, should we mention
-    that?)
     print y
+
+    Python can store any integer however big it is.    
     
-    Floating point numbers come under 'float'
+    Floating point numbers come under 'float' datatype
     p = 3.141592
     type(p)
 
-    Python by default provides support for complex numbers. 
+    Python by default provides support for complex numbers also.
     c = 3+4j 
-    creates a complex number c. Here 'j' is used to specify the imaginary 
-    part.
+    creates a complex number c with real part 3 and imaginary part 4.
+    Please note that here 'j' is used to specify the imaginary 
+    part and not i.
     type(c)
     Python also provides basic functions for their manipulations like
-    abs(c) will return the absolute value of c(sqrt(a^2 + b^2))
+    abs(c) will return the absolute value of c.
     c.imag returns imaginary part and c.real gives the real part. 
     
     All the basic operators work with Python data types, without any
     surprises. When we try to add two numbers like x and y Python takes 
-    cares of returning 'right' answer and we dont have to worry about
-    boundary conditions.
-    x + y
+    cares of returning 'right' answer 
+     
+    print x + y gives sum of x and y
     
+    Same as additions multiplication also works just right:
+    123 * 4567
+    gives you the product of both numbers
+    
+    Integer division in Python truncates, which means, when we divide an integer 
+    with another integer result is also integer and decimal 
+    value is truncated. So
+    17 / 2 returns 8 and not 8.5
+
+    but int and float value operations like
+    17 / 2.0 will return the correct 8.5, similarly
+    17.0 / 2 will also give correct answer.
+    
+    in python x ** y returns x raised to power y. For example lets try:
+    2 ** 3 and we get 2 raised to power 3 which is 8
+
+    now lets try power operation involving a big number
+    big = 1234567891234567890 ** 3
+    As we know, any number irrespective of its size can be represented in python.
+    hence big is a really big number and print big prints the value of big.
+
     % operator is for modulo operations
     1786 % 12 gives 10
     45 % 2 returns 1
 
-    Same as additions multiplication also works just right:
-    3124 * 126789
-    396088836
-    
-    x ** y returns x raised to power y. For example lets try:
-    big = 1234567891234567890 ** 3
-
-    Division in Python truncates, that is, when we divide a integer 
-    variable with another integer result is also integer and decimal 
-    value is truncated. So
-    17 / 2 returns 8 and not 8.5
-
-    but
-    17 / 2.0 will return the correct 8.5, similarly
-    17.0 / 2 will also give correct answer.
-    
     Other operators which comes handy are:
     += 
     lets create one variable a with
@@ -77,9 +86,9 @@
     similarly 
     a -= 1 will decrement.
     we can also use 
-    a *= 2
+    a *= a
     a 
-    answer is multiplied by 2
+    a is multiplied by itself.
     
     a /= 5    
     a is divided by 5
@@ -94,53 +103,71 @@
     
     f = not True
     
-    we can do binary operation like 'or', 'and', 'not' with these variables
-    f or t
-    f and t
+    we can do binary operations like 'or', 'and', 'not' with these variables
+    f or t is false or true and hence we get true
+    f and t is flase and true which gives false
     
-    in case of multiple binary operations to make sure of precedence use 
-    'brackets ()'
+    in case of multiple binary operations to make sure of precedence use
+    'parenthesis ()'
     a = False
     b = True
     c = True
-    (a and b) or c    
-    True
-    first a and b is evaluated and then the 'or' statement
+    if we need the result of a and b orred with c, we do
+    (a and b) or c
+    first a and b is evaluated and then the result is orred with c
+    we get True
+    but if we do 
     a and (b or c)
-    False
+    there is a change in precedence and we get False
 
-    We also have support for relational and logical operators. Lets try some
+    Python also has support for relational and logical operators. Lets try some
     examples:
-    We start with initializing three variables by:
+    We start with initializing three variables by typing
     p, z, n = 1, 0, -1 
     To check equivalency of two variables use '=='
-    p == z 
-    False
-    p >= n
-    True
+    p == z checks if 1 is equal to 0 which is False
+    p >= n checks if 1 is greater than or equal to -1 which is  True
     
-    We can check for multiple logical operations in one statement itself.
-    n < z < p
-    True.
-    This statement checks if 'z' is smaller then 'p' and greater then 'n'
-    For inequality testing we use '!'
-    p + n != z will add 'p' and 'n' and check the equivalency with z
+    We can also check for multiple logical operations in one statement itself.
+    n < z < p gives True.
+    This statement checks if 'z' is smaller than 'p' and greater than 'n'
 
-    We have already covered briefly in some of the previous sessions, 
-    conversion of data among different types.
-    int(17 / 2.0) will convert result to integer type and we get
-    8 as answer and not 8.5
-    But if we try something like 
-    float(17 / 2) we get 8.0 as 17/2 is already truncated to int
-    and converting that to float wont restore the lost decimal digits.
-    To rounding off a floating number to a given precision 'round' function
-    can be used.
-    round(7.5) returns 
-    8.
+    For inequality testing we use '!'
+    p + n != z will add 'p' and 'n' and check the equivalence with z
+
+    We have already covered conversion between datatypes  in some of the previous sessions, briefly.
+
+    Lets look at converting one data type to another
+    lets create a float by typing z = 8.5
+    and convert it to int using
+    i = int(z)
+    lets see what is in i by typing print i
+    and we get 8
+    we can even check the datatype of i by typing type(i)
+    and we get int
+
+    similarly float(5) gives 5.0 which is a float
     
-    This brings us to the end of tutorial on introduction of Data types 
+    type float_a = 2.0 and int_a = 2
+    17 / float_a gives 8.5
+    and int( 17 / float_a ) gives you 8 since int function truncates the decimal value of the result
+
+
+    float(17 / int_a ) we get 8.0 and not 8.5 since 17/2 is already truncated to 8
+    and converting that to float wont restore the lost decimal digits.
+
+    To get correct answer from such division try    
+    17 / float(a)
+
+    To round off a float to a given precision 'round' function can be
+    used. 
+    round(7.5) returns 8.
+    
+    This brings us to the end of tutorial on introduction to Data types 
     related to numbers in Python. In this tutorial we have learnt what are 
     supported data types for numbers, operations and operators and how to 
-    convert one data type to other. Thank you!
+    convert one data type to other. 
+
+    Hope you have enjoyed the tutorial and found it useful.Thank you!
 
 *** Notes
