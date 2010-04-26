@@ -12,46 +12,65 @@
     In this tutorial we shall be covering conditional statements and
     control loops. We have used them already in some of our previous
     sessions with brief introduction. We shall be covering 'if-else' 
-    statement, 'while' and 'for' loops.
-    For understanding of conditional statement we will write a python
-    script. Open Scite text editor by going to Applications->
+    statement, 'while' and 'for' statements formally.
+
+
+    For understanding of if-else statement we will write a python
+    script that takes a number as input from user and prints 0 if it is zero
+    and prints "Be positive" if it is negative, prints "Single" if the input is 1
+    and if the number is not 0 or 1 or negative, it prints "More".
+ 
+    To write the program, open Scite text editor by going to Applications->
     Programming->Scite:
+
     First we prompt user for entering a integer by using raw_input
-    x = int(raw_input("Enter an integer: "))
-    we convert the input string to 'int'
+    str_x = raw_input("Enter an integer: ")
+    since we know raw_input gives string, we convert the input string to an integer
+    by typing 
+    x = int(str_x)
+
+    now we check if the number is less than zero.
+    type 
     if x < 0:
-    We check if number is less then zero
-        if condition is true we print 
-        print 'Be positive!'	
-	note the indentation
+        Please not 
+        #if number is negative we have to print "Be positive"
+        #so we give four spaces for indentation and type
+        print 'Be positive!'
+
     elif x == 0:
-        This is else-if condition and corresponding message
-	end of previous indentation indicates ending of a block
+        to check if the number is equal to zero
+        #This is else-if condition
         print 'Zero'
     elif x == 1:
         print 'Single'
+    then we type the else statement which gets executed when all the if and elif statements fail
+    so type
     else:
-        This is else block which is executed when all if, and else
-	if statements fails.
         print 'More'
-    Save this script in home folder with name '.py'	
-    To run this script inside IPython we first start interpreter and 
-    type 
-    %run '.py'
+
+    Save this script by going to file menu and clicking on save.
+    save it in home folder with name 'ladder.py'	
+
+    let us check the program on ipython interpreter for various inputs
+    open ipython terminal and type
+    %run ladder.py
     It will prompt us to enter a integer and based on our input it 
     prints appropriate message. 
 
-    Python supports only if-elif-else conditional constructs, 
-    switch-case statements are not available/supported in Python.
     We can use binary operators like and/or/not to check for multiple
     conditions.
 
+    Python supports only if-elif-else conditional constructs, 
+    switch-case statements are not available/supported in Python.
+
     Now lets look at loop constructs available. Python supports 'while'
-    and 'for' statements. We will write a script to understand 'while'
-    statement. In Scite click on 'new' file shortcut to open a new tab
-    We shall write a script for printing all fabonacci numbers less then
-    10. In this series Sum of previous two elements defines the next 
-    element.
+    and 'for' statements. 
+
+    To understand the while we shall write a script that prints all the fibonacci 
+    numbers less than 10. In fibonacci series the sum of previous two elements
+    is equal to the next element.
+
+    In Scite go to file menu and click on new and it opens a new tab.
     
     First we initialize two variable to first and second number of 
     series
@@ -71,23 +90,31 @@
 
     'for' in python works any kind of iterable objects. In our 
     previous sessions we used 'for' to iterate through files and lists.
-    So in case we want to get square of say first five numbers using 
-    'for' loop, we will have to create a list. For this we will use 
-    'range' function available. Lets take a look at documentation 
-    available for 'range' function by typing
+
+    So we are going to use for loop print the squares of first five whole numbers.
+
+    To generate squares, we have to iterate on list of numbers and we are 
+    going to use the range function to get the list of numbers.
+
+    let us look at the documentation of range function by typing
     range?
-    It takes three arguments, first being the start/initial value
-    second one being stop/last value and third being the step size. 
-    Out of these 'start' and 'step' arguments are optional.
-    So if we use range to get first five number it would be 
+    we see that it takes three arguments, first is the start/initial value
+    second one is the stop/last value and third is the step size. 
+
+    Out of these, 'start' and 'step' arguments are optional.
+
+    So to get list of first five natural numbers, we use 
     range(5)
-    Note here that last/stop value is not included in resulting 
-    list. So to get square of first five number all we have to do is
+
+    Note here that last/stop value is not included in resulting list.
+
+    So to get square of first five number all we have to do is
     iterate over this list.
     for i in range(5):
     ....print i, i*i
     ....
     ....
+
     Similarly to get square of all odd numbers from 3 to 9 we can do 
     something like
 
@@ -98,10 +125,19 @@
     ....print i, i*i
     ....
     ....
-        
-    That brings us to the end of this tutorial. We have covered more
-    details on conditional statements in Python. How to write loops
-    using 'while' loops. Range function and using for loop with range
+ 
+    since the for statement in python works on any iterable we can also iterate through strings
+
+    to print each character in a string we do
+    for c in "Guido Van Rossum":
+        print c
+
+    we see that it prints all the characters one by one
+ 
+    That brings us to the end of this tutorial. We have learnt
+    conditional statements in Python. How to write loops
+    using 'while' statement. Range function and using for loop
+    
 
     Thank you!
 
