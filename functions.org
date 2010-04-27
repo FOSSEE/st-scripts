@@ -48,7 +48,8 @@
     Let us add a simple doc string to our welcome function. 
 
         def welcome(name):
-	    """ Prints a hello message to a person, given a name. """
+	    """ Prints a hello message to a person,
+	        given a name. """
 	    print "Hello", name 
     
     Notice that the doc string uses triple quotes. If the doc-string
@@ -58,7 +59,7 @@
 
     We shall now look at default arguments. 
     [show slide with examples of functions with default arguments]
-    The strip function has been used in two different ways in the
+    The split function has been used in two different ways in the
     previous tutorials - one for splitting on spaces and the other for
     splitting on commas. 
 

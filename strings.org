@@ -24,15 +24,16 @@
 	look at how to do elementary string manipulation, and simple input
 	and output operations. 
 
-    In this tuotrial we shall use concepts of writing python scripts and basics of lists that have been covered in previous session
+	In this tuotrial we shall use concepts of writing python scripts and 
+	basics of lists that have been covered in previous session
 
 	Lets get started by opening ipython interpreter.
 	We shall create some 
 	a string by typing 
 
 	a = open single quote 'This is a string' close single quote
-    print a 
-    a contains the string
+	print a 
+	a contains the string
 	we can check for datatype of a by using type(a) and shows it is 'str'
 
 	consider the case when string contains single quote.
@@ -52,11 +53,11 @@
 	so when you do 
 	c = '''Iam also a string'''
 	print c
-    and c is also string variable
+	and c is also string variable
 	and even 
 	d = """And one more."""
 	print d 
-    d is also a string
+	d is also a string
 
 	These strings enclosed in triple quotes are special type of strings, called docstrings, and they shall 
 	be discussed in detail along with functions
@@ -154,12 +155,12 @@
 	raw_input takes input only as a string
 
 	we cannot do mathematical operations on it
-    but we can use type conversion similar to that shown in previous tutorial
+	but we can use type conversion similar to that shown in previous tutorial
 
 	b = int(a)
 	a has now been converted to an integer and stored in b
 	type(b) gives int
-    b can be used here for mathematical operations.
+	b can be used here for mathematical operations.
 
 	For console output, we have been using print which is pretty straightforward. 
 
@@ -181,7 +182,7 @@
 
 
 	Note the difference in the output.
-    The comma adds a space at the end of the line, instead
+	The comma adds a space at the end of the line, instead
 	of a new line character that is normally added. 
 
 	Before we wind up, a couple of miscellaneous things. 
@@ -192,9 +193,9 @@
 
 	a = 1 and here a is integer
 	lets store a float value in a by doing 
-    a = 1.1
-    and print a
-    now a is float
+	a = 1.1
+	and print a
+	now a is float
 	a = "Now I am a string!"
 
 	Comments in Python start with a pound or hash sign. Anything after
