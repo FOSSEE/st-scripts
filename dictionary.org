@@ -1,0 +1,113 @@
+* Lists
+*** Outline
+***** Lists
+***** Tuples
+***** Arsenal Required
+*** Script
+    Welcome friends. 
+    
+    In previous tutorial we covered Lists and Tuples and related 
+    functions. In this session we will continue with Python supported
+    data structures and cover Dictionaries and sets. We have already 
+    covered some basics of Dictionaries in session on Statistics. Here
+    we will revisit those concepts and some new ones. 
+    
+    We give it a name and it should return a corresponding number. 
+    Dictionaries are just key-value pair. For each 'key' there is
+    corresponding 'value'. In lists we have indexes to access elements,
+    here we have 'key'. 
+    
+    '{}' are used to create Python dictionaries. Lets start by opening 
+    IPython interpreter. Lets create a dictionary say
+
+    player = {'Mat': 134,'Inn': 233,
+    'Runs': 10823, 'Avg': 52.53}
+    Its dictionary storing statistics of a cricket player.
+    Now to get the 'average' of this player we have to simply write
+    print player['Avg']
+    52.53
+
+    To add a new key-value to this dictionary we have to something like
+    player['Name'] = 'Rahul Dravid'
+    print player    
+    Please dont forget that Python dictionaries dont maintain the order
+    in which key-value pair are stored it changes as we add new entries.
+
+    In dictionaries Duplicate keys are overwritten, that is when we do 
+    player['Mat'] = 139
+    It wont create a new entry, rather it will simply overwrite previous
+    value with new one. So
+    print player
+    will have updated value
+
+    As we covered in one of previous sessions to iterate through lists 
+    we use 'for'. In case of dictionaries we can iterate over them using 
+    'keys' for example
+    for key in player:
+        print key, player[key]
+    We saw how containership works in lists, there we can check if a 
+    value is present in list or not, in case of Dictionaries it works
+    only for keys. so
+    'Inn' in player
+    returns True
+    'Econ' in Player
+    returns False as there is no such 'key'
+    If you try to look or search 'value' it wont work.
+    Dictionaries supports some functions to retrieve keys and values 
+    like
+    player.keys()
+    returns the list of all 'keys'
+    player.values()
+    return list of all 'values'    
+
+    Next we shall look at 'sets'. Sets in Python are unordered 
+    collection of unique elements. This data structure comes handy in
+    situations while removing duplicates from a sequence, and computing 
+    standard math operations on sets such as intersection, union, 
+    difference, and symmetric difference. 
+    
+    Lets start by creating a set
+    f10 = set([1,2,3,5,8])
+    f10 is set of Fibonacci numbers less then 10
+    lets print value of f10
+    print f10
+
+    As we mentioned earlier, these are unordered structure so order of
+    elements are not maintained, and output order is different than 
+    input order. Lets create one more set of all prime numbers less than
+    10
+    p10 = set([2,3,5,7])
+    print p10.
+    
+    To get union of these two sets we use '|' operator
+    f10 | p10
+    
+    For intersection & operator is used:
+    f10 & p10
+    
+    f10 - p10 gives difference between f10 and p10, which is, elements
+    present in f10 but not present in p10.
+    ^ operator gives us symmetric difference that is p10 union f10 minus
+    f10 intersection p10
+    f10 ^ p10
+
+    To check if a set is super set or subset greater than and lesser than
+    operators can be used
+    set([2,3]) < p10
+    returns True as p10 is superset of given set
+    
+    Similar to lists and dictionaries sets also supports containership so
+    2 in p10
+    returns True as 2 is part of set p10 and 
+    4 in p10
+    returns False.
+    
+    len function works with sets also:
+    len(f10) returns the length, that is 5
+    We can also use 'for' loops to iterate through a set.
+    
+    With this we come to the end of this tutorial on Dictionaries and 
+    sets. We have covered some of properties of both data types and 
+    functions supported by them. Thank you.
+
+*** Notes
