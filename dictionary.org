@@ -30,8 +30,9 @@
     To add a new key-value to this dictionary we have to something like
     player['Name'] = 'Rahul Dravid'
     print player    
-    Please dont forget that Python dictionaries dont maintain the order
-    in which key-value pair are stored it changes as we add new entries.
+    Please remember that Python dictionaries dont maintain the order
+    in which the key-value pair are stored it might change as we add new
+    entries.
 
     In dictionaries Duplicate keys are overwritten, that is when we do 
     player['Mat'] = 139
