@@ -17,10 +17,10 @@
 *** Script
     Welcome friends. 
 
-    In this tutorial we shall be looking at Functions. We already have
-    looked at the basics of functions in the tutorial on solving
-    equations. We shall first review these basics. Next we shall look
-    at other details like doc-strings, default arguments and keyword
+    In this tutorial we shall be looking at Functions in Python. We already
+    have looked at the basics of functions in the tutorial on solving
+    equations. We shall first review these basics. Then we shall move on to
+    other details such as doc-strings, default arguments and keyword
     arguments. 
 
     Let's write a simple function that prints a Hello message, after
@@ -35,38 +35,38 @@
     defined within an indented block, similar to any other block. Our
     function welcome just has one line in it's definition.  
     
-    We can call our function by passing, as follows -
+    We can call our function, as follows -
         welcome("World")
 
-    (arguments are local to a function)
+    (all arguments are local to a function)
 
     In general functions should be accompanied by documentation on how
-    to use it. Python provides a convenient way of writing within the
-    function itself, using doc strings. They were mentioned in the
+    to use them. Python provides a convenient way of writing this within the
+    function itself, using what are called doc strings. They were mentioned in the
     tutorial on strings. Let's look at how to write them here. 
 
     Let us add a simple doc string to our welcome function. 
 
         def welcome(name):
-	    """ Prints a hello message to a person,
-	        given a name. """
+	    """ Prints a hello message given a name, 
+	        passed as argument. """
 	    print "Hello", name 
     
     Notice that the doc string uses triple quotes. If the doc-string
-    exceeded one line, we could have used new line characters in
-    it. Also, as expected the doc-string is indented as is required
+    exceeds one line, we can use new line characters in it. 
+    Also, as expected the doc-string is indented as is required
     for anything within a block. 
 
     We shall now look at default arguments. 
     [show slide with examples of functions with default arguments]
     The split function has been used in two different ways in the
     previous tutorials - one for splitting on spaces and the other for
-    splitting on commas. 
+    splitting on semicolons. 
 
     The function split is being called with no arguments and one
     argument, respectively. In the first case, white space is being
     used as a default value. Let's now edit our function, welcome, to
-    use default values. (For convenience, we have dropped the doc-string)
+    use default values. (For convenience sake, we have dropped the doc-string)
 
         def welcome(name="World!"):
 	    print "Hello", name 
@@ -75,49 +75,34 @@
     to it. 
         welcome()
 
-    "World!" is used as a default argument, when no name argument is
-    passed to 'welcome'. 
+    As you can see the output is "Hello World!". Here "World!" is used as a
+    default argument, when no name argument is passed to 'welcome'. 
 
     Let's now look at the use of keyword arguments. 
     [show slide with examples of functions with keyword arguments]
     We have already looked at functions and keyword arguments in these
     examples. loc, linewidth, xy, labels are all keywords. 
 
-    Let's now see, how we can call our function 'welcome', using
+    Let's now customize our function so that it displays a custom 
+    greeting message as well. 
+
+    def welcome( greet = 'Hello', name = 'World!'):
+        print greet, name
+
+    Let's now see, how we can call our updated 'welcome' function, using
     keyword arguments. We can call the function in a variety of ways.
         welcome("Hello", "James")
 	welcome("Hi", name="Guido")
 	welcome(name="Guido", greet="Hello")
 
-    Keyword arguments allow us to call functions by passing arguments 
-    in any order and removes need to remember the order of arguments
+    Keyword arguments allow us to call functions by passing arguments
+    in any order and removes the need to remember the order of arguments
     in the function definition. 
- 
-    Let us look at an example function. This will both act as a code
-    reading exercise and tell us an important point about return
-    values in python's functions. Pause the video for a while and
-    ponder about what this piece of code does. 
-    [show slide?]
 
-    def what( n ):
-        i = 1
-	while i * i < n:
-  	    i += 1
-	return i * i == n, i
-
-    The function takes an integer as an argument and returns the
-    boolean True, and the square of the number, if it is a perfect
-    square OR the boolean False and the square root of the next
-    perfect square of the number. 
-    Note that this function is returning two values. Functions in
-    Python are capable of returning any number of values. 
-
-***** arguments are local to a function
-
-    Python follows the philosophy of batteries included. It comes
-    with a rich and versatile standard library with whole gamut of
-    functions. Do check out the standard library, before you sit down
-    to write functions of your own. 
+    
+    In Python there is no restriction on the number of values returned by
+    a function. When a function returns more than one value, the multiple
+    values are packed into one single tuple and that single tuple is returned.
 
     We come to the end of this tutorial on functions. In this tutorial
     we have learnt about functions in a greater detail. We looked at
