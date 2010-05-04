@@ -89,16 +89,36 @@
 	welcome("Hi", name="Guido")
 	welcome(name="Guido", greet="Hello")
 
-    Keyword arguments allow us to call functions by passing arguments
+    Keyword arguments allow us to call functions by passing arguments 
     in any order and removes need to remember the order of arguments
     in the function definition. 
+ 
+    Let us look at an example function. This will both act as a code
+    reading exercise and tell us an important point about return
+    values in python's functions. Pause the video for a while and
+    ponder about what this piece of code does. 
+    [show slide?]
 
+    def what( n ):
+        i = 1
+	while i * i < n:
+  	    i += 1
+	return i * i == n, i
 
-***** return values
+    The function takes an integer as an argument and returns the
+    boolean True, and the square of the number, if it is a perfect
+    square OR the boolean False and the square root of the next
+    perfect square of the number. 
+    Note that this function is returning two values. Functions in
+    Python are capable of returning any number of values. 
+
 ***** arguments are local to a function
-***** availability library functions
-***** code reading exercises?
-  
+
+    Python follows the philosophy of batteries included. It comes
+    with a rich and versatile standard library with whole gamut of
+    functions. Do check out the standard library, before you sit down
+    to write functions of your own. 
+
     We come to the end of this tutorial on functions. In this tutorial
     we have learnt about functions in a greater detail. We looked at
     how to define functions, calling them, default and keyword
