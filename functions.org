@@ -60,8 +60,8 @@
     We shall now look at default arguments. 
     [show slide with examples of functions with default arguments]
     The split function has been used in two different ways in the
-    previous tutorials - one for splitting on spaces and the other for
-    splitting on semicolons. 
+    given example - one for splitting on spaces and the other for
+    splitting on commas.
 
     The function split is being called with no arguments and one
     argument, respectively. In the first case, white space is being
@@ -83,7 +83,7 @@
     We have already looked at functions and keyword arguments in these
     examples. loc, linewidth, xy, labels are all keywords. 
 
-    Let's now customize our function so that it displays a custom 
+    Let's now edit our function so that it displays a custom 
     greeting message as well. 
 
     def welcome( greet = 'Hello', name = 'World!'):
@@ -99,12 +99,25 @@
     in any order and removes the need to remember the order of arguments
     in the function definition. 
 
-    
+    Let's now write a new function 
+
+    def per_square(n):
+        i = 1
+	while ( i*i < n ):
+	    i += 1
+	return i*i == n, i
+
+    What does this function do? It checks if the given number is a perfect square.
+    If it is, then the function returns True along with the square root of
+    the given number. If the number is not a perfect square it returns
+    False and the square root of the next perfect square.
+
+    Please observe that this function returns 2 values.
     In Python there is no restriction on the number of values returned by
-    a function. When a function returns more than one value, the multiple
+    a function. Whenever a function has to return more than one value, the multiple
     values are packed into one single tuple and that single tuple is returned.
 
-    We come to the end of this tutorial on functions. In this tutorial
+    With this we come to the end of this tutorial on functions. In this tutorial
     we have learnt about functions in a greater detail. We looked at
     how to define functions, calling them, default and keyword
     arguments. 

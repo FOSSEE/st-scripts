@@ -1,7 +1,9 @@
 Hello friends and welcome to this tutorial on IPython and its features. IPython
 is an enhanced interactive Python interpreter. IPython provides various advanced
-features that the vanilla Python interpreter does not. We have shown some of these
-features in the previous tutorials. In this tutorial we shall look at a few more
-of them.
+features that the vanilla Python interpreter does not. We have seen some of these
+features in the previous tutorials. In this tutorial we shall recall them and 
+look at a few more new ones.
+
+
 
 
