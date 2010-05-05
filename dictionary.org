@@ -22,6 +22,10 @@
 
     player = {'Mat': 134,'Inn': 233,
     'Runs': 10823, 'Avg': 52.53}
+    Let's see what player contains by typing:
+
+    print player
+
     Its a dictionary storing statistics of a cricket player.
     Here 'Mat', 'Inn' etc are the keys. Now in order to get the 'average' of
     this player we simply type
@@ -31,6 +35,7 @@
     To add a new key-value pair to this dictionary we type
     player['Name'] = 'Rahul Dravid'
     print player
+    As you can see the given key-value pair has been added.
     Please note that Python dictionaries don't maintain the order
     in which the key-value pairs are stored. The order might change
     as we add new entries.
