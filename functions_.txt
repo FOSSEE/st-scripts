@@ -9,5 +9,5 @@ Lets look at how to write functions by writing one out .
 
 We have given the function the name signum . Essentially what it does is that based on whether the no is 0 , negative or positive , it returns 0 , -1 and +1 respectively . In this case it recieves value of the no in variable r .    
 
-In the beginning of the function you can see a triple quoted string . This is called a docstring . You can write some documentation related to your function. In this you can have the function parameters and what it returns . A python function returns a value by using the keyword return .
+In the beginning of the function you can see a triple quoted string . This is called a docstring. You can write some documentation related to your function. In this you can have the function parameters and what it returns. A python function returns a value by using the keyword return.
 
