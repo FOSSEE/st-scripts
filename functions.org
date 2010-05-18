@@ -22,17 +22,19 @@
     equations. We shall first review these basics. Then we shall move on to
     other details such as doc-strings, default arguments and keyword
     arguments. 
+    
+    First let's start IPython by typing ipython in the terminal.
 
-    Let's write a simple function that prints a Hello message, after
+    Let's write a simple function that prints a Hello message, upon
     accepting a name. 
 
         def welcome(name):
 	    print "Hello", name 
 
-    You would recall that def is a keyword that indicates a function
+    You would recall that def is a keyword that indicates the function
     definition. 'welcome' is the name of the function and 'name' is
     the lone argument to the function. Note that the function is
-    defined within an indented block, similar to any other block. Our
+    defined within an indented block, just like to any other block. Our
     function welcome just has one line in it's definition.  
     
     We can call our function, as follows -
@@ -55,7 +57,10 @@
     Notice that the doc string uses triple quotes. If the doc-string
     exceeds one line, we can use new line characters in it. 
     Also, as expected the doc-string is indented as is required
-    for anything within a block. 
+    for anything within a block. Now that we have written the
+    documentation, how do we access it? IPython provides the question
+    mark feature that we have seen in the previous tutorials. welcome?
+    will display the docstring that we have just written.
 
     We shall now look at default arguments. 
     [show slide with examples of functions with default arguments]
