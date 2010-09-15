@@ -118,8 +118,8 @@ first. Type
 
     mark_str = "1.25"
     mark = int(mark_str)
-    mark_str
-    mark
+    type(mark_str)
+    type(mark)
 
 We can see that string is converted to float. We can perform mathematical
 operations on them now.
