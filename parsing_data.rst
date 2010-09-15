@@ -37,11 +37,13 @@ can be used for computations. In our case, that is numbers.
 
 We can clearly see that the problem involves reading files and tokenizing.
 
-Let us learn about tokenizing strings. Let us define a string first. Type::
+Let us learn about tokenizing strings. Let us define a string first. Type
+::
 
     line = "parse this           string"
 
-We are now going to split this string on whitespace.::
+We are now going to split this string on whitespace.
+::
 
     line.split()
 
@@ -50,7 +52,8 @@ without any arguments, it splits on whitespace. In simple words, all the spaces
 are treated as one big space.
 
 split also can split on a string of our choice. This is acheived by passing
-that as an argument. But first lets define a sample record from the file.::
+that as an argument. But first lets define a sample record from the file.
+::
 
     record = "A;015163;JOSEPH RAJ S;083;042;47;AA;72;244;;;"
     record.split(';')
@@ -79,7 +82,8 @@ way to remove all the whitespace around a string so that "B" and a "B" with
 white spaces are dealt as same.
 
 This is possible by using the =strip= method of strings. Let us define a
-string by typing::
+string by typing
+::
 
     unstripped = "     B    "
     unstripped.strip()
@@ -92,7 +96,8 @@ We can see that strip removes all the whitespace around the sentence
 
 {{{ continue from paused state }}}
 
-Type::
+Type
+::
 
     a_str = "         white      space            "
     a_str.strip()
@@ -108,7 +113,8 @@ also a string. hence the marks that we have are still strings and mathematical
 operations are not possible. We must convert them into integers or floats
 
 We shall look at converting strings into floats. We define an float string
-first. Type::
+first. Type
+::
 
     mark_str = "1.25"
     mark = int(mark_str)
@@ -125,7 +131,8 @@ operations on them now.
 {{{ continue from paused state }}}
 
 It raises an error since converting a float string into integer directly is
-not possible. It involves an intermediate step of converting to float.::
+not possible. It involves an intermediate step of converting to float.
+::
 
     dcml_str = "1.25"
     flt = float(dcml_str)
@@ -137,7 +144,8 @@ Using =int= it is also possible to convert float into integers.
 
 Now that we have all the machinery required to parse the file, let us solve the
 problem. We first read the file line by line and parse each record. We see if
-the region code is B and store the marks accordingly.::
+the region code is B and store the marks accordingly.
+::
 
     math_marks_B = [] # an empty list to store the marks
     for line in open("/home/fossee/sslc1.txt"):
@@ -154,7 +162,8 @@ the region code is B and store the marks accordingly.::
 
 
 Now we have all the maths marks of region "B" in the list math_marks_B.
-To get the mean, we just have to sum the marks and divide by the length.::
+To get the mean, we just have to sum the marks and divide by the length.
+::
 
         math_marks_mean = sum(math_marks_B) / len(math_marks_B)
         math_marks_mean
