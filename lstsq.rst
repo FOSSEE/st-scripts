@@ -102,6 +102,7 @@ We get the least square fit of l vs t^2
 
 This brings us to the end of the tutorial.
 we have learnt
+
  * how to use loadtxt to read files
  * how to generate a least square fit
 
