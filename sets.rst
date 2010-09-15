@@ -30,30 +30,6 @@ elements.
 f10 is the set of fibonacci numbers from 1 to 10.
 p10 is the set of prime numbers from 1 to 10.
 
-Sets can be iterated upon just like lists and tuples. 
-::
-
-    for i in f10:
-        print i,
-
-prints the elements of f10.
-
-The length and containership check on sets is similar as in lists and tuples.
-::
-
-    len(f10)
-
-shows 5. And
-::
-
-    2 in f10
-
-prints False
-
-The order in which elements are organised in a set is not to be relied upon 
-since sets do not support indexing. Hence, slicing and striding are not valid
-on sets.
-
 Various operations that we do on sets are possible here also.
 The | character stands for union
 ::
@@ -83,6 +59,51 @@ gives all the elements that are in f10 but not in p10
 is all the elements in f10 union p10 but not in f10 intersection p10. In
 mathematical terms, it gives the symmectric difference.
 
+Sets also support checking of subsets.
+::
+
+    b = set([1, 2])
+    b < f10
+
+gives a True since b is a proper subset of f10.
+Similarly,
+::
+
+    f10 < f10
+
+gives a False since f10 is not a proper subset.
+hence the right way to do would be
+::
+
+    f10 <= f10
+
+and we get a True since every set is a subset of itself.
+
+Sets can be iterated upon just like lists and tuples. 
+::
+
+    for i in f10:
+        print i,
+
+prints the elements of f10.
+
+The length and containership check on sets is similar as in lists and tuples.
+::
+
+    len(f10)
+
+shows 5. And
+::
+    
+    1 in f10
+    2 in f10
+
+prints True and False respectively
+
+The order in which elements are organised in a set is not to be relied upon 
+since sets do not support indexing. Hence, slicing and striding are not valid
+on sets.
+
 {{{ Pause here and try out the following exercises }}}
 
 %% 1 %% Given a list of marks, marks = [20, 23, 22, 23, 20, 21, 23] 
@@ -110,8 +131,9 @@ we have learnt
 
  * How to make sets from lists
  * How to input sets
- * The various similarities with lists like length and containership
  * How to perform union, intersection and symmectric difference operations
+ * How to check if a set is a subset of other
+ * The various similarities with lists like length and containership
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
