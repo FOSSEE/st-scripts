@@ -27,7 +27,8 @@ As shown in the slide, we are first going to generate the two matrices tsq and
 A. Then we are going to use the =lstsq= function to find the values of m and c.
 
 To read the input file and parse the data, we are going to loadtxt function.
-Type::
+Type
+::
 
     data = loadtxt("/home/fossee/pendulum.txt")
     data
@@ -40,7 +41,8 @@ all the time values.
 Hence we have to use the unpack option with loadtxt. It unpacks the data into
  sequences depending on the structure of data.
 
-Type::
+Type
+::
 
     l, t = loadtxt("/home/fossee/pendulum.txt", unpack=True)
     l
@@ -49,7 +51,8 @@ Type::
 We can see that l and t are two sequences containing length and time values
 correspondingly.
 
-Let us first plot l vs t^2. Type::
+Let us first plot l vs t^2. Type
+::
 
     tsq = t * t
     plot(l, tsq, 'bo')
@@ -61,29 +64,34 @@ We can see that there is a visible linear trend.
 
 let us now generate the A matrix with l values.
 We shall first generate a 2 x 90 matrix with the first row as l values and the
-second row as ones. Then take the transpose of it. Type::
+second row as ones. Then take the transpose of it. Type
+::
 
     inter_mat = array((l, ones_like(l)))
     inter_mat
 
-We see that we have intermediate matrix. Now we need the transpose.Type::
+We see that we have intermediate matrix. Now we need the transpose.Type
+::
 
     A = inter_mat.T
     A
 
 Now we have both the matrices A and tsq. We only need to use the =lstsq=
-Type::
+Type
+::
 
     result = lstsq(A, tsq)
 
 The result is a sequence of values. The first item is the matrix p or in simple
-words, the values of m and c. Hence, ::
+words, the values of m and c. Hence, 
+::
 
     m, c = result[0]
     m
     c
 
-Now that we have m and c, we need to generate the fitted values of t^2. Type::
+Now that we have m and c, we need to generate the fitted values of t^2. Type
+::
 
     tsq_fit = m * l + c
     plot(l, tsq, 'bo')
