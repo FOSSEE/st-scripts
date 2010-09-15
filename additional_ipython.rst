@@ -8,19 +8,23 @@ In this tutorial, we shall look at additional features of IPython that help us
 to retreive the commands that we type on the interpreter and then save them
 into a file and run it.
 
-Let us start ipython with pylab loaded, by typing::
+Let us start ipython with pylab loaded, by typing
+::
+
     $ ipython -pylab
 
 on the terminal
 
 {{{ shit to terminal and type ipython -pylab }}}
 
-We shall first make a plot and then view the history and save it.::
+We shall first make a plot and then view the history and save it.
+::
 
     x = linspace(-2*pi, 2*pi, 100)
     plot(x, xsinx(x))
 
-xsin(x) is actually x * sin(x)::
+xsin(x) is actually x * sin(x)
+::
 
     plot(x, x*sin(x))
     plot(x, sin(x))
@@ -28,9 +32,9 @@ xsin(x) is actually x * sin(x)::
     ylabel("$f(x)$")   
     title("x and xsin")
 
-
 We now have the plot. Let us look at the commands that we have typed in. The
-history can be retreived by using =%hist= command. Type::
+history can be retreived by using =%hist= command. Type
+::
 
     %hist
 
@@ -46,7 +50,8 @@ recent command. This implies that anything we type in is stored as history,
 irrespective of whether it is command or an error or IPython magic command.
 
 If we want only the recent 5 to be displayed, we pass the number as an argument
-to =%hist= command. Hence::
+to =%hist= command. Hence
+::
 
     %hist 5 
 
@@ -60,7 +65,8 @@ The default number is 40.
 
 {{{ continue from paused state }}}
 
-As we can see from =%hist= documentation,::
+As we can see from =%hist= documentation,
+::
 
     %hist 5 10
 
@@ -70,7 +76,8 @@ Now that we have the history, we would like to save the required line of code
 from history. This is possible by using the =%save= command.
 
 Before we do that, let us first look at history and identify what lines of code
-we require.Type::
+we require.Type
+::
 
     %hist
 
@@ -83,7 +90,8 @@ required. The seventh command although is correct, we do not need it since we
 are setting the title correctly in the eigthth command.
 
 So we need first third to sixth and the eigthth command for our program.
-Hence the syntax of =%save= is::
+Hence the syntax of =%save= is
+::
 
     %save /home/fossee/plot_script.py 1 3-6 8
 
@@ -104,25 +112,29 @@ arguments there after are the commands to be saved in the given order.
 
 {{{ continue from paused state }}}
 
-we use the command =ylabel= on interpreter as::
+we use the command =ylabel= on interpreter as
+::
 
     ylabel("y")
 
-and then do::
+and then do
+::
 
     %save /home/fossee/example_plot.py 1 3-6 10
 
 Now that we have the required lines of code in a file, let us learn how to run
 the file as a python script.
 
-We use the IPython magic command =%run= to do this. Type::
+We use the IPython magic command =%run= to do this. Type
+::
 
    %run -i /home/fossee/plot_script.py
 
 The script runs but we do not see the plot. This happens because we are running
 a script and we are not in interactive mode anymore.
 
-Hence on your terminal type::
+Hence on your terminal type
+::
 
     show()
 
@@ -135,11 +147,13 @@ to show the plot.
 
 {{{ continue from paused state }}}
 
-We first look at the history using::
+We first look at the history using
+::
 
     %hist 20
 
-Then save the script using::
+Then save the script using
+::
 
     %save /home/fossee/show_included.py 1 3-6 8 10 13
     %run -i /home/fossee/show_included.py
@@ -155,6 +169,7 @@ interpreter and used to run the script.
 
 This brings us to the end of the tutorial.
 we have looked at 
+
  * Retreiving history using =%hist= command
  * Vieweing only a part of history by passing an argument to %hist
  * saving the required lines of code in required order using %save
