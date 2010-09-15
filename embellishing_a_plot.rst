@@ -9,7 +9,8 @@ linestyle of the plot. We shall then learn how to add title to the plot and
 then look at adding labels to x and y axes. we shall also look at adding 
 annotations to the plot.
 
-Let us start ipython with pylab loaded, by typing::
+Let us start ipython with pylab loaded, by typing
+::
 
     ipython -pylab
 
@@ -17,7 +18,8 @@ on the terminal
 
 {{{ shit to terminal and type ipython -pylab }}}
 
-We shall first make a simple plot and start with decorating it.::
+We shall first make a simple plot and start with decorating it.
+::
 
     x = linspace(-2, 4, 20)
     plot(x, sin(x))
@@ -27,7 +29,8 @@ be nice if we could control these parameters in the plot. This is possible by
 passing additional arguments to the plot command.
 
 The second argument that we shall be passing is colour. We shall first clear
-the figure and plot the same in red colour.Hence::
+the figure and plot the same in red colour.Hence
+::
 
     clf()
     plot(x, sin(x), 'r')
@@ -35,7 +38,8 @@ the figure and plot the same in red colour.Hence::
 Plots the same curve but now in red colour.
 
 To alter the thickness of the line, we use the =linewidth= argument in the plot
-command.Hence::
+command.Hence
+::
 
     plot(x, cos(x), linewidth=2)
 
@@ -49,7 +53,8 @@ produces a plot with a thicker line.
 
 {{{ continue from paused state }}}
 
-A combination of colour and linewidth would do the job for us. Hence::
+A combination of colour and linewidth would do the job for us. Hence
+::
 
     plot(x, sin(x), 'b', linewidth=3)
 
@@ -60,19 +65,22 @@ produces the required plot
 
 Occasionally we would also want to alter the style of line. Sometimes all we
 want is just a bunch of points not joined. This is possible by passing the
-linestyle argument along with or instead of the colour argument.Hence::
+linestyle argument along with or instead of the colour argument.Hence
+::
 
     clf()
     plot(x, sin(x), '.')
 
 produces a plot with only points.
 
-To produce the same plot but now in blue colour, we do::
+To produce the same plot but now in blue colour, we do
+::
 
     clf()
     plot(x, sin(x), 'b.')
 
-Other available options can be seen in the documentation of plot.::
+Other available options can be seen in the documentation of plot.
+::
 
     plot?
 
@@ -85,7 +93,8 @@ Other available options can be seen in the documentation of plot.::
 {{{ continue from paused state }}}
 
 All we have to do is use a combination of linestyle and colour to acheive this.
-Hence::
+Hence
+::
 
     clf()
     plot(x, cos(x), 'go')
@@ -101,7 +110,8 @@ produces the required plot.
 Now that we know how to produce a bare minimum plot with colour, style and
 thickness of our interest, we shall look at decorating the plot.
 
-Let us start with a plot of the function -x^2 + 4x - 5.::
+Let us start with a plot of the function -x^2 + 4x - 5.
+::
 
     plot(x, -x*x + 4*x - 5, 'r', linewidth=2)
 
@@ -110,7 +120,8 @@ Let us start with a plot of the function -x^2 + 4x - 5.::
 We now have the plot in a colour and linewidth of our interest. As you can see,
 the figure does have any description describing the plot.
 
-We will now add a title to the plot by using the =title= command.::
+We will now add a title to the plot by using the =title= command.
+::
 
     title("Parabolic function -x^2+4x-5") 
 
@@ -126,7 +137,8 @@ like log and exp. Wouldn't it be good if there was LaTex like formatting.
 That is also possible by adding a $ sign before and after the part of the 
 string that should be LaTex style.
 
-for instance, we can use::
+for instance, we can use
+::
 
     title("Parabolic function $-x^2+4x-5$")
 
@@ -142,14 +154,16 @@ and we get the polynomial formatted properly.
 
 {{{ continue from the paused state }}}
 
-The solution is to enclose the whole string in between $. Hence,::
+The solution is to enclose the whole string in between $. Hence,
+::
 
     title("$Parabolic function -x^2+4x-5$")
 
 gives a title that looks neatly formatted.
 
 Although we have title, the plot is not complete without labelling x and y
-axes. Hence we shall label x-axis to "x" and y-axis to "f(x)"::
+axes. Hence we shall label x-axis to "x" and y-axis to "f(x)"
+::
 
     xlabel("x")
 
@@ -158,7 +172,8 @@ axes. Hence we shall label x-axis to "x" and y-axis to "f(x)"::
 As you can see, =xlabel= command takes a string as argument, similar to the
 =title= command and sets it to x-axis.
 
-Similarly,::
+Similarly,
+::
 
     ylabel("f(x)")
 
@@ -173,7 +188,8 @@ sets the name of y-axis as "f(x)"
 {{{ continue from paused state }}}
 
 Since we need LaTex style formatting, all we have to do is enclose the string
-in between two $. Hence,::
+in between two $. Hence,
+::
 
     xlabel("$x$")
     yalbel("$f(x)$")
@@ -184,7 +200,8 @@ does the job for us.
 
 The plot is now almost complete. Except that we have still not seen how to 
 name the points. For example the point (2, -1) is the local maxima. We would
-like to name the point accordingly. We can do this by using::
+like to name the point accordingly. We can do this by using
+::
 
     annotate("local maxima", xy=(2, -1))
 
