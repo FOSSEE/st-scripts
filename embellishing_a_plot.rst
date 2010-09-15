@@ -1,0 +1,223 @@
+Hello friends and welcome to the tutorial on Embellishing Plots
+
+{{{ Show the slide containing title }}}
+
+{{{ Show the slide containing the outline slide }}}
+
+In this tutorial, we shall look at how to modify the colour, thickness and 
+linestyle of the plot. We shall then learn how to add title to the plot and 
+then look at adding labels to x and y axes. we shall also look at adding 
+annotations to the plot.
+
+Let us start ipython with pylab loaded, by typing::
+
+    ipython -pylab
+
+on the terminal
+
+{{{ shit to terminal and type ipython -pylab }}}
+
+We shall first make a simple plot and start with decorating it.::
+
+    x = linspace(-2, 4, 20)
+    plot(x, sin(x))
+
+As you can see, the colour and thickness of line as decided by pylab. It would
+be nice if we could control these parameters in the plot. This is possible by
+passing additional arguments to the plot command.
+
+The second argument that we shall be passing is colour. We shall first clear
+the figure and plot the same in red colour.Hence::
+
+    clf()
+    plot(x, sin(x), 'r')
+
+Plots the same curve but now in red colour.
+
+To alter the thickness of the line, we use the =linewidth= argument in the plot
+command.Hence::
+
+    plot(x, cos(x), linewidth=2)
+
+produces a plot with a thicker line.
+
+{{{ Show the plot and compare the sin and cos plots }}}
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 1 %% Plot sin(x) in blue colour and with linewidth as 3
+
+{{{ continue from paused state }}}
+
+A combination of colour and linewidth would do the job for us. Hence::
+
+    plot(x, sin(x), 'b', linewidth=3)
+
+produces the required plot
+
+#[Nishanth]: I could not think of a SIMPLE recipe approach for introducing
+             linestyle. Hence the naive approach.
+
+Occasionally we would also want to alter the style of line. Sometimes all we
+want is just a bunch of points not joined. This is possible by passing the
+linestyle argument along with or instead of the colour argument.Hence::
+
+    clf()
+    plot(x, sin(x), '.')
+
+produces a plot with only points.
+
+To produce the same plot but now in blue colour, we do::
+
+    clf()
+    plot(x, sin(x), 'b.')
+
+Other available options can be seen in the documentation of plot.::
+
+    plot?
+
+{{{ Run through the documentation and show the options available }}}
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 2 %% Plot the sine curve with green filled circles.
+
+{{{ continue from paused state }}}
+
+All we have to do is use a combination of linestyle and colour to acheive this.
+Hence::
+
+    clf()
+    plot(x, cos(x), 'go')
+
+produces the required plot.
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 3 %% Produce a plot of tangent curve with red dashed line and linewidth 3
+
+{{{ continue from paused state }}}
+
+Now that we know how to produce a bare minimum plot with colour, style and
+thickness of our interest, we shall look at decorating the plot.
+
+Let us start with a plot of the function -x^2 + 4x - 5.::
+
+    plot(x, -x*x + 4*x - 5, 'r', linewidth=2)
+
+{{{ Show the plot window and switch back to terminal }}}
+
+We now have the plot in a colour and linewidth of our interest. As you can see,
+the figure does have any description describing the plot.
+
+We will now add a title to the plot by using the =title= command.::
+
+    title("Parabolic function -x^2+4x-5") 
+
+{{{ Show the plot window and point to the title }}}
+The figure now has a title which describes what the plot is.
+The =title= command as you can see, takes a string as argument and set the
+title accordingly.
+
+The formatting in title is messed and it does not look clean. You can imagine
+what would be the situation if there were fractions and more complex functions
+like log and exp. Wouldn't it be good if there was LaTex like formatting.
+
+That is also possible by adding a $ sign before and after the part of the 
+string that should be LaTex style.
+
+for instance, we can use::
+
+    title("Parabolic function $-x^2+4x-5$")
+
+and we get the polynomial formatted properly.
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 4 %% Change the title of the figure such that the whole title is formatted
+        in LaTex style
+
+{{{ continue from the paused state }}}
+
+The solution is to enclose the whole string in between $. Hence,::
+
+    title("$Parabolic function -x^2+4x-5$")
+
+gives a title that looks neatly formatted.
+
+Although we have title, the plot is not complete without labelling x and y
+axes. Hence we shall label x-axis to "x" and y-axis to "f(x)"::
+
+    xlabel("x")
+
+{{{ Switch to plot window and show the xlabel }}}
+
+As you can see, =xlabel= command takes a string as argument, similar to the
+=title= command and sets it to x-axis.
+
+Similarly,::
+
+    ylabel("f(x)")
+
+sets the name of y-axis as "f(x)"
+
+{{{ Show the plot window and point to ylabel and switch back to terminal }}}
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 5 %% Set the x and y labels as "x" and "f(x)" in LaTex style.
+
+{{{ continue from paused state }}}
+
+Since we need LaTex style formatting, all we have to do is enclose the string
+in between two $. Hence,::
+
+    xlabel("$x$")
+    yalbel("$f(x)$")
+
+does the job for us.
+
+{{{ Show the plot window with clean labels }}}
+
+The plot is now almost complete. Except that we have still not seen how to 
+name the points. For example the point (2, -1) is the local maxima. We would
+like to name the point accordingly. We can do this by using::
+
+    annotate("local maxima", xy=(2, -1))
+
+{{{ Show the annotation that has appeared on the plot }}}
+As you can see, the first argument to =annotate= command is the name we would
+like to mark the point as and the argument after xy= is the point at which the
+name should appear.
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 6 %% Make an annotation called "root" at the point (-4, 0)
+        What happens to the first annotation ?
+
+{{{ continue from paused state }}}
+
+As we can see, every annotate command makes a new annotation on the figure.
+
+{{{ Show summary slide }}}
+
+we have looked at 
+
+ * Modifying the attributes of plot by passing additional arguments
+ * How to add title
+ * How to incorporate LaTex style formatting
+ * How to label x and y axes
+ * How to add annotations
+
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+#[Nishanth]: Will add this line after all of us fix on one.
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thankyou
+ 
+.. Author              : Nishanth
+   Internal Reviewer 1 : 
+   Internal Reviewer 2 : 
+   External Reviewer   :
