@@ -132,6 +132,9 @@ for instance, we can use::
 
 and we get the polynomial formatted properly.
 
+#[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
+             string in LaTex style is not good
+
 {{{ Pause here and try out the following exercises }}}
 
 %% 4 %% Change the title of the figure such that the whole title is formatted
