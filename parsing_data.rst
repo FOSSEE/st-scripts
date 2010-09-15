@@ -163,6 +163,7 @@ To get the mean, we just have to sum the marks and divide by the length.::
 
 This brings us to the end of the tutorial.
 we have learnt
+
  * how to tokenize a string using various delimiters
  * how to get rid of extra white space around
  * how to convert from one type to another
