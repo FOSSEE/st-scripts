@@ -86,3 +86,7 @@ Now, let us move on to a larger problem. From the image
   + extract the face of Tagore alone.
   + get a smaller copy of the image, that is a fourth it's size. 
                  
+
+{{{ show slide with solutions to the problem }}}
+
+Thank You!
