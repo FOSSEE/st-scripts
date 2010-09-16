@@ -16,7 +16,7 @@ Let us start ipython with pylab loaded, by typing
 
 on the terminal
 
-{{{ shit to terminal and type ipython -pylab }}}
+{{{ shift to terminal and type ipython -pylab }}}
 
 We shall first make a simple plot and start with decorating it.
 ::
@@ -28,8 +28,10 @@ As you can see, the colour and thickness of line as decided by pylab. It would
 be nice if we could control these parameters in the plot. This is possible by
 passing additional arguments to the plot command.
 
+.. #[[Anoop: I think it will be good to rephrase the sentence]]
+
 The second argument that we shall be passing is colour. We shall first clear
-the figure and plot the same in red colour.Hence
+the figure and plot the same in red colour. Hence
 ::
 
     clf()
@@ -38,16 +40,23 @@ the figure and plot the same in red colour.Hence
 Plots the same curve but now in red colour.
 
 To alter the thickness of the line, we use the =linewidth= argument in the plot
-command.Hence
+command. Hence
 ::
 
     plot(x, cos(x), linewidth=2)
 
 produces a plot with a thicker line.
 
-{{{ Show the plot and compare the sin and cos plots }}}
+.. #[[Anoop: I guess it will be good if you say that it affects the
+   same plot, as you have not cleared the figure]]
+
+{{{ Show the plot and compare the sine and cos plots }}}
 
 {{{ Pause here and try out the following exercises }}}
+
+.. #[[Anoop: is the above a context switch for the person who does the
+   recording, other wise if it an instruction to the person viewing the
+   video, then I guess the three braces can be removed.]]
 
 %% 1 %% Plot sin(x) in blue colour and with linewidth as 3
 
@@ -58,10 +67,16 @@ A combination of colour and linewidth would do the job for us. Hence
 
     plot(x, sin(x), 'b', linewidth=3)
 
+.. #[[Anoop: add clf()]]
+
 produces the required plot
 
 #[Nishanth]: I could not think of a SIMPLE recipe approach for introducing
              linestyle. Hence the naive approach.
+
+.. #[[Anoop: I guess the recipe is fine, but would be better if you
+   add the problem statement rather than just saying "let's do a simple
+   plot"]]
 
 Occasionally we would also want to alter the style of line. Sometimes all we
 want is just a bunch of points not joined. This is possible by passing the
@@ -87,6 +102,8 @@ Other available options can be seen in the documentation of plot.
 {{{ Run through the documentation and show the options available }}}
 
 {{{ Pause here and try out the following exercises }}}
+
+.. #[[Anoop: same question as above, should it be read out?]]
 
 %% 2 %% Plot the sine curve with green filled circles.
 
@@ -146,6 +163,8 @@ and we get the polynomial formatted properly.
 
 #[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
              string in LaTex style is not good
+
+.. #[[Anoop: I guess you can go ahead with the LaTex thing, it's cool!]]
 
 {{{ Pause here and try out the following exercises }}}
 
@@ -210,6 +229,9 @@ As you can see, the first argument to =annotate= command is the name we would
 like to mark the point as and the argument after xy= is the point at which the
 name should appear.
 
+.. #[[Anoop: I think we should tell explicitely that xy takes a
+   sequence or a tuple]]
+
 {{{ Pause here and try out the following exercises }}}
 
 %% 6 %% Make an annotation called "root" at the point (-4, 0)
@@ -238,6 +260,6 @@ Hope you have enjoyed and found it useful.
 Thankyou
  
 .. Author              : Nishanth
-   Internal Reviewer 1 : 
+   Internal Reviewer 1 : Anoop
    Internal Reviewer 2 : 
    External Reviewer   :
