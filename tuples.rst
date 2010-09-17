@@ -62,6 +62,7 @@ values.
 
 We define the two values
 ::
+
     temp = a
     a = b
     b = temp
