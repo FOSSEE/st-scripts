@@ -1,0 +1,180 @@
+Hello friends. Welcome to this spoken tutorial on Getting started with
+strings.
+
+{{{ Show the slide containing the title }}}
+
+{{{ Show the slide containing the outline }}}
+
+We have already learnt a lot about Lists in Python. In this tutorial,
+we will learn more about advanced features of Lists in Python. We will
+see in detail how to concatenate two lists, slicing and striding of
+lists, methods to sort and reverse the list.
+
+{{{ Shift to terminal and start ipython }}}
+
+To begin with let us start ipython, by typing::
+
+  ipython
+
+on the terminal
+
+We already know what Lists are in Python, how to access individual
+elements in the list and some of the functions that can be run on the
+lists like max, min, sum len and so on. Now let us learn some of the
+basic operations that can be performed on Lists.
+
+We already know how to access individual elements in a List. But what
+if we have a scenario where we need to get a part of the entire list
+or what we call as a slice of the list? Python supports slicing on
+lists. Let us say I have the list::
+
+  primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+To obtain the all the primes between 10 and 20 from the above list of
+primes we say::
+
+  primes[4:8]
+
+This gives us all the elements in the list starting from the element
+with the index 4 which is 11 in our list upto the element with index 8
+in the list but not including the eigth element. So we obtain a slice
+starting from 11 upto 19th. It is a very important to remember that
+when ever we specify a range of elements in Python the start index is
+included and end index is not included. So in the above case, 11 which
+was the element with the index 4 was included but 23 which was the
+element with index 8 was exluded.
+
+Generalizing, we can obtain a slice of the list "p" from the index
+"start" upto the index "end" but excluding "end" with the following
+syntax
+
+{{{ Show the slide containing p[start:stop] }}}
+
+By default the slice fetches all the elements between start and stop
+including start but not stop. So as to say we obtain all the elements
+between start and stop in steps of one. Python also provides us the
+functionality to specify the steps in which the slice must be
+obtained. Say we have::
+
+  num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+If we want to obtain all the odd numbers less than 10 from the list
+"num" we have to start from element with index 1 upto the index 10 in
+steps of 2::
+
+  num[1:10:2]
+
+So if we don't specify the step it is by default 1. Similary there are
+default values for start and stop indices as well. If we don't specify
+the start index it is implicitly taken as the first element of the
+list::
+
+  num[:10]
+
+This gives us all the elements from the beginning upto the 10th
+element but not including the 10th element in the list "num". Similary
+if the stop index is not specified it is implicitly assumed to be the
+end of the list, including the last element of the list::
+
+  num[10:]
+
+gives all the elements starting from the 10th element in the list
+"num" upto the final element including that last element. Now::
+
+  num[::2]
+
+gives us all the even numbers in the list "num".
+
+The other basic operation that we can perform on list is concatenation
+of two or more lists. We can combine two lists by using the "plus"
+operator. Say we have
+
+{{{ Read as you type }}}::
+
+  a = [1, 2, 3, 4]
+  b = [4, 5, 6, 7]
+  a + b
+
+When we concatenate lists using the "plus" operator we get a new
+list. We can store this list in a new variable::
+
+  c = a + b
+  c
+
+It is important to observe that the "plus" operator always returns a
+new list without touching anything in the existing lists which are the
+operands of the concatenation operation.
+
+We know that list is a collection of data. Whenever we have a
+collection we run into situations where we want to start the
+collection. Lists support sort method which sorts the list inplace::
+
+  a = [5, 1, 6, 7, 7, 10]
+  a.sort()
+
+Now the contents of the list "a" will be::
+
+  a
+  [1, 5, 6, 7, 7, 10]
+
+Since the sort method sorts the list inplace the original list we had
+is overwritten or replaced. We have no way to obtain the original list
+back. One way to avoid this is to keep a copy of the original list in
+another variable and run the sort method on the list. However Python
+also provides a built-in function called sorted which sorts the list
+which is passed as an argument to it and returns a new sorted list::
+
+  a = [5, 1, 6, 7, 7, 10]
+  sorted(a)
+  
+We can store this sorted list another list variable::
+
+  sa = sorted(a)
+
+Similarly to perform certain operations on the list we would like to
+reverse the list. Python provides reverse method which again reverses
+the list inplace::
+
+  a = [1, 2, 3, 4, 5]
+  a.reverse()
+
+reverses the list "a" and stores the reversed list inplace i.e. in "a"
+itself. Lets see the list "a"::
+
+  a
+  [5, 4, 3, 2, 1]
+
+But again the original list is lost. If we want to obtain the reverse
+of a list keeping the original list intact we can use the Python
+built-in function reversed. reversed function returns a new list which
+is the reverse of the list which was passed as the argument to the
+reversed function::
+
+  a = [1, 2, 3, 4, 5]
+  reversed(a)
+
+We can also store this new reversed list in another list variable.
+
+{{{ Show summary slide }}}
+
+This brings us to the end of another session. In this tutorial session
+we learnt
+
+  * How to define strings
+  * Different types of defining a string
+  * String concatenation and repeatition
+  * Accessing individual elements of the string
+  * Immutability of strings
+
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thankyou
+ 
+.. Author              : Madhu
+   Internal Reviewer 1 :         [potential reviewer: Nishanth]
+   Internal Reviewer 2 :         [potential reviewer: Amit]
+   External Reviewer   :
+
