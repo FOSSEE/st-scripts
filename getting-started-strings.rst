@@ -1,12 +1,3 @@
-3.3 LO: getting started with strings (2) [madhu] 
--------------------------------------------------
-* strings 
-  + single, double, triple quoted 
-* accessing elements 
-* show immutability 
-* tell that there are methods for manipulation 
-
-
 Hello friends. Welcome to this spoken tutorial on Getting started with
 strings.
 
@@ -39,6 +30,25 @@ within the quotes
   """This is also a string"""
   'p'
 
+Having more than one control character to define strings come as very
+handy when one of the control characters itself is part of the
+string. For example::
+
+  "Python's string manipulation functions are very useful"
+
+In this case we use single quote for apostrophe. If we had only single
+quote to define strings we should have a clumsy way of escaping the
+single quote character to make it part of the string. Hence this is a
+very handy feature.
+
+The triple quoted strings let us define multi-lines strings without
+using any escaping. Everything within the triple quotes is a single
+string no matter how many lines it extends::
+
+   """Having more than one control character to define
+   strings come as very handy when one of the control
+   characters itself is part of the string."""
+
 We can assign this string to any variable::
 
   a = 'Hello, World!'
@@ -56,18 +66,50 @@ We can add string variables as well as the strings themselves all in
 the same statement. The addition operation performs the concatenation
 of two strings.
 
+Similarly we can multiply a string with an integer::
 
+  a = 'Hello'
+  a * 5
 
+gives another string in which the original string 'Hello' is repeated
+5 times.
 
+Since strings are collections we can access individual items in the
+string using the subscripts::
 
+  a[0]
+
+gives us the first character in the string. The indexing starts from 0
+for the first character up to n-1 for the last character. We can
+access the strings from the end using negative indices::
+
+  a[-2]
+
+gives us second element from the end of the string
+
+Let us attempt to change one of the characters in a string::
+
+  a = 'hello'
+  a[0] = 'H'
+
+As said earlier, strings are immutable. We cannot manipulate the
+string. Although there are some methods which let us to manipulate the
+strings. We will look at them in the advanced session on strings. In
+addition to the methods that let us manipulate the strings we have
+methods like split which lets us break the string on the specified
+separator, the join method which lets us combine the list of strings
+into a single string based on the specified separator.
 
 {{{ Show summary slide }}}
 
 This brings us to the end of another session. In this tutorial session
 we learnt
 
-  *
-
+  * How to define strings
+  * Different types of defining a string
+  * String concatenation and repeatition
+  * Accessing individual elements of the string
+  * Immutability of strings
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
