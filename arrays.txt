@@ -1,0 +1,27 @@
+Hello friends and welcome to the second tutorial in the series of spoken tutorials on Python for Scientific computing. 
+
+In the previous tutorial we learnt about arrays and we told you that numpy arrays are faster and more efficient . In this tutorial we shall look at creating arrays, accessing elements and changing them. 
+
+
+Let's start with creating simple arrays. We've already seen how to convert lists to arrays. Inputting a new array is similarto that. 
+
+On your Ipython terminal type a = array open parenthesis and then open square brackets 5,8,10,13 ,close square brackets and close parenthesis . This create an array a . You can see what a is by typing a on the terminal .
+Now we will try to create a multi-dimensional array type in your ipython terminal
+c= array open parenthesis , then open square brackets 11,12,13 close square bracket 'comma' start square bracket 21 , 22 ,23close square bracket 'comma' open 31,32,33 close square bracket another close square bracket which closes the first sqaure bracket and parenthesis which closes the first parenthesis . Now to see the dimensions of the array c we will do c.shape . We can see that c is a 3 by 3 matrix .
+
+There are other special methods of creating arrays as well we will now look at them .
+The first one is the command arange which is similar to range except that it returns an array.
+We will type on our Ipython interpreter a = arange(10). We will see what a is now . Type a . As we can see This returns us an array of one dimension and has 10 elements .  
+Ones can be use to get all entries as ones . We can pass it the shape of the array as required .
+type b=ones open parenthesis , another open parenthesis , 3,4 , close second parenthesis and close first parenthesis . Look at b , by printing it out .
+To create an array with all entries as ones, with it's shape similar to an already existing array, we use the ones_like
+command.  type b= ones_like in parenthesis a . 
+
+ 
+
+ 
+     
+   
+
+
+  
