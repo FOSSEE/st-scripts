@@ -9,19 +9,18 @@ linestyle of the plot. We shall then learn how to add title to the plot and
 then look at adding labels to x and y axes. we shall also look at adding 
 annotations to the plot.
 
-Let us start ipython with pylab loaded, by typing
+Let us start ipython with pylab loaded, by typing on the terminal
+
+{{{ shift to terminal and type ipython -pylab }}}
+
 ::
 
     ipython -pylab
 
-on the terminal
-
-{{{ shift to terminal and type ipython -pylab }}}
-
 #[madhu: I feel the instructions should precede the actual action,
 since while recording we need to know before hand what we need to do]
 
-We shall first make a simple plot and start with decorating it.
+We shall first make a simple plot and start decorating it.
 
 .. #[madhu: start decorating it should be fine, with is not necessary]
 
@@ -33,9 +32,9 @@ We shall first make a simple plot and start with decorating it.
 .. #[madhu: Standard is to choose between -50 to 50 or 0 to 50 with 100
      points right?]
 
-As you can see, the default colour and the default thickness of the
+As we can see, the default colour and the default thickness of the
 line is as decided by pylab. Wouldn't be nice if we could control
-these parameters in the plot? Yes, this is possible by passing additional
+these parameters in the plot? This is possible by passing additional
 arguments to the plot command.
 
 .. #[[Anoop: I think it will be good to rephrase the sentence]]
@@ -84,6 +83,7 @@ thickness 2.
 A combination of colour and linewidth would do the job for us. Hence
 ::
 
+    clf()
     plot(x, sin(x), 'b', linewidth=3)
 
 .. #[[Anoop: add clf()]]
@@ -122,6 +122,8 @@ Other available options can be seen in the documentation of plot.
 
 {{{ Run through the documentation and show the options available }}}
 
+{{{ Show the options available for line style and colors }}}
+
 .. #[Madhu: The script needs to tell what needs to be shown or
      explained.]
 
@@ -144,7 +146,7 @@ produces the required plot.
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 3 %% Produce a plot of tangent curve with red dashed line and linewidth 3
+%% 3 %% Plot the curve of x vs tan(x) in red dashed line and linewidth 3
 
 {{{ continue from paused state }}}
 
@@ -263,8 +265,9 @@ like to name the point accordingly. We can do this by using
 {{{ Show the annotation that has appeared on the plot }}}
 
 As you can see, the first argument to =annotate= command is the name we would
-like to mark the point as and the argument after xy= is the point at which the
-name should appear.
+like to mark the point as and the second argument is the co-ordinates of the
+point at which the name should appear. It is a sequence containing two numbers.
+The first is x co-ordinate and second is y co-ordinate.
 
 .. #[[Anoop: I think we should tell explicitely that xy takes a
    sequence or a tuple]]
