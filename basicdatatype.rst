@@ -4,18 +4,21 @@ operators in Python.
 
 {{{ Show the slide containing the outline slide }}}
 
+In this tutorial, we shall look at::
 
-In this tutorial, we shall look at 
  * Various Datatypes in Python
  * Operators with a little hands-on on how they can be applied to 
    the different data types.
 
 Since this a hands on session, you will require python installed in your 
 computer. 
-
+.. #[Nishanth]: this line is not required
 
 First we will explore python data structures in the domain of numbers.
 There are three built-in data structures in python to represent numbers.
+
+.. #[Nishanth]: Did you mean data types when you said data structures??
+                Data structures is used for lists and others.
 
 {{{ A slide to make a memory note of this }}}
 
@@ -25,103 +28,109 @@ These are:
   * Complex and 
   * Boolean 
 
-
-
 Lets first talk about integers. ::
 
-   In[]: a=13
+   a = 13
 
+.. #[Nishanth]: give a space before and after the = sign
 
-Thats it , there we have our first integer variable a.
+Thats it, there we have our first integer variable a.
+
+.. #[Nishanth]: Show the value of a
 
 If we now see ::
      
-   In[]: type(a)
-   Out[]: <type 'int'>
+   type(a)
+   <type 'int'>
 
-   This means  that a is a type of int. Being an int data structure 
+This means that a is a type of int. Being an int data structure 
 in python means that there are various functions that this variable
 has to manipulate it different ways. You can explore these by doing,
 
-  In[]: a.<Tab>
+  a.<Tab>
 
+.. #[Nishanth]: a.<Tab> is not a good idea for int or float
 
 Lets see the limits of this int.
 
-  In[]: b=99999999999999999999
-  In[]: b
+  b = 99999999999999999999
+  b
 
 As you can see even when we put a value of 9 repeated 20 times 
 python did not complain. However when you asked python to print
 the number again it put a capital L at the end. Now if you check
 the type of this variable b, ::
 
-  In[]: type(b)
+  type(b)
   <type 'long'>
 
 
 The reason for this is that python recognizes large integer numbers
-by a data type long. However long type and integer type share there 
+by the data type long. However long type and integer type share there 
 functions and properties.
 
 Lets now try out the second type in list called float.
 
-
 Decimal numbers in python are recognized by the term float ::
 
-  In[]: p=3.141592
-  In[]: p
+  p = 3.141592
+  p
 
 If you notice the value of output of p isn't exactly equal to p. This
 is because computer saves floating point values in a specific
-format. This is always an aproximationation. This is why we should
+format. There is always an aproximationation. This is why we should
 never rely on equality of floating point numbers in a program.
-
 
 The last data structure in the list is complex number ::
 
-  In: c=3.2+4.6j
+  c = 3.2+4.6j
 
 as simple as that so essentialy its just a combination of two floats the 
 imaginary part being define by j notation usually used in electrical 
 engineering. Complex numbers have a lot of functions specific to them.
 Lets check these ::
 
-  In[]: c.<Tab>
+  c.<Tab>
+
+.. #[Nishanth]: rephrase the "j used in electrical engineering"
+                Its ok if you skip it also. Just say that here
+                j is used and not i
 
 Lets try some of them ::
 
-  In[]: c.real
-  In[]: c.imag
+  c.real
+  c.imag
 
 c.real gives the real part of the number and c.imag the imaginary.
 
 We can get the absolute value using the function ::
  
-  In[]: abs(c)
-
+  abs(c)
 
 Python also has Boolean as a built-in type.
 
 Try it out just type ::  
 
-  In[]: t=True
+  t = True
 
 note that T in true is capitalized.
   
 You can apply different Boolean operations on t now for example ::
 
-  In[]: f=not t 
+  f = not t 
   In[]: f
   In[]: f or t
   In[]: f and t 
+
+.. #[Nishanth]: remove In[]: and include spaces before and after = symbol
+                I don't want to edit it everywhere in the script
   
 The results explanotary in themselves.
 
 The usage of boolean brings us to an interesting question of precendence.
 What if you want to apply one operator before another. 
 
-Well you can use parenthesis for precedence ,
+Well you can use parenthesis for precedence.
 
 Lets write some piece of code to check this out.
 
@@ -144,34 +153,36 @@ where as the expression ::
 
 gives the value False.
 
-
 Lets now discuss sequence data structures in python. Sequence 
 datatypes are those in which elements are kept in a sequential 
-order.All the elements accessed using index. 
+order. All the elements accessed using index. 
 
 {{{ slide to for memory aid }}}
 
 The sequence datatypes in python are ::
+
  * list
  * string
  * tuple
 
-
 The list type is a container that holds a number of other 
 objects, in the given order.
-
 
 We create our first list by typing :: 
   
   In[]: num = [1, 2, 3, 4]
 
+.. #[Nishanth]: Show the value of the variable 
 Items enclosed in square brackets separated by comma 
 constitutes a list.
 
-Lists  can store data of any type in them. 
+Lists can store data of any type in them. 
 
 We can have a list something like ::
+
  In[]: var = [1, 1.2, [1,2]]	
+
+.. #[Nishanth]: Show the value of the variable 
 print var
 
 Now we will have a look at strings 
@@ -180,20 +191,21 @@ type ::
 
  In[]: w="hello"
 
+.. #[Nishanth]: Show the value of the variable 
 w is now a string variable with the value "hello"
 
 {{{ Memory Aid Slide }}}
 
 Python strings can actually be defined in three different ways ::
 
-
-
   In[]: k='Single quote'
   In[]: l="Double quote contain's single quote"
   In[]: m='''"Contain's both"'''
 
-Thus while single quote string may not contain another single quote
-double quote can do that. While triple quoted strings can contain both.
+Thus, single quotes are used as delimiters usually.
+When a string contains a single quote, double quotes are used as delimiters.
+When a string quote contains both single and double quotes, triple quotes are
+used as delimiters.
 
 The last in the list of sequence data types is tuple.
 
@@ -201,7 +213,6 @@ To create a tuple  we use normal brackets '('
 unlike '[' for lists.::
 
   In[]: t = (1, 2, 3, 4, 5, 6, 7, 8)
-
   
 Because of their sequential property there are certain functions and 
 operations we can apply to all of them. 
@@ -222,6 +233,10 @@ They can be accessed using index numbers ::
 
 Negative indices can be used to access in reverse
 
+.. #[Nishanth]: Elaborate on indexing.
+                Indexing starts from 0 when moving from left to right
+                Indexing starts from -1 when moving from right to left
+
 Addition gives a new sequence containing both sequences ::
 
      In[]: num+var
@@ -236,13 +251,17 @@ len function gives the length  ::
   In[]: len(w)
   In[]: len(t)
 
-We can check whether an element is there with 'in' keyword ::
+Prints the length the variable.
+
+We can check the containership of an element using the 'in' keyword ::
 
   In[]: 3 in num
   In[]: 'H' in w
   In[]: 2 in t
 
-Find maximum using max function  and minimum using min:: 
+We see that it gives True and False accordingly.
+
+Find maximum using max function and minimum using min:: 
 
   In[]: max(t)
   In[]: min(w)
@@ -252,8 +271,8 @@ Get a sorted list and reversed list using sorted and reversed function ::
   In[]: sorted(num)
   In[]: reversed(w)
 
-As a consequence of the order one can access a group of elements together 
-The methods for this are called slicing and striding 
+As a consequence of the order one we access a group of elements together.
+This is called slicing and striding.
 
 First Slicing 
 
@@ -261,14 +280,15 @@ Given a list ::
 
   In[]:j=[1,2,3,4,5,6]
 
-Lets say we want elements 2 to 5.
+Lets say we want elements starting from 2 and ending in 5.
 
 For this we can do ::
 
   In[]: j[1:4]
 
 The syntax for slicing is sequence variable name square bracket
-first element index ,colon,second element index.
+first element index, colon, second element index.::
+.. #[nishanth]: specify that the last element is not included
 
   In[]: j[:4]
 
@@ -281,8 +301,7 @@ element is left blank it means till the end.
 
 This effectively is the whole list.
 
-Striding is a concept similar to slicing with the concept of skiping elements
-at regular intervals added.
+Striding is similar to slicing except that the step size here is not one.
 
 Lets see by example ::
 
@@ -290,27 +309,39 @@ Lets see by example ::
   In[]: z[1:8:2]
   Out[]:[2, 4, 6, 8]
 
-The colon two added in the end signifies all the second elemets. This is why we call this concept
+The colon two added in the end signifies all the alternate elements. This is why we call this concept
 striding because we move through the list with a particular stride or step. The step in this example
 being 2. 
 
-We have talked about many similar features of lists,strings and tuples but there are many is an important
-way in which lists differ from strings and tuples. Lets see this by example.::
+We have talked about many similar features of lists, strings and tuples. But there are many important
+features in lists that differ from strings and tuples. Lets see this by example.::
 
   In[]: z[1]=9
   In[]: w[1]='k'
 
-
 {{{ slide to show the error }}}
+
+.. #[Nishanth]: Use sensible variable names. At this point no one will remember
+                that z is a list and w is tuple.
+                for example you can use names like some_list, a_tuple etc.
+                or you can also use l for list, t for tuple and s for string
+
 As you can see while the first command executes with out a problem there is an error on the second one.
   
 Now lets try ::
+
   In[]: t[1]=5
 
 Its the same error. This is because strings and tuples share the property of being immutable.
 We cannot change the value at a particular index just by assigning a new value at that position.
+
 In case of strings we have special functions to appy relacement and other things while tuples cannot
 be changed at all. 
+
+.. #[Nishanth]: Even in strings also the special functions do not modify the
+                original string. A new string is created instead. These have 
+                been provided for string manipulation.
+                hence I don't think you have to mention this.
 
 We have looked at different types but we need to convert one data type into another. Well lets one
 by one go through methods by which we can convert one data type to other:
@@ -320,17 +351,20 @@ We can convert all the number data types to one another ::
   In[]: i=34
   In[]: d=float(i)
 
-Python has built in functions int , float and complex to convert one number type
+Python has built in functions int, float and complex to convert one number type
 data structure to another.
 
   In[]: dec=2.34
   In[]: dec_con=int(dec)
   
-As you can see the decimal part of the number is simply stripped  to get the integer.::
+.. #[Nishanth]: Show the value of the variables
+
+As you can see the decimal part of the number is simply stripped to get the integer.::
 
   In[]: com=2.3+4.2j
   In[]: float(com)
-  In case of complex number to floating point only the real value of complex number is taken.
+
+In case of complex number to floating point only the real value of complex number is taken.
 
 Similarly we can convert list to tuple and tuple to list ::
   
@@ -344,6 +378,8 @@ Lets say we have a string ::
 
   In: somestring="Is there a way to split on these spaces."
   In: somestring.split()
+
+.. #[Nishanth]: Did you try list(somestring). What does it give??
 
 This produces a list with the string split at whitespace.
 similarly we can split on some other character.
@@ -364,10 +400,16 @@ Thus we get a list joined on commas. Similarly we can do spaces.::
 
 Note that the list has to be a list of strings to apply join operation.
 
+.. #[Nishanth]: string to list is fine. But list to string can be left for
+                string manipulations. Just say it requires some string 
+                manipulations and leave it there.
+
+.. #[Nishanth]: Where is the summary
+                There are no exercises in the script
+
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
-
 
 Hope you have enjoyed and found it useful.
 
@@ -376,9 +418,6 @@ Thank You.
 
 
 Author              : Amit Sethi
-
-Internal Reviewer 1 : 
-
+Internal Reviewer 1 : Nishanth
 Internal Reviewer 2 : 
-
 External Reviewer

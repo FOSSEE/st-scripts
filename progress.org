@@ -33,7 +33,7 @@
 | 5.4 LO: | using sage to teach                    |     3 | Nishanth |                     |                     |
 | 5.5 LO: | Assessment                             |     3 | Anoop    |                     |                     |
 |---------+----------------------------------------+-------+----------+---------------------+---------------------|
-| 6.1 LO: | basic datatypes & operators            |     4 | Amit     | Madhu (Pending)     | Nishanth (Pending)  |
+| 6.1 LO: | basic datatypes & operators            |     4 | Amit     | Madhu (Pending)     | Nishanth (Done)     |
 | 6.2 LO: | I/O                                    |     1 | Nishanth |                     |                     |
 | 6.3 LO: | conditionals                           |     2 | Madhu    |                     |                     |
 | 6.4 LO: | loops                                  |     2 | Puneeth  |                     |                     |
