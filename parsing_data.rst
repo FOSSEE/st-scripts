@@ -29,14 +29,15 @@ Our job is to calculate the mean of all the maths marks in the region "B".
              not know about any if/else yet.
 
 
-Now what is parsing data.
+So what exactly is parsing data?
 
-From the input file, we can see that there is data in the form of text. Hence
-parsing data is all about reading the data and converting it into a form which
+
+Parsing data is all about reading the data and converting it into a form which
 can be used for computations. In our case, that is numbers.
 
 We can clearly see that the problem involves reading files and tokenizing.
 
+.. #[[Amit:Definition of Tokenizing here.]]
 Let us learn about tokenizing strings. Let us define a string first. Type
 ::
 
@@ -75,7 +76,7 @@ the given argument if it is called with an argument.
 We see that when we split on space, multiple whitespaces are not clubbed as one
 and there is an empty string everytime there are two consecutive spaces.
 
-Now that we know splitting a string, we can split the record and retreive each
+Now that we know how to split a string, we can split the record and retreive each
 field seperately. But there is one problem. The region code "B" and a "B"
 surrounded by whitespace are treated as two different regions. We must find a
 way to remove all the whitespace around a string so that "B" and a "B" with
@@ -109,20 +110,20 @@ By now we know enough to seperate fields from the record and to strip out any
 white space. The only road block we now have is conversion of string to float.
 
 The splitting and stripping operations are done on a string and their result is
-also a string. hence the marks that we have are still strings and mathematical
-operations are not possible. We must convert them into integers or floats
+also a string, hence the marks that we have are still strings and mathematical
+operations on them are not possible. We must convert them into integers or floats
 
 We shall look at converting strings into floats. We define an float string
 first. Type
 ::
 
     mark_str = "1.25"
-    mark = int(mark_str)
+    mark = float(mark_str)
     type(mark_str)
     type(mark)
 
 We can see that string is converted to float. We can perform mathematical
-operations on them now.
+operations on it now.
 
 {{{ Pause here and try out the following exercises }}}
 
@@ -130,6 +131,8 @@ operations on them now.
 
 {{{ continue from paused state }}}
 
+.. #[[Amit:I think there should be some interaction first here about the
+problem before we conclude to talking about the result.]]
 It raises an error since converting a float string into integer directly is
 not possible. It involves an intermediate step of converting to float.
 ::
@@ -140,7 +143,7 @@ not possible. It involves an intermediate step of converting to float.
     number = int(flt)
     number
 
-Using =int= it is also possible to convert float into integers.
+Using =int= it is possible to convert float into integers.
 
 Now that we have all the machinery required to parse the file, let us solve the
 problem. We first read the file line by line and parse each record. We see if
@@ -159,7 +162,7 @@ the region code is B and store the marks accordingly.
 
         if region_code == "AA":
             math_marks_B.append(math_mark)
-
+.. #[[Amit:This intutively does not seem to be what you wanted]]
 
 Now we have all the maths marks of region "B" in the list math_marks_B.
 To get the mean, we just have to sum the marks and divide by the length.
@@ -176,6 +179,7 @@ we have learnt
  * how to tokenize a string using various delimiters
  * how to get rid of extra white space around
  * how to convert from one type to another
+.. #[[Amit:one datatype to another may be better.]]
  * how to parse input data and perform computations on it
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
@@ -187,6 +191,6 @@ Hope you have enjoyed and found it useful.
 Thankyou
  
 .. Author              : Nishanth
-   Internal Reviewer 1 : 
+   Internal Reviewer 1 : Amit Sethi 
    Internal Reviewer 2 : 
    External Reviewer   :
