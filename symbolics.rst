@@ -7,19 +7,20 @@ by Fossee group.
 {{{ Part of Notebook with title }}}
 
 We would be using simple mathematical functions on the sage notebook
-for this tutorial .
+for this tutorial.
 
 During the course of the tutorial we will learn
 
-
 {{{ Part of Notebook with outline }}}
 
-To define symbolic expressions in sage .  Use built-in costants and
-function.  Integration , differentiation using sage .  Defining
-matrices.  Defining Symbolic functions .  Simplifying and solving
-symbolic expressions and functions
-    
+To define symbolic expressions in sage.  Use built-in costants and
+function. Integration, differentiation using sage. Defining
+matrices. Defining Symbolic functions. Simplifying and solving
+symbolic expressions and functions.
 
+.. #[Nishanth]: The formatting is all messed up
+                First fix the formatting and compile the rst
+                The I shall review
 
 Using sage we can perform mathematical operations on symbols .
 
