@@ -14,7 +14,7 @@
 | 2.5 LO: | module level assessment                |     3 | Nishanth |                     |                     |
 |---------+----------------------------------------+-------+----------+---------------------+---------------------|
 | 3.1 LO: | getting started with lists             |     2 | Amit     | Madhu (Pending)     | Nishanth (Done)     |
-| 3.2 LO: | getting started with =for=             |     2 | Anoop    |                     |                     |
+| 3.2 LO: | getting started with =for=             |     2 | Anoop    | Nishanth (Done)     |                     |
 | 3.3 LO: | getting started with strings           |     2 | Madhu    |                     |                     |
 | 3.4 LO: | getting started with files             |     3 | Punch    |                     |                     |
 | 3.5 LO: | parsing data                           |     3 | Nishanth | Amit (Done)         | Punch (Pending)     |
