@@ -1,3 +1,8 @@
+.. Author              : Nishanth
+   Internal Reviewer 1 : Puneeth
+   Internal Reviewer 2 : 
+   External Reviewer   :
+
 Hello friends and welcome to the tutorial on Least Square Fit
 
 {{{ Show the slide containing title }}}
@@ -17,31 +22,14 @@ It contains two columns of data. The first column is the length of the
 pendulum and the second is the corresponding time period of the pendulum.
 
 As we know, the square of time period of a pendulum is directly proportional to
-its length, we shall plot l vs t^2 and verify if the proportionality is linear.
+its length, we shall plot l vs t^2 and verify this. 
 
-If it is not linear, we shall generate a least square fit line.
+#[Puneeth:] removed the explanation about loadtxt and unpack
+ option. It's been done in another LO already. simple dependency 
+ should work?
 
-{{{ show the slide containing explanation on least square fit }}}
-
-As shown in the slide, we are first going to generate the two matrices tsq and
-A. Then we are going to use the =lstsq= function to find the values of m and c.
-
-To read the input file and parse the data, we are going to loadtxt function.
-Type
-::
-
-    data = loadtxt("/home/fossee/pendulum.txt")
-    data
-
-As you can see, data is a sequence containing 90 records. Each record contains
-two values. The first is length and second is time period. But what we need is 
-two sequences. One sequence containing all the length values and one containing
-all the time values.
-
-Hence we have to use the unpack option with loadtxt. It unpacks the data into
- sequences depending on the structure of data.
-
-Type
+To read the input file and parse the data, we are going to use the
+loadtxt function.  Type 
 ::
 
     l, t = loadtxt("/home/fossee/pendulum.txt", unpack=True)
@@ -57,10 +45,20 @@ Let us first plot l vs t^2. Type
     tsq = t * t
     plot(l, tsq, 'bo')
 
-
 {{{ switch to the plot window }}}
 
-We can see that there is a visible linear trend.
+#[Puneeth:] Moved explanation of least square fit here. seems more
+apt. 
+
+We can see that there is a visible linear trend, but we do not get a
+straight line connecting them. We shall, therefore, generate a least
+square fit line.
+
+{{{ show the slide containing explanation on least square fit }}}
+
+As shown in the slide, we are first going to generate the two matrices
+tsq and A. Then we are going to use the ``lstsq`` function to find the
+values of m and c.
 
 let us now generate the A matrix with l values.
 We shall first generate a 2 x 90 matrix with the first row as l values and the
@@ -70,20 +68,20 @@ second row as ones. Then take the transpose of it. Type
     inter_mat = array((l, ones_like(l)))
     inter_mat
 
-We see that we have intermediate matrix. Now we need the transpose.Type
+We see that we have intermediate matrix. Now we need the transpose. Type
 ::
 
     A = inter_mat.T
     A
 
-Now we have both the matrices A and tsq. We only need to use the =lstsq=
+Now we have both the matrices A and tsq. We only need to use the ``lstsq``
 Type
 ::
 
     result = lstsq(A, tsq)
 
-The result is a sequence of values. The first item is the matrix p or in simple
-words, the values of m and c. Hence, 
+The result is a sequence of values. The first item in this sequence,
+is the matrix p i.e., the values of m and c. Hence, 
 ::
 
     m, c = result[0]
@@ -120,9 +118,5 @@ we have learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you
  
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
-   External Reviewer   :
