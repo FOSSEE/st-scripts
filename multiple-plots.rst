@@ -6,8 +6,10 @@ Hello friends. Welcome to this spoken tutorial on Multiple plots.
 
 In this tutorial, we will learn how to draw more than one plot, how to
 add legends to each plot to indicate what each plot represents. We
-will also learn how to switch between the plots and creating multiple
+will also learn how to switch between the plots and create multiple
 plots with different regular axes which are also called as subplots.
+
+.. #[Nishanth]: See diff - edited a grammatical mistake
 
 {{{ Shift to terminal and start ipython -pylab }}}
 
@@ -25,6 +27,11 @@ the command called linspace::
 linspace command creates 10 points in the interval between 0 and 50
 both inclusive. We assign these values to a variable called x.
 
+.. #[Nishanth]: pre requisite for this LO is basic plotting which
+                covers linspace and plot. So you may not need to 
+                specify all that again. But not a problem if it is
+                there also.
+
 Now let us draw a plot simple sine plot using these points::
 
   plot(x, sin(x))
@@ -34,8 +41,10 @@ This should give us a nice sine plot.
 {{{ Switch to the plot window }}}
 
 Oh! wait! Is that a nice sine plot? Does a sine plot actually look
-like that? We know that a sine plot is a smooth curve is it not? What
+like that? We know that a sine plot is a smooth curve. Is it not? What
 really caused this?
+
+.. #[Nishanth]: See diff
 
 {{{ pause for a while }}}
 
@@ -43,6 +52,11 @@ A small investigation on linspace tells us that we chose too few
 points in a large interval between 0 and 50 for the curve to be
 smooth. So now let us use linspace again to get 500 points between 0
 and 100 and draw the sine plot
+
+.. #[Nishanth]: Here specify that when we do plot(x, sin(x) 
+                it is actually plotting two sets of points
+                and not analytical functions. Hence the sharp 
+                curve.
 
 {{{ Switch to ipython andtype }}} ::
 
@@ -78,6 +92,14 @@ command::
 Now we have two plots, a sine plot and a cosine plot one overlaid upon
 the other.
 
+.. #[Nishanth]: figure(1) and figure(2) give two different plots.
+                The remaining script moves on the fact that they 
+                give overlaid plots which is not the case.
+                So clear the figure and plot cos and sin without
+                introducing figure command. Then introduce legend
+                and finish off the everything on legend.
+                Then introduce figure command.
+
 {{{ Have both plot window and ipython side by side }}}
 
 The figure command takes an integer as an argument which is the serial
@@ -106,6 +128,9 @@ legend command does this for us
 {{{ Switch to ipython }}}::
 
   legend(['sin(x)', 'cos(x)'])
+
+.. #[Nishanth]: This legend may go up in the script. May be before 
+                introducing the figure command itself.
 
 The legend command takes a single list of parameters where each
 parameter is the text indicating the plots in the order of their
@@ -172,7 +197,14 @@ different regular axes. For the cosine plot x-axis varies from 0 to
 100 and y-axis varies from 0 to 1 where as for the parabolic plot the
 x-axis varies from 0 to 10 and y-axis varies from 0 to 100
 
+.. #[Nishanth]: stress on the similarity between subplot and figure commands
+
 {{{ Show summary slide }}}
+
+.. #[Nishanth]: Exercises are missing in the script
+                one exercise for overlaid plot and legend
+                one for figure command
+                one for subplot must do
 
 This brings us to the end of another session. In this tutorial session
 we learnt
@@ -184,6 +216,8 @@ we learnt
  * the legend command and
  * creating and switching between subplots
 
+.. #[Nishanth]: legend command can be told right after overlaid plots
+
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
@@ -193,6 +227,6 @@ Thankyou
  
 .. Author              : Madhu
    Internal Reviewer 1 :         [potential reviewer: Puneeth]
-   Internal Reviewer 2 :         [potential reviewer: Nishanth]
+   Internal Reviewer 2 : Nishanth
    External Reviewer   :
 
