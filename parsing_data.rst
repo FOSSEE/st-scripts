@@ -1,3 +1,8 @@
+.. Author              : Nishanth
+   Internal Reviewer 1 : 
+   Internal Reviewer 2 : 
+   External Reviewer   :
+
 Hello friends and welcome to the tutorial on Parsing Data
 
 {{{ Show the slide containing title }}}
@@ -6,15 +11,20 @@ Hello friends and welcome to the tutorial on Parsing Data
 
 In this tutorial, we shall learn
 
- * What is parsing data
+ * What we mean by parsing data
  * the string operations required for parsing data
  * datatype conversion
+
+#[Puneeth]: Changed a few things, here.  
+
+#[Puneeth]: I don't like the way the term "parsing data" has been used, all
+through the script. See if that can be changed.
 
  Lets us have a look at the problem
 
 {{{ Show the slide containing problem statement. }}}
 
-There is an input file containing huge no.of records. Each record corresponds
+There is an input file containing huge no. of records. Each record corresponds
 to a student.
 
 {{{ show the slide explaining record structure }}}
@@ -28,14 +38,21 @@ Our job is to calculate the mean of all the maths marks in the region "B".
 #[Nishanth]: Please note that I am not telling anything about AA since they do
              not know about any if/else yet.
 
+#[Puneeth]: Should we talk pass/fail etc? I think we should make the problem
+ simple and leave out all the columns after total marks. 
 
 Now what is parsing data.
 
-From the input file, we can see that there is data in the form of text. Hence
-parsing data is all about reading the data and converting it into a form which
-can be used for computations. In our case, that is numbers.
+From the input file, we can see that the data we have is in the form of
+text. Parsing this data is all about reading it and converting it into a form
+which can be used for computations -- in our case, sequence of numbers.
+
+#[Puneeth]: should the word tokenizing, be used? Should it be defined before
+ using it?
 
 We can clearly see that the problem involves reading files and tokenizing.
+
+#[Puneeth]: the sentence above seems kinda redundant. 
 
 Let us learn about tokenizing strings. Let us define a string first. Type
 ::
@@ -47,11 +64,11 @@ We are now going to split this string on whitespace.
 
     line.split()
 
-As you can see, we get a list of strings. Which means, when split is called
+As you can see, we get a list of strings. Which means, when ``split`` is called
 without any arguments, it splits on whitespace. In simple words, all the spaces
 are treated as one big space.
 
-split also can split on a string of our choice. This is acheived by passing
+``split`` also can split on a string of our choice. This is acheived by passing
 that as an argument. But first lets define a sample record from the file.
 ::
 
@@ -62,8 +79,8 @@ We can see that the string is split on ';' and we get each field seperately.
 We can also observe that an empty string appears in the list since there are
 two semi colons without anything in between.
 
-Hence split splits on whitespace if called without an argument and splits on
-the given argument if it is called with an argument.
+To recap, ``split`` splits on whitespace if called without an argument and
+splits on the given argument if it is called with an argument.
 
 {{{ Pause here and try out the following exercises }}}
 
@@ -75,13 +92,13 @@ the given argument if it is called with an argument.
 We see that when we split on space, multiple whitespaces are not clubbed as one
 and there is an empty string everytime there are two consecutive spaces.
 
-Now that we know splitting a string, we can split the record and retreive each
-field seperately. But there is one problem. The region code "B" and a "B"
+Now that we know how to split a string, we can split the record and retrieve
+each field seperately. But there is one problem. The region code "B" and a "B"
 surrounded by whitespace are treated as two different regions. We must find a
 way to remove all the whitespace around a string so that "B" and a "B" with
 white spaces are dealt as same.
 
-This is possible by using the =strip= method of strings. Let us define a
+This is possible by using the ``strip`` method of strings. Let us define a
 string by typing
 ::
 
@@ -110,10 +127,11 @@ white space. The only road block we now have is conversion of string to float.
 
 The splitting and stripping operations are done on a string and their result is
 also a string. hence the marks that we have are still strings and mathematical
-operations are not possible. We must convert them into integers or floats
+operations are not possible on them. We must convert them into numbers
+(integers or floats), before we can perform mathematical operations on them. 
 
-We shall look at converting strings into floats. We define an float string
-first. Type
+We shall look at converting strings into floats. We define a float string
+first. Type 
 ::
 
     mark_str = "1.25"
@@ -140,7 +158,7 @@ not possible. It involves an intermediate step of converting to float.
     number = int(flt)
     number
 
-Using =int= it is also possible to convert float into integers.
+Using ``int`` it is also possible to convert float into integers.
 
 Now that we have all the machinery required to parse the file, let us solve the
 problem. We first read the file line by line and parse each record. We see if
@@ -184,9 +202,5 @@ we have learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you
  
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
-   External Reviewer   :
