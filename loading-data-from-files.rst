@@ -6,28 +6,15 @@ Welcome to this tutorial on loading data from files.
 
 {{{ Screen shows welcome slide }}}
 
-Until now, all the plots we have made use analytic functions. We have
-been using analytic functions to generate a sequence of points and
-plotting them, against another sequence of points. But, this is not
-what we do most often. We often require to plot points obtained from
-experimental observations.
-
-.. #[punch: the initial part of the paragraph may be removed, to make
-    this a more generic LO?]
-
-.. #[Nishanth]: The paragraph can be removed.
-
-In this tutorial we shall learn to read data from files and save it
-into sequences that can later be used to plot.
+We often require to plot points obtained from experimental
+observations. In this tutorial we shall learn to read data from files
+and save it into sequences that can later be used to plot.
 
 {{{ Show the outline for this tutorial }}} 
 
 We shall use the ``loadtxt`` command to load data from files. We will
-be looking at how to get multiple columns of data into multiple
-sequences.
-
-.. #[Nishanth]: can be "How to read a file with multiple columns of
-                data and load each column of data into a sequence."
+be looking at how to read a file with multiple columns of data and
+load each column of data into a sequence. 
 
 {{{ switch back to the terminal }}}
 
@@ -38,16 +25,18 @@ As usual, let us start IPython, using
 
 Now, Let us begin with reading the file primes.txt, which contains
 just a list of primes listed in a column, using the loadtxt command.
-The file, in our case, is present in ``/home/fossee/primes.txt``.
+The file, in our case, is present in ``/home/fossee/primes.txt``. 
+
+{{{ Navigate to the path in the OS, open the file and show it }}}
 
 .. #[punch: do we need a slide for showing the path?]
 
-We use the ``cat`` command to see the contents of this file. 
+.. We use the ``cat`` command to see the contents of this file. 
 
-#[punch: should we show the cat command here? seems like a good place
-to do it] ::
+.. #[punch: should we show the cat command here? seems like a good place
+   to do it] ::
 
-  cat /home/fossee/primes.txt
+     cat /home/fossee/primes.txt
 
 .. #[Nishanth]: A problem for windows users.
                 Should we simply open the file and show them the data
@@ -118,7 +107,8 @@ Let us now, print the variables L and T, to see what they contain.
 
 Notice, that L and T now contain the first and second columns of data
 from the data file, ``pendulum.txt``, and they are both simple
-sequences.
+sequences. ``unpack=True`` has given us the two columns in to two
+separate sequences instead of one complex sequence. 
 
 {{{ show the slide with loadtxt --- other features }}}
 
@@ -135,13 +125,11 @@ finished, resume the video to look at the solution.
 {{{ switch back to the terminal }}}
 ::
 
-  L, T = loadtxt('/home/fossee/pendulum.txt', unpack=True, delimiter=';')
+  L, T = loadtxt('/home/fossee/pendulum_semicolon.txt', unpack=True, delimiter=';')
 
   print L
 
   print T
-
-.. #[Nishanth]: L, T = loadtxt('/home/fossee/pendulum_semicolon.txt', ...)
 
 This brings us to the end of this tutorial. 
 
@@ -155,5 +143,4 @@ You should now be able to do the following, comfortably.
     delimiters.
 
 Thank you!   
-
 
