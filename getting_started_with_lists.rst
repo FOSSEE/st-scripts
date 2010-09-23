@@ -6,7 +6,8 @@ lists.
  {{{ Show the slide containing the outline slide }}}
 
 In this tutorial we will be getting acquainted with a python data
-structure called lists.  We will learn :
+structure called lists.  We will learn ::
+ 
  * How to create lists
  * Structure of lists
  * Access list elements
