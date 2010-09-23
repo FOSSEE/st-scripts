@@ -114,7 +114,7 @@ We can obtain the two plots in different colors using the following
 commands::
 
   x = linspace(-5, 5, 100)
-  plot(x, 4 * (x ^ 2), 'b')
+  plot(x, 4 * (x * x), 'b')
   plot(x, (2 * x) + 3, 'g')
 
 Now we can use the legend command as::
@@ -146,8 +146,8 @@ command::
 
 {{{ Switch to plot window }}}
 
-Now we have two plots, a sine plot and a cosine plot one overlaid upon
-the other.
+Now we have two plots, a sine plot and a cosine plot in two different
+figures.
 
 .. #[Nishanth]: figure(1) and figure(2) give two different plots.
                 The remaining script moves on the fact that they 
@@ -217,9 +217,9 @@ figure and save them as follows::
   figure(2)
   annotate('x-intercept', xy=(0, 3))
   annotate('y-intercept', xy=(0, -1.5))
-  savefig('plot2.png')
+  savefig('/home/fossee/plot2.png')
   figure(1)
-  savefig('plot1.png')
+  savefig('/home/fossee/plot1.png')
 
 At times we run into situations where we want to compare two plots and
 in such cases we want to draw both the plots in the same plotting
@@ -241,7 +241,7 @@ rows of subplots that must be created,
 in this case we have 2 so it spilts the plotting area horizontally for
 two subplots. The second argument specifies the number of coloumns of
 subplots that must be created. We passed 1 as the argument so the
-plotting area won't be split horizontally and the last argument
+plotting area won't be split vertically and the last argument
 specifies what subplot must be created now in the order of the serial
 number. In this case we passed 1 as the argument, so the first subplot
 that is top half is created. If we execute the subplot command as
