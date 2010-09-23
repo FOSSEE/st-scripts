@@ -50,7 +50,7 @@ in lists. Thus lists can also contain other lists.  Example ::
 We access list elements using the number of index. The
 index begins from 0. So for list nonempty, nonempty[0] gives the
 first element, nonempty[1] the second element and so on and
-nonempty[3] the last element.::
+nonempty[3] the last element. ::
 
 	    nonempty[0] 
 	    nonempty[1] 
@@ -65,9 +65,6 @@ We can also access the elememts from the end using negative indices ::
 -1 gives the last element which is the 4th element , -2 second to last and -4 gives the fourth
 from last element which is first element.
 
-
-
-
 We can append elements to the end of a list using append command. ::
 
    nonempty.append('onemore') 
@@ -80,7 +77,7 @@ As we can see non empty appends 'onemore' and 6 at the end.
 
 
 Using len function we can check the number of elements in the list
-nonempty. In this case it being 6:
+nonempty. In this case it being 6 ::
 	 
 	 len(nonempty)
 
@@ -134,6 +131,6 @@ I hope you found this tutorial useful.
 Thank You
 
 
-Author : Amit Sethi 
-First Reviewer : 
-Second Reviewer : Nishanth
+ * Author : Amit Sethi 
+ * First Reviewer : 
+ * Second Reviewer : Nishanth
