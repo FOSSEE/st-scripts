@@ -18,6 +18,7 @@ Let us start ipython with pylab loaded, by typing on the terminal
     ipython -pylab
 
 .. #[madhu: I feel the instructions should precede the actual action,
+
 since while recording we need to know before hand what we need to do]
 
 We shall first make a simple plot and start decorating it.
@@ -296,6 +297,7 @@ we have looked at
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
 .. #[Nishanth]: Will add this line after all of us fix on one.
+
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
