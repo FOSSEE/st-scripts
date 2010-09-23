@@ -8,7 +8,7 @@
 | 1.7 LO: | additional features of IPython         |     2 | Nishanth | Amit (Pending)      | Madhu (Pending)     |
 | 1.8 LO: | module level assessment                |     3 | Madhu    |                     |                     |
 |---------+----------------------------------------+-------+----------+---------------------+---------------------|
-| 2.2 LO: | loading data from files                |     3 | Punch    |                     |                     |
+| 2.2 LO: | loading data from files                |     3 | Punch    | Nishanth (Done)     | Anoop (Pending)     |
 | 2.3 LO: | plotting the data                      |     3 | Amit     | Anoop (Pending)     | Punch (Pending)     |
 | 2.4 LO: | other types of plots                   |     3 | Anoop    |                     |                     |
 | 2.5 LO: | module level assessment                |     3 | Nishanth |                     |                     |
