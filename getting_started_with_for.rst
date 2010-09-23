@@ -18,8 +18,8 @@ Hello and welcome to the tutorial getting started with ``for`` loop.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial we will learn about ``for`` loops in python, and also cover
-the basics of indenting code in python.
+In this tutorial we will learn about ``for`` loops in python, and also
+learn how to write blocks of code in Python.
 
 .. #[Nishanth]: Instead of saying basics of indenting code,
                 say How to define code blocks in Python
@@ -27,11 +27,7 @@ the basics of indenting code in python.
 {{{ switch to next slide, about whitespaces }}}
 
 In Python whitespace is significant, and the blocks are visually
-separated rather than using braces or any other mechanisms for
-defining blocks. And by this method Python forces the programmers to
-stick on to one way of writing or beautifying the code rather than
-debating over where to place the braces. This way it produces uniform
-code than obscure or unreadable code.
+separated.
 
 .. #[nishanth]: Simply tell how blocks are defined in python.
                 The details like braces are not used and its
@@ -41,9 +37,7 @@ code than obscure or unreadable code.
 .. #[Amit]: Do you want to do that here. May be its better to talk about 
    this after some initiation into the idea of blocks. 
 
-A block may be defined by a suitable indentation level which can be
-either be a tab or few spaces. And the best practice is to indent the
-code using four spaces.
+The best practice is to indent the code using four spaces.
 
 .. #[Nishanth]: Even this detail may be skipped. Simply say use 4 spaces
                 for indentation. Do that while typing so that they can
@@ -53,15 +47,15 @@ Now let us move straight into ``for`` loop.
 
 {{{ switch to next slide, problem statement of exercise 1 }}}
 
-Write a for loop which iterates through a list of numbers and find the
-square root of each number. Also make a new list with the square roots
-and print it at the end.
 
-.. #[nishanth]: making new list with square roots induces extra complication
-                like appending which has no use case here
+Write a for loop which iterates through a list of numbers and find the
+square root of each number.
 ::
 
     numbers are 1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916
+
+.. #[nishanth]: making new list with square roots induces extra complication
+                like appending which has no use case here
 
 .. #[Nishanth]: The problem focuses more on square root and creation
                 of list. The problem must be simple and focusing on 
@@ -79,13 +73,9 @@ following.
 ::
 
     numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916]
-    square_roots = []
     for each in numbers:
-        sq_root = sqrt(each)
-        print "Square root of", each, "is", sq_root
-        square_roots.append(sq_root)
-    print 
-    print square_roots
+        print "Square root of", each, "is", sqrt(each)
+    print "This is not in for loop!"
 
 ..  numbers = [1, 12, 3, 4, 21, 17]
     for each in numbers:
@@ -110,14 +100,12 @@ Run the script as,
 
 {{{ run the script }}}
 
-So that was easy! We didn't have to find the length of the string nor
-address of each element of the list one by one. All what we did was
-iterate over the list element by element and then use the element for
-calculation. Note that here we used three variables. One the variable
-``numbers``, which is a list, another one ``each``, which is the
-element of list under consideration in each cycle of the ``for`` loop,
-and then a variable ``sq_root`` for storing the square root in each
-cycle of the ``for`` loop. The variable names can be chosen by you.
+So that was easy! All what we did was iterate over the list element by
+element and then use the element for calculation. Note that here we
+used two variables. One the variable ``numbers``, which is a list,
+another one ``each``, which is the element of list under consideration
+in each cycle of the ``for`` loop. The variable names can be chosen by
+you.
 
 .. #[Nishanth]: The details like we didn't have to find the length
                 are relevant for people who have programmed in C or
@@ -131,16 +119,16 @@ cycle of the ``for`` loop. The variable names can be chosen by you.
 
 {{{ show the script which was created }}}
 
-Note that three lines after ``for`` statement, are indented using four
+Note that the lines after ``for`` statement, is indented using four
 spaces.
 
-{{{ highlight the three lines after for statement }}}
+{{{ highlight the line after for statement }}}
 
-It means that those three lines are part of the for loop. And it is
-called a block of statements. And the seventh line or the immediate
-line after the third line in the ``for`` loop is not indented, 
+It means that line is part of the for loop. And it is a block of code,
+although it is only a single statement in the block. And the fourth
+line or the immediate line after the ``for`` block is not indented,
 
-{{{ highlight the seventh line - the line just after for loop }}}
+{{{ highlight the fourth line - the line just after for loop }}}
 
 it means that it is not part of the ``for`` loop and the lines after
 that doesn't fall in the scope of the ``for`` loop. Thus each block is
@@ -157,7 +145,7 @@ perfect squares and a list of those which are not. The numbers are,
     7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 7056, 576, 2916
 
 {{{ switch to next slide, problem statement of second problem in
-solved exercie}}}
+solved exercise}}}
 
 Now let us try a simple one, to print the square root of numbers in
 the list. And this time let us do it right in the IPython
@@ -174,15 +162,15 @@ So let us start with making a list. Type the following
 and now you will notice that, as soon as you press the return key
 after for statement, the prompt changes to four dots and the cursor is
 not right after the four dots but there are four spaces from the
-dots. The four dots tell you that you are inside a block. Now type the
-rest of the ``for`` loop,
+dots. Please note that IPython automatically indents the block. The
+four dots tell you that you are inside a block. Now type the rest of
+the ``for`` loop,
 
 .. #[Nishanth]: Tell that IPython does auto indentation.
 
 ::
 
-        sq_root = sqrt(each)
-        print "Square root of", each, "is", sq_root
+        print "Square root of", each, "is", sqrt(each)
 
 Now we have finished the statements in the block, and still the
 interpreter is showing four dots, which means you are still inside the
@@ -190,9 +178,8 @@ block. To exit from the block press return key or the enter key twice
 without entering anything else. It printed the square root of each
 number in the list, and that is executed in a ``for`` loop.
 
-Now, let us generate the multiplication table of 10 from one to
-ten. But this time let us try it in the vanilla version of Python
-interpreter.
+Now, let us find the cube of all the numbers from one to ten. But this
+time let us try it in the vanilla version of Python interpreter.
 
 Start the vanilla version of Python interpreter by issuing the command
 ``python`` in your terminal.
@@ -207,11 +194,12 @@ Start with,
 
 and press enter once, and we will see that this time it shows four
 dots, but the cursor is close to the dots, so we have to indent the
-block. So enter four spaces there and then type the following
+block. The vanilla version of Python interpreter does not indent the
+code automatically. So enter four spaces there and then type the
+following
 ::
     
-    
-        print "10 x",i,"=",i*10
+        print i, "cube is", i**3
 
 Now when we hit enter, we still see the four dots, to get out of the
 block, hit enter once again
@@ -231,8 +219,8 @@ interpreter and IPython interpreter to specify blocks. But while we
 were generating the multiplication table we used something new,
 ``range()`` function. ``range()`` is an inbuilt function in Python
 which can be used to generate a ``list`` of integers from a starting
-number to an ending number. Note that the ending number that you specify
-will not be included in the ``list``.
+number to an ending number. Note that the ending number that you
+specify will not be included in the ``list``.
 
 .. #[Nishanth]: Show some examples of range without the step argument
                 May be give an exercise with negative numbers as arguments
@@ -240,15 +228,14 @@ will not be included in the ``list``.
 Now, let us print all the odd numbers from 1 to 50. Let us do it in
 our IPython interpreter for ease of use.
 
-{{{ switch focus to ipython interpreter }}}
-
 {{{ switch to next slide, problem statement of the next problem in
 solved exercises }}}
 
-Print the list of odd numbers from 1 to 50. It will be better if
-you can try it out yourself.
+{{{ switch focus to ipython interpreter }}}
 
-It is a very trivial problem and can be solved as,
+The problem can be solved by just using the ``range()`` function.
+
+It can be solved as,
 ::
 
     print range(1,51,2)
