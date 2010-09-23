@@ -1,9 +1,3 @@
-.. #[Nishanth]: liststart is not a good name. there is no consistency.
-                Use underscores or hyphens instead of spaces and 
-                make the filename from LO name
-                Ex: getting_started_with_lists (or)
-                getting_started_lists
-
 Hello friends and welcome to the tutorial on getting started with
 lists.
 
@@ -18,13 +12,6 @@ structure called lists.  We will learn :
  * Access list elements
  * Append elements to lists
  * Deleting elements from lists
-
-.. #[Nishanth]: Did you compile this??
-                There must an empty before the bulleted list
-
-I hope you have ipython running on your system.
-
-.. #[Nishanth]: need not specify. Implicit that IPython is running
 
 List is a compound data type, it can contain data of other data
 types. List is also a sequence data type, all the elements are in
@@ -49,7 +36,7 @@ Thus the simplest way of creating a list is typing out a sequence
 of comma-separated values (items) between square brackets. 
 All the list items need not have the same data type.
 
-.. #[Nishanth]: do not use "You" or anything else. Stick to "We"
+
 
 As we can see lists can contain different kinds of data. In the
 previous example 'spam' and 'eggs' are strings and 100 and 1.234
@@ -74,43 +61,36 @@ We can also access the elememts from the end using negative indices ::
    nonempty[-2] 
    nonempty[-4]
 
--1 being the last element , -2 second to last and -4 being the first
-element.
+-1 gives the last element which is the 4th element , -2 second to last and -4 gives the fourth
+from last element which is first element.
 
-.. #[Nishanth]: -1 being last element sounds like -1 is the last element
-                Instead say -1 gives the last element which is 4
 
-.. #[Nishanth]: Instead of saying -4 being the first, say -4 gives 4th 
-                from the last which is the first element.
 
-* =append= elements 
+
 We can append elements to the end of a list using append command. ::
 
    nonempty.append('onemore') 
+   nonempty
    nonempty.append(6) 
    nonempty
    
 As we can see non empty appends 'onemore' and 6 at the end.
 
-.. #[Nishanth]: First show an example with only one append.
-                may be show the value of a after first append
-                then show what happens after second append 
+
 
 Using len function we can check the number of elements in the list
-nonempty. Because we just appended two elements at the end this
-returns us 6.::
+nonempty. In this case it being 6:
 	 
 	 len(nonempty)
 
-.. #[Nishanth]: the "because ..." can be removed. You can simply
-                say len gives the no.of elements which is 6 here
+
 
 Just like we can append elements to a list we can also remove them.
-There are two ways of doing. One is by using index. ::
+There are two ways of doing it. One is by using index. ::
 
       del(nonempty[1])
 
-.. #[Nishanth]: do not use "You" or anything else. Stick to We
+
 
 deletes the element at index 1, i.e the second element of the
 list, 'eggs'. The other way is removing element by content. Lets say
@@ -142,9 +122,7 @@ In this tutorial we came across a sequence data type called lists. ::
  * Delete Element from list.  
  * And Checking list length.
 
-.. #[Nishanth]: See the diff. I have corrected punctuation in many places.
-                The first thing you do before committing is compile the script.
-                I have corrected syntax errors also in many places.
+
 
 {{{ Sponsored by Fossee Slide }}}
 

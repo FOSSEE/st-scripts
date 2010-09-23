@@ -18,7 +18,7 @@ Hello and welcome to the tutorial getting started with ``for`` loop.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial we will see ``for`` loops in python, and also cover
+In this tutorial we will learn about ``for`` loops in python, and also cover
 the basics of indenting code in python.
 
 .. #[Nishanth]: Instead of saying basics of indenting code,
@@ -37,6 +37,9 @@ code than obscure or unreadable code.
                 The details like braces are not used and its
                 advantages like neat code can be told after completely
                 explaining the indentation
+
+.. #[Amit]: Do you want to do that here. May be its better to talk about 
+   this after some initiation into the idea of blocks. 
 
 A block may be defined by a suitable indentation level which can be
 either be a tab or few spaces. And the best practice is to indent the
@@ -264,11 +267,19 @@ Thus we come to the end of this tutorial. We learned about blocks in
 Python, indentation, blocks in IPython, for loop, iterating over a
 list and then the ``range()`` function.
 
+.. #[Amit]: There does seem to too much overhead of details. Should
+            the first example be done using script is it necessary. 
+	    Do add some things in evolutionary manner. Like introducing 
+	    range as a list and doing a very very simple for loop.Like
+	    iterating over [1,2,3] .Before getting into a problem.
+	    And club details about problem in one paragraph and syntactic details
+	    in other.
+
 {{{ switch to next slide, thank you slide }}}
 
 Thank you!
 
 ..  Author: Anoop Jacob Thomas <anoop@fossee.in>
     Reviewer 1: Nishanth
-    Reviewer 2:
+    Reviewer 2: Amit Sethi
     External reviewer:
