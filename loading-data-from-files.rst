@@ -12,8 +12,10 @@ plotting them, against another sequence of points. But, this is not
 what we do most often. We often require to plot points obtained from
 experimental observations.
 
-#[punch: the initial part of the paragraph may be removed, to make
-this a more generic LO?]
+.. #[punch: the initial part of the paragraph may be removed, to make
+    this a more generic LO?]
+
+.. #[Nishanth]: The paragraph can be removed.
 
 In this tutorial we shall learn to read data from files and save it
 into sequences that can later be used to plot.
@@ -23,6 +25,9 @@ into sequences that can later be used to plot.
 We shall use the ``loadtxt`` command to load data from files. We will
 be looking at how to get multiple columns of data into multiple
 sequences.
+
+.. #[Nishanth]: can be "How to read a file with multiple columns of
+                data and load each column of data into a sequence."
 
 {{{ switch back to the terminal }}}
 
@@ -35,7 +40,7 @@ Now, Let us begin with reading the file primes.txt, which contains
 just a list of primes listed in a column, using the loadtxt command.
 The file, in our case, is present in ``/home/fossee/primes.txt``.
 
-#[punch: do we need a slide for showing the path?]
+.. #[punch: do we need a slide for showing the path?]
 
 We use the ``cat`` command to see the contents of this file. 
 
@@ -43,6 +48,10 @@ We use the ``cat`` command to see the contents of this file.
 to do it] ::
 
   cat /home/fossee/primes.txt
+
+.. #[Nishanth]: A problem for windows users.
+                Should we simply open the file and show them the data
+                so that we can be fine with GNU/Linux ;) and windows?
 
 Now let us read this list into the variable ``primes``.
 ::
@@ -71,6 +80,12 @@ This is how we look at the contents of the file, ``pendulum.txt``
 
   cat /home/fossee/pendulum.txt
 
+.. #[Nishanth]: The first column is L values and second is T values
+                from a simle pelculum experiment.
+                Since you are using the variable names later in the
+                script.
+                Not necessary but can be included also.
+
 Let us, now, read the data into the variable ``pend``. Again, it is
 assumed that the file is in ``/home/fossee/``
 ::
@@ -90,11 +105,16 @@ two separate, simple sequences.
 
   L, T = loadtxt('/home/fossee/pendulum.txt', unpack=True)
 
+.. #[Nishanth]: It has a sequence of items in which each item contains
+                two values. first is l and second is t
+
 Let us now, print the variables L and T, to see what they contain.
 ::
 
   print L
   print T
+
+.. #[Nishanth]: Stress on ``unpack=True`` ??
 
 Notice, that L and T now contain the first and second columns of data
 from the data file, ``pendulum.txt``, and they are both simple
@@ -115,11 +135,13 @@ finished, resume the video to look at the solution.
 {{{ switch back to the terminal }}}
 ::
 
-  L, T = loadtxt('/home/fossee/pendulum.txt', unpack``True, delimiter``';')
+  L, T = loadtxt('/home/fossee/pendulum.txt', unpack=True, delimiter=';')
 
   print L
 
   print T
+
+.. #[Nishanth]: L, T = loadtxt('/home/fossee/pendulum_semicolon.txt', ...)
 
 This brings us to the end of this tutorial. 
 
