@@ -56,7 +56,7 @@ As we can see we have the same plot but now in red colour.
 
 .. #[Madhu: diff again]
 
-To alter the thickness of the line, we use the =linewidth= argument in the plot
+To alter the thickness of the line, we use the ``linewidth`` argument in the plot
 command. Hence
 ::
 
@@ -168,7 +168,7 @@ the figure does not have any description describing the plot.
 
 .. #[Madhu: Added "not". See the diff]
 
-We will now add a title to the plot by using the =title= command.
+We will now add a title to the plot by using the ``title`` command.
 ::
 
     title("Parabolic function -x^2+4x-5") 
@@ -176,7 +176,7 @@ We will now add a title to the plot by using the =title= command.
 {{{ Show the plot window and point to the title }}}
 
 The figure now has a title which describes what the plot is. The
-=title= command as you can see, takes a string as an argument and sets
+``title`` command as you can see, takes a string as an argument and sets
 the title accordingly.
 
 .. #[Madhu: See the diff]
@@ -225,8 +225,8 @@ and y axes. Hence we shall label x-axis to "x" and y-axis to "f(x)" ::
 
 {{{ Switch to plot window and show the xlabel }}}
 
-As you can see, =xlabel= command takes a string as an argument,
-similar to the =title= command and sets it as the label to x-axis.
+As you can see, ``xlabel`` command takes a string as an argument,
+similar to the ``title`` command and sets it as the label to x-axis.
 
 .. #[See the diff]
 
@@ -265,7 +265,7 @@ like to name the point accordingly. We can do this by using
 
 {{{ Show the annotation that has appeared on the plot }}}
 
-As you can see, the first argument to =annotate= command is the name we would
+As you can see, the first argument to ``annotate`` command is the name we would
 like to mark the point as and the second argument is the co-ordinates of the
 point at which the name should appear. It is a sequence containing two numbers.
 The first is x co-ordinate and second is y co-ordinate.
