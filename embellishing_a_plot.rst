@@ -17,7 +17,7 @@ Let us start ipython with pylab loaded, by typing on the terminal
 
     ipython -pylab
 
-#[madhu: I feel the instructions should precede the actual action,
+.. #[madhu: I feel the instructions should precede the actual action,
 since while recording we need to know before hand what we need to do]
 
 We shall first make a simple plot and start decorating it.
@@ -90,7 +90,7 @@ A combination of colour and linewidth would do the job for us. Hence
 
 produces the required plot
 
-#[Nishanth]: I could not think of a SIMPLE recipe approach for
+.. #[Nishanth]: I could not think of a SIMPLE recipe approach for
              introducing linestyle. Hence the naive approach.
 
 .. #[[Anoop: I guess the recipe is fine, but would be better if you
@@ -194,7 +194,7 @@ for instance, we can use
 
 and we get the polynomial formatted properly.
 
-#[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
+.. #[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
              string in LaTex style is not good
 
 .. #[[Anoop: I guess you can go ahead with the LaTex thing, it's
@@ -295,7 +295,7 @@ we have looked at
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
+.. #[Nishanth]: Will add this line after all of us fix on one.
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
