@@ -10,6 +10,7 @@ will also learn how to switch between the plots and create multiple
 plots with different regular axes which are also called as subplots.
 
 .. #[Nishanth]: See diff - edited a grammatical mistake
+.. #[Madhu: Done]
 
 {{{ Shift to terminal and start ipython -pylab }}}
 
@@ -31,6 +32,8 @@ both inclusive. We assign these values to a variable called x.
                 covers linspace and plot. So you may not need to 
                 specify all that again. But not a problem if it is
                 there also.
+.. #[Madhu: Since I thought the LOs are disconnected, I thought it is
+     better to give a very short intro to it]
 
 Now let us draw a plot simple sine plot using these points::
 
@@ -45,18 +48,23 @@ like that? We know that a sine plot is a smooth curve. Is it not? What
 really caused this?
 
 .. #[Nishanth]: See diff
+.. #[Madhu: Done]
 
 {{{ pause for a while }}}
 
 A small investigation on linspace tells us that we chose too few
 points in a large interval between 0 and 50 for the curve to be
-smooth. So now let us use linspace again to get 500 points between 0
-and 100 and draw the sine plot
+smooth. This should also indicate that the plot command actually plots
+the set of points given by x and sin(x) and it doesn't plot the
+analytical function itself i.e. it plots the points given by
+Analytical functions. So now let us use linspace again to get 500
+points between 0 and 100 and draw the sine plot
 
 .. #[Nishanth]: Here specify that when we do plot(x, sin(x) 
                 it is actually plotting two sets of points
                 and not analytical functions. Hence the sharp 
                 curve.
+.. #[Madhu: Incorporated]
 
 {{{ Switch to ipython andtype }}} ::
 
@@ -69,10 +77,59 @@ Now we see what we remember as a sine plot. A smooth curve. If we
 carefully notice we also have two plots now one overlaid upon
 another. In pylab, by default all the plots are overlaid.
 
-We now know how to draw multiple plots but we would like to have more
-control over it. Like switch between them, perform some operations or
-labelling on them individually and so on. Let us see how to accomplish
-this. Before we move on, let us clear our screen.
+Since we have two plots now overlaid upon each other we would like to
+have a way to indicate what each plot represents to distinguish
+between them. This is accomplished using legends. Equivalently, the
+legend command does this for us
+
+{{{ Switch to ipython }}}::
+
+  legend(['sin(x)', 'cos(x)'])
+
+.. #[Nishanth]: This legend may go up in the script. May be before 
+                introducing the figure command itself.
+.. #[Madhu: brought up]
+
+The legend command takes a single list of parameters where each
+parameter is the text indicating the plots in the order of their
+serial number.
+
+{{{ Switch to plot window }}}
+
+Now we can see the legends being displayed for the respective sine and
+cosine plots on the plot area.
+
+We have learnt quite a lot of things now, so let us take up an
+exercise problem.
+
+%% 1 %% Draw two plots overlaid upon each other, with the first plot
+   being a parabola of the form y = 4(x ^ 2) and the second being a
+   straight line of the form y = 2x + 3 in the interval -5 to 5. Use
+   colors to differentiate between the plots and use legends to
+   indicate what each plot is doing.
+
+{{{ pause for a while and continue from paused state }}}
+
+We can obtain the two plots in different colors using the following
+commands::
+
+  x = linspace(-5, 5, 100)
+  plot(x, 4 * (x ^ 2), 'b')
+  plot(x, (2 * x) + 3, 'g')
+
+Now we can use the legend command as::
+
+  legend(['Parabola', 'Straight Line'])
+
+Or we can also just give the equations of the plot::
+
+  legend(['y = 4(x ^ 2)', 'y = 2x + 3'])
+
+We now know how to draw multiple plots and use legends to indicate
+which plot represents what function, but we would like to have more
+control over the plots we draw. Like switch between them, perform some
+operations or labelling on them individually and so on. Let us see how
+to accomplish this. Before we move on, let us clear our screen.
 
 {{{ Switch to ipython }}}::
 
@@ -100,6 +157,11 @@ the other.
                 and finish off the everything on legend.
                 Then introduce figure command.
 
+.. #[Madhu: I have just moved up the text about legend command. I
+     think that should take care of what you suggested. If there is
+     some mistake with it, Punch please let me know in your next
+     review.]
+
 {{{ Have both plot window and ipython side by side }}}
 
 The figure command takes an integer as an argument which is the serial
@@ -120,26 +182,44 @@ can, for example, save each plot separately
 We also titled the our first plot as 'sin(y)' which we did not do for
 the second plot.
 
-Since we have two plots now overlaid upon each other we would like to
-have a way to indicate what each plot represents to distinguish
-between them. This is accomplished using legends. Equivalently, the
-legend command does this for us
+Let us attempt another exercise problem
 
-{{{ Switch to ipython }}}::
+%% 2 %% Draw a line of the form y = x as one figure and another line
+   of the form y = 2x + 3. Switch back to the first figure, annotate
+   the x and y intercepts. Now switch to the second figure and
+   annotate its x and y intercepts. Save each of them.
 
-  legend(['sin(x)', 'cos(x)'])
+{{{ Pause for a while and continue from the paused state }}}
 
-.. #[Nishanth]: This legend may go up in the script. May be before 
-                introducing the figure command itself.
+To solve this problem we should first create the first figure using
+the figure command. Before that, let us first run clf command to make
+sure all the previous plots are cleared::
 
-The legend command takes a single list of parameters where each
-parameter is the text indicating the plots in the order of their
-serial number.
+  clf()
+  figure(1)
+  x = linspace(-5, 5, 100)
+  plot(x, x)
 
-{{{ Switch to plot window }}}
+Now we can use figure command to create second plotting area and plot
+the figure::
 
-Now we can see the legends being displayed for the respective sine and
-cosine plots on the plot area.
+  figure(2)
+  plot(x, ((2 * x) + 3))
+
+Now to switch between the figures we can use figure command. So let us
+switch to figure 1. We are asked to annotate x and y intercepts of the
+figure 1 but since figure 1 passes through origin we will have to
+annotate the origin. We will annotate the intercepts for the second
+figure and save them as follows::
+
+  figure(1)
+  annotate('Origin', xy=(0.0, 0.0)
+  figure(2)
+  annotate('x-intercept', xy=(0, 3))
+  annotate('y-intercept', xy=(0, -1.5))
+  savefig('plot2.png')
+  figure(1)
+  savefig('plot1.png')
 
 At times we run into situations where we want to compare two plots and
 in such cases we want to draw both the plots in the same plotting
@@ -197,7 +277,56 @@ different regular axes. For the cosine plot x-axis varies from 0 to
 100 and y-axis varies from 0 to 1 where as for the parabolic plot the
 x-axis varies from 0 to 10 and y-axis varies from 0 to 100
 
-.. #[Nishanth]: stress on the similarity between subplot and figure commands
+.. #[Nishanth]: stress on the similarity between subplot and figure
+     commands
+
+.. #[Madhu: I think they are not really similar. Trying to bring in
+     the similarity will confuse people I think.]
+
+%% 3 %% We know that the Pressure, Volume and Temperatures are held by
+the equation PV = nRT where nR is a constant. Let us assume nR = .01
+Joules/Kelvin and T = 200K. V can be in the range from 21cc to
+100cc. Draw two different plots as subplots, one being the Pressure
+versus Volume plot and the other being Pressure versus Temparature
+plot.
+
+{{{ Pause for a while and continue }}}
+
+To start with, we have been given the range of Volume using which we
+can define the variable V::
+
+  V = linspace(21, 100, 500)
+
+Now we can create first subplot and draw Pressure versus Volume graph
+using this V. We know that nRT is a constant which is equal to 2.0
+since nR = 0.01 Joules/Kelvin and T = 200 Kelvin::
+
+  subplot(2, 1, 1)
+  plot(V, 2.0/V)
+
+Now we can create the second subplot and draw the Pressure versus
+Temparature plot as follows::
+
+  subplot(2, 1, 2)
+  plot(200, 2.0/V)
+
+Unfortunately we have an error now, telling x and y dimensions don't
+match. This is because our V contains a set of values as returned by
+linspace and hence 2.0/V which is the pressure also contains a set of
+values. But the first argument to the plot command is a single
+value. So to plot this data we need to create as many points as there
+are in Pressure or Volume data for Temperature too, all having the
+same value. This can be accomplished using::
+
+  T = linspace(200, 200, 500)
+
+We now have 500 values in T each with the value 200 Kelvin. Plotting
+this data we get the required plot::
+
+  plot(T, 2.0/V)
+
+It is left as a homework to label both X and Y axes for each of the
+two subplots. 
 
 {{{ Show summary slide }}}
 
@@ -211,12 +340,13 @@ we learnt
 
  * How to draw multiple plots which are overlaid
  * the figure command
+ * the legend command
  * how to switch between the plots and perform some operations on each
-   of them like saving the plots
- * the legend command and
+   of them like saving the plots and
  * creating and switching between subplots
 
 .. #[Nishanth]: legend command can be told right after overlaid plots
+.. #[Madhu: Incorporated]
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
