@@ -15,7 +15,6 @@
 
 ..   1. getting started with ipython
 ..   #. getting started with functions
-..   #. getting started with functions
      
 .. Author              : Puneeth 
    Internal Reviewer   : 
