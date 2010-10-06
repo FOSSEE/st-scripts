@@ -1,7 +1,15 @@
 .. Objectives
 .. ----------
-
-.. Clearly state the objectives of the LO (along with RBT level)
+   
+   By the end of this tutorial, you will be able to:
+   
+     1. Access and change individual elements of arrays, both one
+     dimensional and multi-dimensional.
+     2. Access and change rows and columns of arrays. 
+     3. Access and change other chunks from an array, using slicing
+     and striding. 
+     4. Read images into arrays and perform processing on them, using
+     simple array manipulations. 
 
 .. Prerequisites
 .. -------------
@@ -17,7 +25,6 @@
 
 Script
 ------
-
 
 {{{ Screen shows welcome slide }}}
 
