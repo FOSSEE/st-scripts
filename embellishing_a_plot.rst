@@ -1,3 +1,10 @@
+.. Author              : Nishanth
+   Internal Reviewer 1 : Anoop
+   Internal Reviewer 2 : Madhu
+   External Reviewer   :
+
+.. Prerequisites: using ``plot`` command
+
 Hello friends and welcome to the tutorial on Embellishing Plots.
 
 {{{ Show the slide containing title }}}
@@ -7,7 +14,7 @@ Hello friends and welcome to the tutorial on Embellishing Plots.
 In this tutorial, we shall look at how to modify the colour, thickness and 
 linestyle of the plot. We shall then learn how to add title to the plot and 
 then look at adding labels to x and y axes. we shall also look at adding 
-annotations to the plot.
+annotations to the plot and setting the limits of axes.
 
 Let us start ipython with pylab loaded, by typing on the terminal
 
@@ -284,6 +291,49 @@ The first is x co-ordinate and second is y co-ordinate.
 
 As we can see, every annotate command makes a new annotation on the figure.
 
+Now we have everything we need to decorate a plot. but the plot would be
+incomplete if we can not set the limits of axes. This is possible using the
+button on the plot window.
+
+we shall look at how to get and set them from the script.
+::
+
+    xlim()
+    ylim()
+
+We see that ``xlim`` function returns the current x axis limits and ylim
+function returns the current y-axis limits.
+
+Let us look at how to set the limits.
+::
+
+    xlim(-4, 5)
+
+We see the limits of x-axis are now set to -4 and 5.
+Similarly
+::
+
+    ylim(-15, 2)
+
+sets the limits of y-axis appropriately.
+
+{{{ Pause here and try out the following exercises }}}
+
+%% 7 %% Set the limits of axes such that the area of interest is the rectangle
+        (-1, -15) and (3, 0)
+
+{{{ continue from paused state }}}
+
+As we can see, the lower upper limits of x-axis in the question are -1 and 3.
+The limits of y-axis are -15 and 0.
+
+::
+
+    xlim(-1, 3)
+    ylim(-15, 0)
+
+Gives us the required rectangle.
+
 {{{ Show summary slide }}}
 
 we have looked at 
@@ -293,6 +343,7 @@ we have looked at
  * How to incorporate LaTex style formatting
  * How to label x and y axes
  * How to add annotations
+ * How to set the limits of axes
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
@@ -302,8 +353,94 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thankyou
- 
-.. Author              : Nishanth
-   Internal Reviewer 1 : Anoop
-   Internal Reviewer 2 : Madhu
-   External Reviewer   :
+
+Questions
+=========
+
+ 1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4
+
+    Answer::
+
+    x = linspace(-2*pi, 2*pi)
+    plot(x, cos(x), linewidth=4)
+
+ 2. Draw a plot of the polynomial x^2-5x+6 in the range 0 to 5 in blue dotted
+    line
+
+    Answer::
+
+    x = linspace(-2*pi, 2*pi)
+    plot(x, x**2 - 5*x + 6, 'r.')
+
+ 3. Which marker is used to get circles
+
+    a. '.'
+    #. '^'
+    #. 'o'
+    #. '--'
+
+ 4. What does the '^' marker produce
+
+    Answer: Triangle up marker
+
+ 5. How do you set the title as x^2-5x+6 in LaTex style formatting
+
+    Answer: title("$x^2-5x+6$")
+
+6. What happens when the following code is executed::
+
+    xlabel("First label")
+    xlabel("Second label")
+
+   Answer: The label of x-axis is set to "Second label"
+
+ 7. Read thorugh the documentation and find out is there a way to modify the
+    alignment of text in the command ``ylabel``
+
+   a. Yes
+   #. No
+
+   Answer: No
+
+ 8. How to add the annotation "Maxima" at the point (1, 2)
+
+   Answer: annotate("Maxima", xy=(1, 2))
+
+ 9. Is the command ``annotate("max", (1, 2))`` same as ``annotate("max",
+    xy=(1, 2)``
+
+    a. True
+    b. False
+
+    Answer: True
+
+ 10. When a new annotation is made at a point, what happens to the old one
+
+    a. It is replaced
+    b. It is overwritten
+    c. The new annotation is combined with old one
+
+    Answer: It is overwritten
+
+ 11. What happens when xlim is used without arguments
+
+    Answer: It gives the current limits of x-axis
+
+ 12. What happens when ``ylim(0, 5)`` is used
+
+    Answer: It sets the lower and upper limits of y-axis to 0 and 5
+
+ 13. Draw a cosine plot from 0 to 2*pi with green dots. annotate the origin as
+     "origin" and set x and y labels to "x" and cos(x) and x limits to 0 and
+     2pi and y limits to -1.2 and 1.2
+
+    Answer::
+
+      x = linspace(0, 2*pi)
+      plot(x, cos(x), 'g.')
+      annotate("origin", (0, 0))
+      xlabel("$x$")
+      ylabel("$cos(x)$")
+      xlim(0, 2*pi)
+      ylim(-1.2, 1.2)
+
