@@ -1,22 +1,21 @@
 .. Objectives
 .. ----------
    
-   By the end of this tutorial, you will be able to:
+   .. By the end of this tutorial, you will be able to:
    
-     1. Access and change individual elements of arrays, both one
-     dimensional and multi-dimensional.
-     2. Access and change rows and columns of arrays. 
-     3. Access and change other chunks from an array, using slicing
-     and striding. 
-     4. Read images into arrays and perform processing on them, using
-     simple array manipulations. 
+   ..   1. Access and change individual elements of arrays, both one
+   ..   dimensional and multi-dimensional.
+   ..   2. Access and change rows and columns of arrays. 
+   ..   3. Access and change other chunks from an array, using slicing
+   ..   and striding. 
+   ..   4. Read images into arrays and perform processing on them, using
+   ..   simple array manipulations. 
 
 .. Prerequisites
 .. -------------
 
-..   1. Name of LO-1
-..   2. Name of LO-2
-..   3. Name of LO-3
+..   1. getting started with arrays
+
      
 .. Author              : Puneeth
    Internal Reviewer   : 
