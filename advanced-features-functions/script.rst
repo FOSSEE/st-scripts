@@ -1,17 +1,41 @@
-========
- Script
-========
+.. Objectives
+.. ----------
 
-{{{ show the welcome slide }}}
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Assign default values to arguments, when defining functions
+.. 2. Define and call functions with keyword arguments. 
+.. 3. Also, you will get a glimpse of the plethora of functions
+.. available, in Python standard library and the scientific computing
+.. libraries. 
+
+
+.. Prerequisites
+.. -------------
+
+..   1. getting started with ipython
+..   #. getting started with functions
+..   #. getting started with functions
+     
+.. Author              : Puneeth 
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
+{{{ Show the slide containing title }}}
 
 Welcome to the tutorial on advanced feature of functions. 
 
-{{{ show the outline slide }}}
+{{{ Show the outline slide }}}
 
 In this tutorial we shall be looking at specifying default arguments
 to functions when defining them and calling functions using keyword
 arguments. We shall also, look at some of the built-in functions
-available in the standard library of Python.
+available in the standard library of Python and the scientific
+computing libraries. 
 
 {{{ switch to terminal }}}
 
@@ -46,7 +70,7 @@ being 0. 0 is the default value of the argument.
   linspace(0, 2*pi, 100) # returns 100 points between 0 and 2pi
   linspace(0, 2*pi) # returns 50 points between 0 and 2pi
 
-#[punch: all above content goes on to a slide]
+.. #[punch: all above content goes on to a slide]
 
 {{{ switch back to ipython }}}
 
@@ -76,10 +100,13 @@ Now let us call the function with just one argument "Hello".
 "Hello" is treated as the ``greet`` and we get "Hello World" as
 the output. "World" is the default value for the argument ``name``. 
 
-E%% %% Pause the video here and redefine the function ``welcome``, by
-interchanging it's arguments. Place the ``name`` argument with it's
-default value of "Hello" before the ``greet`` argument. Then, resume
-the video. 
+Following is an (are) exercise(s) that you must do. 
+
+%%1%% Redefine the function ``welcome``, by interchanging it's
+arguments. Place the ``name`` argument with it's default value of
+"Hello" before the ``greet`` argument.
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
@@ -90,17 +117,24 @@ We get an error that reads ``SyntaxError: non-default argument follows
 default argument``. When defining a function all the argument with
 default values should come at the end. 
 
-E%% %% Pause the video here and type ``linspace?`` to see the
-definition of the command and notice how all the arguments with
-default values are towards the end.
+Following is an exercise that you must do. 
+
+%%2%% See the definition of linspace using ``?`` and observe how all
+the arguments with default values are towards the end.
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
   linspace?
 
-E%% %% Pause the video here and redefine the function ``welcome`` with
-a default value of "Hello" to the ``greet`` argument. Then, call the
-function without any arguments. Then, resume the video. 
+Following is an exercise that you must do. 
+
+%%3%% Redefine the function ``welcome`` with a default value of
+"Hello" to the ``greet`` argument. Then, call the function without any
+arguments. 
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
@@ -175,8 +209,8 @@ with it.
 
   Math functions - abs, sin, ....
 
-#[punch: Need to decide, exactly what to put here. Reviewer comments
- welcome.] 
+.. #[punch: Need to decide, exactly what to put here. Reviewer comments
+..  welcome.] 
   
 
 {{{ switch to slide showing classes of functions in pylab, scipy }}}
@@ -192,7 +226,7 @@ purposes.
   scipy (modules)
     fftpack, stats, linalg, ndimage, signal, optimize, integrate
 
-{{{ switch slide to summary slide }}}
+{{{ Show summary slide }}}
 
 That brings us to the end of this tutorial. In this tutorial we have
 learnt how to use functions with default values and keyword
@@ -200,4 +234,9 @@ arguments. We also looked at the range of functions available in the
 Python standard library and the Scientific Computing related
 packages. 
 
-Thank You!
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thank you!
