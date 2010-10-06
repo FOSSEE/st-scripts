@@ -1,3 +1,14 @@
+.. Author              : Nishanth
+   Internal Reviewer 1 : 
+   Internal Reviewer 2 : 
+   External Reviewer   :
+
+.. Prerequisites: Embellinshing plots
+
+Script
+======
+
+
 Hello friends and welcome to the tutorial on Additional Features of IPython
 
 {{{ Show the slide containing title }}}
@@ -165,6 +176,14 @@ name is not found in script, search for it in the interpreter. Hence all these
 sin, plot, pi and show which are not available in script, are taken from the
 interpreter and used to run the script.
 
+{{{ Pause here and try out the following exercises }}}
+
+%% 4 %% Run the script without using the -i option. Do you find any difference?
+
+{{{ continue from paused state }}}
+
+We see that it raises nameerror saying the name linspace is not found.
+
 {{{ Show summary slide }}}
 
 This brings us to the end of the tutorial.
@@ -183,7 +202,121 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 Hope you have enjoyed and found it useful.
 Thankyou
  
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
-   External Reviewer   :
+Questions
+=========
+
+ 1. How do you retrieve the recent 5 commands
+
+    a. ``%hist``
+    #. ``%hist -5``
+    #. ``%hist 5``
+    #. ``%hist 5-10``
+
+    Answer: ``%hist 5``
+    
+ 2. If there were 20 commands typed and ``%hist`` is used. How many commands 
+    will be displayed.
+
+    a. 10
+    #. 20
+    #. 21
+    #. 19
+
+    Answer: 21
+
+ 3. is ``%hist`` considered as a command
+
+    a. True
+    #. False
+
+    Answer: True
+
+ 4. how do you retreive the commands from 20 to 50 (inclusive of 20 and 50)
+
+    a. ``%hist 20 50``
+    #. ``%hist 19 50``
+    #. ``%hist 19 51``
+    #. ``%hist 21 50``
+
+    Answer: ``%hist 20 50``
+
+ 5. What does the ``%hist 2 5 7`` command do
+
+    a. lists the second, fifth and seventh commands
+    #. lists the commands from 2 to 5 and the seventh command
+    #. raises an error
+    #. lists the commands 2 to 7
+
+    Answer: raises an error
+
+ 6. How many commands are displayed when lot of coomands were typed and 
+    ``%hist`` is used.
+
+    a. 20
+    #. 10
+    #. 50
+    #. 40
+
+    Answer: 40
+
+ 7. How do you save the lines 2 3 4 5 7 9 10 11
+
+    a. ``%save filepath 2-5 7 9-11``
+    #. ``%save filepath 2-11``
+    #. ``%save filepath``
+    #. ``%save 2-5 7 9 10 11``
+
+    Answer: ``%save filepath 2-5 7 9-11``
+
+ 8. You are working in /home/user. Where is the file saved when you do
+    ``%save hello.py 1-3`` 
+
+    a. /home/user/hello.py
+    #. /hello.py
+    #. /home/hello.py
+    #. /home/user/ipython/hello.py
+
+    Answer: /home/user/hello.py
+
+ 9. Which lines are saved by the command ``%save filepath 2-5 7 1`` and in
+    which order
+
+    a. 2 3 4 5 7 1
+    #. 1 2 3 4 5 6 7
+    #. 2 5 7 1
+    #. 1 2 5 7
+
+ 10. What happens when ``%save filepath line_numbers`` is used and a file
+     already exists in that path.
+
+    a. It is overwritten
+    #. The commands are added to the file
+    #. It raises an error
+    #. A prompt to confirm overwriting is displayed 
+
+    Answer: A prompt to confirm overwriting is displayed 
+
+ 11. Read through the documentation of ``%hist`` and find its alternative name
+
+    Answer: ``%history``
+
+ 12. Are ``%run /home/user/saved.py`` and ``%run /home/user/saved`` the same
+
+   a. Yes
+   #. No
+
+   Answer: Yes
+
+ 13. The file hello.py contains only one command ``x = x + 1``. What happens
+     when you do ``%run hello.py``
+
+    Answer: Raises a nameerror
+
+  14. The file hello.py contains only one command ``x = x + 1``. If value of x
+      is 5 and what does ``%run -i hello.py`` do.
+
+    a. raises an error
+    #. increments value of x by 1
+    #. Does nothing
+    
+    Answer: increments the value of x by 1
