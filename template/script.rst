@@ -22,7 +22,7 @@ Script
 
 Hello Friends. Welcome to the tutorial on so-and-so (topic of the tutorial)
 
-{{{ Show the slide containing the outline slide }}}
+{{{ Show the outline slide }}}
 
  ...
 
