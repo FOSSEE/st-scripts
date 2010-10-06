@@ -34,7 +34,7 @@ Following is an (are) exercise(s) that you must do.
 
 %% %% yet another exercise
 
-Please, pause the video here. Do the exercises and then continue. 
+Please, pause the video here. Do the exercise(s) and then continue. 
 
 {{{ Show summary slide }}}
 
