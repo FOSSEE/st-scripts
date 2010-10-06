@@ -1,14 +1,33 @@
-========
- Script
-========
+.. Objectives
+.. ----------
 
-Welcome to so and so..
+.. Clearly state the objectives of the LO (along with RBT level)
 
+.. Prerequisites
+.. -------------
+
+..   1. Name of LO-1
+..   2. Name of LO-2
+..   3. Name of LO-3
+     
+.. Author              : Puneeth 
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+
+Script
+------
+
+{{{ Show the slide containing title }}}
+
+Hello Friends and Welcome to the tutorial on getting started with
+``ipython``. 
+
+{{{ Show slide with outline of the session. }}}
 
 This tutorial will cover the basic usage of the ``ipython``
 interpreter. The following topics would be covered.
-
-{{{ Show slide with outline of the session. }}}
 
 IPython is an enhanced Python interpreter that provides features like
 tabcompletion, easier access to help and many other functionalities
@@ -106,8 +125,11 @@ We get 19, as expected, in both the cases.
 Does it work for decimals (or floats)?  Let's try typing abs(-10.5)
 and we do get back 10.5.
 
-%% %% Pause the video here, and look-up the documentation of ``round``
-and see how to use it. 
+Following is an (are) exercise(s) that you must do. 
+
+%%1%% Look-up the documentation of ``round`` and see how to use it.
+
+Please, pause the video here. Do the exercises and then continue. 
 
 ::
 
@@ -150,10 +172,13 @@ complex expression and end up with the continuation prompt, we can
 type Ctrl-C to interrupt the command and get back the ``ipython`` input
 prompt.
 
-%% %% Pause the video here. 
-Try typing round(2.484, and hit enter. and then cancel the command
-using Ctrl-C. Then, type the command, round(2.484, 2) and resume the
-video. 
+Following is an exercise that you must do. 
+
+%%2%% Try typing round(2.484, and hit enter. and then cancel the
+command using Ctrl-C. Then, type the command, round(2.484, 2) and
+resume the video.
+
+Please, pause the video here. Do the exercises and then continue. 
 
 ::
   
@@ -165,10 +190,14 @@ video.
 This brings us to the end of the tutorial on getting started with
 ``ipython``.
 
-In this tutorial we have seen 
+In this tutorial we have learnt
 {{{ show the outline/summary slide. }}}
 
+
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
 Thank you!
-
-
 

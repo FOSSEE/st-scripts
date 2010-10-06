@@ -1,6 +1,22 @@
-========
- Script
-========
+.. Objectives
+.. ----------
+
+.. Clearly state the objectives of the LO (along with RBT level)
+
+.. Prerequisites
+.. -------------
+
+..   1. Name of LO-1
+..   2. Name of LO-2
+..   3. Name of LO-3
+     
+.. Author              : Puneeth
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 
 {{{ Screen shows welcome slide }}}
@@ -106,8 +122,11 @@ column by
   
   C[:, 2]
 
-%%1%% Pause the video here and change the last column of C to
-zeroes and then resume the video.
+Following is an exercise that you must do. 
+
+%%1%% Change the last column of C to zeroes. 
+
+Please, pause the video here. Do the exercises and then continue. 
 
 ::
   
@@ -121,8 +140,11 @@ sense. It has just one row and
 
 gives the whole of A. 
 
-%%2%% Pause the video here and change ``A`` to ``[11, 12, 13, 14, 15]``
-and then resume the video. 
+Following is an exercise that you must do. 
+
+%%2%% Change ``A`` to ``[11, 12, 13, 14, 15]``. 
+
+Please, pause the video here. Do the exercises and then continue. 
 
 To change A, we say
 ::
@@ -153,7 +175,9 @@ We can see the contents of the image, using the command
 
   imshow(I) 
 
-to see what has been read into ``I``.
+to see what has been read into ``I``. We do not see white and black
+because, ``pylab`` has mapped white and black to different
+colors. This can be changed by using a different colormap. 
 
 To see that ``I`` is really, just an array, we say, 
 ::
@@ -198,10 +222,14 @@ columns indexed 0 to 2 (included), we say,
 
   C[2, 0:3]
 
-E%% %% Pause the video here, and first, obtain the elements [22,
-23] from C. Then, obtain the elements [11, 21, 31, 41] from
-C. Finally, obtain the elements [21, 31, 41, 0]. Then, resume the
-video.
+Following is an exercise that you must do. 
+
+%%3%% First, obtain the elements [22, 23] from C. Then, obtain the
+elements [11, 21, 31, 41] from C. Finally, obtain the elements [21,
+31, 41, 0]. 
+
+Please, pause the video here. Do the exercises and then continue. 
+
 ::
 
   C[1, 1:3] 
@@ -234,8 +262,12 @@ and
 gives the elements [21, 31, 41, 0]. If we skip both the indexes,
 we get the slice from end to end, as we already know. 
 
-E%% %% Pause the video here. Obtain the elements [[23, 24], [33,
--34]] and then resume the video. 
+Following is an exercise that you must do. 
+
+%%4%% Obtain the elements [[23, 24], [33, -34]] from C. 
+
+Please, pause the video here. Do the exercises and then continue. 
+
 ::
 
   C[1:3, 2:4] 
@@ -258,8 +290,13 @@ form of an image and confirm.
 
   imshow(I[:150, :150])
 
-E%% %% Pause the video here, and obtain the square in the center
+Following is an exercise that you must do. 
+
+%%5%% Pause the video here, and obtain the square in the center
 of the image. 
+
+Following is an exercise that you must do. 
+
 ::
 
   imshow(I[75:225, 75:225])
@@ -293,10 +330,14 @@ of 1 is assumed.
 
 gives the elements, [[21, 23, 0], [41, 43, 0]]
 
-E%% %% Pause the video here, and obtain the following. 
+Following is an exercise that you must do. 
+
+%%6%% Obtain the following. 
 [[12, 0], [42, 0]]
 [[12, 13, 14], [0, 0, 0]]
-Then, resume the video. 
+
+Please, pause the video here. Do the exercises and then continue. 
+
 ::
 
   C[::3, 1::3]
