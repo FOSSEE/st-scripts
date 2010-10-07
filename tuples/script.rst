@@ -1,3 +1,25 @@
+.. Objectives
+.. ----------
+
+.. A - Students and teachers from Science and engineering backgrounds
+   B - Will learn what are tuples and why they are needed
+       Will learn the various methods of accessing elements in tuples
+   C - 
+   D - 
+
+.. Prerequisites
+.. -------------
+
+..   1. Getting started with lists
+     
+.. Author              : Nishanth Amuluru
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
 Hello friends and welcome to the tutorial on Tuples
 
 {{{ Show the slide containing title }}}
@@ -143,64 +165,4 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thankyou
- 
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
-   External Reviewer   :
-
-Questions
-=========
-
- 1. Define a tuple containing two values. The first being integer 4 and second
-    is a float 2.5
-
-   Answer: (4, 2.5)
-
- 2. If ``a = (5, "Hello", 3.2)``. what is the value of a[2]
-
-   Answer: 3.2
-
- 3. If ``a = 5,`` then what is the type of a
-
-   a. int
-   #. float
-   #. tuple
-   #. string
-
-   Answer: tuple
-
- 4. if ``a = (2, 3)``. What does ``a[0], a[1] = (3, 4)`` produce
-
-   Answer: Error
-
- 5. If ``a = ([2, 3], 4, 5)``. What is the value of ``a`` after doing
-    ``a[0].append(6)``
-
-    a. ([2, 3, 6], 4, 5)
-    #. Raises an error
-    #. ([2, 3], 4, 5)
-    #. [2, 3, 4, 5, 6]
-
-    Answer: ([2, 3, 6], 4, 5)
-
- 6. What does the following code produce::
-
-      a = 5
-      b = "Hello"
-      a, b = b, a
-      print a
-      print b
-
-    Answer: Hello
-            5
-
- 7. ``a = ("hello", "world", 5, 6, 8)``. What is the value of a[1:4]
-
-    Answer: ("world", 5, 6)
-
- 8. ``a = (1, 2, 3, 4, 5, 6, 7, 8)``. What is the value of a[1::3]
-
-    Answer: (2, 5, 8)
-
 
