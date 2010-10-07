@@ -1,3 +1,25 @@
+.. Objectives
+.. ----------
+
+.. A - Students and teachers from Science and engineering backgrounds
+   B - Will learn what are tuples and why they are needed
+       Will learn the various methods of accessing elements in tuples
+   C - 
+   D - 
+
+.. Prerequisites
+.. -------------
+
+..   1. Getting started with lists
+     
+.. Author              : Nishanth Amuluru
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
 Hello friends and welcome to the tutorial on Sets
 
 {{{ Show the slide containing title }}}
@@ -142,99 +164,4 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thankyou
- 
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
-   External Reviewer   :
 
-
-Questions
-=========
-
- 1. If ``a = [1, 1, 2, 3, 3, 5, 5, 8]``. What is set(a)
-
-   a. set([1, 1, 2, 3, 3, 5, 5, 8])
-   #. set([1, 2, 3, 5, 8])
-   #. set([1, 2, 3, 3, 5, 5])
-   #. Error
-
-   Answer: set([1, 2, 3, 5, 8])
-
- 2. ``a = set([1, 3, 5])``. How do you find the length of a?
-
-   Answer: len(a)
-
- 3. ``a = set([1, 3, 5])``. What does a[2] produce?
-
-   a. 1
-   #. 3
-   #. 5
-   #. Error
-
-   Answer: Error
-
- 4. ``odd = set([1, 3, 5, 7, 9])`` and ``squares = set([1, 4, 9, 16])``. What
-    is the value of ``odd | squares``?
-
-   Answer: set([1, 3, 4, 5, 7, 9, 16])
-
- 5. ``odd = set([1, 3, 5, 7, 9])`` and ``squares = set([1, 4, 9, 16])``. What
-    is the value of ``odd - squares``?
-
-   Answer: set([3, 5, 7])
-
- 6. ``odd = set([1, 3, 5, 7, 9])`` and ``squares = set([1, 4, 9, 16])``. What
-    is the value of ``odd ^ squares``?
-
-   Answer: set([3, 4, 5, 7, 16])
-
- 7. ``odd = set([1, 3, 5, 7, 9])`` and ``squares = set([1, 4, 9, 16])``. What
-    does ``odd * squares`` give?
-
-   a. set([1, 12, 45, 112, 9])
-   #. set([1, 3, 4, 5, 7, 9, 16])
-   #. set([])
-   #. Error
-
-   Answer: Error
-
- 8. ``a = set([1, 2, 3, 4])`` and ``b = set([5, 6, 7, 8])``. What is ``a + b``
-
-   a. set([1, 2, 3, 4, 5, 6, 7, 8])
-   #. set([6, 8, 10, 12])
-   #. set([5, 12, 21, 32])
-   #. Error
-
- 9. ``a`` is a set. how do you check if if a varaible ``b`` exists in ``a``?
-
-   Answer: b in a
-
- 10. ``a`` and ``b`` are two sets. What is ``a ^ b == (a - b) | (b - a)``?
-
-   a. True
-   #. False
-
-   Answer: False
-
-
-Problems
-========
-
- 1. Given that mat_marks is a list of maths marks of a class. Find out the
-    no.of duplicates marks in the list.
-
-   Answer::
-
-     unique_marks = set(mat_marks)
-     no_of_duplicates = len(mat_marks) - len(unique_marks)
-
- 2. Given that mat_marks is a list of maths marks of a class. Find how many
-    duplicates of each mark exist.
-
-   Answer::
-
-     marks_set = set(mat_marks)
-     for mark in marks_set:
-         occurences = mat_marks.count(mark)
-         print occurences - 1, "duplicates of", mark, "exist"
