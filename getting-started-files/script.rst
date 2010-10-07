@@ -1,10 +1,30 @@
-========
- Script
-========
+.. Objectives
+.. ----------
 
-Welcome to the tutorial on getting started with files. 
+.. By the end of this tutorial, you will be able to 
+.. 1. Open and read the contents of a file. 
+.. #. Read files line by line. 
+.. #. Read all the contents of the file at once. 
+.. #. Close open files. 
 
-{{{ Screen shows welcome slide }}}
+.. Prerequisites
+.. -------------
+
+.. 1. getting started with ipython
+.. #. getting started with lists
+.. #. getting started with for
+     
+.. Author              : Puneeth
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
+{{{ Show the slide containing title }}}
+
+Hello Friends. Welcome to the tutorial on getting started with files. 
 
 {{{ Show the outline for this tutorial }}} 
 
@@ -54,24 +74,29 @@ to see more explicitly, what it contains.
 
   pend
 
-%%1%% Pause the video here and split the variable into a list,
-``pend_list``, of the lines in the file and then resume the
-video. Hint, use the tab command to see what methods the string
-variable has. 
+Following is an (are) exercise(s) that you must do. 
 
-#[punch: should this even be put? add dependency to strings LO,
-where we mention that strings have methods for manipulation. hint:
-use splitlines()]
+%%1%% Split the variable into a list, ``pend_list``, of the lines in
+the file. Hint, use the tab command to see what methods the string
+variable has.
+
+Please, pause the video here. Do the exercise and then continue. 
+
+.. #[punch: should this even be put? add dependency to strings LO,
+.. where we mention that strings have methods for manipulation. hint:
+.. use splitlines()]
+
 ::
 
   pend_list = pend.splitlines()
 
   pend_list
 
-Now, let us learn to read the file line-by-line. But, before that
-we will have to close the file, since the file has already been
-read till the end. 
-#[punch: should we mention file-pointer?]
+Now, let us learn to read the file line-by-line. But, before that we
+will have to close the file, since the file has already been read till
+the end.
+
+.. #[punch: should we mention file-pointer?]
 
 Let us close the file opened into f.
 ::
@@ -89,8 +114,11 @@ opened, after their job is done.
 
 Let us, now move on to reading files line-by-line. 
 
-%%1%% Pause the video here and re-open the file ``pendulum.txt``
-with ``f`` as the file object, and then resume the video.
+Following is an exercise that you must do. 
+
+%%2%% Re-open the file ``pendulum.txt`` with ``f`` as the file object.
+
+Please, pause the video here. Do the exercise and then continue. 
 
 We just use the up arrow until we reach the open command and issue
 it again. 
@@ -143,5 +171,11 @@ have learnt to open and close files, read the data in the files as
 a whole, using the read command or reading it line by line by
 iterating over the file object. 
 
-Thank you!   
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thank you!
+
 
