@@ -1,7 +1,24 @@
-.. Author              : Nishanth
-   Internal Reviewer 1 : Puneeth
-   Internal Reviewer 2 : 
+.. Objectives
+.. ----------
+
+.. A - Students and teachers from Science and engineering backgrounds
+   B - 
+   C - 
+   D - 
+
+.. Prerequisites
+.. -------------
+
+..   1. Basic Plotting
+     2. Arrays
+     
+.. Author              : Nishanth Amuluru
+   Internal Reviewer   : 
    External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 Hello friends and welcome to the tutorial on Least Square Fit
 
@@ -119,21 +136,4 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 Hope you have enjoyed and found it useful.
 Thank you
 
-Questions
-=========
 
- 1. What does ones_like([1, 2, 3]) produce
-
-   a. array([1, 1, 1])
-   #. [1, 1, 1]
-   #. [1.0, 1.0, 1.0]
-   #. Error
-   
- 2. What does ones_like([1.2, 3, 4, 5]) produce
-
-   a. [1.2, 3, 4, 5]
-   #. array([1.0, 1.0, 1.0, 1.0])
-   #. array([1, 1, 1, 1])
-   #. array([1.2, 3, 4, 5])
-
- 3. What is the shape of the 
