@@ -1,9 +1,23 @@
-.. Author              : Nishanth
-   Internal Reviewer 1 : Anoop
-   Internal Reviewer 2 : Madhu
-   External Reviewer   :
+.. Objectives
+.. ----------
 
-.. Prerequisites: using ``plot`` command
+.. A - Students and teachers from Science and engineering backgrounds
+   B - 
+   C - 
+   D - 
+
+.. Prerequisites
+.. -------------
+
+..   1. Using the ``plot`` command interactively
+     
+.. Author              : Nishanth Amuluru
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 Hello friends and welcome to the tutorial on Embellishing Plots.
 
@@ -354,93 +368,4 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 Hope you have enjoyed and found it useful.
 Thankyou
 
-Questions
-=========
-
- 1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4
-
-    Answer::
-
-    x = linspace(-2*pi, 2*pi)
-    plot(x, cos(x), linewidth=4)
-
- 2. Draw a plot of the polynomial x^2-5x+6 in the range 0 to 5 in blue dotted
-    line
-
-    Answer::
-
-    x = linspace(-2*pi, 2*pi)
-    plot(x, x**2 - 5*x + 6, 'r.')
-
- 3. Which marker is used to get circles
-
-    a. '.'
-    #. '^'
-    #. 'o'
-    #. '--'
-
- 4. What does the '^' marker produce
-
-    Answer: Triangle up marker
-
- 5. How do you set the title as x^2-5x+6 in LaTex style formatting
-
-    Answer: title("$x^2-5x+6$")
-
-6. What happens when the following code is executed::
-
-    xlabel("First label")
-    xlabel("Second label")
-
-   Answer: The label of x-axis is set to "Second label"
-
- 7. Read thorugh the documentation and find out is there a way to modify the
-    alignment of text in the command ``ylabel``
-
-   a. Yes
-   #. No
-
-   Answer: No
-
- 8. How to add the annotation "Maxima" at the point (1, 2)
-
-   Answer: annotate("Maxima", xy=(1, 2))
-
- 9. Is the command ``annotate("max", (1, 2))`` same as ``annotate("max",
-    xy=(1, 2)``
-
-    a. True
-    b. False
-
-    Answer: True
-
- 10. When a new annotation is made at a point, what happens to the old one
-
-    a. It is replaced
-    b. It is overwritten
-    c. The new annotation is combined with old one
-
-    Answer: It is overwritten
-
- 11. What happens when xlim is used without arguments
-
-    Answer: It gives the current limits of x-axis
-
- 12. What happens when ``ylim(0, 5)`` is used
-
-    Answer: It sets the lower and upper limits of y-axis to 0 and 5
-
- 13. Draw a cosine plot from 0 to 2*pi with green dots. annotate the origin as
-     "origin" and set x and y labels to "x" and cos(x) and x limits to 0 and
-     2pi and y limits to -1.2 and 1.2
-
-    Answer::
-
-      x = linspace(0, 2*pi)
-      plot(x, cos(x), 'g.')
-      annotate("origin", (0, 0))
-      xlabel("$x$")
-      ylabel("$cos(x)$")
-      xlim(0, 2*pi)
-      ylim(-1.2, 1.2)
 
