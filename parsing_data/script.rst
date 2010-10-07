@@ -1,7 +1,23 @@
-.. Author              : Nishanth
-   Internal Reviewer 1 : 
-   Internal Reviewer 2 : 
+.. Objectives
+.. ----------
+
+.. A - Students and teachers from Science and engineering backgrounds
+   B - 
+   C - 
+   D - 
+
+.. Prerequisites
+.. -------------
+
+..   1. Getting started with lists
+     
+.. Author              : Nishanth Amuluru
+   Internal Reviewer   : 
    External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 Hello friends and welcome to the tutorial on Parsing Data
 
@@ -204,84 +220,4 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 Hope you have enjoyed and found it useful.
 Thank you
  
-Questions
-=========
-
- 1. How do you split the string "Guido;Rossum;Python" to get the words
-
-   Answer: line.split(';')
-
- 2. line.split() and line.split(' ') are same
-
-   a. True
-   #. False
-
-   Answer: False
-
- 3. What is the output of the following code::
-
-      line = "Hello;;;World;;"
-      sub_strs = line.split()
-      print len(sub_strs)
-
-    Answer: 5
-
- 4. What is the output of "      Hello    World    ".strip()
-
-   a. "Hello World"
-   #. "Hello     World"
-   #. "      Hello World"
-   #. "Hello World     "
-   
-   Answer: "Hello    World"
-
- 5. What does "It is a cold night".strip("It") produce
-    Hint: Read the documentation of strip
-
-   a. "is a cold night"
-   #. " is a cold nigh" 
-   #. "It is a cold nigh"
-   #. "is a cold nigh"
-
-   Answer: " is a cold nigh"
-
- 6. What does int("20") produce
-
-   a. "20"
-   #. 20.0
-   #. 20
-   #. Error
-
-   Answer: 20
-
- 7. What does int("20.0") produce
-
-   a. 20
-   #. 20.0
-   #. Error
-   #. "20"
-
-   Answer: Error
-
- 8. What is the value of float(3/2)
-
-   a. 1.0
-   #. 1.5
-   #. 1
-   #. Error
-
-   Answer: 1.0
-
- 9. what doess float("3/2") produce
-
-   a. 1.0
-   #. 1.5
-   #. 1
-   #. Error
-
-   Answer: Error
-   
- 10. See if there is a function available in pylab to calculate the mean
-     Hint: Use tab completion
-
 
