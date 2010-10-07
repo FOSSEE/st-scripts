@@ -180,3 +180,109 @@ Thankyou
    Internal Reviewer 1 : 
    Internal Reviewer 2 : 
    External Reviewer   :
+
+Questions
+=========
+
+ 1. ``a = 2.5``. What is the output of ``print "a is %d"%(a)``
+
+   a. a is 2.5
+   #. a is 2.0
+   #. 2.0
+   #. a is 2
+
+   Answer: a is 2
+
+ 2. What does ``print "This is",     "a line ", "with  spaces"`` print?
+
+   a. This is a line with spaces
+   #. This is a line with  spaces
+   #. This is     a line   with   spaces
+   #. This is a line  with  spaces
+
+   Answer: This is a line  with  spaces
+
+ 3. What does ``print "%2.5f"%(1.2)`` print?
+
+   a. 1.2
+   #. 1.20
+   #. 1.20000
+   #. 00001.2
+
+   Answer: 1.20000
+
+ 4. What is the output of the following code::
+
+     for i in range(1,10,2):
+         print i,
+
+    Answer::
+
+      1 3 5 7 9
+
+ 5. ``a = 2`` and ``b = 4.5``. What does ``print "a is %d and b is %2.1f"%(b, a)``
+    print?
+
+   a. a is 2 and b is 4.5
+   #. a is 4 and b is 2
+   #. a is 4 and b is 2.0
+   #. a is 4.5 and b is 2
+
+   Answer: a is 4 and b is 2.0
+
+ 6. What is the prompt displayed by ``raw_input("Say something\nType here:")``
+
+   Answer::
+
+     Say something 
+     Type here:
+
+ 6. What is the prompt displayed by ``raw_input("value of a is %d\nInput b
+    value:"a)`` and ``a = 2.5``
+
+   Answer::
+
+     value of a is 2
+     Input ba value:
+
+ 7. ``a = raw_input()`` and user enters ``2.5``. What is the type of a?
+
+   a. str
+   #. int
+   #. float
+   #. char
+
+   Answer: str
+
+ 8. ``a = int(raw_input())`` and user enters ``4.5``. What happens?
+
+   a. a = 4.5
+   #. a = 4
+   #. a = 4.0
+   #. Error
+
+   Answer: Error
+
+ 9. ``a = raw_input()`` and user enters ``"this is a string"``. What does 
+    ``print a`` produce?
+
+   a. 'this is a string'
+   b. 'this is a string"
+   c. "this is a string"
+   #. this is a string
+
+   Answer: "this is a string"
+
+Problems
+========
+
+ 1. Answer to universe and everything. Keep taking input from user and print it
+    back until the input is 42.
+
+  Answer::
+
+    ip = raw_input()
+    while ip != "42":
+        print ip
+
+ 2. 
