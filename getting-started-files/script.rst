@@ -53,7 +53,8 @@ see what it is.
   f
 
 The file object shows, the file which is open and the mode (read
-or write) in which it is open. 
+or write) in which it is open. Notice that it is open in read only
+mode, here. 
 
 We shall first learn to read the whole file into a single
 variable. Later, we shall look at reading it line-by-line. We use
@@ -74,7 +75,7 @@ to see more explicitly, what it contains.
 
   pend
 
-Following is an (are) exercise(s) that you must do. 
+Following is an exercise that you must do. 
 
 %%1%% Split the variable into a list, ``pend_list``, of the lines in
 the file. Hint, use the tab command to see what methods the string
@@ -151,8 +152,10 @@ file object ``f`` and directly open the file within the for
 statement. This will save us the trouble of closing the file, each
 time we open it. 
 
-for line in open('/home/fossee/pendulum.txt'):
-line_list.append(line)
+::
+
+  for line in open('/home/fossee/pendulum.txt'):
+      line_list.append(line)
 
 Let us see what ``line_list`` contains. 
 ::
