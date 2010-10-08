@@ -7,13 +7,14 @@
 .. #. Reverse strings
 .. #. Replace characters in strings. 
 .. #. Convert to strings to upper or lower case
+.. #. joining a list of strings
 
 .. Prerequisites
 .. -------------
 
 ..   1. getting started with strings
 ..   #. getting started with lists
-..   #.
+..   #. basic datatypes
      
 .. Author              : Puneeth 
    Internal Reviewer   : 
@@ -31,9 +32,9 @@ Hello Friends. Welcome to this tutorial on manipulating strings.
 
 In this tutorial we shall learn to manipulate strings, specifically
 slicing and reversing them, or replacing characters, converting from
-upper to lower case and vice-versa 
+upper to lower case and vice-versa and joining a list of strings.
 
-#[punch: reversed returns an iterator. should we still teach it?]
+.. #[punch: reversed returns an iterator. should we still teach it?]
 
 We have an ``ipython`` shell open, in which we are going to work,
 through out this session. 
@@ -199,13 +200,43 @@ Please, pause the video here. Do the exercise and then continue.
    email = email.replace("[dot]", ".")        
    print email
 
+Now, let's look at another interesting problem where we have a list of
+e-mail addresses and we wish to obtain one long string of e-mail
+addresses separated by commas or semi-colons. 
+
+::
+
+  email_list = ["info@fossee.in", "enquiries@fossee.in",  "help@fossee.in"]
+
+
+Now, if we wish to obtain one long string, separating each of the
+email id by a comma, we use the join operator on ``,``. 
+
+::
+
+  email_str = ", ".join(email_list)
+  print email_str
+
+Notice that the email ids are joined by a comma followed by a space. 
+
+Following is an exercise that you must do. 
+
+%%3%% From the email_str that we generated, change the separator to be
+a semicolon instead of a comma. 
+
+Please, pause the video here. Do the exercise and then continue. 
+
+::
+
+  email_str = email_str.replace(",", ";")
 
 That brings us to the end of the tutorial. 
 
 {{{ show summary slide }}}
 
 In this tutorial, we have learnt how to get substrings, reverse
-strings and a few useful methods, namely upper, lower and replace. 
+strings and a few useful methods, namely upper, lower, replace and
+join. 
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
