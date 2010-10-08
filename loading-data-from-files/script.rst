@@ -89,10 +89,10 @@ in the second.
 
 .. Please, pause the video here. Do the exercise and then continue. 
 
-This is how we look at the contents of the file, ``pendulum.txt``
-::
+.. This is how we look at the contents of the file, ``pendulum.txt``
+.. ::
 
-  cat /home/fossee/pendulum.txt
+..   cat /home/fossee/pendulum.txt
 
 .. #[Nishanth]: The first column is L values and second is T values
                 from a simle pelculum experiment.
