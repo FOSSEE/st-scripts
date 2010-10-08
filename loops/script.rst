@@ -1,14 +1,20 @@
 .. Objectives
 .. ----------
 
-.. Clearly state the objectives of the LO (along with RBT level)
+.. By the end of this tutorial, you will be able to
+
+.. 1. use the ``for`` loop 
+.. #. use the ``while`` loop
+.. #. Use ``break``, ``continue`` and ``pass`` statements to play around
+..    with loops.
 
 .. Prerequisites
 .. -------------
 
-..   1. Name of LO-1
-..   2. Name of LO-2
-..   3. Name of LO-3
+.. 1. getting started with ipython
+.. #. getting started with for
+.. #. conditionals
+
      
 .. Author              : 
    Internal Reviewer   : 
