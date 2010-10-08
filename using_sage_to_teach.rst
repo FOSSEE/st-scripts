@@ -11,6 +11,14 @@ In this tutorial, we shall learn
  * How to use SAGE worksheets for collaborative learning
  * How to use typesetting in sage for neater outputs
 
+2D
+ * plot
+ * parametric_plot
+ * polygon
+ * line
+3D
+ * plot3d
+ * parametric_plot3d
 {{{ Pause here and try out the following exercises }}}
 
 %% 2 %% change the label on y-axis to "y" and save the lines of code
