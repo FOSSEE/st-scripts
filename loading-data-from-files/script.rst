@@ -81,7 +81,8 @@ about them, later.
 Now, let us use the ``loadtxt`` command to read a file that contains
 two columns of data, ``pendulum.txt``. This file contains the length
 of the pendulum in the first column and the corresponding time period
-in the second.
+in the second. Note that ``loadtxt`` needs both the columns to have
+equal number of rows. 
 
 .. Following is an exercise that you must do. 
 
@@ -139,9 +140,8 @@ separate sequences instead of one complex sequence.
 
 In this tutorial, we have learnt the basic use of the ``loadtxt``
 command, which is capable of doing a lot more than we have used it for
-until now, for example
-
-Following is an exercise that you must do. 
+until now. Let us look at an example, but before that do this
+exercise. 
 
 %%1%% Read the file ``pendulum_semicolon.txt`` which contains the same
 data as ``pendulum.txt``, but the columns are separated by semi-colons
