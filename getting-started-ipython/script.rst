@@ -1,14 +1,19 @@
 .. Objectives
 .. ----------
 
-.. Clearly state the objectives of the LO (along with RBT level)
+.. At the end of this tutorial, you will be able to 
+
+.. 1. invoke the ``ipython`` interpreter. 
+.. #. quit the ``ipython`` interpreter. 
+.. #. navigate in the history of ``ipython``. 
+.. #. use tab-completion. 
+.. #. look-up documentation of functions. 
+.. #. interrupt incomplete or incorrect commands.
 
 .. Prerequisites
 .. -------------
 
-..   1. Name of LO-1
-..   2. Name of LO-2
-..   3. Name of LO-3
+.. should have ``ipython`` and ``pylab`` installed. 
      
 .. Author              : Puneeth 
    Internal Reviewer   : 
@@ -24,14 +29,14 @@ Script
 Hello Friends and Welcome to the tutorial on getting started with
 ``ipython``. 
 
-{{{ Show slide with outline of the session. }}}
+{{{ Show slide with outline }}}
 
 This tutorial will cover the basic usage of the ``ipython``
 interpreter. The following topics would be covered.
 
 IPython is an enhanced Python interpreter that provides features like
-tabcompletion, easier access to help and many other functionalities
-which are not available in the vannila Python interpreter.
+tabcompletion, easier access to help and lot of other functionality
+which are not available in the vanilla Python interpreter.
 
 First let us see how to invoke the ``ipython`` interpreter.
 
@@ -98,8 +103,12 @@ Now, we remove all the characters and just type ``r`` and then hit
 tab. IPython does not complete the command since there are many
 possibilities. It just lists out all the possible completions.
 
-%% %% Pause the video here and type ``ab`` and hit tab to see what
-happens. Next, jut type ``a`` and hit tab to see what happens. 
+Following is an exercise that you must do. 
+
+%%1%% Type ``ab`` and hit tab to see what happens. Next, jut type
+``a`` and hit tab to see what happens.
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ``ab`` tab completes to ``abs`` and ``a<tab>`` gives us a list of all
 the commands starting with a. 
@@ -125,11 +134,11 @@ We get 19, as expected, in both the cases.
 Does it work for decimals (or floats)?  Let's try typing abs(-10.5)
 and we do get back 10.5.
 
-Following is an (are) exercise(s) that you must do. 
+Following is an exercise that you must do. 
 
-%%1%% Look-up the documentation of ``round`` and see how to use it.
+%%2%% Look-up the documentation of ``round`` and see how to use it.
 
-Please, pause the video here. Do the exercises and then continue. 
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
@@ -142,16 +151,19 @@ documentation.
 
 The function ``round``, rounds a number to a given precision.
 
-%% %% Pause the video here and check the output of
-round(2.48)
-round(2.48, 1)
-round(2.48, 2)
-and then resume the video. 
+Following are exercises that you must do. 
 
-::
+%%3%% Check the output of::
+
+  round(2.48)
+  round(2.48, 1)
+  round(2.48, 2)
+
   round(2.484)
   round(2.484, 1)
   round(2.484, 2)
+
+Please, pause the video here. Do the exercises and then continue. 
 
 We get 2.0, 2.5 and 2.48, which are what we expect. 
 
@@ -174,7 +186,7 @@ prompt.
 
 Following is an exercise that you must do. 
 
-%%2%% Try typing round(2.484, and hit enter. and then cancel the
+%%4%% Try typing round(2.484, and hit enter. and then cancel the
 command using Ctrl-C. Then, type the command, round(2.484, 2) and
 resume the video.
 
@@ -192,7 +204,6 @@ This brings us to the end of the tutorial on getting started with
 
 In this tutorial we have learnt
 {{{ show the outline/summary slide. }}}
-
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 

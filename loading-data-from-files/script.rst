@@ -1,8 +1,30 @@
-========
- Script
-========
+.. Objectives
+.. ----------
 
-Welcome to this tutorial on loading data from files. 
+.. At the end of this tutorial, you will be able to
+
+.. + Read data from files, containing a single column of data using the
+..   ``loadtxt`` command.
+.. + Read multiple columns of data, separated by spaces or other
+..   delimiters.
+
+
+.. Prerequisites
+.. -------------
+
+.. 1. getting started with ``ipython``
+     
+.. Author              : 
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
+{{{ Show the slide containing title }}}
+
+Hello Friends. Welcome to this tutorial on loading data from files.
 
 {{{ Screen shows welcome slide }}}
 
@@ -59,15 +81,19 @@ about them, later.
 Now, let us use the ``loadtxt`` command to read a file that contains
 two columns of data, ``pendulum.txt``. This file contains the length
 of the pendulum in the first column and the corresponding time period
-in the second.
+in the second. Note that ``loadtxt`` needs both the columns to have
+equal number of rows. 
 
-%%1%% Pause the video here, and use the ``cat`` command to view the
-contents of this file and then resume the video.
+.. Following is an exercise that you must do. 
 
-This is how we look at the contents of the file, ``pendulum.txt``
-::
+.. %%1%% Use the ``cat`` command to view the contents of this file.
 
-  cat /home/fossee/pendulum.txt
+.. Please, pause the video here. Do the exercise and then continue. 
+
+.. This is how we look at the contents of the file, ``pendulum.txt``
+.. ::
+
+..   cat /home/fossee/pendulum.txt
 
 .. #[Nishanth]: The first column is L values and second is T values
                 from a simle pelculum experiment.
@@ -114,13 +140,14 @@ separate sequences instead of one complex sequence.
 
 In this tutorial, we have learnt the basic use of the ``loadtxt``
 command, which is capable of doing a lot more than we have used it for
-until now, for example
+until now. Let us look at an example, but before that do this
+exercise. 
 
-%%2%% Pause the video here, and read the file
-``pendulum_semicolon.txt`` which contains the same data as
-``pendulum.txt``, but the columns are separated by semi-colons instead
-of spaces. Use the IPython help to see how to do this. Once you have
-finished, resume the video to look at the solution.
+%%1%% Read the file ``pendulum_semicolon.txt`` which contains the same
+data as ``pendulum.txt``, but the columns are separated by semi-colons
+instead of spaces. Use the IPython help to see how to do this. 
+
+Please, pause the video here. Do the exercise and then continue. 
 
 {{{ switch back to the terminal }}}
 ::
@@ -142,5 +169,10 @@ You should now be able to do the following, comfortably.
   + Read multiple columns of data, separated by spaces or other
     delimiters.
 
-Thank you!   
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thank you!
 
