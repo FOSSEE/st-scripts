@@ -1,12 +1,28 @@
-========
- Script
-========
+.. Objectives
+.. ----------
 
-{{{ show the welcome slide }}}
+.. Clearly state the objectives of the LO (along with RBT level)
 
-Welcome this tutorial on loops in Python. 
+.. Prerequisites
+.. -------------
 
-{{{ show the outline slide }}}
+..   1. Name of LO-1
+..   2. Name of LO-2
+..   3. Name of LO-3
+     
+.. Author              : 
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
+
+{{{ Show the slide containing title }}}
+
+Hello Friends. Welcome this tutorial on loops in Python. 
+
+{{{ Show the outline slide }}}
 
 In this tutorial, we shall look at ``while`` and ``for`` loops. We
 shall then look at the ``break``, ``continue`` and ``pass`` keywords
@@ -38,8 +54,12 @@ executes the block of code within the loop, if it is. As with any
 other block in Python, the code within the ``while`` block is indented
 to the right by 4 spaces. 
 
-E%% %% Pause the video here and write a ``while`` loop to print the
-squares of all the even numbers below 10. Then, return to the video.
+Following is an exercise that you must do. 
+
+%%1%% Write a ``while`` loop to print the squares of all the even
+numbers below 10. Then, return to the video.
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
@@ -60,8 +80,12 @@ then iterate over it and print the required stuff.
   for n in range(1, 10, 2):
       print n*n
 
-E%% %% Pause the video here and write a ``for`` loop to print the
+Following is an exercise that you must do. 
+
+%%2%% Pause the video here and write a ``for`` loop to print the
 squares of all the even numbers below 10. Then, return to the video. 
+
+Please, pause the video here. Do the exercise and then continue. 
 
 ::
 
@@ -106,10 +130,13 @@ which are not multiples of 3, we would modify the for loop as follows.
       print n*n
   
 
-E%% %%Pause the video here and using the ``continue`` keyword modify
-the ``for`` loop to print the squares of even numbers below 10, to
-print the squares of only multiples of 4. (Do not modify the range
-function call.) Then, resume the video. 
+Following is an exercise that you must do. 
+
+%%3%%Using the ``continue`` keyword modify the ``for`` loop to print
+the squares of even numbers below 10, to print the squares of only
+multiples of 4. (Do not modify the range function call.) 
+
+Please, pause the video here. Do the exercise and then continue. 
 ::
 
   for n in range(2, 10, 2):
@@ -117,8 +144,15 @@ function call.) Then, resume the video.
           continue      
       print n*n
 
+{{{ Show summary slide }}}
+
 That brings us to the end of this tutorial. In this tutorial, we have
 learnt about looping structures in Python and the use of the keywords
 ``pass``, ``break`` and ``continue``. 
 
-Thank You!
+{{{ Show the "sponsored by FOSSEE" slide }}}
+
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thank you!
