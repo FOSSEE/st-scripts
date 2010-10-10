@@ -1,95 +1,125 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-10-11 Mon 00:34
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
-
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
-
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+\title{Advanced features of functions}
+\author{FOSSEE}
 \date{}
 
-% DOCUMENT STARTS
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
+\maketitle
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
+
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Assigning default values to arguments
+\item Calling functions using Keyword arguments
+\item functions in standard library
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-2}
+
+  Redefine the function \texttt{welcome}, by interchanging it's
+  arguments. Place the \texttt{name} argument with it's default value of
+  ``World'' before the \texttt{greet} argument.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-3}
+
+\lstset{language=Python}
+\begin{lstlisting}
+def welcome(name="World", greet):
+    print greet, name
+\end{lstlisting}
+  We get an error that reads \texttt{SyntaxError: non-default argument   follows default argument}. When defining a function all the
+  argument with default values should come at the end.
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-4}
+
+  See the definition of linspace using \texttt{?} and observe how all the
+  arguments with default values are towards the end.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-5}
+
+\lstset{language=Python}
+\begin{lstlisting}
+linspace?
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Question 3}
+\label{sec-6}
+
+  Redefine the function \texttt{welcome} with a default value of
+  ``Hello'' to the \texttt{greet} argument. Then, call the function without any
+  arguments. 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-7}
+
+\lstset{language=Python}
+\begin{lstlisting}
+def welcome(greet="Hello", name="World"):
+    print greet, name
+
+welcome()
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-8}
+
+  You should now be able to --
+\begin{itemize}
+\item define functions with default arguments
+\item call functions using keyword arguments
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-9}
+
   \begin{block}{}
   \begin{center}
   This spoken tutorial has been produced by the

@@ -1,0 +1,86 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Advanced features of functions
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Assigning default values to arguments
+  - Calling functions using Keyword arguments
+  - functions in standard library 
+* Question 1
+  Redefine the function ~welcome~, by interchanging it's
+  arguments. Place the ~name~ argument with it's default value of
+  "World" before the ~greet~ argument.
+* Solution 1
+  #+begin_src python
+    def welcome(name="World", greet):
+        print greet, name
+  #+end_src
+  We get an error that reads ~SyntaxError: non-default argument
+  follows default argument~. When defining a function all the
+  argument with default values should come at the end.
+
+* Question 2
+  See the definition of linspace using ~?~ and observe how all the
+  arguments with default values are towards the end.
+* Solution 2
+  #+begin_src python
+    linspace?
+  #+end_src
+* Question 3
+  Redefine the function ~welcome~ with a default value of
+  "Hello" to the ~greet~ argument. Then, call the function without any
+  arguments. 
+* Solution 3
+  #+begin_src python
+    def welcome(greet="Hello", name="World"):
+        print greet, name
+     
+    welcome()
+  #+end_src
+* Summary
+  You should now be able to --
+  + define functions with default arguments
+  + call functions using keyword arguments
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

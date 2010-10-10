@@ -103,7 +103,7 @@ Following is an (are) exercise(s) that you must do.
 
 %%1%% Redefine the function ``welcome``, by interchanging it's
 arguments. Place the ``name`` argument with it's default value of
-"Hello" before the ``greet`` argument.
+"World" before the ``greet`` argument.
 
 Please, pause the video here. Do the exercise and then continue. 
 
@@ -142,7 +142,7 @@ Please, pause the video here. Do the exercise and then continue.
  
 
   welcome()
-
+ 
 
 Let us now learn what keyword arguments are. 
 
