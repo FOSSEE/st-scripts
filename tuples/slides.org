@@ -1,0 +1,69 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Getting started -- Tuples
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - what are tuples
+  - comparison with lists
+  - why are they needed
+* Question 1
+  ~a = 5~ and ~b = 7~. swap the values of ~a~ and ~b~
+* Solution 1
+  #+begin_src python
+    temp = a
+    a = b
+    b = temp
+    
+    a
+    b
+  #+end_src
+* Summary
+  You should now --
+  + Be able to define tuples
+  + Know the similarities with lists, like -- indexing and iterability
+  + Know about the immutability of tuples
+  + Be able to swap variables in the Pythonic way
+  + Know about packing and unpacking of tuples
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
