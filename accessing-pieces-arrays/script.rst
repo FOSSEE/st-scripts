@@ -298,8 +298,7 @@ form of an image and confirm.
 
 Following is an exercise that you must do. 
 
-%%5%% Pause the video here, and obtain the square in the center
-of the image. 
+%%5%% Obtain the square in the center of the image.
 
 Following is an exercise that you must do. 
 
