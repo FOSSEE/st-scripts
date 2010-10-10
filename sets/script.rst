@@ -153,7 +153,7 @@ we have learnt
 
  * How to make sets from lists
  * How to input sets
- * How to perform union, intersection and symmectric difference operations
+ * How to perform union, intersection and symmetric difference operations
  * How to check if a set is a subset of other
  * The various similarities with lists like length and containership
 
@@ -163,5 +163,5 @@ we have learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
 
