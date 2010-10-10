@@ -1,0 +1,73 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Getting started with files
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Opening and reading contents of a file
+  - Closing open files
+  - Reading all the contents of the file at once
+  - Reading files line by line
+* Question 1
+  Split the variable into a list, =pend_list=, of the lines in the
+  file. Hint, use the tab command to see what methods the string
+  variable has.
+* Solution 1
+  #+begin_src python
+    In []: pend_list = pend.splitlines()
+    
+    In []: pend_list
+  #+end_src
+* Question 2
+  Re-open the file =pendulum.txt= with =f= as the file object.
+* Solution 2
+  #+begin_src python
+    In []:   f = open('/home/fossee/pendulum.txt')
+  #+end_src
+* Summary
+  - Opening a file using =open= function
+  - Reading all the contents of the file at once using =read()= method
+  - Closing open files using the =close= method
+  - Reading files line by line by iterating using a =for= loop
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
