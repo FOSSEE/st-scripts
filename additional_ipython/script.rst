@@ -6,6 +6,14 @@
    C - 
    D - 
 
+.. By the end of this tutorial you will be able to
+
+.. #. Retrieve your ipython history 
+.. #. View a part of the history 
+.. #. Save a part of your history to a file. 
+.. #. Run a script from within ipython 
+
+
 .. Prerequisites
 .. -------------
 
@@ -81,8 +89,8 @@ The default number is 40.
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 1 %% Read through the %hist documenatation and find out how can we list all
-        the commands between 5 and 10
+%% 1 %% Read through the documentation of %hist and find out how to
+        list all the commands between 5 and 10
 
 {{{ continue from paused state }}}
 
@@ -128,7 +136,7 @@ arguments there after are the commands to be saved in the given order.
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 2 %% change the label on y-axis to "y" and save the lines of code
+%% 2 %% Change the label on y-axis to "y" and save the lines of code
         accordingly
 
 {{{ continue from paused state }}}
@@ -210,5 +218,5 @@ we have looked at
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
  
