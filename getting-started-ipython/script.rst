@@ -105,7 +105,7 @@ possibilities. It just lists out all the possible completions.
 
 Following is an exercise that you must do. 
 
-%%1%% Type ``ab`` and hit tab to see what happens. Next, jut type
+%%1%% Type ``ab`` and hit tab to see what happens. Next, just type
 ``a`` and hit tab to see what happens.
 
 Please, pause the video here. Do the exercise and then continue. 
@@ -202,8 +202,15 @@ Please, pause the video here. Do the exercises and then continue.
 This brings us to the end of the tutorial on getting started with
 ``ipython``.
 
-In this tutorial we have learnt
+In this tutorial we have learnt, how to
 {{{ show the outline/summary slide. }}}
+
+  1. invoke the ``ipython`` interpreter. 
+  #. quit the ``ipython`` interpreter. 
+  #. navigate in the history of ``ipython``. 
+  #. use tab-completion. 
+  #. look-up documentation of functions. 
+  #. interrupt incomplete or incorrect commands.
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
