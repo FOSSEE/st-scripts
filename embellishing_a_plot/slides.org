@@ -1,0 +1,111 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER:\usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Embellishing a Plot
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  + Modifying the color, line style & linewidth of a plot
+  + Adding a title to the plot (with embedded LaTeX)
+  + Labelling the axes
+  + Annotating the plot
+  + Setting the limits of axes. 
+* Question 1
+  Plot sin(x) in blue colour and with linewidth as 3
+* Solution 1
+  #+begin_src python
+    In []: clf()
+    In []: plot(x, sin(x), 'b', linewidth=3)
+  #+end_src
+* Question 2
+  Plot the sine curve with green filled circles.
+* Solution 2
+  #+begin_src python
+    In []: clf()
+    In []: plot(x, cos(x), 'go')
+  #+end_src
+* Question 3
+  Plot the curve of x vs tan(x) in red dashed line and linewidth 3
+* Solution 3
+  #+begin_src python
+    In []: clf()
+    In []: plot(x, cos(x), 'r--')
+  #+end_src
+* Question 4
+  Change the title of the figure such that the whole title is
+  formatted in LaTex style
+* Solution 4 
+  #+begin_src python
+    In []: title("$Parabolic function -x^2+4x-5$")
+  #+end_src
+* Question 5
+  Set the x and y labels as "x" and "f(x)" in LaTex style.
+* Solution 5
+  #+begin_src python
+    In []: xlabel("$x$")
+    In []: yalbel("$f(x)$")
+  #+end_src
+* Question 6
+  Make an annotation called "root" at the point (-4, 0). What happens
+  to the first annotation?
+* Solution 6
+  #+begin_src python
+    In []: annotate("root", xy=(-4,0))  
+  #+end_src
+* Question 7
+  Set the limits of axes such that the area of interest is the
+  rectangle (-1, -15) and (3, 0)
+* Solution 7
+  #+begin_src python
+    In []: xlim(-1, 3)
+    In []: ylim(-15, 0)
+  #+end_src
+* Summary
+  + Modifying the attributes of plot by passing additional arguments
+  + How to add title
+  + How to incorporate LaTeX style formatting
+  + How to label x and y axes
+  + How to add annotations
+  + How to set the limits of axes
+
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
