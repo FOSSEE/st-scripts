@@ -1,0 +1,87 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Loops
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Loop while a condition is true. 
+  - Iterate over a sequence
+  - Breaking out of loops.
+  - Skipping iterations.
+* Question 1
+  Write a ~while~ loop to print the squares of all the even
+  numbers below 10. 
+* Solution 1
+  #+begin_src python
+    In []: i = 2
+    
+    In []:  while i<10:
+     ....:     print i*i
+     ....:     i += 2
+  #+end_src
+* Question 2
+  Write a ~for~ loop to print the squares of all the even numbers
+  below 10.
+* Solution 2
+  #+begin_src python    
+    In []: for n in range(2, 10, 2):
+     ....:     print n*n
+  #+end_src
+* Question 3
+  Using the ~continue~ keyword modify the ~for~ loop to print the
+  squares of even numbers below 10, to print the squares of only
+  multiples of 4. (Do not modify the range function call.)
+* Solution 3
+  #+begin_src python    
+    for n in range(2, 10, 2):
+        if n%4:
+            continue      
+        print n*n
+  #+end_src
+* Summary
+  You should now be able to --
+  - use the ~for~ loop 
+  - use the ~while~ loop
+  - Use ~break~, ~continue~ and ~pass~ statements 
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

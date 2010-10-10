@@ -63,7 +63,7 @@ to the right by 4 spaces.
 Following is an exercise that you must do. 
 
 %%1%% Write a ``while`` loop to print the squares of all the even
-numbers below 10. Then, return to the video.
+numbers below 10. 
 
 Please, pause the video here. Do the exercise and then continue. 
 
@@ -88,8 +88,8 @@ then iterate over it and print the required stuff.
 
 Following is an exercise that you must do. 
 
-%%2%% Pause the video here and write a ``for`` loop to print the
-squares of all the even numbers below 10. Then, return to the video. 
+%%2%% Write a ``for`` loop to print the squares of all the even
+numbers below 10. 
 
 Please, pause the video here. Do the exercise and then continue. 
 
