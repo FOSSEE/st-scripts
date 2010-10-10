@@ -1,0 +1,84 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Parsing Data
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - What is meant by parsing data? 
+  - String operations required for parsing
+  - Converting between data-types. 
+* Question 1
+  Split the variable line using a space as argument. Is it same as
+  splitting without an argument ?
+* Solution 1
+  We see that when we split on space, multiple whitespaces are not
+  clubbed as one and there is an empty string everytime there are two
+  consecutive spaces.
+* Question 2
+  What happens to the white space inside the sentence when it is
+  stripped? 
+* Solution 2
+  #+begin_src python
+    In []: a_str = "     white      space     "
+    In []: a_str.strip()
+  #+end_src
+* Question 3
+  What happens if you do =int("1.25")=
+* Solution 3
+  It raises an error since converting a float string into integer
+  directly is not possible. It involves an intermediate step of
+  converting to float.
+  #+begin_src python
+    In []: dcml_str = "1.25"
+    In []: flt = float(dcml_str)
+    In []: flt
+    In []: number = int(flt)
+    In []: number
+  #+end_src
+* Summary
+  + How to tokenize a string using various delimiters
+  + How to get rid of extra white space around
+  + How to convert from one type to another
+  + How to parse input data and perform computations on it
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
