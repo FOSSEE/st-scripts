@@ -6,7 +6,7 @@
 .. 1. Slice strings and get sub-strings out of them
 .. #. Reverse strings
 .. #. Replace characters in strings. 
-.. #. Convert to strings to upper or lower case
+.. #. Convert strings to upper or lower case
 .. #. joining a list of strings
 
 .. Prerequisites
@@ -84,7 +84,7 @@ using ``s[-1]``.
 Following is an exercise that you must do. 
 
 %%1%% Obtain the sub-string excluding the first and last characters
-from the string.
+from the string s. 
 
 Please, pause the video here. Do the exercise(s) and then continue. 
 
@@ -167,6 +167,8 @@ Please, pause the video here. Do the exercise and then continue.
 
 ::
 
+    s in week
+
     s.lower()[:3] in week
 
 We just convert any input string to lower case and then check if it is
@@ -191,7 +193,7 @@ method of strings.
 
 Following is an exercise that you must do. 
 
-%%3%% Replace the ``[dot]`` with ``.``
+%%3%% Replace the ``[dot]`` with ``.`` in ``email``
 
 Please, pause the video here. Do the exercise and then continue. 
 
