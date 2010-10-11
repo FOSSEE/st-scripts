@@ -1,0 +1,132 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Getting started with arrays
+#+AUTHOR: FOSSEE
+#+EMAIL: info@fossee.in
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Arrays
+    - why arrays over lists
+  - Creating arrays
+  - Array operations
+
+* Overview of Arrays
+  - Arrays are homogeneous data structures.
+    - elements have to the same data type
+  - Arrays are faster compared to lists
+    - at least /80-100 times/ faster than lists
+
+* Creating Arrays
+  - Creating a 1-dimensional array
+  : In []: a1 = array([1, 2, 3, 4])
+  - Creating a 2-dimensional array
+  : In []: a2 = array([[1,2,3,4],[5,6,7,8]])
+  - Easier method of creating array with consecutive elements.
+  : In []: ar = arange(1,9)
+* ~reshape()~ method
+  - To reshape an array
+  : In []: ar.reshape(2, 4)
+  : In []: ar.reshape(4, 2)
+  : In []: ar = ar.reshape(2, 4)
+
+* Creating ~array~ from ~list~.
+  - ~array()~ method accepts list as argument
+  - Creating a list
+   : In []: l1 = [1, 2, 3, 4]
+  - Creating an array
+    : In []: a3 = array(l1)
+
+* Exercise 1
+  Create a 3-dimensional array of the order (2, 2, 4).
+
+* ~.shape~ of array
+  - ~.shape~
+    To find the shape of the array
+    : In []: a1.shape
+  - ~.shape~
+    returns a tuple of shape
+* Exercise 2
+  Find out the shape of the other arrays(a2, a3, ar) that we have created.
+* Homogeneous data
+  - All elements in array should be of same type
+    : In []: a4 = array([1,2,3,'a string'])
+* Implicit type casting 
+   : In []: a4
+    All elements are type casted to string type
+* ~identity()~, ~zeros()~ methods
+  - ~identity(n)~
+    Creates an identity matrix, a square matrix of order (n, n) with diagonal elements 1 and others 0.
+  - ~zeros((m, n))~
+    Creates an ~m X n~ matrix with all elements 0.
+
+* Learning exercise
+  - Find out about
+    - ~zeros_like()~
+    - ~ones()~
+    - ~ones_like()~
+
+* Array operations
+  - ~a1 * 2~
+    returns a new array with all elements of ~a1~ multiplied by ~2~.
+    - Similarly ~+~, ~-~ \& ~/~.
+  - ~a1 + 2~
+    returns a new array with all elements of ~a1~ summed with ~2~.
+  - ~a1 += 2~
+    adds ~2~ to all elements of array ~a1~.
+    - Similarly ~-=~, ~*=~ \& ~/=~.
+  - ~a1 + a2~
+    does elements-wise addition.
+    - Similarly ~-~, ~*~ \& ~/~.
+  - ~a1 * a2~
+    does element-wise multiplication
+
+  *Note* - array(A) * array(B) does element wise multiplication and not matrix multiplication
+
+* Summary
+  In this tutorial we covered,
+  - Basics of arrays
+  - Creating arrays
+  - Arrays from lists
+  - Basic array operations
+
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

@@ -71,6 +71,8 @@ And how can we make it a two dimensional array of order 2 by 4. Pause
 here and try to do it yourself, try ``ar.tab`` and find a suitable
 method for that.
 
+{{{ switch to next slide, reshape() method }}}
+
 We can use the function ``reshape()`` for that purpose and it can be
 done as,
 ::
@@ -78,6 +80,8 @@ done as,
     ar.reshape(2,4)
     ar.reshape(4,2)
     ar = ar.reshape(2,4)
+
+{{{ switch to next slide, creating array from list}}}
 
 Now, let us see how to convert a list object to an array. As you have
 already seen, in both of the previous statements we have passed a
@@ -110,7 +114,7 @@ array, it returned a tuple (4,).
 
 {{{ switch to the next slide, unsolved exercise 2 }}}
 
-Find out the shape of the other two arrays that we have created.
+Find out the shape of the other arrays that we have created.
 
 {{{ Array can have only a single type of data }}}
 
@@ -128,6 +132,8 @@ the values in the new array created. In your IPython terminal type,
     a4
 
 Did you notice it, 
+
+{{{ switch to next slide, implicit type casting }}}
 
 {{{ highlight all the array elements one by one using mouse 
 movements }}}
@@ -226,7 +232,7 @@ Returns an array with element by element addition,
 Returns an array with element by element multiplication, notice that
 it does not perform matrix multiplication.
 
-{{{ switch to next slide, recap slide }}}
+{{{ switch to next slide, summary slide }}}
 
 So this brings us to the end of this tutorial, in this tutorial we
 covered basics of arrays, how to create an array, converting a list to

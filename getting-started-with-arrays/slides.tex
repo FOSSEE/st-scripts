@@ -1,0 +1,277 @@
+% Created 2010-10-12 Tue 00:20
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Getting started with arrays}
+\author{FOSSEE}
+\date{}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Arrays
+
+\begin{itemize}
+\item why arrays over lists
+\end{itemize}
+
+\item Creating arrays
+\item Array operations
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Overview of Arrays}
+\label{sec-2}
+
+\begin{itemize}
+\item Arrays are homogeneous data structures.
+
+\begin{itemize}
+\item elements have to the same data type
+\end{itemize}
+
+\item Arrays are faster compared to lists
+
+\begin{itemize}
+\item at least \emph{80-100 times} faster than lists
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Creating Arrays}
+\label{sec-3}
+
+\begin{itemize}
+\item Creating a 1-dimensional array
+\end{itemize}
+
+\begin{verbatim}
+   In []: a1 = array([1, 2, 3, 4])
+\end{verbatim}
+
+\begin{itemize}
+\item Creating a 2-dimensional array
+\end{itemize}
+
+\begin{verbatim}
+   In []: a2 = array([[1,2,3,4],[5,6,7,8]])
+\end{verbatim}
+
+\begin{itemize}
+\item Easier method of creating array with consecutive elements.
+\end{itemize}
+
+\begin{verbatim}
+   In []: ar = arange(1,9)
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{reshape()} method}
+\label{sec-4}
+
+\begin{itemize}
+\item To reshape an array
+\end{itemize}
+
+\begin{verbatim}
+   In []: ar.reshape(2, 4)
+   In []: ar.reshape(4, 2)
+   In []: ar = ar.reshape(2, 4)
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Creating \texttt{array} from \texttt{list}.}
+\label{sec-5}
+
+\begin{itemize}
+\item \texttt{array()} method accepts list as argument
+\item Creating a list
+\begin{verbatim}
+    In []: l1 = [1, 2, 3, 4]
+\end{verbatim}
+
+\item Creating an array
+\begin{verbatim}
+     In []: a3 = array(l1)
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-6}
+
+  Create a 3-dimensional array of the order (2, 2, 4).
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{.shape} of array}
+\label{sec-7}
+
+\begin{itemize}
+\item \texttt{.shape}
+    To find the shape of the array
+\begin{verbatim}
+     In []: a1.shape
+\end{verbatim}
+
+\item \texttt{.shape}
+    returns a tuple of shape
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-8}
+
+  Find out the shape of the other arrays(a2, a3, ar) that we have created.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Homogeneous data}
+\label{sec-9}
+
+\begin{itemize}
+\item All elements in array should be of same type
+\begin{verbatim}
+     In []: a4 = array([1,2,3,'a string'])
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Implicit type casting}
+\label{sec-10}
+
+\begin{verbatim}
+    In []: a4
+\end{verbatim}
+
+    All elements are type casted to string type
+\end{frame}
+\begin{frame}
+\frametitle{\texttt{identity()}, \texttt{zeros()} methods}
+\label{sec-11}
+
+\begin{itemize}
+\item \texttt{identity(n)}
+    Creates an identity matrix, a square matrix of order (n, n) with diagonal elements 1 and others 0.
+\item \texttt{zeros((m, n))}
+    Creates an \texttt{m X n} matrix with all elements 0.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Learning exercise}
+\label{sec-12}
+
+\begin{itemize}
+\item Find out about
+
+\begin{itemize}
+\item \texttt{zeros\_like()}
+\item \texttt{ones()}
+\item \texttt{ones\_like()}
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Array operations}
+\label{sec-13}
+
+\begin{itemize}
+\item \texttt{a1 * 2}
+    returns a new array with all elements of \texttt{a1} multiplied by \texttt{2}.
+
+\begin{itemize}
+\item Similarly \texttt{+}, \texttt{-} \& \texttt{/}.
+\end{itemize}
+
+\item \texttt{a1 + 2}
+    returns a new array with all elements of \texttt{a1} summed with \texttt{2}.
+\item \texttt{a1 += 2}
+    adds \texttt{2} to all elements of array \texttt{a1}.
+
+\begin{itemize}
+\item Similarly \texttt{-=}, \texttt{*=} \& \texttt{/=}.
+\end{itemize}
+
+\item \texttt{a1 + a2}
+    does elements-wise addition.
+
+\begin{itemize}
+\item Similarly \texttt{-}, \texttt{*} \& \texttt{/}.
+\end{itemize}
+
+\item \texttt{a1 * a2}
+    does element-wise multiplication
+\end{itemize}
+
+
+  \textbf{Note} - array(A) * array(B) does element wise multiplication and not matrix multiplication
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-14}
+
+  In this tutorial we covered,
+\begin{itemize}
+\item Basics of arrays
+\item Creating arrays
+\item Arrays from lists
+\item Basic array operations
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-15}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}
