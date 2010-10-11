@@ -1,11 +1,15 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+accessing history:\\
+{\ex \lstinline|    \%hist|}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+accessing particular line of history:\\
+{\ex \lstinline|    \%hist line_number|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+accessing particular range of history:\\
+{\ex \lstinline|    \%hist start_line stop_line|}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}
+saving history to a file:\\
+{\ex \lstinline|    \%save file_path line_numbers|}
+
+running a script:\\
+{\ex \lstinline|    \%run -i file_path|}
+
