@@ -1,0 +1,117 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Dictionaries
+#+AUTHOR: FOSSEE
+#+EMAIL: info@fossee.in   
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Creating dictionaries
+    - empty dictionaries
+    - with data
+  - Keys and values
+  - Checking for elements
+  - Iterating over elements
+
+* Overview of Dictionaries
+  - A dictionary contains meaning of words
+    - /Word/ is the /key/ here.
+    - /Meaning/ is the /value/ here.
+  - A Key-Value pair data structure
+    - Provide key-value mappings
+
+* Creating dictionary
+  - Empty dictionary
+    - ~mt_dict = {}~
+      - ~[]~ - lists
+      - ~{}~ - dictionaries
+  - With data
+    #+begin_src python
+        extensions = {'jpg' : 'JPEG Image', 
+	              'py' : 'Python script',
+                      'html' : 'Html document', 
+                      'pdf' : 'Portable Document Format'}
+    #+end_src
+
+   *Note* - ordering in dictionaries cannot be relied on
+* Accessing Elements
+  - syntax
+    : extensions[key]
+  
+  : In []: print extensions['jpg']
+  : Out []: JPEG Image
+  : In []: print extensions['zip']
+* Adding and Deleting values
+  - Adding a new value
+    : In []: extension['cpp'] = 'C++ code'
+    adds a new key /cpp/ with /C++ code/ as value
+  - Deleting values
+    : In []: del extensions['pdf']
+    deletes the key-value pair identified by /pdf/
+  - Changing value associated with a key
+    : In []: extension['cpp'] = 'C++ source code'
+    changes the value of the existing key
+* Checking for container-ship of keys
+  : In []: 'py' in extensions
+  : Out []: True
+  Returns *True* if the /key/ is found.
+  : In []: 'odt' in extensions
+  : Out []: False
+  Returns *False* if the /key/ is not found.
+
+* Retrieve keys and values
+  - ~.keys()~ method
+    : In []: extensions.keys()
+    Returns a list of keys in the dictionary.
+  - ~.values()~ method
+    : In []: extensions.values()
+    Returns the list of values in the dictionary.
+* Exercise 1
+  Print the keys and values in the dictionary one by one.
+* Summary
+  - Creating dictionaries
+    - empty dictionaries
+    - with data
+  - ~.keys()~ method
+  - ~.values()~ method
+  - Iterating over dictionaries
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

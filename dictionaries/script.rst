@@ -35,6 +35,8 @@ Before we can proceed, start your IPython interpreter with the
 
 {{{ start ipython interpreter by issuing command ipython -pylab }}}
 
+{{{ switch to next slide, Creating dictionary }}}
+
 Let us start by creating an empty dictionary, type the following in
 your IPython interpreter.
 ::
@@ -73,6 +75,8 @@ Simply type,
 in the interpreter to see the content of the dictionary. Notice that
 in dictionaries the order cannot be predicted and you can see that the
 values are not in the order that we entered in.
+
+{{{ switch to next slide, accessing elements }}}
 
 Like in lists, the elements in a dictionary can be accessed using the
 index, here the index is the key. Try,
@@ -153,14 +157,16 @@ It returned the ``list`` of values in the dictionary.
 exercise }}}
 
 Now let us try to print the data in the dictionary. We can use ``for``
-loop to iterate.
+loop to iterate. Pause here and try to do it yourself.
+
+It can be solved as,
 ::
 
     for each in extensions.keys():
         print each, "-->", extensions[each]
 
 
-{{{ switch to next slide, recap }}}
+{{{ switch to next slide, summary }}}
 
 This brings us to the end of this tutorial, we learned dictionaries
 and saw how to create an empty dictionary, build a dictionary with
