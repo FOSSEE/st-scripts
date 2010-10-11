@@ -1,0 +1,104 @@
+% Created 2010-10-10 Sun 23:53
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Sets}
+\author{FOSSEE}
+\date{}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Defining Sets
+\item Operations on sets
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-2}
+
+  Given a list of marks, \texttt{marks = [20, 23, 22, 23, 20, 21, 23]} list
+  all the duplicates
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-3}
+
+\lstset{language=Python}
+\begin{lstlisting}
+marks = [20, 23, 22, 23, 20, 21, 23] 
+marks_set = set(marks)
+for mark in marks_set:
+    marks.remove(mark)
+
+# we are now left with only duplicates in the list marks
+duplicates = set(marks)
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-4}
+
+  You should now be able to --
+\begin{itemize}
+\item make sets from lists
+\item input sets directly
+\item perform operations like union, intersection, symmetric difference
+\item check if a subset of another
+\item check containership, length and other properties similar to lists
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-5}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}
