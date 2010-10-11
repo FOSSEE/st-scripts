@@ -6,6 +6,12 @@
    C - 
    D - 
 
+.. #. How to print some value
+.. #. How to print using modifiers
+.. #. How to take input from user
+.. #. How to display a prompt to the user before taking the input
+
+
 .. Prerequisites
 .. -------------
 
@@ -73,7 +79,7 @@ As you can see, the values of x and y are substituted in place of %2.1f and %d
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 1 %% What happens when you do print "x is %d y is %f"%(x)
+%% 1 %% What happens when you do ``print "x is %d y is %f" %(x, y)``
 
 {{{ continue from paused state }}}
 
@@ -171,6 +177,9 @@ prints the string given as argument and then waits for the user input.
 %% 4 %% How do you display a prompt and let the user enter input in a new line
 
 {{{ continue from paused state }}}
+
+.. #[Puneeth: We didn't talk of new-line character till now, did we?]
+.. #[Puneeth: non-programmers might not know?]
 
 The trick is to include a newline character at the end of the prompt string.
 ::

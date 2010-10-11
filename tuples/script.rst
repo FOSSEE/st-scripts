@@ -7,6 +7,11 @@
    C - 
    D - 
 
+.. #. what are tuples
+.. #. comparison with lists
+.. #. why are they needed
+
+
 .. Prerequisites
 .. -------------
 

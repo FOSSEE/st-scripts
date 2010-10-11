@@ -6,6 +6,15 @@
    C - 
    D - 
 
+.. By the end of this tutorial you will be able to 
+
+..  * Modify the attributes of the plot -- color, line style, linewidth
+..  * Add a title to the plot with embedded LaTeX.
+..  * Label x and y axes. 
+..  * Add annotations to the plot. 
+..  * Set and Get the limits of axes. 
+
+
 .. Prerequisites
 .. -------------
 
@@ -174,6 +183,10 @@ produces the required plot.
 
 .. #[Madhu: I did not understand the question]
 
+::
+    clf()
+    plot(x, cos(x), 'r--')
+
 Now that we know how to produce a bare minimum plot with colour, style
 and thickness of our interest, we shall look at decorating the plot.
 
@@ -184,8 +197,8 @@ Let us start with a plot of the function -x^2 + 4x - 5.
 
 {{{ Show the plot window and switch back to terminal }}}
 
-We now have the plot in a colour and linewidth of our interest. As you can see,
-the figure does not have any description describing the plot.
+We now have the plot in a colour and linewidth of our interest. As you
+can see, the figure does not have any description describing the plot.
 
 .. #[Madhu: Added "not". See the diff]
 
@@ -204,10 +217,10 @@ the title accordingly.
 
 The formatting in title is messed and it does not look clean. You can imagine
 what would be the situation if there were fractions and more complex functions
-like log and exp. Wouldn't it be good if there was LaTex like formatting?
+like log and exp. Wouldn't it be good if there was LaTeX like formatting?
 
 That is also possible by adding a $ sign before and after the part of the 
-string that should be in LaTex style.
+string that should be in LaTeX style.
 
 for instance, we can use
 ::
@@ -217,9 +230,9 @@ for instance, we can use
 and we get the polynomial formatted properly.
 
 .. #[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
-             string in LaTex style is not good
+             string in LaTeX style is not good
 
-.. #[[Anoop: I guess you can go ahead with the LaTex thing, it's
+.. #[[Anoop: I guess you can go ahead with the LaTeX thing, it's
      cool!]]
 .. #[Madhu: Instead of saying LaTeX style you can say Typeset math
      since that is how it is called as. I am not sure as well. It
@@ -228,7 +241,7 @@ and we get the polynomial formatted properly.
 {{{ Pause here and try out the following exercises }}}
 
 %% 4 %% Change the title of the figure such that the whole title is formatted
-        in LaTex style
+        in LaTeX style
 
 {{{ continue from the paused state }}}
 
@@ -262,11 +275,11 @@ sets the name of the y-axis as "f(x)"
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 5 %% Set the x and y labels as "x" and "f(x)" in LaTex style.
+%% 5 %% Set the x and y labels as "x" and "f(x)" in LaTeX style.
 
 {{{ continue from paused state }}}
 
-Since we need LaTex style formatting, all we have to do is enclose the string
+Since we need LaTeX style formatting, all we have to do is enclose the string
 in between two $. Hence,
 ::
 
@@ -302,6 +315,10 @@ The first is x co-ordinate and second is y co-ordinate.
         What happens to the first annotation ?
 
 {{{ continue from paused state }}}
+
+::
+
+  annotate("root", xy=(-4,0))  
 
 As we can see, every annotate command makes a new annotation on the figure.
 
@@ -354,7 +371,7 @@ we have looked at
 
  * Modifying the attributes of plot by passing additional arguments
  * How to add title
- * How to incorporate LaTex style formatting
+ * How to incorporate LaTeX style formatting
  * How to label x and y axes
  * How to add annotations
  * How to set the limits of axes

@@ -20,7 +20,6 @@ In this tutorial we will cover scatter plot, pie chart, bar chart and
 log plot. We will also see few other plots and also introduce you to
 the matplotlib help.
 
-
 Let us start with scatter plot. 
 
 {{{ switch to the next slide }}}
@@ -55,11 +54,12 @@ profit percentages.
 
 {{{ close the file and switch to the terminal }}}
 
-To product the scatter plot first we need to load the data from the
+To produce the scatter plot first we need to load the data from the
 file using ``loadtxt``. We learned in one of the previous sessions,
 and it can be done as ::
 
-    year,profit = loadtxt('/home/fossee/other-plot/company-a-data.txt',dtype=type(int()))
+    year,profit =
+    loadtxt('/home/fossee/other-plot/company-a-data.txt',dtype=type(int()))
 
 Now in-order to generate the scatter graph we will use the function 
 ``scatter()`` 
@@ -100,9 +100,9 @@ We can plot the pie chart using the function ``pie()``.
 
    pie(profit,labels=year)
 
-Notice that we passed two arguments to the function ``pie()``. The
-first one the values and the next one the set of labels to be used in
-the pie chart.
+Notice that we passed two arguments to the function ``pie()``. First
+one the values and the next one the set of labels to be used in the
+pie chart.
 
 {{{ switch to the next slide which has the problem statement of
 problem to be tried out }}}
@@ -195,14 +195,10 @@ matplotlib over the internet.
 Help about matplotlib can be obtained from
 matplotlib.sourceforge.net/contents.html
 
-.. #[[Anoop: I am not so sure how to do the rest of it, so I guess we
-   can just browse through the side and tell them few. What is your
-   opinion??]]
 
-Now let us see few plots from
-matplotlib.sourceforge.net/users/screenshots.html
-
-{{{ browse through the site quickly }}}
+More plots can be seen at
+matplotlib.sourceforge.net/users/screenshots.html and also at
+matplotlib.sourceforge.net/gallery.html
 
 {{{ switch to recap slide }}}
 

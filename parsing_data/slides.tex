@@ -1,95 +1,124 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-10-10 Sun 18:28
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
-
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
-
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+\title{Parsing Data}
+\author{FOSSEE}
 \date{}
 
-% DOCUMENT STARTS
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
+\maketitle
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
+
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item What is meant by parsing data?
+\item String operations required for parsing
+\item Converting between data-types.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-2}
+
+  Split the variable line using a space as argument. Is it same as
+  splitting without an argument ?
+\end{frame}
+\begin{frame}
+\frametitle{Solution 1}
+\label{sec-3}
+
+  We see that when we split on space, multiple whitespaces are not
+  clubbed as one and there is an empty string everytime there are two
+  consecutive spaces.
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-4}
+
+  What happens to the white space inside the sentence when it is
+  stripped? 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-5}
+
+\lstset{language=Python}
+\begin{lstlisting}
+In []: a_str = "     white      space     "
+In []: a_str.strip()
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Question 3}
+\label{sec-6}
+
+  What happens if you do \texttt{int("1.25")}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-7}
+
+  It raises an error since converting a float string into integer
+  directly is not possible. It involves an intermediate step of
+  converting to float.
+\lstset{language=Python}
+\begin{lstlisting}
+In []: dcml_str = "1.25"
+In []: flt = float(dcml_str)
+In []: flt
+In []: number = int(flt)
+In []: number
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-8}
+
+\begin{itemize}
+\item How to tokenize a string using various delimiters
+\item How to get rid of extra white space around
+\item How to convert from one type to another
+\item How to parse input data and perform computations on it
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-9}
+
   \begin{block}{}
   \begin{center}
   This spoken tutorial has been produced by the

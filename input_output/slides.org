@@ -1,0 +1,84 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    I/O
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Showing output to the user.
+  - Taking input from the user. 
+* Question 1
+  What happens when you do ~print "x is %d y is %f" %(x, y)~
+* Solution 1
+  ~int~ value of ~x~ and ~float~ value of ~y~ are printed corresponding to the
+  modifiers used in the ~print~ statement
+* Question 2
+  Enter the number 5.6 as input and store it in a variable called
+  ~c~. 
+* Solution 2
+  #+begin_src python
+    In []: c = raw_input() 
+    5.6
+    In []: c
+  #+end_src
+* Question 3
+  What happens when you do not enter anything and hit enter
+* Solution 3
+  #+begin_src python
+    In []: c = raw_input() 
+    <RET>
+    In []: c
+  #+end_src
+* Question 4
+  How do you display a prompt and let the user enter input in a new line
+* Solution 4
+  #+begin_src python
+    In []: ip = raw_input("Please enter a number in the next line\n> ")
+  #+end_src
+* Summary
+  You should now be able to --
+   + Print a value "as is" 
+   + Print a value using using modifiers
+   + Accept input from user
+   + Display a prompt before accepting input
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

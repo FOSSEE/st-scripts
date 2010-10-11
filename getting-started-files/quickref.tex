@@ -1,8 +1,12 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+\textbf{Getting Started -- files}
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
+\lstinline|f = open('filename')| returns a file object. \lstinline|f|
+can be used to perform further operations on the file. 
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+\lstinline|f.read()| reads the whole file and returns the contents. 
+
+\lstinline|f.close()| closes the file. 
+
+\lstinline|for line in open('filename'):| -- iterate over the file
+line-by-line. 
+

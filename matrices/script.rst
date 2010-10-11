@@ -70,6 +70,8 @@ Similarly,
 
 it does matrix subtraction, that is element by element
 subtraction. Now let us try,
+
+{{{ Switch to next slide, Matrix multiplication }}}
 ::
 
     m3 * m2
@@ -120,9 +122,9 @@ To find out the transpose of a matrix we can do,
 
 Matrix name dot capital T will give the transpose of a matrix
 
-{{{ switch to next slide, Euclidean norm of inverse of matrix }}}
+{{{ switch to next slide, Frobenius norm of inverse of matrix }}}
 
-Now let us try to find out the Euclidean norm of inverse of a 4 by 4
+Now let us try to find out the Frobenius norm of inverse of a 4 by 4
 matrix, the matrix being,
 ::
 
@@ -131,17 +133,17 @@ matrix, the matrix being,
 
 The inverse of a matrix A, A raise to minus one is also called the
 reciprocal matrix such that A multiplied by A inverse will give 1. The
-Euclidean norm or the Frobenius norm of a matrix is defined as square
-root of sum of squares of elements in the matrix. Pause here and try
-to solve the problem yourself, the inverse of a matrix can be found
-using the function ``inv(A)``.
+Frobenius norm of a matrix is defined as square root of sum of squares
+of elements in the matrix. Pause here and try to solve the problem
+yourself, the inverse of a matrix can be found using the function
+``inv(A)``.
 
 And here is the solution, first let us find the inverse of matrix m5.
 ::
 
     im5 = inv(m5)
 
-And the euclidean norm of the matrix ``im5`` can be found out as,
+And the Frobenius norm of the matrix ``im5`` can be found out as,
 ::
 
     sum = 0
@@ -166,15 +168,17 @@ The solution for the problem is,
 
 {{{ switch to slide the ``norm()`` method }}}
 
-Well! to find the Euclidean norm and Infinity norm we have an even easier
+Well! to find the Frobenius norm and Infinity norm we have an even easier
 method, and let us see that now.
 
 The norm of a matrix can be found out using the method
-``norm()``. Inorder to find out the Euclidean norm of the matrix im5,
+``norm()``. Inorder to find out the Frobenius norm of the matrix im5,
 we do,
 ::
 
     norm(im5)
+
+Euclidean norm is also called Frobenius norm.
 
 And to find out the Infinity norm of the matrix im5, we do,
 ::

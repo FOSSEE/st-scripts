@@ -6,11 +6,13 @@
    C - 
    D - 
 
+.. Plotting a least square fit line
+
 .. Prerequisites
 .. -------------
 
 ..   1. Basic Plotting
-     2. Arrays
+..   2. Arrays
      
 .. Author              : Nishanth Amuluru
    Internal Reviewer   : 
