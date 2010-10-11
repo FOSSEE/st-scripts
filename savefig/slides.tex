@@ -1,0 +1,185 @@
+% Created 2010-10-11 Mon 17:08
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Savefig}
+\author{FOSSEE}
+\date{2010-10-11 Mon}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Saving plots.
+\item Plotting in different formats.
+\item Locating the file in the file system.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Creating a basic plot}
+\label{sec-2}
+
+  Plot a sine wave from -3pi to 3pi.
+\begin{verbatim}
+In []: x = linspace(-3*pi,3*pi,100)
+
+In []: plot(x, sin(x))
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{savefig()}
+\label{sec-3}
+\begin{itemize}
+
+\item savefig() - to save plots
+\label{sec-3_1}%
+\begin{verbatim}
+    syntax: savefig(fname)
+\end{verbatim}
+
+
+\item example
+\label{sec-3_2}%
+\begin{itemize}
+
+\item savefig('/home/fossee/sine.png')
+\label{sec-3_2_1}%
+\begin{itemize}
+\item file sine.png saved to the folder /home/fossee
+\item .png - file type
+\end{itemize}
+
+
+\end{itemize} % ends low level
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{More on savefig()}
+\label{sec-4}
+\begin{itemize}
+
+\item Recall
+\label{sec-4_1}%
+\begin{itemize}
+\item .png - file type
+\end{itemize}
+
+
+\item File types supported
+\label{sec-4_2}%
+\begin{itemize}
+
+\item .pdf - PDF(Portable Document Format)\\
+\label{sec-4_2_1}%
+\item .ps - PS(Post Script)\\
+\label{sec-4_2_2}%
+\item .eps - Encapsulated Post Script\\
+\label{sec-4_2_3}%
+\texttt{to be used with} \LaTeX{} \texttt{documents}
+
+\item .svg - Scalable Vector Graphics\\
+\label{sec-4_2_4}%
+\texttt{vector graphics}
+
+\item .png - Portable Network Graphics\\
+\label{sec-4_2_5}%
+\texttt{supports transparency}
+\end{itemize} % ends low level
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-5}
+
+  Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-6}
+
+\begin{verbatim}
+savefig('/home/fossee/sine.eps')
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-7}
+
+  Save the sine plot in PDF, PS and SVG formats.
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-8}
+
+  You should now be able to
+\begin{itemize}
+\item Use \texttt{savefig()} function
+\item Save plots in different formats
+
+\begin{itemize}
+\item PDF
+\item PS
+\item PNG
+\item SVG
+\item EPS
+\end{itemize}
+
+\item Locating the files in file system.
+\end{itemize}
+
+    
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-9}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

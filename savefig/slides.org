@@ -1,0 +1,99 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Savefig
+#+AUTHOR: FOSSEE
+#+EMAIL: info@fossee.in    
+#+DATE: 2010-10-11 Mon
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Saving plots.
+  - Plotting in different formats.
+  - Locating the file in the file system.
+
+* Creating a basic plot
+  Plot a sine wave from -3pi to 3pi.
+  #+begin_src python
+    In []: x = linspace(-3*pi,3*pi,100)
+    
+    In []: plot(x, sin(x))
+  #+end_src
+* savefig()
+** savefig() - to save plots
+   : syntax: savefig(fname)
+** example
+*** savefig('/home/fossee/sine.png')    
+   - file sine.png saved to the folder /home/fossee
+   - .png - file type
+
+* More on savefig()
+** Recall
+   - .png - file type
+** File types supported
+*** .pdf - PDF(Portable Document Format)
+*** .ps - PS(Post Script)
+*** .eps - Encapsulated Post Script
+    ~to be used with~ LaTeX ~documents~
+*** .svg - Scalable Vector Graphics
+    ~vector graphics~
+*** .png - Portable Network Graphics
+    ~supports transparency~
+* Exercise 1
+  Save the sine plot in the format EPS which can be embedded in LaTeX documents.
+* Solution 1
+  #+begin_src python
+    savefig('/home/fossee/sine.eps')
+  #+end_src
+* Exercise 2
+  Save the sine plot in PDF, PS and SVG formats.
+
+* Summary
+  You should now be able to
+  - Use ~savefig()~ function
+  - Save plots in different formats
+      - PDF
+      - PS
+      - PNG
+      -	SVG
+      - EPS
+  - Locating the files in file system.
+    
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
