@@ -1,8 +1,14 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+\textbf{Manipulating strings}
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
+String indexing starts from 0, like lists.
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+\lstinline|s = `Hello World'|\\
+\lstinline|s[0:5]| gives \texttt{Hello}\\
+\lstinline|s[6:]| gives \textt{World}\\
+\lstinline|s[6::2]| gives \textt{Wrd}\\
+
+\lstinline|s.replace('e', 'a')| returns a new string with all e's
+replaced by a.  
+
+\lstinline|s.lower()| and \lstinline|s.upper()| return new strings
+with all lower and upper case letters, respectively.

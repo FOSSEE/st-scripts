@@ -1,8 +1,12 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+\textbf{Accessing parts of arrays}
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
+\lstinline|C[i-1, j-1]| to access element i, j in C (mxn).
+\lstinline|C[i-1]| to access i^{th} row
+\lstinline|C[:, j-1]| to access j^{th} column
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+Assigning to accessed elements, changes them. 
+
+\lstinline|A[m:n:o]| accesses the rows from \lstinline|m|
+to \lstinline|n| (excluded) in steps of \lstinline|o|
+
+Similarly, \lstinline|C[m:n:o, p:q:r]|

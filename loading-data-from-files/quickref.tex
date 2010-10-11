@@ -1,8 +1,12 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+\textbf{Loading data from files}
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
+\lstinline|loadtxt('filename')| returns the columns of file in one
+sequence. 
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+\lstinline|x, y = loadtxt('filename', unpack=True)| to obtain a file
+with 2 columns in separate sequences. 
+
+\lstinline|loadtxt('filename', delimiter=';')|, if the file has
+columns separated by ';' instead of spaces/tabs. 
+
+
