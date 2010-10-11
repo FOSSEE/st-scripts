@@ -9,8 +9,16 @@
 Savefig
 =======
 
-Hello and welcome to the tutorial. In this tutorial you will learn how
-to save plots using Python.
+{{{ Show the first slide }}}
+
+Hello and welcome to the tutorial saving plots.
+
+{{{ switch to next slide, outline slide }}}
+
+In this tutorial you will learn how to save plots using Python. And
+saving in different formats, and locating the file in the file system.
+
+{{{ switch to next slide, a sine wave}}}
 
 Start your IPython interpreter with the command ::
 
@@ -38,9 +46,11 @@ Done! we have made a very basic sine plot, now let us see how to save
 the plot for future use so that you can embed the plot in your
 reports.
 
+{{{ switch to next slide, savefig() }}}
+
 {{{ Switch the focus to IPython interpreter window }}}
 
-For saving the plot, we will use savefig function, and it has to be
+For saving the plot, we will use ``savefig()`` function, and it has to be
 done with the plot window open. The statement is, ::
 
   savefig('/home/fossee/sine.png')
@@ -73,6 +83,8 @@ Yes, the file ``sine.png`` is here and let us check it.
 close it and return to IPython interpreter, make sure the plot window
 is still open, also don't close the file browser window }}}
 
+{{{ switch to next slide, More on savefig() }}}
+
 So in-order to save a plot, we use ``savefig`` function. ``savefig``
 can save the plot in many formats, such as pdf - portable document
 format, ps - post script, eps - encapsulated post script, svg -
@@ -81,14 +93,18 @@ support transparency etc.
 
 .. #[[slide must give the extensions for the files - Anoop]]
 
+{{{ switch to next slide, exercise 1 }}}
+
 Let us now try to save the plot in eps format. ``eps`` stands for
 encapsulated post script, and it can be embedded in your latex
-documents.
+documents. Pause here and try to figure it out yourself.
 
 {{{ Switch focus to the already open plot window }}}
 
 We still have the sine plot with us, and now let us save the plot as
 ``sine.eps``.
+
+{{{ switch to next slide, solution 1 }}}
 
 {{{ Switch focus to IPython interpreter }}}
 
@@ -105,10 +121,17 @@ seconds and then double click and open the file }}}
 
 Yes! the new file ``sine.eps`` is here.
 
+{{{ switch to next slide, exercise 2 }}}
+
 Now you may try saving the same in pdf, ps, svg formats.
 
-Let us review what we have learned in this session! We have learned to
-save plots in different formats using the function ``savefig()``.
+{{{ Switch to summary slide }}}
+
+This brings us to the end of this tutorial, in this tutorial we
+learned to save plots using the function ``savefig()``. Saving the
+plots in different formats and locating the files in the file system.
+
+{{{ switch to Thank you slide }}}
 
 Thank you!
 
