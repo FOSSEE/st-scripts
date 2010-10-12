@@ -1,0 +1,285 @@
+% Created 2010-10-12 Tue 12:55
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Getting started with for}
+\author{FOSSEE}
+\date{}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item \texttt{for} loop in Python.
+\item Blocks of code in Python.
+
+\begin{itemize}
+\item Indentation
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Whitespace in Python}
+\label{sec-2}
+
+\begin{itemize}
+\item Whitespace is significant
+
+\begin{itemize}
+\item blocks are visually separated
+\end{itemize}
+
+\item Blocks are indented using 4 spaces
+\begin{verbatim}
+     Block A
+     Block A
+         Block B
+         Block B
+     Block A
+\end{verbatim}
+
+    \texttt{Block B} is an inner block and is indented using 4 spaces
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 1}
+\label{sec-3}
+
+  Write a \texttt{for} loop which iterates through a list of numbers and find
+  the square root of each number.
+\begin{verbatim}
+   
+\end{verbatim}
+
+  The numbers are,
+\begin{verbatim}
+   1369, 7225, 3364, 7056, 5625, 729, 7056, 
+   576, 2916
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-4}
+
+\begin{itemize}
+\item Open text editor and type the following code
+\end{itemize}
+
+\begin{verbatim}
+numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 
+           576, 2916]
+
+for each in numbers:
+    print "Square root of", each, "is", sqrt(each)
+
+print "This is not in for loop!"
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Save \& run script}
+\label{sec-5}
+
+\begin{itemize}
+\item Save the script as \texttt{list\_roots.py}
+\item Run in \texttt{ipython} interpreter as,
+\begin{verbatim}
+     In []: %run -i list_roots.py
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 2}
+\label{sec-6}
+
+  From the given numbers make a list of perfect squares and a list of those which are not.
+\begin{verbatim}
+   
+\end{verbatim}
+
+  The numbers are,
+\begin{verbatim}
+   7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
+   7056, 576, 2916
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 3 (indentation in \texttt{ipython})}
+\label{sec-7}
+
+  Print the square root of numbers in the list.
+\begin{verbatim}
+   
+\end{verbatim}
+
+  Numbers are,
+\begin{verbatim}
+   7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
+   7056, 576, 2916
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Indentation in \texttt{ipython}}
+\label{sec-8}
+
+\begin{verbatim}
+   In []: numbers = [1369, 7225, 3364, 7056, 5625, 
+     ...:  729, 7056, 576, 2916]
+\end{verbatim}
+
+
+\begin{verbatim}
+   In []: for each in numbers:
+     ...:     
+\end{verbatim}
+
+  Note the four spaces here
+\begin{verbatim}
+   
+   
+   
+   
+   
+   
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Indentation in \texttt{ipython} (cont'd)}
+\label{sec-9}
+
+\begin{verbatim}
+   In []: numbers = [1369, 7225, 3364, 7056, 5625, 
+     ...:  729, 7056, 576, 2916]
+   In []: for each in numbers:
+     ...:     
+\end{verbatim}
+
+  Note the four spaces here
+\begin{verbatim}
+   
+\end{verbatim}
+
+  Now type the rest of the code
+\begin{verbatim}
+     ...:     print "Square root of", each, 
+     ...:     print "is", sqrt(each)
+     ...:     
+     ...:     
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Indentation in \texttt{python} interpreter}
+\label{sec-10}
+
+  Find out the cube of all the numbers from 1 to 10.
+\begin{verbatim}
+   
+\end{verbatim}
+
+  \emph{do it in the python interpreter}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Indentation in \texttt{python} interpreter (cont'd)}
+\label{sec-11}
+
+\begin{verbatim}
+>>> for i in range(1, 11):
+...     print i, "cube is", i**3
+...
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{\texttt{range()} function}
+\label{sec-12}
+
+\begin{itemize}
+\item in built function in Python
+\item generates a list of integers
+
+\begin{itemize}
+\item \emph{syntax:} range([start,] stop[, step])
+\item \emph{example:}
+
+\begin{itemize}
+\item range(1, 20) - \emph{generates integers from 1 to 20}
+\item range(20) - \emph{generates integers from 0 to 20}
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 4}
+\label{sec-13}
+
+  Print all the odd numbers from 1 to 50.
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-14}
+
+\begin{itemize}
+\item blocks in \texttt{python}
+\item indentation
+\item blocks in \texttt{ipython} interpreter
+\item \texttt{for} loop
+\item iterating over list using \texttt{for} loop
+\item \texttt{range()} function
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-15}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

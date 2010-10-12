@@ -1,0 +1,146 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Getting started with for
+#+AUTHOR: FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - ~for~ loop in Python.
+  - Blocks of code in Python.
+    - Indentation
+* Whitespace in Python
+  - Whitespace is significant
+    - blocks are visually separated
+  - Blocks are indented using 4 spaces
+    : Block A
+    : Block A
+    :     Block B
+    :     Block B
+    : Block A
+    ~Block B~ is an inner block and is indented using 4 spaces
+* Exercise 1
+  Write a ~for~ loop which iterates through a list of numbers and find
+  the square root of each number.
+  : 
+  The numbers are,
+  : 1369, 7225, 3364, 7056, 5625, 729, 7056, 
+  : 576, 2916
+* Solution 1
+  - Open text editor and type the following code
+  #+begin_src python
+    numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 
+               576, 2916]
+
+    for each in numbers:
+        print "Square root of", each, "is", sqrt(each)
+
+    print "This is not in for loop!"
+  #+end_src
+* Save \& run script
+  - Save the script as ~list_roots.py~
+  - Run in ~ipython~ interpreter as,
+    : In []: %run -i list_roots.py
+* Exercise 2
+  From the given numbers make a list of perfect squares and a list of those which are not.
+  : 
+  The numbers are,
+  : 7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
+  : 7056, 576, 2916
+* Exercise 3 (indentation in ~ipython~)
+  Print the square root of numbers in the list.
+  : 
+  Numbers are,
+  : 7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
+  : 7056, 576, 2916
+* Indentation in ~ipython~
+  : In []: numbers = [1369, 7225, 3364, 7056, 5625, 
+  :   ...:  729, 7056, 576, 2916]
+
+  : In []: for each in numbers:
+  :   ...:     
+  Note the four spaces here
+  : 
+  : 
+  : 
+  : 
+  : 
+  : 
+* Indentation in ~ipython~ (cont'd)
+  : In []: numbers = [1369, 7225, 3364, 7056, 5625, 
+  :   ...:  729, 7056, 576, 2916]
+  : In []: for each in numbers:
+  :   ...:     
+  Note the four spaces here
+  : 
+  Now type the rest of the code
+  :   ...:     print "Square root of", each, 
+  :   ...:     print "is", sqrt(each)
+  :   ...:     
+  :   ...:     
+* Indentation in ~python~ interpreter
+  Find out the cube of all the numbers from 1 to 10.
+  : 
+  /do it in the python interpreter/
+* Indentation in ~python~ interpreter (cont'd)
+  #+begin_src python
+  >>> for i in range(1, 11):
+  ...     print i, "cube is", i**3
+  ... 
+  #+end_src
+* ~range()~ function
+  - in built function in Python
+  - generates a list of integers
+    - /syntax:/ range([start,] stop[, step])
+    - /example:/
+      - range(1, 20) - /generates integers from 1 to 20/
+      - range(20) - /generates integers from 0 to 20/
+* Exercise 4
+  Print all the odd numbers from 1 to 50.
+* Summary
+  - blocks in ~python~
+  - indentation
+  - blocks in ~ipython~ interpreter
+  - ~for~ loop
+  - iterating over list using ~for~ loop
+  - ~range()~ function
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

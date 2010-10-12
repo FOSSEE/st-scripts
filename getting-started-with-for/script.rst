@@ -43,6 +43,11 @@ The best practice is to indent the code using four spaces.
                 for indentation. Do that while typing so that they can
                 actually see what is being typed.
 
+As you can see in the slide, ``Block B`` is an inner block and it is
+indented using 4 spaces, and after ``Block B`` the next statement in
+``Block A`` starts from the same indentation level of other ``Block
+A`` statements.
+
 Now let us move straight into ``for`` loop.
 
 {{{ switch to next slide, problem statement of exercise 1 }}}
@@ -84,6 +89,8 @@ following.
 .. #[nishanth]: I don't see a use case to append the sq_root to
                 square_roots. It is only complicating stuff.
                 Simply iterate and print.
+
+{{{ switch to next slide, save and run script }}}
 
 {{{ save the script }}}
 
@@ -151,6 +158,8 @@ Now let us try a simple one, to print the square root of numbers in
 the list. And this time let us do it right in the IPython
 interpreter. 
 
+{{{ switch to next slide, Indentation in ``ipython`` }}}
+
 {{{ switch focus to the IPython interpreter }}}
 
 So let us start with making a list. Type the following
@@ -166,17 +175,22 @@ dots. Please note that IPython automatically indents the block. The
 four dots tell you that you are inside a block. Now type the rest of
 the ``for`` loop,
 
+{{{ switch to next slide, Indentation in ``ipython`` (cont'd) }}}
+
 .. #[Nishanth]: Tell that IPython does auto indentation.
 
 ::
 
-        print "Square root of", each, "is", sqrt(each)
+        print "Square root of", each,
+	print "is", sqrt(each)
 
 Now we have finished the statements in the block, and still the
 interpreter is showing four dots, which means you are still inside the
 block. To exit from the block press return key or the enter key twice
 without entering anything else. It printed the square root of each
 number in the list, and that is executed in a ``for`` loop.
+
+{{{ switch to next slide, Indentation in ``python`` interpreter }}}
 
 Now, let us find the cube of all the numbers from one to ten. But this
 time let us try it in the vanilla version of Python interpreter.
@@ -186,6 +200,9 @@ Start the vanilla version of Python interpreter by issuing the command
 
 {{{ open the python interpreter in the terminal using the command
 python to start the vanilla Python interpreter }}}
+
+{{{ switch to next slide, Indentation in ``python`` interpreter
+(cont'd) }}}
 
 Start with,
 ::
@@ -214,6 +231,8 @@ block, hit enter once again
                 Then say this list can also be generated using
                 the range function and hence introduce range.
 
+{{{ switch to the next slide, ``range()`` function }}}
+
 Okay! so the main thing here we learned is how to use Python
 interpreter and IPython interpreter to specify blocks. But while we
 were generating the multiplication table we used something new,
@@ -225,11 +244,13 @@ specify will not be included in the ``list``.
 .. #[Nishanth]: Show some examples of range without the step argument
                 May be give an exercise with negative numbers as arguments
 
-Now, let us print all the odd numbers from 1 to 50. Let us do it in
-our IPython interpreter for ease of use.
-
 {{{ switch to next slide, problem statement of the next problem in
 solved exercises }}}
+
+Now, let us print all the odd numbers from 1 to 50. Pause here and try
+to solve the problem yourself.
+
+Let us do it in our IPython interpreter for ease of use.
 
 {{{ switch focus to ipython interpreter }}}
 
@@ -248,7 +269,7 @@ the range. Note that the sequence doesn't include the ending
 number. The third parameter is for stepping through the sequence. Here
 we gave two which means we are skipping every alternate element.
 
-{{{ switch to next slide, recap slide }}}
+{{{ switch to next slide, summary slide }}}
 
 Thus we come to the end of this tutorial. We learned about blocks in
 Python, indentation, blocks in IPython, for loop, iterating over a
