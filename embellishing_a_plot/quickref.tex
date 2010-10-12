@@ -1,11 +1,34 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+Plot with a specific color. Ex: RED :\\
+{\ex \lstinline|    plot(x, f(x), "r")|}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+Plot with a specific style. Ex: DASHED :\\
+{\ex \lstinline|    plot(x, f(x), "--")|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+Plot with specific color and style. Ex: RED DASHED :\\
+{\ex \lstinline|    plot(x, f(x), "r--")|}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}
+Plot with a specific line thickness:\\
+{\ex \lstinline|    plot(x, f(x), linewidth=3)|}
+
+Adding title:\\
+{\ex \lstinline|    title("Plot of sin(x)")|}
+
+labelling the axes:\\
+{\ex \lstinline|    xlabel("x")|}
+{\ex \lstinline|    ylabel("f(x)")|}
+
+Adding annotations:\\
+{\ex \lstinline|    annotate("localmax", xy=(1, 2))|}
+
+Using LaTeX typesetting on any text:\\
+{\ex \lstinline|    title("Plot of $sin(x)$")|}
+
+Getting the axes limits:\\
+{\ex \lstinline|    xlim()|}
+{\ex \lstinline|    ylim()|}
+
+Setting the axes limits:\\
+{\ex \lstinline|    xlim(x_min, x_max)|}
+{\ex \lstinline|    ylim(y_min, y_max)|}
+
+
