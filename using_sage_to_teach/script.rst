@@ -1,10 +1,10 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - 
-   C - 
-   D - 
+.. By the end of this tutorial you will be able to
+
+..  * use ``@interact`` feature of SAGE
+..  * learn to share, publish and edit SAGE worksheets
 
 .. Prerequisites
 .. -------------
