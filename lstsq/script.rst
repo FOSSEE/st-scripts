@@ -1,11 +1,6 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - 
-   C - 
-   D - 
-
 .. Plotting a least square fit line
 
 .. Prerequisites
@@ -13,6 +8,7 @@
 
 ..   1. Basic Plotting
 ..   2. Arrays
+..   3. Loading data from files 
      
 .. Author              : Nishanth Amuluru
    Internal Reviewer   : 

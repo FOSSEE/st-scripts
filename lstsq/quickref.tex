@@ -1,11 +1,15 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+Creating a matrix with all ones:\\
+{\ex \lstinline|    o = ones_like(l)|}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+Creating the A matrix:\\
+{\ex \lstinline|    A = array(l, ones_like(l)).T|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+Computing least square:\\
+{\ex \lstinline|    result = lstsq(A, tsq)|}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}
+Obtaining the m and c values:\\
+{\ex \lstinline|    m, c = result[0]|}
+
+Computing the least square fit line:\\
+{\ex \lstinline|    lst_line = m * l + c|}
+
