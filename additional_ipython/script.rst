@@ -1,11 +1,6 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - 
-   C - 
-   D - 
-
 .. By the end of this tutorial you will be able to
 
 .. #. Retrieve your ipython history 
