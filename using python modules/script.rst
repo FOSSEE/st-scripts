@@ -17,7 +17,8 @@ Welcome to the spoken tutorial on using python modules.
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial, we will see how to run python scripts from command
-line, importing modules, importing scipy and pylab modules.
+line, importing modules, importing scipy and pylab modules. And also
+see the Python standard library.
 
 {{{ switch to next slide on executing python scripts from command line }}}
 
@@ -48,6 +49,8 @@ terminal and navigate to the directory where hello.py is,
 
 {{{ open terminal and navigate to directory where hello.py was saved }}}
 
+{{{ switch to next slide }}}
+
 now run the Python script as,
 ::
 
@@ -58,6 +61,8 @@ It executed the script and we got the output ``Hello World!``.
 {{{ highlight ``python filename`` syntax on slide while narrating }}}
 
 The syntax is python space filename.
+
+{{{ switch to next slide, four plot problem }}}
 
 Now recall the four plot problem where we plotted four plots in a single
 figure. Let us run that script from command line.
@@ -87,6 +92,8 @@ starts. And thus we don't have to explicitly import modules.
 So now let us try to fix the problem and run the script in command
 line,
 
+{{{ switch to next slide, fix ``linspace`` problem }}}
+
 add the following line as the first line in the script,
 {{{ add the line as first line in four_plot.py and save }}}
 ::
@@ -100,6 +107,9 @@ Now let us run the script again,
 
 Now it gave another error plot not defined, let us edit the file again
 and add the line below the line we just added,
+
+{{{ switch to next slide, fix ``plot`` problem }}}
+
 {{{ add the line as second line in four_plot.py and save }}}
 ::
 
@@ -114,6 +124,8 @@ Yes! it worked. So what did we do?
 
 We actually imported the required modules using the keyword ``import``.
 It could have also be done as,
+
+{{{ switch to next slide, better way of fixing }}}
 
 {{{ highlight the following in slide and say it loud }}}
 ::
@@ -130,29 +142,26 @@ asterisk or star. As if we use asterisk to import from a particular
 module then it will replace any existing functions with the same name
 in our name-space.
 
+{{{ switch to next slide, Instead of ``*`` }}}
+
 So let us modify four_plot.py as,
 {{{ delete the first two lines and add the following }}}
 ::
 
     from scipy import linspace, pi, sin
-    from pylab import plot, legend, annotate, title, show
-    from pylab import xlim, ylim
+    from pylab import plot, legend, annotate
+    from pylab import xlim, ylim, title, show
+
+Now let us try running the code again as,
+::
+
+    python four_plot.py
+
+It works! In this method we actually imported the functions to the
+current name-space, and there is another method of doing it. And that
+is,
 
 {{{ switch to next slide }}}
-it could also be done as,
-
-..     import scipy
-..     import pylab
-..     x = scipy.linspace(-5*scipy.pi, 5*scipy.pi, 500)
-..     pylab.plot(x, x, 'b')
-..     pylab.plot(x, -x, 'b')
-..     pylab.plot(x, scipy.sin(x), 'g', linewidth=2)
-..     pylab.plot(x, x*scipy.sin(x), 'r', linewidth=3)
-..     pylab.legend(['x', '-x', 'sin(x)', 'xsin(x)'])
-..     pylab.annotate('origin', xy = (0, 0))
-..     pylab.xlim(-5*scipy.pi, 5*scipy.pi)
-..     pylab.ylim(-5*scipy.pi, 5*scipy.pi)
-
 
 Notice that we use ``scipy.pi`` instead of just ``pi`` as in the
 previous method, and the functions are called as ``pylab.plot()`` and
@@ -211,7 +220,7 @@ Find more information at Python Library reference,
 The modules pylab, scipy, Mayavi are not part of the standard python
 library.
 
-{{{ switch to next slide, recap }}}
+{{{ switch to next slide, summary }}}
 
 This brings us to the end of this tutorial, in this tutorial we
 learned running scripts from command line, learned about modules, saw
