@@ -1,11 +1,13 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - Will learn what are tuples and why they are needed
-       Will learn the various methods of accessing elements in tuples
-   C - 
-   D - 
+.. By the end of this tutorial, you will be able to 
+
+.. * Create sets from lists
+.. * Perform union, intersection and symmetric difference operations
+.. * Check if a set is a subset of other
+.. * understand various similarities with lists like length and containership
+
 
 .. Prerequisites
 .. -------------

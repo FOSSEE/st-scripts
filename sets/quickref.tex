@@ -1,11 +1,23 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+Creating a set:\\
+{\ex \lstinline|   p10 = set([2, 3, 5, 7]) |t}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+Creating set from a tuple or list:\\
+{\ex \lstinline|   s = set(var_name)|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+Operations on sets. Ex: UNION:\\
+{\ex \lstinline|   s1 \| s2 |}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}
+Other operations available:\\
+
+\begin{lstlising}
+\item "\&" -- Intersection
+\item "-" -- Difference
+\item "\^" -- Symmetric Difference
+\item "<" -- Subset
+\end{lstlisting}
+
+Checking for containership:\\
+{\ex \lstinline|    x in p10|}
+
+Finding the no.of elements:\\
+{\ex \lstinline|    len(p10)|}
