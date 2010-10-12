@@ -1,16 +1,10 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - 
-   C - 
-   D - 
-
 .. #. How to print some value
 .. #. How to print using modifiers
 .. #. How to take input from user
 .. #. How to display a prompt to the user before taking the input
-
 
 .. Prerequisites
 .. -------------
