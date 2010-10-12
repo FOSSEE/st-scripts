@@ -1,10 +1,10 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B -
-   C - 
-   D - 
+.. By the end of this tutorial you will be able to 
+
+..  * Use SAGE for 2D plotting
+..  * Use SAGE for 3D plotting
 
 .. Prerequisites
 .. -------------

@@ -1,11 +1,30 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+Plot simple 2D functions on a linear range of x:\\
+{\ex \lstinline|    plot(f(x), (x, 0, 2*pi)|}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+Plot 2D plots where x and y are functions of another variable:\\
+{\ex \lstinline|    parametric_plot((f_x, f_y), (x, 0, 2*pi), (y, 0, 2*pi))|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+Generate a sequence of points with a given seperation:\\
+{\ex \lstinline|    points = srange(2.5, 5.5, 0.25)|}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}
+Plot a line joining a list of pairs of points:\\
+{\ex \lstinline|    line(list_pairs)|}
+
+Show the plots:\\
+{\ex \lstinline|    show(plot_name)|}
+
+Show multiple plots:\\
+{\ex \lstinline|    show(p1+p2+p3)|}
+
+Set x-axis limits:\\
+{\ex \lstinline|    show(p1+p2, xmim=0, xmax=2*pi)|}
+
+Set y-axis limits:\\
+{\ex \lstinline|    show(p1+p2, ymim=-1.2, ymax=1.2)|}
+
+Plot 3D functions:\\
+{\ex \lstinline|    plot3d(f(x, y), (x, 0, 2*pi), (y, -1, 1))|}
+
+Plot 3D functions where x, y, z are functions of another variable:\\
+{\ex \lstinline|    parametric_plot3d((f_x, f_y, f_z), (t, 0, 10))|}
+

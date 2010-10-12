@@ -1,10 +1,11 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - 
-   C - 
-   D - 
+.. By the end of this tutorial you will be able to
+
+..  * Split a string using a delimiter
+..  * remove the whitespace around the string
+..  * convert the variables from one type to other
 
 .. Prerequisites
 .. -------------
