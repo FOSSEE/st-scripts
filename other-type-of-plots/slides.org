@@ -1,0 +1,137 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Other type of plots
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Scatter plot
+  - Pie chart
+  - Bar chart
+  - Log-log Plot
+  - ~matplotlib~ help
+* Exercise 1: Scatter plot
+  Plot a scatter plot showing the percentage profit of Company A from the year 2000
+  to 2010. The data for the same is available in the file ~company-a-data.txt~.
+* ~scatter()~ function
+  - /Syntax :/ scatter(x,y)
+    - x, a sequence of data
+    - y, a sequence of data, the same length of x
+  : In []: scatter(year, profit)
+* Exercise 2: Scatter plot
+  Plot a scatter plot of the same data in ~company-a-data.txt~ with red diamond markers.
+  : 
+  *Clue* - /try scatter? in your ipython interpreter/
+* Pie chart
+  Pie chart - a circle graph divided into sectors, illustrating proportion. 
+* Exercise 3: Pie chart
+  Plot a pie chart representing the profit percentage of company A, with the data 
+  from the file ~company-a-data.txt~.
+  : 
+  /(we can reuse the data in lists year and profit)/
+* ~pie()~ function
+  - /Syntax :/ pie(values, labels=labels)
+    - values, the data to be plotted
+    - labels, the label for each wedge in the pie chart
+  : In []: pie(profit, labels=year)
+* Exercise 4: Pie chart
+  Plot a pie chart with the same data with colors for each wedges as white, red, 
+  magenta, yellow, blue, green, cyan, yellow, magenta, and blue.
+  : 
+  *Clue* - /try pie? in your ipython interpreter/
+* Bar chart
+  Bar chart - a chart with rectangular bars with lengths proportional 
+  to the values that they represent.
+* Exercise 5: Bar chart
+  Plot a bar chart representing the profit percentage of company A, with the data 
+  from the file ~company-a-data.txt~.
+  : 
+  /(we can reuse the data in lists year and profit)/
+* ~bar()~ function
+  - /Syntax :/ bar(x, y)
+    - x, a sequence of data
+    - y, a sequence of data, the same length of x
+  : In []: bar(year, profit)
+* Exercise 6: Bar chart
+  Plot a bar chart which is not filled and which is hatched with 
+  #+begin_latex
+    $45^o$
+  #+end_latex
+  slanting lines as shown in the image. The data for the chart may be
+  obtained from the file ~company-a-data.txt~.
+  #+begin_latex
+   \begin{center}
+      \includegraphics[scale=0.3]{bar-chart-hatch}    
+    \end{center}
+  #+end_latex
+  *Clue* - /try bar? in your ipython interpreter/
+* Log-log graph
+  - Log-log graph
+    - 2-dimensional graph.
+    - uses logarithmic scales on both axes.
+    - graph appears as straight line due to non-linear scaling.
+* Exercise 7:
+  Plot a log-log chart of 
+  #+begin_latex
+    $y = 5x^3$
+  #+end_latex
+  for x from 1-20.
+* ~loglog()~ function
+  - /Syntax :/ loglog(x, y)
+    - x, a sequence of data
+    - y, a sequence of data, the same length of x
+  : In []: loglog(x, y)
+* Getting help on ~matplotlib~
+  - Help 
+    - [[matplotlib.sourceforge.net/contents.html]]
+  - More plots
+    - [[matplotlib.sourceforge.net/users/screenshots.html]]
+    - [[matplotlib.sourceforge.net/gallery.html]]
+
+* Summary
+  - Scatter plot (~scatter()~)
+  - Pie chart (~pie()~)
+  - Bar chart (~bar()~)
+  - Log-log plot (~loglog()~)
+  - ~matplotlib~ online help
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
