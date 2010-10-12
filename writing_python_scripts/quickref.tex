@@ -1,11 +1,9 @@
-Creating a tuple:\\
-{\ex \lstinline|    t = (1, "hello", 2.5)|}
+See where python searches for modules:\\
+{\ex \lstinline|    sys.path|}
 
-Accessing elements of tuples:\\
-{\ex \lstinline|    t[index] Ex: t[2]|}
+Include our own path in PYTHONPATH:\\
+{\ex \lstinline|    sys.path.append(our_path)|}
 
-Accessing slices of tuples:\\
-{\ex \lstinline|    t[start:stop:step]|}
+Run certian code only if executed and not if imported:\\
+{\ex \lstinline|    if __name__=="__main__": #do something|}
 
-Swapping values:\\
-{\ex \lstinline|    a, b = b, a|}

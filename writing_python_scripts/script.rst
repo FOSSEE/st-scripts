@@ -1,8 +1,15 @@
 .. Objectives
 .. ----------
 
+.. By the end of this tutorial, you will be able to 
+
+..  * Understand what is importing
+..  * Write your own Python modules
+..  * Understand the ``__name__=="__main__"`` idiom
+
 .. Prerequisites
 .. -------------
+.. 1. Using Python modules
      
 .. Author              : Nishanth Amuluru
    Internal Reviewer   : 
