@@ -1,7 +1,32 @@
-Hello friends. Welcome to this spoken tutorial on Getting started with
-strings.
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you should know --
+
+..   1. How to define strings
+..   #. Different ways of defining a string
+..   #. How to concatenate strings 
+..   #. How to print a string repeatedly 
+..   #. Accessing individual elements of the string
+..   #. Immutability of strings
+
+.. Prerequisites
+.. -------------
+
+.. 1. getting started with ipython
+     
+.. Author              : Madhu
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 {{{ Show the slide containing the title }}}
+
+Hello friends. Welcome to this spoken tutorial on Getting started with
+strings.
 
 {{{ Show the slide containing the outline }}}
 
@@ -106,7 +131,7 @@ This brings us to the end of another session. In this tutorial session
 we learnt
 
   * How to define strings
-  * Different types of defining a string
+  * Different ways of defining a string
   * String concatenation and repeatition
   * Accessing individual elements of the string
   * Immutability of strings
@@ -116,10 +141,5 @@ we learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
- 
-.. Author              : Madhu
-   Internal Reviewer 1 :         [potential reviewer: Nishanth]
-   Internal Reviewer 2 :         [potential reviewer: Amit]
-   External Reviewer   :
+Thank you!
 
