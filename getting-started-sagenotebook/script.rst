@@ -1,3 +1,35 @@
+.. Objectives
+.. ----------
+
+.. Clearly state the objectives of the LO (along with RBT level)
+
+.. By the end of this tutorial, you should -- 
+
+..   #. Know what Sage and Sage notebook are.
+..   #. Be able to start a Sage shell or notebook
+..   #. Be able to start using the notebook
+..   #. Be able to create new worksheets 
+..   #. Know about the menu options available 
+..   #. Know about the cells in the worksheet
+..   #. Be able to evaluate cells, create and delete cells, navigate them.
+..   #. Be able to make annotations in the worksheet
+..   #. Be able to use tab completion. 
+..   #. Be able to use code from other languages in the cells. 
+
+.. Prerequisites
+.. -------------
+
+.. None. 
+     
+.. Author              : Madhu
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+
+Script
+------
+
 Hello friends. Welcome to this spoken tutorial on Getting started with
 sage and sage notebook.
 
@@ -286,10 +318,6 @@ learnt. In this session we learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
  
-.. Author              : Madhu
-   Internal Reviewer 1 :         [potential reviewer: Anoop]
-   Internal Reviewer 2 :         [potential reviewer: Puneeth]
-   External Reviewer   :
 

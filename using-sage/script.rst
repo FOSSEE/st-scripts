@@ -1,10 +1,29 @@
-========
- Script
-========
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial you will --
+
+.. 1. Get an idea of the range of things for which Sage can be used. 
+.. #. Know some of the functions for Calculus
+.. #. Get some insight into Graphs in Sage. 
+
+
+.. Prerequisites
+.. -------------
+
+.. Getting Started -- Sage  
+     
+.. Author              : Puneeth 
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 {{{ show the welcome slide }}}
 
-Welcome to this tutorial on using Sage.
+Hello Friends. Welcome to this tutorial on using Sage.
 
 {{{ show the slide with outline }}} 
 
@@ -194,4 +213,8 @@ available in Sage.
 We have looked at some of the functions available for Linear Algebra,
 Calculus, Graph Theory and Number theory.   
 
-Thank You!
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
+Thank you!
+

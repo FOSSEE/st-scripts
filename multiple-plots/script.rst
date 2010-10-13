@@ -1,6 +1,32 @@
-Hello friends. Welcome to this spoken tutorial on Multiple plots.
+.. Objectives
+.. ----------
+
+..  * How to draw multiple plots which are overlaid
+..  * the figure command
+..  * the legend command
+..  * how to switch between the plots and perform some operations on each
+..    of them like saving the plots and
+..  * creating and switching between subplots
+
+
+.. Prerequisites
+.. -------------
+
+.. 1. using the plot command interactively
+.. 2. embellishing a plot
+.. 3. saving plots
+     
+.. Author              : Madhu
+   Internal Reviewer 1 :         [potential reviewer: Puneeth]
+   Internal Reviewer 2 : Nishanth
+   External Reviewer   :
+
+Script
+------
 
 {{{ Show the slide containing the title }}}
+
+Hello friends. Welcome to this spoken tutorial on Multiple plots.
 
 {{{ Show the slide containing the outline }}}
 
@@ -353,10 +379,5 @@ we learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
  
-.. Author              : Madhu
-   Internal Reviewer 1 :         [potential reviewer: Puneeth]
-   Internal Reviewer 2 : Nishanth
-   External Reviewer   :
-

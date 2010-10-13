@@ -1,7 +1,27 @@
-Hello friends. Welcome to this spoken tutorial on Getting started with
-strings.
+.. Objectives
+.. ----------
+
+.. Clearly state the objectives of the LO (along with RBT level)
+
+.. Prerequisites
+.. -------------
+
+..   1. getting started with lists
+..   2. 
+..   3. 
+     
+.. Author              : Madhu
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 
 {{{ Show the slide containing the title }}}
+
+Hello friends. Welcome to this spoken tutorial on Manipulating Lists. 
+
 
 {{{ Show the slide containing the outline }}}
 
@@ -42,7 +62,7 @@ starting from 11 upto 19th. It is a very important to remember that
 when ever we specify a range of elements in Python the start index is
 included and end index is not included. So in the above case, 11 which
 was the element with the index 4 was included but 23 which was the
-element with index 8 was exluded.
+element with index 8 was excluded.
 
 Generalizing, we can obtain a slice of the list "p" from the index
 "start" upto the index "end" but excluding "end" with the following
@@ -171,10 +191,6 @@ we learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
  
-.. Author              : Madhu
-   Internal Reviewer 1 :         [potential reviewer: Nishanth]
-   Internal Reviewer 2 :         [potential reviewer: Amit]
-   External Reviewer   :
 
