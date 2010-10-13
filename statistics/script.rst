@@ -28,7 +28,7 @@ all the elements and dividing by length of the list.::
 
 sum function gives us the sum of the elements.::
 
-    mean_using_sum=sum_age_list/len(age_list)
+    mean_using_sum=float(sum_age_list)/len(age_list)
 
 This obviously gives the mean age but python has another 
 method for getting the mean. This is the mean function::
@@ -48,13 +48,15 @@ as if it was a single list of elements ::
     flattened_seq=[1,5,6,8,1,3,4,5]
     mean(flattened_seq)
 
-As you can see both the results are same. The other is mean 
+As you can see both the results are same. The other way is mean 
 of each column.::
    
    mean(two_dimension,0)
    array([ 1. ,  4. ,  5. ,  6.5])
 
-or along the two rows seperately.::
+we pass an extra argument 0 in that case.
+
+In case of getting mean along the rows the argument is 1::
    
    mean(two_dimension,1)
    array([ 5.  ,  3.25])
@@ -69,9 +71,16 @@ using the functions median and std::
       median(age_list)
       std(age_list)
 
+Median and std can also be calculated for two dimensional arrays along columns and rows just like mean.
 
-    
-Now lets apply this to a real world example ::
+       For example ::
+       
+       median(two_dimension,0)
+       std(two_dimension,1)
+
+This gives us the median along the colums and standard devition along the rows.
+       
+Now lets apply this to a real world example 
     
 We will a data file that is at the a path
 ``/home/fossee/sslc2.txt``.It contains record of students and their
@@ -124,7 +133,7 @@ Standard deviation. ::
 
 Now lets try and and get the mean for all the subjects ::
 
-     L=loadtxt('sslc2.txt',usecols=(3,4,5,6,7),delimiter=';')
+     L=loadtxt('/home/fossee/sslc2.txt',usecols=(3,4,5,6,7),delimiter=';')
      mean(L,0)
      array([ 73.55452504,  53.79828941,  62.83342759,  50.69806158,  63.17056881])
 

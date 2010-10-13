@@ -1,14 +1,29 @@
-Hello friends and welcome to the tutorial on Basic Data types and
-operators in Python.  
+.. Objectives
+.. ----------
+
+.. Learn about Python Data Structures and Operators.(Remembering)
+.. Use them to do basic operations.(Applying)
+
+.. Prerequisites
+.. -------------
+
+
+     
+.. Author              : Amit Sethi
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+Hello friends and welcome to the tutorial on Basic Data types and operators in Python.  
 {{{ Show the slide containing title }}}
 
 {{{ Show the slide containing the outline slide }}}
 
 In this tutorial, we shall look at::
 
- * Various Datatypes in Python
- * Operators with a little hands-on on how they can be applied to 
-   the different data types.
+ * Datatypes in Python
+ * Operators in Python
+
+with a little hands-on on how they can be applied to the different data types.
 
 
 
@@ -20,8 +35,8 @@ There are three built-in data types in python to represent numbers.
 These are:
 
   * Integers 
-  * Complex and 
-  * Boolean 
+  * float and 
+  * Complex 
 
 Lets first talk about integers. ::
 
@@ -81,7 +96,7 @@ The last data type in the list is complex number ::
   c = 3.2+4.6j
 
 as simple as that so essentialy its just a combination of two floats the 
-imaginary part being define by j notation instead of i. Complex numbers have a lot of functions specific to them.
+imaginary part being defined by j notation instead of i. Complex numbers have a lot of functions specific to them.
 Lets check these ::
 
   c.<Tab>
@@ -96,6 +111,10 @@ c.real gives the real part of the number and c.imag the imaginary.
 We can get the absolute value using the function ::
  
   abs(c)
+
+
+
+{{ Slide for memory aid }} 
 
 Python also has Boolean as a built-in type.
 
@@ -142,9 +161,41 @@ where as the expression ::
 
 gives the value False.
 
-Lets now discuss sequence data structures in python. Sequence 
+
+Lets now look at some operators available in Python to manipulate these data types.
+
+
+
+Python uses % for modulo operation ::
+
+    87 % 6
+and two stars for a exponent. ::
+
+    7**8
+
+
+In case one wishes to use the current value of variable in which the result is stored in the expression one can do that by putting the operator before `equal to`. ::
+
+   a=73
+   a*=34
+
+is same as ::
+   
+   a=a*34
+
+and ::
+
+    a/=23
+
+is same as ::
+
+   a=a/23
+
+
+Lets now discuss sequence data stypes in python. Sequence 
 datatypes are those in which elements are kept in a sequential 
 order. All the elements accessed using index. 
+
 
 {{{ slide to for memory aid }}}
 
@@ -207,7 +258,7 @@ unlike '[' for lists.::
 Because of their sequential property there are certain functions and 
 operations we can apply to all of them. 
 
-{{{ Slide for memory aid }}}
+
 
 The first one is accessing.
 
@@ -382,6 +433,21 @@ Thus we get a list joined on commas. Similarly we can do spaces.::
 
 Note that the list has to be a list of strings to apply join operation.
 
+With this we come to the end of this tutorial .
+
+In this tutorial we have discussed 
+
+1. Number Datatypes , integer,float and complex 
+2. Boolean and datatype and operators
+3. Sequence data types ,List,String and Tuple
+4. Accesing sequence
+5. Slicing sequences
+6. Finding length , sorting and reversing operations on sequences.
+7. Immutability.
+
+
+
+
 .. #[Nishanth]: string to list is fine. But list to string can be left for
                 string manipulations. Just say it requires some string 
                 manipulations and leave it there.
@@ -399,7 +465,3 @@ Thank You.
 
 
 
-Author              : Amit Sethi
-Internal Reviewer 1 : Nishanth
-Internal Reviewer 2 : 
-External Reviewer

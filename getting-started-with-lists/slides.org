@@ -1,0 +1,35 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+#+OPTIONS:   H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+
+#+TITLE: Plotting Data 
+#+AUTHOR: FOSSEE
+#+DATE: 2010-09-14 Tue
+#+EMAIL:     info@fossee.in
+
+# \author[FOSSEE] {FOSSEE}
+
+# \institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+# \date{}
+
+* Tutorial Plan 
+** How to create lists
+** Structure of lists  
+** Access list elements
+** Append elements to lists
+** Deleting elements from lists
+
+
+* Summary
+
+  l=[1,2,3,4]
+  l[-1]
+  l.append(5)
+  del(l[2])
+  len(l)
+
