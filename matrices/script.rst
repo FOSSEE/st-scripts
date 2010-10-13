@@ -1,17 +1,35 @@
-.. 4.3 LO: Matrices (3) [anoop] 
-.. -----------------------------
-.. * creating matrices 
-..   + direct data 
-..   + list conversion 
-..   + builtins - identitiy, zeros, 
-.. * matrix operations 
-..   + + - * / 
-..   + dot 
-..   + inv 
-..   + det 
-..   + eig 
-..   + norm 
-..   + svd 
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Create matrices using data.
+.. #. Create matrices from lists.
+.. #. Basic matrix operations.
+.. #. Use ``inv()`` function to find inverse of a matrix.
+.. #. Use ``det()`` function to find determinant of a matrix.
+.. #. Use ``eig()`` and ``eigvals()`` functions to find eigen values
+      and vectors
+.. #. Use ``norm()`` function to find norm of a matrix.
+.. #. Use ``svd()`` function to find singular value decomposition of a
+      matrix.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. getting started with lists.
+..   #. getting started with arrays.
+..   #. accessing part of arrays.
+
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 ========
 Matrices

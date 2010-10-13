@@ -1,12 +1,28 @@
-.. 3.2 LO: getting started with =for= (2) [anoop] 
-.. -----------------------------------------------
-.. * blocks in python 
-..   + (indentation) 
-.. * blocks in ipython 
-..   + ... prompt 
-..   + hitting enter 
-.. * =for= with a list 
-.. * =range= function 
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Write blocks of code in python.
+.. #. Use for loop.
+.. #. Use ``range()`` function.
+.. #. Write blocks in python interpreter
+.. #. Write blocks in ipython interpreter.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. getting started with lists.
+
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 =============================
 Getting started with for loop
@@ -286,9 +302,3 @@ list and then the ``range()`` function.
 {{{ switch to next slide, thank you slide }}}
 
 Thank you!
-
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1: Nishanth
-    Reviewer 2: Amit Sethi
-    External reviewer:
-

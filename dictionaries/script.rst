@@ -1,11 +1,27 @@
-.. 8.4 LO: dictionaries (2)
-.. ------------------------
-.. * empty 
-.. * filled 
-.. * accessing via keys 
-.. * .values(), .keys() 
-.. * in 
-.. * iteration
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Create dictionaries
+.. #. Add data to dictionaries
+.. #. Retrieve data
+.. #. Familiarize using ``.keys()`` and ``.values()`` methods
+.. #. Checking for container-ship of keys
+.. #. Iterating over elements
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython``  installed. 
+..   #. getting started with ``ipython``.
+..   #. basic datatypes.
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 ============
 Dictionaries
@@ -176,8 +192,3 @@ iterating over the dictionaries.
 {{{ switch to next slide, thank you slide }}}
 
 Thank you!
-
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1:
-    Reviewer 2:
-    External reviewer:

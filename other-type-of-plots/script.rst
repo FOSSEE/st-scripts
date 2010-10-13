@@ -1,10 +1,27 @@
-.. 2.4 LO: other types of plots (3) [anoop] 
-.. -----------------------------------------
-.. * scatter 
-.. * pie chart 
-.. * bar chart 
-.. * loglog
-.. * illustration of other plots, matplotlib help
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Create scatter plot
+.. #. Create pie charts
+.. #. Create bar charts
+.. #. Create log-log plots.
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. loading data from files
+..   #. plotting the data
+
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 ===================
 Other type of plots
@@ -222,8 +239,3 @@ and covered how to access the matplotlib online help.
 {{{ switch to the thank you slide }}}
 
 Thank you!
-
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1:
-    Reviewer 2:
-    External reviewer:

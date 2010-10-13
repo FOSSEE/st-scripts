@@ -1,27 +1,21 @@
-.. 4.1 LO: getting started with arrays (2) [anoop] 
-.. ------------------------------------------------
-.. * why arrays 
-..   + speed - simply say 
-..   + array level operations 
-.. * creating arrays 
-..   + direct data 
-..   + list conversion 
-..   + homogeneous 
-..   + builtins - identitiy, zeros, 
-.. * array operations 
-..   + =+ - * /= 
-
 .. Objectives
 .. ----------
 
-.. Clearly state the objectives of the LO (along with RBT level)
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Create arrays using data
+.. #. Create arrays from lists
+.. #. Basic array operations
+.. #. Creating identity matrix using ``identity()`` function.
+.. #. Learn about ``zeros()``, ``zeros_like()``, ``ones()``,
+      ``ones_like()`` functions.
 
 .. Prerequisites
 .. -------------
 
-..   1. Name of LO-1
-..   2. Name of LO-2
-..   3. Name of LO-3
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. getting started with lists.
      
 ..  Author: Anoop Jacob Thomas <anoop@fossee.in>
     Internal Reviewer   : Puneeth 

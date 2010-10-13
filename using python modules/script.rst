@@ -1,11 +1,27 @@
-.. 9.3 LO: using python modules (3)
-.. ---------------------------------
-.. * executing python scripts from command line
-.. * import
-.. * scipy
-.. * pylab
-.. * sys
-.. * STDLIB modules show off
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Execute python scripts from command line.
+.. #. Use import in scripts.
+.. #. Import scipy and pylab modules
+.. #. Use python standard modules and 3rd party modules.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``pylab`` installed. 
+..   #. using plot command interactively.
+..   #. embellishing a plot.
+..   #. saving plots.
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 ====================
 Using Python modules
@@ -229,8 +245,3 @@ the python standard library.
 {{{ switch to next slide, thank you slide }}}
 
 Thank you!
-
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1:
-    Reviewer 2:
-    External reviewer:
