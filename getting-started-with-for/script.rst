@@ -19,7 +19,8 @@
 
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Nishanth
+   Internal Reviewer(2): Amit
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
