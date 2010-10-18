@@ -1,0 +1,125 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Using python modules
+#+AUTHOR: FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Running python scripts from command line
+  - Importing python modules
+  - Importing scipy \& pylab modules
+  - About python standard library.
+* Running Python script from command line
+  - Create a script, open text editor and type the following
+    : print "hello world!"
+    : print 
+  - Save the script as ~hello.py~
+* Running Python script from command line (cont'd)
+  - Run the script
+    : $ python hello.py
+  /Syntax :/ *python filename*
+* Four plot problem
+  #+begin_latex
+    \begin{center}
+      \includegraphics[scale=0.4]{four_plot}    
+    \end{center}
+  #+end_latex   
+* Fix ~linspace()~ problem
+  : from scipy import *
+* Fix ~plot()~ problem
+  : from pylab import *
+* Better way of fixing
+  : from scipy import linspace
+  instead of
+  : from scipy import *
+    ~*~ means import all functions from name-space ~scipy~.
+* Instead of ~*~
+  :  from scipy import linspace, pi, sin
+  :  from pylab import plot, legend, annotate
+  :  from pylab import xlim, ylim, title, show
+  Is better than, ~from scipy import *~ \& ~from pylab import *~.
+* Another Fix
+  #+begin_src python
+    import scipy
+    import pylab
+    x = scipy.linspace(-5*scipy.pi, 5*scipy.pi, 500)
+    pylab.plot(x, x, 'b')
+    pylab.plot(x, -x, 'b')
+    pylab.plot(x, scipy.sin(x), 'g', linewidth=2)
+    pylab.plot(x, x*scipy.sin(x), 'r', linewidth=3)
+    pylab.legend(['x', '-x', 'sin(x)', 'xsin(x)'])
+    pylab.annotate('origin', xy = (0, 0))
+    pylab.xlim(-5*scipy.pi, 5*scipy.pi)
+    pylab.ylim(-5*scipy.pi, 5*scipy.pi)
+  #+end_src
+* Exercise 1
+  Write a python script to plot a sine wave from 
+  #+begin_latex
+    $-2\Pi$
+  #+end_latex
+  to 
+  #+begin_latex
+    $2\Pi$
+  #+end_latex
+  .
+* What is a module?
+  Module is simply a file containing Python definitions and
+  statements. Definitions from a module can be imported into other
+  modules or into the main module.
+* Python standard library
+  Python has a very rich standard library of modules.
+  - Few libraries
+    - Math: ~math~, ~random~
+    - Internet access: ~urllib2~, ~smtplib~
+    - System, Command line arguments: ~sys~
+    - Operating system interface: ~os~
+    - regular expressions: ~re~
+    - compression: ~gzip~, ~zipfile~, ~tarfile~
+  - More information
+    - [[http://docs.python.org/library]]
+* Summary
+  - Running scripts from command line
+  - Learned about modules
+    - importing modules
+  - Python standard library
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

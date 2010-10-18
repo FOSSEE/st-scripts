@@ -1,8 +1,8 @@
 Symbolics with Sage
 -------------------
 
-This tutorial on using Sage for symbolic calculation is brought to you
-by Fossee group.
+Hello friends and welcome to the tutorial on symbolics with sage.
+
 
 .. #[Madhu: Sounds more or less like an ad!]
 
@@ -56,7 +56,7 @@ Now if you type::
 
     sin(y)
 
-     sage simply returns the expression .
+    sage simply returns the expression .
 
 .. #[Madhu: Why is this line indented? Also full stop. When will you
      learn? Yes we can correct you. But corrections are for you to

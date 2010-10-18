@@ -1,7 +1,28 @@
-Hello friends. Welcome to this spoken tutorial on Getting started with
-strings.
+.. Objectives
+.. ----------
+
+.. Clearly state the objectives of the LO (along with RBT level)
+
+.. Prerequisites
+.. -------------
+
+..   1. Name of LO-1
+..   2. Name of LO-2
+..   3. Name of LO-3
+     
+.. Author              : Madhu
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+
+Script
+------
 
 {{{ Show the slide containing the title }}}
+
+Hello friends. Welcome to this spoken tutorial on Getting started with
+strings.
 
 {{{ Show the slide containing the outline }}}
 
@@ -167,10 +188,5 @@ statements in Python. In this tutorial session we learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
  
-.. Author              : Madhu
-   Internal Reviewer 1 :         [potential reviewer: Puneeth]
-   Internal Reviewer 2 :         [potential reviewer: Anoop]
-   External Reviewer   :
-

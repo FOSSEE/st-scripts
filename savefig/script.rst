@@ -1,9 +1,24 @@
-.. 2.5 LO: saving plots (2) 
-.. -------------------------
-.. * Outline 
-..   + basic savefig 
-..   + png, pdf, ps, eps, svg 
-..   + going to OS and looking at the file 
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Saving plots using ``savefig()`` function.
+.. #. Saving plots in different formats.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. using plot command interactively.
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 =======
 Savefig
@@ -134,8 +149,3 @@ plots in different formats and locating the files in the file system.
 {{{ switch to Thank you slide }}}
 
 Thank you!
-
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1:
-    Reviewer 2:
-    External reviewer:

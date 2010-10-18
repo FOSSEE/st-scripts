@@ -1,17 +1,35 @@
-.. 4.3 LO: Matrices (3) [anoop] 
-.. -----------------------------
-.. * creating matrices 
-..   + direct data 
-..   + list conversion 
-..   + builtins - identitiy, zeros, 
-.. * matrix operations 
-..   + + - * / 
-..   + dot 
-..   + inv 
-..   + det 
-..   + eig 
-..   + norm 
-..   + svd 
+.. Objectives
+.. ----------
+
+.. At the end of this tutorial, you will be able to 
+
+.. 1. Create matrices using data.
+.. #. Create matrices from lists.
+.. #. Basic matrix operations.
+.. #. Use ``inv()`` function to find inverse of a matrix.
+.. #. Use ``det()`` function to find determinant of a matrix.
+.. #. Use ``eig()`` and ``eigvals()`` functions to find eigen values
+      and vectors
+.. #. Use ``norm()`` function to find norm of a matrix.
+.. #. Use ``svd()`` function to find singular value decomposition of a
+      matrix.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. should have ``ipython`` and ``pylab`` installed. 
+..   #. getting started with ``ipython``.
+..   #. getting started with lists.
+..   #. getting started with arrays.
+..   #. accessing part of arrays.
+
+     
+.. Author              : Anoop Jacob Thomas <anoop@fossee.in>
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 
 ========
 Matrices
@@ -22,8 +40,10 @@ Welcome to the spoken tutorial on Matrices.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial we will learn about matrices, creating matrices and
-matrix operations.
+In this tutorial we will learn about matrices, creating matrices using
+direct data, by converting a list, matrix operations. Finding inverse
+of a matrix, determinant of a matrix, eigen values and eigen vectors
+of a matrix, norm and singular value decomposition of matrices.
 
 {{{ creating a matrix }}}
 
@@ -88,6 +108,8 @@ function ``multiply()``
 
     multiply(m3,m2)
 
+{{{ switch to next slide, Matrix multiplication (cont'd) }}}
+
 Now let us see an example for matrix multiplication. For doing matrix
 multiplication we need to have two matrices of the order n by m and m
 by r and the resulting matrix will be of the order n by r. Thus let us
@@ -108,11 +130,15 @@ in matrix object.
 
 {{{ switch to next slide, recall from arrays }}}
 
-As we already saw in arrays, the functions ``identity()``,
-``zeros()``, ``zeros_like()``, ``ones()``, ``ones_like()`` may also be
-used with matrices.
+As we already saw in arrays, the functions ``identity()`` which
+creates an identity matrix of the order n by n, ``zeros()`` which
+creates a matrix of the order m by n with all zeros, ``zeros_like()``
+which creates a matrix with zeros with the shape of the matrix passed,
+``ones()`` which creates a matrix of order m by n with all ones,
+``ones_like()`` which creates a matrix with ones with the shape of the
+matrix passed. These functions can also be used with matrices.
 
-{{{ switch to next slide, matrix operations }}}
+{{{ switch to next slide, more matrix operations }}}
 
 To find out the transpose of a matrix we can do,
 ::
@@ -177,8 +203,6 @@ we do,
 ::
 
     norm(im5)
-
-Euclidean norm is also called Frobenius norm.
 
 And to find out the Infinity norm of the matrix im5, we do,
 ::

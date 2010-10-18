@@ -1,0 +1,357 @@
+% Created 2010-10-12 Tue 14:28
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Matrices}
+\author{FOSSEE}
+\date{}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Creating Matrices
+
+\begin{itemize}
+\item using direct data
+\item converting a list
+\end{itemize}
+
+\item Matrix operations
+\item Inverse of matrix
+\item Determinant of matrix
+\item Eigen values and Eigen vectors of matrices
+\item Norm of matrix
+\item Singular Value Decomposition of matrices
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Creating a matrix}
+\label{sec-2}
+
+\begin{itemize}
+\item Creating a matrix using direct data
+\end{itemize}
+
+\begin{verbatim}
+   In []: m1 = matrix([1, 2, 3, 4])
+\end{verbatim}
+
+\begin{itemize}
+\item Creating a matrix using lists
+\end{itemize}
+
+\begin{verbatim}
+   In []: l1 = [[1,2,3,4],[5,6,7,8]]
+   In []: m2 = matrix(l1)
+\end{verbatim}
+
+\begin{itemize}
+\item A matrix is basically an array
+\end{itemize}
+
+\begin{verbatim}
+   In []: m3 = array([[5,6,7,8],[9,10,11,12]])
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Matrix operations}
+\label{sec-3}
+
+\begin{itemize}
+\item Element-wise addition (both matrix should be of order \texttt{mXn})
+\begin{verbatim}
+     In []: m3 + m2
+\end{verbatim}
+
+\item Element-wise subtraction (both matrix should be of order \texttt{mXn})
+\begin{verbatim}
+     In []: m3 - m2
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Matrix Multiplication}
+\label{sec-4}
+
+\begin{itemize}
+\item Matrix Multiplication
+\begin{verbatim}
+     In []: m3 * m2
+     Out []: ValueError: objects are not aligned
+\end{verbatim}
+
+\item Element-wise multiplication using \texttt{multiply()}
+\begin{verbatim}
+     multiply(m3, m2)
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Matrix Multiplication (cont'd)}
+\label{sec-5}
+
+\begin{itemize}
+\item Create two compatible matrices of order \texttt{nXm} and \texttt{mXr}
+\begin{verbatim}
+     In []: m1.shape
+\end{verbatim}
+
+
+\begin{itemize}
+\item matrix m1 is of order \texttt{1 X 4}
+\end{itemize}
+
+\item Creating another matrix of order \texttt{4 X 2}
+\begin{verbatim}
+     In []: m4 = matrix([[1,2],[3,4],[5,6],[7,8]])
+\end{verbatim}
+
+\item Matrix multiplication
+\begin{verbatim}
+     In []: m1 * m4
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Recall from \texttt{array}}
+\label{sec-6}
+
+\begin{itemize}
+\item The functions
+
+\begin{itemize}
+\item \texttt{identity(n)} - 
+      creates an identity matrix of order \texttt{nXn}
+\item \texttt{zeros((m,n))} - 
+      creates a matrix of order \texttt{mXn} with 0's
+\item \texttt{zeros\_like(A)} - 
+      creates a matrix with 0's similar to the shape of matrix \texttt{A}
+\item \texttt{ones((m,n))}
+      creates a matrix of order \texttt{mXn} with 1's
+\item \texttt{ones\_like(A)}
+      creates a matrix with 1's similar to the shape of matrix \texttt{A}
+\end{itemize}
+
+\end{itemize}
+
+  Can also be used with matrices
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{More matrix operations}
+\label{sec-7}
+
+  Transpose of a matrix
+\begin{verbatim}
+   In []: m4.T
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 1 : Frobenius norm \& inverse}
+\label{sec-8}
+
+  Find out the Frobenius norm of inverse of a \texttt{4 X 4} matrix.
+\begin{verbatim}
+   
+\end{verbatim}
+
+  The matrix is
+\begin{verbatim}
+   m5 = matrix(arange(1,17).reshape(4,4))
+\end{verbatim}
+
+\begin{itemize}
+\item Inverse of A,
+
+\begin{itemize}
+\item $A^{-1} = inv(A)$
+\end{itemize}
+
+\item Frobenius norm is defined as,
+
+\begin{itemize}
+\item $||A||_F = [\sum_{i,j} abs(a_{i,j})^2]^{1/2}$
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 2: Infinity norm}
+\label{sec-9}
+
+  Find the infinity norm of the matrix \texttt{im5}
+\begin{verbatim}
+   
+\end{verbatim}
+
+\begin{itemize}
+\item Infinity norm is defined as,
+       $max([\sum_{i} abs(a_{i})^2])$
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{norm()} method}
+\label{sec-10}
+
+\begin{itemize}
+\item Frobenius norm
+\begin{verbatim}
+     In []: norm(im5)
+\end{verbatim}
+
+\item Infinity norm
+\begin{verbatim}
+     In []: norm(im5, ord=inf)
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Determinant}
+\label{sec-11}
+
+  Find out the determinant of the matrix m5
+\begin{verbatim}
+   
+\end{verbatim}
+
+\begin{itemize}
+\item determinant can be found out using
+
+\begin{itemize}
+\item \texttt{det(A)} - returns the determinant of matrix \texttt{A}
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{eigen values \& eigen vectors}
+\label{sec-12}
+
+  Find out the eigen values and eigen vectors of the matrix \texttt{m5}.
+\begin{verbatim}
+   
+\end{verbatim}
+
+\begin{itemize}
+\item eigen values and vectors can be found out using
+\begin{verbatim}
+     In []: eig(m5)
+\end{verbatim}
+
+    returns a tuple of \emph{eigen values} and \emph{eigen vectors}
+\item \emph{eigen values} in tuple
+
+\begin{itemize}
+\item \texttt{In []: eig(m5)[0]}
+\end{itemize}
+
+\item \emph{eigen vectors} in tuple
+
+\begin{itemize}
+\item \texttt{In []: eig(m5)[1]}
+\end{itemize}
+
+\item Computing \emph{eigen values} using \texttt{eigvals()}
+\begin{verbatim}
+     In []: eigvals(m5)
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Singular Value Decomposition (\texttt{svd})}
+\label{sec-13}
+
+    $M = U \Sigma V^*$
+\begin{itemize}
+\item U, an \texttt{mXm} unitary matrix over K.
+\item $\Sigma$
+        , an \texttt{mXn} diagonal matrix with non-negative real numbers on diagonal.
+\item $V^*$
+        , an \texttt{nXn} unitary matrix over K, denotes the conjugate transpose of V.
+\item SVD of matrix \texttt{m5} can be found out as,
+\end{itemize}
+
+\begin{verbatim}
+     In []: svd(m5)
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-14}
+
+\begin{itemize}
+\item Matrices
+
+\begin{itemize}
+\item creating matrices
+\end{itemize}
+
+\item Matrix operations
+\item Inverse (\texttt{inv()})
+\item Determinant (\texttt{det()})
+\item Norm (\texttt{norm()})
+\item Eigen values \& vectors (\texttt{eig(), eigvals()})
+\item Singular Value Decomposition (\texttt{svd()})
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-15}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+
+  
+\end{frame}
+
+\end{document}
