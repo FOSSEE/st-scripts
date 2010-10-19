@@ -13,15 +13,23 @@
    Internal Reviewer   : 
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
-Hello friends and welcome to the tutorial on Basic Data types and operators in Python.  
+
+.. #[Puneeth: Fill in pre-requisites.]
+
+Hello friends and welcome to the tutorial on Basic Data types and operators
+in Python.
+
 {{{ Show the slide containing title }}}
 
 {{{ Show the slide containing the outline slide }}}
 
-In this tutorial, we shall look at::
+In this tutorial, we shall look at
 
  * Datatypes in Python
  * Operators in Python
+
+.. #[Puneeth: Use double colon only for code blocks.]
+.. #[Puneeth: include more details in the outline.]
 
 with a little hands-on on how they can be applied to the different data types.
 
@@ -34,9 +42,15 @@ There are three built-in data types in python to represent numbers.
 
 These are:
 
-  * Integers 
-  * float and 
-  * Complex 
+  * int for integers
+  * float for floating point numbers and 
+  * complex for complex numbers
+
+.. #[Puneeth: Changed to  int, float and complex.]
+
+.. #[Puneeth: Loss of consistency. You talk of built-in data types, but
+.. then you were calling them integers, floats and complex. Clean up
+.. required.]
 
 Lets first talk about integers. ::
 
@@ -44,8 +58,7 @@ Lets first talk about integers. ::
    a
 
 
-Thats it, there we have our first integer variable a.
-
+Now, we have our first integer variable a.
 
 
 If we now see ::
@@ -53,51 +66,58 @@ If we now see ::
    type(a)
    <type 'int'>
 
-This means that a is a type of int. Being an int data structure 
-in python means that there are various functions that this variable
-has to manipulate it different ways. You can explore these by doing,
+This means that a is a type of int. Being an int data structure in python
+means that there are various functions that this variable has to manipulate
+it different ways. You can explore these by doing,
 
   a.<Tab>
 
-
+.. #[Puneeth: Why are we suddenly talking of limits?
+.. Something like this would be better. 
+.. int data-type can hold integers of any size. for example - ]
 
 Lets see the limits of this int.
 
   b = 99999999999999999999
   b
 
-As you can see even when we put a value of 9 repeated 20 times 
-python did not complain. However when you asked python to print
-the number again it put a capital L at the end. Now if you check
-the type of this variable b, ::
+As you can see even when we put a value of 9 repeated 20 times python did
+not complain. However when you asked python to print the number again it
+put a capital L at the end. Now if you check the type of this variable b,
+::
 
   type(b)
   <type 'long'>
 
 
-The reason for this is that python recognizes large integer numbers
-by the data type long. However long type and integer type share there 
-functions and properties.
+The reason for this is that python recognizes large integer numbers by the
+data type long. However long type and integer type share there functions
+and properties.
 
-Lets now try out the second type in list called float.
+.. #[Puneeth: again, the clean-up that I talked of above. Decide if you are
+.. talking about the different type of numbers and the datatypes that are
+.. used to represent them or if you are talking of the data-types and what
+.. kind of numbers they represent. I think you should choose the former.]
 
-Decimal numbers in python are recognized by the term float ::
+Let us now look at the float data-type. 
+
+Decimal numbers in python are represented by the float data-type ::
 
   p = 3.141592
   p
 
-If you notice the value of output of p isn't exactly equal to p. This
-is because computer saves floating point values in a specific
-format. There is always an aproximationation. This is why we should
-never rely on equality of floating point numbers in a program.
+If you notice the value of output of p isn't exactly equal to p. This is
+because computer saves floating point values in a specific format. There is
+always an aproximationation. This is why we should never rely on equality
+of floating point numbers in a program.
 
 The last data type in the list is complex number ::
 
   c = 3.2+4.6j
 
-as simple as that so essentialy its just a combination of two floats the 
-imaginary part being defined by j notation instead of i. Complex numbers have a lot of functions specific to them.
-Lets check these ::
+as simple as that so essentialy its just a combination of two floats the
+imaginary part being defined by j notation instead of i. Complex numbers
+have a lot of functions specific to them. Lets check these ::
 
   c.<Tab>
 
@@ -132,21 +152,26 @@ You can apply different Boolean operations on t now for example ::
   f and t 
 
 
-  
-The results are explanotary in themselves.
+The results are self explanatory.
 
-The usage of boolean brings us to an interesting question of precendence.
-What if you want to apply one operator before another. 
+.. #[Puneeth: Why does booleans bring us to precedence? I don't see the
+.. connection. Am I missing something?]
+
+The usage of boolean brings us to an interesting question of precedence.
+What if you want to apply one operator before another.
 
 Well you can use parenthesis for precedence.
 
-Lets write some piece of code to check this out.
+Lets write some piece of code to check this out.::
 
   In[]: a=False 
   In[]: b=True 
   In[]: c=True
 
-To check how precedence changes with parenthesis. We will try two
+
+.. #[Puneeth: Consistency. In[]: is not present at other places.]
+
+To check how precedence changes with parenthesis, we will try two
 expressions and their evaluation.
 
 one ::
@@ -162,19 +187,24 @@ where as the expression ::
 gives the value False.
 
 
-Lets now look at some operators available in Python to manipulate these data types.
+Let's now look at some operators available in Python to manipulate
+these data types.
 
-
+.. #[Puneeth: A mention of other operators would be good? Starting
+.. with % and ** is a bit weird.]
 
 Python uses % for modulo operation ::
 
     87 % 6
+
 and two stars for a exponent. ::
 
     7**8
 
 
-In case one wishes to use the current value of variable in which the result is stored in the expression one can do that by putting the operator before `equal to`. ::
+In case one wishes to use the current value of variable in which the result
+is stored in the expression one can do that by putting the operator before
+`equal to`. ::
 
    a=73
    a*=34
@@ -191,22 +221,22 @@ is same as ::
 
    a=a/23
 
+Lets now discuss sequence data types in Python. Sequence data types
+are those in which elements are kept in a sequential order. All the
+elements accessed using index.
 
-Lets now discuss sequence data stypes in python. Sequence 
-datatypes are those in which elements are kept in a sequential 
-order. All the elements accessed using index. 
+.. #[Puneeth: fix the last sentence - it sounds incomplete]
 
+{{{ slide for memory aid }}}
 
-{{{ slide to for memory aid }}}
-
-The sequence datatypes in python are ::
+The sequence datatypes in Python are ::
 
  * list
  * string
  * tuple
 
-The list type is a container that holds a number of other 
-objects, in the given order.
+The list type is a container that holds a number of other objects, in the
+given order.
 
 We create our first list by typing :: 
   
@@ -214,19 +244,18 @@ We create our first list by typing ::
   num_list
 
 
-Items enclosed in square brackets separated by comma 
-constitutes a list.
+Items enclosed in square brackets separated by comma constitutes a list.
 
-Lists can store data of any type in them. 
+Lists can store data of any type in them.
 
 We can have a list something like ::
 
  var_list = [1, 1.2, [1,2]]	
  var_list
 
+.. #[Puneeth: some continuity, when jumping to strings?]
 
-
-Now we will have a look at strings 
+Now we will have a look at strings
 
 type :: 
 
@@ -243,20 +272,24 @@ Python strings can actually be defined in three different ways ::
   In[]: l="Double quote contain's single quote"
   In[]: m='''"Contain's both"'''
 
+.. #[Puneeth: Contain's? That's not a word!]
+
 Thus, single quotes are used as delimiters usually.
-When a string contains a single quote, double quotes are used as delimiters.
-When a string quote contains both single and double quotes, triple quotes are
-used as delimiters.
+
+.. #[Puneeth: Thus?]
+
+When a string contains a single quote, double quotes are used as
+delimiters. When a string quote contains both single and double quotes,
+triple quotes are used as delimiters.
 
 The last in the list of sequence data types is tuple.
 
-To create a tuple  we use normal brackets '('
-unlike '[' for lists.::
+To create a tuple we use normal brackets '(' unlike '[' for lists.::
 
   In[]: num_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
   
-Because of their sequential property there are certain functions and 
-operations we can apply to all of them. 
+Because of their sequential property there are certain functions and
+operations we can apply to all of them.
 
 
 
@@ -273,9 +306,9 @@ They can be accessed using index numbers ::
   In[]: num_tuple[-3]
 
 
-Indexing starts from 0 from left to right and from -1 when accessing
-lists in reverse. Thus num_list[2] refers to the third element 3. 
-and greetings [-2] is the second element from the end , that is 'l'. 
+Indexing starts from 0 from left to right and from -1 when accessing lists
+in reverse. Thus num_list[2] refers to the third element 3. and greetings
+[-2] is the second element from the end , that is 'l'.
 
 
 
@@ -287,7 +320,7 @@ Addition gives a new sequence containing both sequences ::
      In[]: t2=(3,4,6,7)
      In[]: num_tuple+t2
 
-len function gives the length  ::
+len function gives the length ::
 
   In[]: len(num_list)
   In[]: len(greeting_string)
@@ -303,7 +336,7 @@ We can check the containership of an element using the 'in' keyword ::
 
 We see that it gives True and False accordingly.
 
-Find maximum using max function and minimum using min:: 
+Find maximum using max function and minimum using min::
 
   In[]: max(num_tuple)
   In[]: min(greeting_string)
@@ -315,6 +348,8 @@ Get a sorted list and reversed list using sorted and reversed function ::
 
 As a consequence of the order one we access a group of elements together.
 This is called slicing and striding.
+
+.. #[Puneeth: Fix the sentence above. ]
 
 First Slicing 
 
@@ -328,14 +363,17 @@ For this we can do ::
 
   In[]: j[1:4]
 
-The syntax for slicing is sequence variable name square bracket
-first element index, colon, second element index.The last element however is notincluded in the resultant list::
+The syntax for slicing is, sequence variable name square bracket first
+element index, colon, second element index. The last element however is not
+included in the resultant list::
 
 
   In[]: j[:4]
 
 If first element is left blank default is from beginning and if last
 element is left blank it means till the end.
+
+::
 
  In[]: j[1:]
 
@@ -351,12 +389,13 @@ Lets see by example ::
   new_num_list[1:8:2]
   [2, 4, 6, 8]
 
-The colon two added in the end signifies all the alternate elements. This is why we call this concept
-striding because we move through the list with a particular stride or step. The step in this example
-being 2. 
+The colon two added in the end signifies all the alternate elements. This
+is why we call this concept striding because we move through the list with
+a particular stride or step. The step in this example being 2.
 
-We have talked about many similar features of lists, strings and tuples. But there are many important
-features in lists that differ from strings and tuples. Lets see this by example.::
+We have talked about many similar features of lists, strings and tuples.
+But there are many important features in lists that differ from strings and
+tuples. Lets see this by example.::
 
   In[]: new_num_list[1]=9
   In[]: greeting_string[1]='k'
@@ -365,18 +404,21 @@ features in lists that differ from strings and tuples. Lets see this by example.
 
 
 
-As you can see while the first command executes with out a problem there is an error on the second one.
+As you can see while the first command executes with out a problem there is
+an error on the second one.
   
 Now lets try ::
 
   In[]: new_tuple[1]=5
 
-Its the same error. This is because strings and tuples share the property of being immutable.
-We cannot change the value at a particular index just by assigning a new value at that position.
+Its the same error. This is because strings and tuples share the property
+of being immutable. We cannot change the value at a particular index just
+by assigning a new value at that position.
 
 
-We have looked at different types but we need to convert one data type into another. Well lets one
-by one go through methods by which we can convert one data type to other:
+We have looked at different types but we need to convert one data type into
+another. Well lets one by one go through methods by which we can convert
+one data type to other:
 
 We can convert all the number data types to one another ::
 
@@ -384,21 +426,25 @@ We can convert all the number data types to one another ::
   d=float(i)
   d  
 
-Python has built in functions int, float and complex to convert one number type
-data structure to another.
+Python has built in functions int, float and complex to convert one number
+type data structure to another.
+
+::
 
   dec=2.34
   dec_con=int(dec)
   dec_con
 
 
-As you can see the decimal part of the number is simply stripped to get the integer.::
+As you can see the decimal part of the number is simply stripped to get the
+integer.::
 
   com=2.3+4.2j
   float(com)
   com
 
-In case of complex number to floating point only the real value of complex number is taken.
+In case of complex number to floating point only the real value of complex
+number is taken.
 
 Similarly we can convert list to tuple and tuple to list ::
   
@@ -407,15 +453,17 @@ Similarly we can convert list to tuple and tuple to list ::
   tupl=(3,23,4,56)
   lst=list(tuple)
 
-However string to list and list to string is an interesting problem.
-Lets say we have a string ::
+However converting a string to a list and a list to a string is an
+interesting problem. Let's say we have a string ::
 
   In: somestring="Is there a way to split on these spaces."
   In: somestring.split()
 
 
-This produces a list with the string split at whitespace.
-similarly we can split on some other character.
+This produces a list with the string split at whitespace. Similarly we can
+split on some other character.
+
+::
 
   In: otherstring="Tim,Amy,Stewy,Boss"
 
@@ -464,4 +512,10 @@ Hope you have enjoyed and found it useful.
 Thank You.
 
 
-
+.. 
+   Local Variables:
+   mode: rst
+   indent-tabs-mode: nil
+   sentence-end-double-space: nil
+   fill-column: 75
+   End:
