@@ -19,6 +19,9 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+
+.. #[Puneeth: Add pre-requisites.]
+
 Script
 ------
 
@@ -43,9 +46,9 @@ pendulum and the second is the corresponding time period of the pendulum.
 As we know, the square of time period of a pendulum is directly proportional to
 its length, we shall plot l vs t^2 and verify this. 
 
-#[Puneeth:] removed the explanation about loadtxt and unpack
- option. It's been done in another LO already. simple dependency 
- should work?
+.. #[Puneeth:] removed the explanation about loadtxt and unpack
+..  option. It's been done in another LO already. simple dependency 
+..  should work?
 
 To read the input file and parse the data, we are going to use the
 loadtxt function.  Type 
@@ -66,8 +69,8 @@ Let us first plot l vs t^2. Type
 
 {{{ switch to the plot window }}}
 
-#[Puneeth:] Moved explanation of least square fit here. seems more
-apt. 
+.. #[Puneeth:] Moved explanation of least square fit here. seems more
+.. apt. 
 
 We can see that there is a visible linear trend, but we do not get a
 straight line connecting them. We shall, therefore, generate a least
@@ -132,10 +135,17 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+.. #[Nishanth]: Will add this line after all of us fix on one.
+.. This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thank you
 
 
+.. 
+   Local Variables:
+   mode: rst
+   indent-tabs-mode: nil
+   sentence-end-double-space: nil
+   fill-column: 75
+   End:
