@@ -383,3 +383,11 @@ also learnt how to modify arrays, element wise or in larger
 pieces.
 
 Thank You!
+
+.. 
+   Local Variables:
+   mode: rst
+   indent-tabs-mode: nil
+   sentence-end-double-space: nil
+   fill-column: 75
+   End:
