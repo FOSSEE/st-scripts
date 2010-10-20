@@ -67,6 +67,9 @@
 
 ** Sorted(l)
 ** reversed(s)
-  
+
+* COMMENT 
+# [Puneeth: Where is the last slide?]
+# [Puneeth: Why don't you use the template slides.org?]
 
 

@@ -53,6 +53,10 @@ on arrays are valid on matrices also. A matrix may be created as,
 
     m1 = matrix([1,2,3,4])
 
+
+.. #[Puneeth: don't use ``matrix``. Use ``array``. The whole script will
+.. have to be fixed.]
+
 Using the tuple ``m1.shape`` we can find out the shape or size of the
 matrix,
 ::
@@ -287,7 +291,10 @@ value decomposition of matrices.
 
 Thank you!
 
-..  Author: Anoop Jacob Thomas <anoop@fossee.in>
-    Reviewer 1:
-    Reviewer 2:
-    External reviewer:
+.. 
+   Local Variables:
+   mode: rst
+   indent-tabs-mode: nil
+   sentence-end-double-space: nil
+   fill-column: 75
+   End:
