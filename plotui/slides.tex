@@ -1,106 +1,71 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-10-20 Wed 21:57
+\documentclass[presentation]{beamer}
+\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{hyperref}
 
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
 
-\definecolor{darkgreen}{rgb}{0,0.5,0}
+\title{Plotting Data }
+\author{FOSSEE}
+\date{2010-09-14 Tue}
 
-\usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
-\date{}
-
-% DOCUMENT STARTS
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+\maketitle
 
 \begin{frame}
-  \frametitle{Thank you!}  
-  \begin{block}{}
-  \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+\frametitle{Tutorial Plan}
+\label{sec-1}
+\begin{itemize}
+
+\item Creating a simple plot\\
+\label{sec-1.1}%
+\item Use the buttons on window to study the plot\\
+\label{sec-1.2}%
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{Error if Ipython not installed}
+\label{sec-2}
+\begin{itemize}
+
+\item `ERROR: matplotlib could NOT be imported!  Starting normal IPython.`\\
+\label{sec-2.1}%
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{Plot UI}
+\label{sec-3}
+\begin{frame}
+ \begin{center}
+    \includegraphics[height=1.0in,width=4.2in]{buttons.png}
   \end{center}
-  \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
-  \end{center}  
-  \end{block}
+\end{frame}
+
+\frametitle{Summary}
+\label{sec-4}
+\begin{itemize}
+
+\item Start Ipython with pylab\\
+\label{sec-4.1}%
+\item Using linspace\\
+\label{sec-4.2}%
+\item Finding length of sequnces using  len.\\
+\label{sec-4.3}%
+\item Plotting mathematical functions using plot.\\
+\label{sec-4.4}%
+\item Clearing drawing area using clf\\
+\label{sec-4.5}%
+\item Using the UI of plot\\
+\label{sec-4.6}%
+\end{itemize} % ends low level
 \end{frame}
 
 \end{document}

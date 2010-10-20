@@ -26,6 +26,9 @@ the result of this command, you see something like ::
 
 {{{ Slide with Error written on it }}}
 
+
+
+
 Then you have to install matplotlib and run this command again.
 
 Now type in your ipython shell ::
@@ -103,6 +106,8 @@ plot. ::
  
 The Window on which the plot appears can be used to study it better.
 
+{{{ Show the slide with all the buttons on it }}}
+
 First of all moving the mouse around gives us the point where mouse
 points at.  
 
@@ -157,9 +162,9 @@ In this tutorial we have looked at
 
 4. Clearing drawing area using clf 
  
-5. Using the UI of plot for studying it better . Using functionalities like save , zoom , moving the plots on x and y axis 
+5. Using the UI of plot for studying it better . Using functionalities like save , zoom and moving the plots on x and y axis 
 
-etc ..
+
  
 
 
