@@ -15,7 +15,7 @@
 .. #. getting started with for
      
 .. Author              : Puneeth
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -77,6 +77,8 @@ to see more explicitly, what it contains.
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop:add context switch to next slide - questions]]
+
 %%1%% Split the variable into a list, ``pend_list``, of the lines in
 the file. Hint, use the tab command to see what methods the string
 variable has.
@@ -86,6 +88,11 @@ Please, pause the video here. Do the exercise and then continue.
 .. #[punch: should this even be put? add dependency to strings LO,
 .. where we mention that strings have methods for manipulation. hint:
 .. use splitlines()]
+
+.. #[[Anoop: let us have it here, let us consider this as a
+   refresher]]
+
+.. #[[Anoop:add context switch to next slide - solution]]
 
 ::
 
@@ -98,6 +105,10 @@ will have to close the file, since the file has already been read till
 the end.
 
 .. #[punch: should we mention file-pointer?]
+
+.. #[[Anoop: I think we can say that ``f`` is a file pointer which
+   points to the next line/data to be read from the file. We could
+   skip details.]]
 
 Let us close the file opened into f.
 ::
@@ -139,6 +150,9 @@ As we already know, ``line`` is just a dummy variable, and not a
 keyword. We could have used any other variable name, but ``line``
 seems meaningful enough.
 
+.. #[[Anoop: using dummy variable doesn't seem correct, can say line
+   is a variable]]
+
 Instead of just printing the lines, let us append them to a list,
 ``line_list``. We first initialize an empty list, ``line_list``. 
 ::
@@ -166,6 +180,15 @@ Notice that ``line_list`` is a list of the lines in the file, along
 with the newline characters. If you noticed, ``pend_list`` did not
 contain the newline characters, because the string ``pend`` was
 split on the newline characters. 
+
+.. #[[Anoop: I think we need to tell them that each line can be
+   stripped and appended to list to avoid the problem of newline
+   characters.]]
+
+.. #[[Anoop: I think the code that are required to be typed can be
+   added to the slide.]]
+
+.. #[[Anoop: Context switches are to be added.]]
 
 {{{ show the summary slide }}}
 
