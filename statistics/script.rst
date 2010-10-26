@@ -105,7 +105,7 @@ The following are the fields in any given line.
 * Roll Number 015163
 * Name JOSEPH RAJ S
 * Marks of 5 subjects: ** English 083 ** Hindi 042 ** Maths 47 **
-Science AA (Absent) ** Social 72
+Science 35 ** Social 72
 * Total marks 244
 *
 
@@ -165,8 +165,9 @@ we have learnt
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
+
 Thankyou
- 
+
 .. Author              : Amit Sethi
    Internal Reviewer 1 : 
    Internal Reviewer 2 : 
