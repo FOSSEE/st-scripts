@@ -6,9 +6,9 @@
 .. 1. Create dictionaries
 .. #. Add data to dictionaries
 .. #. Retrieve data
-.. #. Familiarize using ``.keys()`` and ``.values()`` methods
-.. #. Checking for container-ship of keys
-.. #. Iterating over elements
+.. #. use ``.keys()`` and ``.values()`` methods
+.. #. Check for container-ship of keys
+.. #. Iterate over elements
 
 .. Prerequisites
 .. -------------
@@ -22,6 +22,7 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[Puneeth: Quickref]
 
 ============
 Dictionaries
@@ -49,6 +50,8 @@ indexes, dictionaries have keys or strings as indexes.
 Before we can proceed, start your IPython interpreter with the
 ``-pylab`` option.
 
+.. #[Puneeth: We don't need pylab]
+
 {{{ start ipython interpreter by issuing command ipython -pylab }}}
 
 {{{ switch to next slide, Creating dictionary }}}
@@ -59,11 +62,11 @@ your IPython interpreter.
 
     mt_dict = {}    
 
-Notice that unlike lists curly braces are used define ``dictionary``,
+Notice that unlike lists, curly braces are used define ``dictionary``.
 
 {{{ move the mouse over curly braces to grab attention }}}
 
-Now let us see how to create a filled dictionary,
+Now let us see how to create a non-empty dictionary,
 ::
 
     extensions = {'jpg' : 'JPEG Image', 'py' : 'Python script', 'html' : 'Html document', 'pdf' : 'Portable Document Format'}
@@ -146,10 +149,9 @@ dictionary. For that we can use ``in``,
     'py' in extensions
     'odt' in extensions
 
-So in short it will return ``True`` if the key is found in the
-dictionary, and will return ``False`` if key is not present. Note that
-we can check only for container-ship of keys in dictionaries and not
-values.
+It will return ``True`` if the key is found in the dictionary, and
+will return ``False`` if key is not present. Note that we can check
+only for container-ship of keys in dictionaries and not values.
 
 {{{ switch to next slide, Retrieve keys and values }}}
 
