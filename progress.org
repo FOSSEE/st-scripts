@@ -22,7 +22,7 @@
 | 3.7 LO: | module level assessment                |     3 | Madhu    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 4.1 LO: | getting started with arrays            |     2 | Anoop    | Punch (Done)                          |           |
-| 4.2 LO: | accessing parts of arrays              |     4 | Punch    | Anoop (Pending)                       |           |
+| 4.2 LO: | accessing parts of arrays              |     4 | Punch    | Anoop (Done)                          |           |
 | 4.3 LO: | Matrices                               |     3 | Anoop    | Punch (changes before further review) |           |
 | 4.4 LO: | Least square fit                       |     2 | Nishanth | Punch (Done)                          |           |
 | 4.5 LO: | Assessment                             |     3 | Punch    |                                       |           |

@@ -37,6 +37,8 @@ slicing and striding.
 
 {{{ switch back to the terminal }}}
 
+.. #[[Anoop: context switch, switch to next slide should be added]]
+
 As usual, we start IPython, using 
 ::
 
@@ -66,7 +68,9 @@ To access, the element 34 in A, we say,
 
 ::
 
-  A[1]
+  A[2]
+
+.. #[[Anoop: should be A[2], corrected it]]
 
 Like lists, indexing starts from 0 in arrays, too. So, 34, the
 third element has the index 2. 
@@ -130,6 +134,8 @@ column by
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add context switches, switch to next slide]]
+
 %%1%% Change the last column of C to zeroes. 
 
 Please, pause the video here. Do the exercises and then continue. 
@@ -147,6 +153,8 @@ sense. It has just one row and
 gives the whole of A. 
 
 Following is an exercise that you must do. 
+
+.. #[[Anoop: add context switches, switch to next slide]]
 
 %%2%% Change ``A`` to ``[11, 12, 13, 14, 15]``. 
 
@@ -194,6 +202,10 @@ at the prompt, and see that an array is displayed.
 
 To check the dimensions of any array, we can use the method
 shape. We say
+
+.. #[[Anoop: method is a function and .shape is a tuple, so it can be named
+   as value or something instead of the term method.]]
+
 ::
 
   I.shape 
@@ -230,11 +242,15 @@ columns indexed 0 to 2 (included), we say,
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add context switches, switch to next slide]]
+
 %%3%% First, obtain the elements [22, 23] from C. Then, obtain the
 elements [11, 21, 31, 41] from C. Finally, obtain the elements [21,
 31, 41, 0]. 
 
 Please, pause the video here. Do the exercises and then continue. 
+
+.. #[[Anoop: add context switches, switch to next slide]]
 
 ::
 
@@ -270,9 +286,13 @@ we get the slice from end to end, as we already know.
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add context switches, switch to next slide]]
+
 %%4%% Obtain the elements [[23, 24], [33, -34]] from C. 
 
 Please, pause the video here. Do the exercises and then continue. 
+
+.. #[[Anoop: add context switches, switch to next slide]]
 
 ::
 
@@ -298,9 +318,13 @@ form of an image and confirm.
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add context switches, switch to next slide]]
+
 %%5%% Obtain the square in the center of the image.
 
 Following is an exercise that you must do. 
+
+.. #[[Anoop: add context switches, switch to next slide]]
 
 ::
 
@@ -334,6 +358,10 @@ of 1 is assumed.
   C[1::2, ::2] 
 
 gives the elements, [[21, 23, 0], [41, 43, 0]]
+
+.. #[[Anoop: I think you forgot to "add switch to next slide" context
+   switch, I think it will be better you review the scripts(all) for
+   context switches and add them.]]
 
 Following is an exercise that you must do. 
 
@@ -381,6 +409,12 @@ have learnt to access parts of arrays, specifically individual
 elements, rows and columns and larger pieces of arrays. We have
 also learnt how to modify arrays, element wise or in larger
 pieces.
+
+.. #[[Anoop: I think in the summary slide it is better to use single &
+   multi dimensional arrays instead of 1D and Multi dimensional arrays.]]
+
+.. #[[Anoop: switch to thank you slide, added comment as it most probably
+   won't be noticed]]
 
 Thank You!
 
