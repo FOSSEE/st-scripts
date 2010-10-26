@@ -40,7 +40,7 @@
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 7.1 LO: | manipulating lists                     |     3 | Madhu    |                                       |           |
-| 7.2 LO: | manipulating strings                   |     2 | Punch    | Pending                               |           |
+| 7.2 LO: | manipulating strings                   |     2 | Punch    | Amit                                  |           |
 | 7.3 LO: | getting started with tuples            |     2 | Nishanth |                                       |           |
 | 7.4 LO: | dictionaries                           |     2 | Anoop    | Pending                               |           |
 | 7.5 LO: | sets                                   |     2 | Nishanth |                                       |           |
