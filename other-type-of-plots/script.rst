@@ -22,6 +22,7 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[Puneeth: Quickref missing]
 
 ===================
 Other type of plots
@@ -31,11 +32,20 @@ Other type of plots
 
 Hello and welcome to the tutorial other type of plots.
 
+.. #[Puneeth: this sentence doesn't read well]
+
 {{{ show the outline slide }}}
 
+.. #[Puneeth: motivate looking at other plots. Why are we looking at
+.. them? Tell that we have only looked at one type of plot all the
+.. while, etc.]
+
 In this tutorial we will cover scatter plot, pie chart, bar chart and
-loglog plot. We will also see few other plots and also introduce you to
+log-log plot. We will also see few other plots and also introduce you to
 the matplotlib help.
+
+.. #[Puneeth: cover, see and introduce you. be consistent. does, the
+.. "We" include the viewer or not?]
 
 Let us start with scatter plot. 
 
@@ -47,8 +57,7 @@ horizontal axis and the value of the other variable determining the
 position on the vertical axis. This kind of plot is also called a
 scatter chart, scatter diagram and scatter graph.
 
-Before we proceed further get your IPython interpreter running with
-the ``-pylab`` option. Start your IPython interpreter as
+Before we proceed further, start your IPython interpreter
 ::
 
     ipython -pylab
@@ -59,9 +68,9 @@ ipython -pylab }}}
 {{{ switch to the next slide having the problem statement of first
 exercise }}}
 
-Now, let us plot a scatter plot showing the percentage profit of company A
-from the year 2000-2010. The data for the same is available in the
-file ``company-a-data.txt``. 
+Now, let us plot a scatter plot showing the percentage profit of
+company A from the year 2000-2010. The data for the same is available
+in the file ``company-a-data.txt``.
 
 {{{ open the file company-a-data.txt and show the content }}}
 
@@ -77,6 +86,9 @@ and it can be done as ::
 
     year,profit =
     loadtxt('/home/fossee/other-plot/company-a-data.txt',dtype=type(int()))
+
+.. #[Puneeth: make a remark about dtype, that has not been covered in
+.. the loadtxt tutorial.]
 
 {{{ switch to next slide, ``scatter`` function }}}
 
@@ -104,6 +116,9 @@ Pause here and solve the question before moving on.
 
 Now let us move on to pie chart.
 
+.. #[Puneeth: instead of just saying that, say that let's plot a pie
+.. chart for the same data. continuity, will be good.]
+
 {{{ switch to the slide which says about pie chart }}}
 
 A pie chart or a circle graph is a circular chart divided into
@@ -115,6 +130,8 @@ exercise question }}}
 Plot a pie chart representing the profit percentage of company A, with
 the same data from file ``company-a-data.txt``. So let us reuse the
 data we have loaded from the file previously.
+
+.. #[Puneeth, this part can be move above.]
 
 {{{ switch to next slide, ``pie()`` function }}}
 
@@ -192,7 +209,7 @@ exercise question }}}
 Plot a `log-log` chart of y=5*x\ :sup:`3` for x from 1-20.
 
 Before we actually plot let us calculate the points needed for
-that. And it could be done as,
+that. 
 ::
 
     x = linspace(1,20,100)
