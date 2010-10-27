@@ -28,7 +28,14 @@ in Python.
 In this tutorial, we shall look at
 
  * Datatypes in Python
- * Operators in Python
+    * Numbers
+    * Boolean
+    * Sequence
+* Operators in Python
+  * Arithmetic Operators
+  * Boolean Operators
+
+* Manipulating Sequence datatypes
 
 .. #[Puneeth: Use double colon only for code blocks.]
 .. #[Puneeth: include more details in the outline.]
@@ -44,9 +51,9 @@ There are three built-in data types in python to represent numbers.
 
 These are:
 
-  * int for integers
-  * float for floating point numbers and 
-  * complex for complex numbers
+  * int 
+  * float 
+  * complex 
 
 .. #[Puneeth: Changed to  int, float and complex.]
 
@@ -54,13 +61,13 @@ These are:
 .. then you were calling them integers, floats and complex. Clean up
 .. required.]
 
-Lets first talk about integers. ::
+Lets first talk about int. ::
 
    a = 13
    a
 
 
-Now, we have our first integer variable a.
+Now, we have our first int variable a.
 
 
 If we now see ::
@@ -78,7 +85,7 @@ it different ways. You can explore these by doing,
 .. Something like this would be better. 
 .. int data-type can hold integers of any size. for example - ]
 
-Lets see the limits of this int.
+*int* datatype can hold integers of any size lets see this by example.
 
   b = 99999999999999999999
   b
@@ -93,7 +100,7 @@ put a capital L at the end. Now if you check the type of this variable b,
 
 
 The reason for this is that python recognizes large integer numbers by the
-data type long. However long type and integer type share there functions
+data type long. However long type and int type share there functions
 and properties.
 
 .. #[Puneeth: again, the clean-up that I talked of above. Decide if you are
@@ -159,16 +166,16 @@ The results are self explanatory.
 .. #[Puneeth: Why does booleans bring us to precedence? I don't see the
 .. connection. Am I missing something?]
 
-The usage of boolean brings us to an interesting question of precedence.
+
 What if you want to apply one operator before another.
 
 Well you can use parenthesis for precedence.
 
 Lets write some piece of code to check this out.::
 
-  In[]: a=False 
-  In[]: b=True 
-  In[]: c=True
+  a=False 
+  b=True 
+  c=True
 
 
 .. #[Puneeth: Consistency. In[]: is not present at other places.]
@@ -195,7 +202,22 @@ these data types.
 .. #[Puneeth: A mention of other operators would be good? Starting
 .. with % and ** is a bit weird.]
 
-Python uses % for modulo operation ::
+Python uses '+' for addition ::
+
+  23 + 74
+
+'-' for subtraction ::
+  23 - 56
+
+'*' for multiplication ::
+ 
+  45*76
+
+'/' for division ::
+    
+  384/16
+
+ '%' for modulo operation ::
 
     87 % 6
 
@@ -224,8 +246,8 @@ is same as ::
    a=a/23
 
 Lets now discuss sequence data types in Python. Sequence data types
-are those in which elements are kept in a sequential order. All the
-elements accessed using index.
+are those in which elements are kept in a sequential order and all the 
+elements accessed using index numbers.
 
 .. #[Puneeth: fix the last sentence - it sounds incomplete]
 
@@ -257,7 +279,7 @@ We can have a list something like ::
 
 .. #[Puneeth: some continuity, when jumping to strings?]
 
-Now we will have a look at strings
+Lets look at another sequence data type, strings
 
 type :: 
 
@@ -271,12 +293,12 @@ greeting_string is now a string variable with the value "hello"
 Python strings can actually be defined in three different ways ::
 
    k='Single quote'
-   l="Double quote contain's single quote"
-   m='''"Contain's both"'''
+   l="Let's see how to include a single quote"
+   m='''"Let's see how to include both"'''
 
 .. #[Puneeth: Contain's? That's not a word!]
 
-Thus, single quotes are used as delimiters usually.
+As you can see, single quotes are used as delimiters usually.
 
 .. #[Puneeth: Thus?]
 
@@ -348,8 +370,8 @@ Get a sorted list and reversed list using sorted and reversed function ::
    sorted(num_list)
    reversed(greeting_string)
 
-As a consequence of the order one we access a group of elements together.
-This is called slicing and striding.
+As a consequence of there order we can access a group of elements of sequence,
+together. This is called slicing and striding.
 
 .. #[Puneeth: Fix the sentence above. ]
 
