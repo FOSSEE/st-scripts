@@ -14,7 +14,7 @@
 .. Getting Started -- Sage  
      
 .. Author              : Puneeth 
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -30,6 +30,9 @@ Hello Friends. Welcome to this tutorial on using Sage.
 In this tutorial we shall quickly look at a few examples of the areas
 (name the areas, here) in which Sage can be used and how it can be
 used.
+
+.. #[[Anoop: add name of areas and further introduction if needed for
+   a smooth switch]]
 
 {{{ show the slide with Calculus outline }}} 
 
@@ -59,6 +62,8 @@ To find the limit from the negative side, we say,
 ::
 
     lim(1/x, x=0, dir='above')   
+
+.. #[[Anoop: both the above codes are going the same thing isn't it?]]
 
 Let us now see how to differentiate, using Sage. We shall find the
 differential of the expression ``exp(sin(x^2))/x`` w.r.t ``x``. We
@@ -207,6 +212,10 @@ gives all the combinations of ``[1, 2, 3, 4]``
   
 That brings us to the end of this session showing various features
 available in Sage. 
+
+.. #[[Anoop: I feel we should add more slides, a possibility is to add
+   the code which they are required to type in, I also feel we should
+   add some review problems for them to try out.]]
 
 {{{ Show summary slide }}}
 
