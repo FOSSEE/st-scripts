@@ -36,7 +36,7 @@
 | 6.1 LO: | basic datatypes & operators            |     4 | Amit     | Punch (Done)                          |           |
 | 6.2 LO: | I/O                                    |     1 | Nishanth |                                       |           |
 | 6.3 LO: | conditionals                           |     2 | Madhu    |                                       |           |
-| 6.4 LO: | loops                                  |     2 | Puneeth  | Anoop(Pending)                        |           |
+| 6.4 LO: | loops                                  |     2 | Puneeth  | Anoop(Done)                           |           |
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 7.1 LO: | manipulating lists                     |     3 | Madhu    |                                       |           |

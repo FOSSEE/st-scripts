@@ -16,8 +16,8 @@
 .. #. conditionals
 
      
-.. Author              : 
-   Internal Reviewer   : 
+.. Author              : Puneeth
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -26,13 +26,20 @@ Script
 
 {{{ Show the slide containing title }}}
 
-Hello Friends. Welcome this tutorial on loops in Python. 
+Hello Friends. Welcome to the tutorial on loops in Python. 
 
 {{{ Show the outline slide }}}
 
 In this tutorial, we shall look at ``while`` and ``for`` loops. We
 shall then look at the ``break``, ``continue`` and ``pass`` keywords
 and how to use them. 
+
+.. #[[Anoop: for loop is a pre-requisite and has been already covered,
+   so i think our emphasize can be on while loops]]
+
+.. #[[Anoop: Instead of saying we will learn keywords pass, break and
+   continue, I think it is better to tell them that we will learn more
+   about loops]]
 
 {{{ switch to the ipython terminal }}}
 
@@ -60,12 +67,16 @@ executes the block of code within the loop, if it is. As with any
 other block in Python, the code within the ``while`` block is indented
 to the right by 4 spaces. 
 
+{{{ switch to next slide }}}
+
 Following is an exercise that you must do. 
 
 %%1%% Write a ``while`` loop to print the squares of all the even
 numbers below 10. 
 
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide after a seconds break}}}
 
 ::
 
@@ -88,10 +99,14 @@ then iterate over it and print the required stuff.
 
 Following is an exercise that you must do. 
 
+{{{ switch to next slide }}}
+
 %%2%% Write a ``for`` loop to print the squares of all the even
 numbers below 10. 
 
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide after a seconds break }}}
 
 ::
 
@@ -126,6 +141,8 @@ modified using the ``break`` statement, as follows
 ``continue`` is used to skip execution of the rest of the loop on this
 iteration and continue to the end of this iteration. 
 
+.. #[[Anoop: should add slides for break, continue, pass]]
+
 Say, we wish to print the squares of all the odd numbers below 10,
 which are not multiples of 3, we would modify the for loop as follows.
 ::
@@ -138,11 +155,19 @@ which are not multiples of 3, we would modify the for loop as follows.
 
 Following is an exercise that you must do. 
 
+{{{ switch to next slide }}}
+
 %%3%%Using the ``continue`` keyword modify the ``for`` loop to print
 the squares of even numbers below 10, to print the squares of only
 multiples of 4. (Do not modify the range function call.) 
 
+.. #[[Anoop: can you be more explicit/specific on do no modify say we
+   can ask them to use range(2, 10, 2) and solve the problem]]
+
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide after a seconds break}}}
+
 ::
 
   for n in range(2, 10, 2):

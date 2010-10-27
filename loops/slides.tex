@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 21:15
+% Created 2010-10-27 Wed 17:51
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -62,14 +63,13 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \frametitle{Solution 1}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: i = 2
 
 In []:  while i<10:
  ....:     print i*i
  ....:     i += 2
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -82,11 +82,10 @@ In []:  while i<10:
 \frametitle{Solution 2}
 \label{sec-5}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: for n in range(2, 10, 2):
  ....:     print n*n
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 3}
@@ -100,13 +99,12 @@ In []: for n in range(2, 10, 2):
 \frametitle{Solution 3}
 \label{sec-7}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 for n in range(2, 10, 2):
     if n%4:
         continue      
     print n*n
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
