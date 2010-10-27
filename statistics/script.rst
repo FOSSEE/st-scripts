@@ -1,3 +1,24 @@
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial you will --
+
+.. 1. Get to know simple statistics functions like mean,std etc .. (Remembering)
+.. #. Apply them on a real world example. (Applying)
+
+
+.. Prerequisites
+.. -------------
+
+.. Getting started with IPython
+.. Loading Data from files
+.. Getting started with Lists
+     
+.. Author              : Puneeth 
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 Hello friends and welcome to the tutorial on statistics using Python
 
 {{{ Show the slide containing title }}}

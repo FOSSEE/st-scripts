@@ -1,13 +1,15 @@
 .. Objectives
 .. ----------
 
-.. Learn about Python Data Structures and Operators.(Remembering)
-.. Use them to do basic operations.(Applying)
+.. At the end of this tutorial, you should know --
+
+.. 1. Learn about Python Data Structures and Operators.(Remembering)
+.. #.Use them to do basic operations.(Applying)
 
 .. Prerequisites
 .. -------------
 
-
+.. None
      
 .. Author              : Amit Sethi
    Internal Reviewer   : 
@@ -259,7 +261,7 @@ Now we will have a look at strings
 
 type :: 
 
- In[]: greeting_string="hello"
+  greeting_string="hello"
 
 
 greeting_string is now a string variable with the value "hello"
@@ -268,9 +270,9 @@ greeting_string is now a string variable with the value "hello"
 
 Python strings can actually be defined in three different ways ::
 
-  In[]: k='Single quote'
-  In[]: l="Double quote contain's single quote"
-  In[]: m='''"Contain's both"'''
+   k='Single quote'
+   l="Double quote contain's single quote"
+   m='''"Contain's both"'''
 
 .. #[Puneeth: Contain's? That's not a word!]
 
@@ -286,7 +288,7 @@ The last in the list of sequence data types is tuple.
 
 To create a tuple we use normal brackets '(' unlike '[' for lists.::
 
-  In[]: num_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
+   num_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
   
 Because of their sequential property there are certain functions and
 operations we can apply to all of them.
@@ -297,13 +299,13 @@ The first one is accessing.
 
 They can be accessed using index numbers ::
 
-  In[]: num_list[2]
-  In[]: num_list[-1]
-  In[]: greeting_string[1]
-  In[]: greeting_string[3]
-  In[]: greeting_string[-2]
-  In[]: num_tuple[2]
-  In[]: num_tuple[-3]
+   num_list[2]
+   num_list[-1]
+   greeting_string[1]
+   greeting_string[3]
+   greeting_string[-2]
+   num_tuple[2]
+   num_tuple[-3]
 
 
 Indexing starts from 0 from left to right and from -1 when accessing lists
@@ -314,37 +316,37 @@ in reverse. Thus num_list[2] refers to the third element 3. and greetings
 
 Addition gives a new sequence containing both sequences ::
 
-     In[]: num_list+var_list
-     In[]: a_string="another string"
-     In[]: greeting_string+a_string
-     In[]: t2=(3,4,6,7)
-     In[]: num_tuple+t2
+      num_list+var_list
+      a_string="another string"
+      greeting_string+a_string
+      t2=(3,4,6,7)
+      num_tuple+t2
 
 len function gives the length ::
 
-  In[]: len(num_list)
-  In[]: len(greeting_string)
-  In[]: len(num_tuple)
+   len(num_list)
+   len(greeting_string)
+   len(num_tuple)
 
 Prints the length the variable.
 
 We can check the containership of an element using the 'in' keyword ::
 
-  In[]: 3 in num_list
-  In[]: 'H' in greeting_string
-  In[]: 2 in num_tuple
+   3 in num_list
+   'H' in greeting_string
+   2 in num_tuple
 
 We see that it gives True and False accordingly.
 
 Find maximum using max function and minimum using min::
 
-  In[]: max(num_tuple)
-  In[]: min(greeting_string)
+   max(num_tuple)
+   min(greeting_string)
 
 Get a sorted list and reversed list using sorted and reversed function ::
 
-  In[]: sorted(num_list)
-  In[]: reversed(greeting_string)
+   sorted(num_list)
+   reversed(greeting_string)
 
 As a consequence of the order one we access a group of elements together.
 This is called slicing and striding.
@@ -355,29 +357,29 @@ First Slicing
 
 Given a list ::
 
-  In[]:j=[1,2,3,4,5,6]
+  j=[1,2,3,4,5,6]
 
 Lets say we want elements starting from 2 and ending in 5.
 
 For this we can do ::
 
-  In[]: j[1:4]
+   j[1:4]
 
 The syntax for slicing is, sequence variable name square bracket first
 element index, colon, second element index. The last element however is not
 included in the resultant list::
 
 
-  In[]: j[:4]
+   j[:4]
 
 If first element is left blank default is from beginning and if last
 element is left blank it means till the end.
 
 ::
 
- In[]: j[1:]
+  j[1:]
 
- In[]: j[:]
+  j[:]
 
 This effectively is the whole list.
 
@@ -397,8 +399,8 @@ We have talked about many similar features of lists, strings and tuples.
 But there are many important features in lists that differ from strings and
 tuples. Lets see this by example.::
 
-  In[]: new_num_list[1]=9
-  In[]: greeting_string[1]='k'
+   new_num_list[1]=9
+   greeting_string[1]='k'
 
 {{{ slide to show the error }}}
 
@@ -409,7 +411,7 @@ an error on the second one.
   
 Now lets try ::
 
-  In[]: new_tuple[1]=5
+   new_tuple[1]=5
 
 Its the same error. This is because strings and tuples share the property
 of being immutable. We cannot change the value at a particular index just
@@ -473,11 +475,11 @@ How do we split on comma , simply pass it as argument ::
 
 join function does the opposite. Joins a list to make a string.::
 
-  In[]:','.join['List','joined','on','commas']
+  ','.join['List','joined','on','commas']
 
 Thus we get a list joined on commas. Similarly we can do spaces.::
 
-  In[]:' '.join['Now','on','spaces']
+  ' '.join['Now','on','spaces']
 
 Note that the list has to be a list of strings to apply join operation.
 

@@ -1,3 +1,28 @@
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial you will --
+
+.. 1. Create simple plots of mathematical functions
+.. #. Use the Figure window to study plots better
+
+
+
+.. Prerequisites
+.. -------------
+
+.. Installation of required tools
+.. Ipython
+     
+.. Author              : Amit Sethi
+   Internal Reviewer   : 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+-------
+
+
 Hello and welcome to the tutorial on creating simple plots using
 Python.This tutorial is presented by the Fossee group.  
 {{{ Show the Title Slide }}} 
