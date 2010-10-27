@@ -36,6 +36,8 @@ In this tutorial, we will see how to run python scripts from command
 line, importing modules, importing scipy and pylab modules. And also
 see the Python standard library.
 
+.. #[Punch: the sentence seems discontinuous.]
+
 {{{ switch to next slide on executing python scripts from command line }}}
 
 Let us create a simple python script to print hello world. Open your
@@ -121,8 +123,8 @@ Now let us run the script again,
 
     python four_plot.py
 
-Now it gave another error plot not defined, let us edit the file again
-and add the line below the line we just added,
+Now it gave another error -- plot not defined, let us edit the file
+again and add the line below the line we just added,
 
 {{{ switch to next slide, fix ``plot`` problem }}}
 
@@ -154,7 +156,7 @@ instead of,
     from scipy import *
 
 So in practice it is always good to use function names instead of
-asterisk or star. As if we use asterisk to import from a particular
+asterisk or star. If we use asterisk to import from a particular
 module then it will replace any existing functions with the same name
 in our name-space.
 
@@ -208,8 +210,8 @@ We can run it as,
 
 {{{ switch to next slide, What is a module? }}}
 
-So till now we have been learning about importing modules, now what is
-a module?
+Until now we have been learning about importing modules, now what is a
+module?
 
 A module is simply a file containing Python definitions and
 statements. Definitions from a module can be imported into other
@@ -217,10 +219,9 @@ modules or into the main module.
 
 {{{ switch to next slide, Python standard library }}}
 
-Python has a very rich standard library of modules
-
-Python's standard library is very extensive, offering a wide range of
-facilities. Some of the standard modules are,
+Python has a very rich standard library of modules. It is very
+extensive, offering a wide range of facilities. Some of the standard
+modules are,
 
 for Math: math, random
 for Internet access: urllib2, smtplib
