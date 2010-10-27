@@ -17,7 +17,7 @@
 ..   #. basic datatypes
      
 .. Author              : Puneeth 
-   Internal Reviewer   : 
+   Internal Reviewer   : Amit 
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -35,6 +35,7 @@ slicing and reversing them, or replacing characters, converting from
 upper to lower case and vice-versa and joining a list of strings.
 
 .. #[punch: reversed returns an iterator. should we still teach it?]
+
 
 We have an ``ipython`` shell open, in which we are going to work,
 through out this session. 
@@ -59,7 +60,7 @@ valid name of a day of the week or not.
 
 
 ``s`` could be in any of the forms --- sat, saturday, Sat, Saturday,
-SAT, SATURDAY. We shall now be solving the problem only for the forms,
+SAT, SATURDAY. For now, shall now be solving the problem only for the forms,
 sat and saturday. We shall solve it for the other forms, at the end of
 the tutorial. 
 
@@ -69,6 +70,7 @@ So, we need to check if the first three characters of the given string
 exists in the variable ``week``. 
 
 As, with any of the string data-types, strings can be sliced into
+.. #[Amit: Sequence data type???]
 sub-strings. To get the first three characters of s, we say, 
 
 ::
@@ -82,7 +84,7 @@ As we already know, the last element of the string can be accessed
 using ``s[-1]``.  
 
 Following is an exercise that you must do. 
-
+.. #[Amit: I don't know I am not sure about the sentence formation.]
 %%1%% Obtain the sub-string excluding the first and last characters
 from the string s. 
 
@@ -127,7 +129,7 @@ So, we obtain the reverse of s, by simply saying,
 ::
 
     s[::-1]
-
+.. #[amit: I think using reversed in not required after this]
 Now, to check if the string is ``s`` is palindromic, we say
 ::
 
@@ -157,6 +159,9 @@ Let's try it out.
 Note that these methods, do not change the original string, but return
 a new string.
 
+.. #[amit: I wish we could include this right when s.upper() is used so 
+.. that it is clear]
+
 Following is an exercise that you must do. 
 
 %%2%% Check if ``s`` is a valid name of a day of the week. Change the
@@ -171,6 +176,8 @@ Please, pause the video here. Do the exercise and then continue.
 
     s.lower()[:3] in week
 
+.. #[amit: May be a sentence or two about what our original problem was and 
+.. how this helps in solving it. One can loose the flow.]
 We just convert any input string to lower case and then check if it is
 present in the list ``week``. 
 

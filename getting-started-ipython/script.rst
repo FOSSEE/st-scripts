@@ -16,7 +16,7 @@
 .. should have ``ipython`` and ``pylab`` installed. 
      
 .. Author              : Puneeth 
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -73,6 +73,8 @@ Let's type
 at the prompt. IPython promptly gives back the output as 3.  Notice
 that the output is displayed with an ``Out[1]`` indication.
 
+.. #[[Anoop: I think we can illustrate In [] and Out[] in slides]]
+
 Let's try out few other mathematical operations.
 ::
 
@@ -95,6 +97,10 @@ then use the delete key to remove it and type 0 and * to change the
 expression to the required one.  We hit enter to see the output of
 ``print``. 
 
+.. #[[Anoop: We could create a slide with heading Tab Completion and
+   give the question as an exercise, basically I feel more slides
+   should be used]]
+
 Now, let's say we want to use the function ``round``. We type ``ro``
 at the prompt and hit the tab key. As you can see, the IPython
 completes the command. This feature is called the tab-completion.
@@ -104,6 +110,8 @@ tab. IPython does not complete the command since there are many
 possibilities. It just lists out all the possible completions.
 
 Following is an exercise that you must do. 
+
+.. #[[Anoop: Include slides for exercises]]
 
 %%1%% Type ``ab`` and hit tab to see what happens. Next, just type
 ``a`` and hit tab to see what happens.
@@ -115,6 +123,9 @@ the commands starting with a.
 
 Now, let's see what these functions are used for.  We will use the
 help features of ipython to find this out.
+
+.. #[[Anoop: Another slide which says about ? mark and round? etc, as
+   few people cannot just follow by listening (like me) :)]]
 
 To get the help of any function, we first type the function, ``abs``
 in our case and then add a ? at the end and hit enter.
@@ -136,6 +147,8 @@ and we do get back 10.5.
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add slide]]
+
 %%2%% Look-up the documentation of ``round`` and see how to use it.
 
 Please, pause the video here. Do the exercise and then continue. 
@@ -152,6 +165,8 @@ documentation.
 The function ``round``, rounds a number to a given precision.
 
 Following are exercises that you must do. 
+
+.. #[[Anoop: add slide]]
 
 %%3%% Check the output of::
 
@@ -186,6 +201,8 @@ prompt.
 
 Following is an exercise that you must do. 
 
+.. #[[Anoop: add slide]]
+
 %%4%% Try typing round(2.484, and hit enter. and then cancel the
 command using Ctrl-C. Then, type the command, round(2.484, 2) and
 resume the video.
@@ -201,6 +218,9 @@ Please, pause the video here. Do the exercises and then continue.
   
 This brings us to the end of the tutorial on getting started with
 ``ipython``.
+
+.. #[[Anoop: add slides for interrupts, navigating history, I feel
+    even a single point will also do]]
 
 In this tutorial we have learnt, how to
 {{{ show the outline/summary slide. }}}
@@ -218,4 +238,3 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thank you!
-
