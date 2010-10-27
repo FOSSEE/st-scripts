@@ -3,8 +3,8 @@
 
 .. At the end of this tutorial, you will be able to 
 
-.. 1. Saving plots using ``savefig()`` function.
-.. #. Saving plots in different formats.
+.. 1. Save plots using ``savefig()`` function.
+.. #. Save plots in different formats.
 
 
 .. Prerequisites
@@ -19,6 +19,7 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[Puneeth: Quickref missing.]
 
 =======
 Savefig
@@ -30,8 +31,10 @@ Hello and welcome to the tutorial saving plots.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial you will learn how to save plots using Python. And
-saving in different formats, and locating the file in the file system.
+In this tutorial you will learn how to save plots using Python, saving
+in different formats, and locating the file in the file system.
+
+.. #[Puneeth: file-system is too technical.]
 
 {{{ switch to next slide, a sine wave}}}
 
@@ -39,8 +42,8 @@ Start your IPython interpreter with the command ::
 
   ipython -pylab
 
-It will start your IPython interpreter with the required python
-modules for plotting and saving your plots.
+As you know, it will start your IPython interpreter with the required
+python modules for plotting and saving your plots.
 
 {{{ Open ipython }}}
 
@@ -61,6 +64,10 @@ Done! we have made a very basic sine plot, now let us see how to save
 the plot for future use so that you can embed the plot in your
 reports.
 
+.. #[Puneeth: All this is known stuff. You don't have to elaborate so
+.. much on it. Just say, let us plot sin function from -3 pi to 3
+.. pi. Show the commands, and be done with it. ]
+
 {{{ switch to next slide, savefig() }}}
 
 {{{ Switch the focus to IPython interpreter window }}}
@@ -70,10 +77,12 @@ done with the plot window open. The statement is, ::
 
   savefig('/home/fossee/sine.png')
 
-Notice that ``savefig`` function takes one argument which is a string
-which is the filename. The last 3 characters after the ``.`` in the
-filename is the extension or type of the file which determines the
-format in which you want to save.
+Notice that ``savefig`` function takes one argument which is the
+filename. The last 3 characters after the ``.`` in the filename is the
+extension or type of the file which determines the format in which you
+want to save.
+
+.. #[Puneeth: removed mention of string]
 
 {{{ Highlight the /home/fossee part using mouse movements }}}
 
