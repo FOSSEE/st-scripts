@@ -17,7 +17,7 @@
 ..   #. getting started with functions
      
 .. Author              : Puneeth 
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -57,7 +57,15 @@ calls it with two arguments. By observing the output, we can guess
 that the first one is equivalent to call with the second argument
 being 0. 0 is the default value of the argument. 
 
+.. #[[Anoop: It will be good if we show ``round??`` and tell them the
+   optional argument ndigits, or it could be given as an
+   exercise(solved) asking them to find the name of the argument in
+   the function round]]
+
 {{{ show a slide with examples of functions showing default values }}}
+
+.. #[[Anoop: I think the slide is not there]]
+
 ::
 
   s.strip() # strips on spaces. 
@@ -101,11 +109,16 @@ the output. "World" is the default value for the argument ``name``.
 
 Following is an (are) exercise(s) that you must do. 
 
+{{{ switch to next slide, containing problem statement of 
+    question 1 }}}
+
 %%1%% Redefine the function ``welcome``, by interchanging it's
 arguments. Place the ``name`` argument with it's default value of
 "World" before the ``greet`` argument.
 
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide, containing the solution to problem 1 }}}
 
 ::
 
@@ -116,12 +129,20 @@ We get an error that reads ``SyntaxError: non-default argument follows
 default argument``. When defining a function all the argument with
 default values should come at the end. 
 
+.. #[[Anoop: In the slide, "when defining a function all the default
+   arguments must be defined at the end" has to be emphasized"]]
+
 Following is an exercise that you must do. 
+
+{{{ switch to next slide, containing the problem statement of 
+    question 2 }}}
 
 %%2%% See the definition of linspace using ``?`` and observe how all
 the arguments with default values are towards the end.
 
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide, containing solution to problem 2 }}}
 
 ::
 
@@ -129,11 +150,15 @@ Please, pause the video here. Do the exercise and then continue.
 
 Following is an exercise that you must do. 
 
+{{{ switch to next slide, problem statement }}}
+
 %%3%% Redefine the function ``welcome`` with a default value of
 "Hello" to the ``greet`` argument. Then, call the function without any
 arguments. 
 
 Please, pause the video here. Do the exercise and then continue. 
+
+{{{ switch to next slide, solution }}}
 
 ::
 
@@ -147,6 +172,9 @@ Please, pause the video here. Do the exercise and then continue.
 Let us now learn what keyword arguments are. 
 
 {{{ show a slide with examples using keyword arguments. }}}
+
+.. #[[Anoop: slide is missing]]
+
 ::
 
   legend(['sin(2y)'], loc = 'center')
@@ -156,6 +184,14 @@ Let us now learn what keyword arguments are.
   annotate('local max', xy = (1.5, 1))
 
   pie(science.values(), labels = science.keys())
+
+.. #[[Anoop: I think it will better to introduce keyword arguments as
+   keyword/named arguments, as the keyword term was quite confusing
+   for me, so can be for someone who already know certain
+   jargon's/concepts, also it would be good to tell them that these
+   are different from keywords in programming languages, explicit is
+   better than implicit, and probably you could also tell them that
+   from now on we will refer to it as just keyword arguments]]
 
 When you are calling functions in Python, you don't need to remember
 the order in which to pass the arguments. Instead, you can use the
@@ -199,6 +235,8 @@ arguments.
 
 {{{ switch to a slide showing variety of functions with uses }}}
 
+.. #[[Anoop: slide missing]]
+
 Before defining a function of your own, make sure that you check the
 standard library, for a similar function. Python is popularly called a
 "Batteries included" language, for the huge library that comes along
@@ -214,6 +252,8 @@ with it.
 
 {{{ switch to slide showing classes of functions in pylab, scipy }}}
 
+.. #[[Anoop: slide missing]]
+
 Apart from the standard library there are other libraries like ``pylab``,
 ``scipy``, etc which have a huge collection of functions for scientific
 purposes. 
@@ -226,6 +266,9 @@ purposes.
     fftpack, stats, linalg, ndimage, signal, optimize, integrate
 
 {{{ Show summary slide }}}
+
+.. #[[Anoop: add range of functions available in python standard
+   library]]
 
 That brings us to the end of this tutorial. In this tutorial we have
 learnt how to use functions with default values and keyword

@@ -40,14 +40,14 @@
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 7.1 LO: | manipulating lists                     |     3 | Madhu    |                                       |           |
-| 7.2 LO: | manipulating strings                   |     2 | Punch    | Anoop(Pending)                        |           |
+| 7.2 LO: | manipulating strings                   |     2 | Punch    | Amit(Done)                            |           |
 | 7.3 LO: | getting started with tuples            |     2 | Nishanth |                                       |           |
 | 7.4 LO: | dictionaries                           |     2 | Anoop    | Punch (Done)                          |           |
 | 7.5 LO: | sets                                   |     2 | Nishanth |                                       |           |
 | 7.6 LO: | Assessment                             |     3 | Amit     |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 8.1 LO: | getting started with functions         |     3 | Nishanth |                                       |           |
-| 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop(Pending)                        |           |
+| 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop(Done)                           |           |
 | 8.3 LO: | using python modules                   |     3 | Anoop    | Punch (Done)                          |           |
 | 8.4 LO: | writing python scripts                 |     2 | Nishanth |                                       |           |
 | 8.5 LO: | testing and debugging                  |     2 | Amit     |                                       |           |

@@ -1,4 +1,4 @@
-% Created 2010-10-11 Mon 11:27
+% Created 2010-10-28 Thu 11:35
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -63,10 +64,9 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \frametitle{Solution 1}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []:  s[1:-1]
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -80,11 +80,10 @@ In []:  s[1:-1]
 \frametitle{Solution 2}
 \label{sec-5}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []:  s in week
 In []:  s.lower()[:3] in week
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 3}
@@ -98,11 +97,10 @@ In []:  s.lower()[:3] in week
 \frametitle{Solution 3}
 \label{sec-7}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 email.replace('[dot], '.')
 print email
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 4}
@@ -115,10 +113,9 @@ print email
 \frametitle{Solution 4}
 \label{sec-9}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 email_str = email_str.replace(",", ";")
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
