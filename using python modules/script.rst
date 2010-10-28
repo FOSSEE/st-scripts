@@ -18,7 +18,7 @@
 ..   #. saving plots.
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -33,8 +33,8 @@ Welcome to the spoken tutorial on using python modules.
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial, we will see how to run python scripts from command
-line, importing modules, importing scipy and pylab modules. And also
-see the Python standard library.
+line. See importing modules, importing scipy and pylab modules. And
+also see the Python standard library.
 
 .. #[Punch: the sentence seems discontinuous.]
 
