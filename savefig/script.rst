@@ -15,7 +15,7 @@
 ..   #. using plot command interactively.
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -83,6 +83,8 @@ extension or type of the file which determines the format in which you
 want to save.
 
 .. #[Puneeth: removed mention of string]
+
+.. #[[Anoop: I think this treatment is better :) ]]
 
 {{{ Highlight the /home/fossee part using mouse movements }}}
 
