@@ -18,7 +18,7 @@
 
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -40,9 +40,10 @@ Hello and welcome to the tutorial other type of plots.
 .. them? Tell that we have only looked at one type of plot all the
 .. while, etc.]
 
-In this tutorial we will cover scatter plot, pie chart, bar chart and
-log-log plot. We will also see few other plots and also introduce you to
-the matplotlib help.
+Till now we have seen only one type of plot, and in this tutorial us
+see more type of plots like scatter plot, pie chart, bar chart and
+log-log plot. We will see few other more plots and also see an
+introduction to matplotlib help.
 
 .. #[Puneeth: cover, see and introduce you. be consistent. does, the
 .. "We" include the viewer or not?]
@@ -87,6 +88,10 @@ and it can be done as ::
     year,profit =
     loadtxt('/home/fossee/other-plot/company-a-data.txt',dtype=type(int()))
 
+By default loadtxt converts the value to float. The
+``dtype=type(int())`` argument in loadtxt converts the value to
+integer as we require the data as integer further in the tutorial.
+
 .. #[Puneeth: make a remark about dtype, that has not been covered in
 .. the loadtxt tutorial.]
 
@@ -114,7 +119,8 @@ Pause here and solve the question before moving on.
 
 .. scatter(year,profit,color='r',marker='d')
 
-Now let us move on to pie chart.
+Now let us see another plot, pie chart and try to plot the same data
+as a pie chart.
 
 .. #[Puneeth: instead of just saying that, say that let's plot a pie
 .. chart for the same data. continuity, will be good.]
