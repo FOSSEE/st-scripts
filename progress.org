@@ -28,7 +28,7 @@
 | 4.5 LO: | Assessment                             |     3 | Punch    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 5.1 LO: | getting started with sage notebook     |     3 | Madhu    |                                       |           |
-| 5.2 LO: | getting started with symbolics         |     3 | Amit     |                                       |           |
+| 5.2 LO: | getting started with symbolics         |     3 | Amit     | Pending                               |           |
 | 5.3 LO: | using Sage                             |     4 | Punch    | Anoop (Done)                          |           |
 | 5.4 LO: | using sage to teach                    |     3 | Nishanth |                                       |           |
 | 5.5 LO: | Assessment                             |     3 | Anoop    |                                       |           |

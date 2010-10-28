@@ -1,3 +1,27 @@
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial, you will be able to
+
+.. 1. Defining symbolic expressions in sage.  
+.. # Using built-in costants and functions. 
+.. # Performing Integration, differentiation using sage. 
+.. # Defining matrices. 
+.. # Defining Symbolic functions.  
+.. # Simplifying and solving symbolic expressions and functions.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. getting started with sage notebook
+
+     
+.. Author              : Amit 
+   Internal Reviewer   :  
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 Symbolics with Sage
 -------------------
 
