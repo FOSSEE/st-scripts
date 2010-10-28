@@ -1,3 +1,25 @@
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial, you will be able to
+
+.. 1. Defining a list of numbers
+.. 2. Squaring a list of numbers
+.. 3. Plotting data points.
+.. 4. Plotting errorbars.
+
+
+.. Prerequisites
+.. -------------
+
+..   1. getting started with plotting
+
+     
+.. Author              : Amit 
+   Internal Reviewer   :  
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
 Plotting   Experimental  Data  
 =============================   
 Hello  and welcome , this tutorial on  Plotting Experimental data is 

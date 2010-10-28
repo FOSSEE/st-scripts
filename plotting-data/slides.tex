@@ -1,0 +1,152 @@
+% Created 2010-10-28 Thu 15:05
+\documentclass[presentation]{beamer}
+\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+
+\title{Plotting Experimental Data}
+\author{FOSSEE}
+\date{2010-09-14 Tue}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Tutorial Plan}
+\label{sec-1}
+\begin{itemize}
+
+\item Plotting Experiment Data and Error Bars\\
+\label{sec-1.1}%
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisites}
+\label{sec-2}
+\begin{itemize}
+
+\item Plotting simple analytical Functions\\
+\label{sec-2.1}%
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{plot L vs. T$^2$}
+\label{sec-3}
+
+
+
+
+\begin{center}
+\begin{tabular}{rr}
+   L  &     T  \\
+ 0.1  &  0.69  \\
+ 0.2  &  0.90  \\
+ 0.3  &  1.19  \\
+ 0.4  &  1.30  \\
+ 0.5  &  1.47  \\
+ 0.6  &  1.58  \\
+ 0.7  &  1.77  \\
+ 0.8  &  1.83  \\
+ 0.9  &  1.94  \\
+\end{tabular}
+\end{center}
+
+
+  
+  
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Initializing L \& T}
+\label{sec-4}
+
+\begin{verbatim}
+   In []: L = [0.1, 0.2, 0.3, 0.4, 0.5,
+              0.6, 0.7, 0.8, 0.9]
+   In []: t = [0.69, 0.90, 1.19,
+               1.30, 1.47, 1.58,
+              1.77, 1.83, 1.94]
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{square()}
+\label{sec-5}
+
+\begin{verbatim}
+   In []: tsquare=square(t)
+\end{verbatim}
+
+  
+\begin{verbatim}
+   array([ 0.4761,  0.81  ,  1.4161,  1.69  ,  2.1609,  2.4964,  3.1329,
+         3.3489,  3.7636])
+\end{verbatim}
+
+
+  
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Plotting}
+\label{sec-6}
+
+\begin{verbatim}
+   In[]: plot(L,t,.)
+\end{verbatim}
+
+  
+
+\begin{verbatim}
+   In[]: plot(L,t,o)
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Adding Error}
+\label{sec-7}
+
+
+
+
+\begin{center}
+\begin{tabular}{rrrr}
+   L  &     T  &  /Delta L  &  /Delta T  \\
+ 0.1  &  0.69  &      0.08  &      0.04  \\
+ 0.2  &  0.90  &      0.09  &      0.08  \\
+ 0.3  &  1.19  &      0.07  &      0.11  \\
+ 0.4  &  1.30  &      0.05  &      0.05  \\
+ 0.5  &  1.47  &      0.06  &      0.03  \\
+ 0.6  &  1.58  &      0.00  &      0.03  \\
+ 0.7  &  1.77  &      0.06  &      0.01  \\
+ 0.8  &  1.83  &      0.06  &      0.07  \\
+ 0.9  &  1.94  &      0.01  &      0.01  \\
+\end{tabular}
+\end{center}
+
+
+ 
+ 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Plotting Error bar}
+\label{sec-8}
+
+  
+\begin{verbatim}
+   In[]: errorbar(L,tsquare,xerr=delta_L, yerr=delta_T,
+                  fmt='b.')
+\end{verbatim}
+\end{frame}
+
+\end{document}
