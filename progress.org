@@ -9,7 +9,7 @@
 | 1.8 LO: | module level assessment                |     3 | Madhu    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 2.2 LO: | loading data from files                |     3 | Punch    | Nishanth (Done)                       |           |
-| 2.3 LO: | plotting the data                      |     3 | Amit     |                                       |           |
+| 2.3 LO: | plotting the data                      |     3 | Amit     | Pending                               |           |
 | 2.4 LO: | other types of plots                   |     3 | Anoop    | Punch (Done)                          |           |
 | 2.5 LO: | module level assessment                |     3 | Nishanth |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
