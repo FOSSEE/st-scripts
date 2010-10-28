@@ -18,7 +18,7 @@
 ..   #. basic datatypes.
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -47,12 +47,12 @@ data structures that provide key-value mappings.  Dictionaries are
 similar to lists except that instead of the values having integer
 indexes, dictionaries have keys or strings as indexes.
 
-Before we can proceed, start your IPython interpreter with the
-``-pylab`` option.
+We need ipython interpreter for this tutorial, start it by issuing the
+command ``ipython`` in command line.
 
 .. #[Puneeth: We don't need pylab]
 
-{{{ start ipython interpreter by issuing command ipython -pylab }}}
+{{{ start ipython interpreter by issuing command ipython }}}
 
 {{{ switch to next slide, Creating dictionary }}}
 
