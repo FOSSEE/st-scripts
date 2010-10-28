@@ -1,3 +1,31 @@
+.. Objectives
+.. ----------
+
+.. By the end of this tutorial, you will be able to
+
+.. Create Lists.
+.. Access List elements.
+.. Append elemets to list
+.. Delete list elemets
+
+.. 1. getting started with ipython 
+
+
+
+.. Prerequisites
+.. -------------
+
+..   1. getting started with strings
+..   #. getting started with lists
+..   #. basic datatypes
+     
+.. Author              : Puneeth 
+   Internal Reviewer   : Amit 
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+
+Script
+------
 Hello friends and welcome to the tutorial on getting started with
 lists.
 
