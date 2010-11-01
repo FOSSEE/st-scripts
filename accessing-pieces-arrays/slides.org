@@ -100,7 +100,7 @@
   #+end_src
 * Summary
   You should now be able to --
-  - Manipulate 1D \& Multi dimensional arrays
+  - Manipulate single \& multi dimensional arrays
       - Access and change individual elements 
       - Access and change rows and columns 
       - Slice and stride on arrays
