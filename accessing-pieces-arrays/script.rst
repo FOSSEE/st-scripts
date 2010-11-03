@@ -61,6 +61,8 @@ use to work through this tutorial.
 Pause the video here and make sure you have the arrays A and C,
 typed in correctly.
 
+{{{ Pause the recording and type the arrays A,C }}}
+
 Let us begin with the most elementary thing, accessing individual
 elements. Also, let us first do it with the one-dimensional array
 A, and then do the same thing with the two-dimensional array. 
@@ -71,6 +73,8 @@ To access, the element 34 in A, we say,
 
   A[2]
 
+A of 2, note that we are using square brackets.
+
 Like lists, indexing starts from 0 in arrays, too. So, 34, the
 third element has the index 2. 
 
@@ -78,6 +82,8 @@ Now, let us access the element 34 from C. To do this, we say
 ::
 
   C[2, 3]
+
+C of 2,3.
 
 34 is in the third row and the fourth column, and since indexing
 begins from zero, the row index is 2 and column index is 3. 
