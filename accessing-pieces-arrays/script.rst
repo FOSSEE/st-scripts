@@ -120,12 +120,11 @@ or
   
   C[-1] = 0
 
-Now, how do we access one column of C? As with accessing
-individual elements, the column is the second parameter to be
-specified (after the comma). The first parameter, is now replaced
-with a ``:`` to say, that we want all the elements of that
-dimension, instead of one particular element. We access the third
-column by
+Now, how do we access one column of C? As with accessing individual
+elements, the column is the second parameter to be specified (after
+the comma). The first parameter, is replaced with a ``:``. This
+specifies that we want all the elements of that dimension, instead of
+just one particular element. We access the third column by
 
 ::
   
@@ -263,11 +262,10 @@ gives the elements [11, 21, 31, 41]
 
 gives the elements [21, 31, 41, 0]
 
-Note that when specifying ranges, if you are starting from or
-going up-to the end, the corresponding element may be dropped. So,
-in the previous example to obtain [11, 21, 31, 41], we could have
-simply said, 
-::
+Note that when specifying ranges, if you are starting from the
+beginning or going up-to the end, the corresponding element may be
+dropped. So, in the previous example to obtain [11, 21, 31, 41], we
+could have simply said, ::
 
   C[:4, 0]
 
@@ -317,7 +315,7 @@ Following is an exercise that you must do.
 
 %%5%% Obtain the square in the center of the image.
 
-Following is an exercise that you must do. 
+Please, pause the video here. Do the exercises and then continue. 
 
 {{ show slide containing Solution 5 }} 
 
@@ -377,7 +375,7 @@ gives the elements [[12, 0], [42, 0]]
 
 gives the elements [[12, 13, 14], [0, 0, 0]]
 
-Now, that we know how to stride over an image, we can drop
+Now, that we know how to stride over an array, we can drop
 alternate rows and columns out of the image in I. 
 ::
 
@@ -417,5 +415,5 @@ Thank you!
    mode: rst
    indent-tabs-mode: nil
    sentence-end-double-space: nil
-   fill-column: 75
+   fill-column: 70
    End:
