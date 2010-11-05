@@ -36,6 +36,44 @@
   + use tab-completion
   + look-up documentation of functions
   + interrupt incomplete or incorrect commands
+* Question 1
+  Type =ab= and hit tab to see what happens. Next, just type =a= and
+  hit tab to see what happens.
+* Solution 1
+  =ab= tab completes to =abs= and =a<tab>= gives us a list of all the
+  commands starting with a.
+* Question 2
+  Look-up the documentation of =round= and see how to use it.
+* Solution 2
+  =round?=
+* Question 3
+  Check the output of
+  #+begin_src python
+    round(2.48)
+    round(2.48, 1)
+    round(2.48, 2)
+    
+    round(2.484)
+    round(2.484, 1)
+    round(2.484, 2)
+  #+end_src 
+  Look-up the documentation of =round= and see how to use it.
+* Solution 3
+  We get 2.0, 2.5 and 2.48, which are what we expect. 
+* Question 4
+  Try typing =round(2.484=, and hit enter. and then cancel the command
+  using Ctrl-C. Then, type the command, =round(2.484, 2)= and resume
+  the video.
+* Solution 4
+  #+begin_src python
+    round(2.484 
+    ^C
+    
+    round(2.484, 2)
+  #+end_src 
+
+
+
 * Summary
   + invoking and quitting the ~ipython~ interpreter
   + navigating the history
