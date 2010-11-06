@@ -17,6 +17,7 @@
 .. Author              : Puneeth
    Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
+   Language Reviewe    : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -69,7 +70,7 @@ Now, let us see what is in ``pend``, by typing
 
   print pend
 
-We can see that ``pend`` has all the data of file. Type just ``pend``
+We can see that ``pend`` has all the data of the file. Type just ``pend``
 to see more explicitly, what it contains. 
 ::
 
