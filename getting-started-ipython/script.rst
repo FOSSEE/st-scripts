@@ -17,6 +17,7 @@
      
 .. Author              : Puneeth 
    Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
+   Language Review     : Bhanukiran 
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -95,11 +96,11 @@ Now, let's change the previous command ``print 1+2`` to ``print
 10*2``.  We use the up arrow again to navigate to the previous command
 and use the left arrow key to move the cursor on to the + symbol and
 then use the delete key to remove it and type 0 and * to change the
-expression to the required one.  We hit enter to see the output of
+expression as required.  We hit enter to see the output of
 ``print``. 
 
 Now, let's say we want to use the function ``round``. We type ``ro``
-at the prompt and hit the tab key. As you can see, the IPython
+at the prompt and hit the tab key. As you can see, IPython
 completes the command. This feature is called the tab-completion.
 
 Now, we remove all the characters and just type ``r`` and then hit
@@ -176,7 +177,7 @@ Please, pause the video here. Do the exercises and then continue.
 
 We get 2.0, 2.5 and 2.48, which are what we expect. 
 
-Let's now see how to correct typing errors that we make when typing at
+Let's now see how to correct typing errors that we make while typing at
 the terminal. As already shown, if we haven't hit the enter key
 already, we could navigate using the arrow keys and make deletions
 using delete or backspace key and correct the errors. 
