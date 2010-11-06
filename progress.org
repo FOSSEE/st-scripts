@@ -18,11 +18,11 @@
 | 3.3 LO: | getting started with strings           |     2 | Madhu    |                                       |           |
 | 3.4 LO: | getting started with files             |     3 | Punch    | Anoop(Done)                           |           |
 | 3.5 LO: | parsing data                           |     3 | Nishanth | Amit (Done)                           |           |
-| 3.6 LO: | statistics                             |     2 | Amit     | Pending                               |           |
+| 3.6 LO: | statistics                             |     2 | Amit     | Punch (Done)                          |           |
 | 3.7 LO: | module level assessment                |     3 | Madhu    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 4.1 LO: | getting started with arrays            |     2 | Anoop    | Punch (Done)                          |           |
-| 4.2 LO: | accessing parts of arrays              |     4 | Punch    | Anoop(Done)                           |           |
+| 4.2 LO: | accessing parts of arrays              |     4 | Punch    | Anoop (Done)                          |           |
 | 4.3 LO: | Matrices                               |     3 | Anoop    | Punch (changes before further review) |           |
 | 4.4 LO: | Least square fit                       |     2 | Nishanth | Punch (Done)                          |           |
 | 4.5 LO: | Assessment                             |     3 | Punch    |                                       |           |
@@ -36,7 +36,7 @@
 | 6.1 LO: | basic datatypes & operators            |     4 | Amit     | Punch (Done)                          |           |
 | 6.2 LO: | I/O                                    |     1 | Nishanth |                                       |           |
 | 6.3 LO: | conditionals                           |     2 | Madhu    |                                       |           |
-| 6.4 LO: | loops                                  |     2 | Puneeth  | Anoop(Done)                           |           |
+| 6.4 LO: | loops                                  |     2 | Punch    | Anoop (Done)                          |           |
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 7.1 LO: | manipulating lists                     |     3 | Madhu    |                                       |           |
@@ -47,9 +47,10 @@
 | 7.6 LO: | Assessment                             |     3 | Amit     |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
 | 8.1 LO: | getting started with functions         |     3 | Nishanth |                                       |           |
-| 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop(Done)                           |           |
+| 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop (Done)                          |           |
 | 8.3 LO: | using python modules                   |     3 | Anoop    | Punch (Done)                          |           |
 | 8.4 LO: | writing python scripts                 |     2 | Nishanth |                                       |           |
 | 8.5 LO: | testing and debugging                  |     2 | Amit     |                                       |           |
 | 8.6 LO: | Assessment                             |     3 | Madhu    |                                       |           |
 |---------+----------------------------------------+-------+----------+---------------------------------------+-----------|
+

@@ -19,6 +19,8 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[punch; add slides, exercises!]
+
 Hello friends and welcome to the tutorial on Statistics using Python
 
 {{{ Show the slide containing title }}}
