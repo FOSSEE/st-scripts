@@ -16,10 +16,11 @@
 
 ..   1. getting started with arrays
 
-     
+.. #[anand: internal reviewer not mentioned]     
 .. Author              : Puneeth
    Internal Reviewer   : 
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -223,7 +224,7 @@ We say,
 
 to get the elements of rows indexed from 0 to 3, 3 not included
 and column indexed 2. Note that, the index before the colon is
-included and the index after it is not included, in the slice that
+included and the index after it is not included in the slice that
 we have obtained. This is very similar to the ``range`` function,
 where ``range`` returns a list, in which the upper limit or stop
 value is not included.
