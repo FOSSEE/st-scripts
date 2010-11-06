@@ -17,7 +17,7 @@
 .. Author              : Puneeth
    Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
-   Language Reviewe    : Bhanukiran
+   Language Reviewer    : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
