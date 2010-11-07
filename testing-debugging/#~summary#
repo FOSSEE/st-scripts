@@ -1,0 +1,8 @@
+In this tutorial we have learned to
+1.Create simple tests for a function.
+2.Learn to Automate tests using many predefined test cases.
+3.Good coding standards.
+4.Difference between syntax error and exception.
+5.Handling exception using try and except.
+6.Using %debug for debugging on ipython.
+
