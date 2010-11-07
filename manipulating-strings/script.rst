@@ -91,7 +91,7 @@ Please, pause the video here. Do the exercise(s) and then continue.
 
     s[1:-1]
 
-gives a substring of s, without the first and the last
+gives the substring of s, without the first and the last
 characters of s. 
 
 ::
