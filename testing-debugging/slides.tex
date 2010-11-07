@@ -1,106 +1,120 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-11-07 Sun 18:57
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
-
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
-
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{red},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+\title{Testing and debugging}
+\author{FOSSEE}
 \date{}
 
-% DOCUMENT STARTS
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
+\maketitle
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
+
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
-  \begin{block}{}
-  \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
-  \end{center}
-  \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
-  \end{center}  
-  \end{block}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item What software Testing is?
+\item Learn to test simple functions for their functionality.
+\item Learn how to automate tests.
+\item Need for coding style and some of the standards followed by the Python Community.
+\item Handling Errors and Exceptions.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{gcd function}
+\label{sec-2}
+
+\begin{itemize}
+\item Create gcd.py file with:
+\end{itemize}
+
+\begin{lstlisting}[language=python]
+  def gcd(a, b):
+        if a % b == 0: 
+            return b
+        return gcd(b, a%b)
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Test for gcd.py}
+\label{sec-3}
+
+\begin{itemize}
+\item Edit gcd.py file
+\end{itemize}
+
+\begin{lstlisting}[language=python]
+
+  def gcd(a, b):
+      if b == 0:
+          return a
+      return gcd(b, a%b)
+  
+  if __name__=='__main__':
+      result = gcd(48, 64)
+      if result != 16:
+          print "Test failed"
+      print "Test Passed"
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Automating tests}
+\label{sec-4}
+
+\begin{lstlisting}[language=python]
+
+    if __name=__='__main__':
+    for line in open('numbers.txt'):
+        numbers = line.split()
+        x = int(numbers[1])
+        y = int(numbers[2])
+        result = int(numbers[3])
+        if gcd(x, y) != result:
+            print "Failed gcd test
+                          for", x, y
+\end{lstlisting}
+
+
+
+
+$^{1}$ FOOTNOTE DEFINITION NOT FOUND: 0
+
+$^{2}$ FOOTNOTE DEFINITION NOT FOUND: 1
+
+$^{3}$ FOOTNOTE DEFINITION NOT FOUND: 2
 \end{frame}
 
 \end{document}
