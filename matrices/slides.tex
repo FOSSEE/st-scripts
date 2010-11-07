@@ -1,4 +1,4 @@
-% Created 2010-10-12 Tue 14:28
+% Created 2010-11-07 Sun 16:18
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -70,7 +70,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{itemize}
 
 \begin{verbatim}
-   In []: m1 = matrix([1, 2, 3, 4])
+   In []: m1 = array([1, 2, 3, 4])
 \end{verbatim}
 
 \begin{itemize}
@@ -79,11 +79,25 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 \begin{verbatim}
    In []: l1 = [[1,2,3,4],[5,6,7,8]]
-   In []: m2 = matrix(l1)
+   In []: m2 = array(l1)
 \end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 1}
+\label{sec-3}
+
+  Create a (2, 4) matrix \texttt{m3}
+\begin{verbatim}
+   m3 = [[5,  6,  7,  8],
+         [9, 10, 11, 12]]
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-4}
 
 \begin{itemize}
-\item A matrix is basically an array
+\item m3 can be created as,
 \end{itemize}
 
 \begin{verbatim}
@@ -92,7 +106,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Matrix operations}
-\label{sec-3}
+\label{sec-5}
 
 \begin{itemize}
 \item Element-wise addition (both matrix should be of order \texttt{mXn})
@@ -109,25 +123,25 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Matrix Multiplication}
-\label{sec-4}
+\label{sec-6}
 
 \begin{itemize}
-\item Matrix Multiplication
+\item Element-wise multiplication using \texttt{m3 * m2}
 \begin{verbatim}
      In []: m3 * m2
-     Out []: ValueError: objects are not aligned
 \end{verbatim}
 
-\item Element-wise multiplication using \texttt{multiply()}
+\item Matrix Multiplication using \texttt{dot(m3, m2)}
 \begin{verbatim}
-     multiply(m3, m2)
+     In []: dot(m3, m2)
+     Out []: ValueError: objects are not aligned
 \end{verbatim}
 
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Matrix Multiplication (cont'd)}
-\label{sec-5}
+\label{sec-7}
 
 \begin{itemize}
 \item Create two compatible matrices of order \texttt{nXm} and \texttt{mXr}
@@ -142,19 +156,19 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 \item Creating another matrix of order \texttt{4 X 2}
 \begin{verbatim}
-     In []: m4 = matrix([[1,2],[3,4],[5,6],[7,8]])
+     In []: m4 = array([[1,2],[3,4],[5,6],[7,8]])
 \end{verbatim}
 
 \item Matrix multiplication
 \begin{verbatim}
-     In []: m1 * m4
+     In []: dot(m1, m4)
 \end{verbatim}
 
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Recall from \texttt{array}}
-\label{sec-6}
+\label{sec-8}
 
 \begin{itemize}
 \item The functions
@@ -178,7 +192,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{More matrix operations}
-\label{sec-7}
+\label{sec-9}
 
   Transpose of a matrix
 \begin{verbatim}
@@ -186,8 +200,8 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Exercise 1 : Frobenius norm \& inverse}
-\label{sec-8}
+\frametitle{Exercise 2 : Frobenius norm \& inverse}
+\label{sec-10}
 
   Find out the Frobenius norm of inverse of a \texttt{4 X 4} matrix.
 \begin{verbatim}
@@ -196,7 +210,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
   The matrix is
 \begin{verbatim}
-   m5 = matrix(arange(1,17).reshape(4,4))
+   m5 = arange(1,17).reshape(4,4)
 \end{verbatim}
 
 \begin{itemize}
@@ -215,8 +229,8 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Exercise 2: Infinity norm}
-\label{sec-9}
+\frametitle{Exercise 3 : Infinity norm}
+\label{sec-11}
 
   Find the infinity norm of the matrix \texttt{im5}
 \begin{verbatim}
@@ -230,7 +244,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\texttt{norm()} method}
-\label{sec-10}
+\label{sec-12}
 
 \begin{itemize}
 \item Frobenius norm
@@ -247,7 +261,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Determinant}
-\label{sec-11}
+\label{sec-13}
 
   Find out the determinant of the matrix m5
 \begin{verbatim}
@@ -265,7 +279,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{eigen values \& eigen vectors}
-\label{sec-12}
+\label{sec-14}
 
   Find out the eigen values and eigen vectors of the matrix \texttt{m5}.
 \begin{verbatim}
@@ -300,7 +314,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Singular Value Decomposition (\texttt{svd})}
-\label{sec-13}
+\label{sec-15}
 
     $M = U \Sigma V^*$
 \begin{itemize}
@@ -318,7 +332,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-14}
+\label{sec-16}
 
 \begin{itemize}
 \item Matrices
@@ -337,7 +351,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Thank you!}
-\label{sec-15}
+\label{sec-17}
 
   \begin{block}{}
   \begin{center}

@@ -42,11 +42,16 @@
 
 * Creating a matrix
   - Creating a matrix using direct data
-  : In []: m1 = matrix([1, 2, 3, 4])
+  : In []: m1 = array([1, 2, 3, 4])
   - Creating a matrix using lists
   : In []: l1 = [[1,2,3,4],[5,6,7,8]]
-  : In []: m2 = matrix(l1)
-  - A matrix is basically an array
+  : In []: m2 = array(l1)
+* Exercise 1
+  Create a (2, 4) matrix ~m3~
+  : m3 = [[5,  6,  7,  8],
+  :       [9, 10, 11, 12]]
+* Solution 1
+  - m3 can be created as,
   : In []: m3 = array([[5,6,7,8],[9,10,11,12]])
 
 * Matrix operations
@@ -55,20 +60,20 @@
   - Element-wise subtraction (both matrix should be of order ~mXn~)
     : In []: m3 - m2
 * Matrix Multiplication
-  - Matrix Multiplication
+  - Element-wise multiplication using ~m3 * m2~
     : In []: m3 * m2
+  - Matrix Multiplication using ~dot(m3, m2)~
+    : In []: dot(m3, m2)
     : Out []: ValueError: objects are not aligned
-  - Element-wise multiplication using ~multiply()~
-    : multiply(m3, m2)
 
 * Matrix Multiplication (cont'd)
   - Create two compatible matrices of order ~nXm~ and ~mXr~
     : In []: m1.shape
     - matrix m1 is of order ~1 X 4~
   - Creating another matrix of order ~4 X 2~
-    : In []: m4 = matrix([[1,2],[3,4],[5,6],[7,8]])
+    : In []: m4 = array([[1,2],[3,4],[5,6],[7,8]])
   - Matrix multiplication
-    : In []: m1 * m4
+    : In []: dot(m1, m4)
 * Recall from ~array~
   - The functions 
     - ~identity(n)~ - 
@@ -86,11 +91,11 @@
 * More matrix operations
   Transpose of a matrix
   : In []: m4.T
-* Exercise 1 : Frobenius norm \& inverse
+* Exercise 2 : Frobenius norm \& inverse
   Find out the Frobenius norm of inverse of a ~4 X 4~ matrix.
   : 
   The matrix is
-  : m5 = matrix(arange(1,17).reshape(4,4))
+  : m5 = arange(1,17).reshape(4,4)
   - Inverse of A, 
     - 
      #+begin_latex
@@ -102,7 +107,7 @@
         $||A||_F = [\sum_{i,j} abs(a_{i,j})^2]^{1/2}$
       #+end_latex
 
-* Exercise 2: Infinity norm
+* Exercise 3 : Infinity norm
   Find the infinity norm of the matrix ~im5~
   : 
   - Infinity norm is defined as,
