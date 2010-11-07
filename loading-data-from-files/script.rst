@@ -14,10 +14,12 @@
 
 .. 1. getting started with ``ipython``
      
-.. Author              : 
-   Internal Reviewer   : 
+.. #[Anand: author and internal reviewer  not mentioned]
+.. Author              : Puneeth Changanti
+   Internal Reviewer   : Nishanth Amuluru
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <06-11-2010 Anand, OK> [2010-10-05]
 
 Script
 ------
@@ -96,7 +98,7 @@ equal number of rows.
 ..   cat /home/fossee/pendulum.txt
 
 .. #[Nishanth]: The first column is L values and second is T values
-                from a simle pelculum experiment.
+                from a simple pendulum experiment.
                 Since you are using the variable names later in the
                 script.
                 Not necessary but can be included also.
@@ -133,7 +135,7 @@ Let us now, print the variables L and T, to see what they contain.
 
 Notice, that L and T now contain the first and second columns of data
 from the data file, ``pendulum.txt``, and they are both simple
-sequences. ``unpack=True`` has given us the two columns in to two
+sequences. ``unpack=True`` has given us the two columns into two
 separate sequences instead of one complex sequence. 
 
 {{{ show the slide with loadtxt --- other features }}}

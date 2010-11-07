@@ -17,7 +17,8 @@
 .. Author              : Puneeth
    Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer    : Bhanukiran
+   Checklist OK?       : <06-11-2010, Anand, OK> [2010-10-05]
 
 Script
 ------
@@ -69,7 +70,7 @@ Now, let us see what is in ``pend``, by typing
 
   print pend
 
-We can see that ``pend`` has all the data of file. Type just ``pend``
+We can see that ``pend`` has all the data of the file. Type just ``pend``
 to see more explicitly, what it contains. 
 ::
 
@@ -77,7 +78,7 @@ to see more explicitly, what it contains.
 
 Following is an exercise that you must do. 
 
-.. #[[Anoop:add context switch to next slide - questions]]
+{{ show slide with Question 1 }}
 
 %%1%% Split the variable into a list, ``pend_list``, of the lines in
 the file. Hint, use the tab command to see what methods the string
@@ -85,14 +86,7 @@ variable has.
 
 Please, pause the video here. Do the exercise and then continue. 
 
-.. #[punch: should this even be put? add dependency to strings LO,
-.. where we mention that strings have methods for manipulation. hint:
-.. use splitlines()]
-
-.. #[[Anoop: let us have it here, let us consider this as a
-   refresher]]
-
-.. #[[Anoop:add context switch to next slide - solution]]
+{{ show slide with Solution 1 }}
 
 ::
 
@@ -103,12 +97,6 @@ Please, pause the video here. Do the exercise and then continue.
 Now, let us learn to read the file line-by-line. But, before that we
 will have to close the file, since the file has already been read till
 the end.
-
-.. #[punch: should we mention file-pointer?]
-
-.. #[[Anoop: I think we can say that ``f`` is a file pointer which
-   points to the next line/data to be read from the file. We could
-   skip details.]]
 
 Let us close the file opened into f.
 ::
@@ -146,12 +134,9 @@ the file line-wise and print each of the lines.
   for line in f:
       print line
 
-As we already know, ``line`` is just a dummy variable, and not a
-keyword. We could have used any other variable name, but ``line``
-seems meaningful enough.
-
-.. #[[Anoop: using dummy variable doesn't seem correct, can say line
-   is a variable]]
+As we already know, ``line`` is variable, sometimes called the loop
+variable, and it is not a keyword. We could have used any other
+variable name, but ``line`` seems meaningful enough.
 
 Instead of just printing the lines, let us append them to a list,
 ``line_list``. We first initialize an empty list, ``line_list``. 
@@ -181,14 +166,11 @@ with the newline characters. If you noticed, ``pend_list`` did not
 contain the newline characters, because the string ``pend`` was
 split on the newline characters. 
 
-.. #[[Anoop: I think we need to tell them that each line can be
-   stripped and appended to list to avoid the problem of newline
-   characters.]]
+Using some string methods, that we shall look at in the tutorial on
+strings, we can strip out the newline characters from the lines. 
 
 .. #[[Anoop: I think the code that are required to be typed can be
    added to the slide.]]
-
-.. #[[Anoop: Context switches are to be added.]]
 
 {{{ show the summary slide }}}
 

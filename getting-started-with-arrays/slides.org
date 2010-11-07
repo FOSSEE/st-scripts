@@ -44,9 +44,12 @@
 * Creating Arrays
   - Creating a 1-dimensional array
   : In []: a1 = array([1, 2, 3, 4])
+  ~[1, 2, 3, 4]~ is a list.
+* Creating two-dimensional array
   - Creating a 2-dimensional array
   : In []: a2 = array([[1,2,3,4],[5,6,7,8]])
-  - Easier method of creating array with consecutive elements.
+  here we convert a list of lists to an array making a 2-d array.
+  - Using ~arange()~ function
   : In []: ar = arange(1,9)
 * ~reshape()~ method
   - To reshape an array
@@ -67,11 +70,11 @@
 * ~.shape~ of array
   - ~.shape~
     To find the shape of the array
-    : In []: a1.shape
+    : In []: a2.shape
   - ~.shape~
     returns a tuple of shape
 * Exercise 2
-  Find out the shape of the other arrays(a2, a3, ar) that we have created.
+  Find out the shape of the other arrays(a1, a3, ar) that we have created.
 * Homogeneous data
   - All elements in array should be of same type
     : In []: a4 = array([1,2,3,'a string'])

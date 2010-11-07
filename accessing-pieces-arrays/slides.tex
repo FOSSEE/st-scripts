@@ -1,4 +1,4 @@
-% Created 2010-10-26 Tue 12:11
+% Created 2010-11-02 Tue 17:47
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -28,7 +27,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \author{FOSSEE}
 \date{}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\usetheme{Antibes}\usecolortheme{lily}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
 \maketitle
@@ -57,7 +56,8 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \frametitle{Sample Arrays}
 \label{sec-2}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: A = array([12, 23, 34, 45, 56])
 
 In []: C = array([[11, 12, 13, 14, 15],
@@ -65,7 +65,7 @@ In []: C = array([[11, 12, 13, 14, 15],
                   [31, 32, 33, 34, 35],
                   [41, 42, 43, 44, 45],
                   [51, 52, 53, 54, 55]])
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
@@ -77,9 +77,10 @@ In []: C = array([[11, 12, 13, 14, 15],
 \frametitle{Solution 1}
 \label{sec-4}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []:  C[:, -1] = 0
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -91,9 +92,10 @@ In []:  C[:, -1] = 0
 \frametitle{Solution 2}
 \label{sec-6}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []:  A[:] = [11, 12, 13, 14, 15]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{squares.png}
@@ -117,11 +119,12 @@ In []:  A[:] = [11, 12, 13, 14, 15]
 \frametitle{Solution 3}
 \label{sec-9}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []:  C[1, 1:3]
 In []:  C[0:4, 0]
 In []:  C[1:5, 0]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Question 4}
@@ -133,9 +136,10 @@ In []:  C[1:5, 0]
 \frametitle{Solution 4}
 \label{sec-11}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []:  C[1:3, 2:4]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Question 5}
@@ -147,28 +151,31 @@ In []:  C[1:3, 2:4]
 \frametitle{Solution 5}
 \label{sec-13}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: imshow(I[75:225, 75:225])
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Question 6}
 \label{sec-14}
 
   Obtain the following
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 [[12, 0], [42, 0]]
 [[12, 13, 14], [0, 0, 0]]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 6}
 \label{sec-15}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: C[::3, 1::3]
 In []: C[::4, 1:4]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
@@ -176,7 +183,7 @@ In []: C[::4, 1:4]
 
   You should now be able to --
 \begin{itemize}
-\item Manipulate 1D \& Multi dimensional arrays
+\item Manipulate single \& multi dimensional arrays
 
 \begin{itemize}
 \item Access and change individual elements

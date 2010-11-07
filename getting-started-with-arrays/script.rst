@@ -34,14 +34,15 @@ Welcome to the spoken tutorial on getting started with arrays.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial, we will learn about arrays, how to convert a list into an
-array and also why an array is preferred over lists. And array operations.
+In this tutorial, we will learn about arrays, we will learn how to convert
+a list into an array array operations and also why an array is preferred
+over lists.
 
 .. #[Puneeth: Fix the grammar above.]
 
 {{{ switch to next slide on overview of array }}}
 
-Arrays are homogeneous data structures, unlike lists, arrays cannot have
+Arrays are homogeneous data structures. Unlike lists, arrays cannot have
 heterogeneous data elements, that is, it can have only one type of data
 type, either all integers, or strings, or float, and not a mix.
 
@@ -52,7 +53,7 @@ type, either all integers, or strings, or float, and not a mix.
    type of data, ....]
 
 Arrays are really fast in mathematical operations when compared to lists,
-it is at least 80 to 100 times faster than lists.
+because of the same type of data in arrays.
 
 .. #[Puneeth: For what size of an array is that the comparison?
 
@@ -60,8 +61,12 @@ it is at least 80 to 100 times faster than lists.
 
 Now let us see how to create arrays.
 
-I am assuming that you have your IPython interpreter running with the
-``-pylab`` option, so that you have the required modules loaded.
+Run your IPython interpreter with ``-pylab`` option, to load the required
+modules to work with arrays.
+{{{ take terminal and run the following command }}}
+::
+
+        ipython -pylab
 
 .. #[Puneeth: 'I am assuming' doesn't sound right. Ask them to open if it
 .. is not open?]
@@ -73,9 +78,12 @@ To create an array we will use the function ``array()`` as,
     a1 = array([1,2,3,4])
 
 Notice that here we created a one dimensional array. Also notice the object
-we passed to create an array. Now let us see how to create a two
-dimensional array. Pause here and try to do it yourself before looking at
-the solution.
+we passed to create an array. We passed a list to create an array. 
+
+Now let us see how to create a two dimensional array. Pause here and try to
+do it yourself before looking at the solution.
+
+{{{ switch to next slide, creating two dimensional arrays }}}
 
 .. #[Puneeth: I don't think this question can be solved by an average
 .. viewer. Questions during the tutorial, should generally be to re-iterate
@@ -85,7 +93,8 @@ the solution.
 .. list, using the ``array`` function. Bring the later section about
 .. converting a list, here. A separate section is not necessary, IMHO.]
 
-This is how we create two dimensional arrays.
+We create two dimensional array by converting a list of lists to an array
+as,
 
 ::
 
@@ -94,7 +103,7 @@ This is how we create two dimensional arrays.
 .. #[Puneeth: Again, you could explain a bit about the fact that we are
 .. converting a list of lists.]
 
-Let us see an easy method of creating an array with elements 1 to 8.
+Now let us use ``arange()`` function to create the same array as before.
 
 ::
 
@@ -103,7 +112,7 @@ Let us see an easy method of creating an array with elements 1 to 8.
 .. #[Puneeth: say, creating the same array as before. for some time I got
 .. confused .]
 
-And it created a single dimensional array of elements from 1 to 8.
+And we obtained a single dimensional array with elements from 1 to 8.
 
 ::
 
@@ -158,10 +167,9 @@ check the shape of the arrays we have created so far,
 
 ::
 
-    a1.shape
+    a2.shape
 
-``a1.shape`` object is a tuple, and since a1 is a single dimensional array,
-it returned a tuple (4,).
+``a2.shape`` object is a tuple, and it returned a tuple (2, 4).
 
 .. #[Puneeth: first show a 2D array, so that it becomes easier to explain.
 .. Also, the word ``tuple`` need not be mentioned. ]
@@ -171,6 +179,13 @@ it returned a tuple (4,).
 Find out the shape of the other arrays that we have created.
 
 .. #[Puneeth: solution missing.]
+
+It can be done as,
+::
+
+    a1.shape
+    a3.shape
+    ar.shape
 
 {{{ Array can have only a single type of data }}}
 
@@ -214,9 +229,10 @@ first three elements were integers.
 .. #[Puneeth: something needs to motivate this. why are we suddenly talking
 .. of an identity matrix?]
 
-An identity matrix is a square matrix in which all the diagonal elements
-are one and rest of the elements zero. We can create an identity matrix
-using the method ``identity()``.
+Now let us see how to create identity matrix, an identity matrix is a
+square matrix in which all the diagonal elements are one and rest of the
+elements zero. We can create an identity matrix using the method
+``identity()``.
 
 The function ``identity()`` takes an integer argument,
 
@@ -224,7 +240,7 @@ The function ``identity()`` takes an integer argument,
 
     identity(3)
 
-As you can see the identity method returned a three by three square array
+As you can see the identity method returned a three by three square matrix
 with all the diagonal elements as one and the rest of the elements as zero.
 
 .. #[Puneeth: You say array here, matrix there -- it's a bit messed up.
@@ -306,8 +322,8 @@ does not perform matrix multiplication.
 {{{ switch to next slide, summary slide }}}
 
 So this brings us to the end of this tutorial, in this tutorial we covered
-basics of arrays, how to create an array, converting a list to an array,
-basic array operations etc.
+basics of arrays, learned how to create an array, saw how to convert a list
+to an array, and basic array operations etc.
 
 .. #[Puneeth: s/how to create an array/creating an array]
 

@@ -51,7 +51,7 @@ All matrix operations are done using arrays. Thus all the operations
 on arrays are valid on matrices also. A matrix may be created as,
 ::
 
-    m1 = matrix([1,2,3,4])
+    m1 = array([1,2,3,4])
 
 
 .. #[Puneeth: don't use ``matrix``. Use ``array``. The whole script will
@@ -70,10 +70,16 @@ A list can be converted to a matrix as follows,
 ::
 
     l1 = [[1,2,3,4],[5,6,7,8]]
-    m2 = matrix(l1)
+    m2 = array(l1)
 
-Note that all matrix operations are done using arrays, so a matrix may
-also be created as
+{{{ switch to next slide, exercise 1}}}
+
+Pause here and create a two dimensional matrix m3 of order 2 by 4 with
+elements 5, 6, 7, 8, 9, 10, 11, 12.
+
+{{{ switch to next slide, solution }}}
+
+m3 can be created as,
 ::
 
     m3 = array([[5,6,7,8],[9,10,11,12]])
@@ -100,17 +106,16 @@ subtraction. Now let us try,
 
     m3 * m2
 
-Note that in arrays ``array(A) star array(B)`` does element wise
-multiplication and not matrix multiplication, but unlike arrays, the
-operation ``matrix(A) star matrix(B)`` does matrix multiplication and
-not element wise multiplication. And in this case since the sizes are
-not compatible for multiplication it returned an error.
+Note that in arrays ``m3 * m2`` does element wise multiplication and not
+matrix multiplication,
 
-And element wise multiplication in matrices are done using the
-function ``multiply()``
+And matrix multiplication in matrices are done using the function ``dot()``
 ::
 
-    multiply(m3,m2)
+    dot(m3, m2)
+
+but due to size mismatch the multiplication could not be done and it
+returned an error,
 
 {{{ switch to next slide, Matrix multiplication (cont'd) }}}
 
@@ -126,11 +131,10 @@ matrix m1 is of the shape one by four, let us create another one of
 the order four by two,
 ::
 
-    m4 = matrix([[1,2],[3,4],[5,6],[7,8]])
-    m1 * m4
+    m4 = array([[1,2],[3,4],[5,6],[7,8]])
+    dot(m1, m4)
 
-thus unlike in array object ``star`` can be used for matrix multiplication
-in matrix object.
+thus the function ``dot()`` can be used for matrix multiplication.
 
 {{{ switch to next slide, recall from arrays }}}
 
@@ -158,7 +162,7 @@ Now let us try to find out the Frobenius norm of inverse of a 4 by 4
 matrix, the matrix being,
 ::
 
-    m5 = matrix(arange(1,17).reshape(4,4))
+    m5 = arange(1,17).reshape(4,4)
     print m5
 
 The inverse of a matrix A, A raise to minus one is also called the
@@ -177,7 +181,7 @@ And the Frobenius norm of the matrix ``im5`` can be found out as,
 ::
 
     sum = 0
-    for each in array(im5.flatten())[0]:
+    for each in im5.flatten():
         sum += each * each
     print sqrt(sum)
 

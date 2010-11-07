@@ -168,6 +168,8 @@ perfect squares and a list of those which are not. The numbers are,
     
     7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 7056, 576, 2916
 
+Pause here and try to solve the problem before proceeding further.
+
 {{{ switch to next slide, problem statement of second problem in
 solved exercise}}}
 
