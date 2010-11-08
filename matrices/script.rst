@@ -30,6 +30,7 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[punch: please mark the exercises, using the syntax we decided upon.]
 
 ========
 Matrices
@@ -41,9 +42,10 @@ Welcome to the spoken tutorial on Matrices.
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial we will learn about matrices, creating matrices using
-direct data, by converting a list, matrix operations. Finding inverse
-of a matrix, determinant of a matrix, eigen values and eigen vectors
-of a matrix, norm and singular value decomposition of matrices.
+direct data, by converting a list and matrix operations. Finding
+inverse of a matrix, determinant of a matrix, eigen values and eigen
+vectors of a matrix, norm and singular value decomposition of
+matrices.
 
 {{{ creating a matrix }}}
 
@@ -158,6 +160,8 @@ Matrix name dot capital T will give the transpose of a matrix
 
 {{{ switch to next slide, Frobenius norm of inverse of matrix }}}
 
+.. #[punch: arange has not been introduced.]
+
 Now let us try to find out the Frobenius norm of inverse of a 4 by 4
 matrix, the matrix being,
 ::
@@ -177,6 +181,11 @@ And here is the solution, first let us find the inverse of matrix m5.
 
     im5 = inv(m5)
 
+.. #[punch: we don't need to show this way of calculating the norm, do
+.. we? even if we do, we should show it in the "array style".
+.. something like:
+.. sqrt(sum(each * each))]
+
 And the Frobenius norm of the matrix ``im5`` can be found out as,
 ::
 
@@ -186,11 +195,13 @@ And the Frobenius norm of the matrix ``im5`` can be found out as,
     print sqrt(sum)
 
 {{{ switch to next slide, infinity norm }}}
+.. #[punch: similarly for this section.]
 
 Now try to find out the infinity norm of the matrix im5. The infinity
 norm of a matrix is defined as the maximum value of sum of the
 absolute of elements in each row. Pause here and try to solve the
 problem yourself.
+
 
 The solution for the problem is,
 ::
@@ -241,6 +252,9 @@ m5. We can do it as,
 ::
 
     eig(m5)
+
+
+.. #[punch: has the tuple word been introduced?]
 
 Note that it returned a tuple of two matrices. The first element in
 the tuple are the eigen values and the second element in the tuple are
@@ -300,5 +314,5 @@ Thank you!
    mode: rst
    indent-tabs-mode: nil
    sentence-end-double-space: nil
-   fill-column: 75
+   fill-column: 70
    End:
