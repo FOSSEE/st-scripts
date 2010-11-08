@@ -14,8 +14,8 @@
 .. Loading Data from files
 .. Getting started with Lists
      
-.. Author              : Puneeth 
-   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
+.. Author              : Amit Sethi
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -31,14 +31,6 @@ In this tutorial, we shall learn
  * Doing simple statistical operations in Python  
  * Applying these to real world problems 
 
-.. #[punch: the prerequisites part may be skipped in the tutorial. It
-.. will be provided separately.]
-
-You will need Ipython with pylab running on your computer to use this
-tutorial.
-
-Also you will need to know about loading data using loadtxt to be able
-to follow the real world application.
 
 .. #[punch: since loadtxt is anyway a pre-req, I would recommend you
 .. to use a data file and load data from that. that is good, since you

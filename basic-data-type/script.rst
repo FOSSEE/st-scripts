@@ -27,7 +27,7 @@ in Python.
 
 In this tutorial, we shall look at
 
- * Datatypes in Python
+* Datatypes in Python
     * Numbers
     * Boolean
     * Sequence
@@ -35,7 +35,10 @@ In this tutorial, we shall look at
   * Arithmetic Operators
   * Boolean Operators
 
-* Manipulating Sequence datatypes
+* Python Sequence Data types
+  * list
+  * string
+  * tuple
 
 .. #[Puneeth: Use double colon only for code blocks.]
 .. #[Puneeth: include more details in the outline.]
@@ -47,7 +50,7 @@ with a little hands-on on how they can be applied to the different data types.
 First we will explore python data structures in the domain of numbers.
 There are three built-in data types in python to represent numbers.
 
-{{{ A slide to make a memory note of this }}}
+{{{ A slide to make a memory note of the different datatypes }}}
 
 These are:
 
@@ -75,9 +78,9 @@ If we now see ::
    type(a)
    <type 'int'>
 
-This means that a is a type of int. Being an int data structure in python
+This means that a is a type of int. Being an int data type in python
 means that there are various functions that this variable has to manipulate
-it different ways. You can explore these by doing,
+in different ways. You can explore these by doing,
 
   a.<Tab>
 
@@ -85,23 +88,14 @@ it different ways. You can explore these by doing,
 .. Something like this would be better. 
 .. int data-type can hold integers of any size. for example - ]
 
-*int* datatype can hold integers of any size lets see this by example.
+*int* datatype can hold integers of any size lets see this by an example.
 
   b = 99999999999999999999
   b
 
 As you can see even when we put a value of 9 repeated 20 times python did
-not complain. However when you asked python to print the number again it
-put a capital L at the end. Now if you check the type of this variable b,
-::
-
-  type(b)
-  <type 'long'>
-
-
-The reason for this is that python recognizes large integer numbers by the
-data type long. However long type and int type share there functions
-and properties.
+not complain. This is because python's int data-type can hold integers of any
+size.
 
 .. #[Puneeth: again, the clean-up that I talked of above. Decide if you are
 .. talking about the different type of numbers and the datatypes that are
@@ -142,8 +136,25 @@ We can get the absolute value using the function ::
   abs(c)
 
 
+Following is are exercises that you must do. 
 
-{{ Slide for memory aid }} 
+%% %% Find the absolute value of 3+4j 
+::
+
+        abs(3+4j)
+
+%% %% What is the datatype of number 999999999999999999? Is it
+not int?
+::
+
+        Long
+        Big integers are internally stored in python
+        as Long datatype.  
+
+Please, pause the video here. Do the exercises and then continue. 
+
+
+{{ Slide for showing Boolean datatypes }} 
 
 Python also has Boolean as a built-in type.
 
@@ -216,8 +227,16 @@ Python uses '+' for addition ::
 '/' for division ::
     
   384/16
+  8/3 
+  8.0/3
 
- '%' for modulo operation ::
+When we did 8/3 the first case results in am integer 
+output as both the operands are integer however when 
+8.0/3 is used the answer is float as one of the operands is
+float. 
+
+
+'%' for modulo operation ::
 
     87 % 6
 
@@ -245,13 +264,27 @@ is same as ::
 
    a=a/23
 
+Following is an (are) exercise(s) that you must do. 
+
+%% %% Using python find sqaure root of 3?
+::
+
+   3**0.5
+
+%% %% Is 3**1/2 and 3**0.5 same
+::
+    No,One gives an int answer and the other float        
+
+Please, pause the video here. Do the exercises and then continue.
+
+
 Lets now discuss sequence data types in Python. Sequence data types
 are those in which elements are kept in a sequential order and all the 
-elements accessed using index numbers.
+elements are accessed using index numbers.
 
 .. #[Puneeth: fix the last sentence - it sounds incomplete]
 
-{{{ slide for memory aid }}}
+{{{ slide introducing sequence datatype }}}
 
 The sequence datatypes in Python are ::
 
@@ -288,7 +321,7 @@ type ::
 
 greeting_string is now a string variable with the value "hello"
 
-{{{ Memory Aid Slide }}}
+{{{ All the different types of strings shown }}}
 
 Python strings can actually be defined in three different ways ::
 
@@ -365,17 +398,17 @@ Find maximum using max function and minimum using min::
    max(num_tuple)
    min(greeting_string)
 
-Get a sorted list and reversed list using sorted and reversed function ::
+Get a sorted list  ::
 
    sorted(num_list)
-   reversed(greeting_string)
+   
 
-As a consequence of there order we can access a group of elements of sequence,
-together. This is called slicing and striding.
+As a consequence of there order we can access a group of elements 
+in a sequence,together. This is called slicing and striding.
 
 .. #[Puneeth: Fix the sentence above. ]
 
-First Slicing 
+First lets discuss Slicing, 
 
 Given a list ::
 
@@ -506,6 +539,30 @@ Thus we get a list joined on commas. Similarly we can do spaces.::
 Note that the list has to be a list of strings to apply join operation.
 
 With this we come to the end of this tutorial .
+
+Following is an (are) exercise(s) that you must do. 
+
+
+
+%% %% Check if 3 is an element of the list [1,7,5,3,4]. In case
+it is change it to 21.
+::
+        l=[1,7,5,3,4]
+        3 in l
+        l[3]=21
+        l
+
+%% %% Convert the string "Elizabeth is queen of england" to 
+"Elizabeth is queen"
+::
+
+           s="Elizabeth is queen of england"
+           stemp=s.split()
+           ' '.join(stemp[:3])
+   
+Please, pause the video here. Do the exercise(s) and then continue. 
+
+
 
 In this tutorial we have discussed 
 

@@ -2,74 +2,178 @@
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+BEAMER_FRAME_LEVEL: 1
 
-#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
-#+OPTIONS:   H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 #+TITLE: Plotting Data 
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
 #+EMAIL:     info@fossee.in
 
-# \author[FOSSEE] {FOSSEE}
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-# \institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
-# \date{}
 
-* Tutorial Plan 
+* Outline 
 ** Datatypes in Python
-** Operators in Python
+    - Numbers
+    - Boolean
+    - Sequence
+**  Operators in Python
+    - Arithmetic Operators
+    - Boolean Operators
+** Python Sequence Datatypes
+   - list
+   - string
+   - tuple
 
 * Numbers
-** Integers
-** Float
-** Complex
+  - Integers
+  - Float
+  - Complex
+* Question 1
+   - Find the absolute value of 3+4j 
+* Solution 1
+
+        abs(3+4j)
+
+* Question 2
+  - What is the datatype of number 999999999999999999? Is it
+not int?
+
+* Solution 2
+        
+        - Long
+        - Large integers numbers are internally stored in python
+        as Long datatype.  
+
 
 * Boolean
-** True
-** False
+  #+begin_src python
+    In []: t=True
+    In []: f=False
+  #+end_src
+
+* Question 1
+  - Using python find sqaure root of 3?
+
+* Solution 1
+
+  - 3**0.5
+
+* Question 2
+  - Is 3**1/2 and 3**0.5 same
+* Solution 2
+  - No,One gives an int answer and the other float        
 
 * Sequence Data types
-** Data in Sequence 
-** Accessed using Index
-*** list
-*** String
-*** Tuple
+** Properties
+ - Data in Sequence 
+ - Accessed using Index
+** Type
+ - list
+ - String
+ - Tuple
 
 * All are Strings
+   #+begin_src python 
+      k='Single quote'
+      l="Double quote contain's single quote"
+      m='''"Contain's both"'''
 
-** k='Single quote'
-** l="Double quote contain's single quote"
-** m='''"Contain's both"'''
+    #+end_src 
+* Immutabilty Error
+   #+begin_src python
+      In []: greeting_string[1]='k'
+      ---------------------------------------------------------------------------
+      TypeError                                 Traceback (most recent call       last)
 
+      /home/amit/st-scripts/basic-data-type/<ipython console> in <module>()
+
+      TypeError: 'str' object does not support item assignment
+   #+end_src 
+
+* Question 1
+   - Check if 3 is an element of the list [1,7,5,3,4]. In case
+it is change it to 21.
+
+* Solution 1
+     #+begin_src python
+        l=[1,7,5,3,4]
+        3 in l
+        l[3]=21
+        l
+     #+end_src
+* Question 2
+  - Convert the string "Elizabeth is queen of england" to
+"Elizabeth is queen"
+
+* Solution 2
+     #+begin_src python
+    s="Elizabeth is queen of england"                                                                                                                 
+    stemp=s.split()                                                                                                                                   
+    ' '.join(stemp[:3])                                                                                                                               
+    #+end_src 
 * Summary 
-** a=73
-** b=3.14
-** c=3+4j
+   #+begin_src python 
+    a=73
+    b=3.14
+    c=3+4j
 
+   #+end_src
 * Summary Contd.
-
-** t=True
-** f=False
-** t and f
-
+   #+begin_src python
+     t=True
+     f=False
+     t and f
+   #+end_src
 * Summary Contd.
-** l= [2,1,4,3]
-** s='hello'
-** tu=(1,2,3,4)
-
+   #+begin_src python 
+     l= [2,1,4,3]
+     s='hello'
+     tu=(1,2,3,4)
+   #+end_src
 * Summary Contd.
-** tu[-1]
-** s[1:-1]
-
+   #+begin_src python 
+     tu[-1]
+     s[1:-1]
+   #+end_src
 * Summary Contd.
+   #+begin_src python  
+     Sorted(l)
+   #+end_src
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
 
-** Sorted(l)
-** reversed(s)
 
-* COMMENT 
-# [Puneeth: Where is the last slide?]
-# [Puneeth: Why don't you use the template slides.org?]
+
 
 

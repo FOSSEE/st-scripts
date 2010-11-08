@@ -1,21 +1,34 @@
-% Created 2010-10-13 Wed 17:08
+% Created 2010-11-09 Tue 01:27
 \documentclass[presentation]{beamer}
-\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{hyperref}
-
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
 \title{Plotting Data }
 \author{FOSSEE}
 \date{2010-09-14 Tue}
 
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
 \maketitle
@@ -25,134 +38,283 @@
 
 
 
+
+
+
+
 \begin{frame}
-\frametitle{Tutorial Plan}
+\frametitle{Outline}
 \label{sec-1}
 \begin{itemize}
 
-\item Datatypes in Python\\
-\label{sec-1.1}%
-\item Operators in Python\\
-\label{sec-1.2}%
+\item Datatypes in Python
+\label{sec-1_1}%
+\begin{itemize}
+\item Numbers
+\item Boolean
+\item Sequence
+\end{itemize}
+
+
+\item Operators in Python
+\label{sec-1_2}%
+\begin{itemize}
+\item Arithmetic Operators
+\item Boolean Operators
+\end{itemize}
+
+
+\item Python Sequence Datatypes
+\label{sec-1_3}%
+\begin{itemize}
+\item list
+\item string
+\item tuple
+\end{itemize}
+
+
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Numbers}
 \label{sec-2}
-\begin{itemize}
 
-\item Integers\\
-\label{sec-2.1}%
-\item Float\\
-\label{sec-2.2}%
-\item Complex\\
-\label{sec-2.3}%
-\end{itemize} % ends low level
+\begin{itemize}
+\item Integers
+\item Float
+\item Complex
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Boolean}
+\frametitle{Question 1}
 \label{sec-3}
-\begin{itemize}
 
-\item True\\
-\label{sec-3.1}%
-\item False\\
-\label{sec-3.2}%
-\end{itemize} % ends low level
+\begin{itemize}
+\item Find the absolute value of 3+4j
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Solution 1}
+\label{sec-4}
+
+
+        abs(3+4j)
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-5}
+
+\begin{itemize}
+\item What is the datatype of number 999999999999999999? Is it
+\end{itemize}
+
+not int?
+\end{frame}
+\begin{frame}
+\frametitle{Solution 2}
+\label{sec-6}
+
+        
+\begin{itemize}
+\item Long
+\item Large integers numbers are internally stored in python
+\end{itemize}
+
+        as Long datatype.  
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Boolean}
+\label{sec-7}
+
+\begin{verbatim}
+In []: t=True
+In []: f=False
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-8}
+
+\begin{itemize}
+\item Using python find sqaure root of 3?
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Solution 1}
+\label{sec-9}
+
+
+\begin{itemize}
+\item 3**0.5
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-10}
+
+\begin{itemize}
+\item Is 3**1/2 and 3**0.5 same
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Solution 2}
+\label{sec-11}
+
+\begin{itemize}
+\item No,One gives an int answer and the other float
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Sequence Data types}
-\label{sec-4}
+\label{sec-12}
 \begin{itemize}
 
-\item Data in Sequence\\
-\label{sec-4.1}%
+\item Properties
+\label{sec-12_1}%
+\begin{itemize}
+\item Data in Sequence
 \item Accessed using Index
-\label{sec-4.2}%
-\begin{itemize}
+\end{itemize}
 
-\item list\\
-\label{sec-4.2.1}%
-\item String\\
-\label{sec-4.2.2}%
-\item Tuple\\
-\label{sec-4.2.3}%
-\end{itemize} % ends low level
+
+\item Type
+\label{sec-12_2}%
+\begin{itemize}
+\item list
+\item String
+\item Tuple
+\end{itemize}
+
+
 \end{itemize} % ends low level
 \end{frame}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{All are Strings}
-\label{sec-5}
-\begin{itemize}
+\label{sec-13}
 
-\item k='Single quote'\\
-\label{sec-5.1}%
-\item l="Double quote contain's single quote"\\
-\label{sec-5.2}%
-\item m='''"Contain's both"'''\\
-\label{sec-5.3}%
-\end{itemize} % ends low level
+\begin{verbatim}
+k='Single quote'
+l="Double quote contain's single quote"
+m='''"Contain's both"'''
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Immutabilty Error}
+\label{sec-14}
+
+\begin{verbatim}
+In []: greeting_string[1]='k'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call       last)
+
+/home/amit/st-scripts/basic-data-type/<ipython console> in <module>()
+
+TypeError: 'str' object does not support item assignment
+\end{verbatim}
 \end{frame}
 \begin{frame}
+\frametitle{Question 1}
+\label{sec-15}
+
+\begin{itemize}
+\item Check if 3 is an element of the list [1,7,5,3,4]. In case
+\end{itemize}
+
+it is change it to 21.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-16}
+
+\begin{verbatim}
+l=[1,7,5,3,4]
+3 in l
+l[3]=21
+l
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-17}
+
+\begin{itemize}
+\item Convert the string ``Elizabeth is queen of england'' to
+\end{itemize}
+
+``Elizabeth is queen''
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-18}
+
+\begin{verbatim}
+s="Elizabeth is queen of england"                                                                                                                 
+stemp=s.split()                                                                                                                                   
+' '.join(stemp[:3])
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
 \frametitle{Summary}
-\label{sec-6}
-\begin{itemize}
+\label{sec-19}
 
-\item a=73\\
-\label{sec-6.1}%
-\item b=3.14\\
-\label{sec-6.2}%
-\item c=3+4j\\
-\label{sec-6.3}%
-\end{itemize} % ends low level
+\begin{verbatim}
+a=73
+b=3.14
+c=3+4j
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary Contd.}
+\label{sec-20}
+
+\begin{verbatim}
+t=True
+f=False
+t and f
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary Contd.}
+\label{sec-21}
+
+\begin{verbatim}
+l= [2,1,4,3]
+s='hello'
+tu=(1,2,3,4)
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary Contd.}
+\label{sec-22}
+
+\begin{verbatim}
+tu[-1]
+s[1:-1]
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary Contd.}
+\label{sec-23}
+
+\begin{verbatim}
+Sorted(l)
+\end{verbatim}
 \end{frame}
 \begin{frame}
-\frametitle{Summary Contd.}
-\label{sec-7}
-\begin{itemize}
+\frametitle{Thank you!}
+\label{sec-24}
 
-\item t=True\\
-\label{sec-7.1}%
-\item f=False\\
-\label{sec-7.2}%
-\item t and f\\
-\label{sec-7.3}%
-\end{itemize} % ends low level
-\end{frame}
-\begin{frame}
-\frametitle{Summary Contd.}
-\label{sec-8}
-\begin{itemize}
-
-\item l= [2,1,4,3]\\
-\label{sec-8.1}%
-\item s='hello'\\
-\label{sec-8.2}%
-\item tu=(1,2,3,4)\\
-\label{sec-8.3}%
-\end{itemize} % ends low level
-\end{frame}
-\begin{frame}
-\frametitle{Summary Contd.}
-\label{sec-9}
-\begin{itemize}
-
-\item tu[-1]\\
-\label{sec-9.1}%
-\item s[1:-1]\\
-\label{sec-9.2}%
-\end{itemize} % ends low level
-\end{frame}
-\begin{frame}
-\frametitle{Summary Contd.}
-\label{sec-10}
-\begin{itemize}
-
-\item Sorted(l)\\
-\label{sec-10.1}%
-\item reversed(s)\\
-\label{sec-10.2}%
-\end{itemize} % ends low level
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
 \end{frame}
 
 \end{document}

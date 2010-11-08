@@ -7,7 +7,7 @@
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
 #+OPTIONS:   H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 
-#+TITLE: Plotting Data 
+#+TITLE: Getting started with Lists
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
 #+EMAIL:     info@fossee.in
