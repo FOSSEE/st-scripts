@@ -1,0 +1,199 @@
+% Created 2010-11-03 Wed 15:37
+\documentclass[presentation]{beamer}
+\usetheme{Antibes}\usecolortheme{lily}\useoutertheme{infolines}\setbeamercovered{transparent}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+\title{Accessing parts of arrays}
+\author{FOSSEE}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Manipulating one and multi dimensional arrays
+\item Access and change individual elements
+\item Access and change rows and columns
+\item Slicing and striding on arrays to access chunks
+\item Read images into arrays and manipulations
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Sample Arrays}
+\label{sec-2}
+
+\begin{verbatim}
+In []: A = array([12, 23, 34, 45, 56])
+
+In []: C = array([[11, 12, 13, 14, 15],
+                  [21, 22, 23, 24, 25],
+                  [31, 32, 33, 34, 35],
+                  [41, 42, 43, 44, 45],
+                  [51, 52, 53, 54, 55]])
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-3}
+
+  Change the last column of \texttt{C} to zeroes. 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-4}
+
+\begin{verbatim}
+In []:  C[:, -1] = 0
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-5}
+
+  Change \texttt{A} to \texttt{[11, 12, 13, 14, 15]}. 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-6}
+
+\begin{verbatim}
+In []:  A[:] = [11, 12, 13, 14, 15]
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{squares.png}
+\label{sec-7}
+
+    \begin{center}
+      \includegraphics[scale=0.6]{squares}    
+    \end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Question 3}
+\label{sec-8}
+
+\begin{itemize}
+\item obtain \texttt{[22, 23]} from \texttt{C}.
+\item obtain \texttt{[11, 21, 31, 41]} from \texttt{C}.
+\item obtain \texttt{[21, 31, 41, 0]}.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-9}
+
+\begin{verbatim}
+In []:  C[1, 1:3]
+In []:  C[0:4, 0]
+In []:  C[1:5, 0]
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 4}
+\label{sec-10}
+
+  Obtain \texttt{[[23, 24], [33, -34]]} from \texttt{C}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 4}
+\label{sec-11}
+
+\begin{verbatim}
+In []:  C[1:3, 2:4]
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 5}
+\label{sec-12}
+
+  Obtain the square in the center of the image
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 5}
+\label{sec-13}
+
+\begin{verbatim}
+In []: imshow(I[75:225, 75:225])
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Question 6}
+\label{sec-14}
+
+  Obtain the following
+\begin{verbatim}
+[[12, 0], [42, 0]]
+[[12, 13, 14], [0, 0, 0]]
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 6}
+\label{sec-15}
+
+\begin{verbatim}
+In []: C[::3, 1::3]
+In []: C[::4, 1:4]
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-16}
+
+  You should now be able to --
+\begin{itemize}
+\item Manipulate single \& multi dimensional arrays
+
+\begin{itemize}
+\item Access and change individual elements
+\item Access and change rows and columns
+\item Slice and stride on arrays
+\end{itemize}
+
+\item Read images into arrays and manipulate them.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-17}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

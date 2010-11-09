@@ -38,9 +38,11 @@ type
     a
     print a
      
-
+<<<<<<< local
+print a, prints the value of a.
+=======
 ``print a``, obviously, is printing the value of ``a``.
-
+>>>>>>> other
 As you can see, even when you type just a, the value of a is shown.
 But there is a difference.
 
@@ -65,13 +67,16 @@ does not have any effect on the program while running it as a script.
 
 We shall look at different ways of outputting the data.
 
-
+<<<<<<< local
 .. #[Amit: C's printf syntax ?? i think its better to elaborate the
    idea]
 
 print statement  in python supports string formatting.
 Various arguments can be passed to print using modifiers.
-
+=======
+``print`` statement also accepts the syntax of C's ``printf`` statement.
+Various arguments can be passed to ``print`` using modifiers.
+>>>>>>> other
 type
 ::
 

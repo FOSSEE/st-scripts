@@ -1,0 +1,158 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: Plotting Data 
+#+AUTHOR: FOSSEE
+#+DATE: 2010-09-14 Tue
+#+EMAIL: info@fossee.in
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:1 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+#+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
+
+* Outline 
+** Datatypes in Python
+*** Numbers
+*** Boolean
+*** Sequence
+** Operators in Python
+*** Arithmetic Operators
+*** Boolean Operators
+** Python Sequence Datatypes
+*** list
+*** string
+*** tuple
+
+* Numbers
+  - int
+  - float
+  - complex
+* Question 1
+   - Find the absolute value of 3+4j 
+* Solution 1
+  #+begin_src python
+    abs(3+4j)
+  #+end_src python
+* Question 2
+  - What is the datatype of number 999999999999999999? Is it
+not int?
+
+* Solution 2
+  - Long
+  - Large integers numbers are internally stored in python as Long
+    datatype.
+
+
+* Boolean
+  #+begin_src python
+    In []: t=True
+    In []: f=False
+  #+end_src
+
+* Question 3
+  - Using python find sqaure root of 3?
+
+* Solution 3
+
+  - 3**0.5
+
+* Question 4
+  - Is 3**1/2 and 3**0.5 same
+* Solution 4
+  - No,One gives an int answer and the other float        
+
+* Sequence Data types
+** Properties
+ - Data in Sequence 
+ - Accessed using Index
+** Type
+ - list
+ - String
+ - Tuple
+
+* All are Strings
+   #+begin_src python 
+      k = 'Single quote'
+      l = "Double quote contain's single quote"
+      m = '''"Contain's both"'''
+
+    #+end_src 
+* Immutabilty Error
+   #+begin_src python
+      In []: greeting_string[1]='k'
+      -------------------------------------------------------
+      TypeError           Traceback (most recent call last)
+
+      /home/fossee/<ipython console> in <module>()
+
+      TypeError: 'str' object does not support item assignment
+   #+end_src 
+
+* Question 5
+  Check if 3 is an element of the list [1,7,5,3,4]. In case it is
+change it to 21.
+
+* Solution 5
+     #+begin_src python
+        l=[1,7,5,3,4]
+        3 in l
+        l[3]=21
+        l
+     #+end_src
+* Question 6
+  Convert the string ~"Elizabeth is queen of england"~ to ~"Elizabeth is
+queen"~
+
+* Solution 6
+     #+begin_src python
+    s = "Elizabeth is queen of england"                                                                                                                 
+    stemp = s.split()                                                                                                                                   
+    ' '.join(stemp[:3])                                                                                                                               
+    #+end_src 
+* Summary 
+  - Number Datatypes -- integer,float and complex 
+  - Boolean and datatype and operators
+  - Sequence data types -- List, String and Tuple
+  - Accesing sequence
+  - Slicing sequences
+  - Finding length, sorting and reversing operations on sequences
+  - Immutability
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
+
+
+
