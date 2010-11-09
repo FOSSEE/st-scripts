@@ -31,15 +31,14 @@ Hello Friends. Welcome to the tutorial on loops in Python.
 {{{ Show the outline slide }}}
 
 In this tutorial, we shall look at ``while`` and ``for`` loops. We
-shall then look at the ``break``, ``continue`` and ``pass`` keywords
-and how to use them. 
+shall then look at how to break out of them, or skip some iterations
+in loops.
 
 .. #[[Anoop: for loop is a pre-requisite and has been already covered,
    so i think our emphasize can be on while loops]]
 
-.. #[[Anoop: Instead of saying we will learn keywords pass, break and
-   continue, I think it is better to tell them that we will learn more
-   about loops]]
+.. #[[punch: I think, we should have both of them. It gives a better
+.. context and comparison.]
 
 {{{ switch to the ipython terminal }}}
 
@@ -144,8 +143,8 @@ iteration and continue to the end of this iteration.
 .. #[[Anoop: should add slides for break, continue, pass]]
 
 Say, we wish to print the squares of all the odd numbers below 10,
-which are not multiples of 3, we would modify the for loop as follows.
-::
+which are not multiples of 3, we would modify the ``for`` loop as
+follows.  ::
 
   for n in range(1, 10, 2):
       if n%3 == 0:
@@ -157,12 +156,9 @@ Following is an exercise that you must do.
 
 {{{ switch to next slide }}}
 
-%%3%%Using the ``continue`` keyword modify the ``for`` loop to print
-the squares of even numbers below 10, to print the squares of only
-multiples of 4. (Do not modify the range function call.) 
-
-.. #[[Anoop: can you be more explicit/specific on do no modify say we
-   can ask them to use range(2, 10, 2) and solve the problem]]
+%%3%%Using the ``continue`` keyword modify the ``for`` loop, with the
+``range(2, 10, 2)``, to print the squares of even numbers below 10, to
+print the squares of only multiples of 4.
 
 Please, pause the video here. Do the exercise and then continue. 
 

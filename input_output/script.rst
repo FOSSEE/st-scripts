@@ -12,7 +12,7 @@
 ..   1. Loops
      
 .. Author              : Nishanth Amuluru
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth 
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
@@ -26,10 +26,10 @@ Hello friends and welcome to the tutorial on Input/Output
 {{{ Show the slide containing the outline slide }}}
 
 Input and Output are used in almost every program we use.
-In this tutorial, we shall learn
+In this tutorial, we shall learn how to 
 
- * Outputting data
- * Taking input from the user
+ * Output data
+ * Take input from the user
 
 type
 ::
@@ -38,7 +38,7 @@ type
     a
     print a
      
-print a prints the value of a which is obvious.
+``print a``, obviously, is printing the value of ``a``.
 As you can see, even when you type just a, the value of a is shown.
 But there is a difference.
 
@@ -57,10 +57,12 @@ While typing print b prints the string and hence the newline.
 Moreover when we type just a, the value a is shown only in interactive mode and
 does not have any effect on the program while running it as a script.
 
+.. #[punch: I think we could show that?]
+
 We shall look at different ways of outputting the data.
 
-print statement also accepts the syntax of C's printf statement.
-Various arguments can be passed to print using modifiers.
+``print`` statement also accepts the syntax of C's ``printf`` statement.
+Various arguments can be passed to ``print`` using modifiers.
 type
 ::
 
@@ -69,7 +71,8 @@ type
     z = "zed"
     print "x is %2.1f y is %d z is %s"%(x,y)
 
-As you can see, the values of x and y are substituted in place of %2.1f and %d
+As you can see, the values of x and y are substituted in place of
+``%2.1f`` and ``%d`` 
 
 {{{ Pause here and try out the following exercises }}}
 
@@ -77,12 +80,12 @@ As you can see, the values of x and y are substituted in place of %2.1f and %d
 
 {{{ continue from paused state }}}
 
-We see that the int value of x and float value of y are printed corresponding
-to the modifiers used in the print statement.
+We see that the ``int`` value of x and ``float`` value of y are
+printed corresponding to the modifiers used in the print statement.
 
-We can also see that print statement prints a new line character at the end of
-line, everytime it is called. This can be suppressed by using a "," at the end
-print statement.
+We can also see that ``print`` statement prints a new line character
+at the end of the line, everytime it is called. This can be suppressed
+by using a "," at the end ``print`` statement.
 
 Let us see this by typing out following code on an editor as print_example.py
 
