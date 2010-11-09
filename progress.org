@@ -43,7 +43,7 @@
 | 7.2 LO: | manipulating strings                   |     2 | Punch    | Amit (Done)     |           |
 | 7.3 LO: | getting started with tuples            |     2 | Nishanth | Punch (Done)    |           |
 | 7.4 LO: | dictionaries                           |     2 | Anoop    | Punch (Done)    |           |
-| 7.5 LO: | sets                                   |     2 | Nishanth | Punch (pending) |           |
+| 7.5 LO: | sets                                   |     2 | Nishanth | Punch (Done)    |           |
 | 7.6 LO: | Assessment                             |     3 | Amit     |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
 | 8.1 LO: | getting started with functions         |     3 | Nishanth |                 |           |
