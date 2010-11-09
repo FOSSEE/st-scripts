@@ -169,7 +169,8 @@ Please, pause the video here. Do the exercise and then continue.
   welcome()
  
 
-Let us now learn what keyword arguments are. 
+Let us now learn what keyword arguments or named arguments are. We
+shall refer to them as keyword arguments, henceforth. 
 
 {{{ show a slide with examples using keyword arguments. }}}
 
@@ -184,14 +185,6 @@ Let us now learn what keyword arguments are.
   annotate('local max', xy = (1.5, 1))
 
   pie(science.values(), labels = science.keys())
-
-.. #[[Anoop: I think it will better to introduce keyword arguments as
-   keyword/named arguments, as the keyword term was quite confusing
-   for me, so can be for someone who already know certain
-   jargon's/concepts, also it would be good to tell them that these
-   are different from keywords in programming languages, explicit is
-   better than implicit, and probably you could also tell them that
-   from now on we will refer to it as just keyword arguments]]
 
 When you are calling functions in Python, you don't need to remember
 the order in which to pass the arguments. Instead, you can use the
@@ -249,7 +242,6 @@ with it.
 .. #[punch: Need to decide, exactly what to put here. Reviewer comments
 ..  welcome.] 
   
-
 {{{ switch to slide showing classes of functions in pylab, scipy }}}
 
 .. #[[Anoop: slide missing]]
