@@ -16,8 +16,6 @@
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
-.. #[Puneeth: Fill in pre-requisites.]
-
 Hello friends and welcome to the tutorial on Basic Data types and operators
 in Python.
 
@@ -40,13 +38,6 @@ In this tutorial, we shall look at
   * string
   * tuple
 
-.. #[Puneeth: Use double colon only for code blocks.]
-.. #[Puneeth: include more details in the outline.]
-
-with a little hands-on on how they can be applied to the different data types.
-
-
-
 First we will explore python data structures in the domain of numbers.
 There are three built-in data types in python to represent numbers.
 
@@ -57,12 +48,6 @@ These are:
   * int 
   * float 
   * complex 
-
-.. #[Puneeth: Changed to  int, float and complex.]
-
-.. #[Puneeth: Loss of consistency. You talk of built-in data types, but
-.. then you were calling them integers, floats and complex. Clean up
-.. required.]
 
 Lets first talk about int. ::
 
@@ -78,17 +63,14 @@ If we now see ::
    type(a)
    <type 'int'>
 
-This means that a is a type of int. Being an int data type in python
-means that there are various functions that this variable has to manipulate
-in different ways. You can explore these by doing,
+This means that a is a type of int. There are lot of functions associated
+with the int datatype, to manipulate it in different ways. These can be
+explored by doing, ::
 
   a.<Tab>
 
-.. #[Puneeth: Why are we suddenly talking of limits?
-.. Something like this would be better. 
-.. int data-type can hold integers of any size. for example - ]
-
 *int* datatype can hold integers of any size lets see this by an example.
+::
 
   b = 99999999999999999999
   b
@@ -97,11 +79,6 @@ As you can see even when we put a value of 9 repeated 20 times python did
 not complain. This is because python's int data-type can hold integers of any
 size.
 
-.. #[Puneeth: again, the clean-up that I talked of above. Decide if you are
-.. talking about the different type of numbers and the datatypes that are
-.. used to represent them or if you are talking of the data-types and what
-.. kind of numbers they represent. I think you should choose the former.]
-
 Let us now look at the float data-type. 
 
 Decimal numbers in python are represented by the float data-type ::
@@ -109,10 +86,10 @@ Decimal numbers in python are represented by the float data-type ::
   p = 3.141592
   p
 
-If you notice the value of output of p isn't exactly equal to p. This is
-because computer saves floating point values in a specific format. There is
-always an aproximationation. This is why we should never rely on equality
-of floating point numbers in a program.
+If you notice the value of output of ``p`` isn't exactly equal to ``p``.
+This is because computer saves floating point values in a specific format.
+There is always an approximation. This is why we should never rely on
+equality of floating point numbers in a program.
 
 The last data type in the list is complex number ::
 
@@ -120,7 +97,7 @@ The last data type in the list is complex number ::
 
 as simple as that so essentialy its just a combination of two floats the
 imaginary part being defined by j notation instead of i. Complex numbers
-have a lot of functions specific to them. Lets check these ::
+have a lot of functions specific to them. Let us look at these ::
 
   c.<Tab>
 
@@ -174,10 +151,6 @@ You can apply different Boolean operations on t now for example ::
 
 The results are self explanatory.
 
-.. #[Puneeth: Why does booleans bring us to precedence? I don't see the
-.. connection. Am I missing something?]
-
-
 What if you want to apply one operator before another.
 
 Well you can use parenthesis for precedence.
@@ -188,8 +161,6 @@ Lets write some piece of code to check this out.::
   b=True 
   c=True
 
-
-.. #[Puneeth: Consistency. In[]: is not present at other places.]
 
 To check how precedence changes with parenthesis, we will try two
 expressions and their evaluation.
@@ -210,14 +181,12 @@ gives the value False.
 Let's now look at some operators available in Python to manipulate
 these data types.
 
-.. #[Puneeth: A mention of other operators would be good? Starting
-.. with % and ** is a bit weird.]
-
 Python uses '+' for addition ::
 
   23 + 74
 
 '-' for subtraction ::
+
   23 - 56
 
 '*' for multiplication ::
@@ -264,25 +233,25 @@ is same as ::
 
    a=a/23
 
-Following is an (are) exercise(s) that you must do. 
+Following is are exercises that you must do. 
 
 %% %% Using python find sqaure root of 3?
+
+%% %% Is 3**1/2 and 3**0.5 same
+
+Please, pause the video here. Do the exercises and then continue.
+
 ::
 
    3**0.5
 
-%% %% Is 3**1/2 and 3**0.5 same
 ::
     No,One gives an int answer and the other float        
-
-Please, pause the video here. Do the exercises and then continue.
 
 
 Lets now discuss sequence data types in Python. Sequence data types
 are those in which elements are kept in a sequential order and all the 
 elements are accessed using index numbers.
-
-.. #[Puneeth: fix the last sentence - it sounds incomplete]
 
 {{{ slide introducing sequence datatype }}}
 
@@ -310,8 +279,6 @@ We can have a list something like ::
  var_list = [1, 1.2, [1,2]]	
  var_list
 
-.. #[Puneeth: some continuity, when jumping to strings?]
-
 Lets look at another sequence data type, strings
 
 type :: 
@@ -329,11 +296,7 @@ Python strings can actually be defined in three different ways ::
    l="Let's see how to include a single quote"
    m='''"Let's see how to include both"'''
 
-.. #[Puneeth: Contain's? That's not a word!]
-
 As you can see, single quotes are used as delimiters usually.
-
-.. #[Puneeth: Thus?]
 
 When a string contains a single quote, double quotes are used as
 delimiters. When a string quote contains both single and double quotes,
@@ -403,10 +366,8 @@ Get a sorted list  ::
    sorted(num_list)
    
 
-As a consequence of there order we can access a group of elements 
-in a sequence,together. This is called slicing and striding.
-
-.. #[Puneeth: Fix the sentence above. ]
+As a consequence of their order, we can access a group of elements in a
+sequence, together. This is called slicing and striding.
 
 First lets discuss Slicing, 
 
@@ -563,8 +524,8 @@ it is change it to 21.
 Please, pause the video here. Do the exercise(s) and then continue. 
 
 
-
-In this tutorial we have discussed 
+This brings us to the end of the tutorial. In this tutorial we have
+discussed
 
 1. Number Datatypes , integer,float and complex 
 2. Boolean and datatype and operators
@@ -573,16 +534,6 @@ In this tutorial we have discussed
 5. Slicing sequences
 6. Finding length , sorting and reversing operations on sequences.
 7. Immutability.
-
-
-
-
-.. #[Nishanth]: string to list is fine. But list to string can be left for
-                string manipulations. Just say it requires some string 
-                manipulations and leave it there.
-
-.. #[Nishanth]: Where is the summary
-                There are no exercises in the script
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 

@@ -28,12 +28,8 @@ Hello Friends. Welcome to this tutorial on using Sage.
 
 {{{ show the slide with outline }}} 
 
-In this tutorial we shall quickly look at a few examples of the areas
-(name the areas, here) in which Sage can be used and how it can be
-used.
-
-.. #[[Anoop: add name of areas and further introduction if needed for
-   a smooth switch]]
+In this tutorial we shall quickly look at a few examples of using Sage
+for Linear Algebra, Calculus, Graph Theory and Number theory.
 
 {{{ show the slide with Calculus outline }}} 
 
@@ -62,9 +58,7 @@ the positive side.
 To find the limit from the negative side, we say,
 ::
 
-    lim(1/x, x=0, dir='above')   
-
-.. #[[Anoop: both the above codes are going the same thing isn't it?]]
+    lim(1/x, x=0, dir='below')   
 
 Let us now see how to differentiate, using Sage. We shall find the
 differential of the expression ``exp(sin(x^2))/x`` w.r.t ``x``. We
