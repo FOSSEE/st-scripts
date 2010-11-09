@@ -1,95 +1,141 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-11-09 Tue 16:07
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
-
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
-
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+\title{Manipulating Lists}
+\author{FOSSEE}
 \date{}
 
-% DOCUMENT STARTS
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
+\maketitle
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
+
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
+\frametitle{Outline}
+\label{sec-1}
+
+  In this session we shall be looking at 
+\begin{itemize}
+\item Concatenating lists
+\item Obtaining parts of lists
+\item Sorting lists
+\item Reversing lists
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-2}
+
+  Obtain the primes less than 10, from the list \texttt{primes}. 
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-3}
+
+\lstset{language=Python}
+\begin{lstlisting}
+primes[0:4]
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Slicing}
+\label{sec-4}
+
+\lstset{language=Python}
+\begin{lstlisting}
+p[start:stop]
+\end{lstlisting}
+\begin{itemize}
+\item Returns all elements of \texttt{p} between \texttt{start} and \texttt{stop}
+\item The element with index equal to \texttt{stop} is \textbf{not} included.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-5}
+
+  Obtain all the multiples of three from the list \texttt{num}.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-6}
+
+\lstset{language=Python}
+\begin{lstlisting}
+num[::3]
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Question 3}
+\label{sec-7}
+
+  Given a list of marks of students in an examination, obtain a list
+  with marks in descending order.
+\lstset{language=Python}
+\begin{lstlisting}
+marks = [99, 67, 47, 100, 50, 75, 62]
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-8}
+
+\lstset{language=Python}
+\begin{lstlisting}
+sorted(marks)[::-1]
+\end{lstlisting}
+OR
+\lstset{language=Python}
+\begin{lstlisting}
+sorted(marks, reverse=True)
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-9}
+
+  In this tutorial session we learnt
+\begin{itemize}
+\item Obtaining parts of lists using slicing and striding
+\item List concatenation
+\item Sorting lists
+\item Reversing lists
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-10}
+
   \begin{block}{}
   \begin{center}
   This spoken tutorial has been produced by the
