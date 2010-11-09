@@ -1,106 +1,64 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2010-11-09 Tue 17:41
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
 
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
+\title{Getting started with Lists}
+\author{FOSSEE}
+\date{2010-09-14 Tue}
 
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
-\usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
-\date{}
-
-% DOCUMENT STARTS
+\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
+\maketitle
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
-  \begin{block}{}
-  \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
-  \end{center}
-  \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
-  \end{center}  
-  \end{block}
+\frametitle{Tutorial Plan}
+\label{sec-1}
+\begin{itemize}
+
+\item How to create lists\\
+\label{sec-1_1}%
+\item Structure of lists\\
+\label{sec-1_2}%
+\item Access list elements\\
+\label{sec-1_3}%
+\item Append elements to lists\\
+\label{sec-1_4}%
+\item Deleting elements from lists\\
+\label{sec-1_5}%
+\end{itemize} % ends low level
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-2}
+
+
+  l=[1,2,3,4]
+  l[-1]
+  l.append(5)
+  del(l\footnote{FOOTNOTE DEFINITION NOT FOUND: 2 })
+  len(l)
 \end{frame}
 
 \end{document}

@@ -194,16 +194,16 @@ Please, pause the video here. Do the exercise and then continue.
 
 In this tutorial we have learnt :
 
-1. How to declare a sequence of number , specifically the kind of
-sequence we learned was a list.
 
-#. Plotting experimental data extending our knowledge from
-mathematical functions.
+
+1. How to declare a sequence of numbers.
+
+2. Plotting experimental data.
 
 #. The various options available for plotting dots instead of lines.
 
-#. Plotting experimental data such that we can also represent
-error. We did this using the errorbar() function.
+#. Plotting experimental data such that we can also represent error. 
+
 
 
  {{{ Show the "sponsored by FOSSEE" slide }}}

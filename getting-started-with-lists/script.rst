@@ -20,16 +20,18 @@
 ..   #. basic datatypes
      
 .. Author              : Amit 
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop Jacob Thomas <anoop@fossee.in>
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
+.. #[[Anoop: Slides contain only outline and summary
+
 Script
 ------
+ {{{ Show the slide containing title }}}
+
 Hello friends and welcome to the tutorial on getting started with
 lists.
-
- {{{ Show the slide containing title }}}
 
  {{{ Show the slide containing the outline slide }}}
 
@@ -40,11 +42,15 @@ structure called lists.  We will learn ::
  * Structure of lists
  * Access list elements
  * Append elements to lists
- * Deleting elements from lists
+ * Delete elements from lists
 
 List is a compound data type, it can contain data of other data
 types. List is also a sequence data type, all the elements are in
 order and there order has a meaning.
+
+.. #[[Anoop: "all the elements are in order and **there** order has a
+   meaning." - I guess something is wrong here, I am not able to
+   follow this.]]
 
 We will first create an empty list with no elements. On your IPython
 shell type ::
@@ -55,34 +61,41 @@ shell type ::
 
 This is an empty list without any elements.
 
-* Filled lists
+.. #[[Anoop: the document has to be continous, without any
+   subheadings, removing * Filled lists]]
 
-Lets now define a list, nonempty and fill it with some random elements.
+Lets now see how to define a non-empty list. We do it as,::
 
-nonempty = ['spam', 'eggs', 100, 1.234]
+     nonempty = ['spam', 'eggs', 100, 1.234]
 
 Thus the simplest way of creating a list is typing out a sequence 
 of comma-separated values (items) between square brackets. 
-All the list items need not have the same data type.
-
-
+All the list items need not be of the same data type.
 
 As we can see lists can contain different kinds of data. In the
-previous example 'spam' and 'eggs' are strings and 100 and 1.234
+previous example 'spam' and 'eggs' are strings and 100 and 1.234 are
 integer and float. Thus we can put elements of heterogenous types in
 lists. Thus list themselves can be one of the element types possible
-in lists. Thus lists can also contain other lists.  Example ::
+in lists. Thus lists can also contain other lists.  
+
+.. #[[Anoop: the sentence "Thus list themselves can be one of the
+   element types possible in lists" is not clear, rephrase it.]]
+
+Example ::
 
       list_in_list=[[4,2,3,4],'and', 1, 2, 3, 4]
 
-We access list elements using the number of index. The
-index begins from 0. So for list nonempty, nonempty[0] gives the
-first element, nonempty[1] the second element and so on and
-nonempty[3] the last element. ::
+We access list elements using the index. The index begins from 0. So
+for list nonempty, nonempty[0] gives the first element, nonempty[1]
+the second element and so on and nonempty[3] the last element. ::
 
 	    nonempty[0] 
 	    nonempty[1] 
 	    nonempty[3]
+
+.. #[[Anoop: was negative indices introduced earlier, if not may be we
+   can ask them to try out nonempty[-1] and see what happens and then
+   tell that it gives the last element in the list.]]
 
 We can also access the elememts from the end using negative indices ::
    
@@ -90,8 +103,8 @@ We can also access the elememts from the end using negative indices ::
    nonempty[-2] 
    nonempty[-4]
 
--1 gives the last element which is the 4th element , -2 second to last and -4 gives the fourth
-from last element which is first element.
+-1 gives the last element which is the 4th element , -2 second to last
+and -4 gives the fourth from last element which is first element.
 
 We can append elements to the end of a list using append command. ::
 
@@ -102,10 +115,8 @@ We can append elements to the end of a list using append command. ::
    
 As we can see non empty appends 'onemore' and 6 at the end.
 
-
-
 Using len function we can check the number of elements in the list
-nonempty. In this case it being 6 ::
+nonempty. In this case it 6 ::
 	 
 	 len(nonempty)
 
@@ -121,11 +132,20 @@ There are two ways of doing it. One is by using index. ::
 deletes the element at index 1, i.e the second element of the
 list, 'eggs'. The other way is removing element by content. Lets say
 one wishes to delete 100 from nonempty list the syntax of the command
-should be :: 
-      
-      nonempty.remove(100)
+should be 
 
-but what if their were two 100's. To check that lets do a small
+.. #[[Anoop: let x = [1,2,1,3]
+   	     now x.remove(x[2])
+	     still x is [2,1,3] so that is not the way to remove
+	     element by index, it removed first occurrence of 1(by
+	     content) and not based on index, so make necessary
+	     changes]]
+
+::
+
+    nonempty.remove(100)
+
+but what if there were two 100's. To check that lets do a small
 experiment. ::
 
 	   nonempty.append('python') 
@@ -133,10 +153,14 @@ experiment. ::
 	   nonempty.remove('python') 
 	   nonempty
 
-If we check a now we will see that the first occurence 'spam' is removed
+If we check now we will see that the first occurence 'spam' is removed
 thus remove removes the first occurence of the element in the sequence
 and leaves others untouched.
 
+.. #[[Anoop: does it have two spams or two pythons?]]
+
+.. #[[Anoop: there are no exercises/solved problems in this script,
+   add them]]
 
 {{{Slide for Summary }}}
 
@@ -151,7 +175,7 @@ In this tutorial we came across a sequence data type called lists. ::
  
 
 
-{{{ Sponsored by Fossee Slide }}}
+{{{ show Sponsored by Fossee Slide }}}
 
 This tutorial was created as a part of FOSSEE project.
 
@@ -159,7 +183,7 @@ I hope you found this tutorial useful.
 
 Thank You
 
-
+..
  * Author : Amit Sethi 
  * First Reviewer : 
  * Second Reviewer : Nishanth

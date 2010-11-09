@@ -22,13 +22,12 @@ Script
 
 Hello friends. Welcome to this spoken tutorial on Manipulating Lists. 
 
-
 {{{ Show the slide containing the outline }}}
 
 We have already learnt a lot about Lists in Python. In this tutorial,
 we will learn more about advanced features of Lists in Python. We will
-see in detail how to concatenate two lists, slicing and striding of
-lists, methods to sort and reverse the list.
+see how to concatenate two lists, details of slicing and striding of
+lists, methods to sort and reverse lists.
 
 {{{ Shift to terminal and start ipython }}}
 
@@ -40,8 +39,8 @@ on the terminal
 
 We already know what Lists are in Python, how to access individual
 elements in the list and some of the functions that can be run on the
-lists like max, min, sum len and so on. Now let us learn some of the
-basic operations that can be performed on Lists.
+lists like ``max, min, sum, len`` and so on. Now let us learn some of
+the basic operations that can be performed on Lists.
 
 We already know how to access individual elements in a List. But what
 if we have a scenario where we need to get a part of the entire list
@@ -64,6 +63,18 @@ included and end index is not included. So in the above case, 11 which
 was the element with the index 4 was included but 23 which was the
 element with index 8 was excluded.
 
+Following is an exercise you must do. 
+
+%% %% Obtain the primes less than 10, from the list ``primes``. 
+
+Please, pause the video here, do the exercise and then resume. 
+
+::
+
+  primes[0:4]
+
+will give us the primes below 10. 
+
 Generalizing, we can obtain a slice of the list "p" from the index
 "start" upto the index "end" but excluding "end" with the following
 syntax
@@ -79,12 +90,12 @@ obtained. Say we have::
   num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 If we want to obtain all the odd numbers less than 10 from the list
-"num" we have to start from element with index 1 upto the index 10 in
+``num`` we have to start from element with index 1 upto the index 10 in
 steps of 2::
 
   num[1:10:2]
 
-So if we don't specify the step it is by default 1. Similary there are
+When no step is specified, it is assumed to be 1. Similarly, there are
 default values for start and stop indices as well. If we don't specify
 the start index it is implicitly taken as the first element of the
 list::
@@ -105,6 +116,19 @@ gives all the elements starting from the 10th element in the list
 
 gives us all the even numbers in the list "num".
 
+Following is an exercise that you must do. 
+
+%% %% Obtain all the multiples of three from the list ``num``.
+
+Please, pause the video here. Do the exercise and then continue. 
+
+::
+
+  num[::3]
+
+gives us all the multiples of 3 from the list, since every third
+element in it, starting from 0, is divisible by 3. 
+
 The other basic operation that we can perform on list is concatenation
 of two or more lists. We can combine two lists by using the "plus"
 operator. Say we have
@@ -122,17 +146,16 @@ list. We can store this list in a new variable::
   c
 
 It is important to observe that the "plus" operator always returns a
-new list without touching anything in the existing lists which are the
-operands of the concatenation operation.
+new list without altering the lists being concatenated in any way. 
 
-We know that list is a collection of data. Whenever we have a
-collection we run into situations where we want to start the
+We know that a list is a collection of data. Whenever we have a
+collection we run into situations where we want to sort the
 collection. Lists support sort method which sorts the list inplace::
 
   a = [5, 1, 6, 7, 7, 10]
   a.sort()
 
-Now the contents of the list "a" will be::
+Now the contents of the list ``a`` will be::
 
   a
   [1, 5, 6, 7, 7, 10]
@@ -164,27 +187,46 @@ itself. Lets see the list "a"::
   a
   [5, 4, 3, 2, 1]
 
-But again the original list is lost. If we want to obtain the reverse
-of a list keeping the original list intact we can use the Python
-built-in function reversed. reversed function returns a new list which
-is the reverse of the list which was passed as the argument to the
-reversed function::
+But again the original list is lost. 
+.. #[punch: removed reversed, since it returns an iterator]
 
-  a = [1, 2, 3, 4, 5]
-  reversed(a)
+To reverse a list, we could use striding with negative indexing.::
+
+   a[::-1]
 
 We can also store this new reversed list in another list variable.
+
+Following is an (are) exercise(s) that you must do. 
+
+%% %% Given a list of marks of students in an examination, obtain a
+      list with marks in descending order.
+      ::
+
+            marks = [99, 67, 47, 100, 50, 75, 62]
+
+Please, pause the video here. Do the exercise(s) and then continue. 
+
+::
+
+  sorted(marks)[::-1]
+
+OR
+
+::
+
+  sorted(marks, reverse = True)
+
+
 
 {{{ Show summary slide }}}
 
 This brings us to the end of another session. In this tutorial session
 we learnt
 
-  * How to define strings
-  * Different types of defining a string
-  * String concatenation and repeatition
-  * Accessing individual elements of the string
-  * Immutability of strings
+  * Obtaining parts of lists using slicing and striding
+  * List concatenation
+  * Sorting lists 
+  * Reversing lists
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 

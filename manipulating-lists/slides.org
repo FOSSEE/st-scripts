@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Accessing parts of arrays
+#+TITLE:    Manipulating Lists
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -28,83 +28,54 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+#+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
 
 * Outline
-  - Manipulating one and multi dimensional arrays
-  - Access and change individual elements 
-  - Access and change rows and columns 
-  - Slicing and striding on arrays to access chunks 
-  - Read images into arrays and manipulations
-* Sample Arrays
-  #+begin_src python
-    In []: A = array([12, 23, 34, 45, 56])
-    
-    In []: C = array([[11, 12, 13, 14, 15],
-                      [21, 22, 23, 24, 25],
-                      [31, 32, 33, 34, 35],
-                      [41, 42, 43, 44, 45],
-                      [51, 52, 53, 54, 55]])
-    
-  #+end_src
+  In this session we shall be looking at 
+  - Concatenating lists
+  - Obtaining parts of lists
+  - Sorting lists
+  - Reversing lists
 * Question 1
-  Change the last column of ~C~ to zeroes. 
+  Obtain the primes less than 10, from the list ~primes~. 
 * Solution 1
   #+begin_src python
-    In []:  C[:, -1] = 0
-  #+end_src
+    primes[0:4]
+  #+end_src python
+* Slicing
+  #+begin_src python
+    p[start:stop]
+  #+end_src python
+  - Returns all elements of ~p~ between ~start~ and ~stop~
+  - The element with index equal to ~stop~ is *not* included. 
 * Question 2
-  Change ~A~ to ~[11, 12, 13, 14, 15]~. 
+  Obtain all the multiples of three from the list ~num~.
 * Solution 2
   #+begin_src python
-    In []:  A[:] = [11, 12, 13, 14, 15]
-  #+end_src
-* squares.png
-  #+begin_latex
-    \begin{center}
-      \includegraphics[scale=0.6]{squares}    
-    \end{center}
-  #+end_latex
+    num[::3]  
+  #+end_src python
 * Question 3
-  - obtain ~[22, 23]~ from ~C~. 
-  - obtain ~[11, 21, 31, 41]~ from ~C~. 
-  - obtain ~[21, 31, 41, 0]~.   
+  Given a list of marks of students in an examination, obtain a list
+  with marks in descending order.
+  #+begin_src python
+    marks = [99, 67, 47, 100, 50, 75, 62]
+  #+end_src python
 * Solution 3
   #+begin_src python
-    In []:  C[1, 1:3]
-    In []:  C[0:4, 0]
-    In []:  C[1:5, 0]
-  #+end_src
-* Question 4
-  Obtain ~[[23, 24], [33, -34]]~ from ~C~
-* Solution 4
+    sorted(marks)[::-1]
+  #+end_src python
+OR
   #+begin_src python
-    In []:  C[1:3, 2:4]
-  #+end_src
-* Question 5
-  Obtain the square in the center of the image
-* Solution 5
-  #+begin_src python
-    In []: imshow(I[75:225, 75:225])
-  #+end_src
-* Question 6
-  Obtain the following
-  #+begin_src python
-    [[12, 0], [42, 0]]
-    [[12, 13, 14], [0, 0, 0]]
-  #+end_src
+    sorted(marks, reverse=True)
+  #+end_src python
 
-* Solution 6
-  #+begin_src python
-    In []: C[::3, 1::3]
-    In []: C[::4, 1:4]
-  #+end_src
 * Summary
-  You should now be able to --
-  - Manipulate 1D \& Multi dimensional arrays
-      - Access and change individual elements 
-      - Access and change rows and columns 
-      - Slice and stride on arrays
-  - Read images into arrays and manipulate them.
+  In this tutorial session we learnt
+    + Obtaining parts of lists using slicing and striding
+    + List concatenation
+    + Sorting lists 
+    + Reversing lists
+
 * Thank you!
 #+begin_latex
   \begin{block}{}
