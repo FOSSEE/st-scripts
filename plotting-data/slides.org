@@ -182,3 +182,19 @@
  : plot(x,y,'o')
  : plot(x,y,'.')
  : errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='b.')    
+* Thank you!
+#+begin_latex                                                                                                                                                
+  \begin{block}{}                                                                                                                                            
+  \begin{center}                                                                                                                                             
+  This spoken tutorial has been produced by the                                                                                                              
+  \textcolor{blue}{FOSSEE} team, which is funded by the                                                                                                      
+  \end{center}                                                                                                                                               
+  \begin{center}                                                                                                                                             
+    \textcolor{blue}{National Mission on Education through \\                                                                                                
+      Information \& Communication Technology \\                                                                                                             
+      MHRD, Govt. of India}.                                                                                                                                 
+  \end{center}                                                                                                                                               
+  \end{block}                                                                                                                                                
+#+end_latex
+
+
