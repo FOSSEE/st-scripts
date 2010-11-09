@@ -113,6 +113,21 @@ You can also specify 'o' for big dots.::
   clf()
 
 
+Following are exercises that you must do.
+
+%% %% Plot the given experimental data with large dots.The data is
+on your screen. 
+ 
+%% %% Plot the given experimental data with small dots.
+The data is on your screen
+
+
+Please, pause the video here. Do the exercises and then continue. 
+
+
+
+
+
 .. #[[Anoop: Make sure code is correct, corrected plot(L,t,o) to
    plot(L,t,'o')]]
 
@@ -162,18 +177,33 @@ of errorbar.::
 
    errorbar?
 
+Following is an  exercise that you must do.
+
+%% %% Plot the given experimental data with large green dots.Also include
+the error in your plot. 
+
+Please, pause the video here. Do the exercise and then continue. 
+
+
+
+
+
+
 
 {{{ Show Summary Slide }}}
 
-In this tutorial we have learnt : 
+In this tutorial we have learnt :
 
-1. How to declare a sequence of number , specifically the kind of sequence we learned was a list.
+1. How to declare a sequence of number , specifically the kind of
+sequence we learned was a list.
 
-2. Plotting experimental data extending our knowledge from mathematical functions. 
+#. Plotting experimental data extending our knowledge from
+mathematical functions.
 
-3. The various options available for plotting dots instead of lines.
+#. The various options available for plotting dots instead of lines.
 
-4. Plotting experimental data such that we can also represent error. We did this using the errorbar() function.
+#. Plotting experimental data such that we can also represent
+error. We did this using the errorbar() function.
 
 
  {{{ Show the "sponsored by FOSSEE" slide }}}
