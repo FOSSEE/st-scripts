@@ -39,7 +39,7 @@
 | 6.4 LO: | loops                                  |     2 | Punch    | Anoop (Done)    |           |
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
-| 7.1 LO: | manipulating lists                     |     3 | Madhu    |                 |           |
+| 7.1 LO: | manipulating lists                     |     3 | Madhu    | Punch (pending) |           |
 | 7.2 LO: | manipulating strings                   |     2 | Punch    | Amit(Done)      |           |
 | 7.3 LO: | getting started with tuples            |     2 | Nishanth |                 |           |
 | 7.4 LO: | dictionaries                           |     2 | Anoop    | Punch (Done)    |           |
