@@ -9,11 +9,11 @@
 | 1.8 LO: | module level assessment                |     3 | Madhu    |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
 | 2.2 LO: | loading data from files                |     3 | Punch    | Nishanth (Done) |           |
-| 2.3 LO: | plotting the data                      |     3 | Amit     | Pending         |           |
+| 2.3 LO: | plotting the data                      |     3 | Amit     | Anoop (Done)    |           |
 | 2.4 LO: | other types of plots                   |     3 | Anoop    | Punch (Done)    |           |
 | 2.5 LO: | module level assessment                |     3 | Nishanth |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
-| 3.1 LO: | getting started with lists             |     2 | Amit     | Pending         |           |
+| 3.1 LO: | getting started with lists             |     2 | Amit     | Anoop(Done)     |           |
 | 3.2 LO: | getting started with =for=             |     2 | Anoop    | Nishanth (Done) |           |
 | 3.3 LO: | getting started with strings           |     2 | Madhu    |                 |           |
 | 3.4 LO: | getting started with files             |     3 | Punch    | Anoop(Done)     |           |
