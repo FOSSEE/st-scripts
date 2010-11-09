@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Plotting Data 
+#+TITLE: Basic Data Types
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
 #+EMAIL:     info@fossee.in

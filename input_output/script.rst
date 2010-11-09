@@ -19,7 +19,7 @@
 Script
 ------
 
-Hello friends and welcome to the tutorial on Input/Output
+Hello friends and welcome to this tutorial on Input/Output
 
 {{{ Show the slide containing title }}}
 
@@ -38,9 +38,11 @@ type
     a
     print a
      
-print a prints the value of a which is obvious.
+print a, prints the value of a.
 As you can see, even when you type just a, the value of a is shown.
 But there is a difference.
+
+.. #[Amit: The next sentence does seem to be clear enough]
 
 Typing a shows the value of a while print a prints the string. This difference
 becomes more evident when we use strings with newlines in them.
@@ -59,7 +61,10 @@ does not have any effect on the program while running it as a script.
 
 We shall look at different ways of outputting the data.
 
-print statement also accepts the syntax of C's printf statement.
+.. #[Amit: C's printf syntax ?? i think its better to elaborate the
+   idea]
+
+print statement  in python supports string formatting.
 Various arguments can be passed to print using modifiers.
 type
 ::
@@ -168,24 +173,27 @@ prints the string given as argument and then waits for the user input.
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 4 %% How do you display a prompt and let the user enter input in a new line
+%% 4 %% How do you display a prompt and let the user enter input in next line
 
 {{{ continue from paused state }}}
 
 .. #[Puneeth: We didn't talk of new-line character till now, did we?]
 .. #[Puneeth: non-programmers might not know?]
 
+.. #[Amit: Well there is a discussion earlier about new lines, I think its good
+.. as a slight trick question. But may be next line is a more easier lexicon]
+
 The trick is to include a newline character at the end of the prompt string.
 ::
 
     ip = raw_input("Please enter a number in the next line\n> ")
 
-prints the newline character and hence the user enters input in the new line
+prints the newline character and hence the user enters input in the next line
 
 {{{ Show summary slide }}}
 
 This brings us to the end of the tutorial.
-we have learnt
+In this totorial we have learnt
 
  * How to print some value
  * How to print using modifiers
@@ -194,9 +202,9 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
+
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank You.
  
