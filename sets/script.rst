@@ -22,15 +22,15 @@
 Script
 ------
 
-Hello friends and welcome to the tutorial on Sets
-
 {{{ Show the slide containing title }}}
+
+Hello friends and welcome to the tutorial on Sets
 
 {{{ Show the slide containing the outline slide }}}
 
 In this tutorial, we shall learn
 
- * sets
+ * sets 
  * operations on sets
 
 Sets are data structures which contain unique elements. In other words,
@@ -40,7 +40,7 @@ Lets look at how to input sets.
 type
 ::
  
-    a_list = [1, 2, 1, 4, 5, 6, 7]
+    a_list = [1, 2, 1, 4, 5, 6, 2]
     a = set(a_list)
     a
      
@@ -55,7 +55,7 @@ f10 is the set of fibonacci numbers from 1 to 10.
 p10 is the set of prime numbers from 1 to 10.
 
 Various operations that we do on sets are possible here also.
-The | character stands for union
+The | (pipe) character stands for union
 ::
 
     f10 | p10
@@ -89,19 +89,19 @@ Sets also support checking of subsets.
     b = set([1, 2])
     b < f10
 
-gives a True since b is a proper subset of f10.
+gives a ``True`` since b is a proper subset of f10.
 Similarly,
 ::
 
     f10 < f10
 
-gives a False since f10 is not a proper subset.
+gives a ``False`` since f10 is not a proper subset.
 hence the right way to do would be
 ::
 
     f10 <= f10
 
-and we get a True since every set is a subset of itself.
+and we get a ``True`` since every set is a subset of itself.
 
 Sets can be iterated upon just like lists and tuples. 
 ::
@@ -122,7 +122,7 @@ shows 5. And
     1 in f10
     2 in f10
 
-prints True and False respectively
+prints ``True`` and ``False`` respectively
 
 The order in which elements are organised in a set is not to be relied upon 
 since sets do not support indexing. Hence, slicing and striding are not valid
@@ -161,7 +161,6 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.

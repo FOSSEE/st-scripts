@@ -43,8 +43,10 @@
     for mark in marks_set:
         marks.remove(mark)
     
-    # we are now left with only duplicates in the list marks
+    # we are now left with only duplicates
+    # in the list marks
     duplicates = set(marks)
+        
   #+end_src
 * Summary
   You should now be able to --
