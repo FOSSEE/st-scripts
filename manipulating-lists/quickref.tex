@@ -1,8 +1,10 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+Slicing \& Striding a list:\\
+{\ex \lstinline|    A[start:stop:step]|} \lstinline|stop| excluded
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
+Sorting a list:\\
+{\ex \lstinline|    sorted(A)|} -- returns new list
+{\ex \lstinline|    A.sort()|} -- in-place sort
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+Reversing a list:\\
+{\ex \lstinline|    A[::-1]|} -- returns new list
+{\ex \lstinline|    A.reverse()|} -- in-place reverse
