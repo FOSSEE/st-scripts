@@ -167,13 +167,13 @@ of errorbar.::
 
 In this tutorial we have learnt : 
 
-1. How to declare a sequence of number , specifically the kind of sequence we learned was a list.
+1. How to declare a sequence of numbers.
 
-2. Plotting experimental data extending our knowledge from mathematical functions. 
+2. Plotting experimental data.
 
 3. The various options available for plotting dots instead of lines.
 
-4. Plotting experimental data such that we can also represent error. We did this using the errorbar() function.
+4. Plotting experimental data such that we can also represent error. 
 
 
  {{{ Show the "sponsored by FOSSEE" slide }}}
