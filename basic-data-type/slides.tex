@@ -1,4 +1,4 @@
-% Created 2010-11-09 Tue 01:27
+% Created 2010-11-09 Tue 14:56
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -41,7 +40,6 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 
-
 \begin{frame}
 \frametitle{Outline}
 \label{sec-1}
@@ -50,29 +48,36 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Datatypes in Python
 \label{sec-1_1}%
 \begin{itemize}
-\item Numbers
-\item Boolean
-\item Sequence
-\end{itemize}
 
+\item Numbers\\
+\label{sec-1_1_1}%
+\item Boolean\\
+\label{sec-1_1_2}%
+\item Sequence\\
+\label{sec-1_1_3}%
+\end{itemize} % ends low level
 
 \item Operators in Python
 \label{sec-1_2}%
 \begin{itemize}
-\item Arithmetic Operators
-\item Boolean Operators
-\end{itemize}
 
+\item Arithmetic Operators\\
+\label{sec-1_2_1}%
+\item Boolean Operators\\
+\label{sec-1_2_2}%
+\end{itemize} % ends low level
 
 \item Python Sequence Datatypes
 \label{sec-1_3}%
 \begin{itemize}
-\item list
-\item string
-\item tuple
-\end{itemize}
 
-
+\item list\\
+\label{sec-1_3_1}%
+\item string\\
+\label{sec-1_3_2}%
+\item tuple\\
+\label{sec-1_3_3}%
+\end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
@@ -80,9 +85,9 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \label{sec-2}
 
 \begin{itemize}
-\item Integers
-\item Float
-\item Complex
+\item int
+\item float
+\item complex
 \end{itemize}
 \end{frame}
 \begin{frame}
@@ -93,12 +98,14 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Find the absolute value of 3+4j
 \end{itemize}
 \end{frame}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Solution 1}
 \label{sec-4}
 
-
-        abs(3+4j)
+\lstset{language=Python}
+\begin{lstlisting}
+abs(3+4j)
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -114,25 +121,25 @@ not int?
 \frametitle{Solution 2}
 \label{sec-6}
 
-        
+
 \begin{itemize}
 \item Long
-\item Large integers numbers are internally stored in python
+\item Large integers numbers are internally stored in python as Long
+    datatype.
 \end{itemize}
-
-        as Long datatype.  
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Boolean}
 \label{sec-7}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: t=True
 In []: f=False
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
+\frametitle{Question 3}
 \label{sec-8}
 
 \begin{itemize}
@@ -140,7 +147,7 @@ In []: f=False
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Solution 1}
+\frametitle{Solution 3}
 \label{sec-9}
 
 
@@ -149,7 +156,7 @@ In []: f=False
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Question 4}
 \label{sec-10}
 
 \begin{itemize}
@@ -157,7 +164,7 @@ In []: f=False
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Solution 2}
+\frametitle{Solution 4}
 \label{sec-11}
 
 \begin{itemize}
@@ -192,117 +199,82 @@ In []: f=False
 \frametitle{All are Strings}
 \label{sec-13}
 
-\begin{verbatim}
-k='Single quote'
-l="Double quote contain's single quote"
-m='''"Contain's both"'''
-\end{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
+k = 'Single quote'
+l = "Double quote contain's single quote"
+m = '''"Contain's both"'''
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Immutabilty Error}
 \label{sec-14}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: greeting_string[1]='k'
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call       last)
+-------------------------------------------------------
+TypeError           Traceback (most recent call last)
 
-/home/amit/st-scripts/basic-data-type/<ipython console> in <module>()
+/home/fossee/<ipython console> in <module>()
 
 TypeError: 'str' object does not support item assignment
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
+\frametitle{Question 5}
 \label{sec-15}
 
-\begin{itemize}
-\item Check if 3 is an element of the list [1,7,5,3,4]. In case
-\end{itemize}
-
-it is change it to 21.
+  Check if 3 is an element of the list [1,7,5,3,4]. In case it is
+change it to 21.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 1}
+\frametitle{Solution 5}
 \label{sec-16}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 l=[1,7,5,3,4]
 3 in l
 l[3]=21
 l
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Question 6}
 \label{sec-17}
 
-\begin{itemize}
-\item Convert the string ``Elizabeth is queen of england'' to
-\end{itemize}
-
-``Elizabeth is queen''
+  Convert the string \~{}''Elizabeth is queen of england''\~{} to \~{}''Elizabeth is
+queen''\~{}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 2}
+\frametitle{Solution 6}
 \label{sec-18}
 
-\begin{verbatim}
-s="Elizabeth is queen of england"                                                                                                                 
-stemp=s.split()                                                                                                                                   
+\lstset{language=Python}
+\begin{lstlisting}
+s = "Elizabeth is queen of england"                                                                                                                 
+stemp = s.split()                                                                                                                                   
 ' '.join(stemp[:3])
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
-\begin{frame}[fragile]
+\begin{frame}
 \frametitle{Summary}
 \label{sec-19}
 
-\begin{verbatim}
-a=73
-b=3.14
-c=3+4j
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Summary Contd.}
-\label{sec-20}
-
-\begin{verbatim}
-t=True
-f=False
-t and f
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Summary Contd.}
-\label{sec-21}
-
-\begin{verbatim}
-l= [2,1,4,3]
-s='hello'
-tu=(1,2,3,4)
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Summary Contd.}
-\label{sec-22}
-
-\begin{verbatim}
-tu[-1]
-s[1:-1]
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Summary Contd.}
-\label{sec-23}
-
-\begin{verbatim}
-Sorted(l)
-\end{verbatim}
+\begin{itemize}
+\item Number Datatypes -- integer,float and complex
+\item Boolean and datatype and operators
+\item Sequence data types -- List, String and Tuple
+\item Accesing sequence
+\item Slicing sequences
+\item Finding length, sorting and reversing operations on sequences
+\item Immutability
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Thank you!}
-\label{sec-24}
+\label{sec-20}
 
   \begin{block}{}
   \begin{center}

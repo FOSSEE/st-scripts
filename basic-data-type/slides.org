@@ -21,47 +21,46 @@
 #+TITLE: Plotting Data 
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
-#+EMAIL:     info@fossee.in
+#+EMAIL: info@fossee.in
 
 #+DESCRIPTION: 
 #+KEYWORDS: 
 #+LANGUAGE:  en
-#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   H:1 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
-
+#+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
 
 * Outline 
 ** Datatypes in Python
-    - Numbers
-    - Boolean
-    - Sequence
-**  Operators in Python
-    - Arithmetic Operators
-    - Boolean Operators
+*** Numbers
+*** Boolean
+*** Sequence
+** Operators in Python
+*** Arithmetic Operators
+*** Boolean Operators
 ** Python Sequence Datatypes
-   - list
-   - string
-   - tuple
+*** list
+*** string
+*** tuple
 
 * Numbers
-  - Integers
-  - Float
-  - Complex
+  - int
+  - float
+  - complex
 * Question 1
    - Find the absolute value of 3+4j 
 * Solution 1
-
-        abs(3+4j)
-
+  #+begin_src python
+    abs(3+4j)
+  #+end_src python
 * Question 2
   - What is the datatype of number 999999999999999999? Is it
 not int?
 
 * Solution 2
-        
-        - Long
-        - Large integers numbers are internally stored in python
-        as Long datatype.  
+  - Long
+  - Large integers numbers are internally stored in python as Long
+    datatype.
 
 
 * Boolean
@@ -70,16 +69,16 @@ not int?
     In []: f=False
   #+end_src
 
-* Question 1
+* Question 3
   - Using python find sqaure root of 3?
 
-* Solution 1
+* Solution 3
 
   - 3**0.5
 
-* Question 2
+* Question 4
   - Is 3**1/2 and 3**0.5 same
-* Solution 2
+* Solution 4
   - No,One gives an int answer and the other float        
 
 * Sequence Data types
@@ -93,71 +92,51 @@ not int?
 
 * All are Strings
    #+begin_src python 
-      k='Single quote'
-      l="Double quote contain's single quote"
-      m='''"Contain's both"'''
+      k = 'Single quote'
+      l = "Double quote contain's single quote"
+      m = '''"Contain's both"'''
 
     #+end_src 
 * Immutabilty Error
    #+begin_src python
       In []: greeting_string[1]='k'
-      ---------------------------------------------------------------------------
-      TypeError                                 Traceback (most recent call       last)
+      -------------------------------------------------------
+      TypeError           Traceback (most recent call last)
 
-      /home/amit/st-scripts/basic-data-type/<ipython console> in <module>()
+      /home/fossee/<ipython console> in <module>()
 
       TypeError: 'str' object does not support item assignment
    #+end_src 
 
-* Question 1
-   - Check if 3 is an element of the list [1,7,5,3,4]. In case
-it is change it to 21.
+* Question 5
+  Check if 3 is an element of the list [1,7,5,3,4]. In case it is
+change it to 21.
 
-* Solution 1
+* Solution 5
      #+begin_src python
         l=[1,7,5,3,4]
         3 in l
         l[3]=21
         l
      #+end_src
-* Question 2
-  - Convert the string "Elizabeth is queen of england" to
-"Elizabeth is queen"
+* Question 6
+  Convert the string ~"Elizabeth is queen of england"~ to ~"Elizabeth is
+queen"~
 
-* Solution 2
+* Solution 6
      #+begin_src python
-    s="Elizabeth is queen of england"                                                                                                                 
-    stemp=s.split()                                                                                                                                   
+    s = "Elizabeth is queen of england"                                                                                                                 
+    stemp = s.split()                                                                                                                                   
     ' '.join(stemp[:3])                                                                                                                               
     #+end_src 
 * Summary 
-   #+begin_src python 
-    a=73
-    b=3.14
-    c=3+4j
-
-   #+end_src
-* Summary Contd.
-   #+begin_src python
-     t=True
-     f=False
-     t and f
-   #+end_src
-* Summary Contd.
-   #+begin_src python 
-     l= [2,1,4,3]
-     s='hello'
-     tu=(1,2,3,4)
-   #+end_src
-* Summary Contd.
-   #+begin_src python 
-     tu[-1]
-     s[1:-1]
-   #+end_src
-* Summary Contd.
-   #+begin_src python  
-     Sorted(l)
-   #+end_src
+  - Number Datatypes -- integer,float and complex 
+  - Boolean and datatype and operators
+  - Sequence data types -- List, String and Tuple
+  - Accesing sequence
+  - Slicing sequences
+  - Finding length, sorting and reversing operations on sequences
+  - Immutability
 * Thank you!
 #+begin_latex
   \begin{block}{}
