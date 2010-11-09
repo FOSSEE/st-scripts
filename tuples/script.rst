@@ -1,15 +1,10 @@
 .. Objectives
 .. ----------
 
-.. A - Students and teachers from Science and engineering backgrounds
-   B - Will learn what are tuples and why they are needed
-       Will learn the various methods of accessing elements in tuples
-   C - 
-   D - 
-
-.. #. what are tuples
-.. #. comparison with lists
-.. #. why are they needed
+.. At the end of the tutorial, you will
+.. #. have a clear understand of what tuples are
+.. #. be able to compare them with lists
+.. #. know why they are needed and where to use them 
 
 
 .. Prerequisites
@@ -25,7 +20,8 @@
 Script
 ------
 
-Hello friends and welcome to the tutorial on Tuples
+Hello friends and welcome to the tutorial on getting started with
+tuples. 
 
 {{{ Show the slide containing title }}}
 
@@ -37,9 +33,10 @@ In this tutorial, we shall learn
  * their similarities and dissimilarities with lists
  * why are they needed
 
-Let`s get started by defining a tuple. A tuple is defined by enclosing
-parantheses around a sequence of items seperated by commas. It is similar to
-defining a list except that parantheses are used instead of square brackets.
+Let's get started by defining a tuple. A tuple is defined by enclosing
+parentheses around a sequence of items seperated by commas. It is
+similar to defining a list except that parentheses are used instead of
+square brackets.  
 ::
 
     t = (1, 2.5, "hello", -4, "world", 1.24, 5)
@@ -66,10 +63,10 @@ we try to change an element in the tuple.
     t[2] = "Hello"
 
 We can see that, it raises an error saying tuple does not support item
-assignment. It only implies that tuples are immutable or in simple words,
-tuples cannot be changed.
+assignment. Tuples are immutable, and cannot be changed after
+creation. 
 
-But what is the use of tuples!!!
+Then, what's the use of tuples?
 
 We shall understand that soon. But let us look at a simple problem of swapping
 values.
@@ -110,8 +107,9 @@ Now let us do it the python way
     a
     b
 
-We see that the values are swapped.
-This idiom works for different datatypes also.
+We see that the values are swapped.  This idiom works for different
+data-types also.  
+
 ::
 
     a = 2.5
@@ -120,8 +118,8 @@ This idiom works for different datatypes also.
     a
     b
 
-Moreover this type of behaviour is straight forward and what you would expect
-should happen naturally.
+Moreover this type of behaviour is something that feels natural and
+you'd expect to happen. 
 
 This is possible because of the immutability of tuples. This process is called
 tuple packing and unpacking.
@@ -136,10 +134,10 @@ What we see is a tuple with one element.
 
     5, "hello", 2.5
 
-Now it is a tuple with two elements.
+Now it is a tuple with three elements.
 
 So when we are actually typing two or more elements seperated by commas, those
-elements are packed and a tuple is made from them.
+elements are packed into a tuple. 
 
 When you type
 ::
@@ -165,9 +163,8 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you
 
