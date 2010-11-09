@@ -5,7 +5,7 @@
 | 1.4 LO: | embellishing a plot                    |     2 | Nishanth | Anoop (Done)    |           |
 | 1.5 LO: | saving plots                           |     2 | Anoop    | Punch (Done)    |           |
 | 1.6 LO: | multiple plots                         |     3 | Madhu    | Nishanth (Done) |           |
-| 1.7 LO: | additional features of IPython         |     2 | Nishanth | Amit (Pending)  |           |
+| 1.7 LO: | additional features of IPython         |     2 | Nishanth | Amit (Done)     |           |
 | 1.8 LO: | module level assessment                |     3 | Madhu    |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
 | 2.2 LO: | loading data from files                |     3 | Punch    | Nishanth (Done) |           |
@@ -34,7 +34,7 @@
 | 5.5 LO: | Assessment                             |     3 | Anoop    |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
 | 6.1 LO: | basic datatypes & operators            |     4 | Amit     | Punch (Done)    |           |
-| 6.2 LO: | I/O                                    |     1 | Nishanth |                 |           |
+| 6.2 LO: | I/O                                    |     1 | Nishanth | Amit(Done)      |           |
 | 6.3 LO: | conditionals                           |     2 | Madhu    |                 |           |
 | 6.4 LO: | loops                                  |     2 | Punch    | Anoop (Done)    |           |
 | 6.5 LO: | Assessment                             |     3 | Anoop    |                 |           |

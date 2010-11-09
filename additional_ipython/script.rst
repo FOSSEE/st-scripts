@@ -39,7 +39,7 @@ Let us start ipython with pylab loaded, by typing
 
 on the terminal
 
-{{{ shit to terminal and type ipython -pylab }}}
+{{{ shift to terminal and type ipython -pylab }}}
 
 We shall first make a plot and then view the history and save it.
 ::
@@ -66,14 +66,14 @@ As you can see, it displays a list of recent commands that we typed. Every
 command has a number in front, to specify in which order and when it was typed.
 
 Please note that there is a % sign before the hist command. This implies that 
-%hist is a command that is specific to IPython and not available in vannila 
+%hist is a command that is specific to IPython and not available in the vannila 
 Python interpreter. These type of commands are called as magic commands.
 
 Also note that, the =%hist= itself is a command and is displayed as the most
-recent command. This implies that anything we type in is stored as history, 
+recent command. We should not that anything we type in is stored as history, 
 irrespective of whether it is command or an error or IPython magic command.
 
-If we want only the recent 5 to be displayed, we pass the number as an argument
+If we want only the recent 5 commands to be displayed, we pass the number as an argument
 to =%hist= command. Hence
 ::
 
@@ -99,8 +99,7 @@ displays the commands from 5 to 10
 Now that we have the history, we would like to save the required line of code
 from history. This is possible by using the =%save= command.
 
-Before we do that, let us first look at history and identify what lines of code
-we require.Type
+Before we do that, let us first look at history and identify what lines of code we require.Type
 ::
 
     %hist
@@ -109,7 +108,7 @@ we require.Type
 {{{ point to the lines }}}
 
 The first command is linspace. But second command is a command that gave us an
-error. Hence we do not need seconf. The commands from third to sixth are 
+error. Hence we do not need second command. The commands from third to sixth are 
 required. The seventh command although is correct, we do not need it since we
 are setting the title correctly in the eigthth command.
 
@@ -154,7 +153,7 @@ We use the IPython magic command =%run= to do this. Type
 
    %run -i /home/fossee/plot_script.py
 
-The script runs but we do not see the plot. This happens because we are running
+The script runs but we do not see the plot. This happens because when we are running
 a script and we are not in interactive mode anymore.
 
 Hence on your terminal type
@@ -169,6 +168,7 @@ to show the plot.
 %% 3 %% Use %hist and %save and create a script that has show in it and run it
         to produce and show the plot.
 
+
 {{{ continue from paused state }}}
 
 We first look at the history using
@@ -181,6 +181,7 @@ Then save the script using
 
     %save /home/fossee/show_included.py 1 3-6 8 10 13
     %run -i /home/fossee/show_included.py
+    show()    
 
 We get the desired plot.
 
@@ -195,7 +196,7 @@ interpreter and used to run the script.
 
 {{{ continue from paused state }}}
 
-We see that it raises nameerror saying the name linspace is not found.
+We see that it raises NameError saying that the name linspace is not found.
 
 {{{ Show summary slide }}}
 
@@ -209,9 +210,9 @@ we have looked at
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
+
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thank you!
+Thank You!
  

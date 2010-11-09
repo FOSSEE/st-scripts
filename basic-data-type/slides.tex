@@ -1,4 +1,4 @@
-% Created 2010-11-09 Tue 14:56
+% Created 2010-11-09 Tue 15:26
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -102,10 +103,9 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \frametitle{Solution 1}
 \label{sec-4}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 abs(3+4j)
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -121,7 +121,6 @@ not int?
 \frametitle{Solution 2}
 \label{sec-6}
 
-
 \begin{itemize}
 \item Long
 \item Large integers numbers are internally stored in python as Long
@@ -132,11 +131,10 @@ not int?
 \frametitle{Boolean}
 \label{sec-7}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: t=True
 In []: f=False
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 3}
@@ -199,19 +197,17 @@ In []: f=False
 \frametitle{All are Strings}
 \label{sec-13}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 k = 'Single quote'
 l = "Double quote contain's single quote"
 m = '''"Contain's both"'''
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Immutabilty Error}
 \label{sec-14}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: greeting_string[1]='k'
 -------------------------------------------------------
 TypeError           Traceback (most recent call last)
@@ -219,7 +215,7 @@ TypeError           Traceback (most recent call last)
 /home/fossee/<ipython console> in <module>()
 
 TypeError: 'str' object does not support item assignment
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 5}
@@ -232,13 +228,12 @@ change it to 21.
 \frametitle{Solution 5}
 \label{sec-16}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 l=[1,7,5,3,4]
 3 in l
 l[3]=21
 l
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 6}
@@ -251,12 +246,11 @@ queen''\~{}
 \frametitle{Solution 6}
 \label{sec-18}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 s = "Elizabeth is queen of england"                                                                                                                 
 stemp = s.split()                                                                                                                                   
 ' '.join(stemp[:3])
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}

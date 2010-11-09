@@ -1,4 +1,4 @@
-% Created 2010-11-07 Sun 18:57
+% Created 2010-11-09 Tue 15:09
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,13 +16,19 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
 \title{Plotting Experimental Data}
 \author{FOSSEE}
 \date{2010-09-14 Tue}
 
-\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
 \maketitle
@@ -32,27 +38,23 @@
 
 
 
+
+
+
 \begin{frame}
-\frametitle{Tutorial Plan}
+\frametitle{Outline}
 \label{sec-1}
-\begin{itemize}
 
-\item Plotting Experiment Data and Error Bars\\
-\label{sec-1_1}%
-\end{itemize} % ends low level
+\begin{itemize}
+\item Defining sequence of numbers
+\item Squaring sequence of numbers
+\item Plotting Data Points
+\item Indicating Error through Errorbars
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Pre-requisites}
+\frametitle{Simple Pendulum Data}
 \label{sec-2}
-\begin{itemize}
-
-\item Plotting simple analytical Functions\\
-\label{sec-2_1}%
-\end{itemize} % ends low level
-\end{frame}
-\begin{frame}
-\frametitle{plot L vs. T$^2$}
-\label{sec-3}
 
 
 
@@ -74,70 +76,38 @@
 
 
   
-  
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Initializing L \& T}
-\label{sec-4}
+\label{sec-3}
 
 \begin{verbatim}
-   In []: L = [0.1, 0.2, 0.3, 0.4, 0.5,
-              0.6, 0.7, 0.8, 0.9]
-   In []: t = [0.69, 0.90, 1.19,
-               1.30, 1.47, 1.58,
-              1.77, 1.83, 1.94]
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{square()}
-\label{sec-5}
-
-\begin{verbatim}
-   In []: tsquare=square(t)
-\end{verbatim}
-
-  
-\begin{verbatim}
-   array([ 0.4761,  0.81  ,  1.4161,  1.69  ,  2.1609,  2.4964,  3.1329,
-         3.3489,  3.7636])
-\end{verbatim}
-
-
-  
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Plotting}
-\label{sec-6}
-
-\begin{verbatim}
-   In[]: plot(L,t,.)
-\end{verbatim}
-
-  
-
-\begin{verbatim}
-   In[]: plot(L,t,o)
+   L = [0.1, 0.2, 0.3, 0.4, 0.5,
+        0.6, 0.7, 0.8, 0.9]
+   t = [0.69, 0.90, 1.19,
+        1.30, 1.47, 1.58,
+        1.77, 1.83, 1.94]
 \end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Adding Error}
-\label{sec-7}
+\label{sec-4}
 
 
 
 
 \begin{center}
 \begin{tabular}{rrrr}
-   L  &     T  &  /Delta L  &  /Delta T  \\
- 0.1  &  0.69  &      0.08  &      0.04  \\
- 0.2  &  0.90  &      0.09  &      0.08  \\
- 0.3  &  1.19  &      0.07  &      0.11  \\
- 0.4  &  1.30  &      0.05  &      0.05  \\
- 0.5  &  1.47  &      0.06  &      0.03  \\
- 0.6  &  1.58  &      0.00  &      0.03  \\
- 0.7  &  1.77  &      0.06  &      0.01  \\
- 0.8  &  1.83  &      0.06  &      0.07  \\
- 0.9  &  1.94  &      0.01  &      0.01  \\
+   L  &     T  &  $\delta$ L  &  $\delta$ T  \\
+ 0.1  &  0.69  &        0.08  &        0.04  \\
+ 0.2  &  0.90  &        0.09  &        0.08  \\
+ 0.3  &  1.19  &        0.07  &        0.03  \\
+ 0.4  &  1.30  &        0.05  &        0.05  \\
+ 0.5  &  1.47  &        0.06  &        0.03  \\
+ 0.6  &  1.58  &        0.00  &        0.03  \\
+ 0.7  &  1.77  &        0.06  &        0.04  \\
+ 0.8  &  1.83  &        0.06  &        0.07  \\
+ 0.9  &  1.94  &        0.01  &        0.08  \\
 \end{tabular}
 \end{center}
 
@@ -147,12 +117,24 @@
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Plotting Error bar}
-\label{sec-8}
+\label{sec-5}
 
   
 \begin{verbatim}
    In[]: errorbar(L,tsquare,xerr=delta_L, yerr=delta_T,
                   fmt='b.')
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary}
+\label{sec-6}
+
+\begin{verbatim}
+  L = [0.1, 0.2, 0.3, 0.4, 0.5,                                             |
+       0.6, 0.7, 0.8, 0.9]  
+  plot(x,y,'o')
+  plot(x,y,'.')
+  errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='b.')    
 \end{verbatim}
 \end{frame}
 

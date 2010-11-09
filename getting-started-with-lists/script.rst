@@ -19,8 +19,8 @@
 ..   #. getting started with lists
 ..   #. basic datatypes
      
-.. Author              : Puneeth 
-   Internal Reviewer   : Amit 
+.. Author              : Amit 
+   Internal Reviewer   : 
    External Reviewer   :
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
