@@ -46,7 +46,7 @@
 | 7.5 LO: | sets                                   |     2 | Nishanth | Punch (Done)    |           |
 | 7.6 LO: | Assessment                             |     3 | Amit     |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
-| 8.1 LO: | getting started with functions         |     3 | Nishanth |                 |           |
+| 8.1 LO: | getting started with functions         |     3 | Anoop    |                 |           |
 | 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop (Done)    |           |
 | 8.3 LO: | using python modules                   |     3 | Anoop    | Punch (Done)    |           |
 | 8.4 LO: | writing python scripts                 |     2 | Nishanth |                 |           |

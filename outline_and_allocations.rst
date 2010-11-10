@@ -447,7 +447,7 @@
 8 Module 8: Python Language: Advanced (16)
 ==========================================
 
-8.1 LO: getting started with functions (3) [nishanth]
+8.1 LO: getting started with functions (3) [anoop]
 -----------------------------------------------------
 * defining function
 * arguments
