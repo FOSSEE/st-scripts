@@ -1,361 +1,224 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
-<title></title>
-<style type="text/css">
-
-/*
-:Author: David Goodger (goodger@python.org)
-:Id: $Id: html4css1.css 5951 2009-05-18 18:03:10Z milde $
-:Copyright: This stylesheet has been placed in the public domain.
-
-Default cascading style sheet for the HTML output of Docutils.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-*/
-
-/* used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0 }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 ! important }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 ! important }
-
-.last, .with-subtitle {
-  margin-bottom: 0 ! important }
-
-.hidden {
-  display: none }
-
-a.toc-backref {
-  text-decoration: none ;
-  color: black }
-
-blockquote.epigraph {
-  margin: 2em 5em ; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em }
-
-/* Uncomment (and remove this text!) to get bold-faced definition list terms
-dl.docutils dt {
-  font-weight: bold }
-*/
-
-div.abstract {
-  margin: 2em 5em }
-
-div.abstract p.topic-title {
-  font-weight: bold ;
-  text-align: center }
-
-div.admonition, div.attention, div.caution, div.danger, div.error,
-div.hint, div.important, div.note, div.tip, div.warning {
-  margin: 2em ;
-  border: medium outset ;
-  padding: 1em }
-
-div.admonition p.admonition-title, div.hint p.admonition-title,
-div.important p.admonition-title, div.note p.admonition-title,
-div.tip p.admonition-title {
-  font-weight: bold ;
-  font-family: sans-serif }
-
-div.attention p.admonition-title, div.caution p.admonition-title,
-div.danger p.admonition-title, div.error p.admonition-title,
-div.warning p.admonition-title {
-  color: red ;
-  font-weight: bold ;
-  font-family: sans-serif }
-
-/* Uncomment (and remove this text!) to get reduced vertical space in
-   compound paragraphs.
-div.compound .compound-first, div.compound .compound-middle {
-  margin-bottom: 0.5em }
-
-div.compound .compound-last, div.compound .compound-middle {
-  margin-top: 0.5em }
-*/
-
-div.dedication {
-  margin: 2em 5em ;
-  text-align: center ;
-  font-style: italic }
-
-div.dedication p.topic-title {
-  font-weight: bold ;
-  font-style: normal }
-
-div.figure {
-  margin-left: 2em ;
-  margin-right: 2em }
+.. Objectives
+.. ----------
 
-div.footer, div.header {
-  clear: both;
-  font-size: smaller }
+.. By the end of this tutorial, you will be able to
 
-div.line-block {
-  display: block ;
-  margin-top: 1em ;
-  margin-bottom: 1em }
+.. Create Lists.
+.. Access List elements.
+.. Append elemets to list
+.. Delete list elemets
 
-div.line-block div.line-block {
-  margin-top: 0 ;
-  margin-bottom: 0 ;
-  margin-left: 1.5em }
+.. 1. getting started with ipython 
 
-div.sidebar {
-  margin: 0 0 0.5em 1em ;
-  border: medium outset ;
-  padding: 1em ;
-  background-color: #ffffee ;
-  width: 40% ;
-  float: right ;
-  clear: right }
 
-div.sidebar p.rubric {
-  font-family: sans-serif ;
-  font-size: medium }
 
-div.system-messages {
-  margin: 5em }
+.. Prerequisites
+.. -------------
 
-div.system-messages h1 {
-  color: red }
+..   1. getting started with strings
+..   #. getting started with lists
+..   #. basic datatypes
+     
+.. Author              : Amit 
+   Internal Reviewer   : Anoop Jacob Thomas <anoop@fossee.in>
+   External Reviewer   :
+   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
-div.system-message {
-  border: medium outset ;
-  padding: 1em }
+.. #[[Anoop: Slides contain only outline and summary
 
-div.system-message p.system-message-title {
-  color: red ;
-  font-weight: bold }
+Script
+------
+ {{{ Show the slide containing title }}}
 
-div.topic {
-  margin: 2em }
+Hello friends and welcome to the tutorial on getting started with
+lists.
 
-h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
-h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
-  margin-top: 0.4em }
+ {{{ Show the slide containing the outline slide }}}
 
-h1.title {
-  text-align: center }
+In this tutorial we will be getting acquainted with a python data
+structure called lists.  We will learn ::
+ 
+ * How to create lists
+ * Structure of lists
+ * Access list elements
+ * Append elements to lists
+ * Delete elements from lists
 
-h2.subtitle {
-  text-align: center }
+List is a compound data type, it can contain data of other data
+types. List is also a sequence data type, all the elements are in
+order and the order has a meaning.
 
-hr.docutils {
-  width: 75% }
+.. #[[Anoop: "all the elements are in order and **there** order has a
+   meaning." - I guess something is wrong here, I am not able to
+   follow this.]]
 
-img.align-left, .figure.align-left{
-  clear: left ;
-  float: left ;
-  margin-right: 1em }
+We will first create an empty list with no elements. On your IPython
+shell type ::
 
-img.align-right, .figure.align-right {
-  clear: right ;
-  float: right ;
-  margin-left: 1em }
+   empty = [] 
+   type(empty)
+   
 
-.align-left {
-  text-align: left }
+This is an empty list without any elements.
 
-.align-center {
-  clear: both ;
-  text-align: center }
+.. #[[Anoop: the document has to be continous, without any
+   subheadings, removing * Filled lists]]
 
-.align-right {
-  text-align: right }
+Lets now see how to define a non-empty list. We do it as,::
 
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: left }
+     nonempty = ['spam', 'eggs', 100, 1.234]
 
-/* div.align-center * { */
-/*   text-align: left } */
+Thus the simplest way of creating a list is typing out a sequence 
+of comma-separated values (items) between square brackets. 
+All the list items need not be of the same data type.
 
-ol.simple, ul.simple {
-  margin-bottom: 1em }
+As we can see lists can contain different kinds of data. In the
+previous example 'spam' and 'eggs' are strings and 100 and 1.234 are
+integer and float. Thus we can put elements of heterogenous types in
+lists including list itself.
 
-ol.arabic {
-  list-style: decimal }
+.. #[[Anoop: the sentence "Thus list themselves can be one of the
+   element types possible in lists" is not clear, rephrase it.]]
 
-ol.loweralpha {
-  list-style: lower-alpha }
+Example ::
 
-ol.upperalpha {
-  list-style: upper-alpha }
+      listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]
 
-ol.lowerroman {
-  list-style: lower-roman }
+We access list elements using the index. The index begins from 0. So
+for list nonempty, nonempty[0] gives the first element, nonempty[1]
+the second element and so on and nonempty[3] the last element. ::
 
-ol.upperroman {
-  list-style: upper-roman }
+	    nonempty[0] 
+	    nonempty[1] 
+	    nonempty[3]
 
-p.attribution {
-  text-align: right ;
-  margin-left: 50% }
+Following is an exercise that you must do. 
 
-p.caption {
-  font-style: italic }
+%% %% What happens when you do nonempty[-1]. 
 
-p.credits {
-  font-style: italic ;
-  font-size: smaller }
+Please, pause the video here. Do the exercise and then continue.  
 
-p.label {
-  white-space: nowrap }
+.. #[[Anoop: was negative indices introduced earlier, if not may be we
+   can ask them to try out nonempty[-1] and see what happens and then
+   tell that it gives the last element in the list.]]
 
-p.rubric {
-  font-weight: bold ;
-  font-size: larger ;
-  color: maroon ;
-  text-align: center }
-
-p.sidebar-title {
-  font-family: sans-serif ;
-  font-weight: bold ;
-  font-size: larger }
-
-p.sidebar-subtitle {
-  font-family: sans-serif ;
-  font-weight: bold }
-
-p.topic-title {
-  font-weight: bold }
-
-pre.address {
-  margin-bottom: 0 ;
-  margin-top: 0 ;
-  font: inherit }
-
-pre.literal-block, pre.doctest-block {
-  margin-left: 2em ;
-  margin-right: 2em }
-
-span.classifier {
-  font-family: sans-serif ;
-  font-style: oblique }
-
-span.classifier-delimiter {
-  font-family: sans-serif ;
-  font-weight: bold }
-
-span.interpreted {
-  font-family: sans-serif }
-
-span.option {
-  white-space: nowrap }
-
-span.pre {
-  white-space: pre }
-
-span.problematic {
-  color: red }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80% }
-
-table.citation {
-  border-left: solid 1px gray;
-  margin-left: 1px }
-
-table.docinfo {
-  margin: 2em 4em }
-
-table.docutils {
-  margin-top: 0.5em ;
-  margin-bottom: 0.5em }
-
-table.footnote {
-  border-left: solid 1px black;
-  margin-left: 1px }
-
-table.docutils td, table.docutils th,
-table.docinfo td, table.docinfo th {
-  padding-left: 0.5em ;
-  padding-right: 0.5em ;
-  vertical-align: top }
-
-table.docutils th.field-name, table.docinfo th.docinfo-name {
-  font-weight: bold ;
-  text-align: left ;
-  white-space: nowrap ;
-  padding-left: 0 }
-
-h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
-h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
-  font-size: 100% }
-
-ul.auto-toc {
-  list-style-type: none }
-
-</style>
-</head>
-<body>
-<div class="document">
-
-
-<div class="section" id="objective-questions">
-<h1>Objective Questions</h1>
-<!-- A mininum of 8 questions here (along with answers) -->
-<ol class="arabic">
-<li><p class="first">How do you create an empty list?</p>
-<pre class="literal-block">
-empty=[]
-</pre>
-</li>
-<li><p class="first">What is the most important property of sequence data types like lists?</p>
-<p>The elements are in order and can be accessed by index numbers.</p>
-</li>
-<li><p class="first">Can you have a list inside a list ?</p>
-<p>Yes,List can contain all the other data types, including list.</p>
-<p>Example:
-list_in_list=[2.3,[2,4,6],'string,'all datatypes can be there']</p>
-</li>
-<li><p class="first">What is the index number of the first element in a list?</p>
-<p>0
-nonempty = ['spam', 'eggs', 100, 1.234]
-nonempty[0]</p>
-</li>
-<li><p class="first">How would you access the end of a list without finding its length?</p>
-<p>Using negative indices. We can the list from the end using negative indices.</p>
-<p>::
-nonempty = ['spam', 'eggs', 100, 1.234]
-nonempty[-1]</p>
-</li>
-<li><p class="first">What is the function to find the length of a list?</p>
-<p>len</p>
-</li>
-<li><p class="first">Delete the last element from list sq=[5,4,3,2,1,0]</p>
-<p>del(sq[-1])</p>
-</li>
-<li><p class="first">How many will you have to use remove function to remove all 6's from the given list sq=[2,5,6,7,6,4,6]?</p>
-<p>3</p>
-</li>
-</ol>
-</div>
-<div class="section" id="larger-questions">
-<h1>Larger Questions</h1>
-<!-- A minimum of 2 questions here (along with answers) -->
-<p>1. Add all elemets of seq1=['e','f','g','h']
-to the sequence seq=['a','b','c','d']</p>
-<ol class="arabic simple" start="2">
-<li>Delete all elements of seq1=[3,5,6] from sequence
-seq=[1,2,3,4,5,6,7,8,9]</li>
-</ol>
-</div>
-</div>
-</body>
-</html>
+As you can see you get the last element which is 1.234.
+
+
+In python negative indices are used to access elements from the end::
+   
+   nonempty[-1] 
+   nonempty[-2] 
+   nonempty[-4]
+
+-1 gives the last element which is the 4th element , -2 second to last
+and -4 gives the fourth from last element which is first element.
+
+We can append elements to the end of a list using append command. ::
+
+   nonempty.append('onemore') 
+   nonempty
+   nonempty.append(6) 
+   nonempty
+   
+Following are  exercises that you must do. 
+
+%% %% What is the syntax to get the element 'and' 
+in the list,listinlist ?
+
+
+%% %% How would you get 'and' using negative indices?
+
+Please, pause the video here. Do the exercise and then continue.  
+
+The solution is on your screen
+
+
+As we can see non empty appends 'onemore' and 6 at the end.
+
+Using len function we can check the number of elements in the list
+nonempty. In this case it 6 ::
+	 
+	 len(nonempty)
+
+
+
+Just like we can append elements to a list we can also remove them.
+There are two ways of doing it. One is by using index. ::
+
+      del(nonempty[1])
+
+
+
+deletes the element at index 1, 'eggs' which is the second element of
+the list. The other way is removing element by content. Lets say one
+wishes to delete 100 from nonempty list the syntax of the command
+should be
+
+.. #[[Anoop: let x = [1,2,1,3]
+   	     now x.remove(x[2])
+	     still x is [2,1,3] so that is not the way to remove
+	     element by index, it removed first occurrence of 1(by
+	     content) and not based on index, so make necessary
+	     changes]]
+
+::
+
+    nonempty.remove(100)
+
+but what if there were two 100's. To check that lets do a small
+experiment. ::
+
+	   nonempty.append('spam') 
+	   nonempty
+	   nonempty.remove('spam') 
+	   nonempty
+
+If we check now we will see that the first occurence 'spam' is removed
+thus remove removes the first occurence of the element in the sequence
+and leaves others untouched.
+
+
+
+
+
+.. #[[Anoop: does it have two spams or two pythons?]]
+
+.. #[[Anoop: there are no exercises/solved problems in this script,
+   add them]]
+
+Following are  exercises that you must do. 
+
+%% %% Remove the third element from the list, listinlist.   
+
+%% %% Remove 'and' from the list, listinlist.
+
+Please, pause the video here. Do the exercise and then continue.  
+
+
+
+{{{Slide for Summary }}}
+
+
+In this tutorial we came across a sequence data type called lists. ::
+
+ * We learned how to create lists.  
+ * How to access lists.
+ * Append elements to list.
+ * Delete Element from list.  
+ * And Checking list length.
+ 
+
+
+{{{ show Sponsored by Fossee Slide }}}
+
+This tutorial was created as a part of FOSSEE project.
+
+I hope you found this tutorial useful.
+
+Thank You
+
+..
+ * Author : Amit Sethi 
+ * First Reviewer : 
+ * Second Reviewer : Nishanth

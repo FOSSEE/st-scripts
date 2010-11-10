@@ -4,7 +4,7 @@
 .. By the end of this tutorial, you will be able to
 
 .. 1. Defining symbolic expressions in sage.  
-.. # Using built-in costants and functions. 
+.. # Using built-in constants and functions. 
 .. # Performing Integration, differentiation using sage. 
 .. # Defining matrices. 
 .. # Defining Symbolic functions.  
@@ -37,7 +37,7 @@ During the course of the tutorial we will learn
 {{{ Show outline slide  }}}
 
 * Defining symbolic expressions in sage.  
-* Using built-in costants and functions. 
+* Using built-in constants and functions. 
 * Performing Integration, differentiation using sage. 
 * Defining matrices. 
 * Defining Symbolic functions.  
@@ -73,26 +73,32 @@ So let us try ::
    var('x,alpha,y,beta') 
    x^2/alpha^2+y^2/beta^2
  
-taking another example
+taking another example ::
    
    var('theta')
-   sin^2(theta)+cos^2(theta)
+   sin(theta)*sin(theta)+cos(theta)*cos(theta)
+
+Similarly, we can define many algebraic and trigonometric expressions using sage .
 
 
-Similarly, we can define many algebraic and trigonometric expressions
-using sage .
+Following is an exercise that you must do. 
+
+%% %%  Define following expressions as symbolic expressions
+in sage?
+   
+   1. x^2+y^2
+   #. y^2-4ax
+  
+Please, pause the video here. Do the exercise and then continue. 
+
+The solution is on your screen.
 
 
-Sage also provides a few built-in constants which are commonly used in
-mathematics .
+Sage also provides a few built-in constants which are commonly used in mathematics .
 
-example : pi,e,infinity , Function n gives the numerical values of all these
-    constants.
+example : pi,e,infinity , Function n gives the numerical values of all these constants.
 
-{{{ Type n(pi)
-   	n(e)
-	n(oo) 
-    On the sage notebook }}}  
+{{{ Type n(pi) n(e) n(oo) On the sage notebook }}}
 
 
 
@@ -131,6 +137,24 @@ lets try some of them out on the sage notebook.
      
    log(e,e)
 
+Following is are exercises that you must do. 
+
+%% %% Find the values of the following constants upto 6 digits  precision 
+   
+   1. pi^2
+   #. euler_gamma^2
+
+
+%% %% Find the value of the following.
+
+   1. sin(pi/4)
+   #. ln(23)  
+
+Please, pause the video here. Do the exercises and then continue. 
+
+The solutions are on your screen.
+
+
 
 Given that we have defined variables like x,y etc .. , We can define
 an arbitrary function with desired name in the following way.::
@@ -157,13 +181,16 @@ screen
       
 
       var('x') 
-      h(x)=x^2 g(x)=1 
+      h(x)=x^2 
+      g(x)=1 
       f=Piecewise(<Tab>
 
 {{{ Show the documentation of Piecewise }}} 
     
 ::
-      f=Piecewise([[(0,1),h(x)],[(1,2),g(x)]],x) f
+      f=Piecewise([[(0,1),h(x)],[(1,2),g(x)]],x) 
+      f
+
 
 
 
@@ -184,9 +211,7 @@ For a convergent series , f(n)=1/n^2 we can say ::
    
    var('n') 
    function('f', n)
-
    f(n) = 1/n^2
-
    sum(f(n), n, 1, oo)
 
  
@@ -199,6 +224,18 @@ Lets us now try another series ::
 
 This series converges to pi/4. 
 
+
+Following  are exercises that you must do. 
+
+%% %% Define the piecewise function. 
+   f(x)=3x+2 
+   when x is in the closed interval 0 to 4.
+   f(x)=4x^2
+   between 4 to 6. 
+   
+%% %% Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
+
+Please, pause the video here. Do the exercise(s) and then continue. 
 
 Moving on let us see how to perform simple calculus operations using Sage
 
@@ -267,6 +304,22 @@ correct ::
 as we can see when we substitute the value the answer is almost = 0 showing 
 the solution we got was correct.
 
+Following is an (are) exercise(s) that you must do. 
+
+%% %% Differentiate the following. 
+      
+      1. sin(x^3)+log(3x)  , degree=2
+      #. x^5*log(x^7)      , degree=4 
+
+%% %% Integrate the given expression 
+      
+      sin(x^2)+exp(x^3) 
+
+%% %% Find x
+      cos(x^2)-log(x)=0
+      Does the equation have a root between 1,2. 
+
+Please, pause the video here. Do the exercises and then continue. 
 
 
 
@@ -286,8 +339,18 @@ Now lets do some of the matrix operations on this matrix
     A.inverse()
 
 
+Following is an (are) exercise(s) that you must do. 
 
-{{{ Part of the notebook with summary }}}
+%% %% Find the determinant and inverse of :
+
+      A=[[x,0,1][y,1,0][z,0,y]]
+
+Please, pause the video here. Do the exercise(s) and then continue. 
+
+
+
+
+{{{ Show the summary slide }}}
 
 So in this tutorial we learnt how to
 
