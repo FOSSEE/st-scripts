@@ -46,7 +46,7 @@ structure called lists.  We will learn ::
 
 List is a compound data type, it can contain data of other data
 types. List is also a sequence data type, all the elements are in
-order and there order has a meaning.
+order and the order has a meaning.
 
 .. #[[Anoop: "all the elements are in order and **there** order has a
    meaning." - I guess something is wrong here, I am not able to
@@ -75,15 +75,14 @@ All the list items need not be of the same data type.
 As we can see lists can contain different kinds of data. In the
 previous example 'spam' and 'eggs' are strings and 100 and 1.234 are
 integer and float. Thus we can put elements of heterogenous types in
-lists. Thus list themselves can be one of the element types possible
-in lists. Thus lists can also contain other lists.  
+lists including list itself.
 
 .. #[[Anoop: the sentence "Thus list themselves can be one of the
    element types possible in lists" is not clear, rephrase it.]]
 
 Example ::
 
-      list_in_list=[[4,2,3,4],'and', 1, 2, 3, 4]
+      listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]
 
 We access list elements using the index. The index begins from 0. So
 for list nonempty, nonempty[0] gives the first element, nonempty[1]
@@ -93,11 +92,20 @@ the second element and so on and nonempty[3] the last element. ::
 	    nonempty[1] 
 	    nonempty[3]
 
+Following is an exercise that you must do. 
+
+%% %% What happens when you do nonempty[-1]. 
+
+Please, pause the video here. Do the exercise and then continue.  
+
 .. #[[Anoop: was negative indices introduced earlier, if not may be we
    can ask them to try out nonempty[-1] and see what happens and then
    tell that it gives the last element in the list.]]
 
-We can also access the elememts from the end using negative indices ::
+As you can see you get the last element which is 1.234.
+
+
+In python negative indices are used to access elements from the end::
    
    nonempty[-1] 
    nonempty[-2] 
@@ -113,6 +121,19 @@ We can append elements to the end of a list using append command. ::
    nonempty.append(6) 
    nonempty
    
+Following are  exercises that you must do. 
+
+%% %% What is the syntax to get the element 'and' 
+in the list,listinlist ?
+
+
+%% %% How would you get 'and' using negative indices?
+
+Please, pause the video here. Do the exercise and then continue.  
+
+The solution is on your screen
+
+
 As we can see non empty appends 'onemore' and 6 at the end.
 
 Using len function we can check the number of elements in the list
@@ -148,19 +169,33 @@ should be
 but what if there were two 100's. To check that lets do a small
 experiment. ::
 
-	   nonempty.append('python') 
+	   nonempty.append('spam') 
 	   nonempty
-	   nonempty.remove('python') 
+	   nonempty.remove('spam') 
 	   nonempty
 
 If we check now we will see that the first occurence 'spam' is removed
 thus remove removes the first occurence of the element in the sequence
 and leaves others untouched.
 
+
+
+
+
 .. #[[Anoop: does it have two spams or two pythons?]]
 
 .. #[[Anoop: there are no exercises/solved problems in this script,
    add them]]
+
+Following are  exercises that you must do. 
+
+%% %% Remove the third element from the list, listinlist.   
+
+%% %% Remove 'and' from the list, listinlist.
+
+Please, pause the video here. Do the exercise and then continue.  
+
+
 
 {{{Slide for Summary }}}
 
