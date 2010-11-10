@@ -28,6 +28,7 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : 
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 .. #[punch: please mark the exercises, using the syntax we decided upon.]
@@ -42,7 +43,7 @@ Welcome to the spoken tutorial on Matrices.
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial we will learn about matrices, creating matrices using
-direct data, by converting a list and matrix operations. Finding
+direct data, converting a list and matrix operations. Finding
 inverse of a matrix, determinant of a matrix, eigen values and eigen
 vectors of a matrix, norm and singular value decomposition of
 matrices.
@@ -59,7 +60,7 @@ on arrays are valid on matrices also. A matrix may be created as,
 .. #[Puneeth: don't use ``matrix``. Use ``array``. The whole script will
 .. have to be fixed.]
 
-Using the tuple ``m1.shape`` we can find out the shape or size of the
+Using the method ``shape`` we can find out the shape or size of the
 matrix,
 ::
 
