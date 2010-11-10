@@ -1,0 +1,318 @@
+% Created 2010-11-10 Wed 18:59
+\documentclass[presentation]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Getting started with functions}
+\author{FOSSEE}
+\date{}
+
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item Define functions
+\item Pass arguments to functions
+\item Learn about docstrings
+\item Return values from functions
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Function}
+\label{sec-2}
+
+\begin{itemize}
+\item Eliminate code redundancy
+\item Help in code reuse
+\item Subroutine
+
+\begin{itemize}
+\item relatively independent of remaining code
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{f(x)} a mathematical function}
+\label{sec-3}
+
+
+  $f(x) = x^{2}$
+
+\begin{verbatim}
+   f(1) -> 1
+   f(2) -> 4
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Define \texttt{f(x)} in Python}
+\label{sec-4}
+
+\begin{verbatim}
+def f(x):
+    return x*x
+\end{verbatim}
+
+\begin{itemize}
+\item \texttt{def} - keyword
+\item \texttt{f} - function name
+\item \texttt{x} - parameter / argument to function \texttt{f}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-5}
+
+
+  Write a python function named \texttt{cube} which computes the cube of a given
+  number \texttt{n}.
+  
+\begin{itemize}
+\item Pause here and try to solve the problem yourself.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution}
+\label{sec-6}
+
+\begin{verbatim}
+def cube(n):
+    return n**3
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{greet} function}
+\label{sec-7}
+
+
+ Function \texttt{greet} which will print \texttt{Hello World!}.
+\begin{verbatim}
+def greet():
+    print "Hello World!"
+\end{verbatim}
+\begin{itemize}
+\item Call the function \texttt{greet}
+\begin{verbatim}
+     In []: greet()
+     Hello World!
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-8}
+
+
+  Write a python function named \texttt{avg} which computes the average of
+  \texttt{a} and \texttt{b}.
+
+\begin{itemize}
+\item Pause here and try to solve the problem yourself.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-9}
+
+\begin{verbatim}
+def avg(a,b):
+    return (a + b)/2
+\end{verbatim}
+
+\begin{itemize}
+\item \texttt{a} and \texttt{b} are parameters
+\item \texttt{def f(p1, p2, p3, ... , pn)}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Docstring}
+\label{sec-10}
+
+
+\begin{itemize}
+\item Documenting/commenting code is a good practice
+\begin{verbatim}
+def avg(a,b):
+    """ avg takes two numbers as input 
+    (a & b), and returns the average 
+    of a and b"""
+    return (a+b)/2
+\end{verbatim}
+\item Docstring
+
+\begin{itemize}
+\item written in the line after the \texttt{def} line.
+\item Inside triple quote.
+\end{itemize}
+
+\item Documentation
+\begin{verbatim}
+     avg?
+\end{verbatim}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 3}
+\label{sec-11}
+
+  Add docstring to the function f.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-12}
+
+
+\begin{verbatim}
+def f(x):
+    """Accepts a number x as argument and,
+    returns the square of the number x."""
+    return x*x
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 4}
+\label{sec-13}
+
+  Write a python function named \texttt{circle} which returns the area and
+  perimeter of a circle given radius \texttt{r}.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 4}
+\label{sec-14}
+
+\begin{verbatim}
+def circle(r):
+    """returns area and perimeter of a circle given 
+    radius r"""
+    pi = 3.14
+    area = pi * r * r
+    perimeter = 2 * pi * r
+    return area, perimeter
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{what}}
+\label{sec-15}
+
+\begin{verbatim}
+
+def what( n ):
+    if n < 0: n = -n
+    while n > 0:
+        if n % 2 == 1:
+            return False
+        n /= 10
+    return True
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{even\_digits}}
+\label{sec-16}
+
+\begin{verbatim}
+def even_digits( n ):
+   """returns True if all the digits of number 
+   n is even returns False if all the digits 
+   of number n is not even"""
+    if n < 0: n = -n
+    while n > 0:
+        if n % 2 == 1:
+            return False
+        n /= 10
+    return True
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{what}}
+\label{sec-17}
+
+\begin{verbatim}
+def what( n ):
+    i = 1
+    while i * i < n:
+        i += 1
+    return i * i == n, i
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\texttt{is\_perfect\_square}}
+\label{sec-18}
+
+\begin{verbatim}
+def is_perfect_square( n ):
+    """returns True and square root of n, 
+    if n is a perfect square, otherwise 
+    returns False and the square root 
+    of the next perfect square"""
+    i = 1
+    while i * i < n:
+        i += 1
+    return i * i == n, i
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-19}
+
+\begin{itemize}
+\item Functions in Python
+\item Passing parameters to a function
+\item Returning values from a function
+\item We also did few code reading exercises.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-20}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}
