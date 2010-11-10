@@ -23,6 +23,7 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : 
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 
@@ -44,7 +45,7 @@ return value.
 
 While writing code, we always want to reduce the number of lines of
 code and functions is a way of reusing the code. Thus the same lines
-of code can be used again and again. A function is a portion of code
+of code can be used as many times as needed. A function is a portion of code
 within a larger program that performs a specific task and is
 relatively independent of the remaining code. Now let us get more
 familiar with functions,
@@ -71,9 +72,10 @@ see if it returns the expected values, try,
     f(1)
     f(2)
 
-Yes, it returned 1 and 2 respectively. And now let us see what we did,
-we wrote two lines. The first line ``def f(x)`` is used to define the
-name and the parameters to the function. ``def`` is a keyword and
+Yes, it returned 1 and 4 respectively. And now let us see what we did.
+We wrote two lines: The first line ``def f(x)`` is used to define the
+name and the parameters to the function and the second line is used to
+fix what the function is supposed to return. ``def`` is a keyword and
 ``f`` is the name of the function and ``x`` the parameter of the
 function.
 
@@ -130,7 +132,7 @@ The problem can be solved as,
     	return (a + b)/2
 
 Thus if we want a function to accept more arguments, we just list them
-separated with a comma between the parenthesis after the function name
+separated with a comma between the parenthesis after the function's name
 in the ``def`` line.
 
 {{{ switch to next slide, docstring }}}
@@ -166,7 +168,7 @@ Try to do this,
 
 It doesn't have a docstring associated with it. Also we cannot infer
 anything from the function name, and thus we are forced to read the
-code to understand anything about the function.
+code to understand about the function.
 
 {{{ switch to next slide, exercise 3 }}}
 
@@ -234,8 +236,8 @@ Pause here and try to figure out what the function ``what`` does.
 {{{ switch to next slide, even_digits }}}
 
 .. def even_digits( n ):
-..    """returns True if all the digits of number n is even
-..    returns False if all the digits of number n is not even"""
+..    """returns True if all the digits in the number n are even,
+..    returns False if all the digits in the number n are not even"""
 ..     if n < 0: n = -n
 ..     while n > 0:
 ..         if n % 2 == 1:
