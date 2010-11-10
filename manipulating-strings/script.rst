@@ -19,7 +19,8 @@
 .. Author              : Puneeth 
    Internal Reviewer   : Amit 
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <08-11-2010, Anand, OK> [2010-10-05]
 
 Script
 ------
@@ -90,8 +91,8 @@ Please, pause the video here. Do the exercise(s) and then continue.
 
     s[1:-1]
 
-gives the a substring of s, without the first and the last
-characters. 
+gives the substring of s, without the first and the last
+characters of s. 
 
 ::
 
