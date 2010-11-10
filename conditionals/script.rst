@@ -1,14 +1,20 @@
 .. Objectives
 .. ----------
 
-.. Clearly state the objectives of the LO (along with RBT level)
+.. By the end of this tutorial, you will be able to 
+
+.. * Use if/else blocks 
+.. * Use if/elif/else blocks
+.. * Use the Ternary conditional statement - C if X else Y
+
+.. to check conditions in your programs. 
+
 
 .. Prerequisites
 .. -------------
 
-..   1. Name of LO-1
-..   2. Name of LO-2
-..   3. Name of LO-3
+..   1. Basic datatypes and operators
+
      
 .. Author              : Madhu
    Internal Reviewer   : 
@@ -21,8 +27,7 @@ Script
 
 {{{ Show the slide containing the title }}}
 
-Hello friends. Welcome to this spoken tutorial on Getting started with
-strings.
+Hello friends. Welcome to this spoken tutorial on Conditionals
 
 {{{ Show the slide containing the outline }}}
 
@@ -40,10 +45,12 @@ on the terminal
 
 Whenever we have two possible states that can occur depending on a
 whether a certain condition we can use if/else construct in
-Python. Say for example we have a variable "a" which stores integers
-and we are required to find out whether the value of the variable "a"
-is an even number or an odd number. To test out conditional statements
-as an example, let us say the value of the variable "a" is 5::
+Python. 
+
+For example, say, we have a variable ``a`` which stores integers and
+we are required to find out whether ``a`` is even or odd.  an even
+number or an odd number. Let's say the value of ``a`` is 5, now.
+::
 
   a = 5
 
@@ -54,36 +61,29 @@ In such a case we can write the if/else block as::
   else:
       print "Odd"
 
-When the value of the variable "a" is divided by 2 and the remainder
-is 0 i.e. the result of the operation "a modulo 2" is 0 the condition
-"a % 2 == 0" evaluates to True, so the code within the if block gets
-executed. This means that the value of "a" is Even. 
+If ``a`` is divisible by 2, i.e., the result of "a modulo 2" is 0, it
+prints "Even", otherwise it prints "Odd". 
 
-If the operation "a modulo 2" is not 0 the condition "a % 2 == 0"
-evaluates to False and hence the code block within else gets executed
-which means that the value of "a" is Odd. 
+Note that in such a case, only one of the two blocks gets executed
+depending on whether the condition is ``True`` or ``False``.
 
-Note in such a case only one of the two blocks get executed depending
-on whether the condition is True or False.
+There is a very important sytactic element to understand here. Every
+code block begins with a line that ends with a ``:``, in this example
+the ``if`` and the ``else`` lines. Also, all the statements inside a
+code block are intended by 4 spaces. Returning to the previous
+indentation level, ends the code block. 
 
-There is a very important sytactic element to understand here. All the
-statements which are inside a certain code block are indented by 4
-spaces. The statement which starts a new code block after it, i.e. the
-if statement in this example ends with a colon (:). So the next
-immediate line will be inside the if block and hence indented by 4
-spaces. To come out of the code block we have to come back to the
-previous indentation level as shown in the else line here. Again the
-line following else will be in a new block so else line ends with a
-colon and the following block of code is indented by 4.
+The if/else blocks work for a condition, which can take one of two
+states. What do we do for conditions, which can take more than two
+states? 
 
-As we use if/else statement when we have a condition which can take
-one of the two states, we may have conditions which can take more than
-two states. In such a scenario Python provides if/elif/else
-statements. Let us take an example. We have a variable "a" which holds
-integer values. We need to print "positive" if the value of a is
-positive, "negative" if it is negative and "zero" if the value of the
-variable "a" is 0. Let us use if/elif/else ladder for it. For the
-purposes of testing our code let us assume that the value of a is -3::
+Python provides if/elif/else blocks, for such conditions. Let us take
+an example. We have a variable ``a`` which holds integer values. We
+need to print "positive" if ``a`` is positive, "negative" if
+it is negative or "zero" if it is 0. 
+
+Let us use if/elif/else ladder for it. For the purposes of testing our
+code let us assume that the value of a is -3::
 
   a = -3
 
@@ -94,18 +94,18 @@ purposes of testing our code let us assume that the value of a is -3::
   else:
       print "zero"
 
-This if/elif/else ladder is self explanatory. All the syntax and rules
-as said for if/else statements hold. The only addition here is the
-elif statement which can have another condition of its own.
+All the syntax and rules as said for if/else statements hold. The only
+addition here is the ``elif`` statement which can have another
+condition of its own.
 
-Here, exactly one block of code is executed and that block of code
-corresponds to the condition which first evaluates to True. Even if
-there is a situation where multiple conditions evaluate to True all
-the subsequent conditions other than the first one which evaluates to
-True are neglected. Consequently, the else block gets executed if and
-only if all the conditions evaluate to False.
+Here too, exactly one block of code is executed -- the block of code
+which first evaluates to ``True``. Even if there is a situation where
+multiple conditions evaluate to True all the subsequent conditions
+other than the first one which evaluates to True are neglected.
+Consequently, the else block gets executed if and only if all the
+conditions evaluate to False.
 
-Also, the else block in both if/else statement and if/elif/else is
+Also, the ``else`` block in both if/else statement and if/elif/else is
 optional. We can have a single if statement or just if/elif statements
 without having else block at all. Also, there can be any number of
 elif's within an if/elif/else ladder. For example
@@ -123,6 +123,12 @@ elif's within an if/elif/else ladder. For example
 
 is completely valid. Note that there are multiple elif blocks and there
 is no else block.
+
+Following is an exercise that you must do. 
+
+%% %% 
+
+Please, pause the video here. Do the exercise and then continue. 
 
 In addition to these conditional statements, Python provides a very
 convenient ternary conditional operator. Let us take the following
@@ -147,10 +153,16 @@ like score is integer of score_str is score_str is not 'AA' otherwise
 it is 0. This means that we make the scores of the students who were
 absent for the exam 0.
 
-Moving on, there are certain situations where we will have to no
-operations or statements within the block of code. For example, we
-have a code where we are waiting for the keyboard input. If the user
-enters "s" as the input we would perform some operation nothing
+Following is an exercise that you must do. 
+
+%% %%     
+
+Please, pause the video here. Do the exercise and then continue. 
+
+Moving on, there are certain situations where we will have no
+operations or statements within a block of code. For example, we have
+a code where we are waiting for the keyboard input. If the user enters
+"c", "d" or "x" as the input we would perform some operation nothing
 otherwise. In such cases "pass" statement comes very handy::
 
   a = raw_input("Enter 'c' to calculate and exit, 'd' to display the existing
@@ -167,8 +179,7 @@ otherwise. In such cases "pass" statement comes very handy::
 
 In this case "pass" statement acts as a place holder for the block of
 code. It is equivalent to a null operation. It literally does
-nothing. So "pass" statement can be used as a null operation
-statement, or it can used as a place holder when the actual code
+nothing. It can used as a place holder when the actual code
 implementation for a particular block of code is not known yet but has
 to be filled up later.
 
