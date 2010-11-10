@@ -1,4 +1,4 @@
-% Created 2010-11-10 Wed 17:18
+% Created 2010-11-11 Thu 02:03
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -55,7 +54,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Questions 1}
+\frametitle{Question 1}
 \label{sec-2}
 
 \begin{itemize}
@@ -72,28 +71,34 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solutions 1}
+\frametitle{Solution 1}
 \label{sec-3}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 var('x,y')
 x^2+y^2
 
 var('a,x,y')
 y^2-4*a*x
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Questions 2}
+\frametitle{Question 2}
 \label{sec-4}
+
 
 \begin{itemize}
 \item Find the values of the following constants upto 6 digits  precision
 
 \begin{itemize}
 \item pi$^2$
+\item euler$_{\mathrm{gamma}}$$^2$
 \end{itemize}
 
+\end{itemize}
+
+\begin{itemize}
 \item Find the value of the following.
 
 \begin{itemize}
@@ -104,17 +109,18 @@ y^2-4*a*x
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solutions 2}
+\frametitle{Solution 2}
 \label{sec-5}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 n(pi^2,digits=6)
 n(sin(pi/4))
 n(log(23,e))
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Question 3}
 \label{sec-6}
 
 \begin{itemize}
@@ -127,37 +133,35 @@ n(log(23,e))
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution Q1}
+\frametitle{Solution 3}
 \label{sec-7}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 var('x') 
 h(x)=3*x+2 
 g(x)= 4*x^2
 f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
 f
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution Q2}
-\label{sec-8}
+\end{lstlisting}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 var('n')
 f=1/(n^2-1) 
 sum(f(n), n, 1, oo)
-\end{verbatim}
- 
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Questions 3}
-\label{sec-9}
+\frametitle{Question 4}
+\label{sec-8}
 
 \begin{itemize}
 \item Differentiate the following.
 
 \begin{itemize}
-\item x$^5$*log(x$^7$)  , degree=4
+\item sin(x$^3$)+log(3x), to the second order
+\item x$^5$*log(x$^7$), to the fourth order
 \end{itemize}
 
 \item Integrate the given expression
@@ -176,10 +180,11 @@ sum(f(n), n, 1, oo)
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solutions 3}
-\label{sec-10}
+\frametitle{Solution 4}
+\label{sec-9}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 var('x')
 f(x)= x^5*log(x^7) 
 diff(f(x),x,5)
@@ -190,11 +195,11 @@ integral(x*sin(x^2),x)
 var('x')
 f=cos(x^2)-log(x)
 find_root(f(x)==0,1,2)
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
-\label{sec-11}
+\frametitle{Question 5}
+\label{sec-10}
 
 \begin{itemize}
 \item Find the determinant and inverse of :
@@ -203,45 +208,33 @@ find_root(f(x)==0,1,2)
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-12}
+\frametitle{Solution 5}
+\label{sec-11}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 var('x,y,z')
 A=matrix([[x,0,1],[y,1,0],[z,0,y]])
 A.det()
 A.inverse()
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-13}
+\label{sec-12}
 
 \begin{itemize}
-\item We learnt about defining symbolic 
-   expression and functions.
+\item We learnt about defining symbolic expression and functions.
 \item Using built-in constants and functions.
-\item Using <Tab>  to see the documentation of a 
-   function.
-\end{itemize}
-
- 
-\end{frame}
-\begin{frame}
-\frametitle{Summary}
-\label{sec-14}
-
-\begin{itemize}
+\item Using <Tab> to see the documentation of a function.
 \item Simple calculus operations .
-\item Substituting values in expression 
-   using substitute function.
-\item Creating symbolic matrices and 
-   performing operation on them .
+\item Substituting values in expression using substitute function.
+\item Creating symbolic matrices and performing operation on them .
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Thank you!}
-\label{sec-15}
+\label{sec-13}
 
   \begin{block}{}
   \begin{center}

@@ -19,9 +19,9 @@
 Script
 ------
 
-Hello friends and welcome to the tutorial on "Using SAGE to teach"
-
 {{{ Show the slide containing title }}}
+
+Hello friends and welcome to the tutorial on Using SAGE to teach
 
 {{{ Show the slide containing the outline slide }}}
 
@@ -41,14 +41,14 @@ Now let us reduce the damping factor
 ::
 
     t = var('t')
-    p1 = plot( e^(-t/2) * sin(2*t), (t, 0, 15))
+    p1 = plot(e^(-t/2) * sin(2*t), (t, 0, 15))
     show(p1)
 
 Now if we want to reduce the damping factor even more, we would be using
 e^(-t/3). We can observe that every time we have to change, all we do is change
 something very small and re evaluate the cell.
 
-This process can be automated using the ``@interact`` feature of SAGE.
+This process can be simplified, using the ``@interact`` feature of SAGE.
 
 ::
 
@@ -141,10 +141,10 @@ The first feature we shall see is the ``publish`` feature. Open a worksheet and
 in the top right, we can see a button called ``publish``. Click on that and we
 get a confirmation page with an option for re publishing.
 
-For now lets forget that opion and simply publish by cliking ``yes``. The
+For now lets forget that option and simply publish by clicking ``yes``. The
 worksheet is now published. 
 
-Now lets signout and go to the sage notebook home. We see link to browse
+Now lets sign out and go to the sage notebook home. We see link to browse
 published worksheets. Lets click on it and we can see the worksheet. This does
 not require login and anyone can view the worksheet.
 
@@ -173,9 +173,8 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
-Thankyou
+Thank you!
 

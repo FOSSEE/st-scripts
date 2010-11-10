@@ -14,7 +14,7 @@
 ..   #. Be able to evaluate cells, create and delete cells, navigate them.
 ..   #. Be able to make annotations in the worksheet
 ..   #. Be able to use tab completion. 
-..   #. Be able to use code from other languages in the cells. 
+..   #. Be able to use code from other languages in the cells.            
 
 .. Prerequisites
 .. -------------
@@ -30,10 +30,10 @@
 Script
 ------
 
-Hello friends. Welcome to this spoken tutorial on Getting started with
-sage and sage notebook.
-
 {{{ Show the slide containing the title }}}
+
+Hello friends. Welcome to this spoken tutorial on Getting started with
+Sage and Sage notebook.
 
 {{{ Show the slide containing the outline }}}
 
@@ -57,9 +57,10 @@ now
 We are assuming that you have Sage installed on your computer now. If
 not please visit the page
 http://sagemath.org/doc/tutorial/introduction.html#installation for
-the tutorial on how to install Sage. Let us move on now.
+the tutorial on how to install Sage. 
 
-On the terminal type::
+
+Let us now learn how to start Sage. On the terminal type::
 
   sage
 
@@ -81,8 +82,8 @@ a browser, a modern browser
 {{{ Intentional *cough* *cough* }}}
 
 to use Sage and nothing else! The Sage notebook also provides a
-convenient way of sharing and publishing our work which is very handy
-when we use Sage for research or for teaching.
+convenient way of sharing and publishing our work, which is very handy
+for research and teaching.
 
 However we can also run our own instances of Sage notebook servers on
 all the computers we have a local installation of Sage. To start the
@@ -319,5 +320,3 @@ This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
 Thank you!
- 
-

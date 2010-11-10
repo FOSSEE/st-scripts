@@ -25,66 +25,65 @@
 Symbolics with Sage
 -------------------
 
-Hello friends and welcome to the tutorial on symbolics with sage.
+Hello friends and welcome to the tutorial on Symbolics with Sage.
 
 {{{ Show welcome slide }}}
-
-
-.. #[Madhu: What is this line doing here. I don't see much use of it]
 
 During the course of the tutorial we will learn
 
 {{{ Show outline slide  }}}
 
-* Defining symbolic expressions in sage.  
+* Defining symbolic expressions in Sage.  
 * Using built-in constants and functions. 
-* Performing Integration, differentiation using sage. 
+* Performing Integration, differentiation using Sage. 
 * Defining matrices. 
-* Defining Symbolic functions.  
+* Defining symbolic functions.  
 * Simplifying and solving symbolic expressions and functions.
 
-We can use Sage for symbolic maths. 
+Amongst a lot of other things, Sage can do Symbolic Math and we shall
+start with defining symbolic expressions in Sage. 
+
+Hope you have your Sage notebook open. If not, pause the video and
+start you Sage notebook. 
 
 On the sage notebook type::
    
     sin(y)
 
-It raises a name error saying that y is not defined. But in sage we
-can declare y as a symbol using var function.
-
-
+It raises a name error saying that ``y`` is not defined. We need to
+declare ``y`` as a symbol. We do it using the ``var`` function. 
 ::
+
     var('y')
    
 Now if you type::
 
     sin(y)
 
-sage simply returns the expression.
+Sage simply returns the expression.
 
+Sage treats ``sin(y)`` as a symbolic expression. We can use this to do
+symbolic maths using Sage's built-in constants and expressions.
 
-Thus sage treats sin(y) as a symbolic expression . We can use
-this to do  symbolic maths using sage's built-in constants and
-expressions..
-
-
-So let us try ::
+Let us try out a few examples. ::
    
    var('x,alpha,y,beta') 
    x^2/alpha^2+y^2/beta^2
+
+We have defined 4 variables, ``x``, ``y``, ``alpha`` and ``beta`` and
+have defined a symbolic expression using them.
  
-taking another example ::
+Here is an expression in ``theta``  ::
    
    var('theta')
    sin(theta)*sin(theta)+cos(theta)*cos(theta)
 
-Similarly, we can define many algebraic and trigonometric expressions using sage .
+Now that you know how to define symbolic expressions in Sage, here is
+an exercise. 
 
+{{ show slide showing question 1 }}
 
-Following is an exercise that you must do. 
-
-%% %%  Define following expressions as symbolic expressions
-in sage?
+%% %% Define following expressions as symbolic expressions in Sage. 
    
    1. x^2+y^2
    #. y^2-4ax
@@ -93,42 +92,37 @@ Please, pause the video here. Do the exercise and then continue.
 
 The solution is on your screen.
 
+{{ show slide showing solution 1 }}
 
-Sage also provides a few built-in constants which are commonly used in mathematics .
-
-example : pi,e,infinity , Function n gives the numerical values of all these constants.
-
-{{{ Type n(pi) n(e) n(oo) On the sage notebook }}}
-
-
-
-If you look into the documentation of function "n" by doing
-
-.. #[Madhu: "documentation of the function "n"?]
+Sage also provides built-in constants which are commonly used in
+mathematics, for instance pi, e, infinity. The function ``n`` gives
+the numerical values of all these constants.
+:: 
+    n(pi) 
+    n(e) 
+    n(oo)
+   
+If you look into the documentation of function ``n`` by doing
 
 ::
    n(<Tab>
 
-You will see what all arguments it takes and what it returns. It will be very
-helpful if you look at the documentation of all functions introduced through
-this script.
+You will see what all arguments it takes and what it returns. It will
+be very helpful if you look at the documentation of all functions
+introduced in the course of this script.
 
+Also we can define the number of digits we wish to have in the
+constants. For this we have to pass an argument -- digits.  Type
 
-
-Also we can define the no. of digits we wish to use in the numerical
-value . For this we have to pass an argument digits.  Type
-
-.. #[Madhu: "no of digits"? Also "We wish to obtain" than "we wish to
-     use"?]
 ::
 
    n(pi, digits = 10)
 
-Apart from the constants sage also has a lot of builtin functions like
-sin,cos,log,factorial,gamma,exp,arcsin etc ...
-lets try some of them out on the sage notebook.
+Apart from the constants Sage also has a lot of built-in functions
+like ``sin``, ``cos``, ``log``, ``factorial``, ``gamma``, ``exp``,
+``arcsin`` etc ...
 
-
+Lets try some of them out on the Sage notebook.
 ::
      
    sin(pi/2)
@@ -137,9 +131,12 @@ lets try some of them out on the sage notebook.
      
    log(e,e)
 
-Following is are exercises that you must do. 
+Following are exercises that you must do. 
 
-%% %% Find the values of the following constants upto 6 digits  precision 
+{{ show slide showing question 2 }}
+
+%% %% Find the values of the following constants upto 6 digits
+      precision
    
    1. pi^2
    #. euler_gamma^2
@@ -150,18 +147,17 @@ Following is are exercises that you must do.
    1. sin(pi/4)
    #. ln(23)  
 
-Please, pause the video here. Do the exercises and then continue. 
+Please, pause the video here. Do the exercises and then continue.
 
-The solutions are on your screen.
+The solutions are on your screen
 
+{{ show slide showing solution 2 }}
 
-
-Given that we have defined variables like x,y etc .. , We can define
-an arbitrary function with desired name in the following way.::
+Given that we have defined variables like x, y etc., we can define an
+arbitrary function with desired name in the following way.::
 
        var('x') 
        function('f',x)
-
 
 Here f is the name of the function and x is the independent variable .
 Now we can define f(x) to be ::
@@ -174,29 +170,18 @@ Evaluating this function f for the value x=pi returns pi/2.::
 
 We can also define functions that are not continuous but defined
 piecewise.  Let us define a function which is a parabola between 0
-to 1 and a constant from 1 to 2 .  Type the following as given on the
-screen
-
+to 1 and a constant from 1 to 2 .  Type the following 
 ::
       
 
       var('x') 
       h(x)=x^2 
       g(x)=1 
-      f=Piecewise(<Tab>
 
-{{{ Show the documentation of Piecewise }}} 
-    
-::
       f=Piecewise([[(0,1),h(x)],[(1,2),g(x)]],x) 
       f
 
-
-
-
-
-We can also define functions which are series 
-
+We can also define functions convergent series and other series. 
 
 We first define a function f(n) in the way discussed above.::
 
@@ -221,11 +206,11 @@ Lets us now try another series ::
     f(n) = (-1)^(n-1)*1/(2*n - 1)
     sum(f(n), n, 1, oo)
 
-
 This series converges to pi/4. 
 
-
 Following  are exercises that you must do. 
+
+{{ show slide showing question 3 }}
 
 %% %% Define the piecewise function. 
    f(x)=3x+2 
@@ -237,14 +222,15 @@ Following  are exercises that you must do.
 
 Please, pause the video here. Do the exercise(s) and then continue. 
 
+{{ show slide showing solution 3 }}
+
 Moving on let us see how to perform simple calculus operations using Sage
 
 For example lets try an expression first ::
 
     diff(x**2+sin(x),x) 
-    2x+cos(x)
 
-The diff function differentiates an expression or a function. Its
+The diff function differentiates an expression or a function. It's
 first argument is expression or function and second argument is the
 independent variable.
 
@@ -256,10 +242,9 @@ We have already tried an expression now lets try a function ::
 To get a higher order differential we need to add an extra third argument
 for order ::
  
-   diff(<tab> diff(f(x),x,3)
+   diff(f(x),x,3)
 
 in this case it is 3.
-
 
 Just like differentiation of expression you can also integrate them ::
 
@@ -267,33 +252,30 @@ Just like differentiation of expression you can also integrate them ::
      s = integral(1/(1 + (tan(x))**2),x) 
      s
 
-
-
-Many a times we need to find factors of an expression ,we can use the "factor" function
+Many a times we need to find factors of an expression, we can use the
+"factor" function
 
 ::
-    factor(<tab> 
+
     y = (x^100 - x^70)*(cos(x)^2 + cos(x)^2*tan(x)^2) 
     f = factor(y)
 
-One can  simplify complicated expression ::
+One can simplify complicated expression ::
     
     f.simplify_full()
 
-This simplifies the expression fully . We can also do simplification
-of just the algebraic part and the trigonometric part ::
+This simplifies the expression fully. We can also do simplification of
+just the algebraic part and the trigonometric part ::
 
     f.simplify_exp() 
     f.simplify_trig()
     
-
-
-One can also find roots of an equation by using find_root function::
+One can also find roots of an equation by using ``find_root`` function::
 
     phi = var('phi') 
     find_root(cos(phi)==sin(phi),0,pi/2)
 
-Lets substitute this solution into the equation and see we were
+Let's substitute this solution into the equation and see we were
 correct ::
 
      var('phi') 
@@ -322,18 +304,13 @@ Following is an (are) exercise(s) that you must do.
 Please, pause the video here. Do the exercises and then continue. 
 
 
-
 Lets us now try some matrix algebra symbolically ::
-
-
 
    var('a,b,c,d') 
    A=matrix([[a,1,0],[0,b,0],[0,c,d]]) 
    A
 
 Now lets do some of the matrix operations on this matrix
-
-
 ::
     A.det() 
     A.inverse()
@@ -348,17 +325,15 @@ Following is an (are) exercise(s) that you must do.
 Please, pause the video here. Do the exercise(s) and then continue. 
 
 
-
-
 {{{ Show the summary slide }}}
 
-So in this tutorial we learnt how to
+That brings us to the end of this tutorial. In this tutorial we learnt
+how to
 
-
-* We learnt about defining symbolic expression and functions.  
-* Using built-in constants and functions.  
-* Using <Tab>  to see the documentation of a function.  
-* Simple calculus operations .  
-* Substituting values in expression using substitute function.
-* Creating symbolic matrices and performing operation on them .
+* define symbolic expression and functions
+* use built-in constants and functions  
+* use <Tab> to see the documentation of a function  
+* do simple calculus
+* substitute values in expressions using ``substitute`` function
+* create symbolic matrices and perform operations on them
 

@@ -37,14 +37,14 @@
   - Defining Symbolic functions.  
   - Simplifying and solving symbolic expressions and functions.
 
-* Questions 1
+* Question 1
   - Define the following expression as symbolic
     expression in sage.
 
     - x^2+y^2
     - y^2-4ax
   
-* Solutions 1
+* Solution 1
 #+begin_src python
   var('x,y')
   x^2+y^2
@@ -52,10 +52,11 @@
   var('a,x,y')
   y^2-4*a*x
 #+end_src python
-* Questions 2
+* Question 2
   - Find the values of the following constants upto 6 digits  precision 
    
     - pi^2
+    - euler_gamma^2
    
       
   - Find the value of the following.
@@ -63,13 +64,13 @@
    - sin(pi/4)
    - ln(23)  
 
-* Solutions 2
+* Solution 2
 #+begin_src python
   n(pi^2,digits=6)
   n(sin(pi/4))
   n(log(23,e))
 #+end_src python
-* Question 2
+* Question 3
   - Define the piecewise function. 
    f(x)=3x+2 
    when x is in the closed interval 0 to 4.
@@ -78,7 +79,7 @@
    
   - Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
 
-* Solution Q1
+* Solution 3
 #+begin_src python
   var('x') 
   h(x)=3*x+2 
@@ -86,18 +87,18 @@
   f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
   f
 #+end_src python
-* Solution Q2
+
 #+begin_src python  
   var('n')
   f=1/(n^2-1) 
   sum(f(n), n, 1, oo)
 #+end_src python  
- 
 
-* Questions 3
+* Question 4
   - Differentiate the following. 
       
-    - x^5*log(x^7)  , degree=4 
+    - sin(x^3)+log(3x), to the second order
+    - x^5*log(x^7), to the fourth order
 
   - Integrate the given expression 
       
@@ -107,7 +108,7 @@
     - cos(x^2)-log(x)=0
     - Does the equation have a root between 1,2. 
 
-* Solutions 3
+* Solution 4
 #+begin_src python
   var('x')
   f(x)= x^5*log(x^7) 
@@ -121,12 +122,12 @@
   find_root(f(x)==0,1,2)
 #+end_src
 
-* Question 4
+* Question 5
   - Find the determinant and inverse of :
 
       A=[[x,0,1][y,1,0][z,0,y]]
 
-* Solution 4
+* Solution 5
 #+begin_src python  
   var('x,y,z')
   A=matrix([[x,0,1],[y,1,0],[z,0,y]])
@@ -134,19 +135,12 @@
   A.inverse()
 #+end_src
 * Summary
- - We learnt about defining symbolic 
-   expression and functions.  
- - Using built-in constants and functions.  
- - Using <Tab>  to see the documentation of a 
-   function.  
- 
-* Summary 
- - Simple calculus operations .  
- - Substituting values in expression 
-   using substitute function.
- - Creating symbolic matrices and 
-   performing operation on them .
-
+ - We learnt about defining symbolic expression and functions.
+ - Using built-in constants and functions.
+ - Using <Tab> to see the documentation of a function.
+ - Simple calculus operations .
+ - Substituting values in expression using substitute function.
+ - Creating symbolic matrices and performing operation on them .
 * Thank you!
 #+begin_latex
   \begin{block}{}
