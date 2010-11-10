@@ -28,15 +28,13 @@ Using Python modules
 ====================
 {{{ show the welcome slide }}}
 
-Welcome to the spoken tutorial on using python modules.
+Welcome to the spoken tutorial on Using Python Modules.
 
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial, we will see how to run python scripts from command
-line. See importing modules, importing scipy and pylab modules. And
-also see the Python standard library.
-
-.. #[Punch: the sentence seems discontinuous.]
+line. We'll see how to import modules, importing scipy and pylab
+modules and have a look at the Python standard library.
 
 {{{ switch to next slide on executing python scripts from command line }}}
 
@@ -49,7 +47,7 @@ text editor and type the following,
     print "Hello world!"
     print
 
-and save the script as hello.py,
+and save the script as ``hello.py``,
 
 {{{ save the script as hello.py }}}
 
@@ -187,7 +185,7 @@ previous method, and the functions are called as ``pylab.plot()`` and
 
 {{{ switch to next slide, problem statement }}}
 
-Write a script to plot a sine wave from minus two pi to two pi.
+%% %% Write a script to plot a sine wave from minus two pi to two pi.
 
 Pause here and try to solve the problem yourself before looking at the
 solution.
@@ -234,8 +232,8 @@ And there are lot more.
 Find more information at Python Library reference,
 ``http://docs.python.org/library/``
 
-The modules pylab, scipy, Mayavi are not part of the standard python
-library.
+There are a lot of other modules like pylab, scipy, Mayavi, etc which
+are not part of the standard python library.
 
 {{{ switch to next slide, summary }}}
 
