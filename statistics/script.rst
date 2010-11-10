@@ -13,6 +13,8 @@
 .. Getting started with IPython
 .. Loading Data from files
 .. Getting started with Lists
+.. Accessing Pieces of Arrays
+
      
 .. Author              : Amit Sethi
    Internal Reviewer   : Puneeth
@@ -28,8 +30,12 @@ Hello friends and welcome to the tutorial on Statistics using Python
 {{{ Show the slide containing the outline slide }}}
 
 In this tutorial, we shall learn
- * Doing simple statistical operations in Python  
- * Applying these to real world problems 
+ * Doing statistical operations in Python  
+   * Summing set of numbers
+   * Finding there mean
+   * Finding there Median
+   * Finding there Standard Deviation 
+   
 
 
 .. #[punch: since loadtxt is anyway a pre-req, I would recommend you
@@ -45,94 +51,22 @@ In this tutorial, we shall learn
 .. smaller data-set or something. Using lists doesn't seem natural.]
 
 
-We will first start with the most necessary statistical operation i.e
-finding mean.
-
-We have a list of ages of a random group of people ::
-   
-   age_list = [4,45,23,34,34,38,65,42,32,7]
-
-One way of getting the mean could be getting sum of all the ages and
-dividing by the number of people in the group. ::
-
-    sum_age_list = sum(age_list)
-
-sum function gives us the sum of the elements. Note that the
-``sum_age_list`` variable is an integer and the number of people or
-length of the list is also an integer. We will need to convert one of
-them to a float before carrying out the division. ::
-
-    mean_using_sum = float(sum_age_list)/len(age_list)
-
-This obviously gives the mean age but there is a simpler way to do
-this in Python - using the mean function::
-
-       mean(age_list)
-
-Mean can be used in more ways in case of 2 dimensional lists.  Take a
-two dimensional list ::
-     
-     two_dimension=[[1,5,6,8],[1,3,4,5]]
-
-The mean function by default gives the mean of the flattened sequence.
-A Flattened sequence means a list obtained by concatenating all the
-smaller lists into a large long list. In this case, the list obtained
-by writing the two lists one after the other. ::
-
-    mean(two_dimension)
-    flattened_seq=[1,5,6,8,1,3,4,5]
-    mean(flattened_seq)
-
-As you can see both the results are same. ``mean`` function can also
-give us the mean of each column, or the mean of corresponding elements
-in the smaller lists. ::
-   
-   mean(two_dimension, 0)
-   array([ 1. ,  4. ,  5. ,  6.5])
-
-we pass an extra argument 0 in that case.
-
-If we use an argument 1, we obtain the mean along the rows. ::
-   
-   mean(two_dimension, 1)
-   array([ 5.  ,  3.25])
-
-We can see more option of mean using ::
-   
-   mean?
-
-Similarly we can calculate median and stanard deviation of a list
-using the functions median and std::
-      
-      median(age_list)
-      std(age_list)
-
-Median and std can also be calculated for two dimensional arrays along
-columns and rows just like mean.
-
-For example ::
-       
-       median(two_dimension, 0)
-       std(two_dimension, 1)
-
-This gives us the median along the colums and standard devition along
-the rows.
-       
-Now lets apply this to a real world example 
-    
-We will a data file that is at the a path ``/home/fossee/sslc2.txt``.
-It contains record of students and their performance in one of the
-State Secondary Board Examination. It has 180, 000 lines of record. We
-are going to read it and process this data.  We can see the content of
-file by double clicking on it. It might take some time to open since
-it is quite a large file.  Please don't edit the data.  This file has
-a particular structure.
+For this tutorial We will use data file that is at the a path
+``/home/fossee/sslc2.txt``.  It contains record of students and their
+performance in one of the State Secondary Board Examination. It has
+180,000 lines of record. We are going to read it and process this
+data.  We can see the content of file by double clicking on it. It
+might take some time to open since it is quite a large file.  Please
+don't edit the data.  This file has a particular structure.
 
 We can do ::
    
    cat /home/fossee/sslc2.txt
 
 to check the contents of the file.
+
+
+{{{ Show the data structure on a slide }}}
 
 Each line in the file is a set of 11 fields separated 
 by semi-colons Consider a sample line from this file.  
@@ -147,45 +81,97 @@ Science 35 ** Social 72
 * Total marks 244
 
 
-Now lets try and find the mean of English marks of all students.
+Lets try and load this data as an array and then run various function on
+it.
 
-For this we do. ::
-
-     L=loadtxt('/home/fossee/sslc2.txt',usecols=(3,),delimiter=';')
+To get the data as an array we do. ::
+   
+     L=loadtxt('/home/amit/sslc2.txt',usecols=(3,4,5,6,7,),delimiter=';')
      L
-     mean(L)
+     
 
 loadtxt function loads data from an external file.Delimiter specifies
-the kind of character are the fields of data seperated by. 
-usecols specifies  the columns to be used so (3,). The 'comma' is added
-because usecols is a sequence.
+the kind of character are the fields of data seperated by.  usecols
+specifies the columns to be used so (3,4,5,6,7) loads those
+colums. The 'comma' is added because usecols is a sequence.
 
-To get the median marks. ::
+As we can see L is an array. We can get the shape of this array using::
    
-    median(L)
+   L.shape
+   (185667, 5)
+
+Lets start applying statistics operations on these. We will start with
+the most basic, summing. How do you find the sum of marks of all
+subjects for the first student.
+
+As we know from our knowledge of accessing pieces of arrays. To acess
+the first row we will do ::
    
-Standard deviation. ::
-	
-    std(L)
+   L[0,:]
 
+Now to sum this we can say ::
 
-Now lets try and and get the mean for all the subjects ::
+    totalmarks=sum(L[0,:]) 
+    totalmarks
 
-     L=loadtxt('/home/fossee/sslc2.txt',usecols=(3,4,5,6,7),delimiter=';')
-     mean(L,0)
-     array([ 73.55452504,  53.79828941,  62.83342759,  50.69806158,  63.17056881])
+To get the mean we can do ::
 
-As we can see from the result mean(L,0). The resultant sequence  
-is the mean marks of all students that gave the exam for the five subjects.
+   totalmarks/len(L[0,:])
 
-and ::
-    
+or simply ::
+
+   mean(L[0,:])
+
+But we have such a large data set calculating one by one the mean of
+each student is impossible. Is there a way to reduce the work.
+
+For this we will look into the documentation of mean by doing::
+
+    mean?
+
+As we know L is a two dimensional array. We can calculate the mean
+across each of the axis of the array. The axis of rows is referred by
+number 0 and columns by 1. So to calculate mean accross all colums we
+will pass extra parameter 1 for the axis.::
+
     mean(L,1)
 
-    
-is the average accumalative marks of individual students. Clearly, mean(L,0)
-was a row wise calcultaion while mean(L,1) was a column wise calculation.
+L here is the two dimensional array.
 
+Similarly to calculate average marks scored by all the students for each
+subject can be calculated using ::
+
+   mean(L,0)
+
+Next lets now calculate the median of English marks for the all the students
+We can access English marks of all students using ::
+
+   L[:,0]
+   
+To get the median we will do ::
+
+   median(L[:,0])
+
+For all the subjects we can use the same syntax as mean and calculate
+median across all rows using ::
+
+       median(L,0)
+  
+
+Similarly to calculate standard deviation for English we can do::
+
+	  std(L[:,0])
+
+and for all rows::
+
+    std(L,0)
+
+Following is an exercise that you must do. 
+
+%% %% In the given file football.txt at path /home/fossee/football.txt , one column is player name,second is goals at home and third goals away.
+   1.Find the total goals for each player
+   2.Mean home and away goals
+   3.Standard deviation of home and away goals 
 
 {{{ Show summary slide }}}
 

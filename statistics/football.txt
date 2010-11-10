@@ -1,0 +1,8 @@
+Cristiano Ronaldo, 86 ,67
+latan Ibrahimovic, 34 , 65
+Lionel Messi     , 45 , 41
+Samuel Eto’o 	 , 23 , 24
+Kaka             , 43 , 45
+Frank Lampard    , 65  ,34
+
+
