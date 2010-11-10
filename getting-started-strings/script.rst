@@ -30,9 +30,9 @@ strings.
 
 {{{ Show the slide containing the outline }}}
 
-In this tutorial, we will learn what do we actually mean by strings in
-python, how python supports the use of strings. We will also learn
-some of the operations that can be performed on strings.
+In this tutorial, we will look at what we really mean by strings, how
+python supports the use of strings and some of the operations that can
+be performed on strings. 
 
 {{{ Shift to terminal and start ipython }}}
 
@@ -42,10 +42,9 @@ To begin with let us start ipython, by typing::
 
 on the terminal
 
-So what are strings? In Python anything within either single quotes
+So, what are strings? In Python anything within either single quotes
 or double quotes or triple single quotes or triple double quotes are
-strings. This is true whatsoever, even if there is only one character
-within the quotes
+strings. 
 
 {{{ Type in ipython the following and read them as you type }}}::
 
@@ -54,19 +53,21 @@ within the quotes
   '''This is a string as well'''
   """This is also a string"""
   'p'
+  ""
 
-Having more than one control character to define strings come as very
-handy when one of the control characters itself is part of the
-string. For example::
+Note that it really doesn't matter how many characters are present in
+the string. The last example is a null string or an empty string. 
+
+Having more than one control character to define strings is handy when
+one of the control characters itself is part of the string. For
+example::
 
   "Python's string manipulation functions are very useful"
 
-In this case we use single quote for apostrophe. If we had only single
-quote to define strings we should have a clumsy way of escaping the
-single quote character to make it part of the string. Hence this is a
-very handy feature.
+By having multiple control characters, we avoid the need for
+escaping characters -- in this case the apostrophe. 
 
-The triple quoted strings let us define multi-lines strings without
+The triple quoted strings let us define multi-line strings without
 using any escaping. Everything within the triple quotes is a single
 string no matter how many lines it extends::
 
@@ -99,18 +100,62 @@ Similarly we can multiply a string with an integer::
 gives another string in which the original string 'Hello' is repeated
 5 times.
 
-Since strings are collections we can access individual items in the
-string using the subscripts::
+Following is an exercise that you must do. 
+
+%% %% Obtain the string ``%% -------------------- %%`` (20 hyphens)
+      without typing out all the twenty hyphens. 
+
+Please, pause the video here. Do the exercise and then continue. 
+
+::
+
+  s = "%% " + "-"*20 + " %%"
+
+Let's now look at accessing individual elements of strings. Since,
+strings are collections we can access individual items in the string
+using the subscripts::
 
   a[0]
 
 gives us the first character in the string. The indexing starts from 0
-for the first character up to n-1 for the last character. We can
-access the strings from the end using negative indices::
+for the first character and goes up to n-1 for the last character. We
+can access the strings from the end using negative indices::
 
-  a[-2]
+  a[-1]
+
+gives us the last element of the string and 
+::
+
+    a[-2]
 
 gives us second element from the end of the string
+
+Following is an exercise that you must do. 
+
+%% %% Given a string, ``s = "Hello World"``, what is the output of::
+
+      s[-5] 
+      s[-10]
+      s[-15]
+
+Please, pause the video here. Do the exercise and then continue. 
+
+::
+
+  s[-5] 
+
+gives us 'W'
+::
+
+  s[-10] 
+
+gives us 'e' and 
+::
+
+  s[-15] 
+
+gives us an ``IndexError``, as should be expected, since the string
+given to us is only 11 characters long. 
 
 Let us attempt to change one of the characters in a string::
 
@@ -132,7 +177,7 @@ we learnt
 
   * How to define strings
   * Different ways of defining a string
-  * String concatenation and repeatition
+  * String concatenation and repetition
   * Accessing individual elements of the string
   * Immutability of strings
 

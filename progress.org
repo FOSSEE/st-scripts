@@ -15,7 +15,7 @@
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
 | 3.1 LO: | getting started with lists             |     2 | Amit     | Anoop(Done)     |           |
 | 3.2 LO: | getting started with =for=             |     2 | Anoop    | Nishanth (Done) |           |
-| 3.3 LO: | getting started with strings           |     2 | Madhu    | Punch (Pending) |           |
+| 3.3 LO: | getting started with strings           |     2 | Madhu    | Punch (Done)    |           |
 | 3.4 LO: | getting started with files             |     3 | Punch    | Anoop(Done)     |           |
 | 3.5 LO: | parsing data                           |     3 | Nishanth | Amit (Done)     |           |
 | 3.6 LO: | statistics                             |     2 | Amit     | Punch (Done)    |           |
