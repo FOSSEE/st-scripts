@@ -30,12 +30,20 @@
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
 * Outline
+  In this tutorial, we shall look at
+    + Using if/else blocks 
+    + Using if/elif/else blocks
+    + Using the Ternary conditional statement
 
 * Question 1
-
+  Given a number, num. Write an if else block to print num, as is, if
+  it is divisible by 10, else print 10 * num.
 * Solution 1
   #+begin_src python
-
+    if num%10 == 0: 
+        print num   
+    else:           
+        print 10*num
   #+end_src
 
 * ~if/elif~ ladder
@@ -47,8 +55,21 @@
     elif user == 'client':
         # Do customer operations
   #+end_src
-
+* Question 2
+  Given a number, num. Write a ternary operator to print num, as is,
+  if it is divisible by 10, else print 10 * num.
+* Solution 2
+  #+begin_src python
+    print num if num%10 == 0 else 10*num
+  #+end_src
 * Summary
+  In this tutorial session we learnt
+
+    + What are conditional statements
+    + if/else statement
+    + if/elif/else statement
+    + Ternary conditional statement - ~C if X else Y~
+    + and the ~pass~ statement
 
 * Thank you!
 #+begin_latex

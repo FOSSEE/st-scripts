@@ -126,9 +126,18 @@ is no else block.
 
 Following is an exercise that you must do. 
 
-%% %% 
+%% %% Given a number, num. Write an if else block to print num, as is,
+      if it is divisible by 10, else print 10 * num.                  
 
 Please, pause the video here. Do the exercise and then continue. 
+
+:: 
+
+  if num%10 == 0:
+      print num
+  else:
+      print 10*num
+
 
 In addition to these conditional statements, Python provides a very
 convenient ternary conditional operator. Let us take the following
@@ -155,9 +164,14 @@ absent for the exam 0.
 
 Following is an exercise that you must do. 
 
-%% %%     
+%% %% Given a number, num. Write a ternary operator to print num, as is,
+      if it is divisible by 10, else print 10 * num. 
 
 Please, pause the video here. Do the exercise and then continue. 
+
+:: 
+
+   print num if num%10 == 0 else 10*num
 
 Moving on, there are certain situations where we will have no
 operations or statements within a block of code. For example, we have
