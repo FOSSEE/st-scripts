@@ -22,6 +22,7 @@
    Internal Reviewer   : Nishanth
    Internal Reviewer(2): Amit
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 
@@ -31,7 +32,7 @@ Getting started with for loop
 
 {{{ show welcome slide }}}
 
-Hello and welcome to the tutorial getting started with ``for`` loop. 
+Hello and welcome to the tutorial `Getting started with ``for`` loop`. 
 
 {{{ switch to next slide, outline slide }}}
 
@@ -156,7 +157,7 @@ line or the immediate line after the ``for`` block is not indented,
 
 it means that it is not part of the ``for`` loop and the lines after
 that doesn't fall in the scope of the ``for`` loop. Thus each block is
-separated by the indentation level. Thus marking the importance of
+separated by the indentation level and that marks the importance of
 white-spaces in Python.
 
 {{{ switch to the slide which shows the problem statement of the first
@@ -204,8 +205,8 @@ the ``for`` loop,
 	print "is", sqrt(each)
 
 Now we have finished the statements in the block, and still the
-interpreter is showing four dots, which means you are still inside the
-block. To exit from the block press return key or the enter key twice
+interpreter is showing four dots, this means that you are still inside the
+block. To exit from the block press the return key or the enter key twice
 without entering anything else. It printed the square root of each
 number in the list, and that is executed in a ``for`` loop.
 
@@ -252,7 +253,7 @@ block, hit enter once again
 
 {{{ switch to the next slide, ``range()`` function }}}
 
-Okay! so the main thing here we learned is how to use Python
+Okay! so the main thing that we learned here is how to use Python
 interpreter and IPython interpreter to specify blocks. But while we
 were generating the multiplication table we used something new,
 ``range()`` function. ``range()`` is an inbuilt function in Python
