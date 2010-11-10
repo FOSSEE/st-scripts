@@ -26,10 +26,10 @@
 
      
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
-   Internal Reviewer   : 
+   Internal Reviewer   : Puneeth
    External Reviewer   :
    Language Reviewer   : Bhanukiran
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Checklist OK?       : <11-11-2010, Anand, OK> [2010-10-05]
 
 .. #[punch: please mark the exercises, using the syntax we decided upon.]
 

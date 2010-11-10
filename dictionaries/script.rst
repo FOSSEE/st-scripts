@@ -20,6 +20,7 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : Puneeth
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 .. #[Puneeth: Quickref]
@@ -139,8 +140,8 @@ So the changes have been made. Now let us try one more thing,
     extensions['cpp'] = 'C++ source code'
     extensions
 
-As you can see, it did not add a new thing nor gave an error, but it
-simply replaces the existing value with the new one.
+As you can see, it neither added a new thing nor gave an error, but it
+simply replaced the existing value with the new one.
 
 Now let us learn how to check if a particular key is present in the
 dictionary. For that we can use ``in``,
