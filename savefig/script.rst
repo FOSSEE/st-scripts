@@ -17,6 +17,7 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : Puneeth
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 .. #[Puneeth: Quickref missing.]
@@ -93,7 +94,7 @@ want to save the file.
 
 {{{ Highlight the .png part using mouse movements }}}
 
-Here I have used an extension ``.png`` which means i want to save the
+Here I have used an extension ``.png`` which means I want to save the
 image as a PNG file.
 
 Now let us locate ``sine.png`` file saved. We saved the file to
