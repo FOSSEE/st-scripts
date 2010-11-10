@@ -20,6 +20,7 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : Puneeth
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 .. #[Puneeth: Quickref missing]
@@ -30,7 +31,7 @@ Other type of plots
 
 {{{ show the first slide }}}
 
-Hello and welcome to the tutorial other type of plots.
+Hello and welcome to the tutorial ``The other kinds of plots``.
 
 .. #[Puneeth: this sentence doesn't read well]
 
@@ -40,10 +41,10 @@ Hello and welcome to the tutorial other type of plots.
 .. them? Tell that we have only looked at one type of plot all the
 .. while, etc.]
 
-Till now we have seen only one type of plot, and in this tutorial us
-see more type of plots like scatter plot, pie chart, bar chart and
-log-log plot. We will see few other more plots and also see an
-introduction to matplotlib help.
+Till now we have seen only one kind of plotting, and in this tutorial we
+are going to see more kinds of plots such as the scatter plot, the pie chart, the bar chart and
+the log-log plot. This tutorial covers the making of other kinds of
+plots and also gives an introduction to matplotlib help.
 
 .. #[Puneeth: cover, see and introduce you. be consistent. does, the
 .. "We" include the viewer or not?]
@@ -56,7 +57,7 @@ In a scatter plot, the data is displayed as a collection of points,
 each having the value of one variable determining the position on the
 horizontal axis and the value of the other variable determining the
 position on the vertical axis. This kind of plot is also called a
-scatter chart, scatter diagram and scatter graph.
+scatter chart, a scatter diagram or a scatter graph.
 
 Before we proceed further, start your IPython interpreter
 ::
@@ -70,7 +71,7 @@ ipython -pylab }}}
 exercise }}}
 
 Now, let us plot a scatter plot showing the percentage profit of
-company A from the year 2000-2010. The data for the same is available
+a company A from the year 2000-2010. The data for the same is available
 in the file ``company-a-data.txt``.
 
 {{{ open the file company-a-data.txt and show the content }}}
@@ -81,7 +82,7 @@ profit percentages.
 
 {{{ close the file and switch to the terminal }}}
 
-To produce the scatter plot first we need to load the data from the
+To produce the scatter plot, we first need to load the data from the
 file using ``loadtxt``. We learned it in one of the previous sessions,
 and it can be done as ::
 
@@ -119,8 +120,7 @@ Pause here and solve the question before moving on.
 
 .. scatter(year,profit,color='r',marker='d')
 
-Now let us see another plot, pie chart and try to plot the same data
-as a pie chart.
+Now let us see another kind of plot, the pie chart, for the same data.
 
 .. #[Puneeth: instead of just saying that, say that let's plot a pie
 .. chart for the same data. continuity, will be good.]
@@ -165,7 +165,7 @@ Pause here and solve the question before moving on.
 
 {{{ switch to the slide which says about bar chart }}}
 
-Now let us move on to bar chart. A bar chart or bar graph is a chart
+Now let us move on to the bar charts. A bar chart or bar graph is a chart
 with rectangular bars with lengths proportional to the values that
 they represent.
 
@@ -202,7 +202,7 @@ the file ``company-a-data.txt``.
 
 {{{ switch to the slide which says about log-log graph }}}
 
-Now let us move on to log-log plot. A log-log graph or log-log plot is
+Now let us move on to the log-log plot. A log-log graph or a log-log plot is
 a two-dimensional graph of numerical data that uses logarithmic scales
 on both the horizontal and vertical axes. Because of the nonlinear
 scaling of the axes, a function of the form y = ax\ :sup:`b` will
