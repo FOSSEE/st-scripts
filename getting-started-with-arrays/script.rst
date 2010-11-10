@@ -20,6 +20,7 @@
 ..  Author: Anoop Jacob Thomas <anoop@fossee.in>
     Internal Reviewer   : Puneeth 
     External Reviewer   :
+    Language Reviewer   : Bhanukiran
     Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 ===========================
@@ -34,17 +35,17 @@ Welcome to the spoken tutorial on getting started with arrays.
 
 {{{ switch to next slide, outline slide }}}
 
-In this tutorial, we will learn about arrays, we will learn how to convert
-a list into an array array operations and also why an array is preferred
-over lists.
+In this tutorial, we will learn about the data structure called an array, how to convert
+a list into an array, operations on arrays and also why an array is preferred
+to lists.
 
 .. #[Puneeth: Fix the grammar above.]
 
 {{{ switch to next slide on overview of array }}}
 
 Arrays are homogeneous data structures. Unlike lists, arrays cannot have
-heterogeneous data elements, that is, it can have only one type of data
-type, either all integers, or strings, or float, and not a mix.
+heterogeneous data elements, that is, they can have only one type of data 
+as their entries, be them all integers, strings, or maybe floats, but not a mix.
 
 .. #[Puneeth: Use multiple short sentences, rather than one long sentence
    I would've written something like this. 
@@ -52,8 +53,9 @@ type, either all integers, or strings, or float, and not a mix.
    Unlike lists, arrays are homogeneous data structures. They can have only
    type of data, ....]
 
-Arrays are really fast in mathematical operations when compared to lists,
-because of the same type of data in arrays.
+Arrays of a given length are comparatively much faster in mathematical
+operations than lists of the same length, because of the fact that they are
+homogeneous data structures.
 
 .. #[Puneeth: For what size of an array is that the comparison?
 
@@ -77,7 +79,7 @@ To create an array we will use the function ``array()`` as,
 
     a1 = array([1,2,3,4])
 
-Notice that here we created a one dimensional array. Also notice the object
+Notice that we created a one dimensional array here. Also notice the object
 we passed to create an array. We passed a list to create an array. 
 
 Now let us see how to create a two dimensional array. Pause here and try to
@@ -112,7 +114,7 @@ Now let us use ``arange()`` function to create the same array as before.
 .. #[Puneeth: say, creating the same array as before. for some time I got
 .. confused .]
 
-And we obtained a single dimensional array with elements from 1 to 8.
+And we obtained a one dimensional array with elements from 1 to 8.
 
 ::
 
@@ -120,7 +122,7 @@ And we obtained a single dimensional array with elements from 1 to 8.
 
 .. #[Puneeth: be consistent with voice. say, we obtained... or something.]
 
-And how can we make it a two dimensional array of order 2 by 4. Pause here
+And how can we make it a two dimensional array of order 2 by 4? Pause here
 and try to do it yourself, try ``ar.tab`` and find a suitable method for
 that.
 
@@ -154,13 +156,13 @@ Now we can convert the list to an array as,
 
 {{{ switch to the next slide, problem statement of unsolved exercise 1 }}}
 
-Create a three dimensional array of the order (2,2,4).
+Create a three dimensional array of the shape (2,2,4).
 
 .. #[Puneeth: s/order/shape or size ?]
 
 {{{ switch to the next slide, shape of an array }}}
 
-To find the shape of an array we can use the object ``.shape``, let us
+To find the shape of an array we can use the method ``.shape``, let us
 check the shape of the arrays we have created so far,
 
 .. #[Puneeth: s/object/method ?]
@@ -200,8 +202,8 @@ will happen,
 
     a4 = array([1,2,3,'a string'])
 
-Well, we expected an error as previously I said that an array can have only
-homogeneous elements, but it didn't give an error. Let us check the values
+Well, we would expect an error as it has been previously mentioned that arrays handle
+elements with the same datatype, but it didn't raise an error. Let us check the values
 in the new array created. In your IPython terminal type, 
 ::
 
@@ -218,8 +220,8 @@ Did you notice it,
 
 {{{ highlight all the array elements one by one using mouse movements }}}
 
-all the elements have been implicitly type casted as string, though our
-first three elements were integers.
+all the elements have been implicitly type casted as strings, though our
+first three elements were meant to be integers.
 
 .. #[Puneeth: when I type a4 it says some ``dtype`` etc. I don't understand
 .. what it is, can you explain? ;)]
@@ -229,25 +231,26 @@ first three elements were integers.
 .. #[Puneeth: something needs to motivate this. why are we suddenly talking
 .. of an identity matrix?]
 
-Now let us see how to create identity matrix, an identity matrix is a
-square matrix in which all the diagonal elements are one and rest of the
-elements zero. We can create an identity matrix using the method
+Now let us see how to create an identity matrix of a given size, that is a
+two-dimensional array  in  which all the diagonal elements are ones and rest of the
+elements are zeros. We can create an identity matrix using the function
 ``identity()``.
 
-The function ``identity()`` takes an integer argument,
+The function ``identity()`` takes an integer argument which specifies the
+size of the desired matrix,
 
 ::
 
     identity(3)
 
-As you can see the identity method returned a three by three square matrix
-with all the diagonal elements as one and the rest of the elements as zero.
+As you can see the identity function returned a three by three square matrix
+with all the diagonal elements as ones and the rest of the elements as zeros.
 
 .. #[Puneeth: You say array here, matrix there -- it's a bit messed up.
 .. Clarify, explicitly.]
 
-``zeros()`` function accepts a tuple, which is the order of the array we
-want to create, and it generates an array with all elements zero.
+``zeros()`` function accepts a tuple, which is the order of the array that we
+want to create, and it generates an array with all elements as zeros.
 
 {{{ switch to the next slide, problem statement of solved exercise 1 }}}
 
