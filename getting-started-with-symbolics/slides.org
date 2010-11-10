@@ -1,0 +1,166 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:   Getting started with symbolics
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Defining symbolic expressions in sage.  
+  - Using built-in constants and functions.   
+  - Performing Integration, differentiation using sage. 
+  - Defining matrices. 
+  - Defining Symbolic functions.  
+  - Simplifying and solving symbolic expressions and functions.
+
+* Questions 1
+  - Define the following expression as symbolic
+    expression in sage.
+
+    - x^2+y^2
+    - y^2-4ax
+  
+* Solutions 1
+#+begin_src python
+  var('x,y')
+  x^2+y^2
+
+  var('a,x,y')
+  y^2-4*a*x
+#+end_src python
+* Questions 2
+  - Find the values of the following constants upto 6 digits  precision 
+   
+    - pi^2
+   
+      
+  - Find the value of the following.
+
+   - sin(pi/4)
+   - ln(23)  
+
+* Solutions 2
+#+begin_src python
+  n(pi^2,digits=6)
+  n(sin(pi/4))
+  n(log(23,e))
+#+end_src python
+* Question 2
+  - Define the piecewise function. 
+   f(x)=3x+2 
+   when x is in the closed interval 0 to 4.
+   f(x)=4x^2
+   between 4 to 6. 
+   
+  - Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
+
+* Solution Q1
+#+begin_src python
+  var('x') 
+  h(x)=3*x+2 
+  g(x)= 4*x^2
+  f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
+  f
+#+end_src python
+* Solution Q2
+#+begin_src python  
+  var('n')
+  f=1/(n^2-1) 
+  sum(f(n), n, 1, oo)
+#+end_src python  
+ 
+
+* Questions 3
+  - Differentiate the following. 
+      
+    - x^5*log(x^7)  , degree=4 
+
+  - Integrate the given expression 
+      
+    - x*sin(x^2) 
+
+  - Find x
+    - cos(x^2)-log(x)=0
+    - Does the equation have a root between 1,2. 
+
+* Solutions 3
+#+begin_src python
+  var('x')
+  f(x)= x^5*log(x^7) 
+  diff(f(x),x,5)
+
+  var('x')
+  integral(x*sin(x^2),x) 
+
+  var('x')
+  f=cos(x^2)-log(x)
+  find_root(f(x)==0,1,2)
+#+end_src
+
+* Question 4
+  - Find the determinant and inverse of :
+
+      A=[[x,0,1][y,1,0][z,0,y]]
+
+* Solution 4
+#+begin_src python  
+  var('x,y,z')
+  A=matrix([[x,0,1],[y,1,0],[z,0,y]])
+  A.det()
+  A.inverse()
+#+end_src
+* Summary
+ - We learnt about defining symbolic 
+   expression and functions.  
+ - Using built-in constants and functions.  
+ - Using <Tab>  to see the documentation of a 
+   function.  
+ 
+* Summary 
+ - Simple calculus operations .  
+ - Substituting values in expression 
+   using substitute function.
+ - Creating symbolic matrices and 
+   performing operation on them .
+
+* Thank you!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
+
+
+

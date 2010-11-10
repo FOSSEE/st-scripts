@@ -1,4 +1,4 @@
-% Created 2010-11-09 Tue 17:41
+% Created 2010-11-10 Wed 12:22
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,13 +16,19 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
 \title{Getting started with Lists}
 \author{FOSSEE}
 \date{2010-09-14 Tue}
 
-\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
 \maketitle
@@ -32,33 +38,112 @@
 
 
 
-\begin{frame}
-\frametitle{Tutorial Plan}
-\label{sec-1}
-\begin{itemize}
 
-\item How to create lists\\
-\label{sec-1_1}%
-\item Structure of lists\\
-\label{sec-1_2}%
-\item Access list elements\\
-\label{sec-1_3}%
-\item Append elements to lists\\
-\label{sec-1_4}%
-\item Deleting elements from lists\\
-\label{sec-1_5}%
-\end{itemize} % ends low level
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+\begin{itemize}
+\item How to create lists
+\item Structure of lists
+\item Access list elements
+\item Append elements to lists
+\item Deleting elements from lists
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Summary}
+\frametitle{Question 1}
 \label{sec-2}
 
+\begin{itemize}
+\item What happens when you do nonempty[-1].
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Solution 1}
+\label{sec-3}
 
-  l=[1,2,3,4]
-  l[-1]
-  l.append(5)
-  del(l\footnote{FOOTNOTE DEFINITION NOT FOUND: 2 })
-  len(l)
+\begin{itemize}
+\item It gives the last element , 1.234
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Questions}
+\label{sec-4}
+
+\begin{itemize}
+\item What is the syntax to get the element `and'
+\end{itemize}
+
+in the list,listinlist ?
+
+
+\begin{itemize}
+\item How would you get `and' using negative indices?
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
+\label{sec-5}
+
+\begin{verbatim}
+
+listinlist[1]
+listinlist[-5]
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Questions}
+\label{sec-6}
+
+
+\begin{itemize}
+\item Remove the third element from the list, listinlist.
+\item Remove `and' from the list, listinlist.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
+\label{sec-7}
+
+\begin{verbatim}
+
+del(listinlist[2])
+listinlist.remove('and')
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Summary}
+\label{sec-8}
+
+\begin{verbatim}
+
+l=[1,2,3,4]
+l[-1]
+l.append(5)
+del(l[2])
+l.remove(2)
+len(l)
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-9}
+
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
 \end{frame}
 
 \end{document}
