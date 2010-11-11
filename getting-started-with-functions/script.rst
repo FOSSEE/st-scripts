@@ -23,7 +23,8 @@
 .. Author              : Anoop Jacob Thomas <anoop@fossee.in>
    Internal Reviewer   : 
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <put date stamp here, not OK> [2010-10-05]
 
 
 ==============================
@@ -32,29 +33,29 @@ Getting started with functions
 
 {{{ show welcome slide }}}
 
-Hello and welcome to the tutorial, getting started with functions.
+Hello and welcome to the tutorial getting started with functions.
 
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial we will learn about functions in python, how to
-define functions, passing arguments to functions, docstrings, and
-function return value.
+define functions, arguments to functions, docstrings, and function
+return value.
 
 {{{ switch to next slide, Function }}}
 
-While writing code, we would like to reduce the number of lines of
-code and using functions is a way of reusing the code.  A function is
-a portion of code within a larger program that performs a specific
-task and is relatively independent of the remaining code. Now let us
-get more familiar with functions,
+While writing code, we always want to reduce the number of lines of
+code and functions is a way of reusing the code. Thus the same lines
+of code can be used as many times as needed. A function is a portion of code
+within a larger program that performs a specific task and is
+relatively independent of the remaining code. Now let us get more
+familiar with functions,
 
 {{{ switch to next slide, f(x) a mathematical function }}}
 
-Consider a mathematical function f(x) = x squared. Here x is a
-variable and with different values of x the value of function will
-change. When x is one f(1) will return the value 1 and f(2) will
-return us the value 4. Let us now see how to define the function f(x)
-in Python.
+Consider a mathematical function f(x) = x square. Here x is a variable
+and with different values of x the value of function will change. When
+x is one f(1) will return the value 1 and f(2) will return us the
+value 4. Let us now see how to define the function f(x) in python.
 
 {{{ switch to next slide, define f(x) in Python }}}
 
@@ -64,22 +65,19 @@ In your Ipython interpreter type the following,
     def f(x):
     	return x*x
 
-Let us see, if the function ``f``, we defined, works as we expect. 
+Well that defined the function, so before learning what we did let us
+see if it returns the expected values, try,
 ::
 
     f(1)
     f(2)
 
-Yes, it returned 1 and 2 respectively. 
-
-Now, let us see what we did. The first line ``def f(x)`` is used to
-define the name and the parameters to the function. ``def`` is a
-keyword and ``f`` is the name of the function and ``x`` the parameter
-of the function.  
-
-The second line is the body of the function. Incidentally, this
-function has a single line definition. Note that the body of the
-function is indented, just like any other code block, in Python.
+Yes, it returned 1 and 4 respectively. And now let us see what we did.
+We wrote two lines: The first line ``def f(x)`` is used to define the
+name and the parameters to the function and the second line is used to
+fix what the function is supposed to return. ``def`` is a keyword and
+``f`` is the name of the function and ``x`` the parameter of the
+function.
 
 {{{ switch to next slide, problem statement 1 }}}
 
@@ -96,18 +94,18 @@ The problem can be solved as,
     def cube(n):
     	return n**3
 
-Now let us see how to write functions without arguments.
+And now let us see how to write functions without arguments.
 
 {{{ switch to next slide, greet function }}}
 
-Let us define a new function called ``greet`` which will print ``Hello
+let us define a new function called ``greet`` which will print ``Hello
 World``.
 ::
 
     def greet():
     	print "Hello World!"
 
-Now try calling the function,
+now try calling the function,
 ::
 
     greet()
@@ -127,22 +125,22 @@ Pause here and try to solve the problem yourself.
 
 {{{ switch to next slide, solution 2 }}}
 
-The problem can be solved as shown,
+The problem can be solved as,
 ::
 
     def avg(a,b):
     	return (a + b)/2
 
 Thus if we want a function to accept more arguments, we just list them
-separated with a comma between the parenthesis after the function name
+separated with a comma between the parenthesis after the function's name
 in the ``def`` line.
 
 {{{ switch to next slide, docstring }}}
 
 It is always a good practice to document the code that we write, and
 for a function we define we should write an abstract of what the
-function does, and that is called a doc-string. Let us modify the
-function ``avg`` and add doc-string to it. Do the following,
+function does, and that is called a docstring. Let us modify the
+function ``avg`` and add docstring to it. Do the following,
 ::
 
     def avg(a,b):
@@ -150,7 +148,7 @@ function ``avg`` and add doc-string to it. Do the following,
 	returns the average of a and b"""
 	return (a+b)/2
 
-Note that doc-strings are entered in the immediate line after the
+Note that docstrings are entered in the immediate line after the
 function definition and put as a triple quoted string. And here as far
 as the code functionality is concerned, we didn't do anything. We just
 added an abstract of what the function does.
@@ -170,7 +168,7 @@ Try to do this,
 
 It doesn't have a docstring associated with it. Also we cannot infer
 anything from the function name, and thus we are forced to read the
-code to understand anything about the function.
+code to understand about the function.
 
 {{{ switch to next slide, exercise 3 }}}
 
@@ -238,8 +236,8 @@ Pause here and try to figure out what the function ``what`` does.
 {{{ switch to next slide, even_digits }}}
 
 .. def even_digits( n ):
-..    """returns True if all the digits of number n is even
-..    returns False if all the digits of number n is not even"""
+..    """returns True if all the digits in the number n are even,
+..    returns False if all the digits in the number n are not even"""
 ..     if n < 0: n = -n
 ..     while n > 0:
 ..         if n % 2 == 1:
@@ -290,9 +288,6 @@ This brings us to the end of this tutorial, in this tutorial we covered
 
 We also did few code reading exercises.
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+{{{ switch to next slide, Thank you }}}
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
-
-Hope you have enjoyed and found it useful.
 Thank you!
