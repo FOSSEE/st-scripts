@@ -1,4 +1,4 @@
-% Created 2010-11-07 Sun 18:57
+% Created 2010-11-12 Fri 02:00
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -61,12 +61,12 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Create gcd.py file with:
 \end{itemize}
 
-\begin{lstlisting}[language=python]
-  def gcd(a, b):
-        if a % b == 0: 
-            return b
-        return gcd(b, a%b)
-\end{lstlisting}
+\begin{verbatim}
+def gcd(a, b):
+      if a % b == 0: 
+          return b
+      return gcd(b, a%b)
+\end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Test for gcd.py}
@@ -76,45 +76,203 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Edit gcd.py file
 \end{itemize}
 
-\begin{lstlisting}[language=python]
+\begin{verbatim}
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a%b)
 
-  def gcd(a, b):
-      if b == 0:
-          return a
-      return gcd(b, a%b)
-  
-  if __name__=='__main__':
-      result = gcd(48, 64)
-      if result != 16:
-          print "Test failed"
-      print "Test Passed"
-\end{lstlisting}
+if __name__=='__main__':
+    result = gcd(48, 64)
+    if result != 16:
+        print "Test failed"
+    print "Test Passed"
+\end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Automating tests}
 \label{sec-4}
 
-\begin{lstlisting}[language=python]
+\begin{verbatim}
+if __name=__='__main__':
+for line in open('numbers.txt'):
+    numbers = line.split()
+    x = int(numbers[0])
+    y = int(numbers[1])
+    result = int(numbers[2])
+    if gcd(x, y) != result:
+        print "Failed gcd test
+                      for", x, y
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-5}
 
-    if __name=__='__main__':
-    for line in open('numbers.txt'):
-        numbers = line.split()
-        x = int(numbers[1])
-        y = int(numbers[2])
-        result = int(numbers[3])
-        if gcd(x, y) != result:
-            print "Failed gcd test
-                          for", x, y
+  For the same inputs as gcd write automated tests for LCM.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-6}
+
+\begin{verbatim}
+def gcd(a, b):
+      if a % b == 0: 
+          return b
+      return gcd(b, a%b)
+
+ def lcm(a, b):
+      return (a * b) / gcd(a, b)
+
+  if __name__ == '__main__':
+    for line in open('lcmtestcases.txt'):
+      numbers = line.split()
+      x = int(numbers[0])
+      y = int(numbers[1])
+      result = int(numbers[2])
+      if lcm(x, y) != result:
+          print "Failed lcm test for", x, y
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Meaning full names}
+\label{sec-7}
+
+\begin{verbatim}
+
+amount = 12.68
+denom = 0.05
+nCoins = round(amount / denom)
+rAmount = nCoins * denom
+\end{verbatim}
+\end{frame}
+\begin{frame}
+\frametitle{Code style}
+\label{sec-8}
+
+\begin{itemize}
+\item Four Space Indentation
+\item 79 character limit on a line
+\item Funtions should be seperated by 
+   blank line
+\item Use Docstring
+\item White space around operators
+
+\begin{itemize}
+\item l = 32 \% 4
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 2}
+\label{sec-9}
+
+\begin{itemize}
+\item Give meaningful names to the variables in following
+     code
+
+\begin{itemize}
+\item c = a / b
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 2}
+\label{sec-10}
+
+\begin{verbatim}
+
+quotient = dividend / divisor
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Code Snippet}
+\label{sec-11}
+
+\begin{verbatim}
+
+while True print 'Hello world'
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Error}
+\label{sec-12}
+
+\begin{lstlisting}
+ while True print 'Hello world'
+ \end{lstlisting}
+  \begin{lstlisting}
+  File "<stdin>", line 1, in ?
+    while True print 'Hello world'
+SyntaxError: invalid syntax
 \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Code Snippet}
+\label{sec-13}
 
+\begin{verbatim}
+a = raw_input("Enter a number")
+try:
+      num = int(a)
+ except:
+      print "Wrong input ..."
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Using idb}
+\label{sec-14}
 
+\small
+\begin{lstlisting}
+In []: import mymodule
+In []: mymodule.test()
+---------------------------------------------
+NameError   Traceback (most recent call last)
+<ipython console> in <module>()
+mymodule.py in test()
+      1 def test():
+      2     total=1+1
+----> 3     print spam
+NameError: global name 'spam' is not defined
 
+In []: %debug
+> mymodule.py(2)test()
+      0     print spam
+ipdb> total
+2
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-15}
 
-$^{1}$ FOOTNOTE DEFINITION NOT FOUND: 0
+\begin{itemize}
+\item Create simple tests for a function.
+\item Learn to Automate tests using many predefined test cases.
+\item Good coding standards.
+\item Difference between syntax error and exception.
+\item Handling exception using try and except.
+\item Using \%debug for debugging on ipython.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Thank you!}
+\label{sec-16}
 
-$^{2}$ FOOTNOTE DEFINITION NOT FOUND: 1
-
-$^{3}$ FOOTNOTE DEFINITION NOT FOUND: 2
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
 \end{frame}
 
 \end{document}

@@ -68,7 +68,7 @@ Let us include code for testing in our  **gcd.py** file ::
   if __name__ == '__main__':
       result = gcd(48, 64)
       if result != 16:
-          print "Test failed for the case a=48 and b=64. Expected 16. Obtained %d instead." % result
+          print "Test failed"
       print "Test Passed"
           
 Note that we have introduced a new semantic which uses two new magic names
@@ -173,15 +173,15 @@ Also one should use. ::
      1.Four Space Indentation
      2.Limit to 79 characters a line, but readability should come first.
      3.Functions and methods should be separated with two blank lines. 
-       Class definitions with three blank lines. 
      4.No inline comments, comments should be above the line they comment.
      5.Use Docstring to explain units of code performing specific task like
      	functions.
      6.We should always have whitespace around operators and after punctuation. 
 
 %% %% Pause and do the following exercise
-%% %% Give meaningful names to the variables in the gcd code .     
-
+%% %% Give meaningful names to the variables in following
+code
+	c=a/b
 
 
 This will help enormously towards making our program more readable.
@@ -217,10 +217,10 @@ is special kind of failure reported by the programming language.
 
 Lets see why and how we can use Exception in our programs.
 
-{{{ Slide with code snippet }}}
+
 
 Type on your interpreter::
-     
+
      a = raw_input("Enter a number:")
      num = int(a) 
 
@@ -273,6 +273,9 @@ Lets now try and run this code ::
      
      import mymodule 
      mymodule.test()
+
+
+{{{ Slide with idb and total being accessed }}}
 
 Interpreter gives us an error because spam is not defined 
 but lets now do %debug on ipython interpreter. The prompt on the shell has changed to ipdb. This is debugger here you can access variables in that code block for example 'total'unlike the normal interpreter.
