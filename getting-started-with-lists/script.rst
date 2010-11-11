@@ -153,7 +153,7 @@ There are two ways of doing it. One is by using index. ::
 deletes the element at index 1, i.e the second element of the
 list, 'eggs'. The other way is removing element by content. Lets say
 one wishes to delete 100 from nonempty list the syntax of the command
-should be 
+would be 
 
 .. #[[Anoop: let x = [1,2,1,3]
    	     now x.remove(x[2])
@@ -177,6 +177,21 @@ experiment. ::
 If we check now we will see that the first occurence 'spam' is removed
 thus remove removes the first occurence of the element in the sequence
 and leaves others untouched.
+
+One should remember this that while del removes by index number.
+Remove , removes on the basis of content being passed so if ::
+       
+       k = [1,2,1,3] 
+       del([k[2])
+
+gives us [1,2,3]. ::
+
+      k.remove(x[2])
+
+will give us [2,1,3]. Since it deletes the first occurence of what is
+returned by x[2] which is 1.      
+
+
 
 
 
