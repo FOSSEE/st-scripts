@@ -2,36 +2,75 @@
 #+LaTeX_CLASS_OPTIONS: [presentation]
 #+BEAMER_FRAME_LEVEL: 1
 
-#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 #+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
 #+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
-#+OPTIONS:   H:5 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 
-#+TITLE: Plotting Data 
-#+AUTHOR: FOSSEE
-#+DATE: 2010-09-14 Tue
-#+EMAIL:     info@fossee.in
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
 
-# \author[FOSSEE] {FOSSEE}
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 
-# \institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
-# \date{}
+#+LaTeX_HEADER: \usepackage{listings}
 
-* Tutorial Plan
-** Creating a simple plot
-** Use the buttons on window to study the plot
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    Using Plot Interactively
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* Outline
+  - Plot a simple mathemaical function.
+  - Using the User Interface of plot figure.
 
 * Error if Ipython not installed 
 
 ** `ERROR: matplotlib could NOT be imported!  Starting normal IPython.`
 
+
 * Plot UI
+#+begin_latex
+   \includegraphics[height=0.12in, interpolate=true]{buttons}
+#+end_latex   
+  - Save
+  - Zoom
+  - Move axis
+  - Back and Forward Button
+  - Home
 
+    
 * Summary
+  - Plotting mathematical functions using plot.
+  -  Using the UI of plot 
+        - Save
+        - Zoom
+	- Move axis
+	- Back and Forward Button
+	- Home
+ 
+* Thank You!
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  This spoken tutorial has been produced by the
+  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \end{center}
+  \begin{center}
+    \textcolor{blue}{National Mission on Education through \\
+      Information \& Communication Technology \\ 
+      MHRD, Govt. of India}.
+  \end{center}  
+  \end{block}
+#+end_latex
 
-** Start Ipython with pylab
-** Using linspace
-** Finding length of sequnces using  len.
-** Plotting mathematical functions using plot.
-** Clearing drawing area using clf 
-**  Using the UI of plot 
+
