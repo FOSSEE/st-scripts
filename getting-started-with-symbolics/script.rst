@@ -41,11 +41,11 @@ During the course of the tutorial we will learn
 * Defining symbolic functions.  
 * Simplifying and solving symbolic expressions and functions.
 
-Amongst a lot of other things, Sage can do Symbolic Math and we shall
+In addtion to a lot of other things, Sage can do Symbolic Math and we shall
 start with defining symbolic expressions in Sage. 
 
-Hope you have your Sage notebook open. If not, pause the video and
-start you Sage notebook. 
+Have your Sage notebook opened. If not, pause the video and
+start you Sage notebook right now. 
 
 On the sage notebook type::
    
@@ -64,7 +64,7 @@ Now if you type::
 Sage simply returns the expression.
 
 Sage treats ``sin(y)`` as a symbolic expression. We can use this to do
-symbolic maths using Sage's built-in constants and expressions.
+symbolic math using Sage's built-in constants and expressions.
 
 Let us try out a few examples. ::
    
@@ -287,7 +287,7 @@ correct ::
 as we can see when we substitute the value the answer is almost = 0 showing 
 the solution we got was correct.
 
-Following is an (are) exercise(s) that you must do. 
+Following are a few exercises that you must do. 
 
 %% %% Differentiate the following. 
       
