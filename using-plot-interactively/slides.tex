@@ -1,35 +1,52 @@
-% Created 2010-10-20 Wed 21:57
+% Created 2010-11-11 Thu 13:15
 \documentclass[presentation]{beamer}
-\usetheme{Warsaw}\useoutertheme{infolines}\usecolortheme{default}\setbeamercovered{transparent}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-
-\title{Plotting Data }
+\title{Using Plot Interactively}
 \author{FOSSEE}
-\date{2010-09-14 Tue}
+\date{}
 
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
 \maketitle
 
-\begin{frame}
-\frametitle{Tutorial Plan}
-\label{sec-1}
-\begin{itemize}
 
-\item Creating a simple plot\\
-\label{sec-1.1}%
-\item Use the buttons on window to study the plot\\
-\label{sec-1.2}%
-\end{itemize} % ends low level
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Outline}
+\label{sec-1}
+
+  How to plot a simple mathematical function.
+  Using the User Interface of plot figure.
 \end{frame}
 \begin{frame}
 \frametitle{Error if Ipython not installed}
@@ -37,35 +54,46 @@
 \begin{itemize}
 
 \item `ERROR: matplotlib could NOT be imported!  Starting normal IPython.`\\
-\label{sec-2.1}%
+\label{sec-2_1}%
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Plot UI}
 \label{sec-3}
-\begin{frame}
- \begin{center}
-    \includegraphics[height=1.0in,width=4.2in]{buttons.png}
-  \end{center}
-\end{frame}
 
+   \includegraphics[height=0.12in, interpolate=true]{buttons}
+\begin{itemize}
+\item Save
+\item Zoom
+\item Move axis
+\item Back and Forward Button
+\item Home
+\end{itemize}
+
+
+    
+\end{frame}
+\begin{frame}
 \frametitle{Summary}
 \label{sec-4}
-\begin{itemize}
 
-\item Start Ipython with pylab\\
-\label{sec-4.1}%
-\item Using linspace\\
-\label{sec-4.2}%
-\item Finding length of sequnces using  len.\\
-\label{sec-4.3}%
-\item Plotting mathematical functions using plot.\\
-\label{sec-4.4}%
-\item Clearing drawing area using clf\\
-\label{sec-4.5}%
-\item Using the UI of plot\\
-\label{sec-4.6}%
-\end{itemize} % ends low level
+\begin{itemize}
+\item Plotting mathematical functions using plot.
+   \includegraphics[height=0.12in, interpolate=true]{buttons}
+\item Using the UI of plot
+
+\begin{itemize}
+\item Save
+\item Zoom
+\item Move axis
+\item Back and Forward Button
+\item Home
+\end{itemize}
+
+\end{itemize}
+
+  
+  
 \end{frame}
 
 \end{document}
