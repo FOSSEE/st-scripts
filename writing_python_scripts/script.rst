@@ -19,19 +19,19 @@
 Script
 ------
 
-Hello friends and welcome to the tutorial on "Writing Python scripts"
-
 {{{ Show the slide containing title }}}
+
+Hello friends and welcome to the tutorial on "Writing Python scripts"
 
 {{{ Show the slide containing the outline slide }}}
 
 In this tutorial, we shall learn
 
- * How write Python scripts 
+ * How to write Python scripts 
 
 Often we will have to reuse the code that we haave written. We do that by
 writing functions. Functions are bundled into packages and are imported as and
-required in the script.
+when required in other scripts.
 
 Let us first write a function that computes the gcd of two numbers and save it
 in a script.
@@ -58,16 +58,16 @@ time the script is run.
     else:
         print "The GCD function is wrong"
 
-Let us save the file as script.py in /home/fossee/gcd_script.py
+Let us save the file as script.py in ``/home/fossee/gcd_script.py``
 
-We shall run the script by doing
+We shall run the script by typing
 ::
 
     $ python /home/fossee/gcd_script.py
 
 We can see that the script is executed and everything is fine.
 
-What if we want to use the gcd function in some of our later scripts. This
+What if we want to use the gcd function in some of our other scripts. This
 is also possible since every python file can be used as a module.
 
 But first, we shall understand what happens when you import a module.
@@ -81,13 +81,14 @@ Open IPython and type
 This is a list of locations where python searches for a module when it
 encounters an import statement.
 
-hence when we just did =import sys=, python searches for a file named sys.py or
-a folder named sys in all these locations one by one, until it finds one.
+Hence, when we just did ``import sys``, python searches for a file
+named sys.py or a folder named sys in all these locations one by one,
+until it finds one.
 
 We can place our script in any one of these locations and can import it.
 
-The first item in the list is an empty string which means the current working
-directory is also searched. 
+The first item in the list is an empty string which means the current
+working directory is also searched.
 
 Alternatively, we can also import the module if we are working in same 
 directory where the script exists.
@@ -103,9 +104,9 @@ the end of the file is also executed.
 But we want the test code to be executed only when the file is run as a python 
 script and not when it is imported.
 
-This is possible by using =__name__= variable.
+This is possible by using ``__name__`` variable.
 
-First we shall look at how to use the idiom and then understand how it works.
+First, we shall look at how to use the idiom and then understand how it works.
 
 Go to the file and add
 ::
@@ -128,11 +129,12 @@ Now we shall import the file
 
 We see that now the test code is not executed.
 
-The __name__ variable is local to every module and it is equal to __main__ only
-when the file is run as a script.
+The ``__name__`` variable is local to every module and it is equal to
+``__main__`` only when the file is run as a script.
 
-hence all the code that goes after __name__ == "__main__" is executed only when
-the file is run as a python script.
+Hence, all the code that goes in to the if block, ``if __name__ ==
+"__main__":`` is executed only when the file is run as a python
+script.
 
 {{{ Show summary slide }}}
 
@@ -145,7 +147,6 @@ we have learnt
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
 
-#[Nishanth]: Will add this line after all of us fix on one.
 This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
 Hope you have enjoyed and found it useful.
