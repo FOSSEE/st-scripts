@@ -258,7 +258,7 @@ In debugging process we form a hypothesis of what causes the error.
 Test if it is correct by changing the code. And refine the hypothesis 
 on the basis of our result.
 
-{{{ Slide with code snippet }}}
+
 
 Lets see another example of debugging. Create a file mymodule.py and
 add the following code::
@@ -267,7 +267,7 @@ add the following code::
 	total=1+1	
 	print spam
 
-{{{ Slide with code snippet }}} 
+
 
 Lets now try and run this code ::
      
