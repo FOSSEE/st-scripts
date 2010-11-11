@@ -22,6 +22,7 @@
 .. Author              : Amit 
    Internal Reviewer   : Anoop Jacob Thomas <anoop@fossee.in>
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 .. #[[Anoop: Slides contain only outline and summary
@@ -44,9 +45,9 @@ structure called lists.  We will learn ::
  * Append elements to lists
  * Delete elements from lists
 
-List is a compound data type, it can contain data of other data
-types. List is also a sequence data type, all the elements are in
-order and the order has a meaning.
+List is a compound data type, it can contain data of mutually
+different datatypes. List is also a sequence data type, all the
+elements are arranged in a given order.
 
 .. #[[Anoop: "all the elements are in order and **there** order has a
    meaning." - I guess something is wrong here, I am not able to
@@ -69,13 +70,13 @@ Lets now see how to define a non-empty list. We do it as,::
      nonempty = ['spam', 'eggs', 100, 1.234]
 
 Thus the simplest way of creating a list is typing out a sequence 
-of comma-separated values (items) between square brackets. 
-All the list items need not be of the same data type.
+of comma-separated values (or items) between two square brackets. 
 
 As we can see lists can contain different kinds of data. In the
-previous example 'spam' and 'eggs' are strings and 100 and 1.234 are
-integer and float. Thus we can put elements of heterogenous types in
-lists including list itself.
+previous example 'spam' and 'eggs' are strings whereas 100 and 1.234 are
+integer and float respectively. Thus we can put elements of different types in
+lists including lists itself. This property makes lists heterogeneous
+data structures.
 
 .. #[[Anoop: the sentence "Thus list themselves can be one of the
    element types possible in lists" is not clear, rephrase it.]]
@@ -84,9 +85,10 @@ Example ::
 
       listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]
 
-We access list elements using the index. The index begins from 0. So
-for list nonempty, nonempty[0] gives the first element, nonempty[1]
-the second element and so on and nonempty[3] the last element. ::
+We access an element of a list using its corresponding index. Index of
+the first element of a list is 0. So for the list nonempty, nonempty[0] 
+gives the first element, nonempty[1] the second element and so on and 
+nonempty[3] the last element. ::
 
 	    nonempty[0] 
 	    nonempty[1] 
@@ -112,9 +114,9 @@ In python negative indices are used to access elements from the end::
    nonempty[-4]
 
 -1 gives the last element which is the 4th element , -2 second to last
-and -4 gives the fourth from last element which is first element.
+and -4 gives the fourth from the last which, in this case,  is the first element.
 
-We can append elements to the end of a list using append command. ::
+We can append elements to the end of a list using the method append. ::
 
    nonempty.append('onemore') 
    nonempty
@@ -134,10 +136,10 @@ Please, pause the video here. Do the exercise and then continue.
 The solution is on your screen
 
 
-As we can see non empty appends 'onemore' and 6 at the end.
+As we can see nonempty is appended with 'onemore' and 6 at the end.
 
 Using len function we can check the number of elements in the list
-nonempty. In this case it 6 ::
+nonempty. In this case it is 6 ::
 	 
 	 len(nonempty)
 
@@ -175,11 +177,12 @@ experiment. ::
 	   nonempty
 
 If we check now we will see that the first occurence 'spam' is removed
-thus remove removes the first occurence of the element in the sequence
+and therefore `remove` removes the first occurence of the element in the sequence
 and leaves others untouched.
 
-One should remember this that while del removes by index number.
-Remove , removes on the basis of content being passed so if ::
+One should remember this that while del removes by index number,
+`remove` removes on the basis of content being passed on. For instance
+if ::
        
        k = [1,2,1,3] 
        del([k[2])
