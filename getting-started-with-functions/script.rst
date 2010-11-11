@@ -32,29 +32,29 @@ Getting started with functions
 
 {{{ show welcome slide }}}
 
-Hello and welcome to the tutorial getting started with functions.
+Hello and welcome to the tutorial, getting started with functions.
 
 {{{ switch to next slide, outline slide }}}
 
 In this tutorial we will learn about functions in python, how to
-define functions, arguments to functions, docstrings, and function
-return value.
+define functions, passing arguments to functions, docstrings, and
+function return value.
 
 {{{ switch to next slide, Function }}}
 
-While writing code, we always want to reduce the number of lines of
-code and functions is a way of reusing the code. Thus the same lines
-of code can be used again and again. A function is a portion of code
-within a larger program that performs a specific task and is
-relatively independent of the remaining code. Now let us get more
-familiar with functions,
+While writing code, we would like to reduce the number of lines of
+code and using functions is a way of reusing the code.  A function is
+a portion of code within a larger program that performs a specific
+task and is relatively independent of the remaining code. Now let us
+get more familiar with functions,
 
 {{{ switch to next slide, f(x) a mathematical function }}}
 
-Consider a mathematical function f(x) = x square. Here x is a variable
-and with different values of x the value of function will change. When
-x is one f(1) will return the value 1 and f(2) will return us the
-value 4. Let us now see how to define the function f(x) in python.
+Consider a mathematical function f(x) = x squared. Here x is a
+variable and with different values of x the value of function will
+change. When x is one f(1) will return the value 1 and f(2) will
+return us the value 4. Let us now see how to define the function f(x)
+in Python.
 
 {{{ switch to next slide, define f(x) in Python }}}
 
@@ -64,18 +64,22 @@ In your Ipython interpreter type the following,
     def f(x):
     	return x*x
 
-Well that defined the function, so before learning what we did let us
-see if it returns the expected values, try,
+Let us see, if the function ``f``, we defined, works as we expect. 
 ::
 
     f(1)
     f(2)
 
-Yes, it returned 1 and 2 respectively. And now let us see what we did,
-we wrote two lines. The first line ``def f(x)`` is used to define the
-name and the parameters to the function. ``def`` is a keyword and
-``f`` is the name of the function and ``x`` the parameter of the
-function.
+Yes, it returned 1 and 2 respectively. 
+
+Now, let us see what we did. The first line ``def f(x)`` is used to
+define the name and the parameters to the function. ``def`` is a
+keyword and ``f`` is the name of the function and ``x`` the parameter
+of the function.  
+
+The second line is the body of the function. Incidentally, this
+function has a single line definition. Note that the body of the
+function is indented, just like any other code block, in Python.
 
 {{{ switch to next slide, problem statement 1 }}}
 
@@ -92,18 +96,18 @@ The problem can be solved as,
     def cube(n):
     	return n**3
 
-And now let us see how to write functions without arguments.
+Now let us see how to write functions without arguments.
 
 {{{ switch to next slide, greet function }}}
 
-let us define a new function called ``greet`` which will print ``Hello
+Let us define a new function called ``greet`` which will print ``Hello
 World``.
 ::
 
     def greet():
     	print "Hello World!"
 
-now try calling the function,
+Now try calling the function,
 ::
 
     greet()
@@ -123,7 +127,7 @@ Pause here and try to solve the problem yourself.
 
 {{{ switch to next slide, solution 2 }}}
 
-The problem can be solved as,
+The problem can be solved as shown,
 ::
 
     def avg(a,b):
@@ -137,8 +141,8 @@ in the ``def`` line.
 
 It is always a good practice to document the code that we write, and
 for a function we define we should write an abstract of what the
-function does, and that is called a docstring. Let us modify the
-function ``avg`` and add docstring to it. Do the following,
+function does, and that is called a doc-string. Let us modify the
+function ``avg`` and add doc-string to it. Do the following,
 ::
 
     def avg(a,b):
@@ -146,7 +150,7 @@ function ``avg`` and add docstring to it. Do the following,
 	returns the average of a and b"""
 	return (a+b)/2
 
-Note that docstrings are entered in the immediate line after the
+Note that doc-strings are entered in the immediate line after the
 function definition and put as a triple quoted string. And here as far
 as the code functionality is concerned, we didn't do anything. We just
 added an abstract of what the function does.
@@ -286,6 +290,9 @@ This brings us to the end of this tutorial, in this tutorial we covered
 
 We also did few code reading exercises.
 
-{{{ switch to next slide, Thank you }}}
+{{{ Show the "sponsored by FOSSEE" slide }}}
 
+This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+
+Hope you have enjoyed and found it useful.
 Thank you!
