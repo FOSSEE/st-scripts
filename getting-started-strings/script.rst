@@ -16,8 +16,9 @@
 .. 1. getting started with ipython
      
 .. Author              : Madhu
-   Internal Reviewer   : 
+   Internal Reviewer   : Punch
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -162,8 +163,8 @@ Let us attempt to change one of the characters in a string::
   a = 'hello'
   a[0] = 'H'
 
-As said earlier, strings are immutable. We cannot manipulate the
-string. Although there are some methods which let us to manipulate the
+As said earlier, strings are immutable. We cannot manipulate a
+string. Although there are some methods which let us manipulate
 strings. We will look at them in the advanced session on strings. In
 addition to the methods that let us manipulate the strings we have
 methods like split which lets us break the string on the specified
