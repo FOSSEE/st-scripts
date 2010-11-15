@@ -16,8 +16,9 @@
 ..   1. Using the ``plot`` command interactively
      
 .. Author              : Nishanth Amuluru
-   Internal Reviewer   : 
+   Internal Reviewer   : Anoop
    External Reviewer   :
+   Language Reviewe    : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -30,9 +31,9 @@ Hello friends and welcome to the tutorial on Embellishing Plots.
 {{{ Show the slide containing the outline }}}
 
 In this tutorial, we shall look at how to modify the colour, thickness and 
-linestyle of the plot. We shall then learn how to add title to the plot and 
+linestyle of a plot. We shall then learn how to add title to a plot and 
 then look at adding labels to x and y axes. we shall also look at adding 
-annotations to the plot and setting the limits of axes.
+annotations to the plot and setting the limits on the axes.
 
 Let us start ipython with pylab loaded, by typing on the terminal
 
@@ -59,14 +60,13 @@ We shall first make a simple plot and start decorating it.
      points right?]
 
 As we can see, the default colour and the default thickness of the
-line is as decided by pylab. Wouldn't be nice if we could control
+line is as decided by pylab. Wouldn't it be nice if we could control
 these parameters in the plot? This is possible by passing additional
 arguments to the plot command.
 
 .. #[[Anoop: I think it will be good to rephrase the sentence]]
 .. #[madhu: Why "you" here? Shouldn't this be "we" as decided? Also I
      added "the default" check the diff]
-
 The additional argument that we shall be passing in here now is the
 colour argument. We shall first clear the figure and plot the same in
 red colour. Hence
@@ -243,7 +243,9 @@ and we get the polynomial formatted properly.
 The solution is to enclose the whole string in between $. Hence,
 ::
 
-    title("$Parabolic function -x^2+4x-5$")
+    title("Parabolic function $-x^2+4x-5$")
+#[[Bhanu: Dollar sign should enclose only the math-expression. change
+made.]]
 
 gives a title that looks neatly formatted.
 
