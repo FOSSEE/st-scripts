@@ -47,8 +47,8 @@ the offline help available.
 {{{ Show the slide on what is Sage }}}
 
 To start with, What is Sage? Sage is a free, open-source mathematical
-software. Sage can do a lot of math stuff for you including but not
-limited to algebra, calculus, geometry, cryptography, graph theory
+software. Sage can do a lot of math stuff for you including, but not
+limited to, algebra, calculus, geometry, cryptography, graph theory
 among other things. It can also be used as aid in teaching and
 research in any of the areas that Sage supports. So let us start Sage
 now
@@ -71,16 +71,18 @@ like this
 {{{ Show what is displayed on the terminal }}}
 
 So now we can type all the commands that Sage supports here. But Sage
-comes bundled with a much much much more elegant tool called Sage
+comes bundled with a much more elegant tool called Sage
 Notebook? What is Sage Notebook? Sage Notebook provides a web based
 user interface to use Sage. So once we have a Sage notebook server up
-and running all we want is a browser to access the Sage
+and running, all we want is a browser to access the Sage
 functionality. For example there is an official instance of Sage
 Notebook server running at http://sagenb.org You can visit that page,
 create an account there and start using Sage! So all you need is just
 a browser, a modern browser 
 
 {{{ Intentional *cough* *cough* }}}
+
+#[[Bhanu: what? Are you serious?]]
 
 to use Sage and nothing else! The Sage notebook also provides a
 convenient way of sharing and publishing our work, which is very handy
@@ -121,7 +123,7 @@ what is said above for the login page }}}
 
 Once we are logged in with the admin account we can see the notebook
 admin page. A notebook can contain a collection of Sage Notebook
-worksheets. Worksheets are basically the working area. This is where
+worksheets. Worksheet is basically a working area. This is where
 we enter all the Sage commands on the notebook.
 
 The admin page lists all the worksheets created. On the topmost part
@@ -133,8 +135,8 @@ the link. For each of the link go to the page and explain as below }}}
 The home link takes us to the admin home page. The published link
 takes us to the page which lists all the published worksheets. The log
 link has the complete log of all the actions we did on the
-notebook. We have the settings link where can configure our notebook,
-the notebook server, we can create and mangage accounts. We have a
+notebook. We have the settings link where we can configure our notebook,
+the notebook server, create and  mangage accounts. We have a
 link to help upon clicking opens a new window with the complete help
 of Sage. The entire documentation of Sage is supplied with Sage for
 offline reference and this help link is the way to get into it. Then
