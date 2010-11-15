@@ -32,7 +32,7 @@ strings.
 {{{ Show the slide containing the outline }}}
 
 In this tutorial, we will look at what we really mean by strings, how
-python supports the use of strings and some of the operations that can
+Python supports the use of strings and some of the operations that can
 be performed on strings. 
 
 {{{ Shift to terminal and start ipython }}}
