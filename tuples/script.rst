@@ -16,7 +16,7 @@
    Internal Reviewer   : Punch
    External Reviewer   :
    Language Reviewer   : Bhanukiran
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Checklist OK?       : <put date stamp here, not OK> [2010-10-05]
 
 Script
 ------
