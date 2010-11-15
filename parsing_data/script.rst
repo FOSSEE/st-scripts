@@ -13,8 +13,9 @@
 ..   1. Getting started with lists
      
 .. Author              : Nishanth Amuluru
-   Internal Reviewer   : 
+   Internal Reviewer   : Amit
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -37,7 +38,7 @@ In this tutorial, we shall learn
 #[Puneeth]: I don't like the way the term "parsing data" has been used, all
 through the script. See if that can be changed.
 
- Lets us have a look at the problem
+ Let us have a look at the problem
 
 {{{ Show the slide containing problem statement. }}}
 
@@ -48,9 +49,9 @@ to a student.
 As you can see, each record consists of fields seperated by a ";". The first
 record is region code, then roll number, then name, marks of second language,
 first language, maths, science and social, total marks, pass/fail indicatd by P
-or F and finally W if with held and empty otherwise.
+or F and finally W if withheld and empty otherwise.
 
-Our job is to calculate the mean of all the maths marks in the region "B".
+Our job is to calculate the arithmetic mean of all the maths marks in the region "B".
 
 #[Nishanth]: Please note that I am not telling anything about AA since they do
              not know about any if/else yet.
@@ -143,7 +144,7 @@ By now we know enough to seperate fields from the record and to strip out any
 white space. The only road block we now have is conversion of string to float.
 
 The splitting and stripping operations are done on a string and their result is
-also a string. hence the marks that we have are still strings and mathematical
+also a string. Hence the marks that we have are still strings and mathematical
 operations are not possible on them. We must convert them into numbers
 (integers or floats), before we can perform mathematical operations on them. 
 
