@@ -12,8 +12,9 @@
 .. 1. Using Python modules
      
 .. Author              : Nishanth Amuluru
-   Internal Reviewer   : 
+   Internal Reviewer   : Punch
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
    Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
 
 Script
@@ -46,7 +47,7 @@ in a script.
 
         return a
 
-We shall write an test function in the script that tests the gcd function every
+We shall write a test function in the script that tests the gcd function every
 time the script is run.
 
 {{{ Add to the script }}}
