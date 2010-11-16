@@ -165,7 +165,7 @@ Let us attempt to change one of the characters in a string::
 
 As said earlier, strings are immutable. We cannot manipulate a
 string. Although there are some methods which let us manipulate
-strings. We will look at them in the advanced session on strings. In
+strings, we will look at them in the advanced session on strings. In
 addition to the methods that let us manipulate the strings we have
 methods like split which lets us break the string on the specified
 separator, the join method which lets us combine the list of strings
