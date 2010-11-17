@@ -11,9 +11,10 @@
 ..   3. 
      
 .. Author              : Madhu
-   Internal Reviewer   : 
+   Internal Reviewer   : Punch
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <16-11-2010, Anand,  OK> [2010-10-05]
 
 Script
 ------
@@ -24,10 +25,10 @@ Hello friends. Welcome to this spoken tutorial on Manipulating Lists.
 
 {{{ Show the slide containing the outline }}}
 
-We have already learnt a lot about Lists in Python. In this tutorial,
-we will learn more about advanced features of Lists in Python. We will
-see how to concatenate two lists, details of slicing and striding of
-lists, methods to sort and reverse lists.
+We have already learnt about Lists in Python. In this tutorial,
+we will learn about more advanced features of Lists in Python like how
+to concatenate two lists, details of slicing and striding of lists, 
+methods to sort and reverse lists.
 
 {{{ Shift to terminal and start ipython }}}
 
@@ -49,16 +50,16 @@ lists. Let us say I have the list::
 
   primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
-To obtain the all the primes between 10 and 20 from the above list of
+To obtain all the primes between 10 and 20 from the above list of
 primes we say::
 
   primes[4:8]
 
 This gives us all the elements in the list starting from the element
-with the index 4 which is 11 in our list upto the element with index 8
+with the index 4, which is 11 in our list, upto the element with index 8
 in the list but not including the eigth element. So we obtain a slice
 starting from 11 upto 19th. It is a very important to remember that
-when ever we specify a range of elements in Python the start index is
+whenever we specify a range of elements in Python the start index is
 included and end index is not included. So in the above case, 11 which
 was the element with the index 4 was included but 23 which was the
 element with index 8 was excluded.
@@ -129,7 +130,7 @@ Please, pause the video here. Do the exercise and then continue.
 gives us all the multiples of 3 from the list, since every third
 element in it, starting from 0, is divisible by 3. 
 
-The other basic operation that we can perform on list is concatenation
+The other basic operation that we can perform on lists is concatenation
 of two or more lists. We can combine two lists by using the "plus"
 operator. Say we have
 
@@ -160,7 +161,7 @@ Now the contents of the list ``a`` will be::
   a
   [1, 5, 6, 7, 7, 10]
 
-Since the sort method sorts the list inplace the original list we had
+As the sort method sorts the elements of a list, the original list we had
 is overwritten or replaced. We have no way to obtain the original list
 back. One way to avoid this is to keep a copy of the original list in
 another variable and run the sort method on the list. However Python
@@ -174,8 +175,7 @@ We can store this sorted list another list variable::
 
   sa = sorted(a)
 
-Similarly to perform certain operations on the list we would like to
-reverse the list. Python provides reverse method which again reverses
+Python also provides the reverse method which reverses
 the list inplace::
 
   a = [1, 2, 3, 4, 5]

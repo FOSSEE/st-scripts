@@ -16,9 +16,10 @@
 .. 1. getting started with ipython
      
 .. Author              : Madhu
-   Internal Reviewer   : 
+   Internal Reviewer   : Punch
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <15-11-2010, Anand, OK> [2010-10-05]
 
 Script
 ------
@@ -31,7 +32,7 @@ strings.
 {{{ Show the slide containing the outline }}}
 
 In this tutorial, we will look at what we really mean by strings, how
-python supports the use of strings and some of the operations that can
+Python supports the use of strings and some of the operations that can
 be performed on strings. 
 
 {{{ Shift to terminal and start ipython }}}
@@ -162,9 +163,9 @@ Let us attempt to change one of the characters in a string::
   a = 'hello'
   a[0] = 'H'
 
-As said earlier, strings are immutable. We cannot manipulate the
-string. Although there are some methods which let us to manipulate the
-strings. We will look at them in the advanced session on strings. In
+As said earlier, strings are immutable. We cannot manipulate a
+string. Although there are some methods which let us manipulate
+strings, we will look at them in the advanced session on strings. In
 addition to the methods that let us manipulate the strings we have
 methods like split which lets us break the string on the specified
 separator, the join method which lets us combine the list of strings

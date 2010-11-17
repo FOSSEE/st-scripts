@@ -15,9 +15,10 @@
 ..   1. Embellishing Plots
      
 .. Author              : Nishanth Amuluru
-   Internal Reviewer   : 
+   Internal Reviewer   : Amit
    External Reviewer   :
-   Checklist OK?       : <put date stamp here, if OK> [2010-10-05]
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <15-11-2010, Anand, OK> [2010-10-05]
 
 Script
 ------

@@ -1,8 +1,28 @@
-Creating a linear array:\\
-{\ex \lstinline|    x = linspace(0, 2*pi, 50)|}
+Skeleton of a test:\\
+{\ex \lstinline| if __name__ == '__main__':|}
+{\ex \lstinline|      result = gcd(48, 64) |}  
+{\ex \lstinline|      if result != 16:     |}
+{\ex \lstinline|           print ``Test Failed'' |}
+{\ex \lstinline|      print ``Test Passed''      |}
 
-Plotting two variables:\\
-{\ex \lstinline|    plot(x, sin(x))|}
 
-Plotting two lists of equal length x, y:\\
-{\ex \lstinline|    plot(x, y)|}
+\textbf{Testing}
+
+Get results from function or unit of code being tested.Compare it to original output. Test passed if they match else failed.
+
+\textbf{Code Style} 
+Four Space Indentation
+79 character limit on a line
+Funtions should be seperated by 
+blank line
+Use Docstring
+White space around operators 
+   
+Skeleton of try catch:\\
+{\ex \lstinline|     try:                  |}
+{\ex \lstinline|      	  num = int(a)     |}
+{\ex \lstinline|     except:               |}
+{\ex \lstinline|         print ``Wrong input...'' |}
+
+Starting debugger in ipython:\\
+{\ex \lstinline|     %debug                  |}

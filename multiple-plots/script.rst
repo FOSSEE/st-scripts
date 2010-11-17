@@ -20,6 +20,9 @@
    Internal Reviewer 1 :         [potential reviewer: Puneeth]
    Internal Reviewer 2 : Nishanth
    External Reviewer   :
+   Language Reviewer   : Bhanukiran
+   Checklist OK?       : <, not OK> []
+
 
 Script
 ------
@@ -205,7 +208,7 @@ can, for example, save each plot separately
 
 {{{ Have both plot window and ipython side by side }}}
 
-We also titled the our first plot as 'sin(y)' which we did not do for
+We also titled our first plot as 'sin(y)' which we did not do for
 the second plot.
 
 Let us attempt another exercise problem
@@ -264,7 +267,7 @@ rows of subplots that must be created,
 
 {{{ Have both plot window and ipython side by side }}}
 
-in this case we have 2 so it spilts the plotting area horizontally for
+in this case we have 2 as the first argument so it spilts the plotting area horizontally for
 two subplots. The second argument specifies the number of coloumns of
 subplots that must be created. We passed 1 as the argument so the
 plotting area won't be split vertically and the last argument
