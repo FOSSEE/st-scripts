@@ -49,7 +49,7 @@
 | 8.1 LO: | getting started with functions         |     3 | Anoop    | Punch (Done)    |           |
 | 8.2 LO: | advanced features of functions         |     3 | Punch    | Anoop (Done)    |           |
 | 8.3 LO: | using python modules                   |     3 | Anoop    | Punch (Done)    |           |
-| 8.4 LO: | writing python scripts                 |     2 | Nishanth |                 |           |
+| 8.4 LO: | writing python scripts                 |     2 | Nishanth | Punch (Done)    |           |
 | 8.5 LO: | testing and debugging                  |     2 | Amit     |                 |           |
 | 8.6 LO: | Assessment                             |     3 | Madhu    |                 |           |
 |---------+----------------------------------------+-------+----------+-----------------+-----------|
