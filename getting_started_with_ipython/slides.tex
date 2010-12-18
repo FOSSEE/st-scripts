@@ -1,4 +1,4 @@
-% Created 2010-11-05 Fri 20:59
+% Created 2010-12-18 Sat 12:23
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -84,8 +85,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \label{sec-6}
 
   Check the output of
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 round(2.48)
 round(2.48, 1)
 round(2.48, 2)
@@ -93,7 +93,7 @@ round(2.48, 2)
 round(2.484)
 round(2.484, 1)
 round(2.484, 2)
-\end{lstlisting}
+\end{verbatim}
   Look-up the documentation of \texttt{round} and see how to use it.
 \end{frame}
 \begin{frame}
@@ -114,13 +114,12 @@ round(2.484, 2)
 \frametitle{Solution 4}
 \label{sec-9}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 round(2.484 
 ^C
 
 round(2.484, 2)
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}

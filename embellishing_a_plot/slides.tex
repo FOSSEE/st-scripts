@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 17:32
+% Created 2010-12-18 Sat 12:25
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
+\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -62,11 +63,10 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \frametitle{Solution 1}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: clf()
 In []: plot(x, sin(x), 'b', linewidth=3)
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -78,11 +78,10 @@ In []: plot(x, sin(x), 'b', linewidth=3)
 \frametitle{Solution 2}
 \label{sec-5}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: clf()
 In []: plot(x, cos(x), 'go')
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 3}
@@ -94,11 +93,10 @@ In []: plot(x, cos(x), 'go')
 \frametitle{Solution 3}
 \label{sec-7}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: clf()
 In []: plot(x, cos(x), 'r--')
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 4}
@@ -111,10 +109,9 @@ In []: plot(x, cos(x), 'r--')
 \frametitle{Solution 4}
 \label{sec-9}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: title("$Parabolic function -x^2+4x-5$")
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 5}
@@ -126,11 +123,10 @@ In []: title("$Parabolic function -x^2+4x-5$")
 \frametitle{Solution 5}
 \label{sec-11}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: xlabel("$x$")
 In []: yalbel("$f(x)$")
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 6}
@@ -143,10 +139,9 @@ In []: yalbel("$f(x)$")
 \frametitle{Solution 6}
 \label{sec-13}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: annotate("root", xy=(-4,0))
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Question 7}
@@ -159,11 +154,10 @@ In []: annotate("root", xy=(-4,0))
 \frametitle{Solution 7}
 \label{sec-15}
 
-\lstset{language=Python}
-\begin{lstlisting}
+\begin{verbatim}
 In []: xlim(-1, 3)
 In []: ylim(-15, 0)
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}

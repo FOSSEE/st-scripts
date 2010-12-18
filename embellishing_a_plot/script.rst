@@ -67,12 +67,14 @@ arguments to the plot command.
 .. #[[Anoop: I think it will be good to rephrase the sentence]]
 .. #[madhu: Why "you" here? Shouldn't this be "we" as decided? Also I
      added "the default" check the diff]
+
 The additional argument that we shall be passing in here now is the
 colour argument. We shall first clear the figure and plot the same in
 red colour. Hence
 
 .. #[Madhu: Note the diff for changes]
- ::
+
+::
 
     clf()
     plot(x, sin(x), 'r')
@@ -81,9 +83,8 @@ As we can see we have the same plot but now in red colour.
 
 .. #[Madhu: diff again]
 
-To alter the thickness of the line, we use the ``linewidth`` argument in the plot
-command. Hence
-::
+To alter the thickness of the line, we use the ``linewidth`` argument
+in the plot command. Hence ::
 
     plot(x, cos(x), linewidth=2)
 
@@ -96,7 +97,7 @@ thickness 2.
 
 {{{ Show the plot and compare the sine and cos plots }}}
 
-{{{ Pause here and try out the following exercises }}}
+Pause here and try out the following exercises,
 
 .. #[[Anoop: is the above a context switch for the person who does the
    recording, other wise if it an instruction to the person viewing
@@ -153,7 +154,7 @@ Other available options can be seen in the documentation of plot.
 .. #[Madhu: The script needs to tell what needs to be shown or
      explained.]
 
-{{{ Pause here and try out the following exercises }}}
+Pause here and try out the following exercises
 
 .. #[[Anoop: same question as above, should it be read out?]]
 
@@ -244,8 +245,9 @@ The solution is to enclose the whole string in between $. Hence,
 ::
 
     title("Parabolic function $-x^2+4x-5$")
-#[[Bhanu: Dollar sign should enclose only the math-expression. change
-made.]]
+
+.. #[[Bhanu: Dollar sign should enclose only the math-expression. change
+   made.]]
 
 gives a title that looks neatly formatted.
 
