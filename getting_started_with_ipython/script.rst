@@ -39,10 +39,15 @@ Hello Friends and Welcome to the tutorial on "getting started with
 
 .. R2
 
-In this tutorial we will cover the basic usage of the ``ipython``
-interpreter.  IPython is an enhanced Python interpreter that provides
-features like tabcompletion, easier access to help and lot of other
-functionality.
+At the end of this tutorial, you will be able to,  
+
+ 1. invoke the ``ipython`` interpreter . 
+ #. quit the ``ipython`` interpreter. 
+ #. navigate in the history of ``ipython``. 
+ #. use of tab-completion for writing ipython functions. 
+ #. look-up documentation of functions. 
+ #. interrupt incomplete or incorrect commands.
+
 
 .. R3 
 
