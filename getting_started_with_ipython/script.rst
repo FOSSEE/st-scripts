@@ -133,10 +133,11 @@ Now let's see how the ipython remembers the history of commands ?
 let's try an example ``print 1+2``.
 
 Instead of typing the whole thing,use the up arrow key to go back to
-the command ``1+2`` which we did before, now use the
-left-arrow key to navigate to the beginning of the line and type the
-word``print``and press space.We have changed the line to print 1+2, now press enter.
-The interpreter prints the result as 3. Please note that the indication Out square brackets is not shown here.
+the command ``1+2`` which we did before, now use the left-arrow key to
+navigate to the beginning of the line and type the word``print``and
+press space.We have changed the line to print 1+2, now press enter.
+The interpreter prints the result as 3. Please note that the
+indication Out square brackets is not shown here.
 
 .. L10
 
@@ -150,8 +151,9 @@ Type
 
 .. R11
 
-Now let us do print 10 into 2.
-We use the up arrow key to navigate to the previous command 1+2. Now change ``1 plus 2`` to ``10 into 2`` and press enter.
+Now let us do print 10 into 2.  We use the up arrow key to navigate to
+the previous command 1+2. Now change ``1 plus 2`` to ``10 into 2`` and
+press enter.
 
 .. L11
 
@@ -159,10 +161,11 @@ We use the up arrow key to navigate to the previous command 1+2. Now change ``1 
 
 .. R12
 
-Till now,  we saw how to invoke the ipython interpreter,quit the ipython and navigate through previous commands in ipython.
-Now, let's see, what is tab-completion?.
- let's take an example, suppose we want to use the function ``round``. For this we just 
-type ``ro``at the prompt and press the tab key.
+Till now, we saw how to invoke the ipython interpreter,quit the
+ipython and navigate through previous commands in ipython.  Now, let's
+see, what is tab-completion?.  let's take an example, suppose we want
+to use the function ``round``. For this we just type ``ro``at the
+prompt and press the tab key.
 
 .. L12
 :: ro<tab>
@@ -221,9 +224,11 @@ the commands starting with a.
 .. R18
 
 Now, let's see what the functions abs is used for.  We will use the
-help features of ipython to find out this.
-To see the documentation of a function, type the function name followed by a question mark, and hit enter. Ipython interpreter will show the documentation for the function.
-Lets us see the documentation of the function abs, type abs? and press enter
+help features of ipython to find out this.  To see the documentation
+of a function, type the function name followed by a question mark, and
+hit enter. Ipython interpreter will show the documentation for the
+function.  Lets us see the documentation of the function abs, type
+abs? and press enter
 
 .. L18
  
@@ -249,7 +254,8 @@ We get 19, as expected, in both the cases.
 
 .. R20
 
-Now lets try it for decimal numbers; lets try abs(-10.5), we got 10.5 as the result.
+Now lets try it for decimal numbers; lets try abs(-10.5), we got 10.5
+as the result.
 
 .. L20
 
@@ -271,7 +277,8 @@ Now try to solve Following exercise,
 
 .. R22
 
-And you can look up the documentation of the function round by typing round question mark in the ipython interpreter.
+And you can look up the documentation of the function round by typing
+round question mark in the ipython interpreter.
 
 .. L23
 
@@ -311,10 +318,10 @@ We got 2.0, 2.5, and 2.48 as expected.
 
 .. R26
 
-Let's now see how to correct typing errors which we often make while typing at
-the terminal. As already shown, if we haven't hit the enter key
-already, we could navigate using the arrow keys and make deletions
-using delete or backspace key and correct the errors. 
+Let's now see how to correct typing errors which we often make while
+typing at the terminal. As already shown, if we haven't hit the enter
+key already, we could navigate using the arrow keys and make deletions
+using delete or backspace key and correct the errors.
 
 let us make a typing error deliberately,
 type 
@@ -405,16 +412,17 @@ Here are some self assessment questions for you to solve
    True or False
 
 2. Which key combination quits “ipython”?
-   Ctrl + C
-   Ctrl + D
-   Alt + C
-   Alt + D
+   - Ctrl + C
+   - Ctrl + D
+   - Alt + C
+   - Alt + D
 
-3. Which character is used at the end of a command, in Ipython to display the documentation.
-    under score (_)
-    question mark (?)
-    exclamation mark (!)
-    ampersand (&)
+3. Which character is used at the end of a command, in Ipython to
+   display the documentation.
+   - under score (_)
+   - question mark (?)
+   - exclamation mark (!)
+   - ampersand (&)
 
 .. L32
 
