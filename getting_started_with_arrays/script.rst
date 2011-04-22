@@ -17,7 +17,9 @@
 ..   #. getting started with ``ipython``.
 ..   #. getting started with lists.
 
-    [[sushma: the software required to open the ogg files in windows should also be given in the prerequisites]]
+.. #[sushma: the software required to open the ogg files in windows
+.. should also be given in the prerequisites]
+
 ..  Author: Anoop Jacob Thomas <anoop@fossee.in>
     Internal Reviewer   : Puneeth 
     External Reviewer   :
