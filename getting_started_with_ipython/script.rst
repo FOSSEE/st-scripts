@@ -43,8 +43,8 @@ At the end of this tutorial, you will be able to,
 
  1. invoke the ``ipython`` interpreter . 
  #. quit the ``ipython`` interpreter. 
- #. navigate in the history of ``ipython``. 
- #. use of tab-completion for writing ipython functions. 
+ #. navigate the ``ipython`` session history. 
+ #. use tab-completion for writing ipython functions. 
  #. look-up documentation of functions. 
  #. interrupt incomplete or incorrect commands.
 
