@@ -26,7 +26,10 @@ Script
 ------
 
 .. L1
-{{{ Show the  first slide containing title, name of the production team along with the logo of MHRD }}}
+
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
+
 
 .. R1
 
@@ -57,6 +60,7 @@ open the terminal, type ``ipython`` in the terminal and hit enter.
 .. L3
 
 :: 
+
     ipython
 
 .. R4
@@ -81,19 +85,22 @@ type Ctrl-D.
 
 .. R6
 
-A prompt will apperar to confirm whether you really want to exit, type y to say yes and quit ipython 
-and n to say no if you dont want to quit the ipython. Press y. 
+A prompt will apperar to confirm whether you really want to exit, type
+y to say yes and quit ipython and n to say no if you dont want to quit
+the ipython. Press y.
 
 .. L6
 Press y and hit enter. 
 
 .. R7
 
-Now since we have quit the interpretor, let us start it again by typing      `` ipython``
+Now since we have quit the interpretor, let us start it again by
+typing ``ipython``
 
 .. L7
 
 :: 
+
     ipython
 
 .. R8
@@ -102,9 +109,8 @@ And now let's see, how to use the interpreter.
 
 Start with the simplest thing, addition.
 
-type 1+2 at the prompt. IPython promptly gives back the output
-as 3.  Notice that the output is displayed with an ``Out[1]``
-indication.
+type 1+2 at the prompt. IPython promptly gives back the output as 3.
+Notice that the output is displayed with an ``Out[1]`` indication.
 
 .. L8
 
@@ -144,8 +150,11 @@ indication Out square brackets is not shown here.
 {{Use the up arrow key to go back to the command ``1+2``}}
 {{Use left arrow to navigate to start of line }}
 Type
+
 ::
+
     'print'
+
 {{Hit enter}}
 {{Point at the Out[] prompt}}
 
@@ -164,11 +173,14 @@ press enter.
 Till now, we saw how to invoke the ipython interpreter,quit the
 ipython and navigate through previous commands in ipython.  Now, let's
 see, what is tab-completion?.  let's take an example, suppose we want
-to use the function ``round``. For this we just type ``ro``at the
+to use the function ``round``. For this we just type ``ro`` at the
 prompt and press the tab key.
 
 .. L12
-:: ro<tab>
+
+:: 
+
+    ro<tab>
  
 .. R13
 
@@ -187,6 +199,7 @@ just type ``r`` and then press the  tab.
 .. L14
 
 :: 
+
     r<tab> 
 
 .. R15
@@ -206,14 +219,14 @@ out all the possible completions of r.
 .. R16
 
 Now let's try out an exercise.Pause the video and solve the problem.
-  1.find out the commands starting with "ab"?
-  2.list out the commands starting with "a"?
+
+  1. find out the commands starting with "ab"?
+  2. list out the commands starting with "a"?
 
 .. R17
 
-``ab`` tab completes to ``abs`` and 
- ``a<tab>`` gives us a list of all
-the commands starting with a. 
+``ab`` tab completes to ``abs`` and ``a<tab>`` gives us a list of all
+the commands starting with a.
 
 
 .. L17
@@ -231,6 +244,8 @@ function.  Lets us see the documentation of the function abs, type
 abs? and press enter
 
 .. L18
+
+::
  
   abs?
 
@@ -260,6 +275,7 @@ as the result.
 .. L20
 
 ::
+
     abs(-10.5)
 
 .. R21
@@ -273,7 +289,9 @@ Now try to solve Following exercise,
 
 .. L22
 
-::   round?
+::
+
+   round?
 
 .. R22
 
@@ -297,12 +315,15 @@ The function ``round``, rounds a number to a given precision.
 
 Let us now try few more examples with the function round.
 Check the output of
-round(2.48)
-round(2.48,1)
-round(2.48,2)
-round(2.484)
-round(2.484,1)
-round(2.484,2)
+
+::
+
+    round(2.48)
+    round(2.48,1)
+    round(2.48,2)
+    round(2.484)
+    round(2.484,1)
+    round(2.484,2)
 
 .. L24
 
@@ -325,13 +346,17 @@ using delete or backspace key and correct the errors.
 
 let us make a typing error deliberately,
 type 
+
 ::
+
      round(2.484
- and hit enter, without closing the parenthesis.
+
+and hit enter, without closing the parenthesis.
 
 .. L26
 
 :: 
+
     round(2.484
 
 {{Hit enter}}
@@ -345,7 +370,9 @@ press enter.  We got the expected output that is 2.0
 
 .. L27
 {{ Point at the prompt with three dots }}
+
 ::  
+
     )
 
 .. R28
@@ -358,6 +385,7 @@ type Ctrl-C to interrupt the command and to get back to the
 .. L28
 
 <Type any big random number>
+
 :: 
 
     round(35.488762320
@@ -366,8 +394,9 @@ type Ctrl-C to interrupt the command and to get back to the
 .. R29
 
 Try the following exercise
-1. type round(2.484, and press enter. and then cancel the
-command using Ctrl-C. 
+
+1. type round(2.484, and press enter. and then cancel the command
+   using Ctrl-C.
 2. type the command, round(2.484, 2) 
 
 .. L29
@@ -380,6 +409,7 @@ command using Ctrl-C.
 { show the solution on terminal and slide }
 
 ::
+
   round(2.484 
   ^C
 
@@ -405,13 +435,12 @@ let's revise quickly what we have learnt today.
 .. R32
   
 Here are some self assessment questions for you to solve
- {{Show self assessment questions slide}}	
-Here are some self assessment questions for you to solve
 
 1. Ipython is a programming similar to Python?
    True or False
 
-2. Which key combination quits “ipython”?
+2. Which key combination quits ``ipython``?
+
    - Ctrl + C
    - Ctrl + D
    - Alt + C
@@ -419,6 +448,7 @@ Here are some self assessment questions for you to solve
 
 3. Which character is used at the end of a command, in Ipython to
    display the documentation.
+
    - under score (_)
    - question mark (?)
    - exclamation mark (!)
@@ -437,6 +467,7 @@ Here are some self assessment questions for you to solve
 .. R33
 
 And the answers,
+
 1. Ipython is not a programming language, it is just an interpreter.
 2. We use Ctrl D to quit Ipython interpreter.
 3. We use ? at the end of the function name to display its documentation.
