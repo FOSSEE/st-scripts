@@ -23,7 +23,8 @@ Script
 -------
 .. L1
 
-{{{ Show the Title Slide }}} 
+{{{ Show the first slide containing title, name of the production
+team along with the logo of MHRD }}} 
 
 .. R1
 
@@ -166,6 +167,7 @@ Now to clear the plot ,we use the ``clf()`` function
     clf()
 
 .. R13
+
 This is done because if we wish to make another plot,it will overlap the previous plot.
 As we do not wish to clutter the area with overlaid plots , we just clear it with clf().  
 Now lets try a sine plot. 
@@ -255,10 +257,11 @@ The last one is 'home' referring to the initial plot.
 
 Following is an exercise that you must do.Please, pause the video and do the exercise. 
 
-%% %% Plot (sin(x)*sin(x))/x .
+      Plot (sin(x)*sin(x))/x.
+
       1. Save the plot by the sinsquarebyx.pdf in pdf format.
-      2. Zoom and find the maxima.
-      3. Bring it back to initial position.
+      #. Zoom and find the maxima.
+      #. Bring it back to initial position.
 
 .. L23
 
@@ -268,13 +271,12 @@ Following is an exercise that you must do.Please, pause the video and do the exe
 
 Let's revise quickly what we have learnt today 
 
-  1.To Start Ipython with pylab 
+  1. To Start Ipython with pylab. 
   #. To Use the linspace function to create `num` equally spaced points in a region.
-  #. To Find the length of sequnces using len function
+  #. To Find the length of sequnces using len function.
   #. To Plot mathematical functions using plot.
-  #. To Clear drawing area using clf 
-  #. To Use the UI of plot for studying it better and using functionalities like save , zoom 
-     and moving the plots on x and y axis 
+  #. To Clear drawing area using clf. 
+  #. To Use the UI of plot for studying it better and using functionalities like save,zoom and moving the plots on x and y axis. 
 
 .. L24
 
@@ -296,26 +298,18 @@ Let's revise quickly what we have learnt today
 
 And the answers,
 
-1.We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced lines 
-  between the points -pi/2 and pi/2.
+1. We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced lines between the points -pi/2 and pi/2.
 
-2.We use `clf()` function to clear a figure.
+2. We use `clf()` function to clear a figure.
     
-3.`len(sequence\_name)` is the function used to find out the length of a sequence.
-
+3. `len(sequence\_name)` is the function used to find out the length of a sequence.
 
 .. L26
 
 {{{ A thank you slide }}}
-
 
 .. R26 
 
 Hope you have enjoyed and found it useful.
 Thankyou!
 
- 
-
-Author              : Amit Sethi
-Internal Reviewer   :
-Internal Reviewer 2 : 
