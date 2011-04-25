@@ -26,7 +26,10 @@ Script
 ------
 
 .. L1
-{{{ Show the  first slide containing title, name of the production team along with the logo of MHRD }}}
+
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
+
 
 .. R1
 
@@ -43,8 +46,8 @@ At the end of this tutorial, you will be able to,
 
  1. invoke the ``ipython`` interpreter . 
  #. quit the ``ipython`` interpreter. 
- #. navigate in the history of ``ipython``. 
- #. use of tab-completion for writing ipython functions. 
+ #. navigate the ``ipython`` session history. 
+ #. use tab-completion for writing ipython functions. 
  #. look-up documentation of functions. 
  #. interrupt incomplete or incorrect commands.
 
@@ -57,6 +60,7 @@ open the terminal, type ``ipython`` in the terminal and hit enter.
 .. L3
 
 :: 
+
     ipython
 
 .. R4
@@ -81,19 +85,22 @@ type Ctrl-D.
 
 .. R6
 
-A prompt will apperar to confirm whether you really want to exit, type y to say yes and quit ipython 
-and n to say no if you dont want to quit the ipython. Press y. 
+A prompt will apperar to confirm whether you really want to exit, type
+y to say yes and quit ipython and n to say no if you dont want to quit
+the ipython. Press y.
 
 .. L6
 Press y and hit enter. 
 
 .. R7
 
-Now since we have quit the interpretor, let us start it again by typing      `` ipython``
+Now since we have quit the interpretor, let us start it again by
+typing ``ipython``
 
 .. L7
 
 :: 
+
     ipython
 
 .. R8
@@ -102,9 +109,8 @@ And now let's see, how to use the interpreter.
 
 Start with the simplest thing, addition.
 
-type 1+2 at the prompt. IPython promptly gives back the output
-as 3.  Notice that the output is displayed with an ``Out[1]``
-indication.
+type 1+2 at the prompt. IPython promptly gives back the output as 3.
+Notice that the output is displayed with an ``Out[1]`` indication.
 
 .. L8
 
@@ -133,25 +139,30 @@ Now let's see how the ipython remembers the history of commands ?
 let's try an example ``print 1+2``.
 
 Instead of typing the whole thing,use the up arrow key to go back to
-the command ``1+2`` which we did before, now use the
-left-arrow key to navigate to the beginning of the line and type the
-word``print``and press space.We have changed the line to print 1+2, now press enter.
-The interpreter prints the result as 3. Please note that the indication Out square brackets is not shown here.
+the command ``1+2`` which we did before, now use the left-arrow key to
+navigate to the beginning of the line and type the word``print``and
+press space.We have changed the line to print 1+2, now press enter.
+The interpreter prints the result as 3. Please note that the
+indication Out square brackets is not shown here.
 
 .. L10
 
 {{Use the up arrow key to go back to the command ``1+2``}}
 {{Use left arrow to navigate to start of line }}
 Type
+
 ::
+
     'print'
+
 {{Hit enter}}
 {{Point at the Out[] prompt}}
 
 .. R11
 
-Now let us do print 10 into 2.
-We use the up arrow key to navigate to the previous command 1+2. Now change ``1 plus 2`` to ``10 into 2`` and press enter.
+Now let us do print 10 into 2.  We use the up arrow key to navigate to
+the previous command 1+2. Now change ``1 plus 2`` to ``10 into 2`` and
+press enter.
 
 .. L11
 
@@ -159,13 +170,17 @@ We use the up arrow key to navigate to the previous command 1+2. Now change ``1 
 
 .. R12
 
-Till now,  we saw how to invoke the ipython interpreter,quit the ipython and navigate through previous commands in ipython.
-Now, let's see, what is tab-completion?.
- let's take an example, suppose we want to use the function ``round``. For this we just 
-type ``ro``at the prompt and press the tab key.
+Till now, we saw how to invoke the ipython interpreter,quit the
+ipython and navigate through previous commands in ipython.  Now, let's
+see, what is tab-completion?.  let's take an example, suppose we want
+to use the function ``round``. For this we just type ``ro`` at the
+prompt and press the tab key.
 
 .. L12
-:: ro<tab>
+
+:: 
+
+    ro<tab>
  
 .. R13
 
@@ -184,6 +199,7 @@ just type ``r`` and then press the  tab.
 .. L14
 
 :: 
+
     r<tab> 
 
 .. R15
@@ -203,14 +219,14 @@ out all the possible completions of r.
 .. R16
 
 Now let's try out an exercise.Pause the video and solve the problem.
-  1.find out the commands starting with "ab"?
-  2.list out the commands starting with "a"?
+
+  1. find out the commands starting with "ab"?
+  2. list out the commands starting with "a"?
 
 .. R17
 
-``ab`` tab completes to ``abs`` and 
- ``a<tab>`` gives us a list of all
-the commands starting with a. 
+``ab`` tab completes to ``abs`` and ``a<tab>`` gives us a list of all
+the commands starting with a.
 
 
 .. L17
@@ -221,11 +237,15 @@ the commands starting with a.
 .. R18
 
 Now, let's see what the functions abs is used for.  We will use the
-help features of ipython to find out this.
-To see the documentation of a function, type the function name followed by a question mark, and hit enter. Ipython interpreter will show the documentation for the function.
-Lets us see the documentation of the function abs, type abs? and press enter
+help features of ipython to find out this.  To see the documentation
+of a function, type the function name followed by a question mark, and
+hit enter. Ipython interpreter will show the documentation for the
+function.  Lets us see the documentation of the function abs, type
+abs? and press enter
 
 .. L18
+
+::
  
   abs?
 
@@ -249,11 +269,13 @@ We get 19, as expected, in both the cases.
 
 .. R20
 
-Now lets try it for decimal numbers; lets try abs(-10.5), we got 10.5 as the result.
+Now lets try it for decimal numbers; lets try abs(-10.5), we got 10.5
+as the result.
 
 .. L20
 
 ::
+
     abs(-10.5)
 
 .. R21
@@ -267,11 +289,14 @@ Now try to solve Following exercise,
 
 .. L22
 
-::   round?
+::
+
+   round?
 
 .. R22
 
-And you can look up the documentation of the function round by typing round question mark in the ipython interpreter.
+And you can look up the documentation of the function round by typing
+round question mark in the ipython interpreter.
 
 .. L23
 
@@ -290,12 +315,15 @@ The function ``round``, rounds a number to a given precision.
 
 Let us now try few more examples with the function round.
 Check the output of
-round(2.48)
-round(2.48,1)
-round(2.48,2)
-round(2.484)
-round(2.484,1)
-round(2.484,2)
+
+::
+
+    round(2.48)
+    round(2.48,1)
+    round(2.48,2)
+    round(2.484)
+    round(2.484,1)
+    round(2.484,2)
 
 .. L24
 
@@ -311,20 +339,24 @@ We got 2.0, 2.5, and 2.48 as expected.
 
 .. R26
 
-Let's now see how to correct typing errors which we often make while typing at
-the terminal. As already shown, if we haven't hit the enter key
-already, we could navigate using the arrow keys and make deletions
-using delete or backspace key and correct the errors. 
+Let's now see how to correct typing errors which we often make while
+typing at the terminal. As already shown, if we haven't hit the enter
+key already, we could navigate using the arrow keys and make deletions
+using delete or backspace key and correct the errors.
 
 let us make a typing error deliberately,
 type 
+
 ::
+
      round(2.484
- and hit enter, without closing the parenthesis.
+
+and hit enter, without closing the parenthesis.
 
 .. L26
 
 :: 
+
     round(2.484
 
 {{Hit enter}}
@@ -338,7 +370,9 @@ press enter.  We got the expected output that is 2.0
 
 .. L27
 {{ Point at the prompt with three dots }}
+
 ::  
+
     )
 
 .. R28
@@ -351,6 +385,7 @@ type Ctrl-C to interrupt the command and to get back to the
 .. L28
 
 <Type any big random number>
+
 :: 
 
     round(35.488762320
@@ -359,8 +394,9 @@ type Ctrl-C to interrupt the command and to get back to the
 .. R29
 
 Try the following exercise
-1. type round(2.484, and press enter. and then cancel the
-command using Ctrl-C. 
+
+1. type round(2.484, and press enter. and then cancel the command
+   using Ctrl-C.
 2. type the command, round(2.484, 2) 
 
 .. L29
@@ -373,6 +409,7 @@ command using Ctrl-C.
 { show the solution on terminal and slide }
 
 ::
+
   round(2.484 
   ^C
 
@@ -398,23 +435,24 @@ let's revise quickly what we have learnt today.
 .. R32
   
 Here are some self assessment questions for you to solve
- {{Show self assessment questions slide}}	
-Here are some self assessment questions for you to solve
 
 1. Ipython is a programming similar to Python?
    True or False
 
-2. Which key combination quits “ipython”?
-   Ctrl + C
-   Ctrl + D
-   Alt + C
-   Alt + D
+2. Which key combination quits ``ipython``?
 
-3. Which character is used at the end of a command, in Ipython to display the documentation.
-    under score (_)
-    question mark (?)
-    exclamation mark (!)
-    ampersand (&)
+   - Ctrl + C
+   - Ctrl + D
+   - Alt + C
+   - Alt + D
+
+3. Which character is used at the end of a command, in Ipython to
+   display the documentation.
+
+   - under score (_)
+   - question mark (?)
+   - exclamation mark (!)
+   - ampersand (&)
 
 .. L32
 
@@ -429,6 +467,7 @@ Here are some self assessment questions for you to solve
 .. R33
 
 And the answers,
+
 1. Ipython is not a programming language, it is just an interpreter.
 2. We use Ctrl D to quit Ipython interpreter.
 3. We use ? at the end of the function name to display its documentation.
