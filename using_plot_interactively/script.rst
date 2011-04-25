@@ -53,7 +53,8 @@ ipython -pylab and hit enter.
 .. L3
 
 :: 
-   ipython -pylab
+  
+    ipython -pylab
 
 .. R4 
 
@@ -78,6 +79,7 @@ Now type 'linspace' followed by a '?' mark in your ipython shell
 .. L5
 
 :: 
+   
     linspace?
 
 .. R6
@@ -90,7 +92,8 @@ As you can see a sequence of numbers from 1 to 100 appears.
 .. L6
 
 ::
-     linspace(1,100,100)
+    
+    linspace(1,100,100)
 
 .. R7
 
@@ -99,7 +102,8 @@ Now lets try to generate 200 points between 0 and 1,we do that by typing  linspa
 .. L7
 
 ::
-      linspace(0,1,200)
+
+    linspace(0,1,200)
 
 .. R8
 
@@ -111,7 +115,8 @@ defined by pylab. Save this to the variable,say p.
 .. L8
 
 ::
-      p = linspace(-pi,pi,100)
+
+    p = linspace(-pi,pi,100)
 
 .. R9
 
@@ -122,7 +127,8 @@ of a sequence.
 .. L9
  
 :: 
-     len(p)
+
+    len(p)
 
 
 .. R10
@@ -134,28 +140,30 @@ corresponding to point p.
 .. L10
 
 :: 
-     plot(p,cos(p)) 
+     
+    plot(p,cos(p)) 
 
 .. R11
 
 We can save cos(p) to variable cosine and then plot it using the
-plot function.::
+plot function.
 
 .. L11
 
 ::
-          cosine=cos(p) 
 
-	  plot(p,cosine)
+    cosine=cos(p) 
+    plot(p,cosine)
 
 .. R12
 
-Now to clear the plot ,we use the ``clf()`` function ::
+Now to clear the plot ,we use the ``clf()`` function 
 
 .. L12 
      
-:: 	 
-	  clf()
+:: 
+
+    clf()
 
 .. R13
 This is done because if we wish to make another plot,it will overlap the previous plot.
@@ -165,7 +173,8 @@ Now lets try a sine plot.
 .. L13
 
 :: 
-	  plot(p,sin(p))
+
+    plot(p,sin(p))
 
 .. R14 
 
@@ -259,22 +268,19 @@ Following is an exercise that you must do.Please, pause the video and do the exe
 
 Let's revise quickly what we have learnt today 
 
-1. To Start Ipython with pylab 
-
-2. To Use the linspace function to create `num` equally spaced points in a region.
-
-3. To Find the length of sequnces using len function
- 
-4. To Plot mathematical functions using plot.
-
-5. To Clear drawing area using clf 
- 
-5. To Use the UI of plot for studying it better and using functionalities like save , zoom 
-and moving the plots on x and y axis 
+  1.To Start Ipython with pylab 
+  #. To Use the linspace function to create `num` equally spaced points in a region.
+  #. To Find the length of sequnces using len function
+  #. To Plot mathematical functions using plot.
+  #. To Clear drawing area using clf 
+  #. To Use the UI of plot for studying it better and using functionalities like save , zoom 
+     and moving the plots on x and y axis 
 
 .. L24
 
 {{Show self assessment questions slide}}
+
+.. R24
 
 1. Create 100 equally spaced points between -pi/2 and pi/2?
 
@@ -282,24 +288,25 @@ and moving the plots on x and y axis
 
 3. How do find the length of a sequence?
 
-.. R24
-
 .. L25
 
 {{{ Show solution of self assessment questions slide}}}
-    
-    Solution1: We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced lines between the points -pi/2 and pi/2.
-    
-    Solution2: We use `clf()` function to clear a figure.
-    
-    Solution3: `len(sequence\_name)` is the function used to find out the length of a sequence.
 
 .. R25
+
+And the answers,
+
+1.We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced lines 
+  between the points -pi/2 and pi/2.
+
+2.We use `clf()` function to clear a figure.
+    
+3.`len(sequence\_name)` is the function used to find out the length of a sequence.
 
 
 .. L26
 
- {{{ Show the 'Thankyou' slide }}}
+{{{ A thank you slide }}}
 
 
 .. R26 
