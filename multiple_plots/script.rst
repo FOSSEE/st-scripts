@@ -1,14 +1,3 @@
-.. Objectives
-.. ----------
-
-..  * How to draw multiple plots which are overlaid
-..  * the figure command
-..  * the legend command
-..  * how to switch between the plots and perform some operations on each
-..    of them like saving the plots and
-..  * creating and switching between subplots
-
-
 .. Prerequisites
 .. -------------
 
@@ -27,6 +16,15 @@
 Script
 ------
 
+At the end of this tutorial you will be able to
+
+1. draw multiple plots which are overlaid. 
+#. use the figure command. 
+#. use the legend command 
+#. switch between the plots and perform some operations on each of them like
+   saving the plots.
+#. create and switch between subplots
+ 
 {{{ Show the slide containing the title }}}
 
 Hello friends. Welcome to this spoken tutorial on Multiple plots.
