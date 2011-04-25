@@ -35,6 +35,12 @@ I hope you have IPython running on your computer.
 
 {{{ Show Objective Slide }}}
 
+At the end of this tutorial, you will be able to, 
+
+   1. Create simple plots of mathematical functions.
+   #. Use the Figure window to study plots better.
+
+
 .. R2
 
 In this tutorial we will learn how to plot using the plot command and how to use the user interface of plot figure.
@@ -46,7 +52,8 @@ ipython -pylab and hit enter.
 
 .. L3
 
-:: ipython -pylab
+:: 
+   ipython -pylab
 
 .. R4 
 
@@ -70,7 +77,8 @@ Now type 'linspace' followed by a '?' mark in your ipython shell
              
 .. L5
 
- linspace?
+:: 
+    linspace?
 
 .. R6
 
@@ -81,6 +89,7 @@ As you can see a sequence of numbers from 1 to 100 appears.
 
 .. L6
 
+::
      linspace(1,100,100)
 
 .. R7
@@ -89,7 +98,8 @@ Now lets try to generate 200 points between 0 and 1,we do that by typing  linspa
 
 .. L7
 
-             linspace(0,1,200)
+::
+      linspace(0,1,200)
 
 .. R8
 
@@ -100,7 +110,8 @@ defined by pylab. Save this to the variable,say p.
            
 .. L8
 
-      :: p = linspace(-pi,pi,100)
+::
+      p = linspace(-pi,pi,100)
 
 .. R9
 
@@ -109,8 +120,9 @@ we will get the no. of points. len function gives the no of elements
 of a sequence.
 
 .. L9
-
-      :: len(p)
+ 
+:: 
+     len(p)
 
 
 .. R10
@@ -121,7 +133,8 @@ corresponding to point p.
 
 .. L10
 
-       :: plot(p,cos(p)) 
+:: 
+     plot(p,cos(p)) 
 
 .. R11
 
@@ -130,6 +143,7 @@ plot function.::
 
 .. L11
 
+::
           cosine=cos(p) 
 
 	  plot(p,cosine)
@@ -139,7 +153,8 @@ plot function.::
 Now to clear the plot ,we use the ``clf()`` function ::
 
 .. L12 
-      	 
+     
+:: 	 
 	  clf()
 
 .. R13
@@ -149,7 +164,8 @@ Now lets try a sine plot.
 
 .. L13
 
-   :: 	  plot(p,sin(p))
+:: 
+	  plot(p,sin(p))
 
 .. R14 
 
