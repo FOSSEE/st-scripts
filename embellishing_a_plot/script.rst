@@ -24,300 +24,397 @@
 Script
 ------
 
+.. L1
+
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
+
+.. R1
+
 Hello friends and welcome to the tutorial on Embellishing Plots.
 
-{{{ Show the slide containing title }}}
 
-{{{ Show the slide containing the outline }}}
+.. L2
 
-In this tutorial, we shall look at how to modify the colour, thickness and 
-linestyle of a plot. We shall then learn how to add title to a plot and 
-then look at adding labels to x and y axes. we shall also look at adding 
-annotations to the plot and setting the limits on the axes.
+{{{ Show the slide containing objectives }}}
 
-Let us start ipython with pylab loaded, by typing on the terminal
+.. R2
 
-{{{ shift to terminal and type ipython -pylab }}}
+At the end of this tutorial, you will be able to, 
 
+ 1. Modify the attributes of the plot -- color, line style,linewidth.
+ #. Add a title to the plot with embedded LaTeX.
+ #. Label x and y axes. 
+ #. Add annotations to the plot. 
+ #. Set and Get the limits of axes.
+
+.. R3
+
+Let us start ipython with pylab loaded,open the terminal and type 
 ::
-
+   
     ipython -pylab
 
-.. #[madhu: I feel the instructions should precede the actual action,
+.. L3
 
-since while recording we need to know before hand what we need to do]
+{{{ open the terminal and type ipython -pylab }}}
+
+.. R4
 
 We shall first make a simple plot and start decorating it.
 
-.. #[madhu: start decorating it should be fine, with is not necessary]
+.. L4
 
 ::
-
+    
     x = linspace(-2, 4, 20)
     plot(x, sin(x))
 
-.. #[madhu: Standard is to choose between -50 to 50 or 0 to 50 with 100
-     points right?]
+.. R5
 
 As we can see, the default colour and the default thickness of the
 line is as decided by pylab. Wouldn't it be nice if we could control
 these parameters in the plot? This is possible by passing additional
 arguments to the plot command.
-
-.. #[[Anoop: I think it will be good to rephrase the sentence]]
-.. #[madhu: Why "you" here? Shouldn't this be "we" as decided? Also I
-     added "the default" check the diff]
-
 The additional argument that we shall be passing in here now is the
-colour argument. We shall first clear the figure and plot the same in
-red colour. Hence
+colour argument. We shall first clear the figure and plot the same now in
+red colour. 
 
-.. #[Madhu: Note the diff for changes]
-
+.. L5
+     
 ::
-
+   
     clf()
     plot(x, sin(x), 'r')
 
+.. R6
+
 As we can see we have the same plot but now in red colour.
 
-.. #[Madhu: diff again]
+.. L6
+
+{{{Move the mouse pointer on the plot}}}
+
+.. R7
 
 To alter the thickness of the line, we use the ``linewidth`` argument
-in the plot command. Hence ::
+in the plot command. 
 
+.. L7
+    
+::
+     
     plot(x, cos(x), linewidth=2)
 
-produces a plot with a thicker line, to be more precise plot with line
+.. R8
+
+This produces a plot with a thicker line, to be more precise plot with line
 thickness 2.
 
-.. #[[Anoop: I guess it will be good if you say that it affects the
-   same plot, as you have not cleared the figure]]
-.. #[Madhu: To Anoop, not necessary I feel since they can see it?]
+.. L8
 
 {{{ Show the plot and compare the sine and cos plots }}}
 
-Pause here and try out the following exercises,
+.. R9
 
-.. #[[Anoop: is the above a context switch for the person who does the
-   recording, other wise if it an instruction to the person viewing
-   the video, then I guess the three braces can be removed.]]
+Let's try out the following exercise
 
-%% 1 %% Plot sin(x) in blue colour and with linewidth as 3
+Plot sin(x) in blue colour and with linewidth as 3.
 
-{{{ continue from paused state }}}
+.. L9
 
-A combination of colour and linewidth would do the job for us. Hence
+{{{ Show slide with Question1 }}}
+
+.. R10
+
+A combination of colour and linewidth would do the job for us.
+
+.. L10
+
 ::
-
+    
     clf()
     plot(x, sin(x), 'b', linewidth=3)
 
-.. #[[Anoop: add clf()]]
 
-produces the required plot
-
-.. #[Nishanth]: I could not think of a SIMPLE recipe approach for
-             introducing linestyle. Hence the naive approach.
-
-.. #[[Anoop: I guess the recipe is fine, but would be better if you
-   add the problem statement rather than just saying "let's do a simple
-   plot"]]
-
-.. #[Madhu: It is good enough.]
+.. R11 
 
 Occasionally we would also want to alter the style of line. Sometimes
 all we want is just a bunch of points not joined. This is possible by
 passing the linestyle argument along with or instead of the colour
-argument. Hence ::
+argument.
 
+.. L11
+   
+::
+   
     clf()
     plot(x, sin(x), '.')
 
-produces a plot with only points.
+.. R12
 
-To produce the same plot but now in blue colour, we do
-::
+Hence we get a plot with only points.
 
+.. L12
+ 
+{{{Point at the dots on the plot}}}
+
+.. R13
+
+We can produce the same plot but now in blue colour.
+ 
+.. L13
+ 
+  ::
     clf()
     plot(x, sin(x), 'b.')
 
+.. R14
 Other available options can be seen in the documentation of plot.
-::
 
+.. L14
+  
+::
+    
     plot?
 
 {{{ Run through the documentation and show the options available }}}
 
 {{{ Show the options available for line style and colors }}}
 
-.. #[Madhu: The script needs to tell what needs to be shown or
-     explained.]
 
-Pause here and try out the following exercises
+.. L15
 
-.. #[[Anoop: same question as above, should it be read out?]]
+{{{Show slide containing question 2}}}
 
-%% 2 %% Plot the sine curve with green filled circles.
+.. R15
 
-{{{ continue from paused state }}}
+Try out the following exercises
+
+Plot the sine curve with green filled circles.
+
+
+.. R16
 
 All we have to do is use a combination of linestyle and colour to acheive this.
-Hence
-::
 
+.. L16
+
+{{{ Switch to terminal and type the following commands }}}  
+::
+    
     clf()
     plot(x, cos(x), 'go')
 
-produces the required plot.
+.. L17
 
-{{{ Pause here and try out the following exercises }}}
+{{{Show slide containing question 3}}}
 
-%% 3 %% Plot the curve of x vs tan(x) in red dashed line and linewidth 3
+.. R17 
 
-{{{ continue from paused state }}}
+Let us try out one more exercise 
+ 
+Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
 
-.. #[Madhu: I did not understand the question]
+.. L18
 
+{{{ Switch to terminal and type the following commands }}}
 ::
+   
     clf()
     plot(x, cos(x), 'r--')
+
+.. R19
 
 Now that we know how to produce a bare minimum plot with colour, style
 and thickness of our interest, we shall look at decorating the plot.
 
-Let us start with a plot of the function -x^2 + 4x - 5.
-::
+.. R20
 
+Let us start with a plot for the function -x^2 + 4x - 5.
+
+.. L20
+
+::
+   
     plot(x, -x*x + 4*x - 5, 'r', linewidth=2)
 
 {{{ Show the plot window and switch back to terminal }}}
 
+.. R21
+
 We now have the plot in a colour and linewidth of our interest. As you
 can see, the figure does not have any description describing the plot.
 
-.. #[Madhu: Added "not". See the diff]
-
 We will now add a title to the plot by using the ``title`` command.
-::
 
+.. L21
+  
+::
+   
     title("Parabolic function -x^2+4x-5") 
 
 {{{ Show the plot window and point to the title }}}
+
+.. R22
 
 The figure now has a title which describes what the plot is. The
 ``title`` command as you can see, takes a string as an argument and sets
 the title accordingly.
 
-.. #[Madhu: See the diff]
-
-The formatting in title is messed and it does not look clean. You can imagine
+The formatting in the title is messed and it does not look clean. You can imagine
 what would be the situation if there were fractions and more complex functions
 like log and exp. Wouldn't it be good if there was LaTeX like formatting?
 
-That is also possible by adding a $ sign before and after the part of the 
+That is also possible by adding a ``$`` sign before and after the part of the 
 string that should be in LaTeX style.
 
-for instance, we can use
+.. L22
+  
 ::
-
+    
     title("Parabolic function $-x^2+4x-5$")
 
-and we get the polynomial formatted properly.
+.. R23
 
-.. #[Nishanth]: Unsure if I have to give this exercise since enclosing the whole
-             string in LaTeX style is not good
+As we can see we get the polynomial formatted properly.
 
-.. #[[Anoop: I guess you can go ahead with the LaTeX thing, it's
-     cool!]]
-.. #[Madhu: Instead of saying LaTeX style you can say Typeset math
-     since that is how it is called as. I am not sure as well. It
-     doesn't really solve the purpose]
+.. L23
 
-{{{ Pause here and try out the following exercises }}}
+{{{ Point at the polynomial }}}
 
-%% 4 %% Change the title of the figure such that the whole title is formatted
-        in LaTeX style
+.. L24
 
-{{{ continue from the paused state }}}
+{{{Show slide containing question 4}}}
 
-The solution is to enclose the whole string in between $. Hence,
+.. R24
+
+{{{ Let us try out the following exercise }}}
+
+Change the title of the figure such that the whole title is formatted
+in LaTeX style.
+
+.. R25
+
+The solution is to enclose the whole string in between $. 
+
+.. L25
+  
 ::
+    
+    title("$Parabolic function -x^2+4x-5$")
 
-    title("Parabolic function $-x^2+4x-5$")
+.. R26
 
-.. #[[Bhanu: Dollar sign should enclose only the math-expression. change
-   made.]]
-
-gives a title that looks neatly formatted.
+Hence it gives a title that looks neatly formatted.
 
 Although we have title, the plot is not complete without labelling x
-and y axes. Hence we shall label x-axis to "x" and y-axis to "f(x)" ::
+and y axes. Hence we shall label x-axis to "x" and y-axis to "f(x)".
 
+.. L26
+ 
+::
+    
     xlabel("x")
 
+.. L27
+
 {{{ Switch to plot window and show the xlabel }}}
+
+.. R27
 
 As you can see, ``xlabel`` command takes a string as an argument,
 similar to the ``title`` command and sets it as the label to x-axis.
 
-.. #[See the diff]
+.. R28
 
-Similarly,
+Similarly, ``ylabel("f(x)")`` sets the name of the y-axis as "f(x)"
+
+.. L28
+
 ::
-
+    
     ylabel("f(x)")
-
-sets the name of the y-axis as "f(x)"
 
 {{{ Show the plot window and point to ylabel and switch back to the terminal }}}
 
-{{{ Pause here and try out the following exercises }}}
+.. L29
 
-%% 5 %% Set the x and y labels as "x" and "f(x)" in LaTeX style.
+{{{Show slide containing question 5}}}
 
-{{{ continue from paused state }}}
+.. R29
+
+Now lets try out this exercise.
+
+Set the x and y labels as "x" and "f(x)" in LaTeX style.
 
 Since we need LaTeX style formatting, all we have to do is enclose the string
-in between two $. Hence,
-::
+in between two $. 
+
+.. L30
+
+{{{ Pause for some time and then Show slide with answer 5 }}}
+
+.. R30
+
+{{{ Read out the commands on the slides }}}
 
     xlabel("$x$")
-    yalbel("$f(x)$")
+    ylabel("$f(x)$")
 
 does the job for us.
 
+.. L31
+
 {{{ Show the plot window with clean labels }}}
+
+.. R31
 
 The plot is now almost complete. Except that we have still not seen how to 
 name the points. For example the point (2, -1) is the local maxima. We would
-like to name the point accordingly. We can do this by using
-::
+like to name the point accordingly. We can do this by using the function ``annotate``.
 
+.. L31
+
+{{{ Switch to terminal }}}
+   
+::
+    
     annotate("local maxima", xy=(2, -1))
 
 {{{ Show the annotation that has appeared on the plot }}}
 
+.. R32
+
 As you can see, the first argument to ``annotate`` command is the name we would
-like to mark the point as and the second argument is the co-ordinates of the
-point at which the name should appear. It is a sequence containing two numbers.
+like to mark the point as, and the second argument is the co-ordinates of the
+point at which the name should appear. It is a tuple containing two numbers.
 The first is x co-ordinate and second is y co-ordinate.
 
-.. #[[Anoop: I think we should tell explicitely that xy takes a
-   sequence or a tuple]]
-.. #[Madhu: Agreed to what anoop says and also that xy= is the point
-     part should be rephrased I think.]
+.. L32
 
-{{{ Pause here and try out the following exercises }}}
+{{{ Point at the annotate command while explaining}}}
 
-%% 6 %% Make an annotation called "root" at the point (-4, 0)
-        What happens to the first annotation ?
+.. R33
 
-{{{ continue from paused state }}}
+Let's try out this exercise.
 
+Make an annotation called "root" at the point (-4, 0).
+What happens to the first annotation ?
+
+.. L33
+
+{{{Show slide containing question 6}}}
+
+.. L34
+
+{{{Show slide with answer 6}}}
+{{{ Switch to the terminal and type the command }}}
 ::
 
-  annotate("root", xy=(-4,0))  
+    annotate("root", xy=(-4,0))  
+
+.. R34
 
 As we can see, every annotate command makes a new annotation on the figure.
 
@@ -325,63 +422,135 @@ Now we have everything we need to decorate a plot. but the plot would be
 incomplete if we can not set the limits of axes. This is possible using the
 button on the plot window.
 
-we shall look at how to get and set them from the script.
-::
+we shall look at how to get and set them from the terminal.We use "xlim()" and "ylim()" functions.
 
+.. L35
+  
+::
+   
     xlim()
     ylim()
 
-We see that ``xlim`` function returns the current x axis limits and ylim
+.. R35
+
+We see that ``xlim`` function returns the current x axis limits and ``ylim``
 function returns the current y-axis limits.
 
 Let us look at how to set the limits.
-::
 
+.. L36
+
+::
+    
     xlim(-4, 5)
 
-We see the limits of x-axis are now set to -4 and 5.
-Similarly
-::
+.. R36
 
+We see the limits of x-axis are now set to -4 and 5.
+
+.. R37
+
+Similarly we set the limits of y-axis appropriately.
+
+.. L37
+
+::
+     
     ylim(-15, 2)
 
-sets the limits of y-axis appropriately.
+
+.. L38
 
 {{{ Pause here and try out the following exercises }}}
 
-%% 7 %% Set the limits of axes such that the area of interest is the rectangle
-        (-1, -15) and (3, 0)
+{{{Show slide containing question 7 and read it out }}}
+
+Set the limits of axes such that the area of interest is the rectangle (-1, -15) and (3, 0)
 
 {{{ continue from paused state }}}
 
+.. R38
+
 As we can see, the lower upper limits of x-axis in the question are -1 and 3.
 The limits of y-axis are -15 and 0.
+
+.. L39
+
+{{{Show slide with answer 7}}}
 
 ::
 
     xlim(-1, 3)
     ylim(-15, 0)
 
-Gives us the required rectangle.
+.. R39
+
+Hence xlim with limits -1 & 3 and ylim with limits -15 & 0 gives us the required rectangle.
+
+.. L40
 
 {{{ Show summary slide }}}
 
-we have looked at 
+.. R40
 
- * Modifying the attributes of plot by passing additional arguments
- * How to add title
- * How to incorporate LaTeX style formatting
- * How to label x and y axes
- * How to add annotations
- * How to set the limits of axes
+let's revise quickly what we have learnt today. 
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+ 1. to Modify the attributes of plot by passing additional arguments.
+ #. to add title to a plot.
+ #. to incorporate LaTeX style formatting.
+ #. to label x and y axes.
+ #. to add annotations to a plot.
+ #. to set the limits of axes.
 
-.. #[Nishanth]: Will add this line after all of us fix on one.
+.. L41
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+{{{ Show the 'self assesment questions' slide}}}
+
+.. R41
+
+Here are some self assessment questions for you to solve.
+
+1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4.
+
+2. Read thorugh the documentation and find out is there a way to modify the
+   alignment of text in the command ``ylabel``.
+
+   - Yes
+   - No
+
+  
+3. How do you set the title as x^2-5x+6 in LaTex style formatting.
+
+    
+.. L42
+
+{{{ solutions for the self assessment questions }}}
+
+.. R42
+
+And the answers,
+
+1. In order to plot a cosine graph between the points -2pi and 2pi with line thickness 3,we use
+the ``linspace`` and ``plot`` command as,
+::
+        
+    x = linspace(-2*pi, 2*pi)
+    plot(x, cos(x), linewidth=4)
+
+2. No. We do not have an option to modify the alignment of text in the command ``ylabel``.
+
+3. To set the title in LaTex style formatting,we write the equation between two dollar signs as,
+::
+
+    title("$x^2-5x+6$")
+
+
+.. L43
+
+{{{ a thank you slide }}}
+
+.. R43
 
 Hope you have enjoyed and found it useful.
-Thankyou
-
+Thankyou!
 
