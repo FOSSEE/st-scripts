@@ -29,9 +29,10 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Plot a simple mathemaical function.
-  - Using the User Interface of plot figure.
+* Objectives
+  At the end of this tutorial, you will be able to, 
+   - Create simple plots of mathematical functions.
+   - Use the Figure window to study plots better.
 
 * Error if Ipython not installed 
 
@@ -48,27 +49,41 @@
   - Back and Forward Button
   - Home
 
-    
+
 * Summary
-  - Plotting mathematical functions using plot.
-  -  Using the UI of plot 
+  In this tutorial,we have learnt to-
+  - Start Ipython with pylab. 
+  - Use the linspace function to create `num` equally spaced points in a region.
+  - Find the length of sequnces using len function.
+  - Plot mathematical functions using plot.
+  - Clear drawing area using clf. 
+  - Plott mathematical functions using plot.
+  - Use the UI of plot 
         - Save
         - Zoom
 	- Move axis
 	- Back and Forward Button
 	- Home
  
-* Thank You!
+* Evaluation 
+  1. Create 100 equally spaced points between -pi/2 and pi/2?
+  2. How do you clear a figure in ipython?
+  3. How do find the length of a sequen
+* Solutions...
+  1. linspace(-pi/2,pi/2,100)
+  2. clf()
+  3. len(sequence\_name)
+* Acknowledgement...
 #+begin_latex
-  \begin{block}{}
+ \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
