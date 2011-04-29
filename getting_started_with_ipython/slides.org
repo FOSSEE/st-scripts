@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Getting Started -- ~ipython~
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,13 +29,28 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  + invoke the ~ipython~ interpreter
-  + quit the ~ipython~ interpreter
-  + navigate in the history of ~ipython~
-  + use tab-completion
-  + look-up documentation of functions
-  + interrupt incomplete or incorrect commands
+* 
+#+begin_latex
+\begin{center}
+\textcolor{blue}{Getting Started -- \texttt{ipython}}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+
+* Objectives
+  At the end of this tutorial, you will be able to, 
+   - invoke the ~ipython~ interpreter.
+   - quit the ~ipython~ interpreter.
+   - navigate in the history of ~ipython~.
+   - use tab-completion.
+   - look-up documentation of functions.
+   - interrupt incomplete or incorrect commands.
 * Question 1
   Type =ab= and hit tab to see what happens. Next, just type =a= and
   hit tab to see what happens.
@@ -73,25 +88,50 @@
   #+end_src 
 
 
-
 * Summary
-  + invoking and quitting the ~ipython~ interpreter
-  + navigating the history
-  + using tab-completion to work faster
-  + looking-up documentation using ~?~
-  + sending keyboard interrupts using ~Ctrl-C~
+  In this tutorial, we have learnt to –
+   - invoke the ~ipython~ interpreter by typing ipython. 
+   - quit the ~ipython~ interpreter by using ~Ctrl-d~. 
+   - navigate in the history of ~ipython~ by using the arrow keys. 
+   - use tab-completionto work faster. 
+   - see the documentation of functions using question mark.
+   - interrupt using ~Ctrl-c~ when we make an error.
+* Evaluation
+  1. Ipython is a programming similar to Python?
+     True or False
 
-* Thank you!
+  2. Which key combination quits ``ipython``?
+
+     - Ctrl + C
+     - Ctrl + D
+     - Alt + C
+     - Alt + D
+
+  3. Which character is used at the end of a command, in Ipython to
+     display the documentation.
+
+    - under score (_)
+    - question mark (?)
+    - exclamation mark (!)
+    - ampersand (&)
+* Solution
+  1. False
+  
+  2. Ctrl + D
+
+  3. question mark (?)
+
+* Acknowledgement
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
