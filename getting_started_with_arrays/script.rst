@@ -7,8 +7,8 @@
 .. #. Create arrays from lists
 .. #. Basic array operations
 .. #. Creating identity matrix using ``identity()`` function.
-.. #. Learn about ``zeros()``, ``zeros_like()``, ``ones()``,
-      ``ones_like()`` functions.
+.. #. Use functions zeros(), zeros_like(), ones(), ones_like().
+.. #. Perform basic operations with arrays.
 
 .. Prerequisites
 .. -------------
@@ -85,8 +85,8 @@ To create an array we will use the function ``array()`` as,
 Notice that we created a one dimensional array here. Also notice the object
 we passed to create an array. We passed a list to create an array. 
 
-Now let us see how to create a two dimensional array. Pause here and try to
-do it yourself before looking at the solution.
+Now let us see how to create a two dimensional array. Pause the video and try to
+solve this. After you solve resume the video to look at the solution.
 
 {{{ switch to next slide, creating two dimensional arrays }}}
 
@@ -142,9 +142,8 @@ as,
 
 {{{ switch to next slide, creating array from list}}}
 
-Now, let us see how to convert a list object to an array. As you have
-already seen, in both of the previous statements we have passed a list, so
-creating an array can be done so, first let us create a list ``l1``
+Now, let us see how to convert a list object to an array. We define a list 
+l1 = [1,2,3,4]. To convert l1 into a array use an array command. say a3 = array(l1)
 
 ::
 
@@ -156,6 +155,7 @@ Now we can convert the list to an array as,
 
     a3 = array(l1)
 
+Pause the video. Solve the exercise on your terminal and resume the video once done
 
 {{{ switch to the next slide, problem statement of unsolved exercise 1 }}}
 
@@ -181,7 +181,8 @@ check the shape of the arrays we have created so far,
 
 {{{ switch to the next slide, unsolved exercise 2 }}}
 
-Find out the shape of the other arrays that we have created.
+Pause the video and Find out the shape of the other 
+arrays i.e. a1, a3, ar that we have created.
 
 .. #[Puneeth: solution missing.]
 

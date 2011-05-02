@@ -104,7 +104,7 @@ Please note that there is a % sign before the hist command. This implies that
 These type of commands are called as magic commands.
 
 Also note that, the =%hist= itself is a command and is displayed as the most
-recent command. We should not that anything we type in is stored as history, 
+recent command. We should note that anything we type in is stored as history, 
 irrespective of whether it is command or an error or IPython magic command.
 
 .. L7
