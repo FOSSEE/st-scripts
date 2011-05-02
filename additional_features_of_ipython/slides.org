@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Additional Features of =ipython=
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,11 +29,26 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  + Retrieving ipython history 
-  + Viewing a part of the history 
-  + Saving (relevant) parts of the history to a file
-  + Running a script from within ipython 
+* 
+#+begin_latex
+\begin{center}
+\textcolor{blue}{Additional Features of \texttt{ipython}}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+
+* Objectives
+  At the end of this tutorial, you will be able to,
+  - Retrieve the ipython history. 
+  - View a part of the history. 
+  - Save (relevant) parts of the history to a file.
+  - Run a script from within ipython. 
 * Question 1
   Read through the documentation of ~%hist~ and find out how to list
   all the commands between 5 and 10
@@ -66,25 +81,59 @@
 * Solution 4
   We see that it raises ~NameError~ saying the name ~linspace~ is not
   found.
-* Summary
-  + Retreiving history using =%hist= command
-  + Vieweing only a part of history by passing an argument to %hist
-  + Saving the required lines of code in required order using %save
-  + Using %run -i command to run the saved script
 
-* Thank you!
+* Summary
+  In this tutorial, we have learnt to –
+  - Retrieve history using =%hist= command.
+  - View only a part of history by passing an argument to =%hist=.
+  - Sav the required lines of code in the required order using =%save=.
+  - Use =%run -i= command to run the saved script.
+
+* Evaluation
+ 1. How do you retrieve the recent 5 commands
+    
+     - ``%hist``
+     - ``%hist -5``
+     - ``%hist 5``
+     - ``%hist 5-10``
+
+  2. How do you save the lines 2 3 4 5 7 9 10 11
+
+     - ``%save filepath 2-5 7 9-11``
+     - ``%save filepath 2-11``
+     - ``%save filepath``
+     - ``%save 2-5 7 9 10 11``
+
+  3. What will the command ``%hist 5 10`` display.
+
+     - The recently typed commands from 5 to 10 inclusive of 
+       the history command	
+     - The recently typed commands from 5 to 10 excluding
+       the history command
+
+* Solutions
+  1. %hist 5
+ 
+  2. %save filepath 2-5 7 9-11
+
+  3. %hist 5 10
+
+* Acknowledgement
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
+
+
+
 
 
