@@ -39,8 +39,7 @@ computing libraries.
 
 {{{ switch to terminal }}}
 
-We have an ``ipython`` terminal open, which we shall be using through
-out this session. 
+Open the ipython terminal. To invoke ipython interpreter type ipython -pyab.
 
 Let's use the ``round`` function as an example to understand what a
 default value of an argument means. Let's type the following
@@ -72,11 +71,17 @@ being 0. 0 is the default value of the argument.
   s.strip() # strips on spaces. 
   s.strip('@') # strips the string of '@' symbols.
 
+Thus it can be said that here blank space is the default argument.
+
   plot(x, y) # plots with x vs. y using default line style. 
   plot(x, y, 'o') # plots x vs. y with circle markers. 
 
+Hence, here when third argument is not provided, it shows default line style.
+
   linspace(0, 2*pi, 100) # returns 100 points between 0 and 2pi
   linspace(0, 2*pi) # returns 50 points between 0 and 2pi
+
+Hence, the default for the third argument is 50.
 
 .. #[punch: all above content goes on to a slide]
 
@@ -108,7 +113,7 @@ Now let us call the function with just one argument "Hello".
 "Hello" is treated as the ``greet`` and we get "Hello World" as
 the output. "World" is the default value for the argument ``name``. 
 
-Following is an (are) exercise(s) that you must do. 
+Pause the video and solve this exercise. Resume the video after you solve this.
 
 {{{ switch to next slide, containing problem statement of 
     question 1 }}}
@@ -133,7 +138,7 @@ default values should come at the end.
 .. #[[Anoop: In the slide, "when defining a function all the default
    arguments must be defined at the end" has to be emphasized"]]
 
-Following is an exercise that you must do. 
+Pause the video and solve this exercise. Resume the video after you solve this. 
 
 {{{ switch to next slide, containing the problem statement of 
     question 2 }}}
@@ -149,7 +154,7 @@ Please, pause the video here. Do the exercise and then continue.
 
   linspace?
 
-Following is an exercise that you must do. 
+Pause the video and solve this exercise. Resume the video after you solve this. 
 
 {{{ switch to next slide, problem statement }}}
 
