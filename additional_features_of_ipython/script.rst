@@ -30,7 +30,7 @@ Hello friends and welcome to the tutorial on Additional Features of IPython
 {{{ Show the slide containing the outline slide }}}
 
 In this tutorial, we shall look at additional features of IPython that help us
-to retreive the commands that we type on the interpreter and then save them
+to retrieve the commands that we type on the interpreter and then save them
 into a file and run it.
 
 Let us start ipython with pylab loaded, by typing
@@ -58,7 +58,7 @@ xsin(x) is actually x * sin(x)
     title("x and xsin")
 
 We now have the plot. Let us look at the commands that we have typed in. The
-history can be retreived by using =%hist= command. Type
+history can be retrieved by using =%hist= command. Type
 ::
 
     %hist
@@ -71,7 +71,7 @@ Please note that there is a % sign before the hist command. This implies that
 Python interpreter. These type of commands are called as magic commands.
 
 Also note that, the =%hist= itself is a command and is displayed as the most
-recent command. We should not that anything we type in is stored as history, 
+recent command. We should note that anything we type in is stored as history, 
 irrespective of whether it is command or an error or IPython magic command.
 
 If we want only the recent 5 commands to be displayed, we pass the number as an argument
@@ -204,9 +204,9 @@ We see that it raises NameError saying that the name linspace is not found.
 This brings us to the end of the tutorial.
 we have looked at 
 
- * Retreiving history using =%hist= command
- * Vieweing only a part of history by passing an argument to %hist
- * saving the required lines of code in required order using %save
+ * Retrieving history using =%hist= command
+ * Viewing only a part of history by passing an argument to %hist
+ * Saving the required lines of code in required order using %save
  * using %run -i command to run the saved script
 
 {{{ Show the "sponsored by FOSSEE" slide }}}
