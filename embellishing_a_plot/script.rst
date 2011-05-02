@@ -31,7 +31,7 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Hello friends and welcome to the tutorial on Embellishing Plots.
+Welcome to the tutorial on Embellishing Plots.
 
 
 .. L2
@@ -50,7 +50,7 @@ At the end of this tutorial, you will be able to,
 
 .. R3
 
-Let us start ipython with pylab loaded,open the terminal and type 
+Let us start ipython with pylab loaded, open the terminal and type 
 ::
    
     ipython -pylab
@@ -76,9 +76,8 @@ As we can see, the default colour and the default thickness of the
 line is as decided by pylab. Wouldn't it be nice if we could control
 these parameters in the plot? This is possible by passing additional
 arguments to the plot command.
-The additional argument that we shall be passing in here now is the
-colour argument. We shall first clear the figure and plot the same now in
-red colour. 
+We shall first clear the figure and plot the same by passing the additional color
+argument. Pass the argument 'r' for red color.
 
 .. L5
      
@@ -89,7 +88,7 @@ red colour.
 
 .. R6
 
-As we can see we have the same plot but now in red colour.
+The same plot is seen in red color.
 
 .. L6
 
@@ -97,8 +96,7 @@ As we can see we have the same plot but now in red colour.
 
 .. R7
 
-To alter the thickness of the line, we use the ``linewidth`` argument
-in the plot command. 
+The thickness of the line can be altered by 'linewidth' argument. 
 
 .. L7
     
@@ -108,8 +106,7 @@ in the plot command.
 
 .. R8
 
-This produces a plot with a thicker line, to be more precise plot with line
-thickness 2.
+A plot with line thickness 2 is produced.
 
 .. L8
 
@@ -117,7 +114,7 @@ thickness 2.
 
 .. R9
 
-Let's try out the following exercise
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
 Plot sin(x) in blue colour and with linewidth as 3.
 
@@ -139,10 +136,8 @@ A combination of colour and linewidth would do the job for us.
 
 .. R11 
 
-Occasionally we would also want to alter the style of line. Sometimes
-all we want is just a bunch of points not joined. This is possible by
-passing the linestyle argument along with or instead of the colour
-argument.
+To get the style of line as bunch of points not joined, pass the linestyle
+argument with or without color argument.
 
 .. L11
    
@@ -153,7 +148,7 @@ argument.
 
 .. R12
 
-Hence we get a plot with only points.
+We get a plot with only points.
 
 .. L12
  
@@ -161,7 +156,7 @@ Hence we get a plot with only points.
 
 .. R13
 
-We can produce the same plot but now in blue colour.
+To get the same plot in blue colour.
  
 .. L13
  
@@ -170,7 +165,9 @@ We can produce the same plot but now in blue colour.
     plot(x, sin(x), 'b.')
 
 .. R14
-Other available options can be seen in the documentation of plot.
+
+Other available options for passing arguments can be seen in the 
+documentation of plot.
 
 .. L14
   
@@ -189,14 +186,15 @@ Other available options can be seen in the documentation of plot.
 
 .. R15
 
-Try out the following exercises
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
-Plot the sine curve with green filled circles.
+1. Plot the sine curve with green filled circles.
+2. Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
 
 
 .. R16
 
-All we have to do is use a combination of linestyle and colour to acheive this.
+For question 1, use a combination of linestyle and colour.
 
 .. L16
 
@@ -208,15 +206,7 @@ All we have to do is use a combination of linestyle and colour to acheive this.
 
 .. L17
 
-{{{Show slide containing question 3}}}
-
-.. R17 
-
-Let us try out one more exercise 
- 
-Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
-
-.. L18
+For question 2, use a combination of linewidth argument and linestyle.
 
 {{{ Switch to terminal and type the following commands }}}
 ::
@@ -227,7 +217,7 @@ Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
 .. R19
 
 Now that we know how to produce a bare minimum plot with colour, style
-and thickness of our interest, we shall look at decorating the plot.
+and thickness of our interest, we shall look at further decorating the plot.
 
 .. R20
 
@@ -243,30 +233,28 @@ Let us start with a plot for the function -x^2 + 4x - 5.
 
 .. R21
 
-We now have the plot in a colour and linewidth of our interest. As you
-can see, the figure does not have any description describing the plot.
+As you can see, the figure does not have any description describing the plot.
 
-We will now add a title to the plot by using the ``title`` command.
+To add a title to the plot to describe what the plot is, use the ``title`` command.
 
 .. L21
   
 ::
    
-    title("Parabolic function -x^2+4x-5") 
+    title("Parabolic function -x^2+4x-5")
+
+The ``title`` command as you can see, takes a string as an argument 
 
 {{{ Show the plot window and point to the title }}}
 
 .. R22
 
-The figure now has a title which describes what the plot is. The
-``title`` command as you can see, takes a string as an argument and sets
-the title accordingly.
+The figure now has a title. But it is not formatted and does not look clean.
 
-The formatting in the title is messed and it does not look clean. You can imagine
-what would be the situation if there were fractions and more complex functions
-like log and exp. Wouldn't it be good if there was LaTeX like formatting?
+It would look shabby if there were fractions and more complex functions
+like log and exp. Wouldn't it be good if the title is seen in LaTeX like formatting?
 
-That is also possible by adding a ``$`` sign before and after the part of the 
+This is possible by adding a ``$`` sign before and after the part of the 
 string that should be in LaTeX style.
 
 .. L22
@@ -277,7 +265,7 @@ string that should be in LaTeX style.
 
 .. R23
 
-As we can see we get the polynomial formatted properly.
+As we can see, the polynomial is now formatted.
 
 .. L23
 
@@ -286,6 +274,8 @@ As we can see we get the polynomial formatted properly.
 .. L24
 
 {{{Show slide containing question 4}}}
+
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
 .. R24
 
@@ -306,37 +296,35 @@ The solution is to enclose the whole string in between $.
 
 .. R26
 
-Hence it gives a title that looks neatly formatted.
-
 Although we have title, the plot is not complete without labelling x
-and y axes. Hence we shall label x-axis to "x" and y-axis to "f(x)".
+and y axes. we shall label x-axis to "x" and y-axis to "f(x)".
 
 .. L26
  
 ::
     
     xlabel("x")
+    ylabel("f(x)")
 
 .. L27
 
-{{{ Switch to plot window and show the xlabel }}}
+
 
 .. R27
 
-As you can see, ``xlabel`` command takes a string as an argument,
-similar to the ``title`` command and sets it as the label to x-axis.
+As you can see, ``xlabel`` and 'ylabel' command takes a string as an argument. 
+xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis as 'f(x)'.
 
 .. R28
 
-Similarly, ``ylabel("f(x)")`` sets the name of the y-axis as "f(x)"
+
 
 .. L28
 
 ::
     
-    ylabel("f(x)")
 
-{{{ Show the plot window and point to ylabel and switch back to the terminal }}}
+{{{ Show the plot window and point to xlabel and ylabel and switch back to the terminal }}}
 
 .. L29
 
@@ -344,16 +332,18 @@ Similarly, ``ylabel("f(x)")`` sets the name of the y-axis as "f(x)"
 
 .. R29
 
-Now lets try out this exercise.
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
 Set the x and y labels as "x" and "f(x)" in LaTeX style.
+
+{{{ Pause for some time and then Show slide with answer 5 }}}
 
 Since we need LaTeX style formatting, all we have to do is enclose the string
 in between two $. 
 
 .. L30
 
-{{{ Pause for some time and then Show slide with answer 5 }}}
+
 
 .. R30
 
@@ -362,17 +352,15 @@ in between two $.
     xlabel("$x$")
     ylabel("$f(x)$")
 
-does the job for us.
-
 .. L31
 
 {{{ Show the plot window with clean labels }}}
 
 .. R31
 
-The plot is now almost complete. Except that we have still not seen how to 
-name the points. For example the point (2, -1) is the local maxima. We would
-like to name the point accordingly. We can do this by using the function ``annotate``.
+The plot is now almost complete. Except that the points are not named. 
+For example the point (2, -1) is the local maxima. We would
+like to name the point accordingly. To do this use the function ``annotate``.
 
 .. L31
 
@@ -397,7 +385,7 @@ The first is x co-ordinate and second is y co-ordinate.
 
 .. R33
 
-Let's try out this exercise.
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
 Make an annotation called "root" at the point (-4, 0).
 What happens to the first annotation ?
@@ -418,11 +406,12 @@ What happens to the first annotation ?
 
 As we can see, every annotate command makes a new annotation on the figure.
 
-Now we have everything we need to decorate a plot. but the plot would be
-incomplete if we can not set the limits of axes. This is possible using the
-button on the plot window.
+Now we have everything we need to decorate a plot, but the plot would be
+incomplete if we can not set the limits of axes. This can be done using the
+button provided on the plot window.
 
-we shall look at how to get and set them from the terminal.We use "xlim()" and "ylim()" functions.
+Else limits also can be get and set from the terminal. 
+Use "xlim()" and "ylim()" functions to get the limits.
 
 .. L35
   
@@ -433,10 +422,10 @@ we shall look at how to get and set them from the terminal.We use "xlim()" and "
 
 .. R35
 
-We see that ``xlim`` function returns the current x axis limits and ``ylim``
+``xlim`` function returns the current x axis limits and ``ylim``
 function returns the current y-axis limits.
 
-Let us look at how to set the limits.
+Set the limits of x-axis from -4 to 5 by giving command xlim(-4,5).
 
 .. L36
 
@@ -446,11 +435,9 @@ Let us look at how to set the limits.
 
 .. R36
 
-We see the limits of x-axis are now set to -4 and 5.
-
 .. R37
 
-Similarly we set the limits of y-axis appropriately.
+Similarly set the limits of y-axis appropriately.
 
 .. L37
 
@@ -463,6 +450,8 @@ Similarly we set the limits of y-axis appropriately.
 
 {{{ Pause here and try out the following exercises }}}
 
+Pause the video and do this exercise. Resume the video, after the exercise is solved.
+
 {{{Show slide containing question 7 and read it out }}}
 
 Set the limits of axes such that the area of interest is the rectangle (-1, -15) and (3, 0)
@@ -471,8 +460,8 @@ Set the limits of axes such that the area of interest is the rectangle (-1, -15)
 
 .. R38
 
-As we can see, the lower upper limits of x-axis in the question are -1 and 3.
-The limits of y-axis are -15 and 0.
+As we can see, the lower and upper limits of x-axis in the question are -1 and 3 respectively.
+The lower and upper limits of y-axis are -15 and 0 respectively.
 
 .. L39
 
@@ -485,7 +474,7 @@ The limits of y-axis are -15 and 0.
 
 .. R39
 
-Hence xlim with limits -1 & 3 and ylim with limits -15 & 0 gives us the required rectangle.
+This gives us the required rectangle.
 
 .. L40
 
@@ -493,14 +482,15 @@ Hence xlim with limits -1 & 3 and ylim with limits -15 & 0 gives us the required
 
 .. R40
 
-let's revise quickly what we have learnt today. 
+Lets Summarize. In this spoken tutorial we have learnt, 
 
- 1. to Modify the attributes of plot by passing additional arguments.
- #. to add title to a plot.
- #. to incorporate LaTeX style formatting.
- #. to label x and y axes.
- #. to add annotations to a plot.
- #. to set the limits of axes.
+ 1. to Modify the attributes of plot like color, line width, line style by passing additional arguments.
+ #. to add title to a plot using 'title' command.
+ #. to incorporate LaTeX style formatting by adding a ``$`` sign before and after the part of the 
+string.
+ #. to label x and y axes using xlabel() and ylabel() commands.
+ #. to add annotations to a plot using annotate() command.
+ #. to get and set the limits of axes using xlim() and ylim() commands.
 
 .. L41
 

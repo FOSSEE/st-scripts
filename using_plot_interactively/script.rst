@@ -4,7 +4,7 @@
 .. By the end of this tutorial you will --
 
 .. 1. Create simple plots of mathematical functions
-.. #. Use the Figure window to study plots better
+.. 2. Use features of graphical window to manipulate plots
 
 
 
@@ -30,7 +30,8 @@ team along with the logo of MHRD }}}
 
 Hello Friends and welcome to the tutorial on creating simple plots using
 iPython.
-I hope you have IPython running on your computer.
+I hope you have IPython installed on your computer if not, then refer to the spoken tutorial 
+on instaling ipython.
 
 .. L2
 
@@ -39,16 +40,16 @@ I hope you have IPython running on your computer.
 At the end of this tutorial, you will be able to, 
 
    1. Create simple plots of mathematical functions.
-   #. Use the Figure window to study plots better.
+   2. Use features of graphical window to manipulate plots
 
 
 .. R2
 
-In this tutorial we will learn how to plot using the plot command and how to use the user interface of plot figure.
+
 
 .. R3 
 
-Lets start ipython.Open the terminal and type  
+To start ipython, Open the terminal and type  
 ipython -pylab and hit enter.
 
 .. L3
@@ -61,13 +62,22 @@ ipython -pylab and hit enter.
 
 Pylab is a python library which provides plotting functionality.It
 provides many other important mathematical and scientific
-functions. After running IPython -pylab in the shell you will see some 
-information about ipython and pylab followed by the In[1] prompt.But if you get an error like ::
+functions.
+After running IPython -pylab in your shell, 
+the screen will look like this.
+
+.. Pause the video for 2 sec then continue. 
+
+But instead if you get the following error like::
+
+- show the error slide
 
    `ERROR: matplotlib could NOT be imported!  Starting normal
       IPython.`
 
 Then you will have to install the matplotlib and run this command again.
+
+.. Add some instruction to help user to install matplotlib.
 
 .. L4
 
@@ -75,7 +85,8 @@ Then you will have to install the matplotlib and run this command again.
 
 .. R5
 
-Now type 'linspace' followed by a '?' mark in your ipython shell 
+To get array of numbers we use linspace command. 
+Type 'linspace' followed by a '?' mark to get detailed documentation/help of it
              
 .. L5
 
@@ -85,10 +96,9 @@ Now type 'linspace' followed by a '?' mark in your ipython shell
 
 .. R6
 
-as the documentation says, it returns `num` evenly spaced samples,
+As the documentation says, it returns `num` evenly spaced samples,
 calculated over the interval start and stop.  To illustrate this, lets
 try to generate 100 points.Type ``linspace(1,100,100)`` and hit enter.
-As you can see a sequence of numbers from 1 to 100 appears.
 
 .. L6
 
@@ -96,9 +106,11 @@ As you can see a sequence of numbers from 1 to 100 appears.
     
     linspace(1,100,100)
 
+As you can see a sequence of numbers from 1 to 100 appears.
+
 .. R7
 
-Now lets try to generate 200 points between 0 and 1,we do that by typing  linspace(0,1,200).
+To generate 200 points between 0 and 1, type linspace(0,1,200).
 
 .. L7
 
@@ -108,10 +120,10 @@ Now lets try to generate 200 points between 0 and 1,we do that by typing  linspa
 
 .. R8
 
-Here,0 is the start , 1 the stop and 200 the number of points.In linspace 
+Here,0 is the start , 1 is the stop and 200 is the number of points. In linspace 
 the start and stop points can be integers, decimals , or constants.  
-Let's try and get 100 points between -pi to pi.Here 'pi' is a constant 
-defined by pylab. Save this to the variable,say p.
+To get 100 points between -pi to pi where 'pi' is a constant 
+defined by pylab and save the result to the variable,say p. Type p=linspace(-pi,pi,100).
            
 .. L8
 
@@ -121,9 +133,7 @@ defined by pylab. Save this to the variable,say p.
 
 .. R9
 
-If we now type ``len(p)``
-we will get the no. of points. len function gives the no of elements
-of a sequence.
+To get the number of elements or points of a sequence say p type ''len(p)''
 
 .. L9
  
@@ -134,7 +144,7 @@ of a sequence.
 
 .. R10
 
-Let's try and plot a cosine curve between -pi and pi.For this we use the plot command.
+To plot a cosine curve between -pi and pi, we use the plot command.
 Here cos(p) gets the cosine value at every point
 corresponding to point p. 
 
@@ -158,7 +168,7 @@ plot function.
 
 .. R12
 
-Now to clear the plot ,we use the ``clf()`` function 
+To clear the plot, use the ``clf()`` function 
 
 .. L12 
      
@@ -168,8 +178,9 @@ Now to clear the plot ,we use the ``clf()`` function
 
 .. R13
 
-This is done because if we wish to make another plot,it will overlap the previous plot.
-As we do not wish to clutter the area with overlaid plots , we just clear it with clf().  
+If the plot is not cleared, then any new plot will overlap the previous plot. Hence to avoid 
+cluttering the area with overlaid plots use clf() function.
+ 
 Now lets try a sine plot. 
 
 .. L13
@@ -180,7 +191,7 @@ Now lets try a sine plot.
 
 .. R14 
 
-We can study the plot better on the plot window by using the various options available on it.Let us have a look at these options.
+We can manipulate the plot in the graphical window.
 
 .. L14
 
@@ -188,7 +199,8 @@ We can study the plot better on the plot window by using the various options ava
 
 .. R15
 
-As we can observe, moving the mouse pointer along the plot gives us the location of each point on the plot 
+The location of the mouse pointer on the window is displayed in bottom right corner of the window.
+By moving the mouse pointer the location of each point is seen.
 
 .. L15
 
@@ -198,9 +210,9 @@ As we can observe, moving the mouse pointer along the plot gives us the location
 
 To the bottom left of the window,there are a few buttons.The right most among them is
 for saving the file. 
-Just click on it and type the file name. We will save the plot 
+Just click on it and type the file name in the box provided. We will save the plot 
 by the name `sin_curve` in pdf format.As you can see we can specify the format 
-of file from the dropdown.Formats like png ,eps ,pdf, ps are available.
+of file from the dropdown. Formats like png ,eps ,pdf, ps are also available.
 
 .. L16
 
@@ -255,7 +267,8 @@ The last one is 'home' referring to the initial plot.
 
 .. R22
 
-Following is an exercise that you must do.Please, pause the video and do the exercise. 
+Pause the video and do this exercise. Resume the video once done.
+
 
       Plot (sin(x)*sin(x))/x.
 
@@ -274,9 +287,9 @@ Let's revise quickly what we have learnt today
   1. To Start Ipython with pylab. 
   #. To Use the linspace function to create `num` equally spaced points in a region.
   #. To Find the length of sequnces using len function.
-  #. To Plot mathematical functions using plot.
-  #. To Clear drawing area using clf. 
-  #. To Use the UI of plot for studying it better and using functionalities like save,zoom and moving the plots on x and y axis. 
+  #. To Plot mathematical functions using plot function.
+  #. To Clear drawing area using clf function. 
+  #. Manipulate the plot in the window itself by using functionalities like save, zoom, move, home, arrow buttons. 
 
 .. L24
 
