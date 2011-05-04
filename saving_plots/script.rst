@@ -23,7 +23,7 @@
 .. #[Puneeth: Quickref missing.]
 
 =======
-Savefig
+Script
 =======
 .. L1
 
@@ -45,20 +45,20 @@ At the end of this tutorial, you will be able to,
  1. Save plots using ``savefig()`` function.
  #. Save plots in different formats.  
 
-.. L3
-
-{{{ switch to next slide, a sine wave}}}
-
 .. R3
 
 Start your IPython interpreter with the command 
 ipython -pylab
 
-.. L4
+.. L3
 
 ::
 
     ipython -pylab
+
+.. L4
+
+{{{Switch to slide 'Creating a basic plot'}}}
 
 .. R4
 
@@ -98,14 +98,14 @@ reports.
 
 {{{ switch to next slide, savefig() }}}
 
-{{{ Switch the focus to IPython interpreter window }}}
-
 .. R7
 
 For saving the plot, we will use ``savefig()`` function.For this we shall keep the 
 plot window open alongside the terminal. The statement is, 
 
 .. L8
+
+{{{ Switch the focus to IPython interpreter window }}}
 
 ::
 
@@ -167,13 +167,11 @@ support transparency etc.
 
 .. L13
 
-{{{ switch to next slide, exercise 1 }}}
+{{{ switch to next slide,'exercise 1' }}}
 
 .. R13
 
-Let us now try to save the plot in eps format. ``eps`` stands for
-encapsulated post script, and it can be embedded in your latex
-documents. Pause here and try to figure it out yourself.
+Save the sine plot in the format EPS which can be embedded in LaTeX documents.
 
 .. L14
 
@@ -185,8 +183,6 @@ We still have the sine plot with us, and now let us save the plot as
 ``sine.eps``.
 
 .. L15
-
-{{{ switch to next slide, solution 1 }}}
 
 {{{ Switch focus to IPython interpreter }}}
 
@@ -208,8 +204,8 @@ Now let us go to ``/home/fossee`` and see the new file created.
 
 .. L17
 
-{{{ Highlight the file sine.eps with a single mouse click for 2
-seconds and then double click and open the file }}}
+{{{ Highlight the file sine.eps for 2 seconds and 
+    then double click and open the file }}}
 
 .. R17
 

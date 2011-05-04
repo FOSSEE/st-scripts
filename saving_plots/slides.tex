@@ -1,6 +1,6 @@
-% Created 2010-10-11 Mon 17:08
+% Created 2011-05-03 Tue 14:50
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Savefig}
+\title{}
 \author{FOSSEE}
 \date{2010-10-11 Mon}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,100 +41,106 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Saving Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
 
 \begin{itemize}
-\item Saving plots.
-\item Plotting in different formats.
-\item Locating the file in the file system.
+\item Save plots using ``savefig()`` function.
+\item Save plots in different formats.
 \end{itemize}
+  
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Creating a basic plot}
-\label{sec-2}
+\label{sec-3}
 
   Plot a sine wave from -3pi to 3pi.
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 In []: x = linspace(-3*pi,3*pi,100)
 
 In []: plot(x, sin(x))
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{savefig()}
-\label{sec-3}
+\label{sec-4}
 \begin{itemize}
 
 \item savefig() - to save plots
-\label{sec-3_1}%
+\label{sec-4_1}%
 \begin{verbatim}
     syntax: savefig(fname)
 \end{verbatim}
 
 
 \item example
-\label{sec-3_2}%
+\label{sec-4_2}%
 \begin{itemize}
 
-\item savefig('/home/fossee/sine.png')
-\label{sec-3_2_1}%
+\item savefig('/home/fossee/sine.png')\\
+\label{sec-4_2_1}%
 \begin{itemize}
 \item file sine.png saved to the folder /home/fossee
 \item .png - file type
 \end{itemize}
-
 
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{More on savefig()}
-\label{sec-4}
+\label{sec-5}
 \begin{itemize}
 
-\item Recall
-\label{sec-4_1}%
+\item Recall\\
+\label{sec-5_1}%
 \begin{itemize}
 \item .png - file type
 \end{itemize}
 
-
 \item File types supported
-\label{sec-4_2}%
+\label{sec-5_2}%
 \begin{itemize}
 
 \item .pdf - PDF(Portable Document Format)\\
-\label{sec-4_2_1}%
+\label{sec-5_2_1}%
 \item .ps - PS(Post Script)\\
-\label{sec-4_2_2}%
+\label{sec-5_2_2}%
 \item .eps - Encapsulated Post Script\\
-\label{sec-4_2_3}%
-\texttt{to be used with} \LaTeX{} \texttt{documents}
+\label{sec-5_2_3}%
+\verb~to be used with~ \LaTeX{} \verb~documents~
 
 \item .svg - Scalable Vector Graphics\\
-\label{sec-4_2_4}%
-\texttt{vector graphics}
+\label{sec-5_2_4}%
+\verb~vector graphics~
 
 \item .png - Portable Network Graphics\\
-\label{sec-4_2_5}%
-\texttt{supports transparency}
+\label{sec-5_2_5}%
+\verb~supports transparency~
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 1}
-\label{sec-5}
-
-  Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
 \label{sec-6}
 
-\begin{verbatim}
-savefig('/home/fossee/sine.eps')
-\end{verbatim}
+  Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 2}
@@ -147,39 +152,37 @@ savefig('/home/fossee/sine.eps')
 \frametitle{Summary}
 \label{sec-8}
 
-  You should now be able to
-\begin{itemize}
-\item Use \texttt{savefig()} function
-\item Save plots in different formats
+  In this tutorial, we have learnt to –
 
 \begin{itemize}
-\item PDF
-\item PS
-\item PNG
-\item SVG
-\item EPS
+\item Save plots using the ``savefig()`` function.
+\item Save the plots in differnt formats.
+\begin{itemize}
+\item pdf
+\item ps
+\item png
+\item svg
+\item epg
 \end{itemize}
-
-\item Locating the files in file system.
+\item Locate files in the file system.
 \end{itemize}
-
-    
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Acknowledgement}
 \label{sec-9}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
+\end{frame}
 \end{frame}
 
 \end{document}

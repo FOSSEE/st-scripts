@@ -50,55 +50,22 @@ MHRD, Govt. of India
  - Add annotations to the plot. 
  - Set and Get the limits of axes.
 * Question 1
-  Plot sin(x) in blue colour and with linewidth as 3
-* Solution 1
-  #+begin_src python
-    In []: clf()
-    In []: plot(x, sin(x), 'b', linewidth=3)
-  #+end_src
+  Plot sin(x) in blue colour alongwith linewidth as 3
 * Question 2
   Plot the sine curve with green filled circles.
-* Solution 2
-  #+begin_src python
-    In []: clf()
-    In []: plot(x, cos(x), 'go')
-  #+end_src
 * Question 3
   Plot the curve of x vs tan(x) in red dashed line and linewidth 3
-* Solution 3
-  #+begin_src python
-    In []: clf()
-    In []: plot(x, cos(x), 'r--')
-  #+end_src
 * Question 4
   Change the title of the figure such that the whole title is
   formatted in LaTex style
-* Solution 4 
-  #+begin_src python
-    In []: title("$Parabolic function -x^2+4x-5$")
-  #+end_src
 * Question 5
   Set the x and y labels as "x" and "f(x)" in LaTex style.
-* Solution 5
-  #+begin_src python
-    In []: xlabel("$x$")
-    In []: yalbel("$f(x)$")
-  #+end_src
 * Question 6
   Make an annotation called "root" at the point (-4, 0). What happens
   to the first annotation?
-* Solution 6
-  #+begin_src python
-    In []: annotate("root", xy=(-4,0))  
-  #+end_src
 * Question 7
   Set the limits of axes such that the area of interest is the
   rectangle (-1, -15) and (3, 0)
-* Solution 7
-  #+begin_src python
-    In []: xlim(-1, 3)
-    In []: ylim(-15, 0)
-  #+end_src
 * Summary
   In this tutorial,we have learnt to-
   + Modify the attributes of plot by passing additional arguments
@@ -122,5 +89,6 @@ MHRD, Govt. of India
   \end{center}  
   \end{block}
 #+end_latex
+
 
 

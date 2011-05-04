@@ -1,6 +1,6 @@
-% Created 2011-04-27 Wed 16:40
+% Created 2011-05-03 Tue 11:51
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -23,14 +23,13 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Multiple Plots}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
 
 
 
@@ -42,8 +41,21 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Objective}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Multiple Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
 
   At the end of this tutorial you will be able to
 
@@ -57,8 +69,64 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{itemize}
 \end{frame}
 \begin{frame}
+\frametitle{Question1}
+\label{sec-3}
+
+
+\begin{itemize}
+\item Draw two plots overlaid upon each other, with the first plot
+    being a parabola of the form y = 4(x \^{} 2) and the second being a
+    straight line of the form y = 2x + 3 in the interval -5 to 5.
+\item Use colors to differentiate between the plots and use legends to
+    indicate what each plot is doing.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question2}
+\label{sec-4}
+
+
+\begin{itemize}
+\item Draw a line of the form y = x as one figure and another line
+    of the form y = 2x + 3.
+\item Switch back to the first figure, annotate the x and y intercepts.
+\item Now switch to the second figure and annotate its x and y intercepts.
+    Save each of them.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question3}
+\label{sec-5}
+
+
+\begin{itemize}
+\item We know that the Pressure, Volume and Temperatures are held by
+    the equation PV = nRT where nR is a constant. Let us assume
+    nR=0.01 Joules/Kelvin and T = 200K.
+    V can be in the range from 21cc to 100cc.
+\item Draw two different plots as subplots, one being the Pressure
+    versus Volume plot and the other being Pressure versus Temperature
+    plot.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-6}
+
+  In this tutorial, we have learnt to –
+
+\begin{itemize}
+\item draw multiple plots which are overlaid.
+\item use the figure command.
+\item use the legend command.
+\item switch between the plots and perform some operations on each
+    of them like saving the plots.
+\item create subplots and to switch between them.
+\end{itemize}
+\end{frame}
+\begin{frame}
 \frametitle{Acknowledgement}
-\label{sec-2}
+\label{sec-7}
 
   \begin{block}{}
   \begin{center}

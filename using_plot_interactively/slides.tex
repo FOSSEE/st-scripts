@@ -1,4 +1,4 @@
-% Created 2010-11-11 Thu 13:15
+% Created 2011-05-04 Wed 11:44
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Using Plot Interactively}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,26 +41,44 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
 
-  How to plot a simple mathematical function.
-  Using the User Interface of plot figure.
+\begin{center}
+\textcolor{blue}{Using plot Interactively}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
+
+\begin{itemize}
+\item Create simple plots of mathematical functions.
+\item Use the Figure window to study plots better.
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Error if Ipython not installed}
-\label{sec-2}
+\label{sec-3}
 \begin{itemize}
 
 \item `ERROR: matplotlib could NOT be imported!  Starting normal IPython.`\\
-\label{sec-2_1}%
+\label{sec-3_1}%
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Plot UI}
-\label{sec-3}
+\label{sec-4}
 
    \includegraphics[height=0.12in, interpolate=true]{buttons}
+
 \begin{itemize}
 \item Save
 \item Zoom
@@ -69,19 +86,33 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Back and Forward Button
 \item Home
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question1}
+\label{sec-5}
 
+  Plot (sin(x)*sin(x))/x.
 
-    
+\begin{enumerate}
+\item Save the plot by the sinsquarebyx.pdf in pdf format.
+\item Zoom and find the maxima.
+\item Bring it back to initial position.
+\end{enumerate}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-4}
+\label{sec-6}
+
+  In this tutorial,we have learnt to-
 
 \begin{itemize}
-\item Plotting mathematical functions using plot.
-   \includegraphics[height=0.12in, interpolate=true]{buttons}
-\item Using the UI of plot
-
+\item Start Ipython with pylab.
+\item Use the linspace function to create `num` equally spaced points in a region.
+\item Find the length of sequnces using len function.
+\item Plot mathematical functions using plot.
+\item Clear drawing area using clf.
+\item Plott mathematical functions using plot.
+\item Use the UI of plot
 \begin{itemize}
 \item Save
 \item Zoom
@@ -89,11 +120,46 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Back and Forward Button
 \item Home
 \end{itemize}
-
 \end{itemize}
+ 
+\end{frame}
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-7}
 
-  
-  
+
+\begin{enumerate}
+\item Create 100 equally spaced points between -pi/2 and pi/2?
+\item How do you clear a figure in ipython?
+\item How do find the length of a sequen
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions\ldots{}}
+\label{sec-8}
+
+
+\begin{enumerate}
+\item linspace(-pi/2,pi/2,100)
+\item clf()
+\item len(sequence\_name)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Acknowledgement\ldots{}}
+\label{sec-9}
+
+ \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
+  \end{center}  
+  \end{block}
 \end{frame}
 
 \end{document}

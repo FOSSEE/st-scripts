@@ -33,7 +33,6 @@ team along with the logo of MHRD }}}
 
 Welcome to the tutorial on Embellishing Plots.
 
-
 .. L2
 
 {{{ Show the slide containing objectives }}}
@@ -51,6 +50,7 @@ At the end of this tutorial, you will be able to,
 .. R3
 
 Let us start ipython with pylab loaded, open the terminal and type 
+
 ::
    
     ipython -pylab
@@ -116,7 +116,7 @@ A plot with line thickness 2 is produced.
 
 Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
-Plot sin(x) in blue colour and with linewidth as 3.
+Plot sin(x) in blue colour alongwith linewidth as 3.
 
 .. L9
 
@@ -179,7 +179,6 @@ documentation of plot.
 
 {{{ Show the options available for line style and colors }}}
 
-
 .. L15
 
 {{{Show slide containing question 2}}}
@@ -188,13 +187,11 @@ documentation of plot.
 
 Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
-1. Plot the sine curve with green filled circles.
-2. Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
-
+ Plot the sine curve with green filled circles.
 
 .. R16
 
-For question 1, use a combination of linestyle and colour.
+We use a combination of linestyle and colour.
 
 .. L16
 
@@ -206,9 +203,22 @@ For question 1, use a combination of linestyle and colour.
 
 .. L17
 
-For question 2, use a combination of linewidth argument and linestyle.
+{{{Show slide containing question 3}}}
+
+.. R17
+
+Pause the video here, try out the following exercise and resume the video.
+
+Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
+
+.. R18
+
+Here we shall use a combination of linewidth argument and linestyle.
+
+.. L18
 
 {{{ Switch to terminal and type the following commands }}}
+
 ::
    
     clf()
@@ -218,6 +228,8 @@ For question 2, use a combination of linewidth argument and linestyle.
 
 Now that we know how to produce a bare minimum plot with colour, style
 and thickness of our interest, we shall look at further decorating the plot.
+
+.. L19
 
 .. R20
 
@@ -275,11 +287,9 @@ As we can see, the polynomial is now formatted.
 
 {{{Show slide containing question 4}}}
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
-
 .. R24
 
-{{{ Let us try out the following exercise }}}
+Pause the video here, try out the following exercise and resume the video.
 
 Change the title of the figure such that the whole title is formatted
 in LaTeX style.
@@ -308,8 +318,6 @@ and y axes. we shall label x-axis to "x" and y-axis to "f(x)".
 
 .. L27
 
-
-
 .. R27
 
 As you can see, ``xlabel`` and 'ylabel' command takes a string as an argument. 
@@ -317,13 +325,10 @@ xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis as
 
 .. R28
 
-
-
 .. L28
 
 ::
     
-
 {{{ Show the plot window and point to xlabel and ylabel and switch back to the terminal }}}
 
 .. L29
@@ -332,25 +337,21 @@ xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis as
 
 .. R29
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
+Pause the video here, try out the following exercise and resume the video.
 
 Set the x and y labels as "x" and "f(x)" in LaTeX style.
-
-{{{ Pause for some time and then Show slide with answer 5 }}}
 
 Since we need LaTeX style formatting, all we have to do is enclose the string
 in between two $. 
 
 .. L30
 
-
-
-.. R30
-
-{{{ Read out the commands on the slides }}}
+::
 
     xlabel("$x$")
     ylabel("$f(x)$")
+
+.. R30
 
 .. L31
 
@@ -396,8 +397,8 @@ What happens to the first annotation ?
 
 .. L34
 
-{{{Show slide with answer 6}}}
 {{{ Switch to the terminal and type the command }}}
+
 ::
 
     annotate("root", xy=(-4,0))  
@@ -445,58 +446,55 @@ Similarly set the limits of y-axis appropriately.
      
     ylim(-15, 2)
 
-
 .. L38
 
-{{{ Pause here and try out the following exercises }}}
+{{{Show slide containing question 7 }}}
+
+.. R38
 
 Pause the video and do this exercise. Resume the video, after the exercise is solved.
 
-{{{Show slide containing question 7 and read it out }}}
-
 Set the limits of axes such that the area of interest is the rectangle (-1, -15) and (3, 0)
 
-{{{ continue from paused state }}}
-
-.. R38
+.. R39
 
 As we can see, the lower and upper limits of x-axis in the question are -1 and 3 respectively.
 The lower and upper limits of y-axis are -15 and 0 respectively.
 
 .. L39
 
-{{{Show slide with answer 7}}}
-
 ::
 
     xlim(-1, 3)
     ylim(-15, 0)
 
-.. R39
+.. R40
 
 This gives us the required rectangle.
 
 .. L40
 
+.. L41
+
 {{{ Show summary slide }}}
 
-.. R40
+.. R41
 
-Lets Summarize. In this spoken tutorial we have learnt, 
+Let's quickly revise what we have learnt today. In this spoken tutorial we have learnt, 
 
  1. to Modify the attributes of plot like color, line width, line style by passing additional arguments.
  #. to add title to a plot using 'title' command.
  #. to incorporate LaTeX style formatting by adding a ``$`` sign before and after the part of the 
-string.
+    string.
  #. to label x and y axes using xlabel() and ylabel() commands.
  #. to add annotations to a plot using annotate() command.
  #. to get and set the limits of axes using xlim() and ylim() commands.
 
-.. L41
+.. L42
 
 {{{ Show the 'self assesment questions' slide}}}
 
-.. R41
+.. R42
 
 Here are some self assessment questions for you to solve.
 
@@ -511,12 +509,11 @@ Here are some self assessment questions for you to solve.
   
 3. How do you set the title as x^2-5x+6 in LaTex style formatting.
 
-    
-.. L42
+.. L43
 
 {{{ solutions for the self assessment questions }}}
 
-.. R42
+.. R43
 
 And the answers,
 
@@ -530,16 +527,17 @@ the ``linspace`` and ``plot`` command as,
 2. No. We do not have an option to modify the alignment of text in the command ``ylabel``.
 
 3. To set the title in LaTex style formatting,we write the equation between two dollar signs as,
+
 ::
 
     title("$x^2-5x+6$")
 
 
-.. L43
+.. L44
 
 {{{ a thank you slide }}}
 
-.. R43
+.. R44
 
 Hope you have enjoyed and found it useful.
 Thankyou!

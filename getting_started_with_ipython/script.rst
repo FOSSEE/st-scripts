@@ -90,6 +90,7 @@ y to say yes and quit ipython and n to say no if you dont want to quit
 the ipython. Press y.
 
 .. L6
+
 Press y and hit enter. 
 
 .. R7
@@ -118,7 +119,7 @@ Notice that the output is displayed with an ``Out[1]`` indication.
 
     1+2
 
-    {{Point at the Out[1] prompt}}
+{{Point at the Out[1] prompt}}
 
 .. R9
 
@@ -218,7 +219,7 @@ out all the possible completions of r.
 
 .. R16
 
-Now let's try out an exercise.Pause the video and solve the problem.
+Now let's try out an exercise.Pause the video,solve the problem and resume the video.
 
   1. find out the commands starting with "ab"?
   2. list out the commands starting with "a"?
@@ -231,8 +232,12 @@ the commands starting with a.
 
 .. L17
 
-(show solution on terminal/slide)
+::
 
+    ab<tab>
+    a<tab>
+
+{{{ Show slide with Solution1 and read out the same }}}
 
 .. R18
 
@@ -247,16 +252,15 @@ abs? and press enter
 
 ::
  
-  abs?
+    abs?
 
 
 .. L19
 
 ::
 
-  abs(-19)
-
-  abs(19)
+    abs(-19)
+    abs(19)
 
 .. R19
 
@@ -280,8 +284,9 @@ as the result.
 
 .. R21
 
-Now try to solve Following exercise,
-%%2%% Look-up the documentation of ``round`` and see how to use it.
+Pause the video here, try out the following exercise and resume the video.
+
+Look-up the documentation of ``round`` and see how to use it.
 
 .. L21   
 
@@ -291,7 +296,7 @@ Now try to solve Following exercise,
 
 ::
 
-   round?
+    round?
 
 .. R22
 
@@ -313,8 +318,15 @@ The function ``round``, rounds a number to a given precision.
 
 .. R24
 
+Pause the video here, try out the following exercise and resume the video.
 Let us now try few more examples with the function round.
-Check the output of
+Check the output of the following commands.
+
+.. L24
+
+{{Show slide with question 3}}
+
+.. L25
 
 ::
 
@@ -325,17 +337,9 @@ Check the output of
     round(2.484,1)
     round(2.484,2)
 
-.. L24
-
-{{Show slide with question 3}}
-
-.. L25
-
-{{Show slide with solution 3}}
+{{Show slide with solution 3 and read out the same }}
 
 .. R25
-
-We got 2.0, 2.5, and 2.48 as expected.
 
 .. R26
 
@@ -369,6 +373,7 @@ complete the command of the same examples with close parenthesis and
 press enter.  We got the expected output that is 2.0
 
 .. L27
+
 {{ Point at the prompt with three dots }}
 
 ::  
@@ -393,7 +398,7 @@ type Ctrl-C to interrupt the command and to get back to the
 
 .. R29
 
-Try the following exercise
+Pause the video here, try out the following exercise and resume the video.
 
 1. type round(2.484, and press enter. and then cancel the command
    using Ctrl-C.
@@ -403,27 +408,26 @@ Try the following exercise
 
 {{Show slide with question 4}}
  
-
 .. L30
 
-{ show the solution on terminal and slide }
+{ show the solution on terminal }
 
 ::
 
-  round(2.484 
-  ^C
+    round(2.484 
+    ^C
 
-  round(2.484, 2)
+    round(2.484, 2)
 
 .. R30
 
 .. L31
 
-{{{ show the summary slide and read out the same }}}
+{{{ show the summary slide }}}
 
 .. R31 
 
-let's revise quickly what we have learnt today.
+let's revise quickly what we have learnt today.In this tutorial we learnt 
 
   1. to invoke the ``ipython`` interpreter by typing ipython. 
   #. to quit the ``ipython`` interpreter by using <ctrl>d. 
@@ -463,7 +467,6 @@ Here are some self assessment questions for you to solve
 
 (solution of self assessment questions on slide)
 
-
 .. R33
 
 And the answers,
@@ -473,8 +476,10 @@ And the answers,
 3. We use ? at the end of the function name to display its documentation.
 
 .. L34
+
 {{a thank you slide}}
 
 .. R34
+
 Hope you have enjoyed and found it useful.
 Thank you!

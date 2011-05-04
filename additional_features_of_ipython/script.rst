@@ -34,7 +34,7 @@ Hello friends and welcome to the tutorial on "Additional Features of IPython".
 
 .. L2
 
-{{{ Show the slide containing the outline slide }}}
+{{{ Show the slide containing the objectives }}}
 
 .. R2
 
@@ -81,7 +81,7 @@ xsin(x) is actually x * sin(x)
     plot(x, sin(x))
     xlabel("x")
     ylabel("$f(x)$")   
-    title("x and xsin")
+    title("x and xsin(x)")
 
 .. R6
 
@@ -123,17 +123,19 @@ The default number is 40.
 
 .. R9
 
-Pause here and try out the following exercise
+ Pause the video here, try out the following exercise and resume the video.
 
      Read through the documentation of %hist and find out how to
      list all the commands between 5 and 10.
 
 .. L9
 
+{{{ Show slide with question 1 }}}
+
 .. L10
 
 {{{ continue from paused state }}}
-
+{{{ Switch to the terminal }}}
 ::
 
     %hist 5 10
@@ -199,11 +201,13 @@ arguments there after are the commands to be saved in the given order.
 
 .. R16
 
-Pause here and try out the following exercise
+Pause the video here, try out the following exercise and resume the video.
 
     Change the label on y-axis to "y" and save the lines of code accordingly.
 
 .. L16
+
+{{{ Show slide with question 2 }}}
 
 .. L17
 
@@ -257,16 +261,18 @@ Hence to view the plot type ``show()`` on your terminal
 
 .. R21
 
-Pause here and try out the following exercise
+ Pause the video here, try out the following exercise and resume the video.
 
-     Use %hist and %save and create a script that has show in it and run it
-     to produce and show the plot.
+     Use %hist and %save and create a script that has the function show() in it.Run the
+     script to produce the plot and display the same.
 
 <Pause>
 
 We first look at the history using
 
 .. L21
+
+{{{ Show slide with question 3 }}}
 
 ::
 
@@ -299,13 +305,15 @@ interpreter and used to run the script.
 
 .. R24
 
-Pause here and try out the following exercise
+ Pause the video here, try out the following exercise and resume the video.
 
    Run the script without using the -i option. Do you find any difference?
 
 <Pause>
 
 .. L24
+
+{{{ Show slide with question 4 }}}
 
 .. L25
 
@@ -327,7 +335,7 @@ This brings us to the end of the tutorial.let's revise quickly what we have lear
 
  1. to retreive the history using =%hist= command.
  #. to view only a part of history by passing an argument to %hist.
- #. to save the required lines of code in required order using %save.
+ #. to save the required lines of code in required order using %save command.
  #. to use %run -i command to run the saved script.
 
 .. L27

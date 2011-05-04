@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Savefig
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+EMAIL: info@fossee.in    
 #+DATE: 2010-10-11 Mon
@@ -29,11 +29,24 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Saving plots.
-  - Plotting in different formats.
-  - Locating the file in the file system.
+* 
+#+begin_latex
+\begin{center}
+\textcolor{blue}{Saving Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
 
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+  - Save plots using ``savefig()`` function.
+  - Save plots in different formats.
+  
 * Creating a basic plot
   Plot a sine wave from -3pi to 3pi.
   #+begin_src python
@@ -63,37 +76,33 @@
     ~supports transparency~
 * Exercise 1
   Save the sine plot in the format EPS which can be embedded in LaTeX documents.
-* Solution 1
-  #+begin_src python
-    savefig('/home/fossee/sine.eps')
-  #+end_src
 * Exercise 2
   Save the sine plot in PDF, PS and SVG formats.
 
 * Summary
-  You should now be able to
-  - Use ~savefig()~ function
-  - Save plots in different formats
-      - PDF
-      - PS
-      - PNG
-      -	SVG
-      - EPS
-  - Locating the files in file system.
-    
-* Thank you!
+  In this tutorial, we have learnt to –
+  - Save plots using the ``savefig()`` function.
+  - Save the plots in differnt formats.
+    - pdf
+    - ps
+    - png
+    - svg
+    - epg
+  - Locate files in the file system.
+* Acknowledgement
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
+\end{frame}
 #+end_latex
 
 

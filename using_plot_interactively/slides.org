@@ -62,6 +62,11 @@ MHRD, Govt. of India
   - Back and Forward Button
   - Home
 
+* Question1
+  Plot (sin(x)*sin(x))/x.
+  1. Save the plot by the sinsquarebyx.pdf in pdf format.
+  2. Zoom and find the maxima.
+  3. Bring it back to initial position. 
 
 * Summary
   In this tutorial,we have learnt to-

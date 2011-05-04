@@ -37,7 +37,7 @@ At the end of this tutorial, you will be able to,
  #. use the figure command. 
  #. use the legend command 
  #. switch between the plots and perform some operations on each of them like
-   saving the plots.
+    saving the plots.
  #. create and switch between subplots
  
 .. R3
@@ -146,8 +146,10 @@ serial number.
 Now we can see the legends being displayed for the respective sine and
 cosine plots on the plot area.
 
+.. R11
+
 We have learnt quite a lot of things now, so let us take up an
-exercise.Pause the video here and do the exercise.
+exercise.Pause the video here,do the exercise and resume the video.
 
    Draw two plots overlaid upon each other, with the first plot
    being a parabola of the form y = 4(x ^ 2) and the second being a
@@ -157,9 +159,8 @@ exercise.Pause the video here and do the exercise.
 
 .. L11
 
-{{{ pause for a while and continue from paused state }}}
+{{{ Show slide with question 1 }}}
 
-.. R11
 
 .. R12
 
@@ -167,6 +168,8 @@ We can obtain the two plots in different colors using the following
 commands
 
 .. L12
+
+{{{ pause for a while and continue from paused state }}}
 
 ::
 
@@ -266,7 +269,7 @@ the second plot.
 
 .. R20
 
-Let us attempt another exercise problem.Pause here and try to solve the problem
+Let us attempt another exercise problem.Pause here,try to solve the problem and resume the video.
 
    Draw a line of the form y = x as one figure and another line
    of the form y = 2x + 3. Switch back to the first figure, annotate
@@ -275,8 +278,8 @@ Let us attempt another exercise problem.Pause here and try to solve the problem
 
 .. L20
 
-{{{ Pause for a while and continue from the paused state }}}
-
+{{{ Show slide with question 2 }}}
+ 
 .. R21
 
 To solve this problem we should first create the first figure using
@@ -284,6 +287,8 @@ the figure command. Before that, let us first run clf command to make
 sure all the previous plots are cleared
 
 .. L21
+
+{{{ Pause for a while and continue from the paused state }}}
 
 ::
 
@@ -374,7 +379,7 @@ subplot area using the plot command.
 
 .. L26
 
-{{{ Switch to ipython }}}
+{{{ Switch to terminal }}}
 
 ::
 
@@ -404,60 +409,58 @@ x-axis varies from 0 to 10 and y-axis varies from 0 to 100.
 
 .. R28
 
-Let us try one more exercise.Please pause here.
+Let us try one more exercise.Pause the video here, try out the exercise and resume the video.
 
   We know that the Pressure, Volume and Temperatures are held by
-  the equation PV = nRT where nR is a constant. Let us assume nR = .01
+  the equation PV = nRT where nR is a constant. Let us assume nR =0.01
   Joules/Kelvin and T = 200K. V can be in the range from 21cc to
   100cc. Draw two different plots as subplots, one being the Pressure
-  versus Volume plot and the other being Pressure versus Temparature
+  versus Volume plot and the other being Pressure versus Temperature
   plot.
 
 .. L28
+
+{{{ Show slide with question 3 }}}
+
+.. R29
+
+To start with, we have been given the range of Volume using which we
+can define the variable V
 
 .. L29
 
 {{{ Pause for a while and continue }}}
 
-.. R29
-
-.. R30
-
-To start with, we have been given the range of Volume using which we
-can define the variable V
-
-.. L30
-
 ::
 
     V = linspace(21, 100, 500)
 
-.. R31
+.. R30
 
 Now we can create first subplot and draw Pressure versus Volume graph
 using this V. We know that nRT is a constant which is equal to 2.0
 since nR = 0.01 Joules/Kelvin and T = 200 Kelvin
 
-.. L31
+.. L30
 
 ::
 
     subplot(2, 1, 1)
     plot(V, 2.0/V)
 
-.. R32
+.. R31
 
 Now we can create the second subplot and draw the Pressure versus
 Temparature plot as follows
 
-.. L32
+.. L31
 
 ::
 
     subplot(2, 1, 2)
     plot(200, 2.0/V)
 
-.. R33
+.. R32
 
 Unfortunately we have an error now, telling x and y dimensions don't
 match. This is because our V contains a set of values as returned by
@@ -467,28 +470,28 @@ value. So to plot this data we need to create as many points as there
 are in Pressure or Volume data for Temperature too, all having the
 same value.Hence we do this,
 
-.. L33
+.. L32
 
 ::
 
     T = linspace(200, 200, 500)
 
-.. R34
+.. R33
 
 We now have 500 values in T each with the value 200 Kelvin. Plotting
 this data, we get the required plot
 
-.. L34
+.. L33
 
 ::
 
     plot(T, 2.0/V)
 
-.. L35
+.. L34
  
 {{{ Show summary slide }}}
 
-.. R35
+.. R34
 
 This brings us to the end of another session.let's revise quickly what we have learnt today,
 
@@ -499,11 +502,11 @@ This brings us to the end of another session.let's revise quickly what we have l
     of them like saving the plots.
  #. to create subplots and to switch between them.
 
-.. L36
+.. L35
 
 {{Show self assessment questions slide}}
 
-.. R36
+.. R35
 
 Here are some self assessment questions for you to solve
 
@@ -515,11 +518,11 @@ Here are some self assessment questions for you to solve
    - subplot(numRows, numCols)
    - subplot(numCols, numRows)
 
-.. L37 
+.. L36
 
 (solution of self assessment questions on slide)
 
-.. R37
+.. R36
 
 And the answers,
 
@@ -528,11 +531,11 @@ And the answers,
 2. The subplot command takes three arguments namely the number of rows followed by the
    the number of columns and the plot number.Hence the first option is correct.
 
-.. L38
+.. L37
 
 {{{ a thank you slide }}}
 
-.. R38
+.. R37
 
 Hope you have enjoyed and found it useful.
 Thank you!

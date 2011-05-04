@@ -24,23 +24,22 @@
 Script
 ------
 
-{{{ Show the slide containing title }}}
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-Hello Friends. Welcome to this tutorial on loading data from files.
+Hello Friends. Welcome to this tutorial on "loading data from files".
 
-{{{ Screen shows welcome slide }}}
+{{{ Show slide with objectives }}}
 
 We often require to plot points obtained from experimental
-observations. In this tutorial we shall learn to read data from files
-and save it into sequences that can later be used to plot.
+observations. 
 
-{{{ Show the outline for this tutorial }}} 
+At the end of this tutorial, you will be able to,
 
-We shall use the ``loadtxt`` command to load data from files. We will
-be looking at how to read a file with multiple columns of data and
-load each column of data into a sequence. 
+ 1. Read data from files, containing a single column of data using the ``loadtxt`` command.
+ #. Read multiple columns of data, separated by spaces or other delimiters.
 
-{{{ switch back to the terminal }}}
+{{{ switch to the terminal }}}
 
 As usual, let us start IPython, using 
 ::

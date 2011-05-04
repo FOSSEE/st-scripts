@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Multiple Plots
+#+TITLE:
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,8 +29,21 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
+* 
+#+begin_latex
+\begin{center}
+\textcolor{blue}{Multiple Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
 
-* Objective
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+
+* Objectives
   At the end of this tutorial you will be able to
   - draw multiple plots which are overlaid
   - use the figure command
@@ -39,6 +52,34 @@
     saving the plots.
   - create and switch between subplots
 
+* Question1
+  - Draw two plots overlaid upon each other, with the first plot
+    being a parabola of the form y = 4(x ^ 2) and the second being a
+    straight line of the form y = 2x + 3 in the interval -5 to 5.
+  - Use colors to differentiate between the plots and use legends to
+    indicate what each plot is doing.
+* Question2
+  - Draw a line of the form y = x as one figure and another line
+    of the form y = 2x + 3.
+  - Switch back to the first figure, annotate the x and y intercepts.
+  - Now switch to the second figure and annotate its x and y intercepts.
+    Save each of them.
+* Question3
+  - We know that the Pressure, Volume and Temperatures are held by
+    the equation PV = nRT where nR is a constant. Let us assume
+    nR=0.01 Joules/Kelvin and T = 200K.
+    V can be in the range from 21cc to 100cc.
+  - Draw two different plots as subplots, one being the Pressure
+    versus Volume plot and the other being Pressure versus Temperature
+    plot.
+* Summary
+  In this tutorial, we have learnt to –
+  - draw multiple plots which are overlaid.
+  - use the figure command.
+  - use the legend command.
+  - switch between the plots and perform some operations on each
+    of them like saving the plots.
+  - create subplots and to switch between them.
 * Acknowledgement
 #+begin_latex
   \begin{block}{}
@@ -54,5 +95,6 @@
   \end{block}
 \end{frame}
 #+end_latex
+
 
 

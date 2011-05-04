@@ -1,4 +1,4 @@
-% Created 2010-12-18 Sat 12:25
+% Created 2011-05-03 Tue 14:38
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Embellishing a Plot}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,31 +41,37 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Embellishing a Plot}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
 
 \begin{itemize}
-\item Modifying the color, line style \& linewidth of a plot
-\item Adding a title to the plot (with embedded \LaTeX{})
-\item Labelling the axes
-\item Annotating the plot
-\item Setting the limits of axes.
+\item Modify the attributes of the plot -- color, line style,linewidth.
+\item Add a title to the plot with embedded \LaTeX{}.
+\item Label x and y axes.
+\item Add annotations to the plot.
+\item Set and Get the limits of axes.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
-\label{sec-2}
-
-  Plot sin(x) in blue colour and with linewidth as 3
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
 \label{sec-3}
 
-\begin{verbatim}
-In []: clf()
-In []: plot(x, sin(x), 'b', linewidth=3)
-\end{verbatim}
+  Plot sin(x) in blue colour alongwith linewidth as 3
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -74,117 +79,67 @@ In []: plot(x, sin(x), 'b', linewidth=3)
 
   Plot the sine curve with green filled circles.
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-5}
-
-\begin{verbatim}
-In []: clf()
-In []: plot(x, cos(x), 'go')
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Question 3}
-\label{sec-6}
+\label{sec-5}
 
   Plot the curve of x vs tan(x) in red dashed line and linewidth 3
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
-\label{sec-7}
-
-\begin{verbatim}
-In []: clf()
-In []: plot(x, cos(x), 'r--')
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Question 4}
-\label{sec-8}
+\label{sec-6}
 
   Change the title of the figure such that the whole title is
   formatted in LaTex style
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-9}
-
-\begin{verbatim}
-In []: title("$Parabolic function -x^2+4x-5$")
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Question 5}
-\label{sec-10}
+\label{sec-7}
 
   Set the x and y labels as ``x'' and ``f(x)'' in LaTex style.
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 5}
-\label{sec-11}
-
-\begin{verbatim}
-In []: xlabel("$x$")
-In []: yalbel("$f(x)$")
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Question 6}
-\label{sec-12}
+\label{sec-8}
 
   Make an annotation called ``root'' at the point (-4, 0). What happens
   to the first annotation?
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 6}
-\label{sec-13}
-
-\begin{verbatim}
-In []: annotate("root", xy=(-4,0))
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Question 7}
-\label{sec-14}
+\label{sec-9}
 
   Set the limits of axes such that the area of interest is the
   rectangle (-1, -15) and (3, 0)
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 7}
-\label{sec-15}
-
-\begin{verbatim}
-In []: xlim(-1, 3)
-In []: ylim(-15, 0)
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-16}
+\label{sec-10}
+
+  In this tutorial,we have learnt to-
 
 \begin{itemize}
-\item Modifying the attributes of plot by passing additional arguments
-\item How to add title
-\item How to incorporate \LaTeX{} style formatting
-\item How to label x and y axes
-\item How to add annotations
-\item How to set the limits of axes
+\item Modify the attributes of plot by passing additional arguments
+\item Add title
+\item Incorporate \LaTeX{} style formatting
+\item Label x and y axes
+\item Add annotations
+\item Set the limits of axes
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-17}
+\frametitle{Acknowledgement}
+\label{sec-11}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
