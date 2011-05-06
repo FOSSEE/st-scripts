@@ -113,12 +113,6 @@ on your screen.
 The data is on your screen
 
 
-Please, pause the video here. Do the exercises and then continue. 
-
-
-
-
-
 .. #[[Anoop: Make sure code is correct, corrected plot(L,t,o) to
    plot(L,t,'o')]]
 
@@ -168,7 +162,7 @@ of errorbar.::
 
    errorbar?
 
-Following is an  exercise that you must do.
+Please, pause the video here. Do the exercises and then continue.
 
 %% %% Plot the given experimental data with large green dots.Also include
 the error in your plot. 
