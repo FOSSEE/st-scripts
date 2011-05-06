@@ -14,7 +14,6 @@
 
 .. 1. getting started with ``ipython``
      
-.. #[Anand: author and internal reviewer  not mentioned]
 .. Author              : Puneeth Changanti
    Internal Reviewer   : Nishanth Amuluru
    External Reviewer   :
@@ -24,131 +23,165 @@
 Script
 ------
 
+.. L1
+
 {{{ Show the  first slide containing title, name of the production
 team along with the logo of MHRD }}}
 
+.. R1
+
 Hello Friends. Welcome to this tutorial on "loading data from files".
+
+.. L2
 
 {{{ Show slide with objectives }}}
 
-We often require to plot points obtained from experimental
-observations. 
+.. R2
 
 At the end of this tutorial, you will be able to,
 
- 1. Read data from files, containing a single column of data using the ``loadtxt`` command.
+ 1. Read data from files, containing a single column of data 
  #. Read multiple columns of data, separated by spaces or other delimiters.
 
-{{{ switch to the terminal }}}
+.. L3
 
-As usual, let us start IPython, using 
+{{{ switch to the terminal }}}
 ::
 
-  ipython -pylab 
+    ipython -pylab 
+
+.. R3
+
+As usual, let us switch to the terminal and start IPython, using ipython -pylab
+
+.. R4
 
 Now, Let us begin with reading the file primes.txt, which contains
-just a list of primes listed in a column, using the loadtxt command.
+a list of prime numbers listed in a column, using the loadtxt command.
+Please make sure that you provide the correct path of the file 'primes.txt'.
 The file, in our case, is present in ``/home/fossee/primes.txt``. 
+
+.. L4
 
 {{{ Navigate to the path in the OS, open the file and show it }}}
 
-.. #[punch: do we need a slide for showing the path?]
-
-.. We use the ``cat`` command to see the contents of this file. 
-
-.. #[punch: should we show the cat command here? seems like a good place
-   to do it] ::
+.. L5
+::
 
      cat /home/fossee/primes.txt
 
-.. #[Nishanth]: A problem for windows users.
-                Should we simply open the file and show them the data
-                so that we can be fine with GNU/Linux ;) and windows?
+.. R5
+
+Otherwise we can use the ``cat`` command to locate the file and read the contents of it.
+
+.. R6
 
 Now let us read this list into the variable ``primes``.
+
+.. L6
 ::
 
-  primes = loadtxt('/home/fossee/primes.txt')
+    primes = loadtxt('/home/fossee/primes.txt')
 
-``primes`` is now a sequence of primes, that was listed in the file,
+.. R7
+
+``primes`` is now a sequence of prime numbers, that was listed in the file,
 ``primes.txt``.
 
 We now type, ``print primes`` to see the sequence printed.
 
-We observe that all of the numbers end with a period. This is so,
-because these numbers are actually read as ``floats``. We shall learn
-about them, later.
+.. L7
+::
 
-Now, let us use the ``loadtxt`` command to read a file that contains
-two columns of data, ``pendulum.txt``. This file contains the length
+    print primes
+
+.. R8
+
+We observe that all the numbers end with a period. This is so,
+because these numbers are actually read as ``floats``. 
+
+.. L8
+
+{{{Highlight the output on the terminal}}}
+
+.. R9
+
+Now, let us use the ``loadtxt`` command to read a file ``pendulum.txt`` that contains
+two columns of data. This file contains the length
 of the pendulum in the first column and the corresponding time period
-in the second. Note that ``loadtxt`` needs both the columns to have
+in the second. Note that here ``loadtxt`` needs both the columns to have
 equal number of rows. 
 
-.. Following is an exercise that you must do. 
+We use the ``cat`` command to view the contents of this file.
 
-.. %%1%% Use the ``cat`` command to view the contents of this file.
+.. L9
+::
 
-.. Please, pause the video here. Do the exercise and then continue. 
+    cat /home/fossee/pendulum.txt
 
-.. This is how we look at the contents of the file, ``pendulum.txt``
-.. ::
-
-..   cat /home/fossee/pendulum.txt
-
-.. #[Nishanth]: The first column is L values and second is T values
-                from a simple pendulum experiment.
-                Since you are using the variable names later in the
-                script.
-                Not necessary but can be included also.
+.. R10
 
 Let us, now, read the data into the variable ``pend``. Again, it is
 assumed that the file is in ``/home/fossee/``
+
+.. L10
 ::
 
-  pend = loadtxt('/home/fossee/pendulum.txt')
+    pend = loadtxt('/home/fossee/pendulum.txt')
+
+.. R11
 
 Let us now print the variable ``pend`` and see what's in it. 
+
+.. L11
 ::
 
-  print pend
+    print pend
+
+.. R12
 
 Notice that ``pend`` is not a simple sequence like ``primes``. It has
 two sequences, containing both the columns of the data file. Let us
 use an additional argument of the ``loadtxt`` command, to read it into
 two separate, simple sequences.
+
+.. L12
 ::
 
-  L, T = loadtxt('/home/fossee/pendulum.txt', unpack=True)
+    L, T = loadtxt('/home/fossee/pendulum.txt', unpack=True)
 
-.. #[Nishanth]: It has a sequence of items in which each item contains
-                two values. first is l and second is t
+.. R13
 
 Let us now, print the variables L and T, to see what they contain.
+
+.. L13
+
 ::
 
-  print L
-  print T
+    print L
+    print T
 
-.. #[Nishanth]: Stress on ``unpack=True`` ??
+.. R14
 
 Notice, that L and T now contain the first and second columns of data
 from the data file, ``pendulum.txt``, and they are both simple
 sequences. ``unpack=True`` has given us the two columns into two
 separate sequences instead of one complex sequence. 
 
-{{{ show the slide with loadtxt --- other features }}}
+.. L14
 
-In this tutorial, we have learnt the basic use of the ``loadtxt``
-command, which is capable of doing a lot more than we have used it for
-until now. Let us look at an example, but before that do this
-exercise. 
+.. R15
 
-%%1%% Read the file ``pendulum_semicolon.txt`` which contains the same
+Till now, we have learnt the basic use of the ``loadtxt``
+command.Let us try an example.
+
+Pause the video here, try out the following exercise and resume the video.
+
+Read the file ``pendulum_semicolon.txt`` which contains the same
 data as ``pendulum.txt``, but the columns are separated by semi-colons
 instead of spaces. Use the IPython help to see how to do this. 
 
-Please, pause the video here. Do the exercise and then continue. 
+.. L15
 
 {{{ switch back to the terminal }}}
 ::
@@ -159,20 +192,63 @@ Please, pause the video here. Do the exercise and then continue.
 
   print T
 
-This brings us to the end of this tutorial. 
+.. L16
 
 {{{ show the summary slide }}}
 
-You should now be able to do the following, comfortably. 
+.. R16
 
-  + Read data from files, containing a single column of data using the
+This brings us to the end of this tutorial. 
+let's revise quickly what we have learnt today.In this tutorial we learnt,
+
+ 1. To Read data from files, containing a single column of data using the
     ``loadtxt`` command.
-  + Read multiple columns of data, separated by spaces or other
-    delimiters.
+ #. To Read multiple columns of data, separated by spaces or other delimiters.
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+.. L17
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+{{Show self assessment questions slide}}
+
+.. R17
+
+1. ``loadtxt`` can read data only from a file with one column
+   only. True or False?
+
+2. Given a file ``data.txt`` with three columns of data separated by
+   spaces, read it into 3 separate simple sequences. 
+
+3. Given a file ``data.txt`` with three columns of data separated by
+   ":", read it into 3 separate simple sequences. 
+  
+
+.. L18
+
+{{{solution of self assessment questions on slide}}}
+
+.. R18
+
+And the answers,
+
+1. False. ``loadtxt`` command can read data from files having both single columns as well as 
+   multiple columns.
+
+2. A file with three columns of data seperated by spaces to be read into 3 seperate sequences,
+   we use the loadtxt command as,
+::
+
+     x = loadtxt("data.txt", unpack=True)
+
+3. If a file with three columns of data seperated by delimiters,we read it into three seperate sequences
+   by using an additional argument of delimiter in the loadtxt command
+::
+
+    x = loadtxt("data.txt", unpack=True, delimiter=":")
+
+.. L19
+
+{{{ Show the Thankyou slide }}}
+
+.. R19
 
 Hope you have enjoyed and found it useful.
 Thank you!

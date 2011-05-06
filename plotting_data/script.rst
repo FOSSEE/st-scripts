@@ -28,191 +28,233 @@
 Plotting   Experimental  Data  
 ===============================   
 
-{{{ Show the slide containing title }}}
+.. L1
 
-Hello  and welcome , this tutorial on  Plotting Experimental data is 
-presented by the fossee  team.  
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-{{{ Show the Outline Slide }}}
+.. R1 
 
-.. #[[Anoop: outline slide is missing]]
+Hello Friens.Welcome to this tutorial on  "Plotting Experimental data"
 
-Here  we will discuss plotting  Experimental data. 
+.. L2
+ 
+{{{ Show the Objectives Slide }}}
 
-1. We will see how we can represent a sequence of numbers in Python. 
+.. R2
 
-2. We will also become familiar with  elementwise squaring of such a
-sequence. 
+At the end of this tutorial, you will be able to,
 
-3. How to plot data points using python.
+ 1. Define a list of numbers.
+ #. perform elementwise squaring of the list. 
+ #. Plot data points.
+ #. plot errorbars.
 
-4. We will also see how we can use our graph to indicate Error.
+.. R3
 
-One needs   to  be  familiar  with  the   concepts  of  plotting
-mathematical functions in Python.
+We will use data from a Simple Pendulum Experiment to illustrate. 
 
-We will use  data from a Simple Pendulum Experiment to illustrate. 
-
-.. #[[Anoop: what do you mean by points here? if you mean the
-   points/numbered list in outline slide, then remove the usage point
-   from here.]]
+.. L3
 
 {{{ Simple Pendulum data Slide }}} 
 
-.. #[[Anoop: slides are incomplete, work on slides and context
-   switches]]
-  
-  
-As we know for a simple pendulum length,L is directly  proportional to 
-the square of time,T. We shall be plotting L and T^2 values.
+.. R4
 
+As we know for a simple pendulum, length L is directly  proportional to 
+the square of time T. We shall be plotting L and T^2 values.
 
 First  we will have  to initiate L and  T values. We initiate them as sequence 
 of values.  We define a sequence by comma seperated values inside two square brackets.  
-This is also  called List.Lets create two sequences L and t.
+This is also called a List.Let's create two sequences L and t.
 
-.. #[[Anoop: instead of saying "to tell ipython a sequence of values"
-   and make it complicated, we can tell, we define a sequence as]]
-
-.. #[[Anoop: sentence is incomplete, can be removed]]
-
-{{{ Show the initializing L&T slide }}}
-
-Type in ipython shell ::
+.. L4
+ 
+::
 
     L = [0.1, 0.2, 0.3, 0.4, 0.5,0.6, 0.7, 0.8, 0.9]
     
-    t= [0.69, 0.90, 1.19,1.30, 1.47, 1.58, 1.77, 1.83, 1.94]
+    T= [0.69, 0.90, 1.19,1.30, 1.47, 1.58, 1.77, 1.83, 1.94]
 
- 
-To obtain the square of sequence t we will use the function square
-with argument t.This is saved into the variable tsquare.::
+.. R5
 
-   tsquare=square(t)
-   tsqaure
-   array([  0.4761, 0.81 , 1.4161,  1.69 , 2.1609,  2.4964, 3.1329, 
-   3.3489, 3.7636])
+To obtain the square of sequence T we will use the function square
+with argument T.This is saved into the variable tsquare.
 
-.. #[[Anoop: how do you get the array([ 0.4761 ....]) output?]]
+.. L5
 
-  
-Now to plot L vs T^2 we will simply type ::
+::
 
-  plot(L,tsquare,'.')
+    Tsquare=square(T)
+    Tsqaure
+    array([  0.4761, 0.81 , 1.4161,  1.69 , 2.1609,  2.4964, 3.1329, 
+    3.3489, 3.7636])
 
-.. #[[Anoop: be consistent with the spacing and all.]]
+.. R6  
 
-'.' here represents to plot use small dots for the point. ::
+Now to plot L vs T^2, we will simply type 
 
-  clf()
+.. L6
 
-You can also specify 'o' for big dots.::
- 
-  plot(L,tsquare,'o')
+::
 
-  clf()
+    plot(L,Tsquare,'.')
 
+.. R7
 
-Following are exercises that you must do.
+here '.' represents to plot use small dots for the point.
+You can also specify 'o' for big dots.
 
-%% %% Plot the given experimental data with large dots.The data is
-on your screen. 
- 
-%% %% Plot the given experimental data with small dots.
-The data is on your screen
+.. L7
+::
+    
+    clf()
+    plot(L,Tsquare,'o')
+    clf()
 
+.. L8
 
-Please, pause the video here. Do the exercises and then continue. 
-
-
-
-
-
-.. #[[Anoop: Make sure code is correct, corrected plot(L,t,o) to
-   plot(L,t,'o')]]
-
-
-
-.. #[[Anoop: again slides are incomplete.]]
+.. R8
 
 For any experimental there is always an error in measurements due to
-instrumental and human constaraints.Now we shall try and take into
-account error into our plots . The Error values for L and T are on
-your screen.We shall again intialize the sequence values in the same
-manner as we did for L and t
+instrumental and human constraints.Now we shall try and take these errors into
+account in our plots . 
+
+.. L9
+
+{{{ Show the slide 'Question 1' }}}
+
+.. R9
+
+Pause the video here, try out the following exercise and resume the video.
+
+Plot the given experimental data with large dots.The data is
+on your screen. 
+
+.. L10
+
+{{{ Show slide "Question 1 data' }}}
+
+.. R10
 
 The error data we will use is on your screen.
 
-{{{ Show the Adding Error Slide }}}
-.. #[[Anoop: give introduction to error and say what we are going to
-   do]]
+.. R11
+
+We shall again intialize the sequence values in the same manner as we did for L and T.
+
+.. L11
 
 ::
 
     delta_L= [0.08,0.09,0.07,0.05,0.06,0.00,0.06,0.06,0.01]
     delta_T= [0.04,0.08,0.03,0.05,0.03,0.03,0.04,0.07,0.08]
+
+.. R12
   
-Now to plot L vs T^2 with an error bar we use the function errorbar()
+Now to plot L vs T^2 with an error bar we use the function ``errorbar()``.
 
-The syntax of the command is as given on the screen. ::
+.. L12 
+::
 
-    
-    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='b.')
+    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='bo')
+
+.. R13
 
 This gives a plot with error bar for x and y axis. The dots are of
 blue color. The parameters xerr and yerr are error on x and y axis and
 fmt is the format of the plot.
 
+similarly we can draw the same error bar with small red dots just change
+the parameters of fmt to 'r.'. 
 
-similarly we can draw the same error bar with big red dots just change
-the parameters to fmt to 'ro'. ::
+.. L13
+::
 
     clf()
-    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='ro')
+    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='r.')
 
+.. R14
 
+you can explore other options to errorbar using the documentation 
+of errorbar.
 
-thats it. you can explore other options to errorbar using the documentation 
-of errorbar.::
+.. L14
 
-   errorbar?
+::
 
-Following is an  exercise that you must do.
+    errorbar?
 
-%% %% Plot the given experimental data with large green dots.Also include
+.. L15
+
+{{{ Show slide with 'Question 2' }}}
+
+.. R15
+
+Pause the video here, try out the following exercise and resume the video.
+
+Plot the given experimental data with small dots.Also include
 the error in your plot. 
 
-Please, pause the video here. Do the exercise and then continue. 
+.. L16
 
+{{{ Show slide 'Question 2 data' }}}
 
+.. R16
 
+The data is on your screen
 
-
-
+.. L17
 
 {{{ Show Summary Slide }}}
 
-In this tutorial we have learnt :
+.. R17
 
+let's revise quickly what we have learnt today.In this tutorial we learnt 
 
+1. to declare a sequence of numbers using the function ``array``.
+#. to perform elemtwise squaring using the ``square`` function.
+#. to use the various options available for plotting like dots,lines.
+#. to Plot experimental data such that we can also represent error by using the
+   ``errorbar()`` function. 
 
-1. How to declare a sequence of numbers.
+.. R18
 
-2. Plotting experimental data.
+Here are some self assessment questions for you to solve
 
-#. The various options available for plotting dots instead of lines.
+1. Square the following sequence. 
+   
+   distance_values=[2.1,4.6,8.72,9.03]
 
-#. Plotting experimental data such that we can also represent error. 
+2. Plot L v/s T in red plusses.
 
+.. L18
+    
+{{Show self assessment questions slide}}
 
+.. L19
 
- {{{ Show the "sponsored by FOSSEE" slide }}}
+(solution of self assessment questions on slide)
 
-.. #[[Anoop: again slides are incomplete]]
+.. R19
 
-This tutorial was created as a part of FOSSEE project.
+And the answers,
+
+1.  To square a sequence of values, we use the function ``square``
+::
+ 
+    square(distance_values)
+
+2. We pass an additional argument stating the desired parameter
+::
+
+    plot(L,T,'r+')
+
+.. L20
+
+{{{ Show the Thankyou slide }}}
+
+.. R20
 
 Hope you have enjoyed and found it useful.
-
 Thank You!
 

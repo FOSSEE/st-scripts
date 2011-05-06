@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Loading data from files
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,37 +29,61 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  + Read data from files with a single column of data
-  + Read data from files with multiple columns
+* 
+ #+begin_latex
+\begin{center}
+\textcolor{blue}{Loading Data from Files}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+  - Read data from files with a single column of data.
+  - Read data from files with multiple columns seperated by
+    spaces and other delimiters.
 * Question 1
-  Read the file ~pendulum_semicolon.txt~ which contains the same data
-  as ~pendulum.txt~, but the columns are separated by semi-colons
-  instead of spaces. Use the IPython help to see how to do this.
-* Solution 1
-  #+begin_src python
-    In []: L, T = loadtxt('/home/fossee/pendulum_semicolon.txt', unpack=True, delimiter=';')
-    
-    In []: print L
-    
-    In []: print T
-  #+end_src
+  Read the file  ~pendulum\_semicolon.txt~  which contains the same data
+  as  ~pendulum.txt~ , but the columns are seperated by semi-colons instead
+  of spaces.Use the IPython help to see how to do this.
 * Summary
-  + Read data from files, containing a single column of data using the
+  In this tutorial,we have learnt to-
+  - Read data from files, containing a single column of data using the
     ~loadtxt~ command.
-  + Read multiple columns of data, separated by spaces or other
-    delimiters.
-* Thank you!
+  - Read multiple columns of data, separated by spaces or other
+    delimiters by adding additional arguments to the ~loadtxt~ command.
+* Evaluation
+  1. ``loadtxt`` can read data only from a file with one column only.
+     True or False?
+
+  2. Given a file ``data.txt`` with three columns of data separated by
+     spaces, read it into 3 separate simple sequences. 
+
+  3. Given a file ``data.txt`` with three columns of data separated by
+     ":", read it into 3 separate simple sequences.
+  
+* Solutions
+  1. False
+
+  2. x = loadtxt("data.txt", unpack=True)
+
+  3. x = loadtxt("data.txt", unpack=True, delimiter=":")
+* Acknowledgement
 #+begin_latex
-  \begin{block}{}
+   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

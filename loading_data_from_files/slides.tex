@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 18:12
+% Created 2011-05-06 Fri 12:18
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Loading data from files}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,59 +41,90 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Loading Data from Files}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
 
 \begin{itemize}
-\item Read data from files with a single column of data
-\item Read data from files with multiple columns
+\item Read data from files with a single column of data.
+\item Read data from files with multiple columns seperated by
+    spaces and other delimiters.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
-\label{sec-2}
-
-  Read the file \texttt{pendulum\_semicolon.txt} which contains the same data
-  as \texttt{pendulum.txt}, but the columns are separated by semi-colons
-  instead of spaces. Use the IPython help to see how to do this.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
-In []: L, T = loadtxt('/home/fossee/pendulum_semicolon.txt', unpack=True, delimiter=';')
-
-In []: print L
-
-In []: print T
-\end{lstlisting}
+  Read the file  \verb~pendulum\_semicolon.txt~  which contains the same data
+  as  \verb~pendulum.txt~ , but the columns are seperated by semi-colons instead
+  of spaces.Use the IPython help to see how to do this.
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
 \label{sec-4}
 
+  In this tutorial,we have learnt to-
+
 \begin{itemize}
 \item Read data from files, containing a single column of data using the
-    \texttt{loadtxt} command.
+    \verb~loadtxt~ command.
 \item Read multiple columns of data, separated by spaces or other
-    delimiters.
+    delimiters by adding additional arguments to the \verb~loadtxt~ command.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
 \label{sec-5}
 
-  \begin{block}{}
+
+\begin{enumerate}
+\item ``loadtxt`` can read data only from a file with one column only.
+     True or False?
+\item Given a file ``data.txt`` with three columns of data separated by
+     spaces, read it into 3 separate simple sequences.
+\item Given a file ``data.txt`` with three columns of data separated by
+     ``:'', read it into 3 separate simple sequences.
+\end{enumerate}
+  
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-6}
+
+
+\begin{enumerate}
+\item False
+\item x = loadtxt(``data.txt'', unpack=True)
+\item x = loadtxt(``data.txt'', unpack=True, delimiter='':'')
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Acknowledgement}
+\label{sec-7}
+
+   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

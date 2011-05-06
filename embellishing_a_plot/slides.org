@@ -74,6 +74,22 @@ MHRD, Govt. of India
   + Label x and y axes
   + Add annotations
   + Set the limits of axes
+* Evaluation
+  1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4.
+
+  2. Read thorugh the documentation and find out is there a way to modify the
+     alignment of text in the command ``ylabel``.
+     - Yes
+     - No
+
+  3. How do you set the title as x^2-5x+6 in LaTex style formatting.
+* Solutions
+  1. x = linspace(-2*pi, 2*pi)
+     plot(x, cos(x), linewidth=4)
+  
+  2. No
+
+  3. title("$x^2-5x+6$")
 
 * Acknowledgement
 #+begin_latex
