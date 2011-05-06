@@ -30,23 +30,12 @@ Plotting   Experimental  Data
 
 {{{ Show the slide containing title }}}
 
-Hello  and welcome , this tutorial on  Plotting Experimental data is 
-presented by the fossee  team.  
+Hello and welcome to this tutorial on  Plotting Experimental data, 
+presented by the fossee team.  
 
 {{{ Show the Outline Slide }}}
 
 .. #[[Anoop: outline slide is missing]]
-
-Here  we will discuss plotting  Experimental data. 
-
-1. We will see how we can represent a sequence of numbers in Python. 
-
-2. We will also become familiar with  elementwise squaring of such a
-sequence. 
-
-3. How to plot data points using python.
-
-4. We will also see how we can use our graph to indicate Error.
 
 One needs   to  be  familiar  with  the   concepts  of  plotting
 mathematical functions in Python.
@@ -106,6 +95,8 @@ Now to plot L vs T^2 we will simply type ::
 
   clf()
 
+This clears the plot.
+
 You can also specify 'o' for big dots.::
  
   plot(L,tsquare,'o')
@@ -113,7 +104,7 @@ You can also specify 'o' for big dots.::
   clf()
 
 
-Following are exercises that you must do.
+Pause video here and solve this exercise. Resume the video once done.
 
 %% %% Plot the given experimental data with large dots.The data is
 on your screen. 
