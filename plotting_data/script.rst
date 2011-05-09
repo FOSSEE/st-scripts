@@ -30,13 +30,19 @@ Plotting   Experimental  Data
 
 .. L1
 
+<<<<<<< HEAD
 {{{ Show the  first slide containing title, name of the production
 team along with the logo of MHRD }}}
+=======
+Hello and welcome to this tutorial on  Plotting Experimental data, 
+presented by the fossee team.  
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 .. R1 
 
 Hello Friens.Welcome to this tutorial on  "Plotting Experimental data"
 
+<<<<<<< HEAD
 .. L2
  
 {{{ Show the Objectives Slide }}}
@@ -51,6 +57,10 @@ At the end of this tutorial, you will be able to,
  #. plot errorbars.
 
 .. R3
+=======
+One needs   to  be  familiar  with  the   concepts  of  plotting
+mathematical functions in Python.
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 We will use data from a Simple Pendulum Experiment to illustrate. 
 
@@ -95,14 +105,26 @@ Now to plot L vs T^2, we will simply type
 
 .. L6
 
+<<<<<<< HEAD
 ::
+=======
+This clears the plot.
+
+You can also specify 'o' for big dots.::
+ 
+  plot(L,tsquare,'o')
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
     plot(L,Tsquare,'.')
 
 .. R7
 
+<<<<<<< HEAD
 here '.' represents to plot use small dots for the point.
 You can also specify 'o' for big dots.
+=======
+Pause video here and solve this exercise. Resume the video once done.
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 .. L7
 ::
@@ -113,6 +135,7 @@ You can also specify 'o' for big dots.
 
 .. L8
 
+<<<<<<< HEAD
 .. R8
 
 For any experimental there is always an error in measurements due to
@@ -126,6 +149,10 @@ account in our plots .
 .. R9
 
 Pause the video here, try out the following exercise and resume the video.
+=======
+.. #[[Anoop: Make sure code is correct, corrected plot(L,t,o) to
+   plot(L,t,'o')]]
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 Plot the given experimental data with large dots.The data is
 on your screen. 
@@ -182,7 +209,11 @@ of errorbar.
 
 ::
 
+<<<<<<< HEAD
     errorbar?
+=======
+Please, pause the video here. Do the exercises and then continue.
+>>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 .. L15
 

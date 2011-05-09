@@ -1,11 +1,11 @@
 .. Objectives
 .. ----------
 
-.. By the end of this tutorial, you will be able to 
-.. 1. Open and read the contents of a file. 
-.. #. Read files line by line. 
-.. #. Read all the contents of the file at once. 
-.. #. Close open files. 
+.. At the end of this spoken tutorial, you will be able to: 
+.. 1. Open a file. 
+.. #. Read the content of the file line by line. 
+.. #. Read entire contents of the file at once. 
+.. #. Close the file. 
 
 .. Prerequisites
 .. -------------
@@ -58,8 +58,7 @@ or write) in which it is open. Notice that it is open in read only
 mode, here. 
 
 We shall first learn to read the whole file into a single
-variable. Later, we shall look at reading it line-by-line. We use
-the ``read`` method of ``f`` to read, all the contents of the file
+variable. We use the ``read`` method of ``f`` to read, all the contents of the file
 into the variable ``pend``. 
 ::
 
@@ -134,7 +133,7 @@ the file line-wise and print each of the lines.
   for line in f:
       print line
 
-As we already know, ``line`` is variable, sometimes called the loop
+``line`` is variable, sometimes called the loop
 variable, and it is not a keyword. We could have used any other
 variable name, but ``line`` seems meaningful enough.
 
