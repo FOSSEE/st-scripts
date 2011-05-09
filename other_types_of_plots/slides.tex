@@ -1,4 +1,4 @@
-% Created 2010-10-12 Tue 16:22
+% Created 2011-05-09 Mon 16:28
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Other type of plots}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,47 +41,69 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Types of Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
+
 
 \begin{itemize}
-\item Scatter plot
-\item Pie chart
-\item Bar chart
-\item Log-log Plot
-\item \texttt{matplotlib} help
+\item Create scatter plot
+\item Create pie charts
+\item Create bar charts
+\item Create log-log plots
+\item Use the \verb~matplotlib~ help
 \end{itemize}
 \end{frame}
 \begin{frame}
+\frametitle{Scatter plot}
+\label{sec-3}
+
+  Scatter plot - a collection of points,where each point determines
+  it's position on the horizontal axis and the vertical axis 
+  respectively.
+\end{frame}
+\begin{frame}
 \frametitle{Exercise 1: Scatter plot}
-\label{sec-2}
+\label{sec-4}
 
   Plot a scatter plot showing the percentage profit of Company A from the year 2000
-  to 2010. The data for the same is available in the file \texttt{company-a-data.txt}.
+  to 2010. The data for the same is available in the file \verb~company-a-data.txt~.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{scatter()} function}
-\label{sec-3}
+\frametitle{\verb~scatter()~ function}
+\label{sec-5}
+
 
 \begin{itemize}
 \item \emph{Syntax :} scatter(x,y)
-
 \begin{itemize}
 \item x, a sequence of data
 \item y, a sequence of data, the same length of x
 \end{itemize}
-
 \end{itemize}
-
 \begin{verbatim}
    In []: scatter(year, profit)
 \end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 2: Scatter plot}
-\label{sec-4}
+\label{sec-6}
 
-  Plot a scatter plot of the same data in \texttt{company-a-data.txt} with red diamond markers.
+  Plot a scatter plot of the same data in \verb~company-a-data.txt~ with red diamond markers.
 \begin{verbatim}
    
 \end{verbatim}
@@ -91,16 +112,16 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Pie chart}
-\label{sec-5}
+\label{sec-7}
 
   Pie chart - a circle graph divided into sectors, illustrating proportion. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 3: Pie chart}
-\label{sec-6}
+\label{sec-8}
 
   Plot a pie chart representing the profit percentage of company A, with the data 
-  from the file \texttt{company-a-data.txt}.
+  from the file \verb~company-a-data.txt~.
 \begin{verbatim}
    
 \end{verbatim}
@@ -108,26 +129,24 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   \emph{(we can reuse the data in lists year and profit)}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{pie()} function}
-\label{sec-7}
+\frametitle{\verb~pie()~ function}
+\label{sec-9}
+
 
 \begin{itemize}
 \item \emph{Syntax :} pie(values, labels=labels)
-
 \begin{itemize}
 \item values, the data to be plotted
 \item labels, the label for each wedge in the pie chart
 \end{itemize}
-
 \end{itemize}
-
 \begin{verbatim}
    In []: pie(profit, labels=year)
 \end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 4: Pie chart}
-\label{sec-8}
+\label{sec-10}
 
   Plot a pie chart with the same data with colors for each wedges as white, red, 
   magenta, yellow, blue, green, cyan, yellow, magenta, and blue.
@@ -139,17 +158,17 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Bar chart}
-\label{sec-9}
+\label{sec-11}
 
   Bar chart - a chart with rectangular bars with lengths proportional 
   to the values that they represent.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 5: Bar chart}
-\label{sec-10}
+\label{sec-12}
 
   Plot a bar chart representing the profit percentage of company A, with the data 
-  from the file \texttt{company-a-data.txt}.
+  from the file \verb~company-a-data.txt~.
 \begin{verbatim}
    
 \end{verbatim}
@@ -157,31 +176,29 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   \emph{(we can reuse the data in lists year and profit)}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{bar()} function}
-\label{sec-11}
+\frametitle{\verb~bar()~ function}
+\label{sec-13}
+
 
 \begin{itemize}
 \item \emph{Syntax :} bar(x, y)
-
 \begin{itemize}
 \item x, a sequence of data
 \item y, a sequence of data, the same length of x
 \end{itemize}
-
 \end{itemize}
-
 \begin{verbatim}
    In []: bar(year, profit)
 \end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 6: Bar chart}
-\label{sec-12}
+\label{sec-14}
 
   Plot a bar chart which is not filled and which is hatched with 
     $45^o$
   slanting lines as shown in the image. The data for the chart may be
-  obtained from the file \texttt{company-a-data.txt}.
+  obtained from the file \verb~company-a-data.txt~.
    \begin{center}
       \includegraphics[scale=0.3]{bar-chart-hatch}    
     \end{center}
@@ -189,90 +206,119 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Log-log graph}
-\label{sec-13}
+\label{sec-15}
+
 
 \begin{itemize}
 \item Log-log graph
-
 \begin{itemize}
 \item 2-dimensional graph.
 \item uses logarithmic scales on both axes.
 \item graph appears as straight line due to non-linear scaling.
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 7:}
-\label{sec-14}
+\label{sec-16}
 
   Plot a log-log chart of 
     $y = 5x^3$
   for x from 1-20.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{loglog()} function}
-\label{sec-15}
+\frametitle{\verb~loglog()~ function}
+\label{sec-17}
+
 
 \begin{itemize}
 \item \emph{Syntax :} loglog(x, y)
-
 \begin{itemize}
 \item x, a sequence of data
 \item y, a sequence of data, the same length of x
 \end{itemize}
-
 \end{itemize}
-
 \begin{verbatim}
    In []: loglog(x, y)
 \end{verbatim}
 \end{frame}
 \begin{frame}
-\frametitle{Getting help on \texttt{matplotlib}}
-\label{sec-16}
+\frametitle{Getting help on \verb~matplotlib~}
+\label{sec-18}
+
 
 \begin{itemize}
 \item Help
-
 \begin{itemize}
-\item \hyperref[sec-16]{matplotlib.sourceforge.net/contents.html}
+\item \hyperref[matplotlib.sourceforge.net--contents.html]{matplotlib.sourceforge.net/contents.html}
 \end{itemize}
-
 \item More plots
-
 \begin{itemize}
-\item \hyperref[sec-16]{matplotlib.sourceforge.net/users/screenshots.html}
-\item \hyperref[sec-16]{matplotlib.sourceforge.net/gallery.html}
+\item \hyperref[matplotlib.sourceforge.net--users--screenshots.html]{matplotlib.sourceforge.net/users/screenshots.html}
+\item \hyperref[matplotlib.sourceforge.net--gallery.html]{matplotlib.sourceforge.net/gallery.html}
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-17}
+\label{sec-19}
+
+  In this tutorial we learnt to,
+ 
 
 \begin{itemize}
-\item Scatter plot (\texttt{scatter()})
-\item Pie chart (\texttt{pie()})
-\item Bar chart (\texttt{bar()})
-\item Log-log plot (\texttt{loglog()})
-\item \texttt{matplotlib} online help
+\item Plot a scatter plot using ``scatter()`` function
+\item Plot a pie chart using ``pie()`` function
+\item Plot a bar chart using ``bar()`` function
+\item Plot a log-log graph using ``loglog()`` function
+\item Access the \verb~matplotlib~ online help.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-18}
+\frametitle{Evaluation}
+\label{sec-20}
+
+
+\begin{enumerate}
+\item ``scatter(x, y, color='blue', marker='d')`` and ``plot(x, y,
+     color='b', marker='d')`` does exactly the same.
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\item What statement can be issued to generate a bar chart with vertical
+     line hatching.
+\begin{itemize}
+\item bar(x, y, color='w', hatch='/')
+\item bar(x, y, fill=False, hatch='//')
+\item bar(x, y, fill=False, hatch='|')
+\item bar(x, y, color='w', hatch='\')
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-21}
+
+
+\begin{enumerate}
+\item False
+\item bar(x, y, fill=False, hatch='|')
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Acknowledgement}
+\label{sec-22}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

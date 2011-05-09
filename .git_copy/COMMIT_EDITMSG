@@ -1,0 +1,17 @@
+Modified embellishing a plot,loading data from files,plotting data.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   embellishing_a_plot/slides.org
+#	modified:   embellishing_a_plot/slides.tex
+#	modified:   loading_data_from_files/script.rst
+#	modified:   loading_data_from_files/slides.org
+#	modified:   loading_data_from_files/slides.tex
+#	modified:   plotting_data/script.rst
+#	modified:   plotting_data/slides.org
+#	modified:   plotting_data/slides.tex
+#

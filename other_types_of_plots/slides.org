@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Other type of plots
+#+TITLE: 
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,12 +29,31 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Scatter plot
-  - Pie chart
-  - Bar chart
-  - Log-log Plot
-  - ~matplotlib~ help
+* 
+  #+begin_latex
+\begin{center}
+\textcolor{blue}{Types of Plots}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
+
+  - Create scatter plot
+  - Create pie charts
+  - Create bar charts
+  - Create log-log plots
+  - Use the ~matplotlib~ help
+* Scatter plot
+  Scatter plot - a collection of points,where each point determines
+  it's position on the horizontal axis and the vertical axis 
+  respectively.
 * Exercise 1: Scatter plot
   Plot a scatter plot showing the percentage profit of Company A from the year 2000
   to 2010. The data for the same is available in the file ~company-a-data.txt~.
@@ -114,22 +133,41 @@
     - [[matplotlib.sourceforge.net/gallery.html]]
 
 * Summary
-  - Scatter plot (~scatter()~)
-  - Pie chart (~pie()~)
-  - Bar chart (~bar()~)
-  - Log-log plot (~loglog()~)
-  - ~matplotlib~ online help
-* Thank you!
+  In this tutorial we learnt to,
+ 
+  - Plot a scatter plot using ``scatter()`` function
+  - Plot a pie chart using ``pie()`` function
+  - Plot a bar chart using ``bar()`` function
+  - Plot a log-log graph using ``loglog()`` function
+  - Access the ~matplotlib~ online help.
+* Evaluation
+  1. ``scatter(x, y, color='blue', marker='d')`` and ``plot(x, y,
+     color='b', marker='d')`` does exactly the same.
+
+    - True
+    - False
+
+  2. What statement can be issued to generate a bar chart with vertical
+     line hatching.
+
+     - bar(x, y, color='w', hatch='/')
+     - bar(x, y, fill=False, hatch='//')
+     - bar(x, y, fill=False, hatch='|')
+     - bar(x, y, color='w', hatch='\')
+* Solutions
+  1. False
+  2. bar(x, y, fill=False, hatch='|')
+* Acknowledgement
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
