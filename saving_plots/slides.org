@@ -87,7 +87,7 @@ MHRD, Govt. of India
     - ps
     - png
     - svg
-    - epg
+    - eps
   - Locate files in the file system.
 * Acknowledgement
 #+begin_latex
