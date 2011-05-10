@@ -394,18 +394,18 @@ In this tutorial we learnt to,
 Here are some self assessment questions for you to solve.
 
 1. ``scatter(x, y, color='blue', marker='d')`` and ``plot(x, y,
-   color='b', marker='d')`` does exactly the same.
+    color='b', marker='d')`` does exactly the same.
 
-   a. True
-   #. False
+   - True
+   - False
 
 2. What statement can be issued to generate a bar chart with vertical
    line hatching.
 
-   a. bar(x, y, color='w', hatch='/')
-   #. bar(x, y, fill=False, hatch='\\')
-   #. bar(x, y, fill=False, hatch='|')
-   #. bar(x, y, color='w', hatch='\')
+   - bar(x, y, color='w', hatch='/')
+   - bar(x, y, fill=False, hatch='//')
+   - bar(x, y, fill=False, hatch='|')
+   - bar(x, y, color='w', hatch='\')
 
 .. L35
 
@@ -424,5 +424,6 @@ And the answers,
 {{{ switch to the thank you slide }}}
 
 .. R36
+
 Hope you have enjoyed and found it useful.
 Thank you!
