@@ -251,7 +251,7 @@ Here are some self assessment questions for you to solve
  
 2. ``savefig('sine.png')`` saves the plot in,
 
-   - The root directory ``/`` (on GNU/Linux, Unix based systems)
+   - The root directory ``/`` (on GNU/Linux, Unix based systems),
      ``c:\`` (on windows).
    - Will result in an error as full path is not supplied.
    - The current working directory.
