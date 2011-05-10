@@ -229,7 +229,7 @@ This brings us to the end of this tutorial,
 let's revise quickly what we have learnt today
 
  1. to save plots using the ``savefig()`` function.
- #. to save the plots in differnt formats like
+ #. to save the plots in different formats like
     - pdf
     - ps
     - png
@@ -252,7 +252,7 @@ Here are some self assessment questions for you to solve
 2. ``savefig('sine.png')`` saves the plot in,
 
    - The root directory ``/`` (on GNU/Linux, Unix based systems)
-      ``c:\`` (on windows).
+     ``c:\`` (on windows).
    - Will result in an error as full path is not supplied.
    - The current working directory.
    - Predefined directory like ``/documents``.
@@ -269,9 +269,9 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1.To save a plot,we use the ``savefig()`` function.
+1. To save a plot,we use the ``savefig()`` function.
 
-2.Whenever we save a file,it gets saved in the current working directory.
+2. Whenever we save a file,it gets saved in the current working directory.
 
 .. L22
 
