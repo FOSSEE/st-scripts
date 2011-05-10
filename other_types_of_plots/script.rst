@@ -394,7 +394,7 @@ In this tutorial we learnt to,
 Here are some self assessment questions for you to solve.
 
 1. ``scatter(x, y, color='blue', marker='d')`` and ``plot(x, y,
-    color='b', marker='d')`` does exactly the same.
+   color='b', marker='d')`` does exactly the same.
 
    - True
    - False
