@@ -52,7 +52,7 @@ At the end of this tutorial, you will be able to,
 
 .. R3
 
-As usual, let us switch to the terminal and start IPython, using ipython -pylab
+Let us switch to the terminal and start IPython, using ipython -pylab
 
 .. R4
 
@@ -131,7 +131,7 @@ assumed that the file is in ``/home/fossee/``
 
 .. R11
 
-Let us now print the variable ``pend`` and see what's in it. 
+Let us now print the variable ``pend`` and see what it contains. 
 
 .. L11
 ::
@@ -211,7 +211,7 @@ let's revise quickly what we have learnt today.In this tutorial we learnt,
 
 .. R17
 
-1. ``loadtxt`` can read data only from a file with one column
+1. ``loadtxt`` can read data from a file with one column
    only. True or False?
 
 2. Given a file ``data.txt`` with three columns of data separated by
