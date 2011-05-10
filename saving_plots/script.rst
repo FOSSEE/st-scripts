@@ -32,7 +32,7 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Hello and welcome to the tutorial on "saving plots".
+Hello and welcome to the tutorial on "Saving plots".
 
 .. L2
 
@@ -65,7 +65,7 @@ ipython -pylab
 As you know, it will start your IPython interpreter with the required
 python modules for plotting and saving your plots.
 
-To start with let us plot a sine wave from minus 3 pi to 3 pi.
+To start with, let us plot a sine wave from minus 3 pi to 3 pi.
 Let us start by calculating the required points for the plot. It
 can be done using linspace as, 
 
@@ -136,7 +136,7 @@ want to save the file.
 Here we have used an extension ``.png`` which means we want to save the
 image as a PNG file.
 
-Now let us locate the file ``sine.png`` which we had saved a while ago.We saved the file to
+Now let us locate the file ``sine.png`` which we had saved a while ago.We have saved the file to
 ``/home/fossee`` so let us navigate to ``/home/fossee`` using the
 file browser.
 
@@ -171,7 +171,7 @@ support transparency etc.
 
 .. R13
 
-Save the sine plot in the format EPS which can be embedded in LaTeX documents.
+Save the sine plot in the EPS format which can be embedded in LaTeX documents.
 
 .. L14
 
@@ -179,7 +179,7 @@ Save the sine plot in the format EPS which can be embedded in LaTeX documents.
 
 .. R14
 
-We still have the sine plot with us, and now let us save the plot as
+We still have the sine plot with us,let us now save the plot as
 ``sine.eps``.
 
 .. L15
@@ -229,12 +229,12 @@ This brings us to the end of this tutorial,
 let's revise quickly what we have learnt today
 
  1. to save plots using the ``savefig()`` function.
- #. to save the plots in differnt formats.
+ #. to save the plots in differnt formats like
     - pdf
     - ps
     - png
     - svg
-    - epg
+    - eps
  #. to locate files in the file system.
 
 .. R20
