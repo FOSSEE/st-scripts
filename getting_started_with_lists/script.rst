@@ -25,218 +25,316 @@
    Language Reviewer   : Bhanukiran
    Checklist OK?       : <12-11-2010, Anand, OK> [2010-10-05]
 
-.. #[[Anoop: Slides contain only outline and summary
 
 Script
 ------
- {{{ Show the slide containing title }}}
 
-Hello friends and welcome to the tutorial on getting started with
-lists.
+.. L1
 
- {{{ Show the slide containing the outline slide }}}
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
+
+.. R1
+
+Hello friends and welcome to the tutorial on "Getting started with
+lists".
+
+.. L2
+
+{{{ Show slide with objectives }}}
+
+.. R2
 
 In this tutorial we will be getting acquainted with a python data
-structure called lists.  We will learn ::
+structure called lists.  
+At the end of this tutorial, you will be able to, 
  
- * How to create lists
- * Structure of lists
- * Access list elements
- * Append elements to lists
- * Delete elements from lists
+ 1. Create lists
+ #. Access list elements
+ #. Append elements to lists
+ #. Delete elements from lists
+
+.. R3
 
 List is a compound data type, it can contain data of mutually
-different datatypes. List is also a sequence data type, all the
-elements are arranged in a given order.
+different datatypes. List is also a sequence data type where all the
+elements are arranged in a specific order.
 
-.. #[[Anoop: "all the elements are in order and **there** order has a
-   meaning." - I guess something is wrong here, I am not able to
-   follow this.]]
+Start the ipython interpreter and first create an empty list with no elements. 
 
-We will first create an empty list with no elements. On your IPython
-shell type ::
-
-   empty = [] 
-   type(empty)
+.. L3
+::   
    
+    ipython
+    empty = [] 
+    type(empty)
 
+.. R4
+  
 This is an empty list without any elements.
 
-.. #[[Anoop: the document has to be continous, without any
-   subheadings, removing * Filled lists]]
+Let us now see how to define a non-empty list. 
 
-Lets now see how to define a non-empty list. We do it as,::
+.. L4
+::
 
-     nonempty = ['spam', 'eggs', 100, 1.234]
+    nonempty = ['spam', 'eggs', 100, 1.234]
+
+.. R5
 
 Thus the simplest way of creating a list is typing out a sequence 
 of comma-separated values (or items) between two square brackets. 
 
 As we can see lists can contain different kinds of data. In the
 previous example 'spam' and 'eggs' are strings whereas 100 and 1.234 are
-integer and float respectively. Thus we can put elements of different types in
+integer and float respectively. Thus we can put elements of different datatypes in
 lists including lists itself. This property makes lists heterogeneous
 data structures.
 
-.. #[[Anoop: the sentence "Thus list themselves can be one of the
-   element types possible in lists" is not clear, rephrase it.]]
+Let us include a list within a list. 
 
-Example ::
+.. L5
+::
 
-      listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]
+    listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]
+
+.. R6
 
 We access an element of a list using its corresponding index. Index of
 the first element of a list is 0. So for the list nonempty, nonempty[0] 
 gives the first element, nonempty[1] the second element and so on and 
-nonempty[3] the last element. ::
+nonempty[3] the last element. 
 
-	    nonempty[0] 
-	    nonempty[1] 
-	    nonempty[3]
+.. L6
+::
 
-Following is an exercise that you must do. 
+    nonempty[0] 
+    nonempty[1] 
+    nonempty[3]
 
-%% %% What happens when you do nonempty[-1]. 
+.. L7
 
-Please, pause the video here. Do the exercise and then continue.  
+{{{ Switch to the slide Question 1 }}}
 
-.. #[[Anoop: was negative indices introduced earlier, if not may be we
-   can ask them to try out nonempty[-1] and see what happens and then
-   tell that it gives the last element in the list.]]
+.. R7
+
+Pause the video here, try out the following exercise and resume the video.
+
+What happens when you do nonempty[-1]. 
+
+.. L8
+
+{{{ Switch to the terminal }}}
+::
+
+    nonempty[-1]
+
+.. R8
 
 As you can see you get the last element which is 1.234.
 
+.. L9
+::
+    
+    nonempty[-2] 
+    nonempty[-4]
 
-In python negative indices are used to access elements from the end::
+.. R9
+
+In python negative indices are used to access elements from the end.
+-1 gives the last element which is the 4th element , -2 gives second element to last
+and -4 gives the fourth from the last which, in this case, is the first element.
+
+.. R10
+
+We can also append elements to the end of a list using the method ``append``. 
+
+.. L10
+::
+
+    nonempty.append('onemore') 
+    nonempty
+    nonempty.append(6) 
+    nonempty
+
+.. L11
+
+{{{ Switch to slide Question 2 }}}
+
+.. R11
    
-   nonempty[-1] 
-   nonempty[-2] 
-   nonempty[-4]
+Please, pause the video here. Do the exercise and then continue.
 
--1 gives the last element which is the 4th element , -2 second to last
-and -4 gives the fourth from the last which, in this case,  is the first element.
+1. What is the syntax to get the element 'and' in the list,listinlist ?
+2. How would you get 'and' using negative indices?
 
-We can append elements to the end of a list using the method append. ::
+.. L12
 
-   nonempty.append('onemore') 
-   nonempty
-   nonempty.append(6) 
-   nonempty
-   
-Following are  exercises that you must do. 
+{{{ Switch to slide Solution 2 }}}
 
-%% %% What is the syntax to get the element 'and' 
-in the list,listinlist ?
-
-
-%% %% How would you get 'and' using negative indices?
-
-Please, pause the video here. Do the exercise and then continue.  
+.. R12
 
 The solution is on your screen
-
-
 As we can see nonempty is appended with 'onemore' and 6 at the end.
 
-Using len function we can check the number of elements in the list
-nonempty. In this case it is 6 ::
+.. R13
+
+Let us move further.We can use ``len`` function to check the number of elements in the list.
+Let us find out the length of the list 'nonempty'.
+
+.. L13
+::
 	 
-	 len(nonempty)
+    len(nonempty)
 
-
+.. R14
 
 Just like we can append elements to a list we can also remove them.
-There are two ways of doing it. One is by using index. ::
+There are two ways of doing it. One is by using index. 
 
-      del(nonempty[1])
+.. L14
+::
 
+    del(nonempty[1])
 
+.. R15
 
-deletes the element at index 1, i.e the second element of the
-list, 'eggs'. The other way is removing element by content. Lets say
-one wishes to delete 100 from nonempty list the syntax of the command
-would be 
+The function ``del`` deletes the element at index 1, i.e the second element of the
+list, 'eggs'. 
 
-.. #[[Anoop: let x = [1,2,1,3]
-   	     now x.remove(x[2])
-	     still x is [2,1,3] so that is not the way to remove
-	     element by index, it removed first occurrence of 1(by
-	     content) and not based on index, so make necessary
-	     changes]]
+The other way is removing element by content. Lets say
+one wishes to delete 100 from nonempty list.For this, one could use the function
+``remove``.
 
+.. L15
 ::
 
     nonempty.remove(100)
 
-but what if there were two 100's. To check that lets do a small
-experiment. ::
+.. R16
 
-	   nonempty.append('spam') 
-	   nonempty
-	   nonempty.remove('spam') 
-	   nonempty
+But what if there were two 100's. To check that lets do a small
+experiment. 
 
-If we check now we will see that the first occurence 'spam' is removed
-and therefore `remove` removes the first occurence of the element in the sequence
+.. L16
+::
+
+    nonempty.append('spam') 
+    nonempty
+    nonempty.remove('spam') 
+    nonempty
+
+.. R17
+
+If we now check, we will see that the first occurence 'spam' is removed
+and therefore the function `remove` removes the first occurence of the element in the sequence
 and leaves others untouched.
 
-One should remember this that while del removes by index number,
-`remove` removes on the basis of content being passed on. For instance
-if ::
+One should remember this, that while ``del`` removes by index number,
+`remove` removes on the basis of content being passed on.Let us take an example.
+
+.. L17
+
+.. L18
+::
        
-       k = [1,2,1,3] 
-       del([k[2])
+    k = [1,2,1,3] 
+    del([k[2])
 
-gives us [1,2,3]. ::
+.. R18
 
-      k.remove(x[2])
+del gives us [1,2,3]. 
 
-will give us [2,1,3]. Since it deletes the first occurence of what is
+.. L19
+::
+
+    k.remove(x[2])
+
+.. R19
+
+remove will give us [2,1,3]. Since it deletes the first occurence of what is
 returned by x[2] which is 1.      
 
+.. L20
 
+{{{ Switch to the slide Question 3 }}}
 
+.. R20
 
+Pause the video here, try out the following exercise and resume the video.
 
+1. Remove the third element from the list, listinlist.   
+2. Remove 'and' from the list, listinlist.
 
+.. L21
 
-.. #[[Anoop: does it have two spams or two pythons?]]
+{{{ Switch to slide Solution 3 }}}
 
-.. #[[Anoop: there are no exercises/solved problems in this script,
-   add them]]
+.. R21
 
-Following are  exercises that you must do. 
+The solution is on your screen.
 
-%% %% Remove the third element from the list, listinlist.   
-
-%% %% Remove 'and' from the list, listinlist.
-
-Please, pause the video here. Do the exercise and then continue.  
-
-
+.. L22
 
 {{{Slide for Summary }}}
 
+.. R22
 
-In this tutorial we came across a sequence data type called lists. ::
+This brings us to the end of this tutorial.
+In this tutorial we learnt to,
 
- * We learned how to create lists.  
- * How to access lists.
- * Append elements to list.
- * Delete Element from list.  
- * And Checking list length.
+ 1. Create lists.  
+ #. Access lists using their index numbers.
+ #. Append elements to list using the function ``append``.
+ #. Delete Element from lists by specifying the index number of the
+    element to be deleted in the ``del`` function.  
+ #. Delete element from list by content using ``remove`` function.
+ #. Find out the list length using ``len`` function.
+
+.. L23
  
+{{Show self assessment questions slide}}
 
+.. R23
 
-{{{ show Sponsored by Fossee Slide }}}
+Here are some self assessment questions for you to solve
 
-This tutorial was created as a part of FOSSEE project.
+1. How do you create an empty list? 
+2. Can you have a list inside a list ? 
+3. How would you access the end of a list without finding its length?
 
-I hope you found this tutorial useful.
+.. L24
 
-Thank You
+{{{solution of self assessment questions on slide}}}
 
-..
- * Author : Amit Sethi 
- * First Reviewer : 
- * Second Reviewer : Nishanth
+.. R24
+
+And the answers,
+
+1. We create an empty list just by leaving the space inside the square brackets empty.
+::
+
+    empty=[]
+
+2. Yes.List can contain all the other data types, including list.
+   Here is an example
+::
+
+    list_in_list=[2.3,[2,4,6],'string,'all datatypes can be there']
+
+3. Using negative indices, we can access the list from the end using negative indices.
+   This is an example
+::
+
+    nonempty = ['spam', 'eggs', 100, 1.234]
+    nonempty[-1]
+
+.. L25
+
+{{{ Show Thankyou Slide }}}
+
+.. R25
+
+Hope you have enjoyed and found it useful.
+Thank you!
+

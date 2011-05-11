@@ -1,6 +1,6 @@
-% Created 2010-11-10 Wed 12:22
+% Created 2011-05-11 Wed 15:13
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Getting started with Lists}
+\title{}
 \author{FOSSEE}
 \date{2010-09-14 Tue}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -43,61 +42,67 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\textcolor{blue}{Getting started with Lists}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
+
+MHRD, Govt. of India
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
 
 \begin{itemize}
-\item How to create lists
-\item Structure of lists
+\item Create lists
 \item Access list elements
 \item Append elements to lists
-\item Deleting elements from lists
+\item Delete elements from lists
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
-\label{sec-2}
+\label{sec-3}
+
 
 \begin{itemize}
 \item What happens when you do nonempty[-1].
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Solution 1}
-\label{sec-3}
-
-\begin{itemize}
-\item It gives the last element , 1.234
-\end{itemize}
-\end{frame}
-\begin{frame}
-\frametitle{Questions}
+\frametitle{Question 2}
 \label{sec-4}
 
-\begin{itemize}
-\item What is the syntax to get the element `and'
-\end{itemize}
-
-in the list,listinlist ?
-
 
 \begin{itemize}
+\item What is the syntax to get the element `and' 
+     in the list,listinlist ?
 \item How would you get `and' using negative indices?
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solutions}
+\frametitle{Solution 2}
 \label{sec-5}
 
-\begin{verbatim}
+  
+\lstset{language=Python}
+\begin{lstlisting}
 
 listinlist[1]
 listinlist[-5]
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Questions}
+\frametitle{Question 3}
 \label{sec-6}
+
 
 
 \begin{itemize}
@@ -106,42 +111,70 @@ listinlist[-5]
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solutions}
+\frametitle{Solution 3}
 \label{sec-7}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 
 del(listinlist[2])
 listinlist.remove('and')
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
-\begin{frame}[fragile]
+\begin{frame}
 \frametitle{Summary}
 \label{sec-8}
 
-\begin{verbatim}
+  In this tutorial, we have learnt to –
 
-l=[1,2,3,4]
-l[-1]
-l.append(5)
-del(l[2])
-l.remove(2)
-len(l)
-\end{verbatim}
+\begin{itemize}
+\item Create lists.
+\item Access lists using their index numbers.
+\item Append elements to list using the function ``append``.
+\item Delete Element from lists by specifying the index number of the
+    element to be deleted in the ``del`` function.
+\item Delete element from list by content using ``remove`` function.
+\item Find out the list length using the ``len`` function.
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
 \label{sec-9}
 
-  \begin{block}{}
+
+\begin{enumerate}
+\item How do you create an empty list?
+\item Can you have a list inside a list ?
+\item How would you access the end of a list without finding its length?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-10}
+
+
+\begin{enumerate}
+\item empty=[]
+\item Yes\\
+list\_in\_list=[2.3,[2,4,6],'string,'all datatypes can be there']
+\item Using negative indices\\
+nonempty = ['spam', `eggs', 100, 1.234]\\
+     nonempty[-1]
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Acknowledgement}
+\label{sec-11}
+
+ \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

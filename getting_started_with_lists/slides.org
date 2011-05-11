@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Getting started with Lists
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
 #+EMAIL:     info@fossee.in
@@ -30,41 +30,49 @@
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
 
-* Outline 
- - How to create lists
- - Structure of lists  
- - Access list elements
- - Append elements to lists
- - Deleting elements from lists
+* 
+  #+begin_latex
+\begin{center}
+\textcolor{blue}{Getting started with Lists}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
+Developed by FOSSEE Team, IIT-Bombay. \\ 
+Funded by National Mission on Education through ICT
 
+MHRD, Govt. of India
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
+  - Create lists
+  - Access list elements
+  - Append elements to lists
+  - Delete elements from lists
 
 * Question 1 
   - What happens when you do nonempty[-1].
 
-* Solution 1
-  - It gives the last element , 1.234
-
-* Questions
+* Question 2
   - What is the syntax to get the element 'and' 
-in the list,listinlist ?
-
-
+     in the list,listinlist ?
   - How would you get 'and' using negative indices?
 
-* Solutions
+* Solution 2
+  
 #+begin_src python
   
   listinlist[1]
   listinlist[-5]
 
 #+end_src python
-* Questions
+* Question 3
 
   - Remove the third element from the list, listinlist.   
 
   - Remove 'and' from the list, listinlist.
 
-* Solutions
+* Solution 3
 #+begin_src python
   
   del(listinlist[2])
@@ -72,27 +80,36 @@ in the list,listinlist ?
 
 #+end_src python
 * Summary
-#+begin_src python
-  
-  l=[1,2,3,4]
-  l[-1]
-  l.append(5)
-  del(l[2])
-  l.remove(2)
-  len(l)
-
-#+end_src python
-* Thank you!
+  In this tutorial, we have learnt to –
+  - Create lists.  
+  - Access lists using their index numbers.
+  - Append elements to list using the function ``append``.
+  - Delete Element from lists by specifying the index number of the
+    element to be deleted in the ``del`` function.  
+  - Delete element from list by content using ``remove`` function.  
+  - Find out the list length using the ``len`` function.
+* Evaluation
+  1. How do you create an empty list? 
+  2. Can you have a list inside a list ? 
+  3. How would you access the end of a list without finding its length?
+* Solutions
+  1. empty=[]
+  2. Yes\\
+     list\_in\_list=[2.3,[2,4,6],'string,'all datatypes can be there']
+  3. Using negative indices\\
+     nonempty = ['spam', 'eggs', 100, 1.234]\\
+     nonempty[-1]
+* Acknowledgement
 #+begin_latex
-  \begin{block}{}
+ \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
