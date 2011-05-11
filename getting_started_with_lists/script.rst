@@ -73,7 +73,7 @@ Start the ipython interpreter and first create an empty list with no elements.
   
 This is an empty list without any elements.
 
-Let us now see how to define a non-empty list. 
+Lets define a non-empty list as: 
 
 .. L4
 ::
@@ -82,12 +82,12 @@ Let us now see how to define a non-empty list.
 
 .. R5
 
-Thus the simplest way of creating a list is typing out a sequence 
+Thus, the simplest way of creating a list is typing out a sequence 
 of comma-separated values (or items) between two square brackets. 
 
-As we can see lists can contain different kinds of data. In the
+As we can see, lists can contain different kinds of data. In the
 previous example 'spam' and 'eggs' are strings whereas 100 and 1.234 are
-integer and float respectively. Thus we can put elements of different datatypes in
+integer and float respectively. Thus, we can put elements of different datatypes in
 lists including lists itself. This property makes lists heterogeneous
 data structures.
 
@@ -147,7 +147,7 @@ and -4 gives the fourth from the last which, in this case, is the first element.
 
 .. R10
 
-We can also append elements to the end of a list using the method ``append``. 
+We can also append elements to the end of a list using the ``append`` function. 
 
 .. L10
 ::
@@ -189,7 +189,7 @@ Let us find out the length of the list 'nonempty'.
 
 .. R14
 
-Just like we can append elements to a list we can also remove them.
+Just like we can append elements to a list, we can also remove them.
 There are two ways of doing it. One is by using index. 
 
 .. L14
@@ -252,7 +252,7 @@ del gives us [1,2,3].
 
 .. R19
 
-remove will give us [2,1,3]. Since it deletes the first occurence of what is
+remove will give us [2,1,3]. Since it deletes the first occurrence of what is
 returned by x[2] which is 1.      
 
 .. L20
