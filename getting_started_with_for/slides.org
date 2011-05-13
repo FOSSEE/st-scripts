@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Getting started with for
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,10 +29,31 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - ~for~ loop in Python.
-  - Blocks of code in Python.
-    - Indentation
+* 
+  #+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with \texttt{for}}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
+  - Write blocks of code in python.
+  - Use the ``for`` loop.
+  - Use ``range()`` function.
+  - Write blocks in python interpreter
+  - Write blocks in ipython interpreter.
 * Whitespace in Python
   - Whitespace is significant
     - blocks are visually separated
@@ -43,7 +64,7 @@
     :     Block B
     : Block A
     ~Block B~ is an inner block and is indented using 4 spaces
-* Exercise 1
+* Question 1
   Write a ~for~ loop which iterates through a list of numbers and find
   the square root of each number.
   : 
@@ -65,53 +86,16 @@
   - Save the script as ~list_roots.py~
   - Run in ~ipython~ interpreter as,
     : In []: %run -i list_roots.py
-* Exercise 2
-  From the given numbers make a list of perfect squares and a list of those which are not.
-  : 
-  The numbers are,
-  : 7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
-  : 7056, 576, 2916
-* Exercise 3 (indentation in ~ipython~)
+* Question 2
   Print the square root of numbers in the list.
   : 
   Numbers are,
   : 7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
   : 7056, 576, 2916
-* Indentation in ~ipython~
-  : In []: numbers = [1369, 7225, 3364, 7056, 5625, 
-  :   ...:  729, 7056, 576, 2916]
-
-  : In []: for each in numbers:
-  :   ...:     
-  Note the four spaces here
-  : 
-  : 
-  : 
-  : 
-  : 
-  : 
-* Indentation in ~ipython~ (cont'd)
-  : In []: numbers = [1369, 7225, 3364, 7056, 5625, 
-  :   ...:  729, 7056, 576, 2916]
-  : In []: for each in numbers:
-  :   ...:     
-  Note the four spaces here
-  : 
-  Now type the rest of the code
-  :   ...:     print "Square root of", each, 
-  :   ...:     print "is", sqrt(each)
-  :   ...:     
-  :   ...:     
-* Indentation in ~python~ interpreter
+* Question 3
   Find out the cube of all the numbers from 1 to 10.
   : 
   /do it in the python interpreter/
-* Indentation in ~python~ interpreter (cont'd)
-  #+begin_src python
-  >>> for i in range(1, 11):
-  ...     print i, "cube is", i**3
-  ... 
-  #+end_src
 * ~range()~ function
   - in built function in Python
   - generates a list of integers
@@ -119,26 +103,46 @@
     - /example:/
       - range(1, 20) - /generates integers from 1 to 20/
       - range(20) - /generates integers from 0 to 20/
-* Exercise 4
+* Question 4
   Print all the odd numbers from 1 to 50.
 * Summary
-  - blocks in ~python~
-  - indentation
-  - blocks in ~ipython~ interpreter
-  - ~for~ loop
-  - iterating over list using ~for~ loop
-  - ~range()~ function
-* Thank you!
+  In this tutorial,we learnt to,
+  - Create blocks in python using ``for
+  - Indent the blocks of code
+  - Iterate over a list using ``for`` loop
+  - Use the ``range()`` function
+* Evaluation
+  1. Indentation is not mandatory in Python
+
+     - True
+     - False
+
+  2. Write a code using ``for`` loop to print the product of all 
+     natural numbers from 1 to 20.
+
+
+  3. What will be the output of-
+     range(1,5)
+* Solutions
+  1. False
+
+  2. y = 1
+     for x in range(1,21):
+          y*=x
+     print y
+  
+  3. [1,2,3,4]
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

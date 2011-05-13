@@ -32,14 +32,18 @@
 * 
 #+begin_latex
 \begin{center}
-\textcolor{blue}{Using plot Interactively}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Plot Interactively}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 * Objectives
@@ -91,7 +95,7 @@ MHRD, Govt. of India
   1. linspace(-pi/2,pi/2,100)
   2. clf()
   3. len(sequence\_name)
-* Acknowledgement...
+* 
 #+begin_latex
  \begin{block}{}
   \begin{center}
@@ -105,5 +109,4 @@ MHRD, Govt. of India
   \end{center}  
   \end{block}
 #+end_latex
-
 

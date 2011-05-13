@@ -32,14 +32,18 @@
 * 
  #+begin_latex
 \begin{center}
-\textcolor{blue}{Plotting Data}
+\vspace{12pt}
+\textcolor{blue}{\huge Plotting Data}
 \end{center}
- \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 * Objectives
@@ -118,7 +122,7 @@ MHRD, Govt. of India
   1. square(distance\_values)
 
   2. plot(L,T,'r+')
-* Acknowledgement
+* 
 #+begin_latex                                                                                                                                                
   \begin{block}{}
   \begin{center}

@@ -32,14 +32,18 @@
 * 
 #+begin_latex
 \begin{center}
-\textcolor{blue}{Multiple Plots}
+\vspace{12pt}
+\textcolor{blue}{\huge Multiple Plots }
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 
@@ -80,7 +84,19 @@ MHRD, Govt. of India
   - switch between the plots and perform some operations on each
     of them like saving the plots.
   - create subplots and to switch between them.
-* Acknowledgement
+* Evaluation
+  1. What command is used to get individual plots separately?.
+
+  2. Which of the following is correct.
+
+     - subplot(numRows, numCols, plotNum)
+     - subplot(numRows, numCols)
+     - subplot(numCols, numRows)
+* Solutions
+  1. figure()
+  
+  2. subplot(numRows, numCols, plotNum)
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}

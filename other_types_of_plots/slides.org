@@ -32,14 +32,18 @@
 * 
   #+begin_latex
 \begin{center}
-\textcolor{blue}{Types of Plots}
+\vspace{12pt}
+\textcolor{blue}{\huge Other types of Plots}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 * Objectives
@@ -157,7 +161,7 @@ MHRD, Govt. of India
 * Solutions
   1. False
   2. bar(x, y, fill=False, hatch='|')
-* Acknowledgement
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}

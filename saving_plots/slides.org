@@ -32,14 +32,18 @@
 * 
 #+begin_latex
 \begin{center}
-\textcolor{blue}{Saving Plots}
+\vspace{12pt}
+\textcolor{blue}{\huge Saving Plots}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 * Objectives
@@ -74,9 +78,9 @@ MHRD, Govt. of India
     ~vector graphics~
 *** .png - Portable Network Graphics
     ~supports transparency~
-* Exercise 1
+* Question 1
   Save the sine plot in the format EPS which can be embedded in LaTeX documents.
-* Exercise 2
+* Question 2
   Save the sine plot in PDF, PS and SVG formats.
 
 * Summary
@@ -89,7 +93,26 @@ MHRD, Govt. of India
     - svg
     - eps
   - Locate files in the file system.
-* Acknowledgement
+* Evaluation
+  1. Which command is used to save a plot.
+
+     - saveplot()
+     - savefig()
+     - savefigure()
+     - saveplt()
+
+  2. ``savefig('sine.png')`` saves the plot in,
+
+     - The root directory ``/`` (on GNU/Linux, Unix based systems),
+       ``c:\`` (on windows).
+     - Will result in an error as full path is not supplied.
+     - The current working directory.
+     - Predefined directory like ``/documents``.
+* Solutions
+  1. savefig()
+
+  2. The current working directory
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}

@@ -526,7 +526,7 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. The command "figure" can get us the individual plots seperately.
+1. The command "figure()" can get us the individual plots seperately.
 
 2. The subplot command takes three arguments namely the number of rows followed by the
    the number of columns and the plot number.Hence the first option is correct.

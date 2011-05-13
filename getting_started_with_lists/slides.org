@@ -33,14 +33,18 @@
 * 
   #+begin_latex
 \begin{center}
-\textcolor{blue}{Getting started with Lists}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Lists}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 #+end_latex
 * Objectives
@@ -99,7 +103,7 @@ MHRD, Govt. of India
   3. Using negative indices\\
      nonempty = ['spam', 'eggs', 100, 1.234]\\
      nonempty[-1]
-* Acknowledgement
+* 
 #+begin_latex
  \begin{block}{}
   \begin{center}
