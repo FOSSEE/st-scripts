@@ -66,7 +66,7 @@
   - Back and Forward Button
   - Home
 
-* Question1
+* Question 1
   Plot (sin(x)*sin(x))/x.
   1. Save the plot by the sinsquarebyx.pdf in pdf format.
   2. Zoom and find the maxima.
@@ -89,11 +89,16 @@
  
 * Evaluation 
   1. Create 100 equally spaced points between -pi/2 and pi/2?
-  2. How do you clear a figure in ipython?
-  3. How do find the length of a sequen
+  2. What will the command ''linspace(-pi,pi,100)'' do.
+     - returns 100 evenly spaced samples from -pi to pi
+     - returns 100 evenly spaced samples from -pi to pi excluding pi but including -pi  
+     - returns 100 evenly spaced samples from -pi to pi excluding -pi but including pi
+     - returns 100 evenly spaced samples from -pi to pi including both -pi and pi
+  3. How do find the length of a sequence.
 * Solutions...
   1. linspace(-pi/2,pi/2,100)
-  2. clf()
+  2. 
+returns 100 evenly spaced samples from -pi to pi including both -pi and pi
   3. len(sequence\_name)
 * 
 #+begin_latex

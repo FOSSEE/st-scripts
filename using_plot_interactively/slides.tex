@@ -1,4 +1,4 @@
-% Created 2011-05-04 Wed 11:44
+% Created 2011-05-18 Wed 15:15
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Using plot Interactively}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Plot Interactively}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -88,7 +92,7 @@ MHRD, Govt. of India
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question1}
+\frametitle{Question 1}
 \label{sec-5}
 
   Plot (sin(x)*sin(x))/x.
@@ -130,8 +134,14 @@ MHRD, Govt. of India
 
 \begin{enumerate}
 \item Create 100 equally spaced points between -pi/2 and pi/2?
-\item How do you clear a figure in ipython?
-\item How do find the length of a sequen
+\item What will the command `'linspace(-pi,pi,100)'' do.
+\begin{itemize}
+\item returns 100 evenly spaced samples from -pi to pi
+\item returns 100 evenly spaced samples from -pi to pi excluding pi but including -pi
+\item returns 100 evenly spaced samples from -pi to pi excluding -pi but including pi
+\item returns 100 evenly spaced samples from -pi to pi including both -pi and pi
+\end{itemize}
+\item How do find the length of a sequence.
 \end{enumerate}
 \end{frame}
 \begin{frame}
@@ -141,13 +151,11 @@ MHRD, Govt. of India
 
 \begin{enumerate}
 \item linspace(-pi/2,pi/2,100)
-\item clf()
+\item returns 100 evenly spaced samples from -pi to pi including both -pi and pi
 \item len(sequence\_name)
 \end{enumerate}
 \end{frame}
 \begin{frame}
-\frametitle{Acknowledgement\ldots{}}
-\label{sec-9}
 
  \begin{block}{}
   \begin{center}

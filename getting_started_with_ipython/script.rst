@@ -155,7 +155,7 @@ Type
 
 ::
 
-    'print'
+    print
 
 {{{Hit enter}}}
 {{{Point at the Out[] prompt}}}
@@ -243,9 +243,9 @@ the commands starting with a.
 
 Now, let's see what the functions abs is used for.  We will use the
 help features of ipython to find out this.  To see the documentation
-of a function, type the function name followed by a question mark, and
-hit enter. Ipython interpreter will show the documentation for the
-function.  Lets us see the documentation of the function abs, type
+of a function, type the function name followed by a question mark.
+Ipython interpreter will show the documentation for the
+function.  Let us see the documentation of the function abs, type
 abs? and press enter
 
 .. L18
@@ -268,6 +268,8 @@ As the documentation says, ``abs`` accepts a number as an input and
 returns it's absolute value.
 
 lets see few examples,
+
+Type abs(-19) and abs(19) on the interpreter.
 
 We get 19, as expected, in both the cases.
 
@@ -357,6 +359,7 @@ and hit enter, without closing the parenthesis.
 
 .. L26
 
+{{{ switch to terminal }}}
 :: 
 
     round(2.484
@@ -476,5 +479,5 @@ And the answers,
 
 .. R34
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!

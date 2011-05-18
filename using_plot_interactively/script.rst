@@ -59,7 +59,8 @@ ipython -pylab and hit enter.
 Pylab is a python library which provides plotting functionality.It
 provides many other important mathematical and scientific
 functions. After running IPython -pylab in the shell you will see some 
-information about ipython and pylab followed by the In[1] prompt.But if you get an error like ::
+information about ipython and pylab followed by the In[1] prompt.
+But if you get an error like ::
 
    `ERROR: matplotlib could NOT be imported!  Starting normal
       IPython.`
@@ -95,7 +96,8 @@ As you can see a sequence of numbers from 1 to 100 appears.
 
 .. R7
 
-Now lets try to generate 200 points between 0 and 1,we do that by typing  linspace(0,1,200).
+Now lets try to generate 200 points between 0 and 1,we do that by typing  
+linspace(0,1,200).
 
 .. L7
 
@@ -130,7 +132,8 @@ If we now type ``len(p)``we will get the no. of points.
 
 .. R10
 
-Let's try and plot a cosine curve between -pi and pi.For this we use the plot command.
+Let's try and plot a cosine curve between -pi and pi.
+For this we use the plot command.
 Here cos(p) gets the cosine value at every point
 corresponding to point p. 
 
@@ -164,8 +167,10 @@ Now to clear the plot ,we use the ``clf()`` function
 
 .. R13
 
-This is done because if we wish to make another plot,it will overlap the previous plot.
-As we do not wish to clutter the area with overlaid plots , we just clear it with clf().  
+This is done because if we wish to make another plot,
+it will overlap the previous plot.
+As we do not wish to clutter the area with overlaid plots ,
+we just clear it with clf().  
 Now lets try a sine plot. 
 
 .. L13
@@ -176,7 +181,8 @@ Now lets try a sine plot.
 
 .. R14 
 
-We can study the plot better on the plot window by using the various options available on it.Let us have a look at these options.
+We can study the plot better on the plot window by using the 
+various options available on it.Let us have a look at these options.
 
 .. L14
 
@@ -184,7 +190,8 @@ We can study the plot better on the plot window by using the various options ava
 
 .. R15
 
-As we can observe, moving the mouse pointer along the plot gives us the location of each point on the plot 
+As we can observe, moving the mouse pointer along the plot gives us 
+the location of each point on the plot 
 
 .. L15
 
@@ -192,11 +199,12 @@ As we can observe, moving the mouse pointer along the plot gives us the location
 
 .. R16
 
-To the bottom left of the window,there are a few buttons.The right most among them is
-for saving the file. 
+To the bottom left of the window,there are a few buttons.
+The right most among them is for saving the file. 
 Just click on it and type the file name. We will save the plot 
-by the name `sin_curve` in pdf format.As you can see we can specify the format 
-of file from the dropdown.Formats like png ,eps ,pdf, ps are available.
+by the name `sin_curve` in pdf format.
+As you can see we can specify the format of file from the dropdown.
+Formats like png ,eps ,pdf, ps are available.
 
 .. L16
 
@@ -204,7 +212,8 @@ of file from the dropdown.Formats like png ,eps ,pdf, ps are available.
 
 .. R17
 
-Left to the save button is the slider button by which we can specify the margins.
+Left to the save button is the slider button by which we can 
+specify the margins.
 
 .. L17
 
@@ -216,8 +225,8 @@ Left to the save button is the slider button by which we can specify the margins
 
 .. R18
 
-Left to this is the zoom button by which we can zoom into the plot. Just specify the 
-region to zoom into.  
+Left to this is the zoom button by which we can zoom into the plot.
+Just specify the region to zoom into.  
 
 .. L19
 
@@ -233,9 +242,9 @@ The button to the left of it can be used to move the axes of the plot.
 
 .. R20
 
-The next two buttons with left and right arrow icons change the state of the 
-plot and take it to the previous state it was in. It more or less acts like the
-back and forward button in a browser.  
+The next two buttons with left and right arrow icons change the 
+state of the plot and take it to the previous state it was in.
+It more or less acts like the back and forward button in a browser.  
 
 .. L21
 
@@ -268,11 +277,13 @@ Pause the video here, try out the following exercise and resume the video.
 Let's revise quickly what we have learnt today 
 
   1. To Start Ipython with pylab. 
-  #. To Use the linspace function to create `num` equally spaced points in a region.
+  #. To Use the linspace function to create `num` equally spaced points 
+     in a region.
   #. To Find the length of sequences using len function.
   #. To Plot mathematical functions using plot.
   #. To Clear drawing area using clf. 
-  #. To Use the UI of plot for studying it better and using functionalities like save,zoom and moving the plots on x and y axis. 
+  #. To Use the UI of plot for studying it better and using functionalities 
+     like save,zoom and moving the plots on x and y axis. 
 
 .. L24
 
@@ -284,9 +295,12 @@ Let's revise quickly what we have learnt today
 
 2. What will the command ''linspace(-pi,pi,100)'' do.
    - returns 100 evenly spaced samples from -pi to pi
-   - returns 100 evenly spaced samples from -pi to pi excluding pi but including -pi  
-   - returns 100 evenly spaced samples from -pi to pi excluding -pi but including pi
-   - returns 100 evenly spaced samples from -pi to pi including both -pi and pi
+   - returns 100 evenly spaced samples from -pi to pi excluding pi but 
+     including -pi  
+   - returns 100 evenly spaced samples from -pi to pi excluding -pi but 
+     including pi
+   - returns 100 evenly spaced samples from -pi to pi including both -pi
+     and pi
 
 3. How do you find the length of a sequence?
 
@@ -298,9 +312,11 @@ Let's revise quickly what we have learnt today
 
 And the answers,
 
-1. We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced lines between the points -pi/2 and pi/2.
+1. We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced 
+   lines between the points -pi/2 and pi/2.
 
-2. The command ''linspace(-pi,pi,100)'' will return 100 evenly spaced samples from -pi to pi including both -pi and pi.
+2. The command ''linspace(-pi,pi,100)'' will return 100 evenly spaced samples 
+   from -pi to pi including both -pi and pi.
     
 3. `len(sequence_name)` is the function used to find out the length of a sequence.
 

@@ -53,6 +53,8 @@
  - Label x and y axes. 
  - Add annotations to the plot. 
  - Set and Get the limits of axes.
+* Pre-requisite
+  - Spoken tutorial on "Using plot interactively"
 * Question 1
   Plot sin(x) in blue colour alongwith linewidth as 3
 * Question 2
@@ -72,12 +74,12 @@
   rectangle (-1, -15) and (3, 0)
 * Summary
   In this tutorial,we have learnt to-
-  + Modify the attributes of plot by passing additional arguments
-  + Add title
-  + Incorporate LaTeX style formatting
-  + Label x and y axes
-  + Add annotations
-  + Set the limits of axes
+  + Modify the attributes of plot by passing additional arguments.
+  + Add title to a plot using 'title' command.
+  + Incorporate LaTeX style formatting by adding a $ sign before and after the part of the string. 
+  + Label x and y axes using 'xlabel()' and 'ylabel()' commands.
+  + Add annotations to a plot using annotate() command.
+  + Set the limits of axes using 'xlim()' and 'ylim()' commands.
 * Evaluation
   1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4.
 

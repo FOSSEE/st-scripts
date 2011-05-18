@@ -1,4 +1,4 @@
-% Created 2011-05-06 Fri 12:24
+% Created 2011-05-18 Wed 16:31
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Embellishing a Plot}
+\vspace{12pt}
+\textcolor{blue}{\huge Embellishing a Plot}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -68,68 +72,77 @@ MHRD, Govt. of India
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
+\frametitle{Pre-requisite}
 \label{sec-3}
+
+
+\begin{itemize}
+\item Spoken tutorial on ``Using plot interactively''
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Question 1}
+\label{sec-4}
 
   Plot sin(x) in blue colour alongwith linewidth as 3
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
-\label{sec-4}
+\label{sec-5}
 
   Plot the sine curve with green filled circles.
 \end{frame}
 \begin{frame}
 \frametitle{Question 3}
-\label{sec-5}
+\label{sec-6}
 
   Plot the curve of x vs tan(x) in red dashed line and linewidth 3
 \end{frame}
 \begin{frame}
 \frametitle{Question 4}
-\label{sec-6}
+\label{sec-7}
 
   Change the title of the figure such that the whole title is
   formatted in LaTex style
 \end{frame}
 \begin{frame}
 \frametitle{Question 5}
-\label{sec-7}
+\label{sec-8}
 
   Set the x and y labels as ``x'' and ``f(x)'' in LaTex style.
 \end{frame}
 \begin{frame}
 \frametitle{Question 6}
-\label{sec-8}
+\label{sec-9}
 
   Make an annotation called ``root'' at the point (-4, 0). What happens
   to the first annotation?
 \end{frame}
 \begin{frame}
 \frametitle{Question 7}
-\label{sec-9}
+\label{sec-10}
 
   Set the limits of axes such that the area of interest is the
   rectangle (-1, -15) and (3, 0)
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-10}
+\label{sec-11}
 
   In this tutorial,we have learnt to-
 
 \begin{itemize}
-\item Modify the attributes of plot by passing additional arguments
-\item Add title
-\item Incorporate \LaTeX{} style formatting
-\item Label x and y axes
-\item Add annotations
-\item Set the limits of axes
+\item Modify the attributes of plot by passing additional arguments.
+\item Add title to a plot using `title' command.
+\item Incorporate \LaTeX{} style formatting by adding a \$ sign before and after the part of the string.
+\item Label x and y axes using `xlabel()' and `ylabel()' commands.
+\item Add annotations to a plot using annotate() command.
+\item Set the limits of axes using `xlim()' and `ylim()' commands.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-11}
+\label{sec-12}
 
 
 \begin{enumerate}
@@ -145,7 +158,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Solutions}
-\label{sec-12}
+\label{sec-13}
 
 
 \begin{enumerate}
@@ -156,8 +169,6 @@ MHRD, Govt. of India
 \end{enumerate}
 \end{frame}
 \begin{frame}
-\frametitle{Acknowledgement}
-\label{sec-13}
 
   \begin{block}{}
   \begin{center}

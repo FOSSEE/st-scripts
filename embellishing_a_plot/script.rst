@@ -31,7 +31,7 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Welcome to the tutorial on Embellishing Plots.
+Welcome to the tutorial on "Embellishing a Plot".
 
 .. L2
 
@@ -49,15 +49,21 @@ At the end of this tutorial, you will be able to,
 
 .. R3
 
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Using plot interactively".
+
 Let us start ipython with pylab loaded, open the terminal and type 
 
+.. L3
+
+{{{ Show slide with pre-requisite }}}
+
+{{{ open the terminal and type ipython -pylab }}}
 ::
    
     ipython -pylab
 
-.. L3
 
-{{{ open the terminal and type ipython -pylab }}}
 
 .. R4
 
@@ -548,6 +554,6 @@ thickness 3,we use the ``linspace`` and ``plot`` command as,
 
 .. R44
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 
