@@ -130,12 +130,12 @@ Plot sin(x) in blue color along with linewidth as 3.
 {{{ Show slide with Question1 }}}
 
 .. R10
-
+Switch to terminal for solution
 A combination of color and linewidth would do the job for us.
 
 .. L10
 
-{{{ Switch to terminal }}}
+{{{ Switch to terminal}}}
 ::
     
     clf()
@@ -199,6 +199,7 @@ Pause the video and do this exercise and then resume the video.
 
 .. R16
 
+Switch to terminal for solution.
 We use a combination of linestyle and color.
 
 .. L16
@@ -221,6 +222,7 @@ Plot the curve of x vs tan(x) in red dash line and linewidth 3.
 
 .. R18
 
+Switch to terminal for solution.
 Here we shall use a combination of linewidth argument and linestyle.
 
 .. L18
@@ -307,6 +309,7 @@ in LaTeX style.
 
 .. R25
 
+Switch to terminal for solution.
 The solution is to enclose the whole string in between $. 
 
 .. L25
@@ -368,6 +371,8 @@ in between two $.
 
 .. R30
 
+Switch to terminal for solution.
+
 .. L31
 
 {{{ Show the plot window with clean labels }}}
@@ -420,6 +425,7 @@ What happens to the first annotation ?
 
 .. R34
 
+Switch to the terminal for the solution.
 As we can see, every annotate command makes a new annotation on the figure.
 
 Now we have everything we need to decorate a plot, but the plot would be
@@ -474,6 +480,7 @@ rectangle (-1, -15) and (3, 0)
 
 .. R39
 
+Switch to the terminal for the solution.
 As we can see, the lower and upper limits of x-axis in the question 
 are -1 and 3 respectively.
 The lower and upper limits of y-axis are -15 and 0 respectively.

@@ -228,6 +228,7 @@ resume the video.
 
 .. R17
 
+Switch to the terminal for solution.
 ``ab`` tab completes to ``abs`` and ``a<tab>`` gives us a list of all
 the commands starting with a.
 
@@ -302,6 +303,7 @@ Look-up the documentation of ``round`` and see how to use it.
 
 .. R22
 
+Switch to the terminal for solution.
 And you can look up the documentation of the function round by typing
 round question mark in the ipython interpreter.
 
