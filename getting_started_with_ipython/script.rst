@@ -65,15 +65,15 @@ open the terminal, type ``ipython`` in the terminal and hit enter.
 
 .. R4
 
-We get a prompt with ``In [1]:`` after getting some information about
-the version of Python installed and some help commands. If you get an
-error showing ``ipython is not installed``, please refer to the
-tutorial on how to install the packages.
+After getting some information about the version of Python 
+installed and some help commands, we get a prompt with 
+In[1]:. But, if you get an error saying 'ipython is not
+installed' then refer to the tutorial on how to install the packages.
 
 .. L4
 
-{{Point to the version information with mouse}}
-{{Point to the In[1]: prompt with mouse}}
+{{{Point to the version information with mouse}}}
+{{{Point to the In[1]: prompt with mouse}}}
 
 .. R5
 
@@ -85,13 +85,14 @@ type Ctrl-D.
 
 .. R6
 
-A prompt will apperar to confirm whether you really want to exit, type
-y to say yes and quit ipython and n to say no if you dont want to quit
+A prompt will appear to confirm whether you really want to exit, type
+y to say yes and quit ipython and n to say no if you don't want to quit
 the ipython. Press y.
 
 .. L6
 
-Press y and hit enter. 
+{{{Press y and hit enter.}}} 
+
 
 .. R7
 
@@ -119,7 +120,7 @@ Notice that the output is displayed with an ``Out[1]`` indication.
 
     1+2
 
-{{Point at the Out[1] prompt}}
+{{{Point at the Out[1] prompt}}}
 
 .. R9
 
@@ -136,8 +137,8 @@ minus 4, 6 into 5.
 
 .. R10
 
-Now let's see how the ipython remembers the history of commands ?
-let's try an example ``print 1+2``.
+Now let's see how the ipython remembers the history of commands.
+For example ``print 1+2``.
 
 Instead of typing the whole thing,use the up arrow key to go back to
 the command ``1+2`` which we did before, now use the left-arrow key to
@@ -148,16 +149,16 @@ indication Out square brackets is not shown here.
 
 .. L10
 
-{{Use the up arrow key to go back to the command ``1+2``}}
-{{Use left arrow to navigate to start of line }}
+{{{Use the up arrow key to go back to the command ``1+2``}}}
+{{{Use left arrow to navigate to start of line }}}
 Type
 
 ::
 
     'print'
 
-{{Hit enter}}
-{{Point at the Out[] prompt}}
+{{{Hit enter}}}
+{{{Point at the Out[] prompt}}}
 
 .. R11
 
@@ -190,7 +191,7 @@ into round, This feature of ipython is called the tab-completion.
 
 .. L13
 
-{{Stay on the terminal}}
+{{{Stay on the terminal}}}
 
 .. R14
 
@@ -211,11 +212,11 @@ out all the possible completions of r.
 
 .. L15
 
-{{Stay on the terminal}}
+{{{Stay on the terminal}}}
 
 .. L16
 
-{{Show slide with question 1}}
+{{{Show slide with question 1}}}
 
 .. R16
 
@@ -236,8 +237,6 @@ the commands starting with a.
 
     ab<tab>
     a<tab>
-
-{{{ Show slide with Solution1 and read out the same }}}
 
 .. R18
 
@@ -290,7 +289,7 @@ Look-up the documentation of ``round`` and see how to use it.
 
 .. L21   
 
-{{Show slide with question 2}}
+{{{Show slide with question 2}}}
 
 .. L22
 
@@ -305,7 +304,7 @@ round question mark in the ipython interpreter.
 
 .. L23
 
-{{highlight the syntax with mouse hover on terminal}}
+{{{highlight the syntax with mouse hover on terminal}}}
 
 .. R23
 
@@ -320,26 +319,26 @@ The function ``round``, rounds a number to a given precision.
 
 Pause the video here, try out the following exercise and resume the video.
 Let us now try few more examples with the function round.
-Check the output of the following commands.
+
+Check the output of
+round(2.48)
+round(2.48, 1)
+round(2.48, 2)
+round(2.484)
+round(2.484, 1)
+round(2.484, 2)
 
 .. L24
 
-{{Show slide with question 3}}
+{{{Show slide with question 3}}}
 
 .. L25
 
-::
-
-    round(2.48)
-    round(2.48,1)
-    round(2.48,2)
-    round(2.484)
-    round(2.484,1)
-    round(2.484,2)
-
-{{Show slide with solution 3 and read out the same }}
+{{{Show slide with solution 3 }}}
 
 .. R25
+
+We get 2.0, 2.5 and 2.48, which are what we expect.
 
 .. R26
 
@@ -363,7 +362,7 @@ and hit enter, without closing the parenthesis.
 
     round(2.484
 
-{{Hit enter}}
+{{{Hit enter}}}
 
 .. R27
 
@@ -374,7 +373,7 @@ press enter.  We got the expected output that is 2.0
 
 .. L27
 
-{{ Point at the prompt with three dots }}
+{{{ Point at the prompt with three dots }}}
 
 ::  
 
@@ -406,11 +405,11 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. L29
 
-{{Show slide with question 4}}
+{{{Show slide with question 4}}}
  
 .. L30
 
-{ show the solution on terminal }
+{{{ show the solution on terminal }}}
 
 ::
 
@@ -460,12 +459,12 @@ Here are some self assessment questions for you to solve
 
 .. L32
 
-{{Show self assessment questions slide}}
+{{{Show self assessment questions slide}}}
 
 
 .. L33
 
-(solution of self assessment questions on slide)
+{{{solution of self assessment questions on slide}}}
 
 .. R33
 
@@ -477,7 +476,7 @@ And the answers,
 
 .. L34
 
-{{a thank you slide}}
+{{{Show thank you slide}}}
 
 .. R34
 
