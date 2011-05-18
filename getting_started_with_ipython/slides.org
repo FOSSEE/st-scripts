@@ -87,17 +87,15 @@
    - see the documentation of functions using question mark.
    - interrupt using ~Ctrl-c~ when we make an error.
 * Evaluation
-  1. Ipython is a programming similar to Python?
-     True or False
 
-  2. Which key combination quits ``ipython``?
+  1. Which key combination quits ``ipython``?
 
      - Ctrl + C
      - Ctrl + D
      - Alt + C
      - Alt + D
 
-  3. Which character is used at the end of a command, in Ipython to
+  2. Which character is used at the end of a command, in Ipython to
      display the documentation.
 
     - under score (_)
@@ -105,11 +103,10 @@
     - exclamation mark (!)
     - ampersand (&)
 * Solutions
-  1. False
-  
-  2. Ctrl + D
+    
+  1. Ctrl + D
 
-  3. question mark (?)
+  2. question mark (?)
 
 * 
 #+begin_latex

@@ -350,8 +350,6 @@ using delete or backspace key and correct the errors.
 let us make a typing error deliberately,
 type 
 
-::
-
      round(2.484
 
 and hit enter, without closing the parenthesis.
@@ -439,17 +437,15 @@ let's revise quickly what we have learnt today.In this tutorial we learnt
   
 Here are some self assessment questions for you to solve
 
-1. Ipython is a programming similar to Python?
-   True or False
 
-2. Which key combination quits ``ipython``?
+1. Which key combination quits ``ipython``?
 
    - Ctrl + C
    - Ctrl + D
    - Alt + C
    - Alt + D
 
-3. Which character is used at the end of a command, in Ipython to
+2. Which character is used at the end of a command, in Ipython to
    display the documentation.
 
    - under score (_)
@@ -470,9 +466,8 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. Ipython is not a programming language, it is just an interpreter.
-2. We use Ctrl D to quit Ipython interpreter.
-3. We use ? at the end of the function name to display its documentation.
+1. We use Ctrl D to quit Ipython interpreter.
+2. We use ? at the end of the function name to display its documentation.
 
 .. L34
 
