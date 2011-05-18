@@ -76,8 +76,8 @@ As we can see, the default colour and the default thickness of the
 line is as decided by pylab. Wouldn't it be nice if we could control
 these parameters in the plot? This is possible by passing additional
 arguments to the plot command.
-We shall first clear the figure and plot the same by passing the additional color
-argument. Pass the argument 'r' for red color.
+We shall first clear the figure and plot the same by passing the additional
+color argument. Pass the argument 'r' for red color.
 
 .. L5
      
@@ -114,9 +114,9 @@ A plot with line thickness 2 is produced.
 
 .. R9
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
+Pause the video and do this exercise and then resume the video.
 
-Plot sin(x) in blue colour alongwith linewidth as 3.
+Plot sin(x) in blue color along with linewidth as 3.
 
 .. L9
 
@@ -124,7 +124,7 @@ Plot sin(x) in blue colour alongwith linewidth as 3.
 
 .. R10
 
-A combination of colour and linewidth would do the job for us.
+A combination of color and linewidth would do the job for us.
 
 .. L10
 
@@ -156,7 +156,7 @@ We get a plot with only points.
 
 .. R13
 
-To get the same plot in blue colour.
+To get the same plot in blue color.
  
 .. L13
  
@@ -185,13 +185,13 @@ documentation of plot.
 
 .. R15
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
+Pause the video and do this exercise and then resume the video.
 
  Plot the sine curve with green filled circles.
 
 .. R16
 
-We use a combination of linestyle and colour.
+We use a combination of linestyle and color.
 
 .. L16
 
@@ -209,7 +209,7 @@ We use a combination of linestyle and colour.
 
 Pause the video here, try out the following exercise and resume the video.
 
-Plot the curve of x vs tan(x) in red dashed line and linewidth 3.
+Plot the curve of x vs tan(x) in red dash line and linewidth 3.
 
 .. R18
 
@@ -226,7 +226,7 @@ Here we shall use a combination of linewidth argument and linestyle.
 
 .. R19
 
-Now that we know how to produce a bare minimum plot with colour, style
+Now that we know how to produce a bare minimum plot with color, style
 and thickness of our interest, we shall look at further decorating the plot.
 
 .. L19
@@ -247,7 +247,8 @@ Let us start with a plot for the function -x^2 + 4x - 5.
 
 As you can see, the figure does not have any description describing the plot.
 
-To add a title to the plot to describe what the plot is, use the ``title`` command.
+To add a title to the plot to describe what the plot is,use the ``title`` 
+command.
 
 .. L21
   
@@ -264,7 +265,8 @@ The ``title`` command as you can see, takes a string as an argument
 The figure now has a title. But it is not formatted and does not look clean.
 
 It would look shabby if there were fractions and more complex functions
-like log and exp. Wouldn't it be good if the title is seen in LaTeX like formatting?
+like log and exp. Wouldn't it be good if the title is seen in LaTeX like
+formatting?
 
 This is possible by adding a ``$`` sign before and after the part of the 
 string that should be in LaTeX style.
@@ -321,7 +323,8 @@ and y axes. we shall label x-axis to "x" and y-axis to "f(x)".
 .. R27
 
 As you can see, ``xlabel`` and 'ylabel' command takes a string as an argument. 
-xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis as 'f(x)'.
+xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis
+as 'f(x)'.
 
 .. R28
 
@@ -329,7 +332,8 @@ xlabel sets the label to x-axis as 'x' and ylabel sets the name to the y-axis as
 
 ::
     
-{{{ Show the plot window and point to xlabel and ylabel and switch back to the terminal }}}
+{{{ Show the plot window and point to xlabel and ylabel and 
+    switch back to the terminal }}}
 
 .. L29
 
@@ -386,7 +390,7 @@ The first is x co-ordinate and second is y co-ordinate.
 
 .. R33
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
+Pause the video, do this exercise and then resume the video.
 
 Make an annotation called "root" at the point (-4, 0).
 What happens to the first annotation ?
@@ -452,13 +456,15 @@ Similarly set the limits of y-axis appropriately.
 
 .. R38
 
-Pause the video and do this exercise. Resume the video, after the exercise is solved.
+Pause the video, do this exercise and then resume the video.
 
-Set the limits of axes such that the area of interest is the rectangle (-1, -15) and (3, 0)
+Set the limits of axes such that the area of interest is the 
+rectangle (-1, -15) and (3, 0)
 
 .. R39
 
-As we can see, the lower and upper limits of x-axis in the question are -1 and 3 respectively.
+As we can see, the lower and upper limits of x-axis in the question 
+are -1 and 3 respectively.
 The lower and upper limits of y-axis are -15 and 0 respectively.
 
 .. L39
@@ -480,19 +486,20 @@ This gives us the required rectangle.
 
 .. R41
 
-Let's quickly revise what we have learnt today. In this spoken tutorial we have learnt, 
+Let's quickly revise what we have learnt today. In this tutorial we have learnt to, 
 
- 1. to Modify the attributes of plot like color, line width, line style by passing additional arguments.
- #. to add title to a plot using 'title' command.
- #. to incorporate LaTeX style formatting by adding a ``$`` sign before and after the part of the 
-    string.
- #. to label x and y axes using xlabel() and ylabel() commands.
- #. to add annotations to a plot using annotate() command.
- #. to get and set the limits of axes using xlim() and ylim() commands.
+ 1. Modify the attributes of plot like color, line width, 
+    line style by passing additional arguments.
+ #. Add title to a plot using 'title' command.
+ #. Incorporate LaTeX style formatting by adding a ``$`` sign 
+    before and after the part of the string.
+ #. Label x and y axes using xlabel() and ylabel() commands.
+ #. Add annotations to a plot using annotate() command.
+ #. Get and set the limits of axes using xlim() and ylim() commands.
 
 .. L42
 
-{{{ Show the 'self assesment questions' slide}}}
+{{{ Show the 'self assessment questions' slide}}}
 
 .. R42
 
@@ -500,7 +507,7 @@ Here are some self assessment questions for you to solve.
 
 1. Draw a plot of cosine graph between -2pi to 2pi with line thickness 4.
 
-2. Read thorugh the documentation and find out is there a way to modify the
+2. Read through the documentation and find out, is there a way to modify the
    alignment of text in the command ``ylabel``.
 
    - Yes
@@ -517,16 +524,18 @@ Here are some self assessment questions for you to solve.
 
 And the answers,
 
-1. In order to plot a cosine graph between the points -2pi and 2pi with line thickness 3,we use
-the ``linspace`` and ``plot`` command as,
+1. In order to plot a cosine graph between the points -2pi and 2pi with line 
+thickness 3,we use the ``linspace`` and ``plot`` command as,
 ::
         
     x = linspace(-2*pi, 2*pi)
     plot(x, cos(x), linewidth=4)
 
-2. No. We do not have an option to modify the alignment of text in the command ``ylabel``.
+2. No. We do not have an option to modify the alignment of text in the 
+   command ``ylabel``.
 
-3. To set the title in LaTex style formatting,we write the equation between two dollar signs as,
+3. To set the title in LaTex style formatting,we write the equation between two
+   dollar signs as,
 
 ::
 
@@ -540,5 +549,5 @@ the ``linspace`` and ``plot`` command as,
 .. R44
 
 Hope you have enjoyed and found it useful.
-Thankyou!
+Thank you!
 
