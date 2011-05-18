@@ -77,6 +77,7 @@ Now type 'linspace' followed by a '?' mark in your ipython shell
              
 .. L5
 
+{{{ Switch to terminal }}}
 :: 
    
     linspace?

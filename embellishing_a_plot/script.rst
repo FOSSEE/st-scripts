@@ -105,6 +105,7 @@ The same plot is seen in red color.
 The thickness of the line can be altered by 'linewidth' argument. 
 
 .. L7
+{{{ Switch to terminal }}}
     
 ::
      
@@ -134,6 +135,7 @@ A combination of color and linewidth would do the job for us.
 
 .. L10
 
+{{{ Switch to terminal }}}
 ::
     
     clf()
@@ -165,8 +167,8 @@ We get a plot with only points.
 To get the same plot in blue color.
  
 .. L13
- 
-  ::
+::
+
     clf()
     plot(x, sin(x), 'b.')
 
@@ -257,7 +259,8 @@ To add a title to the plot to describe what the plot is,use the ``title``
 command.
 
 .. L21
-  
+
+{{{ Switch to terminal }}}  
 ::
    
     title("Parabolic function -x^2+4x-5")
@@ -307,7 +310,8 @@ in LaTeX style.
 The solution is to enclose the whole string in between $. 
 
 .. L25
-  
+
+{{{ Switch to terminal }}}  
 ::
     
     title("$Parabolic function -x^2+4x-5$")
@@ -356,6 +360,7 @@ in between two $.
 
 .. L30
 
+{{{ Switch to terminal }}}
 ::
 
     xlabel("$x$")
@@ -475,6 +480,7 @@ The lower and upper limits of y-axis are -15 and 0 respectively.
 
 .. L39
 
+{{{ Switch to terminal }}}
 ::
 
     xlim(-1, 3)
