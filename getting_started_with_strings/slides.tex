@@ -1,4 +1,4 @@
-% Created 2010-11-10 Wed 10:46
+% Created 2011-05-16 Mon 12:57
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -41,41 +41,48 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
-\begin{itemize}
 
-\item Defining strings\\
-\label{sec-1_1}%
-\item Concatenation\\
-\label{sec-1_2}%
-\item Accessing individual elements\\
-\label{sec-1_3}%
-\item Immutability of strings\\
-\label{sec-1_4}%
-\end{itemize} % ends low level
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Strings}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
+
+\begin{itemize}
+\item Define strings in differnt ways.
+\item Concatenate strings.
+\item Print a string repeatedly.
+\item Access individual elements of the string.
+\item Learn immutability of strings.
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
-\label{sec-2}
-
-  Obtain the string \texttt{\%\% -------------------- \%\%} (20 hyphens) without
-  typing out all the twenty hyphens.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
-s = "%% " + "-"*20 + " %%"
-\end{lstlisting}
+  Obtain the string \verb~%% -------------------- %%~ (20 hyphens) without
+  typing out all the twenty hyphens.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Question 2}
 \label{sec-4}
 
-  Given a string, \texttt{s} which is \texttt{Hello World} , what is the output of::
+  Given a string, \verb~s~ which is \verb~Hello World~ , what is the output of::
 \lstset{language=Python}
 \begin{lstlisting}
 s[-5] 
@@ -83,47 +90,62 @@ s[-10]
 s[-15]
 \end{lstlisting}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-5}
-
-\lstset{language=Python}
-\begin{lstlisting}
-'W'
-'e'
-IndexError
-\end{lstlisting}
-\end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-6}
+\label{sec-5}
 
-  In this tutorial we have learnt
+  In this tutorial, we have learnt,
+
 \begin{itemize}
-\item How to define strings
-\item Different ways of defining a string
-\item String concatenation and repetition
-\item Accessing individual elements of the string
-\item Immutability of strings
+\item To define strings in differnt ways.
+\item To concatenate strings by performing addition.
+\item To repeat a string `n' number of times by doing multiplication.
+\item To access individual elements of the string by using their subscripts.
+\item About the immutability of strings.
 \end{itemize}
-
-  
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
+\label{sec-6}
+
+
+\begin{enumerate}
+\item Write code to assign s, the string ``' is called the apostrophe``
+\item Given strings s and t, ``s = ``Hello''`` and ``t = ``World''`` and an
+   integer r, ``r = 2``. What is the output of s * r + s * t?
+\item How will you change s='hello' to s='Hello'.
+\begin{itemize}
+\item s[ 0 ]= H
+\item s[ 0 ]='H'
+\item strings are immutable,hence cannot be manipulated.
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
 \label{sec-7}
+
+
+\begin{enumerate}
+\item s = ``` is called the apostrophe''
+\item HelloHelloWorldWorld
+\item Strings are immutable,hence cannot be manipulated.
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
+ 
 \end{frame}
 
 \end{document}

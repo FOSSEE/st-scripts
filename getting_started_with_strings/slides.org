@@ -29,18 +29,33 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-*** Defining strings
-*** Concatenation
-*** Accessing individual elements
-*** Immutability of strings
+* 
+  #+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Strings}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
+  - Define strings in differnt ways.
+  - Concatenate strings. 
+  - Print a string repeatedly. 
+  - Access individual elements of the string.
+  - Learn immutability of strings.
 * Question 1
   Obtain the string ~%% -------------------- %%~ (20 hyphens) without
   typing out all the twenty hyphens.
-* Solution 1
-  #+begin_src python
-    s = "%% " + "-"*20 + " %%"
-  #+end_src
 * Question 2
   Given a string, ~s~ which is ~Hello World~ , what is the output of::
   #+begin_src python
@@ -48,33 +63,44 @@
     s[-10]
     s[-15]
   #+end_src
-* Solution 2
-  #+begin_src python
-    'W'
-    'e'
-    IndexError
-  #+end_src
 * Summary
-  In this tutorial we have learnt
-    + How to define strings
-    + Different ways of defining a string
-    + String concatenation and repetition
-    + Accessing individual elements of the string
-    + Immutability of strings
-  
-* Thank you!
-#+begin_latex
+  In this tutorial, we have learnt,
+  - To define strings in differnt ways.
+  - To concatenate strings by performing addition.
+  - To repeat a string 'n' number of times by doing multiplication.
+  - To access individual elements of the string by using their subscripts.
+  - Use the concept of immutability of strings.
+
+* Evaluation
+  1. Write code to assign s, the string ``' is called the apostrophe``
+
+  2. Given strings s and t, ``s = "Hello"`` and ``t = "World"`` and an
+   integer r, ``r = 2``. What is the output of s * r + s * t?
+
+  3. How will you change s='hello' to s='Hello'.
+
+    - s[ 0 ]= H
+    - s[ 0 ]='H'
+    - strings are immutable,hence cannot be manipulated.
+* Solutions
+  1. s = "` is called the apostrophe" 
+
+  2. HelloHelloWorldWorld
+     
+  3. Strings are immutable,hence cannot be manipulated.  
+
+* 
+  #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
-
-
+ 

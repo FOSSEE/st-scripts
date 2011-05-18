@@ -18,35 +18,51 @@
 Script
 ------
 
-{{{ Show the slide containing title }}}
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
+Hello Friends. Welcome to the tutorial on (topic of the tutorial)
 
-Hello Friends. Welcome to the tutorial on so-and-so (topic of the tutorial)
 
-{{{ Show the outline slide }}}
+{{{ show the objective slide }}}
 
- ...
 
-Following is an (are) exercise(s) that you must do. 
 
-%% %% Exercises go here. 
+Small chunk of content/concept is explained.{clear and concise}
 
-%% %% another exercise
 
-%% %% yet another exercise
 
-Please, pause the video here. Do the exercise(s) and then continue. 
+{{{Show Exercise 1 slide}}}
+Pause the video here, try out the following exercise and resume the video.
+
+{{{Solution of Exercise 1 either on terminal or slide}}}
+
+
+
+Small chunk of content/concept is explained.{clear and concise}
+
+
+
+{{{Show Exercise 2 slide}}}
+Pause the video here, try out the following exercise and resume the video.
+
+{{{Solution of Exercise 2 either on terminal or slide}}}
+
+
+
+{{{continue the same format ....}}}
+
+
 
 {{{ Show summary slide }}}
+This brings us to the end of the tutorial.In this tutorial,we have learnt to,
 
-This brings us to the end of the tutorial.
-we have learnt
 
- * 
- * 
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+{{{Show the self assessment questions slide}}}
+{{{show the solution of self assessment questions.}}}
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
 
-Hope you have enjoyed and found it useful.
-Thank you!
+
+{{{ Show the "thank you” slide}}}
+Hope you have enjoyed and found it useful. Thank you!
+

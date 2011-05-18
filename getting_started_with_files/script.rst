@@ -23,166 +23,289 @@
 Script
 ------
 
-{{{ Show the slide containing title }}}
+.. L1
 
-Hello Friends. Welcome to the tutorial on getting started with files. 
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-{{{ Show the outline for this tutorial }}} 
+.. R1
 
-In this tutorial we shall learn to read files, and do some basic
-actions on the file, like opening and reading a file, closing a
-file, iterating through the file line-by-line, and appending the
-lines of a file to a list. 
+Hello Friends and Welcome to the tutorial on "Getting started with files". 
 
-{{{ switch back to the terminal }}}
+.. L2
 
-As usual, we start IPython, using 
+{{{ Show slide with objectives }}}
+
+.. R2
+
+At the end of this tutorial, you will be able to, 
+ 
+ 1. Open a file. 
+ #. Read the contents of the file line by line. 
+ #. Read the entire content of file at once. 
+ #. Append the lines of a file to a list.
+ #. Close the file. 
+
+.. L3
+
+{{{ switch to the terminal }}}
 ::
 
-  ipython -pylab 
+    ipython -pylab 
+
+.. R3
+
+Open the terminal and start ipython
+
+.. R4
 
 Let us first open the file, ``pendulum.txt`` present in
 ``/home/fossee/``. 
+
+.. L4
 ::
 
-  f = open('/home/fossee/pendulum.txt')
+    f = open('/home/fossee/pendulum.txt')
 
-``f`` is called a file object. Let us type ``f`` on the terminal to
+.. R5
+
+Here ``f`` is called a file object. Let us type ``f`` on the terminal to
 see what it is. 
+
+.. L5
 ::
 
-  f
+    f
 
-The file object shows, the file which is open and the mode (read
-or write) in which it is open. Notice that it is open in read only
-mode, here. 
+.. R6
+
+The file object shows the filepath and mode of the file which is open. 
+'r' stand for read only mode and 'w' stands for write mode. 
+As you can see, this file is open in read only mode.
+
+.. L6
+
+.. R7
 
 We shall first learn to read the whole file into a single
-variable. We use the ``read`` method of ``f`` to read, all the contents of the file
-into the variable ``pend``. 
+variable. We use the ``read`` method to read all the contents of the file
+into the variable, ``pend``. 
+
+.. L7
 ::
 
-  pend = f.read()
+    pend = f.read()
 
-Now, let us see what is in ``pend``, by typing 
+.. R8
+
+Now, let us see what ``pend`` contains, by typing ``print pend``
+
+.. L8
 ::
 
-  print pend
+    print pend
+
+.. R9
 
 We can see that ``pend`` has all the data of the file. Type just ``pend``
 to see more explicitly, what it contains. 
+
+.. L9
 ::
 
-  pend
+    pend
 
-Following is an exercise that you must do. 
+.. L10
 
-{{ show slide with Question 1 }}
+{{{ show slide with Question 1 }}}
 
-%%1%% Split the variable into a list, ``pend_list``, of the lines in
-the file. Hint, use the tab command to see what methods the string
-variable has.
+.. R10
 
-Please, pause the video here. Do the exercise and then continue. 
+Pause the video here, try out the following exercise and resume the video.
 
-{{ show slide with Solution 1 }}
+Split the variable into a list, ``pend_list``, of the lines in
+the file.
 
+.. L11
 ::
 
-  pend_list = pend.splitlines()
+    pend_list = pend.splitlines()
+    pend_list
 
-  pend_list
+.. R11
+
+We use the function ``splitlines`` to solve this problem.
+
+.. R12
 
 Now, let us learn to read the file line-by-line. But, before that we
 will have to close the file, since the file has already been read till
 the end.
 
 Let us close the file opened into f.
+
+.. L12
 ::
 
-  f.close()
+    f.close()
 
-Let us again type ``f`` on the prompt to see what it shows. 
+.. R13
+
+Again type ``f`` on the prompt to see what it contains. 
+
+.. L13
 ::
 
-  f
+    f
+
+.. R14
 
 Notice, that it now says the file has been closed. It is a good
 programming practice to close any file objects that we have
 opened, after their job is done.
 
+.. L14
+
+.. L15
+
+{{{ Show slide with Question 2 }}}
+
+.. R15
+
 Let us, now move on to reading files line-by-line. 
+Pause the video here, try out the following exercise and resume the video.
 
-Following is an exercise that you must do. 
+Re-open the file ``pendulum.txt`` with ``f`` as the file object.
 
-%%2%% Re-open the file ``pendulum.txt`` with ``f`` as the file object.
-
-Please, pause the video here. Do the exercise and then continue. 
+.. R16
 
 We just use the up arrow until we reach the open command and issue
 it again. 
+
+.. L16
 ::
 
-  f = open('/home/fossee/pendulum.txt')
+    f = open('/home/fossee/pendulum.txt')
+
+.. R17
 
 Now, to read the file line-by-line, we iterate over the file
 object line-by-line, using the ``for`` command. Let us iterate over
 the file line-wise and print each of the lines. 
+
+.. L17
 ::
 
-  for line in f:
-      print line
+    for line in f:
+        print line
 
-``line`` is variable, sometimes called the loop
+.. R18
+
+``line`` is a variable, sometimes called the loop
 variable, and it is not a keyword. We could have used any other
 variable name, but ``line`` seems meaningful enough.
 
+.. L18
+
+.. R19
+
 Instead of just printing the lines, let us append them to a list,
 ``line_list``. We first initialize an empty list, ``line_list``. 
+
+.. L19
 ::
 
-  line_list = [ ]
+    line_list = [ ]
+
+.. R20
 
 Let us then read the file line-by-line and then append each of the
-lines, to the list. We could, as usual close the file using
+lines to the list. We could, as usual close the file using
 ``f.close`` and re-open it. But, this time, let's leave alone the
 file object ``f`` and directly open the file within the for
 statement. This will save us the trouble of closing the file, each
 time we open it. 
 
+.. L20
 ::
 
-  for line in open('/home/fossee/pendulum.txt'):
-      line_list.append(line)
+    for line in open('/home/fossee/pendulum.txt'):
+        line_list.append(line)
+
+.. R21
 
 Let us see what ``line_list`` contains. 
+
+.. L21
 ::
 
-  line_list
+    line_list
+
+.. R22
 
 Notice that ``line_list`` is a list of the lines in the file, along
 with the newline characters. If you noticed, ``pend_list`` did not
-contain the newline characters, because the string ``pend`` was
+contain the newline characters, because the string ``pend``, was
 split on the newline characters. 
 
-Using some string methods, that we shall look at in the tutorial on
-strings, we can strip out the newline characters from the lines. 
+We can strip out the newline characters from the lines by using some string methods
+which we shall look in the further tutorial on strings.
 
-.. #[[Anoop: I think the code that are required to be typed can be
-   added to the slide.]]
+.. L22
 
-{{{ show the summary slide }}}
+.. L23
 
-That brings us to the end of this tutorial. In this tutorial we
-have learnt to open and close files, read the data in the files as
-a whole, using the read command or reading it line by line by
-iterating over the file object. 
+{{{ Show the summary slide }}}
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+.. R23
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+This brings us to the end of this tutorial. In this tutorial, we learnt to,
+  
+ 1. Open and close files using the ``open`` and ``close`` functions respectively.
+ #. Read the data in the files as a whole,by using the ``read`` function.
+ #. Read the data in the files line by line by iterating over the file object using the
+    ``for`` loop. 
+ #. Append the lines of a file to a list using the ``append`` function within the 
+    ``for`` loop.
+
+.. L24
+
+{{{Show self assessment questions slide}}}
+
+.. R24
+
+Here are some self assessment questions for you to solve
+
+1. The ``open`` function returns a 
+
+   - string
+   - list
+   - file object
+   - function
+
+2. What does the function ``splitlines()`` do.
+
+   - Displays the data as strings,all in a line
+   - Displays the data line by line as strings
+   - Displays the data line by line but not as strings
+
+.. L25
+
+{{{solution of self assessment questions on slide}}}
+
+.. R25
+
+And the answers,
+
+1. The function ``open``, returns a file object.
+2. The function ``splitlines`` displays the data line by line as strings.
+
+.. L26
+
+{{{ Show the Thankyou slide }}}
+
+.. R26
 
 Hope you have enjoyed and found it useful.
 Thank you!
-
 

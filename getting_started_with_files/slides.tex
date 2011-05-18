@@ -1,6 +1,6 @@
-% Created 2010-10-21 Thu 14:35
+% Created 2011-05-18 Wed 12:37
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Getting started with files}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,33 +41,42 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Files}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
 
 \begin{itemize}
-\item Opening and reading contents of a file
-\item Closing open files
-\item Reading all the contents of the file at once
-\item Reading files line by line
+\item Open a file.
+\item Read the contents of the file line by line.
+\item Read the entire content of file at once.
+\item Append the lines of a file to a list.
+\item Close the file.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Question 1}
-\label{sec-2}
-
-  Split the variable into a list, \texttt{pend\_list}, of the lines in the
-  file. Hint, use the tab command to see what methods the string
-  variable has.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
 \label{sec-3}
 
-\begin{verbatim}
-In []: pend_list = pend.splitlines()
-
-In []: pend_list
-\end{verbatim}
+  Split the variable into a list, \texttt{pend\_list}, of the lines in the
+  file.
 \end{frame}
 \begin{frame}
 \frametitle{Question 2}
@@ -76,38 +84,63 @@ In []: pend_list
 
   Re-open the file \texttt{pendulum.txt} with \texttt{f} as the file object.
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-5}
-
-\begin{verbatim}
-In []:   f = open('/home/fossee/pendulum.txt')
-\end{verbatim}
-\end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-6}
+\label{sec-5}
+
+  In this tutorial, we have learnt to –
 
 \begin{itemize}
-\item Opening a file using \texttt{open} function
-\item Reading all the contents of the file at once using \texttt{read()} method
-\item Closing open files using the \texttt{close} method
-\item Reading files line by line by iterating using a \texttt{for} loop
+\item Open and close files using the ``open`` and ``close`` functions respectively.
+\item Read the data in the files as a whole,by using the ``read`` function.
+\item Read the data in the files line by line by iterating over the file object
+    using the ``for`` loop.
+\item Append the lines of a file to a list using the ``append`` function within
+    the  ``for`` loop.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
+\label{sec-6}
+
+
+\begin{enumerate}
+\item The ``open`` function returns a
+\begin{itemize}
+\item string
+\item list
+\item file object
+\item function
+\end{itemize}
+\item What does the function ``splitlines()`` do.
+\begin{itemize}
+\item Displays the data as strings,all in a line
+\item Displays the data line by line as strings
+\item Displays the data line by line but not as strings
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
 \label{sec-7}
+
+
+\begin{enumerate}
+\item file object
+\item Displays the data line by line as strings
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
