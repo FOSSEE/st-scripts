@@ -220,7 +220,8 @@ out all the possible completions of r.
 
 .. R16
 
-Now let's try out an exercise.Pause the video,solve the problem and resume the video.
+Now let's try out an exercise. Pause the video,solve the problem and
+resume the video.
 
   1. find out the commands starting with "ab"?
   2. list out the commands starting with "a"?
