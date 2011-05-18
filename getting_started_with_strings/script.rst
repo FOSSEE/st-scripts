@@ -96,9 +96,9 @@ one of the control characters itself is part of the string. For example
 By having multiple control characters, we avoid the need for
 escaping characters -- in this case the apostrophe. 
 
-Let us now move on to the triple quoted strings. Let us define multi-line strings without
-using any escaping. Everything within the triple quotes is a single
-string no matter how many lines it extends
+Let us now move on to the triple quoted strings. Let us define multi-line 
+strings without using any escaping. Everything within the triple quotes is a 
+single string no matter how many lines it extends
 
 .. L6
 ::
@@ -119,9 +119,10 @@ We can assign this string to any variable
 .. R8
 
 Now 'a' is a string variable. String is a collection of characters. In
-addition string is an immutable collection which means that the string cannot be modified 
-after it is created.So all the operations that are applicable to any other immutable 
-collection in Python, works on strings as well. Hence we can add two strings
+addition string is an immutable collection which means that the string cannot 
+be modified after it is created.So all the operations that are applicable to any
+other immutable collection in Python, works on strings as well.
+Hence we can add two strings
 
 .. L8
 ::
@@ -190,8 +191,8 @@ using the subscripts
 .. R14
 
 a[0] gives us the first character in the string. The indexing starts from 0
-for the first character and goes up to (n-1) for the last character,where 'n' is the total 
-number of characters in a string. 
+for the first character and goes up to (n-1) for the last character,where 'n' is
+the total number of characters in a string. 
 We can access the strings from the end using negative indices
 
 .. L15
