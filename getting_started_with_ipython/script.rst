@@ -54,6 +54,10 @@ At the end of this tutorial, you will be able to,
 
 .. R3 
 
+IPython is an enhanced Python interpreter that provides features like	
+tabcompletion, easier access to help and many other functionalities
+which are not available in the vannila Python interpreter.
+
 Let us first see how to start the ``ipython`` interpreter.First
 open the terminal, type ``ipython`` in the terminal and hit enter.
 
@@ -443,15 +447,17 @@ let's revise quickly what we have learnt today.In this tutorial we learnt
   
 Here are some self assessment questions for you to solve
 
+1. ``ipython`` is a programming language similar to Python.
+     True or False
 
-1. Which key combination quits ``ipython``?
+2. Which key combination quits ``ipython``?
 
    - Ctrl + C
    - Ctrl + D
    - Alt + C
    - Alt + D
 
-2. Which character is used at the end of a command, in Ipython to
+3. Which character is used at the end of a command, in Ipython to
    display the documentation.
 
    - under score (_)
@@ -472,8 +478,9 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. We use Ctrl D to quit Ipython interpreter.
-2. We use ? at the end of the function name to display its documentation.
+1. Ipython is not a programming language, it is just an interpreter.
+2. We use Ctrl D to quit Ipython interpreter.
+3. We use ? at the end of the function name to display its documentation.
 
 .. L34
 
