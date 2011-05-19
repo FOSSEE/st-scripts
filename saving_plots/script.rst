@@ -47,10 +47,21 @@ At the end of this tutorial, you will be able to,
 
 .. R3
 
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Using plot interactively".
+
 Start your IPython interpreter with the command 
 ipython -pylab
+<Pause>
+
+As you know, it will start your IPython interpreter with the required
+python modules for plotting and saving your plots.
 
 .. L3
+
+{{{ Show slide with pre-requisite }}}
+
+{{{ Shift to terminal and start ipython -pylab }}}
 
 ::
 
@@ -61,9 +72,6 @@ ipython -pylab
 {{{Switch to slide 'Creating a basic plot'}}}
 
 .. R4
-
-As you know, it will start your IPython interpreter with the required
-python modules for plotting and saving your plots.
 
 To start with, let us plot a sine wave from minus 3 pi to 3 pi.
 Let us start by calculating the required points for the plot. It
@@ -100,8 +108,8 @@ reports.
 
 .. R7
 
-For saving the plot, we will use ``savefig()`` function.For this we shall keep the 
-plot window open alongside the terminal. The statement is, 
+For saving the plot, we will use ``savefig()`` function.For this we shall 
+keep the plot window open alongside the terminal. The statement is, 
 
 .. L8
 
@@ -136,9 +144,9 @@ want to save the file.
 Here we have used an extension ``.png`` which means we want to save the
 image as a PNG file.
 
-Now let us locate the file ``sine.png`` which we had saved a while ago.We have saved the file to
-``/home/fossee`` so let us navigate to ``/home/fossee`` using the
-file browser.
+Now let us locate the file ``sine.png`` which we had saved a while ago.
+We have saved the file to ``/home/fossee`` so let us navigate to 
+``/home/fossee`` using thefile browser.
 
 .. L11
 
@@ -171,7 +179,10 @@ support transparency etc.
 
 .. R13
 
-Save the sine plot in the EPS format which can be embedded in LaTeX documents.
+Pause the video here, try out the following exercise and resume the video.
+
+Save the sine plot in the EPS format which can be embedded in 
+LaTeX documents.
 
 .. L14
 
@@ -217,7 +228,9 @@ Yes! the new file ``sine.eps`` is here.
 
 .. R18
 
-Now you may try saving the same in pdf, ps, svg formats.
+Pause the video here, try out the following exercise and resume the video.
+
+Save the sine plot in PDF, PS and SVG formats.
 
 .. L19
 
@@ -225,17 +238,15 @@ Now you may try saving the same in pdf, ps, svg formats.
 
 .. R19
 
-This brings us to the end of this tutorial,
-let's revise quickly what we have learnt today
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
- 1. to save plots using the ``savefig()`` function.
- #. to save the plots in different formats like
+ 1. Save plots using the ``savefig()`` function.
+ #. Save the plots in different formats like
     - pdf
     - ps
     - png
     - svg
     - eps
- #. to locate files in the file system.
 
 .. R20
 
@@ -263,7 +274,7 @@ Here are some self assessment questions for you to solve
 
 .. L21
 
-(solution of self assessment questions on slide)
+{{{solution of self assessment questions on slide}}}
 
 .. R21
 

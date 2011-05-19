@@ -24,7 +24,14 @@ Hello Friends. Welcome to the tutorial on (topic of the tutorial)
 
 
 {{{ show the objective slide }}}
+At the end of this tutorial, you will be able to,
+ 1.
+ #.
+ #.
 
+{{{ Show pre-requisite slide }}}
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "(topic of tutorial)".
 
 
 Small chunk of content/concept is explained.{clear and concise}
@@ -54,8 +61,10 @@ Pause the video here, try out the following exercise and resume the video.
 
 
 {{{ Show summary slide }}}
-This brings us to the end of the tutorial.In this tutorial,we have learnt to,
-
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
+ 1. 
+ #.
+ #.
 
 
 {{{Show the self assessment questions slide}}}

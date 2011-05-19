@@ -220,7 +220,7 @@ out all the possible completions of r.
 
 .. L16
 
-{{{Show slide with question 1}}}
+{{{Show slide with exercise 1}}}
 
 .. R16
 
@@ -248,7 +248,7 @@ the commands starting with a.
 
 Now, let's see what the functions abs is used for.  We will use the
 help features of ipython to find out this.  To see the documentation
-of a function, type the function name followed by a question mark.
+of a function, type the function name followed by a exercise mark.
 Ipython interpreter will show the documentation for the
 function.  Let us see the documentation of the function abs, type
 abs? and press enter
@@ -297,7 +297,7 @@ Look-up the documentation of ``round`` and see how to use it.
 
 .. L21   
 
-{{{Show slide with question 2}}}
+{{{Show slide with exercise 2}}}
 
 .. L22
 
@@ -309,7 +309,7 @@ Look-up the documentation of ``round`` and see how to use it.
 
 Switch to the terminal for solution.
 And you can look up the documentation of the function round by typing
-round question mark in the ipython interpreter.
+round exercise mark in the ipython interpreter.
 
 .. L23
 
@@ -339,7 +339,7 @@ round(2.484, 2)
 
 .. L24
 
-{{{Show slide with question 3}}}
+{{{Show slide with exercise 3}}}
 
 .. L25
 
@@ -413,7 +413,7 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. L29
 
-{{{Show slide with question 4}}}
+{{{Show slide with exercise 4}}}
  
 .. L30
 
@@ -434,18 +434,18 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R31 
 
-let's revise quickly what we have learnt today.In this tutorial we learnt 
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
-  1. to invoke the ``ipython`` interpreter by typing ipython. 
-  #. to quit the ``ipython`` interpreter by using <ctrl>d. 
-  #. to navigate in the history of ``ipython`` by using the arrow keys. 
-  #. what is tab-completion. 
-  #. to see the documentation of functions using question mark.
-  #. to interrupt using <ctrl>c when we make an error.
+  1. Invoke the ``ipython`` interpreter by typing ipython. 
+  #. Quit the ``ipython`` interpreter by using <ctrl>d. 
+  #. Navigate in the history of ``ipython`` by using the arrow keys. 
+  #. Use the tab-completion feauture for writing python functions. 
+  #. See the documentation of functions using exercise mark.
+  #. Interrupt using <ctrl>c when we make an error.
 
 .. R32
   
-Here are some self assessment questions for you to solve
+Here are some self assessment questionss for you to solve
 
 1. ``ipython`` is a programming language similar to Python.
      True or False
@@ -461,7 +461,7 @@ Here are some self assessment questions for you to solve
    display the documentation.
 
    - under score (_)
-   - question mark (?)
+   - exercise mark (?)
    - exclamation mark (!)
    - ampersand (&)
 
@@ -472,7 +472,7 @@ Here are some self assessment questions for you to solve
 
 .. L33
 
-{{{solution of self assessment questions on slide}}}
+{{{solution of self assessment questiones on slide}}}
 
 .. R33
 

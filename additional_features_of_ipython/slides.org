@@ -53,17 +53,20 @@
   - View a part of the history. 
   - Save a part of your history to a file. 
   - Run a script from within ipython. 
-* Question 1
+* Pre-requisite
+  Spoken tuorial on -
+  - Embellishing a Plot
+* Exercise 1
   Read through the documentation of =%hist= and find out how to
   list all the commands between 5 and 10.
-* Question 2
+* Exercise 2
   Change the label on y-axis to "y" and save the lines of code
   accordingly
-* Question 3
+* Exercise 3
   Use =%hist= and =%save= and create a script that has the function show()
   in it.Run the script to produce the plot and display the same.
 
-* Question 4
+* Exercise 4
   Run the script without using the -i option. Do you find any
   difference?
 * Solution 4

@@ -51,6 +51,9 @@
   - Save plots using ``savefig()`` function.
   - Save plots in different formats.
   
+* Pre-requisite
+  Spoken tutorial on -
+  - Using plot interactively.
 * Creating a basic plot
   Plot a sine wave from -3pi to 3pi.
   #+begin_src python
@@ -78,9 +81,9 @@
     ~vector graphics~
 *** .png - Portable Network Graphics
     ~supports transparency~
-* Question 1
+* Exercise 1
   Save the sine plot in the format EPS which can be embedded in LaTeX documents.
-* Question 2
+* Exercise 2
   Save the sine plot in PDF, PS and SVG formats.
 
 * Summary

@@ -127,7 +127,7 @@ Plot sin(x) in blue color along with linewidth as 3.
 
 .. L9
 
-{{{ Show slide with Question1 }}}
+{{{ Show slide with exercise1 }}}
 
 .. R10
 Switch to terminal for solution
@@ -189,7 +189,7 @@ documentation of plot.
 
 .. L15
 
-{{{Show slide containing question 2}}}
+{{{Show slide containing exercise 2}}}
 
 .. R15
 
@@ -212,7 +212,7 @@ We use a combination of linestyle and color.
 
 .. L17
 
-{{{Show slide containing question 3}}}
+{{{Show slide containing exercise 3}}}
 
 .. R17
 
@@ -298,7 +298,7 @@ As we can see, the polynomial is now formatted.
 
 .. L24
 
-{{{Show slide containing question 4}}}
+{{{Show slide containing exercise 4}}}
 
 .. R24
 
@@ -350,7 +350,7 @@ as 'f(x)'.
 
 .. L29
 
-{{{Show slide containing question 5}}}
+{{{Show slide containing exercise 5}}}
 
 .. R29
 
@@ -413,7 +413,7 @@ What happens to the first annotation ?
 
 .. L33
 
-{{{Show slide containing question 6}}}
+{{{Show slide containing exercise 6}}}
 
 .. L34
 
@@ -469,7 +469,7 @@ Similarly set the limits of y-axis appropriately.
 
 .. L38
 
-{{{Show slide containing question 7 }}}
+{{{Show slide containing exercise 7 }}}
 
 .. R38
 
@@ -481,7 +481,7 @@ rectangle (-1, -15) and (3, 0)
 .. R39
 
 Switch to the terminal for the solution.
-As we can see, the lower and upper limits of x-axis in the question 
+As we can see, the lower and upper limits of x-axis in the exercise 
 are -1 and 3 respectively.
 The lower and upper limits of y-axis are -15 and 0 respectively.
 
@@ -505,7 +505,7 @@ This gives us the required rectangle.
 
 .. R41
 
-Let's quickly revise what we have learnt today. In this tutorial we have learnt to, 
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
  1. Modify the attributes of plot like color, line width, 
     line style by passing additional arguments.

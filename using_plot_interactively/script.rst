@@ -257,7 +257,7 @@ The last one is 'home' referring to the initial plot.
 
 .. L22
 
-{{{Show slide with question 1}}}
+{{{Show slide with exercise 1}}}
 
 .. R22
 
@@ -275,22 +275,24 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R23
 
-Let's revise quickly what we have learnt today 
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
- 1. To Start Ipython with pylab. 
- #. To Use the linspace function to create `num` equally spaced points 
+ 1. Start Ipython with pylab. 
+ #. Use the linspace function to create `num` equally spaced points 
     in a region.
- #. To Find the length of sequences using len function.
- #. To Plot mathematical functions using plot.
- #. To Clear drawing area using clf. 
- #. To Use the UI of plot for studying it better and using 
+ #. Find the length of sequences using len function.
+ #. Plot mathematical functions using plot.
+ #. Clear drawing area using clf. 
+ #. Use the UI of plot for studying it better and using 
     functionalities like save,zoom and moving the plots on x and y axis. 
 
 .. L24
 
-{{Show self assessment questions slide}}
+{{{Show self assessment questions slide}}}
 
 .. R24
+
+Here are some self assessment questions for you to solve
 
 1. Create 100 equally spaced points between -pi/2 and pi/2?
 

@@ -1,4 +1,4 @@
-% Created 2011-05-03 Tue 14:50
+% Created 2011-05-19 Thu 13:28
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Saving Plots}
+\vspace{12pt}
+\textcolor{blue}{\huge Saving Plots}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -65,9 +69,19 @@ MHRD, Govt. of India
 \end{itemize}
   
 \end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tutorial on -
+
+\begin{itemize}
+\item Using plot interactively.
+\end{itemize}
+\end{frame}
 \begin{frame}[fragile]
 \frametitle{Creating a basic plot}
-\label{sec-3}
+\label{sec-4}
 
   Plot a sine wave from -3pi to 3pi.
 \lstset{language=Python}
@@ -79,22 +93,22 @@ In []: plot(x, sin(x))
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{savefig()}
-\label{sec-4}
+\label{sec-5}
 \begin{itemize}
 
 \item savefig() - to save plots
-\label{sec-4_1}%
+\label{sec-5_1}%
 \begin{verbatim}
     syntax: savefig(fname)
 \end{verbatim}
 
 
 \item example
-\label{sec-4_2}%
+\label{sec-5_2}%
 \begin{itemize}
 
 \item savefig('/home/fossee/sine.png')\\
-\label{sec-4_2_1}%
+\label{sec-5_2_1}%
 \begin{itemize}
 \item file sine.png saved to the folder /home/fossee
 \item .png - file type
@@ -105,52 +119,52 @@ In []: plot(x, sin(x))
 \end{frame}
 \begin{frame}
 \frametitle{More on savefig()}
-\label{sec-5}
+\label{sec-6}
 \begin{itemize}
 
 \item Recall\\
-\label{sec-5_1}%
+\label{sec-6_1}%
 \begin{itemize}
 \item .png - file type
 \end{itemize}
 
 \item File types supported
-\label{sec-5_2}%
+\label{sec-6_2}%
 \begin{itemize}
 
 \item .pdf - PDF(Portable Document Format)\\
-\label{sec-5_2_1}%
+\label{sec-6_2_1}%
 \item .ps - PS(Post Script)\\
-\label{sec-5_2_2}%
+\label{sec-6_2_2}%
 \item .eps - Encapsulated Post Script\\
-\label{sec-5_2_3}%
+\label{sec-6_2_3}%
 \verb~to be used with~ \LaTeX{} \verb~documents~
 
 \item .svg - Scalable Vector Graphics\\
-\label{sec-5_2_4}%
+\label{sec-6_2_4}%
 \verb~vector graphics~
 
 \item .png - Portable Network Graphics\\
-\label{sec-5_2_5}%
+\label{sec-6_2_5}%
 \verb~supports transparency~
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 1}
-\label{sec-6}
+\label{sec-7}
 
   Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 2}
-\label{sec-7}
+\label{sec-8}
 
   Save the sine plot in PDF, PS and SVG formats.
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-8}
+\label{sec-9}
 
   In this tutorial, we have learnt to –
 
@@ -162,14 +176,45 @@ In []: plot(x, sin(x))
 \item ps
 \item png
 \item svg
-\item epg
+\item eps
 \end{itemize}
 \item Locate files in the file system.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Acknowledgement}
-\label{sec-9}
+\frametitle{Evaluation}
+\label{sec-10}
+
+
+\begin{enumerate}
+\item Which command is used to save a plot.
+\begin{itemize}
+\item saveplot()
+\item savefig()
+\item savefigure()
+\item saveplt()
+\end{itemize}
+\item ``savefig(`sine.png')`` saves the plot in,
+\begin{itemize}
+\item The root directory ``/`` (on GNU/Linux, Unix based systems),
+       ``c:\`` (on windows).
+\item Will result in an error as full path is not supplied.
+\item The current working directory.
+\item Predefined directory like ``/documents``.
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-11}
+
+
+\begin{enumerate}
+\item savefig()
+\item The current working directory
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}

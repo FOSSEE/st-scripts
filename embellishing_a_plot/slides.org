@@ -55,21 +55,21 @@
  - Set and Get the limits of axes.
 * Pre-requisite
   - Spoken tutorial on "Using plot interactively"
-* Question 1
+* Exercise 1
   Plot sin(x) in blue colour alongwith linewidth as 3
-* Question 2
+* Exercise 2
   Plot the sine curve with green filled circles.
-* Question 3
+* Exercise 3
   Plot the curve of x vs tan(x) in red dashed line and linewidth 3
-* Question 4
+* Exercise 4
   Change the title of the figure such that the whole title is
   formatted in LaTex style
-* Question 5
+* Exercise 5
   Set the x and y labels as "x" and "f(x)" in LaTex style.
-* Question 6
+* Exercise 6
   Make an annotation called "root" at the point (-4, 0). What happens
   to the first annotation?
-* Question 7
+* Exercise 7
   Set the limits of axes such that the area of interest is the
   rectangle (-1, -15) and (3, 0)
 * Summary

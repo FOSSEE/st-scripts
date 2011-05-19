@@ -36,16 +36,21 @@ At the end of this tutorial, you will be able to,
  1. draw multiple plots which are overlaid. 
  #. use the figure command. 
  #. use the legend command 
- #. switch between the plots and perform some operations on each of them like
-    saving the plots.
+ #. switch between the plots and perform some operations on each of them 
+    like saving the plots.
  #. create and switch between subplots
  
 .. R3
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Using plot interactively" , "Embellishing a plot" and "Saving plots".
 
 To begin with let us start ipython with pylab, by typing ipython -pylab
 on the terminal.
 
 .. L3
+
+{{{ Show slide with pre-requisite }}}
 
 {{{ Shift to terminal and start ipython -pylab }}}
 
@@ -146,6 +151,10 @@ serial number.
 Now we can see the legends being displayed for the respective sine and
 cosine plots on the plot area.
 
+.. L11
+
+{{{ Show slide with exercise 1 }}}
+
 .. R11
 
 We have learnt quite a lot of things now, so let us take up an
@@ -157,13 +166,9 @@ exercise.Pause the video here,do the exercise and resume the video.
    colors to differentiate between the plots and use legends to
    indicate what each plot is doing.
 
-.. L11
-
-{{{ Show slide with question 1 }}}
-
-
 .. R12
 
+Switch to the terminal for solution.
 We can obtain the two plots in different colors using the following
 commands
 
@@ -246,8 +251,8 @@ figures.
 The figure command takes an integer as an argument which is the serial
 number of the plot. This selects the corresponding plot. All the plot
 commands we run hereafter are applied to the selected plot. In this
-example figure 1 is the sine plot and figure 2 is the cosine plot.For example,we can
-save each plot separately
+example figure 1 is the sine plot and figure 2 is the cosine plot.
+For example,we cansave each plot separately
 
 .. L19
 
@@ -269,16 +274,17 @@ the second plot.
 
 .. R20
 
-Let us attempt another exercise problem.Pause here,try to solve the problem and resume the video.
+Let us attempt another exercise problem.Pause here,try to solve the 
+problem and resume the video.
 
    Draw a line of the form y = x as one figure and another line
-   of the form y = 2x + 3. Switch back to the first figure, annotate
+   of the form y = 2x + 3. Switch back to the first figure,annotate
    the x and y intercepts. Now switch to the second figure and
    annotate its x and y intercepts. Save each of them.
 
 .. L20
 
-{{{ Show slide with question 2 }}}
+{{{ Show slide with exercise 2 }}}
  
 .. R21
 
@@ -311,11 +317,11 @@ the figure
 
 .. R23
 
-Now to switch between the figures we can use figure command. So let us now
-switch to figure 1. We are asked to annotate x and y intercepts of the
-figure 1, but since figure 1 passes through origin,this means, we will have to
-annotate the origin. We will annotate the intercepts for the second
-figure and save them as follows
+Now to switch between the figures we can use figure command. So let us 
+now switch to figure 1. We are asked to annotate x and y intercepts of 
+the figure 1, but since figure 1 passes through origin,this means, we
+will have to annotate the origin. We will annotate the intercepts for 
+the second figure and save them as follows
 
 .. L23
 
@@ -352,9 +358,9 @@ We use subplot command to accomplish this
 
 .. R25
 
-As we can see subplot command takes three arguments, the first being the number of
-rows of subplots that must be created,
-in this case we have 2 as the first argument so it spilts the plotting area horizontally for
+As we can see subplot command takes three arguments, the first being 
+the number ofrows of subplots that must be created,in this case we have 
+2 as the first argument so it spilts the plotting area horizontally for
 two subplots. The second argument specifies the number of coloumns of
 subplots that must be created. We passed 1 as the argument so the
 plotting area won't be split vertically and the last argument
@@ -409,7 +415,8 @@ x-axis varies from 0 to 10 and y-axis varies from 0 to 100.
 
 .. R28
 
-Let us try one more exercise.Pause the video here, try out the exercise and resume the video.
+Let us try one more exercise.Pause the video here, try out the exercise 
+and resume the video.
 
   We know that the Pressure, Volume and Temperatures are held by
   the equation PV = nRT where nR is a constant. Let us assume nR =0.01
@@ -420,7 +427,7 @@ Let us try one more exercise.Pause the video here, try out the exercise and resu
 
 .. L28
 
-{{{ Show slide with question 3 }}}
+{{{ Show slide with exercise 3 }}}
 
 .. R29
 
@@ -493,14 +500,14 @@ this data, we get the required plot
 
 .. R34
 
-This brings us to the end of another session.let's revise quickly what we have learnt today,
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
- 1. to draw multiple plots which are overlaid.
- #. to use the figure command.
- #. to use the legend command.
- #. to switch between the plots and perform some operations on each
+ 1. Draw multiple plots which are overlaid.
+ #. Use the figure command.
+ #. Use the legend command.
+ #. Switch between the plots and perform some operations on each
     of them like saving the plots.
- #. to create subplots and to switch between them.
+ #. Create subplots and to switch between them.
 
 .. L35
 
@@ -520,7 +527,7 @@ Here are some self assessment questions for you to solve
 
 .. L36
 
-(solution of self assessment questions on slide)
+{{{solution of self assessment questions on slide}}}
 
 .. R36
 
@@ -528,8 +535,9 @@ And the answers,
 
 1. The command "figure()" can get us the individual plots seperately.
 
-2. The subplot command takes three arguments namely the number of rows followed by the
-   the number of columns and the plot number.Hence the first option is correct.
+2. The subplot command takes three arguments namely the number of 
+   rows followed by the number of columns and the plot number.
+   Hence the first option is correct.
 
 .. L37
 
