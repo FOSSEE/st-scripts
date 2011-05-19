@@ -288,6 +288,7 @@ problem and resume the video.
  
 .. R21
 
+Switch to the terminal for solution.
 To solve this problem we should first create the first figure using
 the figure command. Before that, let us first run clf command to make
 sure all the previous plots are cleared
@@ -413,6 +414,10 @@ different regular axes. For the cosine plot x-axis varies from 0 to
 100 and y-axis varies from 0 to 1 where as for the parabolic plot the
 x-axis varies from 0 to 10 and y-axis varies from 0 to 100.
 
+.. L28
+
+{{{ Show slide with exercise 3 }}}
+
 .. R28
 
 Let us try one more exercise.Pause the video here, try out the exercise 
@@ -425,12 +430,9 @@ and resume the video.
   versus Volume plot and the other being Pressure versus Temperature
   plot.
 
-.. L28
-
-{{{ Show slide with exercise 3 }}}
-
 .. R29
 
+Switch to the terminal for solution.
 To start with, we have been given the range of Volume using which we
 can define the variable V
 

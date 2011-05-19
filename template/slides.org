@@ -48,6 +48,7 @@
 \end{center}
 #+end_latex
 * Objectives
+  At the end of this tutorial,you will be able to,
   -
   -
 * Title of slide
@@ -61,10 +62,6 @@
 * Solution 2
   - Solution either on terminal or slide
 * Summary
-  In this tutorial, we have learnt to –
-  -
-  -
-  -
   In this tutorial,we have learnt to -
   -
   -
