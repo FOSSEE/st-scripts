@@ -277,14 +277,14 @@ Pause the video here, try out the following exercise and resume the video.
 
 Let's revise quickly what we have learnt today 
 
-  1. To Start Ipython with pylab. 
-  #. To Use the linspace function to create `num` equally spaced points 
-     in a region.
-  #. To Find the length of sequences using len function.
-  #. To Plot mathematical functions using plot.
-  #. To Clear drawing area using clf. 
-  #. To Use the UI of plot for studying it better and using functionalities 
-     like save,zoom and moving the plots on x and y axis. 
+ 1. To Start Ipython with pylab. 
+ #. To Use the linspace function to create `num` equally spaced points 
+    in a region.
+ #. To Find the length of sequences using len function.
+ #. To Plot mathematical functions using plot.
+ #. To Clear drawing area using clf. 
+ #. To Use the UI of plot for studying it better and using 
+    functionalities like save,zoom and moving the plots on x and y axis. 
 
 .. L24
 
@@ -313,13 +313,14 @@ Let's revise quickly what we have learnt today
 
 And the answers,
 
-1. We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually spaced 
-   lines between the points -pi/2 and pi/2.
+1. We use the command `linspace(-pi/2,pi/2,100)` to create 100 eually 
+   spaced lines between the points -pi/2 and pi/2.
 
-2. The command ''linspace(-pi,pi,100)'' will return 100 evenly spaced samples 
-   from -pi to pi including both -pi and pi.
+2. The command ''linspace(-pi,pi,100)'' will return 100 evenly spaced 
+   samples from -pi to pi including both -pi and pi.
     
-3. `len(sequence_name)` is the function used to find out the length of a sequence.
+3. `len(sequence_name)` is the function used to find out the length of 
+   a sequence.
 
 .. L26
 
