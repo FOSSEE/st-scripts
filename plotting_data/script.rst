@@ -192,7 +192,7 @@ of errorbar.
 
 .. L15
 
-{{{ Show slide with 'Question 2' }}}
+{{{ Show slide with 'Exercise 2' }}}
 
 .. R15
 
@@ -203,7 +203,7 @@ the error in your plot.
 
 .. L16
 
-{{{ Show slide 'Question 2 data' }}}
+{{{ Show slide 'Exercise 2 data' }}}
 
 .. R16
 
