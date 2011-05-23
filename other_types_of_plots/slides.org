@@ -54,6 +54,11 @@
   - Create bar charts
   - Create log-log plots
   - Use the ~matplotlib~ help
+* Pre-requisite
+   Spoken tuorial on -
+   - Loading Data from Files.
+   - Plotting Data. 
+
 * Scatter plot
   Scatter plot - a collection of points,where each point determines
   it's position on the horizontal axis and the vertical axis 

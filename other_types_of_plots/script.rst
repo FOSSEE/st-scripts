@@ -44,8 +44,8 @@ Hello Friends and welcome to the tutorial on ``Types of plots``.
 
 .. R2
 
-Till now we have seen only one kind of plotting.Hence in this tutorial we will be looking at
-some more kinds of plots. 
+Till now we have seen only one kind of plotting.Hence in this tutorial 
+we will be looking atn some more kinds of plots. 
 
 At the end of this tutorial, you will be able to 
 
@@ -59,13 +59,18 @@ Let us begin with the scatter plot.
 
 .. L3
 
+{{{ Show slide with pre-requisite }}}
+
 {{{ switch to the next slide, scatter plot }}}
 
 .. R3
 
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Loading data from files" and "Plotting data".
+
 In a scatter plot, the data is displayed as a collection of points,
-where each point determines it's position on the horizontal axis and the vertical axis 
-respectively.This kind of plot is also called a
+where each point determines it's position on the horizontal axis and the 
+vertical axis respectively.This kind of plot is also called a
 scatter chart, a scatter diagram or a scatter graph.
 
 .. R4
@@ -83,7 +88,7 @@ ipython -pylab }}}
 
 .. L5
 
-{{{ switch to the slide having Question 1 }}}
+{{{ switch to the slide having exercise 1 }}}
 
 .. R5
 
@@ -147,7 +152,7 @@ y-coordinate, the profit percentage.
 
 .. L11
 
-{{{ switch to the next slide Question 2 }}}
+{{{ switch to the next slide exercise 2 }}}
 
 .. R11
 
@@ -176,7 +181,7 @@ sectors, illustrating proportion.
 
 .. L14
 
-{{{ switch to the slide showing Question 3 }}}
+{{{ switch to the slide showing exercise 3 }}}
 
 .. R14
 
@@ -206,12 +211,13 @@ pie chart.
 
 .. L17
 
-{{{ switch to the next slide with Question 4 }}}
+{{{ switch to the next slide with exercise 4 }}}
 
 .. R17
 
 Plot a pie chart with the same data with colors for each wedges 
-as white, red, black, magenta,yellow, blue, green, cyan, yellow, magenta and blue respectively.
+as white, red, black, magenta,yellow, blue, green, cyan, yellow, magenta 
+and blue respectively.
 
 Pause the video here, try out the following exercise and resume the video.
 
@@ -235,7 +241,7 @@ they represent.
 
 .. L20
 
-{{{ switch to the slide showing Question 5 }}}
+{{{ switch to the slide showing exercise 5 }}}
 
 .. R20
 
@@ -266,13 +272,13 @@ used to determine the height of the bars.
 
 .. L23
 
-{{{ switch to the next slide with Question 6 }}}
+{{{ switch to the next slide with exercise 6 }}}
 
 .. R23
 
-Plot a bar chart which is not filled and which is hatched with 45\ :sup:`o` 
-slanting lines as shown in the image.The data for the chart may be obtained from
-the file ``company-a-data.txt``.
+Plot a bar chart which is not filled and which is hatched 
+with 45\ :sup:`o` slanting lines as shown in the image.The data for the 
+chart may be obtained from the file ``company-a-data.txt``.
 
 .. L24
 
@@ -289,15 +295,15 @@ the file ``company-a-data.txt``.
 
 .. R25
 
-Now let us move on to the log-log plot. A log-log graph or a log-log plot is
-a two-dimensional graph of numerical data that uses logarithmic scales
+Now let us move on to the log-log plot. A log-log graph or a log-log plot
+is a two-dimensional graph of numerical data that uses logarithmic scales
 on both the horizontal and vertical axes. Because of the nonlinear
 scaling of the axes, a function of the form y = ax\ :sup:`b` will
 appear as a straight line on a log-log graph
 
 .. L26
 
-{{{ switch to the slide showing Question 7 }}}
+{{{ switch to the slide showing exercise 7 }}}
 
 .. R26
 
@@ -416,8 +422,8 @@ Here are some self assessment questions for you to solve.
 And the answers,
 
 1. False. Both functions do not produce the same kind of plot.
-2. ``bar(x, y, fill=False, hatch='|')`` is the correct option to generate a bar 
-   chart with vertical line hatching.
+2. ``bar(x, y, fill=False, hatch='|')`` is the correct option to generate 
+   a bar chart with vertical line hatching.
 
 .. L36
 
@@ -425,5 +431,5 @@ And the answers,
 
 .. R36
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!

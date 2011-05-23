@@ -33,7 +33,7 @@
  #+begin_latex
 \begin{center}
 \vspace{12pt}
-\textcolor{blue}{\huge Loading Data from Files}}
+\textcolor{blue}{\huge Loading Data from Files}
 \end{center}
 \vspace{18pt}
 \begin{center}
@@ -51,7 +51,7 @@
   - Read data from files with a single column of data.
   - Read data from files with multiple columns seperated by
     spaces and other delimiters.
-* Question 1
+* Exercise 1
   Read the file  ~pendulum\_semicolon.txt~  which contains the same data
   as  ~pendulum.txt~ , but the columns are seperated by semi-colons instead
   of spaces.Use the IPython help to see how to do this.

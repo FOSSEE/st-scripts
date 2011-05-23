@@ -1,4 +1,4 @@
-% Created 2011-05-06 Fri 17:36
+% Created 2011-05-23 Mon 15:35
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Plotting Data}
+\vspace{12pt}
+\textcolor{blue}{\huge Plotting Data}
 \end{center}
- \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -93,7 +97,7 @@ MHRD, Govt. of India
   
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
+\frametitle{Exercise 1}
 \label{sec-4}
 
   Plot the given experimental data with large dots.
@@ -101,7 +105,7 @@ MHRD, Govt. of India
   
 \end{frame}
 \begin{frame}
-\frametitle{Question 1 Data}
+\frametitle{Exercise 1 Data}
 \label{sec-5}
 
 
@@ -110,16 +114,16 @@ MHRD, Govt. of India
 
 \begin{center}
 \begin{tabular}{rr}
-    L  &     T  \\
- 0.08  &  0.04  \\
- 0.09  &  0.08  \\
- 0.07  &  0.03  \\
- 0.05  &  0.05  \\
- 0.06  &  0.03  \\
- 0.00  &  0.03  \\
- 0.06  &  0.04  \\
- 0.06  &  0.07  \\
- 0.01  &  0.08  \\
+ $\delta$ L  &  $\delta$ T  \\
+       0.08  &        0.04  \\
+       0.09  &        0.08  \\
+       0.07  &        0.03  \\
+       0.05  &        0.05  \\
+       0.06  &        0.03  \\
+       0.00  &        0.03  \\
+       0.06  &        0.04  \\
+       0.06  &        0.07  \\
+       0.01  &        0.08  \\
 \end{tabular}
 \end{center}
 
@@ -127,30 +131,30 @@ MHRD, Govt. of India
     
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 2}
 \label{sec-6}
 
   Plot the given experimental data with small dots.     
 \end{frame}
 \begin{frame}
-\frametitle{Question 2 Data}
+\frametitle{Exercise 2 Data}
 \label{sec-7}
 
 
 
 
 \begin{center}
-\begin{tabular}{rr}
-    P  &     D  \\
- 1.48  &  0.68  \\
- 2.96  &  0.89  \\
- 4.44  &  1.18  \\
- 5.92  &  1.29  \\
- 7.40  &  1.46  \\
- 8.88  &  1.57  \\
- 10.3  &  1.76  \\
- 11.8  &  1.82  \\
- 13.3  &  1.93  \\
+\begin{tabular}{rrrr}
+    S  &      n  &  $\delta$ S  &  $\delta$ n  \\
+ 0.19  &  10.74  &       0.006  &        0.61  \\
+ 0.38  &  14.01  &       0.006  &        0.69  \\
+ 0.57  &  18.52  &       0.005  &        0.53  \\
+ 0.77  &  20.23  &       0.003  &        0.38  \\
+ 0.96  &  22.88  &       0.004  &        0.46  \\
+ 1.15  &  24.59  &       0.007  &        0.37  \\
+ 1.34  &  27.55  &       0.004  &        0.46  \\
+ 1.54  &  28.48  &       0.004  &        0.46  \\
+ 1.73  &  30.20  &       0.007  &        0.37  \\
 \end{tabular}
 \end{center}
 
@@ -181,6 +185,7 @@ MHRD, Govt. of India
 \begin{itemize}
 \item distance\_values=[2.1,4.6,8.72,9.03]
 \end{itemize}
+\vspace{8pt}
 \item Plot L v/s T in red plusses.
 \end{enumerate}
 \end{frame}
@@ -191,12 +196,11 @@ MHRD, Govt. of India
 
 \begin{enumerate}
 \item square(distance\_values)
+\vspace{8pt}
 \item plot(L,T,'r+')
 \end{enumerate}
 \end{frame}
 \begin{frame}
-\frametitle{Acknowledgement}
-\label{sec-11}
 
   \begin{block}{}
   \begin{center}

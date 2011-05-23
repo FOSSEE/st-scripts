@@ -1,4 +1,4 @@
-% Created 2011-05-09 Mon 16:28
+% Created 2011-05-23 Mon 15:48
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Types of Plots}
+\vspace{12pt}
+\textcolor{blue}{\huge Other types of Plots}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -69,8 +73,19 @@ MHRD, Govt. of India
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Scatter plot}
+\frametitle{Pre-requisite}
 \label{sec-3}
+
+   Spoken tuorial on -
+
+\begin{itemize}
+\item Loading Data from Files.
+\item Plotting Data.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Scatter plot}
+\label{sec-4}
 
   Scatter plot - a collection of points,where each point determines
   it's position on the horizontal axis and the vertical axis 
@@ -78,14 +93,14 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 1: Scatter plot}
-\label{sec-4}
+\label{sec-5}
 
   Plot a scatter plot showing the percentage profit of Company A from the year 2000
   to 2010. The data for the same is available in the file \verb~company-a-data.txt~.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\verb~scatter()~ function}
-\label{sec-5}
+\label{sec-6}
 
 
 \begin{itemize}
@@ -101,7 +116,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 2: Scatter plot}
-\label{sec-6}
+\label{sec-7}
 
   Plot a scatter plot of the same data in \verb~company-a-data.txt~ with red diamond markers.
 \begin{verbatim}
@@ -112,13 +127,13 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Pie chart}
-\label{sec-7}
+\label{sec-8}
 
   Pie chart - a circle graph divided into sectors, illustrating proportion. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 3: Pie chart}
-\label{sec-8}
+\label{sec-9}
 
   Plot a pie chart representing the profit percentage of company A, with the data 
   from the file \verb~company-a-data.txt~.
@@ -130,7 +145,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\verb~pie()~ function}
-\label{sec-9}
+\label{sec-10}
 
 
 \begin{itemize}
@@ -146,7 +161,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 4: Pie chart}
-\label{sec-10}
+\label{sec-11}
 
   Plot a pie chart with the same data with colors for each wedges as white, red, 
   magenta, yellow, blue, green, cyan, yellow, magenta, and blue.
@@ -158,14 +173,14 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Bar chart}
-\label{sec-11}
+\label{sec-12}
 
   Bar chart - a chart with rectangular bars with lengths proportional 
   to the values that they represent.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 5: Bar chart}
-\label{sec-12}
+\label{sec-13}
 
   Plot a bar chart representing the profit percentage of company A, with the data 
   from the file \verb~company-a-data.txt~.
@@ -177,7 +192,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\verb~bar()~ function}
-\label{sec-13}
+\label{sec-14}
 
 
 \begin{itemize}
@@ -193,7 +208,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 6: Bar chart}
-\label{sec-14}
+\label{sec-15}
 
   Plot a bar chart which is not filled and which is hatched with 
     $45^o$
@@ -206,7 +221,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Log-log graph}
-\label{sec-15}
+\label{sec-16}
 
 
 \begin{itemize}
@@ -220,7 +235,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 7:}
-\label{sec-16}
+\label{sec-17}
 
   Plot a log-log chart of 
     $y = 5x^3$
@@ -228,7 +243,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\verb~loglog()~ function}
-\label{sec-17}
+\label{sec-18}
 
 
 \begin{itemize}
@@ -244,7 +259,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Getting help on \verb~matplotlib~}
-\label{sec-18}
+\label{sec-19}
 
 
 \begin{itemize}
@@ -261,7 +276,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-19}
+\label{sec-20}
 
   In this tutorial we learnt to,
  
@@ -276,7 +291,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-20}
+\label{sec-21}
 
 
 \begin{enumerate}
@@ -298,7 +313,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}
 \frametitle{Solutions}
-\label{sec-21}
+\label{sec-22}
 
 
 \begin{enumerate}
@@ -307,8 +322,6 @@ MHRD, Govt. of India
 \end{enumerate}
 \end{frame}
 \begin{frame}
-\frametitle{Acknowledgement}
-\label{sec-22}
 
   \begin{block}{}
   \begin{center}

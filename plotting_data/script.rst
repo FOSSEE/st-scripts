@@ -30,19 +30,14 @@ Plotting   Experimental  Data
 
 .. L1
 
-<<<<<<< HEAD
 {{{ Show the  first slide containing title, name of the production
 team along with the logo of MHRD }}}
-=======
-Hello and welcome to this tutorial on  Plotting Experimental data, 
-presented by the fossee team.  
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 .. R1 
 
-Hello Friens.Welcome to this tutorial on  "Plotting Experimental data"
+Hello Friens and Welcome to this tutorial on 
+"Plotting Experimental data".
 
-<<<<<<< HEAD
 .. L2
  
 {{{ Show the Objectives Slide }}}
@@ -57,10 +52,9 @@ At the end of this tutorial, you will be able to,
  #. plot errorbars.
 
 .. R3
-=======
+
 One needs   to  be  familiar  with  the   concepts  of  plotting
 mathematical functions in Python.
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 We will use data from a Simple Pendulum Experiment to illustrate. 
 
@@ -73,9 +67,10 @@ We will use data from a Simple Pendulum Experiment to illustrate.
 As we know for a simple pendulum, length L is directly  proportional to 
 the square of time T. We shall be plotting L and T^2 values.
 
-First  we will have  to initiate L and  T values. We initiate them as sequence 
-of values.  We define a sequence by comma seperated values inside two square brackets.  
-This is also called a List.Let's create two sequences L and t.
+First  we will have  to initiate L and  T values. We initiate them as 
+sequence of values.  We define a sequence by comma seperated values 
+inside two square brackets. This is also called a List.
+Let's create two sequences L and t.
 
 .. L4
  
@@ -88,7 +83,7 @@ This is also called a List.Let's create two sequences L and t.
 .. R5
 
 To obtain the square of sequence T we will use the function square
-with argument T.This is saved into the variable tsquare.
+with argument T.This is saved into the variable Tsquare.
 
 .. L5
 
@@ -105,26 +100,14 @@ Now to plot L vs T^2, we will simply type
 
 .. L6
 
-<<<<<<< HEAD
 ::
-=======
-This clears the plot.
-
-You can also specify 'o' for big dots.::
- 
-  plot(L,tsquare,'o')
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
     plot(L,Tsquare,'.')
 
 .. R7
 
-<<<<<<< HEAD
-here '.' represents to plot use small dots for the point.
-You can also specify 'o' for big dots.
-=======
-Pause video here and solve this exercise. Resume the video once done.
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
+'.' here displays the plot in a dot pattern.
+You can also specify 'o' for big dots.For this let us clear the plot first.
 
 .. L7
 ::
@@ -133,33 +116,28 @@ Pause video here and solve this exercise. Resume the video once done.
     plot(L,Tsquare,'o')
     clf()
 
-.. L8
-
-<<<<<<< HEAD
 .. R8
 
-For any experimental there is always an error in measurements due to
-instrumental and human constraints.Now we shall try and take these errors into
-account in our plots . 
+LKet us move further.For any experimental there is always an error in 
+measurements due to instrumental and human constraints.Now we shall try 
+and take these errors into account in our plots . 
+
+.. L8
 
 .. L9
 
-{{{ Show the slide 'Question 1' }}}
+{{{ Show the slide 'Exercise 1' }}}
 
 .. R9
 
 Pause the video here, try out the following exercise and resume the video.
-=======
-.. #[[Anoop: Make sure code is correct, corrected plot(L,t,o) to
-   plot(L,t,'o')]]
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 Plot the given experimental data with large dots.The data is
 on your screen. 
 
 .. L10
 
-{{{ Show slide "Question 1 data' }}}
+{{{ Show slide 'Exercise 1 data' }}}
 
 .. R10
 
@@ -167,7 +145,8 @@ The error data we will use is on your screen.
 
 .. R11
 
-We shall again intialize the sequence values in the same manner as we did for L and T.
+We shall again intialize the sequence values in the same manner as we 
+did for L and T.
 
 .. L11
 
@@ -209,11 +188,7 @@ of errorbar.
 
 ::
 
-<<<<<<< HEAD
     errorbar?
-=======
-Please, pause the video here. Do the exercises and then continue.
->>>>>>> 1020097fa446ad8c6bdff784d5d0da9e98a55892
 
 .. L15
 
@@ -240,13 +215,14 @@ The data is on your screen
 
 .. R17
 
-let's revise quickly what we have learnt today.In this tutorial we learnt 
+This brings us to the end of the end of this tutorial.In this tutorial, 
+we have learnt to, 
 
 1. to declare a sequence of numbers using the function ``array``.
 #. to perform elemtwise squaring using the ``square`` function.
 #. to use the various options available for plotting like dots,lines.
-#. to Plot experimental data such that we can also represent error by using the
-   ``errorbar()`` function. 
+#. to Plot experimental data such that we can also represent error by 
+   using the ``errorbar()`` function. 
 
 .. R18
 
@@ -286,6 +262,6 @@ And the answers,
 
 .. R20
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank You!
 
