@@ -26,13 +26,13 @@ Script
 
 .. L1
 
-{{{ Show the  first slide containing title, name of the production
-team along with the logo of MHRD }}}
+{{{ Show the first slide containing title, name of the production team
+along with the logo of MHRD }}}
 
 .. R1
 
-Hello friends and welcome to the tutorial on 
-"Additional Features of IPython".
+Hello friends and welcome to the tutorial on "Additional Features of
+IPython".
 
 .. L2
 
@@ -373,7 +373,7 @@ Here are some self assessment questions for you to solve
 
 2. How do you save the lines 2 3 4 5 7 9 10 11
 
-    - ``%save filepath 2-5 7 9-11``
+    - ``%save filepath 2-5 7 9-11`` 
     - ``%save filepath 2-11``
     - ``%save filepath``
     - ``%save 2-5 7 9 10 11``
@@ -381,10 +381,10 @@ Here are some self assessment questions for you to solve
 
 3. What will the command ``%hist 5 10`` display.
 
-   - The recently typed commands from 5 to 10 inclusive of the 
-     history command	
-   - The recently typed commands from 5 to 10 excluding the 
-     history command
+    - The recently typed commands from 5 to 10 inclusive of the history
+      command
+    - The recently typed commands from 5 to 10 excluding the history
+      command
 
 .. L28
 

@@ -42,8 +42,9 @@ At the end of this tutorial, you will be able to,
  
 .. R3
 
-Before beginning this tutorial,we would suggest you to complete the 
-tutorial on "Using plot interactively" , "Embellishing a plot" and "Saving plots".
+Before beginning this tutorial,we would suggest you to complete the
+tutorial on "Using plot interactively", "Embellishing a plot" and
+"Saving plots".
 
 To begin with let us start ipython with pylab, by typing ipython -pylab
 on the terminal.

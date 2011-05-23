@@ -25,6 +25,7 @@ def parse_script(script):
             else:
                 pass
         txt += line
+    content[where] = txt  # Saving the content of the last cell. 
 
 def write_two_col(content, two_col):
     """ Write the content to a file, in two column format."""
