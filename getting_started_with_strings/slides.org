@@ -53,10 +53,10 @@
   - Print a string repeatedly. 
   - Access individual elements of the string.
   - Learn immutability of strings.
-* Question 1
+* Exercise 1
   Obtain the string ~%% -------------------- %%~ (20 hyphens) without
   typing out all the twenty hyphens.
-* Question 2
+* Exercise 2
   Given a string, ~s~ which is ~Hello World~ , what is the output of::
   #+begin_src python
     s[-5] 
@@ -74,8 +74,10 @@
 * Evaluation
   1. Write code to assign s, the string ``' is called the apostrophe``
 
+
   2. Given strings s and t, ``s = "Hello"`` and ``t = "World"`` and an
    integer r, ``r = 2``. What is the output of s * r + s * t?
+
 
   3. How will you change s='hello' to s='Hello'.
 
@@ -85,8 +87,10 @@
 * Solutions
   1. s = "` is called the apostrophe" 
 
+
   2. HelloHelloWorldWorld
      
+
   3. Strings are immutable,hence cannot be manipulated.  
 
 * 

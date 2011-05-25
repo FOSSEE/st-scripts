@@ -53,10 +53,14 @@
   - Read the entire content of file at once. 
   - Append the lines of a file to a list.
   - Close the file. 
-* Question 1
+* Pre-requisite
+  Spoken tutorial on -
+  - Getting started with Lists.
+  - Getting started with For.
+* Exercise 1
   Split the variable into a list, =pend_list=, of the lines in the
   file.
-* Question 2
+* Exercise 2
   Re-open the file =pendulum.txt= with =f= as the file object.
 * Summary
   In this tutorial, we have learnt to –

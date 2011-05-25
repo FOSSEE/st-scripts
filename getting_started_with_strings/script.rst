@@ -97,8 +97,8 @@ By having multiple control characters, we avoid the need for
 escaping characters -- in this case the apostrophe. 
 
 Let us now move on to the triple quoted strings. Let us define multi-line 
-strings without using any escaping. Everything within the triple quotes is a 
-single string no matter how many lines it extends
+strings without using any escaping. Everything within the triple quotes 
+is a single string no matter how many lines it extends
 
 .. L6
 ::
@@ -119,10 +119,10 @@ We can assign this string to any variable
 .. R8
 
 Now 'a' is a string variable. String is a collection of characters. In
-addition string is an immutable collection which means that the string cannot 
-be modified after it is created.So all the operations that are applicable to any
-other immutable collection in Python, works on strings as well.
-Hence we can add two strings
+addition string is an immutable collection which means that the string 
+cannot be modified after it is created.So all the operations that are 
+applicable to any other immutable collection in Python, works on strings 
+as well.Hence we can add two strings
 
 .. L8
 ::
@@ -159,7 +159,7 @@ It gives another string in which the original string 'Hello' is repeated
 
 .. L12
 
-{{{ Show slide with Question 1 }}}
+{{{ Show slide with exercise 1 }}}
 
 .. R12
 
@@ -190,9 +190,9 @@ using the subscripts
 
 .. R14
 
-a[0] gives us the first character in the string. The indexing starts from 0
-for the first character and goes up to (n-1) for the last character,where 'n' is
-the total number of characters in a string. 
+a[0] gives us the first character in the string. The indexing starts from 
+0 for the first character and goes up to (n-1) for the last character,
+where 'n' is the total number of characters in a string. 
 We can access the strings from the end using negative indices
 
 .. L15
@@ -208,13 +208,14 @@ a[-2] gives us second element from the end of the string.
 
 .. L16
 
-{{{ Show slide with Question 2 }}}
+{{{ Show slide with exercise 2 }}}
 
 .. R16
 
 Pause the video here, try out the following exercise and resume the video.
 
-Given a string, ``s = "Hello World"``, what is the output of::
+Given a string, ``s = "Hello World"``, what is the output of
+::
 
     s[-5] 
     s[-10]
@@ -247,8 +248,8 @@ s[-10] gives us 'e' and
 
 .. R19
 
-s[-15] gives us an ``IndexError``, as should be expected, since the string
-given to us is only 11 characters long. 
+s[-15] gives us an ``IndexError``, as should be expected, since the 
+string given to us is only 11 characters long. 
 
 .. R20
 
@@ -278,7 +279,8 @@ into a single string based on the specified separator.
 
 .. R22
 
-Let's revise quickly what we have learnt today.In this tutorial we have learnt to,
+Let's revise quickly what we have learnt today.In this tutorial we have 
+learnt to,
 
   1. Define strings in differnt ways.
   #. Concatenate strings by performing addition.
@@ -330,6 +332,6 @@ And the answers,
 
 .. R25
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 

@@ -55,14 +55,20 @@ At the end of this tutorial, you will be able to,
 
 .. L3
 
+{{{ Show slide with pre-requisite }}}
+
 {{{ switch to next slide, 'Whitespace in python' }}}
 
 .. R3
 
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Getting started with Lists".
+
 In Python whitespace is significant, and the blocks are visually
 separated.The best practice is to indent the code using four spaces.
 
-As you can see in the slide, “Block B” is an inner block, indented by 4 spaces.
+As you can see in the slide, “Block B” is an inner block, indented by 
+4 spaces.
 After “Block B” the next statement in ”Block A” starts from the same 
 indentation level of other ”Block A” Statements.
 
@@ -83,7 +89,7 @@ Now let us move straight into ``for`` loop.
 
 .. L6
 
-{{{ switch to slide showing Question 1 }}}
+{{{ switch to slide showing exercise 1 }}}
 
 .. R6
 
@@ -96,7 +102,8 @@ numbers are 1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916
 For the problem, first we need to create a ``list`` of numbers and
 then iterate over the list and find the square root of each element in
 it. And let us create a script, rather than typing it out in the
-interpreter itself. Open your text editor and type the following code shown on the slide.
+interpreter itself. Open your text editor and type the following code 
+shown on the slide.
 
 .. L7
 
@@ -156,7 +163,7 @@ white-spaces in Python.
 
 .. L13
 
-{{{ switch to slide showing Question 2 }}}
+{{{ switch to slide showing exercise 2 }}}
 
 .. R13
 
@@ -220,7 +227,7 @@ number in the list, which was executed in the ``for`` loop.
 
 .. L19
 
-{{{ switch to slide Question 3 }}}
+{{{ switch to slide exercise 3 }}}
 
 .. R19
 
@@ -289,7 +296,7 @@ specify will not be included in the ``list``.
 
 .. L25
 
-{{{ switch to next slide Question 4 }}}
+{{{ switch to next slide exercise 4 }}}
 
 .. R25
 
@@ -386,6 +393,6 @@ And the answers,
 
 .. R31
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 

@@ -1,4 +1,4 @@
-% Created 2011-05-13 Fri 12:39
+% Created 2011-05-24 Tue 11:11
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -43,14 +43,18 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{frame}
 
 \begin{center}
-\textcolor{blue}{Getting started -- \texttt{for}}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with \texttt{for}}
 \end{center}
+\vspace{18pt}
 \begin{center}
-\includegraphics[scale=0.25]{../images/iitb-logo.png}\\
-Developed by FOSSEE Team, IIT-Bombay. \\ 
-Funded by National Mission on Education through ICT
-
-MHRD, Govt. of India
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
 \end{center}
 \end{frame}
 \begin{frame}
@@ -67,9 +71,19 @@ MHRD, Govt. of India
 \item Write blocks in ipython interpreter.
 \end{itemize}
 \end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tutorial on-
+
+\begin{itemize}
+\item Getting started with Lists
+\end{itemize}
+\end{frame}
 \begin{frame}[fragile]
 \frametitle{Whitespace in Python}
-\label{sec-3}
+\label{sec-4}
 
 
 \begin{itemize}
@@ -90,8 +104,8 @@ MHRD, Govt. of India
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Question 1}
-\label{sec-4}
+\frametitle{Exercise 1}
+\label{sec-5}
 
   Write a \verb~for~ loop which iterates through a list of numbers and find
   the square root of each number.
@@ -107,7 +121,7 @@ MHRD, Govt. of India
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 1}
-\label{sec-5}
+\label{sec-6}
 
 
 \begin{itemize}
@@ -126,7 +140,7 @@ print "This is not in for loop!"
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Save \& run script}
-\label{sec-6}
+\label{sec-7}
 
 
 \begin{itemize}
@@ -139,8 +153,8 @@ print "This is not in for loop!"
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Question 2}
-\label{sec-7}
+\frametitle{Exercise 2}
+\label{sec-8}
 
   Print the square root of numbers in the list.
 \begin{verbatim}
@@ -154,8 +168,8 @@ print "This is not in for loop!"
 \end{verbatim}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Question 3}
-\label{sec-8}
+\frametitle{Exercise 3}
+\label{sec-9}
 
   Find out the cube of all the numbers from 1 to 10.
 \begin{verbatim}
@@ -166,7 +180,7 @@ print "This is not in for loop!"
 \end{frame}
 \begin{frame}
 \frametitle{\verb~range()~ function}
-\label{sec-9}
+\label{sec-10}
 
 
 \begin{itemize}
@@ -183,14 +197,14 @@ print "This is not in for loop!"
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
-\label{sec-10}
+\frametitle{Exercise 4}
+\label{sec-11}
 
   Print all the odd numbers from 1 to 50.
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-11}
+\label{sec-12}
 
   In this tutorial,we learnt to,
 
@@ -200,6 +214,41 @@ print "This is not in for loop!"
 \item Iterate over a list using ``for`` loop
 \item Use the ``range()`` function
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-13}
+
+
+\begin{enumerate}
+\item Indentation is not mandatory in Python
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\vspace{8pt}
+\item Write a code using ``for`` loop to print the product of all natural numbers from 1 to 20.
+\vspace{8pt}
+\item What will be the output of-
+     range(1,5)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-14}
+
+
+\begin{enumerate}
+\item False
+\vspace{8pt}
+\item y = 1\\
+for x in range(1,21):\\
+\hspace{12pt}
+          y*=x\\
+    print y 
+\vspace{8pt}      
+\item {[1,2,3,4]}
+\end{enumerate}
 \end{frame}
 \begin{frame}
 

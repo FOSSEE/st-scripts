@@ -48,12 +48,17 @@ At the end of this tutorial, you will be able to,
 
 .. L3
 
+{{{ Show slide with pre-requisite }}}
+
 {{{ switch to the terminal }}}
 ::
 
     ipython -pylab 
 
 .. R3
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Getting started with Lists" and "Getting started with For".
 
 Open the terminal and start ipython
 
@@ -117,7 +122,7 @@ to see more explicitly, what it contains.
 
 .. L10
 
-{{{ show slide with Question 1 }}}
+{{{ show slide with exercise 1 }}}
 
 .. R10
 
@@ -168,7 +173,7 @@ opened, after their job is done.
 
 .. L15
 
-{{{ Show slide with Question 2 }}}
+{{{ Show slide with exercise 2 }}}
 
 .. R15
 
@@ -248,8 +253,8 @@ with the newline characters. If you noticed, ``pend_list`` did not
 contain the newline characters, because the string ``pend``, was
 split on the newline characters. 
 
-We can strip out the newline characters from the lines by using some string methods
-which we shall look in the further tutorial on strings.
+We can strip out the newline characters from the lines by using some 
+string methods which we shall look in the further tutorial on strings.
 
 .. L22
 
@@ -259,14 +264,17 @@ which we shall look in the further tutorial on strings.
 
 .. R23
 
-This brings us to the end of this tutorial. In this tutorial, we learnt to,
+This brings us to the end of this tutorial. In this tutorial, we 
+learnt to,
   
- 1. Open and close files using the ``open`` and ``close`` functions respectively.
+ 1. Open and close files using the ``open`` and ``close`` functions 
+    respectively.
  #. Read the data in the files as a whole,by using the ``read`` function.
- #. Read the data in the files line by line by iterating over the file object using the
+ #. Read the data in the files line by line by iterating over the file 
+    object using the
     ``for`` loop. 
- #. Append the lines of a file to a list using the ``append`` function within the 
-    ``for`` loop.
+ #. Append the lines of a file to a list using the ``append`` function 
+    within the ``for`` loop.
 
 .. L24
 
@@ -306,6 +314,6 @@ And the answers,
 
 .. R26
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 

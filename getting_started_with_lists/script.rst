@@ -60,7 +60,8 @@ List is a compound data type, it can contain data of mutually
 different datatypes. List is also a sequence data type where all the
 elements are arranged in a specific order.
 
-Start the ipython interpreter and first create an empty list with no elements. 
+Start the ipython interpreter and first create an empty list with no 
+elements. 
 
 .. L3
 ::   
@@ -87,9 +88,9 @@ of comma-separated values (or items) between two square brackets.
 
 As we can see, lists can contain different kinds of data. In the
 previous example 'spam' and 'eggs' are strings whereas 100 and 1.234 are
-integer and float respectively. Thus, we can put elements of different datatypes in
-lists including lists itself. This property makes lists heterogeneous
-data structures.
+integer and float respectively. Thus, we can put elements of different 
+datatypes in lists including lists itself. This property makes lists 
+heterogeneous data structures.
 
 Let us include a list within a list. 
 
@@ -114,7 +115,7 @@ nonempty[3] the last element.
 
 .. L7
 
-{{{ Switch to the slide Question 1 }}}
+{{{ Switch to the slide exercise 1 }}}
 
 .. R7
 
@@ -142,12 +143,14 @@ As you can see you get the last element which is 1.234.
 .. R9
 
 In python negative indices are used to access elements from the end.
--1 gives the last element which is the 4th element , -2 gives second element to last
-and -4 gives the fourth from the last which, in this case, is the first element.
+-1 gives the last element which is the 4th element , -2 gives second 
+element to last and -4 gives the fourth from the last which, in this case,
+is the first element.
 
 .. R10
 
-We can also append elements to the end of a list using the ``append`` function. 
+We can also append elements to the end of a list using the ``append`` 
+function. 
 
 .. L10
 ::
@@ -159,7 +162,7 @@ We can also append elements to the end of a list using the ``append`` function.
 
 .. L11
 
-{{{ Switch to slide Question 2 }}}
+{{{ Switch to slide exercise 2 }}}
 
 .. R11
    
@@ -179,7 +182,8 @@ As we can see nonempty is appended with 'onemore' and 6 at the end.
 
 .. R13
 
-Let us move further.We can use ``len`` function to check the number of elements in the list.
+Let us move further.We can use ``len`` function to check the number of 
+elements in the list.
 Let us find out the length of the list 'nonempty'.
 
 .. L13
@@ -199,12 +203,12 @@ There are two ways of doing it. One is by using index.
 
 .. R15
 
-The function ``del`` deletes the element at index 1, i.e the second element of the
-list, 'eggs'. 
+The function ``del`` deletes the element at index 1, i.e the second 
+element of the list, 'eggs'. 
 
 The other way is removing element by content. Lets say
-one wishes to delete 100 from nonempty list.For this, one could use the function
-``remove``.
+one wishes to delete 100 from nonempty list.For this, one could use 
+the function ``remove``.
 
 .. L15
 ::
@@ -227,11 +231,12 @@ experiment.
 .. R17
 
 If we now check, we will see that the first occurence 'spam' is removed
-and therefore the function `remove` removes the first occurence of the element in the sequence
-and leaves others untouched.
+and therefore the function `remove` removes the first occurence of the 
+element in the sequence and leaves others untouched.
 
 One should remember this, that while ``del`` removes by index number,
-`remove` removes on the basis of content being passed on.Let us take an example.
+`remove` removes on the basis of content being passed on.Let us take 
+an example.
 
 .. L17
 
@@ -252,12 +257,12 @@ del gives us [1,2,3].
 
 .. R19
 
-remove will give us [2,1,3]. Since it deletes the first occurrence of what is
-returned by x[2] which is 1.      
+remove will give us [2,1,3]. Since it deletes the first occurrence of 
+what is returned by x[2] which is 1.      
 
 .. L20
 
-{{{ Switch to the slide Question 3 }}}
+{{{ Switch to the slide exercise 3 }}}
 
 .. R20
 
@@ -281,7 +286,7 @@ The solution is on your screen.
 .. R22
 
 This brings us to the end of this tutorial.
-In this tutorial we learnt to,
+In this tutorial, we have learnt to,
 
  1. Create lists.  
  #. Access lists using their index numbers.
@@ -311,7 +316,8 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. We create an empty list just by leaving the space inside the square brackets empty.
+1. We create an empty list just by leaving the space inside the square 
+brackets empty.
 ::
 
     empty=[]
@@ -322,7 +328,8 @@ And the answers,
 
     list_in_list=[2.3,[2,4,6],'string,'all datatypes can be there']
 
-3. Using negative indices, we can access the list from the end using negative indices.
+3. Using negative indices, we can access the list from the end using 
+   negative indices.
    This is an example
 ::
 
@@ -335,6 +342,6 @@ And the answers,
 
 .. R25
 
-Hope you have enjoyed and found it useful.
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 

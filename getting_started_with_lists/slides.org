@@ -54,10 +54,10 @@
   - Append elements to lists
   - Delete elements from lists
 
-* Question 1 
+* Exercise 1 
   - What happens when you do nonempty[-1].
 
-* Question 2
+* Exercise 2
   - What is the syntax to get the element 'and' 
      in the list,listinlist ?
   - How would you get 'and' using negative indices?
@@ -70,7 +70,7 @@
   listinlist[-5]
 
 #+end_src python
-* Question 3
+* Exercise 3
 
   - Remove the third element from the list, listinlist.   
 

@@ -54,6 +54,9 @@
   - Use ``range()`` function.
   - Write blocks in python interpreter
   - Write blocks in ipython interpreter.
+* Pre-requisite
+  Spoken tutorial on-
+  - Getting started with Lists
 * Whitespace in Python
   - Whitespace is significant
     - blocks are visually separated
@@ -64,7 +67,7 @@
     :     Block B
     : Block A
     ~Block B~ is an inner block and is indented using 4 spaces
-* Question 1
+* Exercise 1
   Write a ~for~ loop which iterates through a list of numbers and find
   the square root of each number.
   : 
@@ -86,13 +89,13 @@
   - Save the script as ~list_roots.py~
   - Run in ~ipython~ interpreter as,
     : In []: %run -i list_roots.py
-* Question 2
+* Exercise 2
   Print the square root of numbers in the list.
   : 
   Numbers are,
   : 7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
   : 7056, 576, 2916
-* Question 3
+* Exercise 3
   Find out the cube of all the numbers from 1 to 10.
   : 
   /do it in the python interpreter/
@@ -103,7 +106,7 @@
     - /example:/
       - range(1, 20) - /generates integers from 1 to 20/
       - range(20) - /generates integers from 0 to 20/
-* Question 4
+* Exercise 4
   Print all the odd numbers from 1 to 50.
 * Summary
   In this tutorial,we learnt to,
@@ -117,6 +120,7 @@
      - True
      - False
 
+
   2. Write a code using ``for`` loop to print the product of all 
      natural numbers from 1 to 20.
 
@@ -124,14 +128,21 @@
   3. What will be the output of-
      range(1,5)
 * Solutions
-  1. False
+  - False
+     
 
-  2. y = 1
-     for x in range(1,21):
-          y*=x
+  -  y = 1\\
+     for x in range(1,21):\\
+          y*=x\\
      print y
+
   
-  3. [1,2,3,4]
+  - 
+  #+ begin_src python
+     [1,2,3,4]
+  #+ end_src
+ 
+  
 * 
 #+begin_latex
   \begin{block}{}
