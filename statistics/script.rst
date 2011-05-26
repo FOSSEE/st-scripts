@@ -3,7 +3,8 @@
 
 .. By the end of this tutorial you will --
 
-.. 1. Get to know simple statistics functions like mean,std etc .. (Remembering)
+.. 1. Get to know simple statistics functions like mean,std etc 
+      .. (Remembering)
 .. #. Apply them on a real world example. (Applying)
 
 
@@ -185,8 +186,8 @@ or simply use the function ``mean``.
 
 .. R15
 
-But we have such a large data set and  calculating the mean for each student one by one 
-is impossible. Is there a way to reduce the work.
+But we have such a large data set and  calculating the mean for each 
+student one by one  is impossible. Is there a way to reduce the work.
 
 For this we will look into the documentation of mean 
 
@@ -221,8 +222,8 @@ subject can be calculated using
 
 .. R18
 
-Next, let us calculate the median of English marks for the all the students.
-We can access English marks of all students using 
+Next, let us calculate the median of English marks for the all the 
+students.We can access English marks of all students using 
 
 .. L18
 ::
@@ -250,7 +251,8 @@ median across all rows using median
   
 .. R21
 
-Similarly to calculate standard deviation for English we will use the function ``std``
+Similarly to calculate standard deviation for English we will use the 
+function ``std``
 
 .. L21
 ::
@@ -278,7 +280,8 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R24
 
-In the given file football.txt at path /home/fossee/football.txt , one column is player name,second is goals at home and third goals away.
+In the given file football.txt at path /home/fossee/football.txt , one 
+column is player name,second is goals at home and third goals away.
    1.Find the total goals for each player
    2.Mean of home and away goals
    3.Standard deviation of home and away goals 
@@ -341,7 +344,8 @@ Here are some self assessment questionss for you to solve
 
 And the answers,
 
-1. To get the mean of each row, we just pass 1 as the second parameter to the function ``mean``.
+1. To get the mean of each row, we just pass 1 as the second parameter to 
+the function ``mean``.
 ::
 
     mean(two_dimensional_list,1)
@@ -351,7 +355,8 @@ And the answers,
 
     median(student_marks)
 
-3. To specify the particular columns of a file, we use the parameter usecols=(2,3,4,5)
+3. To specify the particular columns of a file, we use the parameter 
+usecols=(2,3,4,5)
 
 .. L30
 
