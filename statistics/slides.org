@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Statistics
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+DATE
 #+EMAIL:     info@fossee.in
@@ -30,13 +30,34 @@
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
 
-* Outline 
- - Doing statistical operations in Python  
-   - Summing set of numbers
-   - Finding there mean
-   - Finding there Median
-   - Finding there Standard Deviation 
-
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Statistics}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial,you will be able to,
+   
+   - Do statistical operations in Python.  
+   - Sum a set of numbers.
+   - Find their mean,median and standard deviation.
+* Pre-requisite
+  Spoken tutorial on -
+  - Loading Data from files.
+  - Getting started with Lists.
+  - Accessing Pieces of Arrays.
 * Data set
   - A;015163;JOSEPH RAJ S;083;042;47;00;72;244;;; 
 
@@ -49,7 +70,7 @@
      Science 35 -- Social 72
    - Total marks 244
 
-* Question
+* Exercise 1
   - In the given file football.txt at path /home/fossee/football.txt , 
     one column is player name,second is goals at home 
     and third goals away.
@@ -57,18 +78,48 @@
     - Mean home and away goals
     - Standard deviation of home and away goals 
 
-* Solution
+* Solution 1
 #+begin_src python
-  L=loadtxt('/home/amit/football.txt',usecols=(1,2),
+  L=loadtxt('/home/fossee/football.txt',usecols=(1,2),
             delimiter=',')
   sum(L,1)
   mean(L,0)
   std(L,0)
 #+end_src python
-
 * Summary 
-  - sum
-  - mean
-  - median
-  - std
+  In this tutorial,we have learnt to -
 
+  - Do the standard statistical operations sum , mean
+    median and standard deviation in Python.
+  - Combine text loading and the statistical operation to solve
+    real world problems.
+* Evaluation
+  1. Given a two dimensional list,
+     two\_dimensional\_list=[[3,5,8,2,1],[4,3,6,2,1]]
+     how do we calculate the mean  of each row?
+   
+  2. Calcutate the median of the given list?
+     student\_marks=[74,78,56,87,91,82]
+
+  3. Suppose there is a file with 6 columns but we wish to load text 
+     only in columns 2,3,4,5. How do we specify that?
+* Solutions
+  1. mean(two\_dimensional\_list,1)
+
+  2. median(student\_marks)
+
+  3. We use the parameter usecols=(2,3,4,5)
+* 
+#+begin_latex
+ \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
+  \end{center}  
+  \end{block}
+#+end_latex
