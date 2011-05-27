@@ -17,8 +17,6 @@
 ..   #. getting started with ``ipython``.
 ..   #. getting started with lists.
 
-.. #[sushma: the software required to open the ogg files in windows
-.. should also be given in the prerequisites]
 
 ..  Author: Anoop Jacob Thomas <anoop@fossee.in>
     Internal Reviewer   : Puneeth 
@@ -30,318 +28,437 @@
 Getting started with Arrays
 ===========================
 
-.. #[Puneeth: Prerequisites and Objectives are missing. Fill them in]
+.. L1
 
-{{{ show the welcome slide }}}
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-Welcome to the spoken tutorial on getting started with arrays.
+.. R1
 
-{{{ switch to next slide, outline slide }}}
+Hello friends and welcome to the spoken tutorial on 
+'Getting started with arrays'.
 
-In this tutorial, we will learn about the data structure called an array, how to convert
-a list into an array, operations on arrays and also why an array is preferred
-to lists.
+.. L2
 
-.. #[Puneeth: Fix the grammar above.]
+{{{ switch to objectives slide }}}
+
+.. R2
+
+At the end of this tutorial, you will be able to, 
+
+ 1. Create arrays using data.
+ #. Create arrays from lists.
+ #. Perform basic array operations.
+ #. Create identity matrix.
+ #. Use functions zeros(), zeros_like(), ones(), ones_like().
+
+.. L3
+
+{{{ Switch to the pre-requisite slide }}}
+
+.. R3
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Getting started with Lists".
+
+.. L4
 
 {{{ switch to next slide on overview of array }}}
 
+.. R4
+
 Arrays are homogeneous data structures. Unlike lists, arrays cannot have
-heterogeneous data elements, that is, they can have only one type of data 
-as their entries, be them all integers, strings, or maybe floats, but not a mix.
-
-.. #[Puneeth: Use multiple short sentences, rather than one long sentence
-   I would've written something like this. 
-
-   Unlike lists, arrays are homogeneous data structures. They can have only
-   type of data, ....]
+heterogeneous data elements.They can have only one type of data 
+as their entries, be them all integers, strings, or maybe floats, 
+but not a mix.
 
 Arrays of a given length are comparatively much faster in mathematical
-operations than lists of the same length, because of the fact that they are
-homogeneous data structures.
-
-.. #[Puneeth: For what size of an array is that the comparison?
-
-{{{ switch to the next slide, creating arrays }}}
+operations than lists of the same length, because of the fact that they 
+are homogeneous data structures.
 
 Now let us see how to create arrays.
 
-Run your IPython interpreter with ``-pylab`` option, to load the required
-modules to work with arrays.
-{{{ take terminal and run the following command }}}
+.. R5
+
+Run your IPython interpreter with ``-pylab`` option, to load the 
+required modules to work with arrays.
+
+.. L5
+
+{{{ open the terminal and run the following command }}}
 ::
 
-        ipython -pylab
+    ipython -pylab
 
-.. #[Puneeth: 'I am assuming' doesn't sound right. Ask them to open if it
-.. is not open?]
+.. R6
 
 To create an array we will use the function ``array()`` as,
 
+.. L6
 ::
 
     a1 = array([1,2,3,4])
 
-Notice that we created a one dimensional array here. Also notice the object
-we passed to create an array. We passed a list to create an array. 
+.. R7
 
-Now let us see how to create a two dimensional array. Pause the video and try to
-solve this. After you solve resume the video to look at the solution.
+Notice that we created a one dimensional array here. Also notice that 
+the object we passed to create an array is a list. 
 
-{{{ switch to next slide, creating two dimensional arrays }}}
+Now let us see how to create a two dimensional array. 
 
-.. #[Puneeth: I don't think this question can be solved by an average
-.. viewer. Questions during the tutorial, should generally be to re-iterate
-.. concepts learnt? ]
+We create two dimensional array by converting a list of lists to an 
+array as,
 
-.. #[Puneeth: Also, you didn't even point out that we are converting a
-.. list, using the ``array`` function. Bring the later section about
-.. converting a list, here. A separate section is not necessary, IMHO.]
-
-We create two dimensional array by converting a list of lists to an array
-as,
-
+.. L7
 ::
 
     a2 = array([[1,2,3,4],[5,6,7,8]])
 
-.. #[Puneeth: Again, you could explain a bit about the fact that we are
-.. converting a list of lists.]
+.. R8
 
 Now let us use ``arange()`` function to create the same array as before.
 
+.. L8
 ::
 
     ar = arange(1,9)
-
-.. #[Puneeth: say, creating the same array as before. for some time I got
-.. confused .]
-
-And we obtained a one dimensional array with elements from 1 to 8.
-
-::
-
     print ar
 
-.. #[Puneeth: be consistent with voice. say, we obtained... or something.]
+.. R9
 
-And how can we make it a two dimensional array of order 2 by 4? Pause here
-and try to do it yourself, try ``ar.tab`` and find a suitable method for
-that.
+As you can see, we obtained a one dimensional array with elements from 
+1 to 8.
+ 
+Now can we make it a two dimensional array of order 2 by 4? 
+Yes,we can.For this we will have to use the function ``reshape()``,
 
-{{{ switch to next slide, reshape() method }}}
-
-We can use the function ``reshape()`` for that purpose and it can be done
-as,
-
+.. L9
 ::
 
     ar.reshape(2,4)
     ar.reshape(4,2)
     ar = ar.reshape(2,4)
 
-{{{ switch to next slide, creating array from list}}}
+.. R10
 
-Now, let us see how to convert a list object to an array. We define a list 
-l1 = [1,2,3,4]. To convert l1 into a array use an array command. say a3 = array(l1)
+Hence,we got our two-dimensional array.
 
+Now, let us see how to convert a list object to an array. We define a 
+list,say l1
+
+.. L10
 ::
 
     l1 = [1,2,3,4]
 
-Now we can convert the list to an array as, 
+.. R11
 
+Now to convert this list to an array,we use the array function as,
+
+.. L11
 ::
 
     a3 = array(l1)
 
-Pause the video. Solve the exercise on your terminal and resume the video once done
-
-{{{ switch to the next slide, problem statement of unsolved exercise 1 }}}
-
-Create a three dimensional array of the shape (2,2,4).
-
-.. #[Puneeth: s/order/shape or size ?]
+.. L12
 
 {{{ switch to the next slide, shape of an array }}}
+
+.. R12
 
 To find the shape of an array we can use the method ``.shape``, let us
 check the shape of the arrays we have created so far,
 
-.. #[Puneeth: s/object/method ?]
+.. L13
 
+{{{ Switch to the terminal }}}
 ::
 
     a2.shape
 
-``a2.shape`` object is a tuple, and it returned a tuple (2, 4).
+.. R13
 
-.. #[Puneeth: first show a 2D array, so that it becomes easier to explain.
-.. Also, the word ``tuple`` need not be mentioned. ]
+``a2.shape`` object is a tuple, and it returned a tuple (2, 4).A tuple 
+is nothing but an ordered list of elements.
 
-{{{ switch to the next slide, unsolved exercise 2 }}}
+Pause the video here, try out the following exercise and resume the video.
 
-Pause the video and Find out the shape of the other 
-arrays i.e. a1, a3, ar that we have created.
+.. L14
 
-.. #[Puneeth: solution missing.]
+{{{ switch to the next slide,exercise 1 }}}
+
+.. R14
+
+Find out the shape of the other arrays i.e. a1, a3, ar that we have 
+created.
+
+.. L15
+
+{{{ Continue from paused state }}}
+
+.. R15
 
 It can be done as,
+
+.. L16
 ::
 
     a1.shape
     a3.shape
     ar.shape
 
-{{{ Array can have only a single type of data }}}
-
-.. #[Puneeth: I guess, this whole section can be skipped. If you want to
-.. keep this, just briefly mention that arrays are homogeneous in the
-.. intro, don't explain it there.]
+.. R16
 
 Now let us try to create a new array with a mix of elements and see what
 will happen,
 
+.. L17
 ::
 
     a4 = array([1,2,3,'a string'])
 
-Well, we would expect an error as it has been previously mentioned that arrays handle
-elements with the same datatype, but it didn't raise an error. Let us check the values
-in the new array created. In your IPython terminal type, 
+.. R17
+
+Well, we would expect an error as it has been previously mentioned that 
+arrays handle elements with the same datatype, but it didn't raise an 
+error. Let us check the values in the new array created. 
+Type a4 in the terminal,
+
+.. L18
 ::
 
     a4
 
-Did you notice it,
+{{{ highlight all the array elements one by one using mouse movements 
+accordingly }}}
 
-{{{ switch to next slide, implicit type casting }}}
+.. R18
 
-.. #[Puneeth: typecasting may be unnecessary. (Also too advanced?) an
-.. average guy wouldn't use arrays with strings.]
+Did you notice it, all the elements have been implicitly type casted as 
+strings, though our first three elements were meant to be integers.
+Also,if you have noticed,we got something like 'dtype S8' in the output.
+dtype is nothing but the datatype which is the minimum type required
+to hold the objects in the sequence.
 
-.. #[Puneeth: You may want to mention that float is the default dtype.]
-
-{{{ highlight all the array elements one by one using mouse movements }}}
-
-all the elements have been implicitly type casted as strings, though our
-first three elements were meant to be integers.
-
-.. #[Puneeth: when I type a4 it says some ``dtype`` etc. I don't understand
-.. what it is, can you explain? ;)]
+.. L19
 
 {{{ switch to the next slide, identity & zeros methods }}}
 
-.. #[Puneeth: something needs to motivate this. why are we suddenly talking
-.. of an identity matrix?]
+.. R19
 
-Now let us see how to create an identity matrix of a given size, that is a
-two-dimensional array  in  which all the diagonal elements are ones and rest of the
-elements are zeros. We can create an identity matrix using the function
-``identity()``.
+Let us now move on to study functions like zeros() and ones().
+For this ,we will have to create a matrix.
+let us see how to create an identity matrix of a given size, that is a
+two-dimensional array  in  which all the diagonal elements are ones and 
+rest of the elements are zeros. We can create an identity matrix using 
+the function ``identity()``.
 
 The function ``identity()`` takes an integer argument which specifies the
 size of the desired matrix,
 
+.. L20
 ::
 
     identity(3)
 
-As you can see the identity function returned a three by three square matrix
-with all the diagonal elements as ones and the rest of the elements as zeros.
+.. R20
 
-.. #[Puneeth: You say array here, matrix there -- it's a bit messed up.
-.. Clarify, explicitly.]
+As you can see the identity function returned a three by three square 
+matrix with all the diagonal elements as one and the rest of the elements
+as zeros.
 
-``zeros()`` function accepts a tuple, which is the order of the array that we
-want to create, and it generates an array with all elements as zeros.
+``zeros()`` function accepts a tuple, which is the order of the array that 
+we want to create, and it generates an array with all elements as zeros.
 
-{{{ switch to the next slide, problem statement of solved exercise 1 }}}
+Let us create an array of the order four by five with all the elements
+zero. We can do it using the method zeros(), 
 
-Let us creates an array of the order four by five with all the elements
-zero. We can do it using the method zeros, ::
+.. L21
+::
 
     zeros((4,5))
 
+.. R21
+
 Notice that we passed a tuple to the function zeros.
+Pause the video here, try out the following exercise and resume the video.
+
+.. L22
 
 {{{ switch to next slide, learning exercise }}}
+
+.. R22
 
 We learned two functions ``identity()`` and ``zeros()``, find out more
 about the functions ``zeros_like()``, ``ones()``, ``ones_like()``.
 
-{{{ switch to next slide, array operations }}}
+.. L23
+
+{{{ continue from paused state }}}
+{{{ Switch to the terminal }}}
+
+.. R23
 
 Try the following, first check the value of a1,
+
+.. L24
 ::
 
     a1
 
-``a1`` is a single dimensional array, and now try,
+.. R24
+
+We see that ``a1`` is a single dimensional array, 
+Let us now try a1*2
+
+.. L25
 ::
 
     a1 * 2
 
+.. R25
 It returned a new array with all the elements multiplied by 2.
+Now let us again check the contents of a1
+
+.. L26
 ::
 
     a1
+
+.. R26
 
 note that the value of a1 still remains the same.
 
+.. R27
+
 Similarly with addition,
+
+.. L27
 ::
 
     a1 + 2
+    a1
+
+.. R28
 
 it returns a new array, with all the elements summed with two. But
 again notice that the value of a1 has not been changed.
-::
-
-    a1
 
 You may change the value of a1 by simply assigning the newly returned
 array as,
+
+.. L28
 ::
 
     a1 += 2
 
+.. R29
+
 Notice the change in elements of a,
+
+.. L29
 ::
 
     a
 
-We can use all the mathematical operations with arrays, Now let us try this
+.. R30
+
+We can use all the mathematical operations with arrays, Now let us try 
+this
+
+.. L30
 ::
 
    a1 = array([1,2,3,4])
    a2 = array([1,2,3,4])
    a1 + a2
 
-Returns an array with element by element addition,
+.. R31
+
+This returns an array with element by element addition
+
+.. L31
 ::
 
     a1 * a2
 
-Returns an array with element by element multiplication, notice that it
-does not perform matrix multiplication.
+.. R32
 
-{{{ switch to next slide, summary slide }}}
+a1*a2 returns an array with element by element multiplication, notice 
+that it does not perform matrix multiplication.
 
-So this brings us to the end of this tutorial, in this tutorial we covered
-basics of arrays, learned how to create an array, saw how to convert a list
-to an array, and basic array operations etc.
+.. L32
 
-.. #[Puneeth: s/how to create an array/creating an array]
+.. L33
 
-{{{ switch to next slide, thank you }}}
+{{{ switch to summary slide }}}
 
+.. R33
+
+This brings us to the end of the end of this tutorial.In this tutorial, 
+we have learnt to, 
+
+ 1. Create an array using the ``array()`` function.
+ #. Convert a list to an array.
+ #. Perform some basic operations on arrays like addition,multiplication.
+ #. Use functions like 
+    - .shape
+    - arrange()
+    - .reshape
+    - zeros() & zeros_like()
+    - ones() & ones_like()
+
+.. L34
+
+{{{Show self assessment questions slide}}}
+
+.. R34
+
+Here are some self assessment questionss for you to solve
+
+1. ``x = array([1, 2, 3], [5, 6, 7])`` is a valid statement
+
+   - True
+   - False
+
+
+2. What does the ``ones_like()`` function do?
+   
+   (A) Returns an array of ones with the same shape and type as a
+       given array.
+   (B) Return a new array of given shape and type, filled with ones.
+
+   Read the statements and answer,
+
+   - Only statement A is correct.
+   - Only statement B is correct.
+   - Both statement A and B are correct.
+   - Both statement A and B are incorrect.
+
+.. L35
+
+{{{solution of self assessment questions on slide}}}
+
+.. R35
+
+And the answers,
+
+1. False.
+   The correct way would be to assign the elements as a list of lists 
+   and then convert it to an array
+::
+
+    x = array([[1, 2, 3], [5, 6, 7]])
+
+2. The function ``ones_like()`` returns an array of ones with the same 
+   shape and type as a given array.
+
+.. L36
+    
+{{{ switch to thank you slide }}}
+
+.. R36
+
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 
-.. 
-   Local Variables:
-   mode: rst
-   indent-tabs-mode: nil
-   sentence-end-double-space: nil
-   fill-column: 75
-   End:

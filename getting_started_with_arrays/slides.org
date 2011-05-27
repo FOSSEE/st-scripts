@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Getting started with arrays
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+EMAIL: info@fossee.in
 #+DATE:    
@@ -29,43 +29,41 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Arrays
-    - why arrays over lists
-  - Creating arrays
-  - Array operations
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Arrays}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
 
+  - Create arrays using data.
+  - Create arrays from lists.
+  - Perform basic array operations.
+  - Create identity matrix.
+  - Use functions zeros(), zeros\_like(), ones(), ones\_like()
+
+ 
+* Pre-requisite
+  Spoken tutorial on -
+  - Getting started with Lists.
 * Overview of Arrays
   - Arrays are homogeneous data structures.
     - elements have to the same data type
   - Arrays are faster compared to lists
     - at least /80-100 times/ faster than lists
-
-* Creating Arrays
-  - Creating a 1-dimensional array
-  : In []: a1 = array([1, 2, 3, 4])
-  ~[1, 2, 3, 4]~ is a list.
-* Creating two-dimensional array
-  - Creating a 2-dimensional array
-  : In []: a2 = array([[1,2,3,4],[5,6,7,8]])
-  here we convert a list of lists to an array making a 2-d array.
-  - Using ~arange()~ function
-  : In []: ar = arange(1,9)
-* ~reshape()~ method
-  - To reshape an array
-  : In []: ar.reshape(2, 4)
-  : In []: ar.reshape(4, 2)
-  : In []: ar = ar.reshape(2, 4)
-
-* Creating ~array~ from ~list~.
-  - ~array()~ method accepts list as argument
-  - Creating a list
-   : In []: l1 = [1, 2, 3, 4]
-  - Creating an array
-    : In []: a3 = array(l1)
-
-* Exercise 1
-  Create a 3-dimensional array of the order (2, 2, 4).
 
 * ~.shape~ of array
   - ~.shape~
@@ -73,14 +71,8 @@
     : In []: a2.shape
   - ~.shape~
     returns a tuple of shape
-* Exercise 2
+* Exercise 1
   Find out the shape of the other arrays(a1, a3, ar) that we have created.
-* Homogeneous data
-  - All elements in array should be of same type
-    : In []: a4 = array([1,2,3,'a string'])
-* Implicit type casting 
-   : In []: a4
-    All elements are type casted to string type
 * ~identity()~, ~zeros()~ methods
   - ~identity(n)~
     Creates an identity matrix, a square matrix of order (n, n) with diagonal elements 1 and others 0.
@@ -88,48 +80,58 @@
     Creates an ~m X n~ matrix with all elements 0.
 
 * Learning exercise
-  - Find out about
-    - ~zeros_like()~
+  Find out about
+    - ~zeros\_like()~
     - ~ones()~
-    - ~ones_like()~
-
-* Array operations
-  - ~a1 * 2~
-    returns a new array with all elements of ~a1~ multiplied by ~2~.
-    - Similarly ~+~, ~-~ \& ~/~.
-  - ~a1 + 2~
-    returns a new array with all elements of ~a1~ summed with ~2~.
-  - ~a1 += 2~
-    adds ~2~ to all elements of array ~a1~.
-    - Similarly ~-=~, ~*=~ \& ~/=~.
-  - ~a1 + a2~
-    does elements-wise addition.
-    - Similarly ~-~, ~*~ \& ~/~.
-  - ~a1 * a2~
-    does element-wise multiplication
-
-  *Note* - array(A) * array(B) does element wise multiplication and not matrix multiplication
+    - ~ones\_like()~
 
 * Summary
-  In this tutorial we covered,
-  - Basics of arrays
-  - Creating arrays
-  - Arrays from lists
-  - Basic array operations
+  In this tutorial, we have learnt to,
+  - Create an array using the ``array()`` function.
+  - Convert a list to an array.
+  - Perform some basic operations on arrays like addition,multiplication.
+  - Use functions like 
+    - .shape
+    - arrange()
+    - .reshape
+    - zeros() & zeros\_like()
+    - ones() & ones\_like()
 
-* Thank you!
+* Evaluation
+  1. ``x = array([1, 2, 3], [5, 6, 7])`` is a valid statement
+
+   - True
+   - False
+
+  2. What does the ``ones\_like()`` function do?
+   
+     (A) Returns an array of ones with the same shape and type as a
+         given array.
+     (B) Return a new array of given shape and type, filled with ones.
+
+     Read the statements and answer,
+
+     - Only statement A is correct.
+     - Only statement B is correct.
+     - Both statement A and B are correct.
+     - Both statement A and B are incorrect.
+* Solutions
+  1. False
+     x = array([[1, 2, 3], [5, 6, 7]])
+
+  2. Statement A- Returns an array of ones with the same shape and type as a
+                  given array. 
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
-
-
