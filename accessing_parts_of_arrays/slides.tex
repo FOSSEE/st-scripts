@@ -1,11 +1,11 @@
-% Created 2010-11-02 Tue 17:47
+% Created 2011-05-30 Mon 16:58
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
 \usepackage{longtable}
-\usepackage{float}
+\usepackage{float,caption,array,multirow}
 \usepackage{wrapfig}
 \usepackage{soul}
 \usepackage{textcomp}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Accessing parts of arrays}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Antibes}\usecolortheme{lily}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,21 +41,52 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Arrays}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
+   
 
 \begin{itemize}
-\item Manipulating one and multi dimensional arrays
-\item Access and change individual elements
-\item Access and change rows and columns
-\item Slicing and striding on arrays to access chunks
-\item Read images into arrays and manipulations
+\item Access and change individual elements of arrays, both one
+    dimensional and multi-dimensional.
+\item Access and change rows and columns of arrays.
+\item Access and change other chunks from an array, using slicing
+    and striding.
+\item Read images into arrays and perform processing on them, using
+    simple array manipulations.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+
+Spoken tutorial on -
+\begin{itemize}
+\item Getting started with Arrays.
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Sample Arrays}
-\label{sec-2}
-
+\label{sec-4}
 \lstset{language=Python}
 \begin{lstlisting}
 In []: A = array([12, 23, 34, 45, 56])
@@ -68,34 +99,16 @@ In []: C = array([[11, 12, 13, 14, 15],
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-3}
-
-  Change the last column of \texttt{C} to zeroes. 
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
-\label{sec-4}
-
-\lstset{language=Python}
-\begin{lstlisting}
-In []:  C[:, -1] = 0
-\end{lstlisting}
-\end{frame}
-\begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 1}
 \label{sec-5}
 
-  Change \texttt{A} to \texttt{[11, 12, 13, 14, 15]}. 
+  Change the last column of \verb~C~ to zeroes. 
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
+\begin{frame}
+\frametitle{Exercise 2}
 \label{sec-6}
 
-\lstset{language=Python}
-\begin{lstlisting}
-In []:  A[:] = [11, 12, 13, 14, 15]
-\end{lstlisting}
+  Change \verb~A~ to \verb~[11, 12, 13, 14, 15]~. 
 \end{frame}
 \begin{frame}
 \frametitle{squares.png}
@@ -106,59 +119,31 @@ In []:  A[:] = [11, 12, 13, 14, 15]
     \end{center}
 \end{frame}
 \begin{frame}
-\frametitle{Question 3}
+\frametitle{Exercise 3}
 \label{sec-8}
 
+
 \begin{itemize}
-\item obtain \texttt{[22, 23]} from \texttt{C}.
-\item obtain \texttt{[11, 21, 31, 41]} from \texttt{C}.
-\item obtain \texttt{[21, 31, 41, 0]}.
+\item obtain \verb~[22, 23]~ from \verb~C~.
+\item obtain \verb~[11, 21, 31, 41]~ from \verb~C~.
+\item obtain \verb~[21, 31, 41, 0]~.
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
+\begin{frame}
+\frametitle{Exercise 4}
 \label{sec-9}
 
-\lstset{language=Python}
-\begin{lstlisting}
-In []:  C[1, 1:3]
-In []:  C[0:4, 0]
-In []:  C[1:5, 0]
-\end{lstlisting}
+  Obtain \verb~[[23, 24], [33, -34]]~ from \verb~C~
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
+\frametitle{Exercise 5}
 \label{sec-10}
-
-  Obtain \texttt{[[23, 24], [33, -34]]} from \texttt{C}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-11}
-
-\lstset{language=Python}
-\begin{lstlisting}
-In []:  C[1:3, 2:4]
-\end{lstlisting}
-\end{frame}
-\begin{frame}
-\frametitle{Question 5}
-\label{sec-12}
 
   Obtain the square in the center of the image
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 5}
-\label{sec-13}
-
-\lstset{language=Python}
-\begin{lstlisting}
-In []: imshow(I[75:225, 75:225])
-\end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Question 6}
-\label{sec-14}
+\frametitle{Exercise 6}
+\label{sec-11}
 
   Obtain the following
 \lstset{language=Python}
@@ -169,7 +154,7 @@ In []: imshow(I[75:225, 75:225])
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 6}
-\label{sec-15}
+\label{sec-12}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -179,34 +164,75 @@ In []: C[::4, 1:4]
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-16}
+\label{sec-13}
 
-  You should now be able to --
+  In this tutorial, we have learnt to, 
+ 
+
 \begin{itemize}
-\item Manipulate single \& multi dimensional arrays
-
-\begin{itemize}
-\item Access and change individual elements
-\item Access and change rows and columns
-\item Slice and stride on arrays
-\end{itemize}
-
+\item Manipulate single \& multi dimensional arrays.
+\item Access and change individual elements by using their index numbers.
+\item Access and change rows and columns of arrays by specifying the row 
+    and column numbers.
+\item Slice and stride on arrays.
 \item Read images into arrays and manipulate them.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-17}
+\frametitle{Evaluation}
+\label{sec-14}
+
+
+\begin{enumerate}
+\item Given the array,\\ A = array([12, 15, 18, 21]),\\ How do we access the element ``18''?
+\vspace{2pt}
+\item Given the array,\\ 
+B = array([[10, 11, 12, 13],\\
+\hspace{1.64cm}  
+           [20, 21, 22, 23],\\
+\hspace{1.64cm}           
+           [30, 31, 32, 33],\\
+\hspace{1.64cm}           
+           [40, 41, 42, 43]])\\
+Obtain the elements, ``[[21, 22], [31, 32]].''
+\vspace{2pt}         
+\item Given the array, \\
+ 
+     C = array([[10, 11, 12, 13],\\
+\hspace{1.64cm}     
+                [20, 21, 22, 23]])\\
+
+     Change the array to, \\
+   
+    C = array([[10, 11, 10, 11],\\
+\hspace{1.64cm}    
+               [20, 21, 20, 21]])
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-15}
+
+
+\begin{enumerate}
+\item A[ 2 ]
+\vspace{12pt}
+\item B[1:3, 1:3]
+\vspace{12pt}
+\item B[:2, 2:] = B[:2, :2]
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
