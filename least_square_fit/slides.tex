@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 19:02
+% Created 2011-06-08 Wed 10:17
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Least square fit}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,35 +41,111 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Least Square Fit}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
+
 
 \begin{itemize}
-\item Plotting a Least square fit line
+\item Generate the least square fit line for a
+   given set of points.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tutorial on -
+
+\begin{itemize}
+\item Using plot interactively.
+\item Loading data from files.
+\item Getting started with arrays.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-4}
+
+
+\begin{itemize}
+\item Generate a least square fit line for l v/s t$^2$ using the data in the file
+    `pendulum.txt'.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-2}
+\label{sec-5}
 
-  You should now be able to --
+  In this tutorial,we have learnt to,
+
+
 \begin{itemize}
-\item Plot a least square fit line.
+\item Generate a least square fit using matrices.
+\item Use the function ``lstsq()'' to generate a least square fit line.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-3}
+\frametitle{Evaluation}
+\label{sec-6}
+
+
+\begin{enumerate}
+\item What does ones$\_{\mathrm{like}}$([1, 2, 3]) produce
+\begin{itemize}
+\item array([1, 1, 1])
+\item ~[1, 1, 1]~
+\item ~[1.0, 1.0, 1.0]~
+\item Error
+\end{itemize}
+\vspace{10pt}
+\item The plot of ``u'' vs ``v'' is a bunch of scattered points that show a
+     linear trend. How do you find the least square fit line of ``u'' v/s ``v''.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-7}
+
+
+\begin{enumerate}
+\item array([1, 1, 1])
+\vspace{15pt}
+\item A = array(u, ones\_like(u)).T\\
+     result = lstsq(A, v)\\
+     m, c = result[ 0 ]\\
+     lst\_line = m * u + c
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Least square fit
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,22 +29,70 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Plotting a Least square fit line
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Least Square Fit}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+
+ - Generate the least square fit line for a
+   given set of points.
+* Pre-requisite
+  Spoken tutorial on -
+  - Using plot interactively.
+  - Loading data from files.
+  - Getting started with arrays.
+* Exercise 1
+  - Generate a least square fit line for l v/s t^2 using the data in the file
+    'pendulum.txt'.
 * Summary
-  You should now be able to --
-  - Plot a least square fit line. 
-* Thank you!
+  In this tutorial,we have learnt to,
+
+  - Generate a least square fit using matrices.
+  - Use the function ``lstsq()`` to generate a least square fit line. 
+* Evaluation
+  1. What does ones_like([1, 2, 3]) produce
+
+   - array([1, 1, 1])
+   - [1, 1, 1]
+   - [1.0, 1.0, 1.0]
+   - Error
+   
+  2. The plot of ``u`` vs ``v`` is a bunch of scattered points that show a
+     linear trend. How do you find the least square fit line of ``u`` v/s ``v``.
+
+* Solutions
+  1. array([1, 1, 1])
+
+  2. A = array(u, ones\_like(u)).T
+     result = lstsq(A, v)
+     m, c = result[ 0 ]
+     lst\_line = m * u + c
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

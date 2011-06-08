@@ -17,25 +17,34 @@
    Checklist OK?       : <put date stamp here, not OK> [2010-10-05]
 
 
-.. #[Puneeth: Add pre-requisites.]
-
 Script
 ------
 
-Hello friends and welcome to the tutorial on Least Square Fit
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-{{{ Show the slide containing title }}}
+Hello friends and welcome to the tutorial on 'Least Square Fit'.
 
-{{{ Show the slide containing the outline slide }}}
+{{{ Show the slide containing objectives }}}
 
-In this tutorial, we shall look at generating the least square fit line for a
-given set of points.
+At the end of this tutorial, you will be able to,
 
-First let us have a look at the problem.
+ 1. Generate the least square fit line for a
+    given set of points.
 
-{{{ Show the slide containing problem statement. }}}
+{{{ Switch to the pre-requisite slide }}}
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Using plot interactively", "Loading data from files"
+and "Getting started with arrays".
+
+Let us start this tutorial with the help of an example.
+
+{{{ Show the slide containing exercise 1 }}}
 
 We have an input file generated from a simple pendulum experiment.
+
+{{{ Open the file 'pendulum.txt' and show }}}
 
 It contains two columns of data. The first column is the length of the
 pendulum and the second is the corresponding time period of the pendulum.
@@ -43,14 +52,11 @@ pendulum and the second is the corresponding time period of the pendulum.
 As we know, the square of time period of a pendulum is directly proportional to
 its length, we shall plot l vs t^2 and verify this. 
 
-.. #[Puneeth:] removed the explanation about loadtxt and unpack
-..  option. It's been done in another LO already. simple dependency 
-..  should work?
-
 To read the input file and parse the data, we are going to use the
-loadtxt function.  Type 
+loadtxt function.Switch to the terminal.
 ::
-
+ 
+    ipython -pylab
     l, t = loadtxt("/home/fossee/pendulum.txt", unpack=True)
     l
     t
@@ -58,7 +64,7 @@ loadtxt function.  Type
 We can see that l and t are two sequences containing length and time values
 correspondingly.
 
-Let us first plot l vs t^2. Type
+Let us first plot l vs t^2.
 ::
 
     tsq = t * t
@@ -66,22 +72,20 @@ Let us first plot l vs t^2. Type
 
 {{{ switch to the plot window }}}
 
-.. #[Puneeth:] Moved explanation of least square fit here. seems more
-.. apt. 
-
 We can see that there is a visible linear trend, but we do not get a
 straight line connecting them. We shall, therefore, generate a least
 square fit line.
 
-{{{ show the slide containing explanation on least square fit }}}
-
-As shown in the slide, we are first going to generate the two matrices
-tsq and A. Then we are going to use the ``lstsq`` function to find the
+We will first generate the two matrices tsq and A. 
+Then we will use the ``lstsq`` function to find the
 values of m and c.
+
+{{{ Switch to the terminal }}}
 
 let us now generate the A matrix with l values.
 We shall first generate a 2 x 90 matrix with the first row as l values and the
 second row as ones. Then take the transpose of it. Type
+
 ::
 
     inter_mat = array((l, ones_like(l)))
@@ -114,35 +118,47 @@ Now that we have m and c, we need to generate the fitted values of t^2. Type
     plot(l, tsq, 'bo')
     plot(l, tsq_fit, 'r')
 
-We get the least square fit of l vs t^2
-
-{{{ Pause here and try out the following exercises }}}
-
-%% 2 %% change the label on y-axis to "y" and save the lines of code
-        accordingly
-
-{{{ continue from paused state }}}
+We get the least square fit of l vs t^2.
 
 {{{ Show summary slide }}}
 
-This brings us to the end of the tutorial.
-we have learnt
+This brings us to the end of the tutorial.In this tutorial,
+we have learnt to,
 
- * how to generate a least square fit
+ 1. Generate a least square fit using matrices.
+ #. Use the function ``lstsq()`` to generate a least square fit line.
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+{{{Show self assessment questions slide}}}
 
-.. #[Nishanth]: Will add this line after all of us fix on one.
-.. This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+Here are some self assessment questions for you to solve
 
-Hope you have enjoyed and found it useful.
-Thank you
+1. What does ones_like([1, 2, 3]) produce
+
+   - array([1, 1, 1])
+   - [1, 1, 1]
+   - [1.0, 1.0, 1.0]
+   - Error
+   
+2. The plot of ``u`` vs ``v`` is a bunch of scattered points that show a
+    linear trend. How do you find the least square fit line of ``u`` vs ``v``.
 
 
-.. 
-   Local Variables:
-   mode: rst
-   indent-tabs-mode: nil
-   sentence-end-double-space: nil
-   fill-column: 75
-   End:
+{{{solution of self assessment questions on slide}}}
+
+And the answers,
+
+1. The function ``ones_like([1, 2, 3])`` will generate 'array([1, 1, 1])'.
+
+2. The following set of commands will produce the least square fit line of ``u`` vs ``v``
+::
+
+    A = array(u, ones_like(u)).T
+    result = lstsq(A, v)
+    m, c = result[0]
+    lst_line = m * u + c
+
+{{{ Show the thank you slide }}}
+
+Hope you have enjoyed this tutorial and found it useful.
+Thank you!
+
