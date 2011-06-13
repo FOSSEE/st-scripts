@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Getting started -- Sage
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,17 +29,35 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Know what Sage and Sage notebook are.                             
-  - Be able to start a Sage shell or notebook                         
-  - Be able to start using the notebook                               
-  - Be able to create new worksheets                                  
-  - Know about the menu options available                             
-  - Know about the cells in the worksheet                             
-  - Be able to evaluate cells, create and delete cells, navigate them.
-  - Be able to make annotations in the worksheet                      
-  - Be able to use tab completion.                                    
-  - Be able to use code from other languages in the cells.
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Sage}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+
+ - Know what Sage and Sage notebook are.
+ - Start a Sage shell or notebook.
+ - Create new worksheets.
+ - Know about the menu options available and the cells in the worksheet.
+ - Evaluate cells, create and delete cells, navigate them.
+ - Make annotations in the worksheet.
+ - Use tab completion. 
+ - Use code from other languages in the cells.
+ - Use the offline help available.
 * What is Sage?
   - free, open-source mathematical software.
   - can do a lot of math for you, including, but not limited to 
@@ -48,31 +66,50 @@
     + cryptography
     + graph theory
   - can be used as aid in teaching and research
+* Installing Sage
+   Visit the page
+   http://sagemath.org/doc/tutorial/introduction.html 
+   for the tutorial on how to install Sage.
+
 * Summary
-  + What is Sage
-  + How to start Sage shell
-  + What is Sage notebook
-  + How to start the Sage notebook
-  + How to create accounts and start using the notebook
-  + How to create new worksheets
-  + The menus available on the notebook
-  + About cells in the worksheet
-  + Methods to evaluate the cell, create new cells, delete the cells
-    and navigate around the cells
-  + To make annotations in the worksheet
-  + Tab completions
-  + And embedding code of other scripting languages in the cells
-* Thank you!
+ In thus tutorial, we have learnt to, 
+
+  - Know about Sage and sage notebook.
+  - Start Sage shell  and sage notebook.
+  - Create accounts and start using the notebook.
+  - Create new worksheets.
+  - Access the menus available on the notebook.
+  - Evaluate cells in the worksheet.
+  - Create new cells, delete the cells.
+     and navigate around the cells.
+  - Make annotations in the worksheet.
+  - Use tab completions.
+  - Embed code of other scripting languages in the cells.
+* Evaluation
+  1. Each cell in a sage worksheet displays the result of only the last
+     operation.
+     True or False.
+
+ 2. How do you evaluate a cell using the keyboard keys?
+   
+   - Shift key along with enter key
+   - Control key along with enter key
+   - Alt key along with enter key 
+* Solutions
+  1. True
+  
+  2. Shift key along with enter key
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
