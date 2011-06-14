@@ -26,315 +26,593 @@
 Symbolics with Sage
 -------------------
 
-Hello friends and welcome to the tutorial on Symbolics with Sage.
+.. L1
 
-{{{ Show welcome slide }}}
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-During the course of the tutorial we will learn
+.. R1
 
-{{{ Show outline slide  }}}
+Hello friends and welcome to the tutorial on "Symbolics with Sage".
 
-* Defining symbolic expressions in Sage.  
-* Using built-in constants and functions. 
-* Performing Integration, differentiation using Sage. 
-* Defining matrices. 
-* Defining symbolic functions.  
-* Simplifying and solving symbolic expressions and functions.
+.. L2
 
-In addtion to a lot of other things, Sage can do Symbolic Math and we shall
-start with defining symbolic expressions in Sage. 
+{{{ Show objectives slide  }}}
+
+.. R2
+
+At the end of this tutorial, you will be able to,
+
+ 1. Define symbolic expressions in sage.  
+ #. Use built-in constants and functions. 
+ #. Perform Integration, differentiation using sage. 
+ #. Define matrices. 
+ #. Define Symbolic functions.  
+ #. Simplify0and solve symbolic expressions and functions.
+
+.. L3
+
+{{{ Switch to the pre-requisite slide }}}
+
+.. R3
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "Getting started with sage notebook".
+
+In addtion to a lot of other things, Sage can do Symbolic Math and 
+we shall start with defining symbolic expressions in Sage. 
+
+.. L4
+
+{{{ Open the sage notebook }}}
+
+.. R4
 
 Have your Sage notebook opened. If not, pause the video and
 start you Sage notebook right now. 
 
-On the sage notebook type::
+.. R5
+
+On the sage notebook type
+
+.. L5
+::
    
     sin(y)
+
+.. R6
 
 It raises a name error saying that ``y`` is not defined. We need to
 declare ``y`` as a symbol. We do it using the ``var`` function. 
+
+.. L6
 ::
 
     var('y')
+
+.. R7
    
-Now if you type::
+Now if you type sin(y),Sage simply returns the expression.
+
+.. L7
+::
 
     sin(y)
 
-Sage simply returns the expression.
+.. R8
 
 Sage treats ``sin(y)`` as a symbolic expression. We can use this to do
 symbolic math using Sage's built-in constants and expressions.
 
-Let us try out a few examples. ::
+Let us try out a few examples. 
+
+.. L8
+::
    
-   var('x,alpha,y,beta') 
-   x^2/alpha^2+y^2/beta^2
+    var('x,alpha,y,beta') 
+    x^2/alpha^2+y^2/beta^2
+
+.. R9
 
 We have defined 4 variables, ``x``, ``y``, ``alpha`` and ``beta`` and
 have defined a symbolic expression using them.
  
-Here is an expression in ``theta``  ::
+Here is an expression in ``theta``  
+
+.. L9
+::
    
-   var('theta')
-   sin(theta)*sin(theta)+cos(theta)*cos(theta)
+    var('theta')
+    sin(theta)*sin(theta)+cos(theta)*cos(theta)
+
+.. R10
 
 Now that you know how to define symbolic expressions in Sage, here is
 an exercise. 
 
-{{ show slide showing question 1 }}
+Pause the video here, try out the following exercise and resume the video.
 
-%% %% Define following expressions as symbolic expressions in Sage. 
+.. L10
+
+.. L11
+
+{{{ show slide showing exercise 1 }}}
+
+.. R11
+
+ Define following expressions as symbolic expressions in Sage. 
    
    1. x^2+y^2
    #. y^2-4ax
-  
-Please, pause the video here. Do the exercise and then continue. 
+
+.. L12
+
+{{{continue from paused state}}}
+{{{ show slide showing solution 1 }}}
+
+.. R12
 
 The solution is on your screen.
+<pause for sometime,then continue>
 
-{{ show slide showing solution 1 }}
+.. R13
 
 Sage also provides built-in constants which are commonly used in
 mathematics, for instance pi, e, infinity. The function ``n`` gives
 the numerical values of all these constants.
+
+.. L13
 :: 
+
     n(pi) 
     n(e) 
     n(oo)
+
+.. R14
    
 If you look into the documentation of function ``n`` by doing
+n<tab>, You will see what all arguments it takes and what it returns.
 
+.. L14
 ::
-   n(<Tab>
 
-You will see what all arguments it takes and what it returns. It will
-be very helpful if you look at the documentation of all functions
-introduced in the course of this script.
+    n<Tab>
+
+.. R15
+
+It will be very helpful if you look at the documentation of all 
+functions introduced in the course of this script.
 
 Also we can define the number of digits we wish to have in the
-constants. For this we have to pass an argument -- digits.  Type
+constants. For this we have to pass an argument -- digits.
 
+.. L15
 ::
 
-   n(pi, digits = 10)
+    n(pi, digits = 10)
+
+.. R16
 
 Apart from the constants Sage also has a lot of built-in functions
 like ``sin``, ``cos``, ``log``, ``factorial``, ``gamma``, ``exp``,
 ``arcsin`` etc ...
 
 Lets try some of them out on the Sage notebook.
+
+.. L16
 ::
      
-   sin(pi/2)
-   
-   arctan(oo)
-     
-   log(e,e)
+    sin(pi/2)
+    arctan(oo)
+    log(e,e)
 
-Following are exercises that you must do. 
+.. R17
 
-{{ show slide showing question 2 }}
+Pause the video here, try out the following exercise and resume the video.
 
-%% %% Find the values of the following constants upto 6 digits
-      precision
+.. L17
+
+.. L18
+
+{{{ show slide showing exercise 2 }}}
+
+.. R18
+
+ Find the values of the following constants upto 6 digits precision
    
    1. pi^2
    #. euler_gamma^2
 
 
-%% %% Find the value of the following.
+ Find the value of the following.
 
    1. sin(pi/4)
    #. ln(23)  
 
-Please, pause the video here. Do the exercises and then continue.
+.. L19
 
-The solutions are on your screen
+{{{continue from paused state}}}
+{{{ show slide showing solution 2 }}}
 
-{{ show slide showing solution 2 }}
+.. R19
+
+The solutions are on your screen.
+<pause for sometime,then continue>
+
+.. R20
 
 Given that we have defined variables like x, y etc., we can define an
-arbitrary function with desired name in the following way.::
+arbitrary function with desired name in the following way.
 
-       var('x') 
-       function('f',x)
+.. L20
+::
+
+    var('x') 
+    function('f',x)
+
+.. R21
 
 Here f is the name of the function and x is the independent variable .
-Now we can define f(x) to be ::
+Now we can define f(x)  
 
-     f(x) = x/2 + sin(x)
+.. L21
+::
 
-Evaluating this function f for the value x=pi returns pi/2.::
+    f(x) = x/2 + sin(x)
+
+.. R22
+
+Evaluating this function f for the value x=pi returns pi/2.
+
+.. L22
+::
 	   
-	   f(pi)
+    f(pi)
+
+.. R23
 
 We can also define functions that are not continuous but defined
 piecewise.  Let us define a function which is a parabola between 0
 to 1 and a constant from 1 to 2 .  Type the following 
+
+.. L23
 ::
       
+    var('x') 
+    h(x)=x^2 
+    g(x)=1 
+    f=Piecewise([[(0,1),h(x)],[(1,2),g(x)]],x) 
+    f
 
-      var('x') 
-      h(x)=x^2 
-      g(x)=1 
-
-      f=Piecewise([[(0,1),h(x)],[(1,2),g(x)]],x) 
-      f
+.. R24
 
 We can also define functions convergent series and other series. 
 
-We first define a function f(n) in the way discussed above.::
+We first define a function f(n) in the way discussed before.
 
-   var('n') 
-   function('f', n)
+.. L24
+::
 
+    var('n') 
+    function('f', n)
+
+.. R25
 
 To sum the function for a range of discrete values of n, we use the
 sage function sum.
 
-For a convergent series , f(n)=1/n^2 we can say ::
+For a convergent series , f(n)=1/n^2 we can say 
+
+.. L25
+::
    
-   var('n') 
-   function('f', n)
-   f(n) = 1/n^2
-   sum(f(n), n, 1, oo)
+    var('n') 
+    function('f', n)
+    f(n) = 1/n^2
+    sum(f(n), n, 1, oo)
 
- 
-Lets us now try another series ::
+.. R26
 
+Let us now try another series 
+
+.. L26
+::
 
     f(n) = (-1)^(n-1)*1/(2*n - 1)
     sum(f(n), n, 1, oo)
 
+.. R27
+
 This series converges to pi/4. 
 
-Following  are exercises that you must do. 
+Pause the video here, try out the following exercise and resume the video. 
 
-{{ show slide showing question 3 }}
+.. L27
 
-%% %% Define the piecewise function. 
+.. L28
+
+{{{ show slide showing exercise 3 }}}
+
+.. R28
+
+ Define the piecewise function. 
    f(x)=3x+2 
    when x is in the closed interval 0 to 4.
    f(x)=4x^2
    between 4 to 6. 
    
-%% %% Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
+ Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
 
-Please, pause the video here. Do the exercise(s) and then continue. 
+.. L29
 
-{{ show slide showing solution 3 }}
+{{{continue from paused state}}}
+{{{ show slide showing solution 3 }}}
+
+.. R29
+
+The solution is on your screen
+<pause for sometime,then continue>
+
+.. R30
 
 Moving on let us see how to perform simple calculus operations using Sage
 
-For example lets try an expression first ::
+For example lets try an expression first 
+
+.. L30
+::
 
     diff(x**2+sin(x),x) 
 
-The diff function differentiates an expression or a function. It's
+.. R31
+
+The ``diff`` function differentiates an expression or a function. It's
 first argument is expression or function and second argument is the
 independent variable.
 
-We have already tried an expression now lets try a function ::
+We have already tried an expression now lets try a function 
 
-   f=exp(x^2)+arcsin(x) 
-   diff(f(x),x)
+.. L31
+::
+
+    f=exp(x^2)+arcsin(x) 
+    diff(f(x),x)
+
+.. R32
 
 To get a higher order differential we need to add an extra third argument
-for order ::
+for order 
+
+.. L32
+::
  
-   diff(f(x),x,3)
+    diff(f(x),x,3)
+
+.. R33
 
 in this case it is 3.
 
-Just like differentiation of expression you can also integrate them ::
+Just like differentiation of expression you can also integrate them 
 
-     x = var('x') 
-     s = integral(1/(1 + (tan(x))**2),x) 
-     s
+.. L33
+::
+
+    x = var('x') 
+    s = integral(1/(1 + (tan(x))**2),x) 
+    s
+
+.. R34
 
 Many a times we need to find factors of an expression, we can use the
 "factor" function
 
+.. L34
 ::
 
     y = (x^100 - x^70)*(cos(x)^2 + cos(x)^2*tan(x)^2) 
     f = factor(y)
 
-One can simplify complicated expression ::
+.. R35
+
+One can simplify complicated expression by using the function ``simplify``. 
+
+.. L35
+::
     
     f.simplify_full()
 
+.. R36
+
 This simplifies the expression fully. We can also do simplification of
-just the algebraic part and the trigonometric part ::
+just the algebraic part and the trigonometric part 
+
+.. L36
+::
 
     f.simplify_exp() 
     f.simplify_trig()
+
+.. R37
     
-One can also find roots of an equation by using ``find_root`` function::
+One can also find roots of an equation by using ``find_root`` function
+
+.. L37
+::
 
     phi = var('phi') 
     find_root(cos(phi)==sin(phi),0,pi/2)
 
-Let's substitute this solution into the equation and see we were
-correct ::
+.. R38
 
-     var('phi') 
-     f(phi)=cos(phi)-sin(phi)
-     root=find_root(f(phi)==0,0,pi/2) 
-     f.substitute(phi=root)
+Let's substitute this solution into the equation and see we were
+correct 
+
+.. L38
+::
+
+    var('phi') 
+    f(phi)=cos(phi)-sin(phi)
+    root=find_root(f(phi)==0,0,pi/2) 
+    f.substitute(phi=root)
+
+.. R39
 
 as we can see when we substitute the value the answer is almost = 0 showing 
 the solution we got was correct.
 
-Following are a few exercises that you must do. 
+Pause the video here, try out the following exercise and resume the video. 
 
-%% %% Differentiate the following. 
+.. L39
+
+.. L40
+
+{{{ show slide showing exercise 4 }}}
+
+.. R40
+
+ Differentiate the following. 
       
       1. sin(x^3)+log(3x)  , degree=2
       #. x^5*log(x^7)      , degree=4 
 
-%% %% Integrate the given expression 
+ Integrate the given expression 
       
       sin(x^2)+exp(x^3) 
 
-%% %% Find x
+ Find x
       cos(x^2)-log(x)=0
       Does the equation have a root between 1,2. 
 
-Please, pause the video here. Do the exercises and then continue. 
+.. L41
 
+{{{continue from paused state}}}
+{{{ show slide showing solution 4 }}}
 
-Lets us now try some matrix algebra symbolically ::
+.. R41
 
-   var('a,b,c,d') 
-   A=matrix([[a,1,0],[0,b,0],[0,c,d]]) 
-   A
+The solution is on your screen
+<pause for sometime,then continue>
+
+.. R42
+
+Lets us now try some matrix algebra symbolically 
+
+.. L42
+::
+
+    var('a,b,c,d') 
+    A=matrix([[a,1,0],[0,b,0],[0,c,d]]) 
+    A
+
+.. R43
 
 Now lets do some of the matrix operations on this matrix
+
+.. L43
 ::
+    
     A.det() 
     A.inverse()
 
+.. R44
 
-Following is an (are) exercise(s) that you must do. 
+As we can see, we got the determinant and the inverse of the matrix 
+respectively.
 
-%% %% Find the determinant and inverse of :
+Pause the video here, try out the following exercise and resume the video.
+
+.. L44
+
+.. L45
+
+{{{ show slide showing exercise 5 }}} 
+
+.. R45
+
+ Find the determinant and inverse of 
 
       A=[[x,0,1][y,1,0][z,0,y]]
 
-Please, pause the video here. Do the exercise(s) and then continue. 
+.. L46
 
+{{{continue from paused state}}}
+{{{ show slide showing solution 4 }}}
+
+.. R47
+
+The solution is on your screen
+<pause for sometime,then continue>
+
+.. L48
 
 {{{ Show the summary slide }}}
 
-That brings us to the end of this tutorial. In this tutorial we learnt
-how to
+.. R48
 
-* define symbolic expression and functions
-* use built-in constants and functions  
-* use <Tab> to see the documentation of a function  
-* do simple calculus
-* substitute values in expressions using ``substitute`` function
-* create symbolic matrices and perform operations on them
+This brings us to the end of this tutorial. In this tutorial, 
+we have learnt to,
+
+1. Define symbolic expression and functions using the method ``var``.
+#. Use built-in constants like pi,e,oo and functions like 
+   sum,sin,cos,log,exp and many more.  
+#. Use <Tab> to see the documentation of a function. 
+#. Do simple calculus using functions
+   - diff()--to find a differential of a function
+   - integral()--to integrate an expression
+   - simplify--to simplify complicated expression. 
+#. Substitute values in expressions using ``substitute`` function.
+#. Create symbolic matrices and perform operations on them like--
+   - det()--to find out the determinant of a matrix
+   - inverse()--to find out the inverse of a matrix.
+
+.. L49
+
+{{{Show self assessment questions slide}}}
+
+.. R49
+
+Here are some self assessment questions for you to solve
+
+1. How do you define a name 'y' as a symbol?
+
+
+2. Get the value of pi upto precision 5 digits using sage?
+
+
+3. Find third order differential function of
+
+   f(x)=sin(x^2)+exp(x^3)
+ 
+.. L50
+
+{{{solution of self assessment questions on slide}}}
+
+.. R50
+
+And the answers,
+
+1. We define a symbol using the function ``var``.In this case it will be
+::
+
+    var('y')
+
+2. The value of pi upto precision 5 digits is given as,
+::
+
+    n(pi,5)
+
+3. The third order differential function can be found out by adding the 
+   third argument which states the order.The syntax will be,
+::
+
+    diff(f(x),x,3)
+
+.. L51
+
+{{{Show thank you slide}}}
+
+.. R51
+
+Hope you have enjoyed this tutorial and found it useful.
+Thank You!
 

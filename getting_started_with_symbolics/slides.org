@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:   Getting started with symbolics
+#+TITLE:   
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,15 +29,37 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Defining symbolic expressions in sage.  
-  - Using built-in constants and functions.   
-  - Performing Integration, differentiation using sage. 
-  - Defining matrices. 
-  - Defining Symbolic functions.  
-  - Simplifying and solving symbolic expressions and functions.
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Symbolics}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+ At the end of this tutorial, you will be able to,
 
-* Question 1
+ - Define symbolic expressions in sage.  
+ - Use built-in constants and functions. 
+ - Perform Integration, differentiation using sage. 
+ - Define matrices. 
+ - Define Symbolic functions.  
+ - Simplify0and solve symbolic expressions and functions.
+
+* Pre-requisite
+  Spoken tutorial on -
+  - Getting started with Sage Notebook.
+* Exercise 1
   - Define the following expression as symbolic
     expression in sage.
 
@@ -52,11 +74,11 @@
   var('a,x,y')
   y^2-4*a*x
 #+end_src python
-* Question 2
+* Exercise 2
   - Find the values of the following constants upto 6 digits  precision 
    
     - pi^2
-    - euler_gamma^2
+    - euler\_gamma^2
    
       
   - Find the value of the following.
@@ -70,7 +92,7 @@
   n(sin(pi/4))
   n(log(23,e))
 #+end_src python
-* Question 3
+* Exercise 3
   - Define the piecewise function. 
    f(x)=3x+2 
    when x is in the closed interval 0 to 4.
@@ -94,7 +116,7 @@
   sum(f(n), n, 1, oo)
 #+end_src python  
 
-* Question 4
+* Exercise 4
   - Differentiate the following. 
       
     - sin(x^3)+log(3x), to the second order
@@ -122,8 +144,8 @@
   find_root(f(x)==0,1,2)
 #+end_src
 
-* Question 5
-  - Find the determinant and inverse of :
+* Exercise 5
+  - Find the determinant and inverse of 
 
       A=[[x,0,1][y,1,0][z,0,y]]
 
@@ -135,23 +157,45 @@
   A.inverse()
 #+end_src
 * Summary
- - We learnt about defining symbolic expression and functions.
- - Using built-in constants and functions.
- - Using <Tab> to see the documentation of a function.
- - Simple calculus operations .
- - Substituting values in expression using substitute function.
- - Creating symbolic matrices and performing operation on them .
-* Thank you!
+In this tutorial, we have learnt to,
+
+- Define symbolic expression and functions using the method ``var``.
+- Use built-in constants like pi,e,oo and functions like 
+   sum,sin,cos,log,exp and many more.  
+- Use <Tab> to see the documentation of a function. 
+- Do simple calculus using functions like --
+   - diff()--to find a differential of a function
+   - integral()--to integrate an expression
+   - simplify--to simplify complicated expression. 
+- Substitute values in expressions using ``substitute`` function.
+- Create symbolic matrices and perform operations on them like --
+   - det()--to find out the determinant of a matrix
+   - inverse()--to find out the inverse of a matrix.
+* Evaluation
+1. How do you define a name 'y' as a symbol?
+
+2. Get the value of pi upto precision 5 digits using sage?
+
+3. Find third order differential function of
+
+   f(x)=sin(x^2)+exp(x^3)
+* Solutions
+  1. var('y')
+
+  2. n(pi,5)
+
+  3. diff(f(x),x,3)
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

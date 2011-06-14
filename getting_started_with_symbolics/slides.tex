@@ -1,4 +1,4 @@
-% Created 2010-11-11 Thu 02:03
+% Created 2011-06-14 Tue 13:44
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Getting started with symbolics}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,38 +41,66 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with Symbolics}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+ At the end of this tutorial, you will be able to,
+
 
 \begin{itemize}
-\item Defining symbolic expressions in sage.
-\item Using built-in constants and functions.
-\item Performing Integration, differentiation using sage.
-\item Defining matrices.
-\item Defining Symbolic functions.
-\item Simplifying and solving symbolic expressions and functions.
+\item Define symbolic expressions in sage.
+\item Use built-in constants and functions.
+\item Perform Integration, differentiation using sage.
+\item Define matrices.
+\item Define Symbolic functions.
+\item Simplify and solve symbolic expressions and functions.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tutorial on -
+
+\begin{itemize}
+\item Getting started with Sage Notebook.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-4}
+
 
 \begin{itemize}
 \item Define the following expression as symbolic
     expression in sage.
-
 \begin{itemize}
 \item x$^2$+y$^2$
 \item y$^2$-4ax
 \end{itemize}
-
 \end{itemize}
-
   
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 1}
-\label{sec-3}
+\label{sec-5}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -84,33 +112,29 @@ y^2-4*a*x
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
-\label{sec-4}
+\frametitle{Exercise 2}
+\label{sec-6}
 
 
 \begin{itemize}
 \item Find the values of the following constants upto 6 digits  precision
-
 \begin{itemize}
 \item pi$^2$
-\item euler$_{\mathrm{gamma}}$$^2$
+\item euler\_gamma$^2$
 \end{itemize}
-
 \end{itemize}
 
 \begin{itemize}
 \item Find the value of the following.
-
 \begin{itemize}
 \item sin(pi/4)
 \item ln(23)
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-5}
+\label{sec-7}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -120,21 +144,23 @@ n(log(23,e))
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 3}
-\label{sec-6}
+\frametitle{Exercise 3}
+\label{sec-8}
+
 
 \begin{itemize}
-\item Define the piecewise function. 
+\item Define the piecewise function\\ 
    f(x)=3x+2 
-   when x is in the closed interval 0 to 4.
+   when x is in the closed interval 0 to 4\\
    f(x)=4x$^2$
    between 4 to 6.
+\vspace{4pt}
 \item Sum  of 1/(n$^2$-1) where n ranges from 1 to infinity.
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 3}
-\label{sec-7}
+\label{sec-9}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -153,35 +179,32 @@ sum(f(n), n, 1, oo)
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
-\label{sec-8}
+\frametitle{Exercise 4}
+\label{sec-10}
+
 
 \begin{itemize}
 \item Differentiate the following.
-
 \begin{itemize}
 \item sin(x$^3$)+log(3x), to the second order
 \item x$^5$*log(x$^7$), to the fourth order
 \end{itemize}
-
+\vspace{4pt}
 \item Integrate the given expression
-
 \begin{itemize}
 \item x*sin(x$^2$)
 \end{itemize}
-
+\vspace{4pt}
 \item Find x
-
 \begin{itemize}
 \item cos(x$^2$)-log(x)=0
 \item Does the equation have a root between 1,2.
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 4}
-\label{sec-9}
+\label{sec-11}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -198,18 +221,19 @@ find_root(f(x)==0,1,2)
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 5}
-\label{sec-10}
+\frametitle{Exercise 5}
+\label{sec-12}
+
 
 \begin{itemize}
-\item Find the determinant and inverse of :
+\item Find the determinant and inverse of 
 
       A=[[x,0,1][y,1,0][z,0,y]]
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 5}
-\label{sec-11}
+\label{sec-13}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -221,30 +245,69 @@ A.inverse()
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-12}
+\label{sec-14}
+
+In this tutorial, we have learnt to,
+
 
 \begin{itemize}
-\item We learnt about defining symbolic expression and functions.
-\item Using built-in constants and functions.
-\item Using <Tab> to see the documentation of a function.
-\item Simple calculus operations .
-\item Substituting values in expression using substitute function.
-\item Creating symbolic matrices and performing operation on them .
+\item Define symbolic expression and functions using the method ``var``.
+\item Use built-in constants like pi,e,oo and functions like 
+   sum,sin,cos,log,exp and many more.
+\item Use <Tab> to see the documentation of a function.
+\item Do simple calculus using functions like --
+\begin{itemize}
+\item diff()--to find a differential of a function
+\item integral()--to integrate an expression
+\item simplify--to simplify complicated expression.
+\end{itemize}
+\item Substitute values in expressions using ``substitute`` function.
+\item Create symbolic matrices and perform operations on them like --
+\begin{itemize}
+\item det()--to find out the determinant of a matrix
+\item inverse()--to find out the inverse of a matrix.
+\end{itemize}
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-13}
+\frametitle{Evaluation}
+\label{sec-15}
+
+
+\begin{enumerate}
+\item How do you define a name `y' as a symbol?
+\vspace{8pt}
+\item Get the value of pi upto precision 5 digits using sage?
+\vspace{8pt}
+\item Find third order differential function of
+
+   f(x)=sin(x$^2$)+exp(x$^3$)
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-16}
+
+
+\begin{enumerate}
+\item var(`y')
+\vspace{8pt}
+\item n(pi,5)
+\vspace{8pt}
+\item diff(f(x),x,3)
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
