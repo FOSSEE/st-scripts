@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    using Sage
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,30 +29,87 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Calculus
-  - Linear Algebra 
-  - Graph Theory
-  - Number Theory
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Sage}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+ At the end of this tutorial, you will be able to,
+
+ - Learn the range of things for which Sage can be used. 
+ - Know some of the functions for Calculus.
+ - Learn about graph theory and number theory using Sage.
+* Pre-requisite
+  Spoken tuorial on -
+  - Getting started with Sage
+* Equation
+  Ax = v,
+  where A is the matrix,'' matrix([[1,2],[3,4]])''
+  v is the vector, ''vector([1,2])''. 
 * Summary
-  - Differentiating and Integrating
-  - Taylor Expansions
-  - Solving Equations
-  - Initializing Graphs & Graph families
-  - Prime numbers
-  - Factors
-  - Combinations & Permutations
-* Thank you!
+In this tutorial, we have learnt to,  
+ - Use functions for calculus like --
+    - lim()-- to find out the limit of a function
+    - diff()-- to find out the differentiation of an expression
+    - integrate()-- to integrate over an expression  
+    - integral()-- to find out the definite integral of an 
+      expression by specifying the limits
+    - solve()-- to solve a function, relative to it's postion. 
+ - Create Both a simple graph and a directed graph, using the 
+    functions ``graph()`` and ``digraph()`` respectively.
+ - Use functions for Number theory.For eg: 
+    - primes\_range()-- to find out the prime numbers within the 
+      specified range
+    - factor()-- to find out the factorized form of the number specified
+    - Permutations(), Combinations()-- to obtain the required permutation 
+      and combinations for the given set of values.  
+* Evaluation
+ 1. How do you find the limit of the function ``x/sin(x)`` as ``x`` tends 
+    to ``0`` from the negative side.
+
+ 2. List all the primes between 2009 and 2900.
+
+ 3. Solve the system of linear equations
+     
+    x-2y+3z = 7
+    2x+3y-z = 5
+    x+2y+4z = 9
+* Solutions
+1. lim(x/sin(x), x=0, dir="below")
+
+2. prime\_range(2009, 2901)
+
+3. A = Matrix([[1, -2, 3], 
+               [2, 3, -1], 
+               [1, 2, 4]])
+
+   b = vector([7, 5, 9])
+
+   solve\_right(A, b)
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

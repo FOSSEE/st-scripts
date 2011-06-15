@@ -1,4 +1,4 @@
-% Created 2010-10-27 Wed 13:16
+% Created 2011-06-15 Wed 11:05
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{using Sage}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,43 +41,132 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Sage}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+ At the end of this tutorial, you will be able to,
+
 
 \begin{itemize}
-\item Calculus
-\item Linear Algebra
-\item Graph Theory
-\item Number Theory
+\item Learn the range of things for which Sage can be used.
+\item Know the functions used for calculus in Sage.
+\item Learn about graph theory and number theory using Sage.
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tuorial on -
+
+\begin{itemize}
+\item Getting started with Sage
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Equation}
+\label{sec-4}
+
+  Ax = v,\\
+  where A is the matrix, ``matrix([[1,2],[3,4]])''\\
+  v is the vector, ``vector([1,2])''. 
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-2}
+\label{sec-5}
+
+In this tutorial, we have learnt to,  
 
 \begin{itemize}
-\item Differentiating and Integrating
-\item Taylor Expansions
-\item Solving Equations
-\item Initializing Graphs \& Graph families
-\item Prime numbers
-\item Factors
-\item Combinations \& Permutations
+\item Use functions for calculus like --
+\begin{itemize}
+\item lim()-- to find out the limit of a function
+\item integrate()-- to integrate over an expression
+\item integral()-- to find out the definite integral of an 
+      expression by specifying the limits
+\item solve()-- to solve a function, relative to it's postion.
+\end{itemize}
+\item Create both a simple graph and a directed graph, using the 
+    functions ``graph()'' and ``digraph()'' respectively.
+\item Use functions for Number theory.For eg:
+\begin{itemize}
+\item primes$\_{\mathrm{range}}$()-- to find out the prime numbers within the 
+      specified range
+\item factor()-- to find out the factorized form of the number specified
+\item Permutations(), Combinations()-- to obtain the required permutation 
+      and combinations for the given set of values.
+\end{itemize}
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-3}
+\frametitle{Evaluation}
+\label{sec-6}
+
+
+\begin{enumerate}
+\item How do you find the limit of the function ``x/sin(x)'' as ``x'' tends 
+    to ``0'' from the negative side.
+\vspace{3pt}
+\item List all the primes between 2009 and 2900.
+\vspace{3pt}
+\item Solve the system of linear equations
+     
+    x-2y+3z = 7\\
+    2x+3y-z = 5\\
+    x+2y+4z = 9
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-7}
+
+
+\begin{enumerate}
+\item lim(x/sin(x), x=0, dir=``left'')
+\vspace{4pt}
+\item prime$\_{\mathrm{range}}$(2009, 2901)
+\vspace{4pt}
+\item A = Matrix([[1, -2, 3], \\
+\hspace{1.78cm}
+                  [2, 3, -1], \\
+\hspace{1.78cm}             
+                  [1, 2, 4]]) \\
+\vspace{2pt}
+   b = vector([7, 5, 9])\\
+\vspace{2pt}
+   x = A.solve$\_{\mathrm{right}}$(b)\\
+\vspace{2pt}
+   x   
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
