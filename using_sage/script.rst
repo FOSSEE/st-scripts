@@ -324,7 +324,7 @@ we have learnt to,
     - integrate()-- to integrate over an expression  
     - integral()-- to find out the definite integral of an 
       expression by specifying the limits
-    - solve()-- to solve a function, relative to it's postion. 
+    - solve()-- to solve a function, relative to it's position. 
  #. Create Both a simple graph and a directed graph, using the 
     functions ``graph`` and ``digraph`` respectively.
  #. Use functions for Number theory.For eg: 
@@ -364,7 +364,7 @@ Here are some self assessment questions for you to solve
 And the answers,  
 
 1. To find out the limit of an expression from the negative side,we add 
-   an argument dir="below" as
+   an argument dir="left" as
 ::
 
     lim(x/sin(x), x=0, dir="left")
