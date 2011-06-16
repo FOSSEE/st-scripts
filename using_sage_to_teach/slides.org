@@ -1,0 +1,105 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE:    
+#+AUTHOR:    FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Sage to teach}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+ At the end of this tutorial, you will be able to,
+
+ - Use ``@interact`` feature of SAGE for better demonstration.
+ - Share, publish and edit SAGE worksheets for collaborative learning.
+* Pre-requisite
+  Spoken tuorial on -
+  - Getting started with Sage.
+  - Getting started with Symbolics.
+* Exercise 1
+- Plot the sine curve and vary its frequency using the ``@interact`` feature.
+* Exercise 2
+- Take a string as input from user and circular shift it to the left and
+  vary the shift length using a slider.
+* Summary
+  In this tutorial,we have learnt to,
+
+ - Use interactive feaures of SAGE using ``@interact``.
+ - Publish our work.
+ - Edit a copy of one of the published worksheets.
+ - Share the worksheets with fellow users.
+* Evaluation
+ 1. Which default argument, when used with ``@interact`` gives a slider 
+    starting at 0 and ending in 10.
+
+    - (0..11)
+    - range(0, 11)
+    - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    - (0..10)
+
+ 2. What is the input widget resulted by using ``n = [2, 4, 5, 9]`` in the
+    default arguments along with ``@interact``.
+
+    - input field
+    - set of buttons
+    - slider
+    - None
+* Solutions
+ 1. (0..10)
+
+ 2. Set of buttons
+* 
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
+  \end{center}  
+  \end{block}
+#+end_latex
+
+

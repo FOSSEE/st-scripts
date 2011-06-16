@@ -1,104 +1,165 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Tutorial slides on Python.
-%
-% Author: FOSSEE 
-% Copyright (c) 2009, FOSSEE, IIT Bombay
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[14pt,compress]{beamer}
-%\documentclass[draft]{beamer}
-%\documentclass[compress,handout]{beamer}
-%\usepackage{pgfpages} 
-%\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-% Modified from: generic-ornate-15min-45min.de.tex
-\mode<presentation>
-{
-  \usetheme{Warsaw}
-  \useoutertheme{infolines}
-  \setbeamercovered{transparent}
-}
-
-\usepackage[english]{babel}
+% Created 2011-06-16 Thu 12:19
+\documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
-%\usepackage{times}
 \usepackage[T1]{fontenc}
-
-\usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler}
-\usepackage[scaled=.95]{helvet}
-
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[english]{babel} \usepackage{ae,aecompl}
+\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
-\lstset{language=Python,
-    basicstyle=\ttfamily\bfseries,
-    commentstyle=\color{red}\itshape,
-  stringstyle=\color{darkgreen},
-  showstringspaces=false,
-  keywordstyle=\color{blue}\bfseries}
+\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+\providecommand{\alert}[1]{\textbf{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Macros
-\setbeamercolor{emphbar}{bg=blue!20, fg=black}
-\newcommand{\emphbar}[1]
-{\begin{beamercolorbox}[rounded=true]{emphbar} 
-      {#1}
- \end{beamercolorbox}
-}
-\newcounter{time}
-\setcounter{time}{0}
-\newcommand{\inctime}[1]{\addtocounter{time}{#1}{\tiny \thetime\ m}}
-
-\newcommand{\typ}[1]{\lstinline{#1}}
-
-\newcommand{\kwrd}[1]{ \texttt{\textbf{\color{blue}{#1}}}  }
-
-% Title page
-\title{Your Title Here}
-
-\author[FOSSEE] {FOSSEE}
-
-\institute[IIT Bombay] {Department of Aerospace Engineering\\IIT Bombay}
+\title{}
+\author{FOSSEE}
 \date{}
 
-% DOCUMENT STARTS
+\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Outline}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%              All other slides here.                  %%
-%% The same slides will be used in a classroom setting. %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[fragile]
-  \frametitle{Summary}
-  \begin{itemize}
-    \item 
-  \end{itemize}
-\end{frame}
+
+
+
+
+
+
 
 \begin{frame}
-  \frametitle{Thank you!}  
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Using Sage to teach}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+ At the end of this tutorial, you will be able to,
+
+
+\begin{itemize}
+\item Use ``@interact'' feature of SAGE for better demonstration.
+\item Share, publish and edit SAGE worksheets for collaborative learning.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  Spoken tuorial on -
+
+\begin{itemize}
+\item Getting started with Sage.
+\item Getting started with Symbolics.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-4}
+
+
+\begin{itemize}
+\item Plot the sine curve and vary its frequency using the ``@interact'' feature.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-5}
+
+
+\begin{itemize}
+\item Take a string as input from user and circular shift it to the left and
+  vary the shift length using a slider.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-6}
+
+  In this tutorial,we have learnt to,
+
+
+\begin{itemize}
+\item Use interactive feaures of SAGE using ``@interact''.
+\item Publish our work.
+\item Edit a copy of one of the published worksheets.
+\item Share the worksheets with fellow users.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-7}
+
+
+\begin{enumerate}
+\item Which default argument, when used with ``@interact'' gives a slider 
+    starting at 0 and ending in 10.
+\begin{itemize}
+\item (0..11)
+\item range(0, 11)
+\item~[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]~
+\item (0..10)
+\end{itemize}
+\vspace{5pt}
+\item What is the input widget resulted by using ``n = [2, 4, 5, 9]'' in the
+    default arguments along with ``@interact''.
+\begin{itemize}
+\item input field
+\item set of buttons
+\item slider
+\item None
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-8}
+
+
+\begin{enumerate}
+\item (0..10)
+\vspace{12pt}
+\item Set of buttons
+\end{enumerate}
+\end{frame}
+\begin{frame}
+
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
