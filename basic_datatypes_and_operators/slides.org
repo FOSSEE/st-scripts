@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Plotting Data 
+#+TITLE:  
 #+AUTHOR: FOSSEE
 #+DATE: 2010-09-14 Tue
 #+EMAIL: info@fossee.in
@@ -30,7 +30,25 @@
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 #+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
 
-* Outline 
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Basic Datatypes and Operators}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+ At the end of the tutorial,you will be able to, 
 ** Datatypes in Python
 *** Numbers
 *** Boolean
@@ -47,13 +65,9 @@
   - int
   - float
   - complex
-* Question 1
+* Exercise 1
    - Find the absolute value of 3+4j 
-* Solution 1
-  #+begin_src python
-    abs(3+4j)
-  #+end_src python
-* Question 2
+* Exercise 2
   - What is the datatype of number 999999999999999999? Is it
 not int?
 
@@ -62,24 +76,15 @@ not int?
   - Large integers numbers are internally stored in python as Long
     datatype.
 
-
-* Boolean
-  #+begin_src python
-    In []: t=True
-    In []: f=False
-  #+end_src
-
-* Question 3
+* Exercise 3
   - Using python find sqaure root of 3?
 
 * Solution 3
 
   - 3**0.5
 
-* Question 4
-  - Is 3**1/2 and 3**0.5 same
-* Solution 4
-  - No,One gives an int answer and the other float        
+* Exercise 4
+  - Is 3**1/2 and 3**0.5 same      
 
 * Sequence Data types
 ** Properties
@@ -90,67 +95,48 @@ not int?
  - String
  - Tuple
 
-* All are Strings
-   #+begin_src python 
-      k = 'Single quote'
-      l = "Double quote contain's single quote"
-      m = '''"Contain's both"'''
-
-    #+end_src 
-* Immutabilty Error
-   #+begin_src python
-      In []: greeting_string[1]='k'
-      -------------------------------------------------------
-      TypeError           Traceback (most recent call last)
-
-      /home/fossee/<ipython console> in <module>()
-
-      TypeError: 'str' object does not support item assignment
-   #+end_src 
-
-* Question 5
-  Check if 3 is an element of the list [1,7,5,3,4]. In case it is
+* Exercise 5
+ - Check if 3 is an element of the list [1,7,5,3,4]. In case it is
 change it to 21.
 
-* Solution 5
-     #+begin_src python
-        l=[1,7,5,3,4]
-        3 in l
-        l[3]=21
-        l
-     #+end_src
-* Question 6
-  Convert the string ~"Elizabeth is queen of england"~ to ~"Elizabeth is
+* Exercise 6
+ - Convert the string ~"Elizabeth is queen of england"~ to ~"Elizabeth is
 queen"~
 
-* Solution 6
-     #+begin_src python
-    s = "Elizabeth is queen of england"                                                                                                                 
-    stemp = s.split()                                                                                                                                   
-    ' '.join(stemp[:3])                                                                                                                               
-    #+end_src 
 * Summary 
-  - Number Datatypes -- integer,float and complex 
-  - Boolean and datatype and operators
-  - Sequence data types -- List, String and Tuple
-  - Accesing sequence
-  - Slicing sequences
-  - Finding length, sorting and reversing operations on sequences
-  - Immutability
-* Thank you!
+  In this tutorial, we have learnt to,
+
+ - Understand the number Datatypes -- integer,float and complex. 
+ - Know the boolean datatype and operators -- +, *, /, **, % .
+ - use the sequence data types -- List,String and Tuple.
+ - Slice sequences by using the row and column numbers.
+ - Split and join a list using ``split()`` and ``join()`` function respectively.
+ - Convert to string to tuple and vice-versa.
+* Evaluation
+1. What is the major diffence between tuples and lists?
+
+2. Split this string on whitespaces
+
+   - string="Split this string on whitespaces"
+* Solutions
+1. Tuples are immutable while lists are not.
+
+2. string.split()
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
+
 
 
 

@@ -1,4 +1,4 @@
-% Created 2010-11-09 Tue 15:26
+% Created 2011-06-20 Mon 16:04
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Plotting Data }
+\title{}
 \author{FOSSEE}
 \date{2010-09-14 Tue}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,48 +41,68 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Basic Datatypes and Operators}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+ At the end of the tutorial,you will be able to, 
 \begin{itemize}
 
 \item Datatypes in Python
-\label{sec-1_1}%
+\label{sec-2_1}%
 \begin{itemize}
 
 \item Numbers\\
-\label{sec-1_1_1}%
+\label{sec-2_1_1}%
 \item Boolean\\
-\label{sec-1_1_2}%
+\label{sec-2_1_2}%
 \item Sequence\\
-\label{sec-1_1_3}%
+\label{sec-2_1_3}%
 \end{itemize} % ends low level
 
 \item Operators in Python
-\label{sec-1_2}%
+\label{sec-2_2}%
 \begin{itemize}
 
 \item Arithmetic Operators\\
-\label{sec-1_2_1}%
+\label{sec-2_2_1}%
 \item Boolean Operators\\
-\label{sec-1_2_2}%
+\label{sec-2_2_2}%
 \end{itemize} % ends low level
 
 \item Python Sequence Datatypes
-\label{sec-1_3}%
+\label{sec-2_3}%
 \begin{itemize}
 
 \item list\\
-\label{sec-1_3_1}%
+\label{sec-2_3_1}%
 \item string\\
-\label{sec-1_3_2}%
+\label{sec-2_3_2}%
 \item tuple\\
-\label{sec-1_3_3}%
+\label{sec-2_3_3}%
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
 \begin{frame}
 \frametitle{Numbers}
-\label{sec-2}
+\label{sec-3}
+
 
 \begin{itemize}
 \item int
@@ -92,34 +111,28 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-3}
+\frametitle{Exercise 1}
+\label{sec-4}
+
 
 \begin{itemize}
 \item Find the absolute value of 3+4j
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
-\label{sec-4}
-
-\begin{verbatim}
-abs(3+4j)
-\end{verbatim}
-\end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 2}
 \label{sec-5}
+
 
 \begin{itemize}
 \item What is the datatype of number 999999999999999999? Is it
 \end{itemize}
-
 not int?
 \end{frame}
 \begin{frame}
 \frametitle{Solution 2}
 \label{sec-6}
+
 
 \begin{itemize}
 \item Long
@@ -127,18 +140,10 @@ not int?
     datatype.
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Boolean}
+\begin{frame}
+\frametitle{Exercise 3}
 \label{sec-7}
 
-\begin{verbatim}
-In []: t=True
-In []: f=False
-\end{verbatim}
-\end{frame}
-\begin{frame}
-\frametitle{Question 3}
-\label{sec-8}
 
 \begin{itemize}
 \item Using python find sqaure root of 3?
@@ -146,7 +151,8 @@ In []: f=False
 \end{frame}
 \begin{frame}
 \frametitle{Solution 3}
-\label{sec-9}
+\label{sec-8}
+
 
 
 \begin{itemize}
@@ -154,131 +160,108 @@ In []: f=False
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
-\label{sec-10}
+\frametitle{Exercise 4}
+\label{sec-9}
+
 
 \begin{itemize}
-\item Is 3**1/2 and 3**0.5 same
-\end{itemize}
-\end{frame}
-\begin{frame}
-\frametitle{Solution 4}
-\label{sec-11}
-
-\begin{itemize}
-\item No,One gives an int answer and the other float
+\item Is 3**1/2 and 3**0.5 same?
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Sequence Data types}
-\label{sec-12}
+\label{sec-10}
 \begin{itemize}
 
-\item Properties
-\label{sec-12_1}%
+\item Properties\\
+\label{sec-10_1}%
 \begin{itemize}
 \item Data in Sequence
 \item Accessed using Index
 \end{itemize}
 
-
-\item Type
-\label{sec-12_2}%
+\item Type\\
+\label{sec-10_2}%
 \begin{itemize}
 \item list
 \item String
 \item Tuple
 \end{itemize}
 
-
 \end{itemize} % ends low level
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{All are Strings}
-\label{sec-13}
-
-\begin{verbatim}
-k = 'Single quote'
-l = "Double quote contain's single quote"
-m = '''"Contain's both"'''
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Immutabilty Error}
-\label{sec-14}
-
-\begin{verbatim}
-In []: greeting_string[1]='k'
--------------------------------------------------------
-TypeError           Traceback (most recent call last)
-
-/home/fossee/<ipython console> in <module>()
-
-TypeError: 'str' object does not support item assignment
-\end{verbatim}
-\end{frame}
 \begin{frame}
-\frametitle{Question 5}
-\label{sec-15}
+\frametitle{Exercise 5}
+\label{sec-11}
 
-  Check if 3 is an element of the list [1,7,5,3,4]. In case it is
+
+\begin{itemize}
+\item Check if 3 is an element of the list [1,7,5,3,4].\\ In case it is,
+\end{itemize}
 change it to 21.
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 5}
-\label{sec-16}
-
-\begin{verbatim}
-l=[1,7,5,3,4]
-3 in l
-l[3]=21
-l
-\end{verbatim}
-\end{frame}
 \begin{frame}
-\frametitle{Question 6}
-\label{sec-17}
+\frametitle{Exercise 6}
+\label{sec-12}
 
-  Convert the string \~{}''Elizabeth is queen of england''\~{} to \~{}''Elizabeth is
+
+\begin{itemize}
+\item Convert the string \~{}``Elizabeth is queen of england''\~{} to \~{}``Elizabeth is
+\end{itemize}
 queen''\~{}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 6}
-\label{sec-18}
-
-\begin{verbatim}
-s = "Elizabeth is queen of england"                                                                                                                 
-stemp = s.split()                                                                                                                                   
-' '.join(stemp[:3])
-\end{verbatim}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-19}
+\label{sec-13}
+
+  In this tutorial, we have learnt to,
+
 
 \begin{itemize}
-\item Number Datatypes -- integer,float and complex
-\item Boolean and datatype and operators
-\item Sequence data types -- List, String and Tuple
-\item Accesing sequence
-\item Slicing sequences
-\item Finding length, sorting and reversing operations on sequences
-\item Immutability
+\item Understand the number Datatypes -- integer,float and complex.
+\item Know the boolean datatype and operators -- +, *, /, **, \% .
+\item use the sequence data types -- List,String and Tuple.
+\item Slice sequences by using the row and column numbers.
+\item Split and join a list using ``split()'' and ``join()'' function respectively.
+\item Convert to string to tuple and vice-versa.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-20}
+\frametitle{Evaluation}
+\label{sec-14}
+
+
+\begin{enumerate}
+\item What is the major diffence between tuples and lists?
+\vspace{12pt}
+\item Split this string on whitespaces
+\begin{itemize}
+\item string=``Split this string on whitespaces''
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-15}
+
+
+\begin{enumerate}
+\item Tuples are immutable while lists are not.
+\vspace{12pt}
+\item string.split()
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
