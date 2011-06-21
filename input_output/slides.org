@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    I/O
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,54 +29,81 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Showing output to the user.
-  - Taking input from the user. 
-* Question 1
-  What happens when you do ~print "x is %d y is %f" %(x, y)~
-* Solution 1
-  ~int~ value of ~x~ and ~float~ value of ~y~ are printed corresponding to the
-  modifiers used in the ~print~ statement
-* Question 2
-  Enter the number 5.6 as input and store it in a variable called
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Input/Output}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+At the end of this tutorial,you will be able to, 
+
+ - Print some value.
+ - Print using modifiers.
+ - Take input from user.
+ - Display a prompt to the user before taking the input.
+   
+* Exercise 1
+ - What happens when you do
+   print "x is %d, y is %f" %(x, y)
+* Exercise 2
+ - Enter the number 5.6 as input and store it in a variable called
   ~c~. 
-* Solution 2
-  #+begin_src python
-    In []: c = raw_input() 
-    5.6
-    In []: c
-  #+end_src
-* Question 3
-  What happens when you do not enter anything and hit enter
-* Solution 3
-  #+begin_src python
-    In []: c = raw_input() 
-    <RET>
-    In []: c
-  #+end_src
-* Question 4
-  How do you display a prompt and let the user enter input in a new line
-* Solution 4
-  #+begin_src python
-    In []: ip = raw_input("Please enter a number in the next line\n> ")
-  #+end_src
+* Exercise 3
+ - What happens when you do not enter anything and hit enter
+* Exercise 4
+  - How do you display a prompt and let the user enter input in a new line
 * Summary
-  You should now be able to --
-   + Print a value "as is" 
-   + Print a value using using modifiers
-   + Accept input from user
-   + Display a prompt before accepting input
-* Thank you!
+ In this tutorial, we have learnt to,
+
+ - Use the print statement.
+ - Use the modifiers %d, %f, %s in the print statement.
+ - Take input from user by using ``raw\_input()''. 
+ - Display a prompt to the user before taking the input by passing 
+    a string as an argument to ``raw\_input''.
+* Evaluation
+1. ``a = raw\_input()'' and user enters ``2.5''.
+   What is the type of a?
+
+    - str
+    - int
+    - float
+    - char
+
+2. ``a = 2'' and ``b = 4.5''. 
+   What does print "a is %d and b is %2.1f" %(b, a) print?
+
+   - a is 2 and b is 4.5
+   - a is 4 and b is 2
+   - a is 4 and b is 2.0
+   - a is 4.5 and b is 2
+
+* Solutions
+1. str
+
+2. a is 4 and b is 2.0
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex

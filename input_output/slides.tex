@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 21:00
+% Created 2011-06-21 Tue 12:19
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{I/O}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,102 +41,138 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Input/Output}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+At the end of this tutorial,you will be able to, 
+
 
 \begin{itemize}
-\item Showing output to the user.
-\item Taking input from the user.
+\item Print some value.
+\item Print using modifiers.
+\item Take input from user.
+\item Display a prompt to the user before taking the input.
+\end{itemize}
+   
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-3}
+
+
+\begin{itemize}
+\item What happens when you do\\
+  \verb~print ``x is \%d, y is \%f''  \%(x, y)~
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
-
-  What happens when you do \texttt{print "x is \%d y is \%f" \%(x, y)}
-\end{frame}
-\begin{frame}
-\frametitle{Solution 1}
-\label{sec-3}
-
-  \texttt{int} value of \texttt{x} and \texttt{float} value of \texttt{y} are printed corresponding to the
-  modifiers used in the \texttt{print} statement
-\end{frame}
-\begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 2}
 \label{sec-4}
 
-  Enter the number 5.6 as input and store it in a variable called
-  \texttt{c}. 
+
+\begin{itemize}
+\item Enter the number 5.6 as input and store it in a variable called
+  \verb~c~.
+\end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
+\begin{frame}
+\frametitle{Exercise 3}
 \label{sec-5}
 
-\lstset{language=Python}
-\begin{lstlisting}
-In []: c = raw_input() 
-5.6
-In []: c
-\end{lstlisting}
+
+\begin{itemize}
+\item What happens when you do not enter anything and hit enter.
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 3}
+\frametitle{Exercise 4}
 \label{sec-6}
 
-  What happens when you do not enter anything and hit enter
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
-\label{sec-7}
 
-\lstset{language=Python}
-\begin{lstlisting}
-In []: c = raw_input() 
-<RET>
-In []: c
-\end{lstlisting}
-\end{frame}
-\begin{frame}
-\frametitle{Question 4}
-\label{sec-8}
-
-  How do you display a prompt and let the user enter input in a new line
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-9}
-
-\lstset{language=Python}
-\begin{lstlisting}
-In []: ip = raw_input("Please enter a number in the next line\n> ")
-\end{lstlisting}
+\begin{itemize}
+\item How do you display a prompt and let the user enter input in a new line.
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-10}
+\label{sec-7}
 
-  You should now be able to --
+ In this tutorial, we have learnt to,
+
+
 \begin{itemize}
-\item Print a value ``as is''
-\item Print a value using using modifiers
-\item Accept input from user
-\item Display a prompt before accepting input
+\item Use the print statement.
+\item Use the modifiers \%d, \%f, \%s in the print statement.
+\item Take input from user by using ``raw\_input()''.
+\item Display a prompt to the user before taking the input by passing 
+    a string as an argument to ``raw\_input''.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-11}
+\frametitle{Evaluation}
+\label{sec-8}
+
+
+\begin{enumerate}
+\item ``a = raw\_input()'' and user enters ``2.5''.\\
+   What is the type of a?
+\begin{itemize}
+\item str
+\item int
+\item float
+\item char
+\end{itemize}
+\vspace{5pt}
+\item ``a = 2'' and ``b = 4.5''. 
+   What is the result of the following action.\\
+  \verb~print ``a is \%d and b is \%2.1f'' \%(b,a)~ 
+\begin{itemize}
+\item a is 2 and b is 4.5
+\item a is 4 and b is 2
+\item a is 4 and b is 2.0
+\item a is 4.5 and b is 2
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-9}
+
+
+\begin{enumerate}
+\item str
+\vspace{12pt}
+\item a is 4 and b is 2.0
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
