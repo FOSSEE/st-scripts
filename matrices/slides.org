@@ -18,9 +18,9 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Matrices
-#+AUTHOR: FOSSEE
-#+EMAIL:     
+#+TITLE:  
+#+AUTHOR:  FOSSEE
+#+EMAIL:   info@fossee.in
 #+DATE:    
 
 #+DESCRIPTION: 
@@ -29,17 +29,40 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Creating Matrices
-    - using direct data
-    - converting a list
-  - Matrix operations
-  - Inverse of matrix
-  - Determinant of matrix
-  - Eigen values and Eigen vectors of matrices
-  - Norm of matrix
-  - Singular Value Decomposition of matrices
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Matrices}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
 
+  - Create matrices using data.
+  - Create matrices from lists.
+  - Do basic matrix operations like addition,multiplication.
+  - Perform operations to find out the --
+    - inverse of a matrix
+    - determinant of a matrix
+    - eigen values and eigen vectors of a matrix
+    - norm of a matrix
+    - singular value decomposition of a matrix.
+* Pre-requisite
+  Spoken tutorial on -
+  - Getting started with Lists.
+  - Getting started with Arrays.
+  - Accessing parts of Arrays.
 * Creating a matrix
   - Creating a matrix using direct data
   : In []: m1 = array([1, 2, 3, 4])
@@ -49,31 +72,13 @@
 * Exercise 1
   Create a (2, 4) matrix ~m3~
   : m3 = [[5,  6,  7,  8],
-  :       [9, 10, 11, 12]]
-* Solution 1
-  - m3 can be created as,
-  : In []: m3 = array([[5,6,7,8],[9,10,11,12]])
-
+  :       [9, 10, 11, 12
 * Matrix operations
   - Element-wise addition (both matrix should be of order ~mXn~)
     : In []: m3 + m2
   - Element-wise subtraction (both matrix should be of order ~mXn~)
     : In []: m3 - m2
-* Matrix Multiplication
-  - Element-wise multiplication using ~m3 * m2~
-    : In []: m3 * m2
-  - Matrix Multiplication using ~dot(m3, m2)~
-    : In []: dot(m3, m2)
-    : Out []: ValueError: objects are not aligned
 
-* Matrix Multiplication (cont'd)
-  - Create two compatible matrices of order ~nXm~ and ~mXr~
-    : In []: m1.shape
-    - matrix m1 is of order ~1 X 4~
-  - Creating another matrix of order ~4 X 2~
-    : In []: m4 = array([[1,2],[3,4],[5,6],[7,8]])
-  - Matrix multiplication
-    : In []: dot(m1, m4)
 * Recall from ~array~
   - The functions 
     - ~identity(n)~ - 
@@ -87,12 +92,8 @@
     - ~ones_like(A)~
       creates a matrix with 1's similar to the shape of matrix ~A~
   Can also be used with matrices
-
-* More matrix operations
-  Transpose of a matrix
-  : In []: m4.T
 * Exercise 2 : Frobenius norm \& inverse
-  Find out the Frobenius norm of inverse of a ~4 X 4~ matrix.
+   Find out the Frobenius norm of inverse of a ~4 X 4~ matrix.
   : 
   The matrix is
   : m5 = arange(1,17).reshape(4,4)
@@ -106,7 +107,6 @@
       #+begin_latex
         $||A||_F = [\sum_{i,j} abs(a_{i,j})^2]^{1/2}$
       #+end_latex
-
 * Exercise 3 : Infinity norm
   Find the infinity norm of the matrix ~im5~
   : 
@@ -119,11 +119,6 @@
     : In []: norm(im5)
   - Infinity norm
     : In []: norm(im5, ord=inf)
-* Determinant
-  Find out the determinant of the matrix m5
-  : 
-  - determinant can be found out using
-    - ~det(A)~ - returns the determinant of matrix ~A~
 * eigen values \& eigen vectors
   Find out the eigen values and eigen vectors of the matrix ~m5~.
   : 
@@ -154,28 +149,30 @@
   - SVD of matrix ~m5~ can be found out as,
     : In []: svd(m5)
 * Summary
-  - Matrices
-    - creating matrices
-  - Matrix operations
-  - Inverse (~inv()~)
-  - Determinant (~det()~)
-  - Norm (~norm()~)
-  - Eigen values \& vectors (~eig(), eigvals()~)
-  - Singular Value Decomposition (~svd()~)
+  In this tutorial, we have learnt to, 
 
-* Thank you!
+  - Create matrices using arrays.
+  - Add and multiply the elements of matrix.
+  - Find out the inverse of a matrix,using the function ``inv()``.
+  - Use the function ``det()`` to find the determinant of a matrix.
+  - Calculate the norm of a matrix using the for loop and also using 
+    the function ``norm()``.
+  - Find out the eigen vectors and eigen values of a matrix, using 
+    functions ``eig()`` and ``eigvals()``.
+  - Calculate singular value decomposition(SVD) of a matrix using the 
+    function ``svd()``.
+ 
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
-
-  
