@@ -25,41 +25,66 @@
 Script
 ------
 
-{{{ Show the slide containing the title }}}
+.. L1
 
-Hello friends. Welcome to this spoken tutorial on Conditionals
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-{{{ Show the slide containing the outline }}}
+.. R1
 
-In this tutorial, we will learn the basic conditional constructs
-available in Python. We learn the if/else, if/elif/else and ternary
-conditional constructs available in Python. 
+Hello friends and Welcome to the tutorial on 'Conditionals'.
+
+.. L2
+
+{{{ Show the slide containing objectives }}}
+
+.. R2
+
+At the end of this tutorial, you will be able to, 
+
+ 1. Use if/else blocks. 
+ #. Use if/elif/else blocks.
+ #. Use the Ternary conditional statement - C if X else Y.
+
+.. R3
+
+To begin with let us start ipython,
+
+.. L3
 
 {{{ Shift to terminal and start ipython }}}
+::
 
-To begin with let us start ipython, by typing::
+    ipython
 
-  ipython
-
-on the terminal
+.. R4
 
 Whenever we have two possible states that can occur depending on a
-whether a certain condition we can use if/else construct in
+a certain condition, we can use if/else construct in
 Python. 
 
 For example, say, we have a variable ``a`` which stores integers and
-we are required to find out whether ``a`` is even or odd.  an even
-number or an odd number. Let's say the value of ``a`` is 5, now.
+we are required to find out whether ``a`` is even or odd. 
+Let's say the value of ``a`` is 5.
+
+.. L4
 ::
 
-  a = 5
+    a = 5
 
-In such a case we can write the if/else block as::
+.. R5
 
-  if a % 2 == 0:
-      print "Even"
-  else:
-      print "Odd"
+In such a case we can write the if/else block as
+
+.. L5
+::
+
+    if a % 2 == 0:
+        print "Even"
+    else:
+        print "Odd"
+
+.. R6
 
 If ``a`` is divisible by 2, i.e., the result of "a modulo 2" is 0, it
 prints "Even", otherwise it prints "Odd". 
@@ -67,129 +92,188 @@ prints "Even", otherwise it prints "Odd".
 Note that in such a case, only one of the two blocks gets executed
 depending on whether the condition is ``True`` or ``False``.
 
-There is a very important sytactic element to understand here. Every
+There is a very important syntactic element to understand here. Every
 code block begins with a line that ends with a ``:``, in this example
 the ``if`` and the ``else`` lines. Also, all the statements inside a
-code block are intended by 4 spaces. Returning to the previous
-indentation level, ends the code block. 
+code block are intended by 4 spaces. Hitting enter twice,
+ends the code block. 
 
 The if/else blocks work for a condition, which can take one of two
-states. What do we do for conditions, which can take more than two
+states. But what do we do for conditions, which can take more than two
 states? 
 
-Python provides if/elif/else blocks, for such conditions. Let us take
-an example. We have a variable ``a`` which holds integer values. We
+.. L6
+
+.. R7
+
+Python provides if/elif/else blocks, for such conditions.
+For example. We have a variable ``a`` which holds integer values. We
 need to print "positive" if ``a`` is positive, "negative" if
 it is negative or "zero" if it is 0. 
 
 Let us use if/elif/else ladder for it. For the purposes of testing our
-code let us assume that the value of a is -3::
+code let us assume that the value of a is -3
 
-  a = -3
+.. L7
+::
 
-  if a > 0:
-      print "positive"
-  elif a < 0:
-      print "negative"
-  else:
-      print "zero"
+    a = -3
 
-All the syntax and rules as said for if/else statements hold. The only
+    if a > 0:
+        print "positive"
+    elif a < 0:
+        print "negative"
+    else:
+        print "zero"
+
+.. R8
+
+All the syntax and rules as said for if/else statements hold the same. The only
 addition here is the ``elif`` statement which can have another
 condition of its own.
 
 Here too, exactly one block of code is executed -- the block of code
 which first evaluates to ``True``. Even if there is a situation where
-multiple conditions evaluate to True all the subsequent conditions
-other than the first one which evaluates to True are neglected.
+multiple conditions evaluate to True, all the subsequent conditions
+other than the first one, which evaluates to True, are neglected.
 Consequently, the else block gets executed if and only if all the
 conditions evaluate to False.
+
+.. L8
+
+.. R9
 
 Also, the ``else`` block in both if/else statement and if/elif/else is
 optional. We can have a single if statement or just if/elif statements
 without having else block at all. Also, there can be any number of
 elif's within an if/elif/else ladder. For example
 
-{{{ Show slide for this }}}
+.. L9
 
-  if user == 'admin':
-      # Do admin operations
-  elif user == 'moderator':
-      # Do moderator operations
-  elif user == 'client':
-      # Do customer operations
+{{{ Show slide  ~if/elif~ ladder }}}
+  
+    if user == 'admin':
+        # Do admin operations
+    elif user == 'moderator':
+        # Do moderator operations
+    elif user == 'client':
+        # Do customer operations
 
-{{{ end of slide switch to ipython }}}
+.. R10
 
-is completely valid. Note that there are multiple elif blocks and there
+Note that there are multiple elif blocks and there
 is no else block.
 
-Following is an exercise that you must do. 
+Pause the video here, try out the following exercise and resume the video.
 
-%% %% Given a number, num. Write an if else block to print num, as is,
-      if it is divisible by 10, else print 10 * num.                  
+.. L10
 
-Please, pause the video here. Do the exercise and then continue. 
+.. L11
+ 
+{{{ Show slide with exercise 1 }}}
 
-:: 
+.. R11
 
-  if num%10 == 0:
-      print num
-  else:
-      print 10*num
+ Given a number, num. Write an if else block to print num, as is,
+ if it is divisible by 10, else print 10 * num.                  
 
+.. R12
+
+The solution is on your screen.
+
+.. L12
+
+{{{ Show slide with solution 1 }}} 
+
+    if num%10 == 0:
+        print num
+    else:
+        print 10*num
+
+.. R13
 
 In addition to these conditional statements, Python provides a very
 convenient ternary conditional operator. Let us take the following
-example where we read the marks data from a data file which is
+example where we read the marks from a data file which is
 obtained as a string as we read a file. The marks can be in the range
-of 0 to 100 or 'AA' if the student is absent. In such a case to obtain
-the marks as an integer we can use the ternary conditional
+of 0 to 100 or 'AA' if the student is absent. In such a case, to obtain
+the marks as an integer, we can use the ternary conditional
 operator. Let us say the string score is stored in score_str
-variable::
+variable
 
-  score_str = 'AA'
+.. L13
+::
 
-Now let us use the ternary conditional operator::
+    score_str = 'AA'
 
-  score = int(score_str) if score_str != 'AA' else 0
+.. R14
+
+Now let us use the ternary conditional operator
+
+.. L14
+::
+
+    score = int(score_str) if score_str != 'AA' else 0
+
+.. R15
 
 This is just the if/else statement block which written in a more
 convenient form and is very helpful when we have only one statement
-for each block. This conditional statement effectively means as we
-would have exactly specified in the English language which will be
-like score is integer of score_str is score_str is not 'AA' otherwise
-it is 0. This means that we make the scores of the students who were
+for each block. In simple terms,this conditional statement effectively means that 
+score is integer of ``score_str`` if score_str is not 'AA'; otherwise it is 0.
+This means that we make the scores of the students who were
 absent for the exam 0.
 
-Following is an exercise that you must do. 
+Pause the video here, try out the following exercise and resume the video.
 
-%% %% Given a number, num. Write a ternary operator to print num, as is,
-      if it is divisible by 10, else print 10 * num. 
+.. L15
 
-Please, pause the video here. Do the exercise and then continue. 
+{{{ Show slide with exercise 2 }}}
 
-:: 
+.. R15
 
-   print num if num%10 == 0 else 10*num
+ Given a number, num. Write a ternary operator to print num, as is,
+ if it is divisible by 10, else print 10 * num. 
+
+.. L16
+
+{{{ Show slide with Solution 2 }}}
+
+.. R16
+
+The solution is on your screen. 
+
+     print num if num%10 == 0 else 10*num
+
+.. R17
 
 Moving on, there are certain situations where we will have no
 operations or statements within a block of code. For example, we have
 a code where we are waiting for the keyboard input. If the user enters
-"c", "d" or "x" as the input we would perform some operation nothing
-otherwise. In such cases "pass" statement comes very handy::
+"c", "d" or "x" as the input, we would perform some operation; nothing
+otherwise. In such cases "pass" statement comes very handy
 
-  a = raw_input("Enter 'c' to calculate and exit, 'd' to display the existing
-  results exit and 'x' to exit and any other key to continue: ")
+.. L17
 
-  if a == 'c':
-     # Calculate the marks and exit
-  elif a == 'd':
-     # Display the results and exit
-  elif a == 'x':
-     # Exit the program
-  else:
-     pass
+.. L18
+
+{{{ Show slide with pass statement }}}
+
+.. R18
+
+    a = raw_input("Enter 'c' to calculate and exit, 'd' to display the existing
+    results exit and 'x' to exit and any other key to continue: ")
+
+    if a == 'c':
+       # Calculate the marks and exit
+    elif a == 'd':
+       # Display the results and exit
+    elif a == 'x':
+       # Exit the program
+    else:
+       pass
+
+.. R19
 
 In this case "pass" statement acts as a place holder for the block of
 code. It is equivalent to a null operation. It literally does
@@ -197,21 +281,74 @@ nothing. It can used as a place holder when the actual code
 implementation for a particular block of code is not known yet but has
 to be filled up later.
 
+.. L19
+
+.. L20
+
 {{{ Show summary slide }}}
 
-This brings us to the end of the tutorial session on conditional
-statements in Python. In this tutorial session we learnt
+.. R20
 
-  * What are conditional statements
-  * if/else statement
-  * if/elif/else statement
-  * Ternary conditional statement - C if X else Y
-  * and the "pass" statement
+This brings us to the end of the tutorial.In this tutorial, we have learnt to,
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+  1. Understand the conditional statements in Python.
+  #. Use if/else statement.
+  #. Use if/elif/else statement.
+  #. Apply the ternary conditional statement - C if X else Y.
+  #. Use "pass" statement.
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+.. L21
 
-Hope you have enjoyed and found it useful.
+{{{Show self assessment questions slide}}}
+
+.. R21
+
+Here are some self assessment questions for you to solve
+
+1. Use conditional statements for the following.
+   Given a variable ``time``, print ``Good Morning`` if it is less
+   than 12, otherwise ``Hello``. 
+
+
+#. Convert the if else ladder below into a ternary conditional
+   statement.
+::
+   
+    x = 20
+
+    if x > 10:
+        print x * 100
+    else:
+        print x
+
+.. L22
+
+{{{solution of self assessment questions on slide}}}
+
+.. R22
+
+And the answers,
+
+1. We can use the if/else statements as
+::
+
+    if time < 12:
+        print "Good Morning"
+    else:
+        print "Hello"
+
+2. The if else ladder can be converted to a ternary conditional
+   statement as
+::
+
+    print x * 100 if x > 10 else x
+
+.. L23
+
+{{{ Show the Thankyou slide }}}
+
+.. R23
+
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
  

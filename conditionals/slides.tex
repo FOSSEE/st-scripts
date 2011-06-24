@@ -1,4 +1,4 @@
-% Created 2010-11-10 Wed 13:25
+% Created 2011-06-24 Fri 10:08
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Conditionals}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,37 +41,48 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
 
-  In this tutorial, we shall look at
-\begin{itemize}
-\item Using if/else blocks
-\item Using if/elif/else blocks
-\item Using the Ternary conditional statement
-\end{itemize}
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Conditionals}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
+\frametitle{Objectives}
 \label{sec-2}
 
-  Given a number, num. Write an if else block to print num, as is, if
-  it is divisible by 10, else print 10 * num.
+At the end of this tutorial, you will be able to, 
+
+
+\begin{itemize}
+\item Use if/else blocks.
+\item Use if/elif/else blocks.
+\item Use the Ternary conditional statement - C if X else Y.
+\end{itemize}
+  
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
+\begin{frame}
+\frametitle{Pre-requisite}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
-if num%10 == 0: 
-    print num   
-else:           
-    print 10*num
-\end{lstlisting}
+Spoken tutorial on -
+
+\begin{itemize}
+\item Basic Datatypes and Operators
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{if/elif} ladder}
+\frametitle{\verb~if/elif~ ladder}
 \label{sec-4}
 
 \lstset{language=Python}
@@ -85,50 +96,130 @@ elif user == 'client':
 \end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 1}
 \label{sec-5}
+
+  Given a number, num. Write an if else block to print num, as is, if
+  it is divisible by 10, else print 10 * num.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-6}
+
+\lstset{language=Python}
+\begin{lstlisting}
+if num%10 == 0: 
+    print num   
+else:           
+    print 10*num
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-7}
 
   Given a number, num. Write a ternary operator to print num, as is,
   if it is divisible by 10, else print 10 * num.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-6}
+\label{sec-8}
 
 \lstset{language=Python}
 \begin{lstlisting}
 print num if num%10 == 0 else 10*num
 \end{lstlisting}
 \end{frame}
-\begin{frame}
-\frametitle{Summary}
-\label{sec-7}
+\begin{frame}[fragile]
+\frametitle{Pass statement}
+\label{sec-9}
 
-  In this tutorial session we learnt
-
-\begin{itemize}
-\item What are conditional statements
-\item if/else statement
-\item if/elif/else statement
-\item Ternary conditional statement - \texttt{C if X else Y}
-\item and the \texttt{pass} statement
-\end{itemize}
+a = raw\_input("Enter `c' to calculate and exit, `d' to display the existing results exit and `x' to exit and any other key to continue: ")
+\lstset{language=Python}
+\begin{lstlisting}
+if a == 'c':
+   # Calculate the marks and exit
+elif a == 'd':
+   # Display the results and exit
+elif a == 'x':
+   # Exit the program
+else:
+   pass
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-8}
+\frametitle{Summary}
+\label{sec-10}
+
+ In this tutorial, we have learnt to,
+
+
+\begin{itemize}
+\item Understand the conditional statements in Python.
+\item Use if/else statement.
+\item Use if/elif/else statement.
+\item Apply the ternary conditional statement - C if X else Y.
+\item Use ``pass'' statement.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-11}
+
+
+\begin{enumerate}
+\item Use conditional statements for the following.
+   Given a variable ``time'', print ``Good Morning'' if it is less
+   than 12, otherwise ``Hello''.
+\vspace{10pt}   
+\item Convert the if else ladder below into a ternary conditional
+   statement.
+\lstset{language=Python}
+\begin{lstlisting}
+x = 20
+
+if x > 10:
+    print x * 100
+else:
+    print x
+\end{lstlisting}
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
+\label{sec-12}
+
+
+\begin{enumerate}
+\item \lstset{language=Python}
+\begin{lstlisting}
+if time < 12:
+    print "Good Morning"
+else:
+    print "Hello"
+\end{lstlisting}
+
+\vspace{9pt}
+\item \lstset{language=Python}
+\begin{lstlisting}
+print x * 100 if x > 10 else x
+\end{lstlisting}
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
+\end{frame}
 \end{frame}
 
 \end{document}

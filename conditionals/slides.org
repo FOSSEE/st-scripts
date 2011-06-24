@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Conditionals
+#+TITLE:   
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,13 +29,43 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  In this tutorial, we shall look at
-    + Using if/else blocks 
-    + Using if/elif/else blocks
-    + Using the Ternary conditional statement
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Conditionals}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+At the end of this tutorial, you will be able to, 
 
-* Question 1
+ - Use if/else blocks. 
+ - Use if/elif/else blocks.
+ - Use the Ternary conditional statement - C if X else Y.
+  
+* Pre-requisite
+Spoken tutorial on -
+- Basic Datatypes and Operators
+*  ~if/elif~ ladder
+  #+begin_src python
+    if user == 'admin':
+        # Do admin operations
+    elif user == 'moderator':
+        # Do moderator operations
+    elif user == 'client':
+        # Do customer operations
+  #+end_src
+* Exercise 1
   Given a number, num. Write an if else block to print num, as is, if
   it is divisible by 10, else print 10 * num.
 * Solution 1
@@ -46,44 +76,78 @@
         print 10*num
   #+end_src
 
-* ~if/elif~ ladder
-  #+begin_src python
-    if user == 'admin':
-        # Do admin operations
-    elif user == 'moderator':
-        # Do moderator operations
-    elif user == 'client':
-        # Do customer operations
-  #+end_src
-* Question 2
+* Exercise 2
   Given a number, num. Write a ternary operator to print num, as is,
   if it is divisible by 10, else print 10 * num.
 * Solution 2
   #+begin_src python
     print num if num%10 == 0 else 10*num
   #+end_src
+* Pass statement
+  #+begin_src python
+    a = raw_input("Enter 'c' to calculate and exit, 'd' to display the existing
+    results exit and 'x' to exit and any other key to continue: ")
+
+    if a == 'c':
+       # Calculate the marks and exit
+    elif a == 'd':
+       # Display the results and exit
+    elif a == 'x':
+       # Exit the program
+    else:
+       pass
+  #+end_src
 * Summary
-  In this tutorial session we learnt
+ In this tutorial, we have learnt to,
 
-    + What are conditional statements
-    + if/else statement
-    + if/elif/else statement
-    + Ternary conditional statement - ~C if X else Y~
-    + and the ~pass~ statement
+  - Understand the conditional statements in Python.
+  - Use if/else statement.
+  - Use if/elif/else statement.
+  - Apply the ternary conditional statement - C if X else Y.
+  - Use "pass" statement.
 
-* Thank you!
+* Evaluation
+1. Use conditional statements for the following.
+   Given a variable ``time``, print ``Good Morning`` if it is less
+   than 12, otherwise ``Hello``. 
+
+2. Convert the if else ladder below into a ternary conditional
+   statement.
+#+begin_src python
+    x = 20
+
+    if x > 10:
+        print x * 100
+    else:
+        print x   
+#+end_src
+
+* Solutions
+1. 
+#+begin_src python
+    if time < 12:
+        print "Good Morning"
+    else:
+        print "Hello"
+#+end_src
+
+2.
+#+begin_src python
+ print x * 100 if x > 10 else x
+#+end_src
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
+\end{frame}
 #+end_latex
-
 
