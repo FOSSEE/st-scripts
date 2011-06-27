@@ -1,6 +1,6 @@
-% Created 2010-10-27 Wed 17:51
+% Created 2011-06-27 Mon 11:03
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Loops}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,94 +41,125 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Loops}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
+
 
 \begin{itemize}
-\item Loop while a condition is true.
-\item Iterate over a sequence
-\item Breaking out of loops.
-\item Skipping iterations.
+\item use the ``for'' loop.
+\item use the ``while'' loop.
+\item Use ``break'', ``continue'' and ``pass'' statements to play around
+   with loops.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
-
-  Write a \texttt{while} loop to print the squares of all the even
-  numbers below 10. 
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
+\frametitle{Pre-requisite}
 \label{sec-3}
 
-\begin{verbatim}
-In []: i = 2
+Spoken tutorial on -
 
-In []:  while i<10:
- ....:     print i*i
- ....:     i += 2
-\end{verbatim}
+\begin{itemize}
+\item Getting started with \verb~for~.
+\item Conditionals.
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Exercise 1}
 \label{sec-4}
 
-  Write a \texttt{for} loop to print the squares of all the even numbers
-  below 10.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-5}
-
-\begin{verbatim}
-In []: for n in range(2, 10, 2):
- ....:     print n*n
-\end{verbatim}
+  Write a \verb~while~ loop to print the squares of all the even
+  numbers below 10. 
 \end{frame}
 \begin{frame}
-\frametitle{Question 3}
+\frametitle{Exercise 2}
+\label{sec-5}
+
+  Write a \verb~for~ loop to print the squares of all the even numbers
+  below 10.
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 3}
 \label{sec-6}
 
-  Using the \texttt{continue} keyword modify the \texttt{for} loop to print the
-  squares of even numbers below 10, to print the squares of only
-  multiples of 4. (Do not modify the range function call.)
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
-\label{sec-7}
-
-\begin{verbatim}
-for n in range(2, 10, 2):
-    if n%4:
-        continue      
-    print n*n
-\end{verbatim}
+  Using the \verb~continue~ keyword, modify the \verb~for~ loop, with the range ``range(2,10,2)'', to print the
+  squares of even numbers below 10, which are multiples of 4.\\
+  (Do not modify the range function call.)
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-8}
+\label{sec-7}
 
-  You should now be able to --
+ In this tutorial, we have learnt to,
+
 \begin{itemize}
-\item use the \texttt{for} loop
-\item use the \texttt{while} loop
-\item Use \texttt{break}, \texttt{continue} and \texttt{pass} statements
+\item Iterate over a sequence using ``for'' and ``while'' loops.
+\item Break out of loops using ``break'' statement.
+\item Skip iterations using ``continue'' statement.
+\item Use the ``pass'' statement in a loop.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
+\label{sec-8}
+
+
+\begin{enumerate}
+\item Given ``range(1,4)'' \\ Write a code to print only the number 1.
+\vspace{12pt}
+\item Which statement do you use to skip iterations.
+\begin{itemize}
+\item break
+\item pass
+\item continue
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
 \label{sec-9}
+
+
+\begin{enumerate}
+\item \lstset{language=Python}
+\begin{lstlisting}
+for i in range(1,4):
+    print i
+    break
+\end{lstlisting}
+\vspace{8pt}
+\item \verb~continue~
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

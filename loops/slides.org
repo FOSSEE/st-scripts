@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Loops
+#+TITLE:      
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,57 +29,77 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Loop while a condition is true. 
-  - Iterate over a sequence
-  - Breaking out of loops.
-  - Skipping iterations.
-* Question 1
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Loops}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+
+ - use the ``for`` loop
+ - use the ``while`` loop
+ - Use ``break``, ``continue`` and ``pass`` statements to play around
+   with loops.
+* Pre-requisite
+Spoken tutorial on -
+- Getting started with ~for~.
+- Conditionals.
+* Exercise 1
   Write a ~while~ loop to print the squares of all the even
   numbers below 10. 
-* Solution 1
-  #+begin_src python
-    In []: i = 2
-    
-    In []:  while i<10:
-     ....:     print i*i
-     ....:     i += 2
-  #+end_src
-* Question 2
+* Exercise 2
   Write a ~for~ loop to print the squares of all the even numbers
   below 10.
-* Solution 2
-  #+begin_src python    
-    In []: for n in range(2, 10, 2):
-     ....:     print n*n
-  #+end_src
-* Question 3
+* Exercise 3
   Using the ~continue~ keyword modify the ~for~ loop to print the
-  squares of even numbers below 10, to print the squares of only
-  multiples of 4. (Do not modify the range function call.)
-* Solution 3
-  #+begin_src python    
-    for n in range(2, 10, 2):
-        if n%4:
-            continue      
-        print n*n
-  #+end_src
+  squares of even numbers below 10, which are multiples of 4.
+  (Do not modify the range function call.)
 * Summary
-  You should now be able to --
-  - use the ~for~ loop 
-  - use the ~while~ loop
-  - Use ~break~, ~continue~ and ~pass~ statements 
-* Thank you!
+ In this tutorial, we have learnt to,
+  - Iterate over a sequence using ``for'' and ``while'' loops.
+  - Break out of loops using ``break'' statement.
+  - Skip iterations using ``continue'' statement.
+  - Use the ``pass'' statement in a loop. 
+* Evaluation
+ 1. Given ``range(1,4)''; Write a code to print only the number 1.
+
+ 2. Which statement do you use to skip iterations.
+    - break
+    - pass
+    - continue
+* Solutions
+1. 
+#+begin_src Python
+for i in range(1,4):
+    print i
+    break
+#+end_src
+
+2. ~continue~
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
