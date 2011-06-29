@@ -1,4 +1,4 @@
-% Created 2010-11-09 Tue 16:07
+% Created 2011-06-29 Wed 13:50
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Manipulating Lists}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,54 +41,74 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
 
-  In this session we shall be looking at 
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Manipulating Lists}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
+
+
 \begin{itemize}
-\item Concatenating lists
-\item Obtaining parts of lists
-\item Sorting lists
-\item Reversing lists
+\item Concatenate two lists.
+\item Learn the details of slicing and striding of lists.
+\item Sort and reverse lists.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
-
-  Obtain the primes less than 10, from the list \texttt{primes}. 
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
+\frametitle{Pre-requisite}
 \label{sec-3}
 
-\lstset{language=Python}
-\begin{lstlisting}
-primes[0:4]
-\end{lstlisting}
+Spoken tutorial on -
+
+\begin{itemize}
+\item Getting started with Lists.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-4}
+
+  Obtain the primes less than 10, from the list  \verb~primes~. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Slicing}
-\label{sec-4}
+\label{sec-5}
 
 \lstset{language=Python}
 \begin{lstlisting}
 p[start:stop]
 \end{lstlisting}
+
 \begin{itemize}
-\item Returns all elements of \texttt{p} between \texttt{start} and \texttt{stop}
-\item The element with index equal to \texttt{stop} is \textbf{not} included.
+\item Returns all elements of \verb~p~ between \verb~start~ and \verb~stop~
+\item The element with index equal to \verb~stop~ is \textbf{not} included.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
-\label{sec-5}
+\frametitle{Exercise 2}
+\label{sec-6}
 
-  Obtain all the multiples of three from the list \texttt{num}.
+  Obtain all the multiples of three from the list \verb~num~.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-6}
+\label{sec-7}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -96,8 +116,8 @@ num[::3]
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Question 3}
-\label{sec-7}
+\frametitle{Exercise 3}
+\label{sec-8}
 
   Given a list of marks of students in an examination, obtain a list
   with marks in descending order.
@@ -106,45 +126,59 @@ num[::3]
 marks = [99, 67, 47, 100, 50, 75, 62]
 \end{lstlisting}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
-\label{sec-8}
-
-\lstset{language=Python}
-\begin{lstlisting}
-sorted(marks)[::-1]
-\end{lstlisting}
-OR
-\lstset{language=Python}
-\begin{lstlisting}
-sorted(marks, reverse=True)
-\end{lstlisting}
-\end{frame}
 \begin{frame}
 \frametitle{Summary}
 \label{sec-9}
 
-  In this tutorial session we learnt
+  In this tutorial, we have learnt to,
+
+
 \begin{itemize}
-\item Obtaining parts of lists using slicing and striding
-\item List concatenation
-\item Sorting lists
-\item Reversing lists
+\item Obtain parts of lists using slicing and striding.
+\item Concatenate lists using the ``plus'' operator.
+\item Sort lists using the ``sort'' method.
+\item Use the method ``reverse'' to reverse the lists.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
 \label{sec-10}
+
+
+\begin{enumerate}
+\item Given the list primes,\\ primes = [2, 3, 5, 7, 11, 13, 17, 19, 23,
+   29],\\ How do you obtain the last 4 primes?
+\vspace{11pt}   
+\item Given a list, p, of unknown length, obtain the first 3 (or all, if
+   there are fewer) characters of it.
+\vspace{11pt}   
+\item ``reversed'' function reverses a list in place. True or False?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-11}
+
+
+\begin{enumerate}
+\item primes[-4:]
+\vspace{8pt}
+\item p[:3]
+\vspace{8pt}
+\item False
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
