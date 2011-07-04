@@ -14,7 +14,7 @@
 
 ..   1. getting started with strings
 ..   #. getting started with lists
-..   #. basic datatypes
+..   #. basic datatypes and operators
      
 .. Author              : Puneeth 
    Internal Reviewer   : Amit 
@@ -25,18 +25,51 @@
 Script
 ------
 
-{{{ Show the slide containing title }}}
+.. L1
 
-Hello Friends. Welcome to this tutorial on manipulating strings. 
+{{{ Show the  first slide containing title, name of the production
+team along with the logo of MHRD }}}
 
-{{{ show the slide with outline }}} 
+.. R1
 
-In this tutorial we shall learn to manipulate strings, specifically
-slicing and reversing them, or replacing characters, converting from
-upper to lower case and vice-versa and joining a list of strings.
+Hello Friends and Welcome to this tutorial on 'manipulating strings'. 
 
-We have an ``ipython`` shell open, in which we are going to work,
-through out this session. 
+.. L2
+
+{{{ show the slide with objectives }}} 
+
+.. R2
+
+At the end of this tutorial, you will be able to,
+
+ 1. Slice strings and get sub-strings out of them.
+ #. Reverse strings.
+ #. Replace characters in strings. 
+ #. Convert strings to upper or lower case.
+ #. Join a list of strings.
+
+.. L3
+
+{{{ Switch to the pre-requisite slide }}}
+
+.. R3
+
+Before beginning this tutorial,we would suggest you to complete the 
+tutorial on "getting started with strings", "getting started with lists"
+and "basic datatypes and operators".
+
+.. R4
+
+Let us invoke our ipython interpreter
+
+.. L4
+
+{{{ Open the terminal }}}
+::
+
+    ipython
+
+.. R5
 
 Let us consider a simple problem, and learn how to slice strings and
 get sub-strings. 
@@ -44,35 +77,48 @@ get sub-strings.
 Let's say the variable ``week`` has the list of the names of the days
 of the week. 
 
+.. L5
 ::
 
     week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
 
+.. R6
 
 Now given a string ``s``, we should be able to check if the string is a
-valid name of a day of the week or not. 
+valid name of a day of the week or not.Let us define our string as, 
 
+.. L6
 ::
 
-    s = saturday
+    s = "saturday"
 
+.. L7
+
+{{{ show the slide with forms }}}
+
+.. R7
 
 ``s`` could be in any of the forms --- sat, saturday, Sat, Saturday,
-SAT, SATURDAY. For now, shall now be solving the problem only for the forms,
-sat and saturday. We shall solve it for the other forms, at the end of
-the tutorial. 
+SAT, SATURDAY. For now, we shall be solving the problem only for the 
+forms,sat and saturday. We shall solve it for the other forms, at the 
+end of the tutorial. 
 
-{{{ show these forms in a slide }}}
+.. R8
 
 So, we need to check if the first three characters of the given string
 exists in the variable ``week``. 
 
-As, with any of the sequence data-types, strings can be sliced into
+As with any of the sequence data-types, strings can be sliced into
 sub-strings. To get the first three characters of s, we say,
 
+.. L8
+
+{{{ Switch to the terminal }}}
 ::
 
     s[0:3]
+
+.. R9
 
 Note that, we are slicing the string from the index 0 to index 3, 3
 not included. 
@@ -80,98 +126,143 @@ not included.
 As we already know, the last element of the string can be accessed
 using ``s[-1]``.  
 
-Following is an exercise that you must do. 
+Pause the video here, try out the following exercise and resume the video.
 
-%%1%% Obtain the sub-string excluding the first and last characters
-from the string s. 
+.. L9
 
-Please, pause the video here. Do the exercise(s) and then continue. 
+.. L10
 
+{{{ Show slide with exercise 1 }}}
+
+.. R10
+
+ Obtain the sub-string excluding the first and last characters
+ from the string s. 
+
+.. R11
+
+Switch to the terminal for solution
+
+.. L11
+
+{{{continue from paused state}}}
+{{{ Switch to the terminal }}}
 ::
 
     s[1:-1]
 
-gives the substring of s, without the first and the last
+.. R12
+
+We get the substring of s, without the first and the last
 characters of s. 
 
+Now let us check if a particular substring is present in the variable
+``week``. We shall check for 'sat'.
+
+.. L12
 ::
 
-    s = saturday
     s[:3]
-
-Now, we just check if that substring is present in the variable
-``week``. 
-
-::
-
     s[:3] in week          
 
-Let us now consider the problem of finding out if a given string is
+.. R13
+
+We get the result as true.
+Let us now consider the problem of finding out, if a given string is
 palindromic or not. First of all, a palindromic string is a string
 that remains same even when it has been reversed.
 
 Let the string given be ``malayalam``.
 
+.. L13
 ::
 
-    s = "malayalam"
+    s1 = "malayalam"
+
+.. R14
 
 Now, we need to compare this string with it's reverse. 
 
 Again, we will use a technique common to all sequence data-types,
-[::-1]
+that is, [::-1]
 
 So, we obtain the reverse of s, by simply saying, 
 
+.. L14
 ::
 
-    s[::-1]
+    s1[::-1]
+
+.. R15
 
 Now, to check if the string is ``s`` is palindromic, we say
+
+.. L15
 ::
 
-    s == s[::-1]
+    s1 == s1[::-1]
+
+.. R16
 
 As, expected, we get ``True``. 
 
 Now, if the string we are given is ``Malayalam`` instead of
 ``malayalam``, the above comparison would return a False. So, we will
-have to convert the string to all lower case or all upper case, before
-comparing. Python provides methods, ``s.lower`` and ``s.upper`` to
-achieve this. 
+have to convert the string to all lower case or to all upper case, 
+before comparing. Python provides methods, ``s.lower`` and ``s.upper`` 
+to achieve this. 
 
 Let's try it out. 
+
+.. L16
 ::
 
-   s = "Malayalam"
+    s1 = "Malayalam"
+    s1.upper()
+    s1
 
-   s.upper()
-
-   s
+.. R17
 
 As you can see, s has not changed. It is because, ``upper`` returns a
-new string. It doesn't change the original string. 
+new string. It doesn't change the original string. Similarly,
 
+.. L17
 ::
 
-   s.lower()
+    s1.lower()
+    s1.lower() == s1.lower()[::-1]
+ 
+.. R18
+  
+Pause the video here, try out the following exercise and resume the video.
 
-   s.lower() == s.lower()[::-1]
-   
-Following is an exercise that you must do. 
+.. L18
 
-%%2%% Check if ``s`` is a valid name of a day of the week. Change the
-solution to this problem, to include forms like, SAT, SATURDAY,
-Saturday and Sat.
+.. L19
 
-Please, pause the video here. Do the exercise and then continue. 
+{{{ Show slide with exercise 2 }}}
 
+.. R19
+
+ Check if ``s`` is a valid name of a day of the week. Change the
+ solution to this problem, to include forms like, SAT, SATURDAY,
+ Saturday and Sat.
+
+.. R20
+
+Switch to your terminal for solution
+
+.. L20
+
+{{{continue from paused state}}}
+{{{ Switch to the terminal }}}
 ::
 
     s in week
 
     s.lower()[:3] in week
 
+.. R21
 
 So, as you can see, now we can check for presence of ``s`` in
 ``week``, in whichever format it is present -- capitalized, or all
@@ -181,75 +272,172 @@ We just convert any input string to lower case and then check if it is
 present in the list ``week``. 
 
 Now, let us consider another problem. We often encounter e-mail id's
-which have @ and periods replaced with text, something like
+which have '@' and periods replaced with text, something like
 info[at]fossee[dot]in. We now wish to get back proper e-mail
 addresses.  
 
 Let's say the variable email has the email address. 
+
+.. L21
 ::
 
-   email = "info[at]fossee[dot]in"
+    email = "info[at]fossee[dot]in"
+
+.. R22
 
 Now, we first replace the ``[at]`` with the ``@``, using the replace
 method of strings. 
+
+.. L22
 ::
 
-   email = email.replace("[at]", "@")
-   print email
+    email = email.replace("[at]", "@")
+    print email
 
-Following is an exercise that you must do. 
+.. R23
 
-%%3%% Replace the ``[dot]`` with ``.`` in ``email``
+Pause the video here, try out the following exercise and resume the video.
 
-Please, pause the video here. Do the exercise and then continue. 
+.. L23
 
+.. L24
+
+{{{ Show slide with exercise 3 }}}
+
+.. R24
+
+ Replace the ``[dot]`` with ``.`` in ``email``
+
+.. R25
+
+Switch to the terminal for solution 
+
+.. L25
+
+{{{continue from paused state}}}
+{{{ Switch to the terminal }}}
 ::
 
-   email = email.replace("[dot]", ".")        
-   print email
+    email = email.replace("[dot]", ".")        
+    print email
 
-Now, let's look at another interesting problem where we have a list of
+.. R26
+
+Now, let us look at another interesting problem where we have a list of
 e-mail addresses and we wish to obtain one long string of e-mail
 addresses separated by commas or semi-colons. 
 
+.. L26
 ::
 
-  email_list = ["info@fossee.in", "enquiries@fossee.in",  "help@fossee.in"]
+    email_list = ["info@fossee.in", "enquiries@fossee.in", "help@fossee.in"]
 
+.. R27
 
 Now, if we wish to obtain one long string, separating each of the
 email id by a comma, we use the join operator on ``,``. 
 
+.. L27
 ::
 
-  email_str = ", ".join(email_list)
-  print email_str
+    email_str = ", ".join(email_list)
+    print email_str
+
+.. R28
 
 Notice that the email ids are joined by a comma followed by a space. 
 
-Following is an exercise that you must do. 
+ Pause the video here, try out the following exercise and resume the video.
 
-%%3%% From the email_str that we generated, change the separator to be
-a semicolon instead of a comma. 
+.. L28
 
-Please, pause the video here. Do the exercise and then continue. 
+.. L29
 
+{{{ Show slide with exercise 4 }}}
+
+.. R29
+
+ From the email_str that we generated, change the separator to be
+ a semicolon instead of a comma. 
+
+.. R30
+
+Switch to the terminal for solution 
+
+.. L30
+
+{{{continue from paused state}}}
+{{{ Switch to the terminal }}}
 ::
 
-  email_str = email_str.replace(",", ";")
+    email_str = email_str.replace(",", ";")
+    print email_str
 
-That brings us to the end of the tutorial. 
+.. R31
+
+We see that the email ids are joined by a  semicolon followed by a space.
+
+.. L31
+
+.. L32
 
 {{{ show summary slide }}}
 
-In this tutorial, we have learnt how to get substrings, reverse
-strings and a few useful methods, namely upper, lower, replace and
-join. 
+.. R32
 
-{{{ Show the "sponsored by FOSSEE" slide }}}
+This brings us to the end of this tutorial. 
+In this tutorial, we have learnt to, 
 
-This tutorial was created as a part of FOSSEE project, NME ICT, MHRD India
+ 1. Obtain sub-strings and reverse of strings by using the index numbers
+ #. Use following functions -
+    - ``upper()`` -- to obtain the upper case of a string
+    - ``lower()`` -- to obtain the lower case of a string
+    - ``replace()`` -- to replace a character by another one
+    - ``join()`` -- to join a list of strings with an operator
 
-Hope you have enjoyed and found it useful.
+.. L33
+
+{{{Show self assessment questions slide}}}
+
+.. R33
+
+Here are some self assessment questions for you to solve
+
+1. Given a string ``s = "this is a string"``, how will you change it
+   to ``"this isn't a list"`` ?
+ 
+
+2. Given the string "F.R.I.E.N.D.S" in s, obtain the string "friends".
+
+.. L34
+   
+{{{solution of self assessment questions on slide}}}
+
+.. R34
+
+And the answers,
+
+1. We will use the ``replace`` function to accomplish this.
+::
+    
+    s = s.replace("string", "list")
+    s = s.replace("is", "isn't")
+    s
+
+We notice that every 'is' in the statement has been replaced by ``isn't``.
+
+2. In order to change the string to lower case, we use the 
+   method ``lower()``
+::
+
+    s[::2].lower()
+    
+.. L35
+
+{{{ Show the 'Thankyou' slide }}}
+
+.. R35
+
+Hope you have enjoyed this tutorial and found it useful.
 Thank you!
 
