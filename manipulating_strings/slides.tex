@@ -1,6 +1,6 @@
-% Created 2010-10-28 Thu 11:35
+% Created 2011-07-04 Mon 12:31
 \documentclass[presentation]{beamer}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
 \usepackage{graphicx}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Manipulating strings}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,107 +41,166 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Manipulating Strings}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to,
+
 
 \begin{itemize}
-\item Slicing strings to get sub-strings
-\item Reversing strings
-\item Replacing characters in strings.
-\item Converting strings to upper or lower case
-\item Joining a list of strings
+\item Slice strings and get sub-strings out of them.
+\item Reverse strings.
+\item Replace characters in strings.
+\item Convert strings to upper or lower case.
+\item Join a list of strings.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
-
-  Obtain the sub-string excluding the first and last characters from
-  the string \texttt{s}.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
+\frametitle{Pre-requisite}
 \label{sec-3}
 
-\begin{verbatim}
-In []:  s[1:-1]
-\end{verbatim}
+Spoken tutorial on -
+\begin{itemize}
+\item Getting started with strings.
+\item Getting started with lists.
+\item Basic datatypes and operators.
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
+\frametitle{Forms of ~s~}
 \label{sec-4}
 
-  Given a list week, week = \texttt{week = ["sun", "mon", "tue", "wed",   "thu", "fri", "sat"]}. Check if \texttt{s} is a valid name of a day of the
-  week. Change the solution to this problem, to include forms like,
-  SAT, SATURDAY, Saturday and Sat.
+
+\begin{itemize}
+\item sat
+\item saturday
+\item Sat
+\item Saturday
+\item SAT
+\item SATURDAY
+\end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
+\begin{frame}
+\frametitle{Exercise 1}
 \label{sec-5}
 
-\begin{verbatim}
-In []:  s in week
-In []:  s.lower()[:3] in week
-\end{verbatim}
+
+\begin{itemize}
+\item Obtain the sub-string excluding the first and last characters from
+  the string \verb~s~.
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 3}
+\frametitle{Exercise 2}
 \label{sec-6}
 
-  Given \texttt{email} -- \texttt{info@fossee[dot]in}
 
-  Replace the \texttt{[dot]} with \texttt{.} in \texttt{email}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
-\label{sec-7}
-
-\begin{verbatim}
-email.replace('[dot], '.')
-print email
-\end{verbatim}
+\begin{itemize}
+\item Given a list week,\\ week = [``sun'', ``mon'', ``tue'', ``wed'', ``thu'', ``fri'', ``sat''].\\
+\vspace{5pt}
+\begin{enumerate}
+\item Check if \verb~s~ is a valid name of a day of the
+  week.
+\item Change the solution to this problem, to include forms like,
+  SAT, SATURDAY, Saturday and Sat.
+\end{enumerate}
+\end{itemize}  
 \end{frame}
 \begin{frame}
-\frametitle{Question 4}
+\frametitle{Exercise 3}
+\label{sec-7}
+
+
+\begin{itemize}
+\item Given \verb~email~ -- \verb~info@fossee[dot]in~
+
+  Replace the \verb~[dot]~ with \verb~.~ in \verb~email~
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 4}
 \label{sec-8}
 
-  From the \texttt{email\_str} that we generated, change the separator to be a
-  semicolon instead of a comma.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-9}
 
-\begin{verbatim}
-email_str = email_str.replace(",", ";")
-\end{verbatim}
+\begin{itemize}
+\item From the \verb~email\_str~ that we generated, change the separator to be a
+  semicolon instead of a comma.
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-10}
+\label{sec-9}
 
-  You should now be able to --
+  In this tutorial, we have learnt to, 
+
+
 \begin{itemize}
-\item Slice strings and get sub-strings out of them
-\item Reverse strings
-\item Replace characters in strings.
-\item Convert strings to upper or lower case
-\item Join a list of strings
+\item Obtain sub-strings and reverse of strings by using the index numbers
+\item Use following functions -
+\begin{itemize}
+\item ``upper()'' -- to obtain the upper case of a string
+\item ``lower()'' -- to obtain the lower case of a string
+\item ``replace()'' -- to replace a character by another one
+\item ``join()'' -- to join a list of strings with an operator
+\end{itemize}
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Evaluation}
+\label{sec-10}
+
+
+\begin{enumerate}
+\item Given a string s = ``this is a string'', how will you change it
+   to ``this isn't a list''
+\vspace{12pt}   
+\item Given the string ``F.R.I.E.N.D.S'' in s, obtain the string ``friends''.
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
 \label{sec-11}
+
+
+\begin{enumerate}
+\item \lstset{language=Python}
+\begin{lstlisting}
+s = s.replace("string", "list")
+s = s.replace("is", "isn't")
+s
+\end{lstlisting}
+\vspace{8pt}
+\item s[::2].lower()
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

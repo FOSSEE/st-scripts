@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Manipulating strings
+#+TITLE:     
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,64 +29,95 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Slicing strings to get sub-strings
-  - Reversing strings
-  - Replacing characters in strings. 
-  - Converting strings to upper or lower case
-  - Joining a list of strings
-* Question 1
-  Obtain the sub-string excluding the first and last characters from
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Manipulating Strings}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to,
+
+ - Slice strings and get sub-strings out of them.
+ - Reverse strings.
+ - Replace characters in strings. 
+ - Convert strings to upper or lower case.
+ - Join a list of strings.
+* Pre-requisite
+  Spoken tutorial on -
+  - Getting started with strings.
+  - Getting started with lists.
+  - Basic datatypes and operators.
+* Forms
+ - sat
+ - saturday
+ - Sat
+ - Saturday
+ - SAT
+ - SATURDAY
+* Exercise 1
+ - Obtain the sub-string excluding the first and last characters from
   the string ~s~.
-* Solution 1
-  #+begin_src python
-    In []:  s[1:-1]
-  #+end_src
-* Question 2
-  Given a list week, week = ~week = ["sun", "mon", "tue", "wed",
+* Exercise 2
+  - Given a list week, week = ~week = ["sun", "mon", "tue", "wed",
   "thu", "fri", "sat"]~. Check if ~s~ is a valid name of a day of the
   week. Change the solution to this problem, to include forms like,
   SAT, SATURDAY, Saturday and Sat.
-* Solution 2
-  #+begin_src python
-    In []:  s in week
-    In []:  s.lower()[:3] in week
-  #+end_src
-* Question 3
-  Given ~email~ -- ~info@fossee[dot]in~
+* Exercise 3
+ - Given ~email~ -- ~info@fossee[dot]in~
 
   Replace the ~[dot]~ with ~.~ in ~email~
-* Solution 3
-  #+begin_src python
-    email.replace('[dot], '.')
-    print email
-  #+end_src
-* Question 4
-  From the ~email_str~ that we generated, change the separator to be a
+* Exercise 4
+ - From the ~email\_str~ that we generated, change the separator to be a
   semicolon instead of a comma.
-* Solution 4
-  #+begin_src python
-    email_str = email_str.replace(",", ";")
-  #+end_src
 * Summary
-  You should now be able to --
-  - Slice strings and get sub-strings out of them
-  - Reverse strings
-  - Replace characters in strings. 
-  - Convert strings to upper or lower case
-  - Join a list of strings
+  In this tutorial, we have learnt to, 
 
-* Thank you!
+ - Obtain sub-strings and reverse of strings by using the index numbers
+ - Use following functions -
+    - ``upper()'' -- to obtain the upper case of a string
+    - ``lower()'' -- to obtain the lower case of a string
+    - ``replace()'' -- to replace a character by another one
+    - ``join()'' -- to join a list of strings with an operator
+
+* Evaluation
+1. Given a string s = "this is a string", how will you change it
+   to "this isn't a list" 
+
+2. Given the string "F.R.I.E.N.D.S" in s, obtain the string "friends".
+
+* Solutions
+1. 
+#+begin_src Python
+s = s.replace("string", "list")
+s = s.replace("is", "isn't")
+s
+#+end_src
+
+2. s[::2].lower()
+
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
