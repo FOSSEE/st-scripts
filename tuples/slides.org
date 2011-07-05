@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:    Getting started -- Tuples
+#+TITLE:    
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,39 +29,72 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - what are tuples
-  - comparison with lists
-  - why are they needed
-* Question 1
-  ~a = 5~ and ~b = 7~. swap the values of ~a~ and ~b~
-* Solution 1
-  #+begin_src python
-    temp = a
-    a = b
-    b = temp
-    
-    a
-    b
-  #+end_src
+* 
+ #+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with \texttt{tuples}}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of the tutorial, you will be able to,
+
+ - Understand of what tuples are.
+ - Compare them with lists.
+ - Know why they are needed and where to use them.
+* Pre-requisite
+Spoken tutorial on -
+- Getting started with Lists
+* Exericse 1
+  Given, ~a = 5~ and ~b = 7~. Swap the values of ~a~ and ~b~.
 * Summary
-  You should now --
-  + Be able to define tuples
-  + Know the similarities with lists, like -- indexing and iterability
-  + Know about the immutability of tuples
-  + Be able to swap variables in the Pythonic way
-  + Know about packing and unpacking of tuples
-* Thank you!
+  In this tutorial, we have learnt to,
+
+ - Define tuples.
+ - Understand the similarities of tuples with lists, like indexing and 
+    iterability.
+ - Know about the immutability of tuples.
+ - Swap values, the python way.
+ - Understand the concept of packing and unpacking of tuples.
+* Evaluation
+1. Define a tuple containing two values. The first being integer 4 and 
+   second is a float 2.5
+
+2. If ``a = 5,'' then what is the type of a ?
+
+   - int
+   - float
+   - tuple
+   - string
+
+3. If ``a = (2, 3)''. What does ``a[ 0 ], a[ 1 ] = (3, 4)'' produce ?
+* Solutions
+1. (4, 2.5)
+
+2. tuple
+
+3. Error
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
