@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Dictionaries
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+EMAIL: info@fossee.in   
 #+DATE:    
@@ -29,7 +29,25 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Dictionaries}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+
+* Objectives
   - Creating dictionaries
     - empty dictionaries
     - with data
@@ -44,45 +62,9 @@
   - A Key-Value pair data structure
     - Provide key-value mappings
 
-* Creating dictionary
-  - Empty dictionary
-    - ~mt_dict = {}~
-      - ~[]~ - lists
-      - ~{}~ - dictionaries
-  - With data
-    #+begin_src python
-        extensions = {'jpg' : 'JPEG Image', 
-	              'py' : 'Python script',
-                      'html' : 'Html document', 
-                      'pdf' : 'Portable Document Format'}
-    #+end_src
-
-   *Note* - ordering in dictionaries cannot be relied on
 * Accessing Elements
   - syntax
     : extensions[key]
-  
-  : In []: print extensions['jpg']
-  : Out []: JPEG Image
-  : In []: print extensions['zip']
-* Adding and Deleting values
-  - Adding a new value
-    : In []: extension['cpp'] = 'C++ code'
-    adds a new key /cpp/ with /C++ code/ as value
-  - Deleting values
-    : In []: del extensions['pdf']
-    deletes the key-value pair identified by /pdf/
-  - Changing value associated with a key
-    : In []: extension['cpp'] = 'C++ source code'
-    changes the value of the existing key
-* Checking for container-ship of keys
-  : In []: 'py' in extensions
-  : Out []: True
-  Returns *True* if the /key/ is found.
-  : In []: 'odt' in extensions
-  : Out []: False
-  Returns *False* if the /key/ is not found.
-
 * Retrieve keys and values
   - ~.keys()~ method
     : In []: extensions.keys()
@@ -91,27 +73,56 @@
     : In []: extensions.values()
     Returns the list of values in the dictionary.
 * Exercise 1
-  Print the keys and values in the dictionary one by one.
+ - Print the keys and values in the dictionary one by one.
 * Summary
-  - Creating dictionaries
+  In this tutorial, we have learnt to,
+
+ - Create dictionaries namely --
     - empty dictionaries
-    - with data
-  - ~.keys()~ method
-  - ~.values()~ method
-  - Iterating over dictionaries
-* Thank you!
+    - dictionaries with data.
+ - Access elements in the dictionaries using the keys.
+ - Add elements to a dictionary by assigning a value to a key.
+ - Delete elements from a dictionary by using the function ``del''.
+ - Retrieve the keys and values by using the methods ``.keys()'' and 
+    ``.values()'' respectively.
+ - Iterate over elements of a dictionary using a ``for'' loop.
+* Evaluation
+1. Container-ship of values can be checked in a python dictionary
+
+   - True
+   - False
+
+2. Consider the python dictionary 
+   
+   : x = {'a':['a','b','c'], 'b':(1, 2, 3),
+   :       1:{1:'one', 2:'two'},
+   :       10:{10:'ten', 11:'eleven'}}
+
+   What will the following code return? 
+     ~(1, 2, 3) in x.values()~ 
+
+   - True
+   - False
+   - Container-ship of values cannot be checked in dictionaries
+   - The dictionary is invalid
+* Solutions
+1. False
+
+2. True
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
+
 
 

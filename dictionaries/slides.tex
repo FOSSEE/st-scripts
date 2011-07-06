@@ -1,4 +1,4 @@
-% Created 2010-10-11 Mon 23:02
+% Created 2011-07-06 Wed 16:17
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Dictionaries}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,17 +41,33 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Dictionaries}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
 
 \begin{itemize}
 \item Creating dictionaries
-
 \begin{itemize}
 \item empty dictionaries
 \item with data
 \end{itemize}
-
 \item Keys and values
 \item Checking for elements
 \item Iterating over elements
@@ -60,55 +75,25 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Overview of Dictionaries}
-\label{sec-2}
+\label{sec-3}
+
 
 \begin{itemize}
 \item A dictionary contains meaning of words
-
 \begin{itemize}
 \item \emph{Word} is the \emph{key} here.
 \item \emph{Meaning} is the \emph{value} here.
 \end{itemize}
-
 \item A Key-Value pair data structure
-
 \begin{itemize}
 \item Provide key-value mappings
 \end{itemize}
-
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Creating dictionary}
-\label{sec-3}
-
-\begin{itemize}
-\item Empty dictionary
-
-\begin{itemize}
-\item \texttt{mt\_dict = \{\}}
-
-\begin{itemize}
-\item \texttt{[]} - lists
-\item \texttt{\{\}} - dictionaries
-\end{itemize}
-
-\end{itemize}
-
-\item With data
-\begin{verbatim}
-extensions = {'jpg' : 'JPEG Image', 
-              'py' : 'Python script',
-              'html' : 'Html document', 
-              'pdf' : 'Portable Document Format'}
-\end{verbatim}
-
-   \textbf{Note} - ordering in dictionaries cannot be relied on
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Accessing Elements}
 \label{sec-4}
+
 
 \begin{itemize}
 \item syntax
@@ -117,68 +102,20 @@ extensions = {'jpg' : 'JPEG Image',
 \end{verbatim}
 
 \end{itemize}
-
-  
-\begin{verbatim}
-   In []: print extensions['jpg']
-   Out []: JPEG Image
-   In []: print extensions['zip']
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Adding and Deleting values}
-\label{sec-5}
-
-\begin{itemize}
-\item Adding a new value
-\begin{verbatim}
-     In []: extension['cpp'] = 'C++ code'
-\end{verbatim}
-
-    adds a new key \emph{cpp} with \emph{C++ code} as value
-\item Deleting values
-\begin{verbatim}
-     In []: del extensions['pdf']
-\end{verbatim}
-
-    deletes the key-value pair identified by \emph{pdf}
-\item Changing value associated with a key
-\begin{verbatim}
-     In []: extension['cpp'] = 'C++ source code'
-\end{verbatim}
-
-    changes the value of the existing key
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Checking for container-ship of keys}
-\label{sec-6}
-
-\begin{verbatim}
-   In []: 'py' in extensions
-   Out []: True
-\end{verbatim}
-
-  Returns \textbf{True} if the \emph{key} is found.
-\begin{verbatim}
-   In []: 'odt' in extensions
-   Out []: False
-\end{verbatim}
-
-  Returns \textbf{False} if the \emph{key} is not found.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Retrieve keys and values}
-\label{sec-7}
+\label{sec-5}
+
 
 \begin{itemize}
-\item \texttt{.keys()} method
+\item \verb~.keys()~ method
 \begin{verbatim}
      In []: extensions.keys()
 \end{verbatim}
 
     Returns a list of keys in the dictionary.
-\item \texttt{.values()} method
+\item \verb~.values()~ method
 \begin{verbatim}
      In []: extensions.values()
 \end{verbatim}
@@ -188,40 +125,87 @@ extensions = {'jpg' : 'JPEG Image',
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 1}
-\label{sec-8}
+\label{sec-6}
 
-  Print the keys and values in the dictionary one by one.
+\begin{itemize}
+\item Print the keys and values in the dictionary one by one.
+\end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-9}
+\label{sec-7}
+
+  In this tutorial, we have learnt to,
+
 
 \begin{itemize}
-\item Creating dictionaries
-
+\item Create dictionaries namely --
 \begin{itemize}
 \item empty dictionaries
-\item with data
+\item dictionaries with data.
 \end{itemize}
-
-\item \texttt{.keys()} method
-\item \texttt{.values()} method
-\item Iterating over dictionaries
+\item Access elements in the dictionaries using the keys.
+\item Add elements to a dictionary by assigning a value to a key.
+\item Delete elements from a dictionary by using the function ``del''.
+\item Retrieve the keys and values by using the methods ``.keys()'' and 
+    ``.values()'' respectively.
+\item Iterate over elements of a dictionary using a ``for'' loop.
 \end{itemize}
 \end{frame}
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-8}
+
+
+\begin{enumerate}
+\item Container-ship of values can be checked in a python dictionary
+\begin{itemize}
+\item True
+\item False
+\vspace{5pt}
+\end{itemize}
+\item Consider the python dictionary 
+   
+\begin{verbatim}
+    x = {'a':['a','b','c'], 'b':(1, 2, 3),
+          1:{1:'one', 2:'two'},
+          10:{10:'ten', 11:'eleven'}}
+\end{verbatim}
+
+
+   What will the following code return?\\ 
+     \verb~(1, 2, 3) in x.values()~
+\vspace{3pt}     
+\begin{itemize}
+\item True
+\item False
+\item Container-ship of values cannot be checked in dictionaries
+\item The dictionary is invalid
+\end{itemize}
+\end{enumerate}
+\end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-10}
+\frametitle{Solutions}
+\label{sec-9}
+
+
+\begin{enumerate}
+\item False
+\vspace{15pt}
+\item True
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
