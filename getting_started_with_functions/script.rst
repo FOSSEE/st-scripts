@@ -375,13 +375,13 @@ Now we have done enough coding, let us do some code reading exercise,
 
 Pause here and try to figure out what the function ``what`` does.
 
-.. def what( n ):
-..     if n < 0: n = -n
-..     while n > 0:
-..         if n % 2 == 1:
-..             return False
-..         n /= 10
-..     return True
+ def what( n ):
+     if n < 0: n = -n
+     while n > 0:
+         if n % 2 == 1:
+             return False
+         n /= 10
+     return True
 
 {{{continue from paused state}}}
 It will return true if ``n % 2`` is not equal to 1 and will return false, otherwise.
@@ -392,15 +392,15 @@ It will return true if ``n % 2`` is not equal to 1 and will return false, otherw
 
 {{{ switch to next slide, even_digits }}}
 
-.. def even_digits( n ):
-..     """returns True if all the digits in the number n are even,
-..     returns False if all the digits in the number n are not even"""
-..     if n < 0: n = -n
-..     while n > 0:
-..         if n % 2 == 1:
-..             return False
-..         n /= 10
-..     return True
+ def even_digits( n ):
+     """returns True if all the digits in the number n are even,
+     returns False if all the digits in the number n are not even"""
+     if n < 0: n = -n
+     while n > 0:
+         if n % 2 == 1:
+             return False
+         n /= 10
+     return True
 
 .. R32
 
@@ -417,11 +417,11 @@ Now one more code reading exercise,
 
 Pause here and try to figure out what the function ``what`` does.
 
-.. def what( n ):
-..     i = 1
-..     while i * i < n:
-..         i += 1
-..     return i * i == n, i
+ def what( n ):
+     i = 1
+     while i * i < n:
+         i += 1
+     return i * i == n, i
 
 {{{continue from paused state}}}
 The function returns two values. One it returns the result of the while statement
@@ -431,14 +431,14 @@ whether true of false, and second it prints the value that `ii`` currently holds
 
 {{{ switch to next slide, is_perfect_square }}}
 
-.. def is_perfect_square( n ):
-..     """returns True and square root of n, if n is a perfect square,
-..     otherwise returns False and the square root of the 
-..     next perfect square"""
-..     i = 1
-..     while i * i < n:
-..         i += 1
-..     return i * i == n, i
+ def is_perfect_square( n ):
+     """returns True and square root of n, if n is a perfect square,
+     otherwise returns False and the square root of the 
+     next perfect square"""
+     i = 1
+     while i * i < n:
+         i += 1
+     return i * i == n, i
 
 .. R34
 
