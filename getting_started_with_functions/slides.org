@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:  Getting started with functions
+#+TITLE:  
 #+AUTHOR:  FOSSEE
 #+EMAIL:   info@fossee.in
 #+DATE:    
@@ -29,24 +29,42 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Define functions
-  - Pass arguments to functions
-  - Learn about docstrings
-  - Return values from functions
+* 
+ #+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with \texttt{functions}}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
 
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to, 
+
+ - Define a function.
+ - Define functions with arguments.
+ - Learn about docstrings.
+ - Learn about function return value.
+ - Read and understand code.
+
+* Pre-requisite
+Spoken tutorial on -
+- Conditionals.
+- Loops.
 * Function
   - Eliminate code redundancy
   - Help in code reuse
   - Subroutine
     - relatively independent of remaining code
-
-* ~f(x)~ a mathematical function
-
-  $f(x) = x^{2}$
-
-  : f(1) -> 1
-  : f(2) -> 4
 
 * Define ~f(x)~ in Python
   #+begin_src python
@@ -60,44 +78,13 @@
 
 * Exercise 1
 
-  Write a python function named ~cube~ which computes the cube of a given
+ - Write a python function named ~cube~ which computes the cube of a given
   number ~n~.
-  
-  - Pause here and try to solve the problem yourself.
-
-* Solution
-  #+begin_src python
-    def cube(n):
-    	return n**3
-  #+end_src
-
-* ~greet~ function
-
- Function ~greet~ which will print ~Hello World!~.
- #+begin_src python
-    def greet():
-    	print "Hello World!"
- #+end_src
-  - Call the function ~greet~
-    : In []: greet()
-    : Hello World!
 
 * Exercise 2
 
-  Write a python function named ~avg~ which computes the average of
+ - Write a python function named ~avg~ which computes the average of
   ~a~ and ~b~.
-
-  - Pause here and try to solve the problem yourself.
-
-* Solution 2
- #+begin_src python
-    def avg(a,b):
-    	return (a + b)/2
- #+end_src
-
- - ~a~ and ~b~ are parameters
- - ~def f(p1, p2, p3, ... , pn)~
-
 * Docstring
 
   - Documenting/commenting code is a good practice
@@ -114,31 +101,18 @@
   - Documentation
     : avg?
 * Exercise 3
-  Add docstring to the function f.
+ - Add docstring to the function f.
 
 * Solution 3
-
-#+begin_src python
-  def f(x):
-      """Accepts a number x as argument and,
-      returns the square of the number x."""
-      return x*x
+#+begin_src Python
+def f(x):
+    """Accepts a number x as argument and,
+    returns the square of the number x."""
+    return x*x
 #+end_src
-
 * Exercise 4
-  Write a python function named ~circle~ which returns the area and
+ - Write a python function named ~circle~ which returns the area and
   perimeter of a circle given radius ~r~.
-
-* Solution 4
-#+begin_src python
-  def circle(r):
-      """returns area and perimeter of a circle given 
-      radius r"""
-      pi = 3.14
-      area = pi * r * r
-      perimeter = 2 * pi * r
-      return area, perimeter
-#+end_src
 
 * ~what~
 #+begin_src python
@@ -152,7 +126,7 @@
      return True
 #+end_src
 
-* ~even_digits~
+* ~even\_digits~
 #+begin_src python
  def even_digits( n ):
     """returns True if all the digits of number 
@@ -175,7 +149,7 @@
      return i * i == n, i
 #+end_src
 
-* ~is_perfect_square~
+* ~is\_perfect\_square~
 #+begin_src python
  def is_perfect_square( n ):
      """returns True and square root of n, 
@@ -189,23 +163,56 @@
 #+end_src
 
 * Summary
- - Functions in Python
- - Passing parameters to a function
- - Returning values from a function
+ In this tutorial, we have learnt to,
 
- - We also did few code reading exercises.
+  - Define functions in Python by using the keyword ``def''.
+  - Call the function by specifying the function name.
+  - Assign a docstring to a function by putting it as a triple quoted string.
+  - Pass parameters to a function.
+  - Return values from a function.
 
-* Thank you!
+* Evaluation
+1. What will the function do?
+#+begin_src Python
+def what(x)
+    return x*x
+#+end_src
+
+   - Returns the square of x
+   - Returns x
+   - Function doesn't have docstring
+   - Error	   
+
+2. How many arguments can be passed to a python function?
+
+   - None
+   - One
+   - Two
+   - Any
+
+3. Write a function which calculates the area of a rectangle.
+* Solutions
+1. Error
+
+2. Any
+
+3. 
+#+begin_src Python
+def area(l,b):
+    return l * b
+#+end_src
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
+

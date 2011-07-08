@@ -1,4 +1,4 @@
-% Created 2010-11-10 Wed 18:59
+% Created 2011-07-08 Fri 14:25
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Getting started with functions}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,145 +41,122 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Getting started with \texttt{functions}}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of this tutorial, you will be able to, 
+
 
 \begin{itemize}
-\item Define functions
-\item Pass arguments to functions
-\item Learn about docstrings
-\item Return values from functions
+\item Define a function.
+\item Define functions with arguments.
+\item Learn about docstrings.
+\item Learn about function return value.
+\item Read and understand code.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+Spoken tutorial on -
+
+\begin{itemize}
+\item Conditionals.
+\item Loops.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Function}
-\label{sec-2}
+\label{sec-4}
+
 
 \begin{itemize}
 \item Eliminate code redundancy
 \item Help in code reuse
 \item Subroutine
-
 \begin{itemize}
 \item relatively independent of remaining code
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{f(x)} a mathematical function}
-\label{sec-3}
+\frametitle{Define \verb~f(x)~ in Python}
+\label{sec-5}
 
-
-  $f(x) = x^{2}$
-
-\begin{verbatim}
-   f(1) -> 1
-   f(2) -> 4
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Define \texttt{f(x)} in Python}
-\label{sec-4}
-
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def f(x):
     return x*x
-\end{verbatim}
+\end{lstlisting}
+
 
 \begin{itemize}
-\item \texttt{def} - keyword
-\item \texttt{f} - function name
-\item \texttt{x} - parameter / argument to function \texttt{f}
+\item \verb~def~ - keyword
+\item \verb~f~ - function name
+\item \verb~x~ - parameter / argument to function \verb~f~
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 1}
-\label{sec-5}
-
-
-  Write a python function named \texttt{cube} which computes the cube of a given
-  number \texttt{n}.
-  
-\begin{itemize}
-\item Pause here and try to solve the problem yourself.
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution}
 \label{sec-6}
 
-\begin{verbatim}
-def cube(n):
-    return n**3
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{\texttt{greet} function}
-\label{sec-7}
 
 
- Function \texttt{greet} which will print \texttt{Hello World!}.
-\begin{verbatim}
-def greet():
-    print "Hello World!"
-\end{verbatim}
 \begin{itemize}
-\item Call the function \texttt{greet}
-\begin{verbatim}
-     In []: greet()
-     Hello World!
-\end{verbatim}
-
+\item Write a python function named \verb~cube~ which computes the cube of a given
+  number \verb~n~.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 2}
-\label{sec-8}
+\label{sec-7}
 
 
-  Write a python function named \texttt{avg} which computes the average of
-  \texttt{a} and \texttt{b}.
 
 \begin{itemize}
-\item Pause here and try to solve the problem yourself.
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-9}
-
-\begin{verbatim}
-def avg(a,b):
-    return (a + b)/2
-\end{verbatim}
-
-\begin{itemize}
-\item \texttt{a} and \texttt{b} are parameters
-\item \texttt{def f(p1, p2, p3, ... , pn)}
+\item Write a python function named \verb~avg~ which computes the average of
+  \verb~a~ and \verb~b~.
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Docstring}
-\label{sec-10}
+\label{sec-8}
+
 
 
 \begin{itemize}
 \item Documenting/commenting code is a good practice
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def avg(a,b):
     """ avg takes two numbers as input 
     (a & b), and returns the average 
     of a and b"""
     return (a+b)/2
-\end{verbatim}
+\end{lstlisting}
 \item Docstring
-
 \begin{itemize}
-\item written in the line after the \texttt{def} line.
+\item written in the line after the \verb~def~ line.
 \item Inside triple quote.
 \end{itemize}
-
 \item Documentation
 \begin{verbatim}
      avg?
@@ -190,48 +166,41 @@ def avg(a,b):
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 3}
-\label{sec-11}
+\label{sec-9}
 
-  Add docstring to the function f.
+
+\begin{itemize}
+\item Add docstring to the function f.
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 3}
-\label{sec-12}
+\label{sec-10}
 
-
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def f(x):
     """Accepts a number x as argument and,
     returns the square of the number x."""
     return x*x
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 4}
-\label{sec-13}
+\label{sec-11}
 
-  Write a python function named \texttt{circle} which returns the area and
-  perimeter of a circle given radius \texttt{r}.
+
+\begin{itemize}
+\item Write a python function named \verb~circle~ which returns the area and
+  perimeter of a circle given radius \verb~r~.
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 4}
-\label{sec-14}
+\frametitle{\verb~what~}
+\label{sec-12}
 
-\begin{verbatim}
-def circle(r):
-    """returns area and perimeter of a circle given 
-    radius r"""
-    pi = 3.14
-    area = pi * r * r
-    perimeter = 2 * pi * r
-    return area, perimeter
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{\texttt{what}}
-\label{sec-15}
-
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 
 def what( n ):
     if n < 0: n = -n
@@ -240,13 +209,14 @@ def what( n ):
             return False
         n /= 10
     return True
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{even\_digits}}
-\label{sec-16}
+\frametitle{\verb~even\_digits~}
+\label{sec-13}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def even_digits( n ):
    """returns True if all the digits of number 
    n is even returns False if all the digits 
@@ -257,25 +227,27 @@ def even_digits( n ):
             return False
         n /= 10
     return True
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{what}}
-\label{sec-17}
+\frametitle{\verb~what~}
+\label{sec-14}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def what( n ):
     i = 1
     while i * i < n:
         i += 1
     return i * i == n, i
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{\texttt{is\_perfect\_square}}
-\label{sec-18}
+\frametitle{\verb~is\_perfect\_square~}
+\label{sec-15}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def is_perfect_square( n ):
     """returns True and square root of n, 
     if n is a perfect square, otherwise 
@@ -285,32 +257,81 @@ def is_perfect_square( n ):
     while i * i < n:
         i += 1
     return i * i == n, i
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-19}
+\label{sec-16}
+
+ In this tutorial, we have learnt to,
+
 
 \begin{itemize}
-\item Functions in Python
-\item Passing parameters to a function
-\item Returning values from a function
-\item We also did few code reading exercises.
+\item Define functions in Python by using the keyword ``def''.
+\item Call the function by specifying the function name.
+\item Assign a docstring to a function by putting it as a triple quoted string.
+\item Pass parameters to a function.
+\item Return values from a function.
 \end{itemize}
 \end{frame}
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-17}
+
+
+\begin{enumerate}
+\item What will the function do?
+\lstset{language=Python}
+\begin{lstlisting}
+def what(x)
+    return x*x
+\end{lstlisting}
+\begin{itemize}
+\item Returns the square of x
+\item Returns x
+\item Function doesn't have docstring
+\item Error
+\end{itemize}
+\vspace{3pt}
+\item How many arguments can be passed to a python function?
+\begin{itemize}
+\item None
+\item One
+\item Two
+\item Any
+\end{itemize}
+\vspace{3pt}
+\item Write a function which calculates the area of a rectangle.
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Solutions}
+\label{sec-18}
+
+
+\begin{enumerate}
+\item Error
+\vspace{16pt}
+\item Any
+\vspace{12pt}
+\item \lstset{language=Python}
+\begin{lstlisting}
+def area(l,b):
+    return l * b
+\end{lstlisting}
+\end{enumerate}
+\end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-20}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
