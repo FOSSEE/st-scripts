@@ -1,4 +1,4 @@
-% Created 2010-10-28 Thu 11:37
+% Created 2011-07-12 Tue 11:20
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Advanced features of functions}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,91 +41,221 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Advanced features of Functions}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+ At the end of this tutorial, you will be able to, 
+
 
 \begin{itemize}
-\item Assigning default values to arguments
-\item Calling functions using Keyword arguments
-\item functions in standard library
+\item Assign default values to arguments, when defining functions.
+\item Define and call functions with keyword arguments.
+\item Learn some of the built-in functions available in Python standard 
+    library and the scientific computing libraries.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
+\frametitle{Pre-requisite}
+\label{sec-3}
 
-  Redefine the function \texttt{welcome}, by interchanging it's
-  arguments. Place the \texttt{name} argument with it's default value of
-  ``World'' before the \texttt{greet} argument.
+Spoken tutorial on -
+
+\begin{itemize}
+\item Getting started with functions
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Functions}
+\label{sec-4}
+
+\lstset{language=Python}
+\begin{lstlisting}
+s.strip() #strips on spaces. 
+s.strip('@') #strips the string of '@' symbols.
+
+plot(x, y) #plots x v/s y using default line style. 
+plot(x, y, 'o') #plots x v/s y with circle markers. 
+
+linspace(0,2*pi,100) #returns 100 pts. between 0 & 2pi
+linspace(0,2*pi) #returns 50 pts. between 0 & 2pi
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-5}
+
+
+\begin{itemize}
+\item Redefine the function \verb~welcome~, by interchanging it's
+  arguments.
+\vspace{3pt}  
+  Place the \verb~name~ argument with it's default value of
+  ``World'' before the \verb~greet~ argument.
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 1}
-\label{sec-3}
+\label{sec-6}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def welcome(name="World", greet):
     print greet, name
-\end{verbatim}
-  We get an error that reads \texttt{SyntaxError: non-default argument   follows default argument}. When defining a function all the
+\end{lstlisting}
+\vspace{5pt}
+  We get an error that reads, \\ \verb~SyntaxError: non-default argument follows default~ 
+\verb~argument~.
+\vspace{5pt}
+\\ When defining a function all the
   argument with default values should come at the end.
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
-\label{sec-4}
-
-  See the definition of linspace using \texttt{?} and observe how all the
-  arguments with default values are towards the end.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-5}
-
-\begin{verbatim}
-linspace?
-\end{verbatim}
-\end{frame}
-\begin{frame}
-\frametitle{Question 3}
-\label{sec-6}
-
-  Redefine the function \texttt{welcome} with a default value of
-  ``Hello'' to the \texttt{greet} argument. Then, call the function without any
-  arguments. 
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 3}
+\frametitle{Exercise 2}
 \label{sec-7}
 
-\begin{verbatim}
-def welcome(greet="Hello", name="World"):
-    print greet, name
 
-welcome()
-\end{verbatim}
-\end{frame}
-\begin{frame}
-\frametitle{Summary}
-\label{sec-8}
-
-  You should now be able to --
 \begin{itemize}
-\item define functions with default arguments
-\item call functions using keyword arguments
+\item See the definition of linspace using \verb~?~ and make a note of all the
+  arguments with default values are towards the end.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
+\frametitle{Exercise 3}
+\label{sec-8}
+
+
+\begin{itemize}
+\item Redefine the function \verb~welcome~ with a default value of
+  ``Hello'' to the \verb~greet~ argument.\\ 
+  Then, call the function without any arguments.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Keyword arguments examples}
 \label{sec-9}
+
+\lstset{language=Python}
+\begin{lstlisting}
+legend(['sin(2y)'], loc = 'center')
+
+plot(y, sin(y), 'g', linewidth = 2)
+
+annotate('local max', xy = (1.5, 1))
+
+pie(science.values(), labels = science.keys())
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Built-in functions}
+\label{sec-10}
+
+\lstset{language=Python}
+\begin{lstlisting}
+Math functions - abs, sin, ....
+ 
+Plot functions - plot, bar, pie ...
+ 
+Boolean functions - and, or, not ...
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Classes of functions}
+\label{sec-11}
+
+\lstset{language=Python}
+\begin{lstlisting}
+- pylab
+  - plot, bar, contour, boxplot, errorbar, log, polar, 
+    quiver, semilog
+
+- scipy (modules)
+  - fftpack, stats, linalg, ndimage, signal, optimize, 
+    integrate
+\end{lstlisting}
+\end{frame}
+\begin{frame}
+\frametitle{Summary}
+\label{sec-12}
+
+ In this tutorial, we have learnt to, 
+
+
+\begin{itemize}
+\item Define functions with default arguments.
+\item Call functions using keyword arguments.
+\item Use the range of functions available in the Python standard library 
+   and the Scientific Computing related packages.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-13}
+
+
+\begin{enumerate}
+\item All arguments of a function cannot have default values.
+ True or False?
+\vspace{3pt} 
+\item The following is a valid function definition. True or False? 
+\lstset{language=Python}
+\begin{lstlisting}
+def seperator(count=40, char, show=False):
+     if show:
+          print char * count
+     return char * count
+\end{lstlisting}
+\vspace{3pt}
+\item When calling a function,
+\begin{itemize}
+\item the arguments should always be in the order in which they are defined.
+\item only keyword arguments can be in any order, but should be called
+     at the beginning.
+\item only keyword arguments can be in any order, but should be called at the end.
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-14}
+
+
+\begin{enumerate}
+\item False
+\vspace{12pt}
+\item False
+\vspace{12pt}
+\item Only keyword arguments can be in any order, 
+   but should be called at the end.
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
