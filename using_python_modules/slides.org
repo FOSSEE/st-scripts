@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE: Using python modules
+#+TITLE: 
 #+AUTHOR: FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,11 +29,35 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline
-  - Running python scripts from command line
-  - Importing python modules
-  - Importing scipy \& pylab modules
-  - About python standard library.
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Using python modules}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives
+  At the end of this tutorial, you will be able to ,
+
+ - Execute python scripts from command line.
+ - Use import in scripts.
+ - Import scipy and pylab modules.
+ - Use python standard modules and 3rd party modules.
+* Pre-requisite
+Spoken tutorial on -
+- Using plot interactively.
+- Embellishing a plot.
+- Saving plots.
 * Running Python script from command line
   - Create a script, open text editor and type the following
     : print "hello world!"
@@ -78,7 +102,7 @@
     pylab.ylim(-5*scipy.pi, 5*scipy.pi)
   #+end_src
 * Exercise 1
-  Write a python script to plot a sine wave from 
+ - Write a python script to plot a sine wave from 
   #+begin_latex
     $-2\Pi$
   #+end_latex
@@ -103,21 +127,53 @@
   - More information
     - [[http://docs.python.org/library]]
 * Summary
-  - Running scripts from command line
-  - Learned about modules
-    - importing modules
-  - Python standard library
-* Thank you!
+  In this tutorial, we have learnt to,
+
+ - Run scripts from command line, 
+ - Import modules by specifying the module name followed by  
+    an asterisk. 
+ - Import only the required functions from modules by specifying 
+    the function name.
+ - Use python standard library.
+* Evaluation
+1. Which among this is correct ? 
+
+   - from scipy import plot
+   - from numpy import plot
+   - from matplotlib import plot
+   - from pylab import plot
+
+2. Which among these libraries is part of python standard library ?
+
+   - Mayavi
+   - scipy
+   - matplotlib
+   - urllib2
+
+3. Functions ``xlim()'' and ``ylim()'' can be imported to the current
+   name-space as,
+
+   - from pylab import xlim, ylim
+   - import pylab
+   - from scipy import xlim, ylim
+   - import scipy
+* Solutions
+1. from pylab import plot
+
+2. urllib2
+
+3. from pylab import xlim, ylim
+* 
 #+begin_latex
-  \begin{block}{}
+ \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
