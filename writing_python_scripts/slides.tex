@@ -1,4 +1,4 @@
-% Created 2010-10-10 Sun 23:53
+% Created 2011-07-14 Thu 16:14
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Sets}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -41,62 +41,159 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Writing python scripts}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+At the end of this tutorial, you will be able to, 
+
 
 \begin{itemize}
-\item Defining Sets
-\item Operations on sets
+\item Understand what is importing.
+\item Write your own Python modules.
+\item Understand the \_\_name\_\_==``\_\_main\_\_'' idiom
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-2}
+\frametitle{Pre-requisite}
+\label{sec-3}
 
-  Given a list of marks, \texttt{marks = [20, 23, 22, 23, 20, 21, 23]} list
-  all the duplicates
+Spoken tutorial on -
+
+\begin{itemize}
+\item Using Python modules
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 1}
-\label{sec-3}
+\frametitle{GCD}
+\label{sec-4}
 
 \lstset{language=Python}
 \begin{lstlisting}
-marks = [20, 23, 22, 23, 20, 21, 23] 
-marks_set = set(marks)
-for mark in marks_set:
-    marks.remove(mark)
+def gcd(a, b):
 
-# we are now left with only duplicates in the list marks
-duplicates = set(marks)
+    while b:
+        a, b = b, a%b
+
+    return a
+    if gcd(40, 12) == 4:
+        print "Everything OK"
+    else:
+        print "The GCD function is wrong"
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{\_\_name\_\_ variable}
+\label{sec-5}
+
+\lstset{language=Python}
+\begin{lstlisting}
+if __name__ == "__main__":
 \end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-4}
+\label{sec-6}
 
-  You should now be able to --
+In this tutorial, we have learnt to,
+
+
 \begin{itemize}
-\item make sets from lists
-\item input sets directly
-\item perform operations like union, intersection, symmetric difference
-\item check if a subset of another
-\item check containership, length and other properties similar to lists
+\item Know what happens when we import a module.
+\item Use a script as a module.
+\item Write test functions using the ``\_\_name\_\_'' idiom.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-5}
+\frametitle{Evaluation}
+\label{sec-7}
+
+
+\begin{enumerate}
+\item Which of the following variables contains the locations to search for
+   python modules
+\begin{itemize}
+\item sys.pythonpath
+\item sys.path
+\item os.pythonpath
+\item os.path
+\end{itemize}
+\vspace{8pt}
+\item A module should contain only functions.
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Evaluation contd..}
+\label{sec-8}
+
+
+\begin{itemize}
+\item The script ``utils.py'' is in one of locations of PYTHONPATH and contains
+    the following code
+\lstset{language=Python}
+\begin{lstlisting}
+def show(x):
+    print x
+
+show("Hello World")
+
+if __name__ == "__main__":
+
+    show("Hello Test")
+\end{lstlisting}
+  How do you use the ``show'' function after doing ``import utils''
+\begin{itemize}
+\item utils.show(``hey'')
+\item show(``hey'')
+\item utils.py.show(``hey'')
+\item utils.py.show.py(``hey'')
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-9}
+
+
+\begin{enumerate}
+\item sys.path
+\vspace{12pt}
+\item False
+\vspace{12pt}
+\item utils.show(``hey'')
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

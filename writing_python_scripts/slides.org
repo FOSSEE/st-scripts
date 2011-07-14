@@ -1,0 +1,133 @@
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 1
+
+#+BEAMER_HEADER_EXTRA: \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_envargs(Env Args) %4BEAMER_col(Col) %8BEAMER_extra(Extra)
+#+PROPERTY: BEAMER_col_ALL 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 :ETC
+
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation]
+
+#+LaTeX_HEADER: \usepackage[english]{babel} \usepackage{ae,aecompl}
+#+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+#+LaTeX_HEADER: \usepackage{listings}
+
+#+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
+#+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
+#+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
+
+#+TITLE: 
+#+AUTHOR: FOSSEE
+#+EMAIL:     
+#+DATE:    
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
+
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Writing python scripts}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+
+* Objectives
+At the end of this tutorial, you will be able to, 
+
+  - Understand what is importing.
+  - Write your own Python modules.
+  - Understand the \_\_name\_\_==``\_\_main\_\_" idiom
+* Pre-requisite
+Spoken tutorial on -
+- Using Python modules
+* GCD
+#+begin_src Python
+def gcd(a, b):
+
+    while b:
+        a, b = b, a%b
+
+    return a
+    if gcd(40, 12) == 4:
+        print "Everything OK"
+    else:
+        print "The GCD function is wrong"
+#+end_src
+* \_\_name\_\_ variable
+#+begin_src Python
+if __name__ == "__main__":
+#+end_src
+* Summary
+In this tutorial, we have learnt to,
+
+ - Know what happens when we import a module.
+ - Use a script as a module.
+ - Write test functions using the ``\_\_name\_\_'' idiom. 
+* Evaluation
+1. Which of the following variables contains the locations to search for
+   python modules
+   
+   - sys.pythonpath
+   - sys.path
+   - os.pythonpath
+   - os.path
+
+2. A module should contain only functions.
+   - True 
+   - False
+
+* Evaluation contd..
+- The script ``utils.py`` is in one of locations of PYTHONPATH and contains
+    the following code
+#+begin_src Python
+def show(x):
+    print x
+
+show("Hello World")
+
+if __name__ == "__main__":
+
+    show("Hello Test")
+#+end_src
+  How do you use the ``show`` function after doing ``import utils``
+
+   - utils.show("hey")
+   - show("hey")
+   - utils.py.show("hey")
+   - utils.py.show.py("hey")
+* Solutions
+1. sys.path
+
+2. False
+
+3. utils.show("hey")
+* 
+#+begin_latex
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
+  \end{center}  
+  \end{block}
+#+end_latex
