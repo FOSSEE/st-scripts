@@ -1,4 +1,4 @@
-% Created 2010-11-12 Fri 02:00
+% Created 2011-07-19 Tue 16:14
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,7 +8,6 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{soul}
-\usepackage{t1enc}
 \usepackage{textcomp}
 \usepackage{marvosym}
 \usepackage{wasysym}
@@ -24,14 +23,14 @@ commentstyle=\color{red}\itshape, stringstyle=\color{red},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \providecommand{\alert}[1]{\textbf{#1}}
 
-\title{Testing and debugging}
+\title{}
 \author{FOSSEE}
 \date{}
 
 \usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
 \begin{document}
 
-\maketitle
+
 
 
 
@@ -42,41 +41,74 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 
 \begin{frame}
-\frametitle{Outline}
-\label{sec-1}
+
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Testing and Debugging}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+\end{frame}
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  At the end of the tutorial, you will be able to,
+
 
 \begin{itemize}
-\item What software Testing is?
-\item Learn to test simple functions for their functionality.
-\item Learn how to automate tests.
-\item Need for coding style and some of the standards followed by the Python Community.
-\item Handling Errors and Exceptions.
+\item Understand what is software testing.
+\item Test simple functions for their functionality.
+\item Automate tests.
+\item Understand the need for coding style
+\item Learn  some of the standards followed by the Python Community.
+\item Handle Errors and Exceptions.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+Spoken tutorial on -
+
+\begin{itemize}
+\item Getting started with functions.
+\item Advanced Features of functions.
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{gcd function}
-\label{sec-2}
+\label{sec-4}
+
 
 \begin{itemize}
 \item Create gcd.py file with:
-\end{itemize}
-
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def gcd(a, b):
       if a % b == 0: 
           return b
       return gcd(b, a%b)
-\end{verbatim}
+\end{lstlisting}
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Test for gcd.py}
-\label{sec-3}
+\label{sec-5}
+
 
 \begin{itemize}
 \item Edit gcd.py file
-\end{itemize}
-
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def gcd(a, b):
     if b == 0:
         return a
@@ -87,68 +119,109 @@ if __name__=='__main__':
     if result != 16:
         print "Test failed"
     print "Test Passed"
-\end{verbatim}
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Idiom}
+\label{sec-6}
+
+if \_\_name\_\_ == `\_\_main\_\_':
+\end{frame}
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-7}
+
+
+\begin{itemize}
+\item Write code for gcd and write tests for it
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Structure of file}
+\label{sec-8}
+
+
+\begin{center}
+\begin{tabular}{|l|c|c|c}
+\hline
+   12    &   28     &  4  \\
+\hline   
+   18    &   36     &  18  \\
+\hline   
+   4678  &   39763  &  2339  \\
+\hline 
+\end{tabular}
+\end{center}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Automating tests}
-\label{sec-4}
+\label{sec-9}
 
-\begin{verbatim}
-if __name=__='__main__':
-for line in open('numbers.txt'):
-    numbers = line.split()
-    x = int(numbers[0])
-    y = int(numbers[1])
-    result = int(numbers[2])
-    if gcd(x, y) != result:
-        print "Failed gcd test
-                      for", x, y
-\end{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
+if __name__ == '__main__':
+     for line in open('lcmtestcases.txt'):
+         numbers = line.split()
+         x = int(numbers[0])
+         y = int(numbers[1])
+         result = int(numbers[2])
+         if lcm(x, y) != result:
+             print "Failed lcm test for", x, y
+         else:
+             print "Test passed"
+\end{lstlisting}
 \end{frame}
 \begin{frame}
-\frametitle{Question 1}
-\label{sec-5}
+\frametitle{Exercise 2}
+\label{sec-10}
 
-  For the same inputs as gcd write automated tests for LCM.
+
+\begin{itemize}
+\item For the same inputs as gcd write automated tests for LCM.
+\end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 1}
-\label{sec-6}
+\frametitle{Solution 2}
+\label{sec-11}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 def gcd(a, b):
-      if a % b == 0: 
-          return b
-      return gcd(b, a%b)
-
- def lcm(a, b):
-      return (a * b) / gcd(a, b)
-
-  if __name__ == '__main__':
+    if a % b == 0: 
+        return b
+    return gcd(b, a%b)
+def lcm(a, b):
+    return (a * b) / gcd(a, b)
+if __name__ == '__main__':
     for line in open('lcmtestcases.txt'):
-      numbers = line.split()
-      x = int(numbers[0])
-      y = int(numbers[1])
-      result = int(numbers[2])
-      if lcm(x, y) != result:
-          print "Failed lcm test for", x, y
-\end{verbatim}
+        numbers = line.split()
+        x = int(numbers[0])
+        y = int(numbers[1])
+        result = int(numbers[2])
+        if lcm(x, y) != result:
+            print "Failed lcm test for", x, y
+        else:
+            print "Test passed", result
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Meaning full names}
-\label{sec-7}
+\label{sec-12}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 
 amount = 12.68
 denom = 0.05
 nCoins = round(amount / denom)
 rAmount = nCoins * denom
-\end{verbatim}
+\end{lstlisting}
 \end{frame}
 \begin{frame}
 \frametitle{Code style}
-\label{sec-8}
+\label{sec-13}
+
 
 \begin{itemize}
 \item Four Space Indentation
@@ -157,73 +230,37 @@ rAmount = nCoins * denom
    blank line
 \item Use Docstring
 \item White space around operators
-
 \begin{itemize}
 \item l = 32 \% 4
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Question 2}
-\label{sec-9}
+\frametitle{Exercise 3}
+\label{sec-14}
+
 
 \begin{itemize}
 \item Give meaningful names to the variables in following
      code
-
 \begin{itemize}
 \item c = a / b
 \end{itemize}
-
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Solution 2}
-\label{sec-10}
+\frametitle{Solution 3}
+\label{sec-15}
 
-\begin{verbatim}
+\lstset{language=Python}
+\begin{lstlisting}
 
 quotient = dividend / divisor
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Code Snippet}
-\label{sec-11}
-
-\begin{verbatim}
-
-while True print 'Hello world'
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Error}
-\label{sec-12}
-
-\begin{lstlisting}
- while True print 'Hello world'
- \end{lstlisting}
-  \begin{lstlisting}
-  File "<stdin>", line 1, in ?
-    while True print 'Hello world'
-SyntaxError: invalid syntax
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Code Snippet}
-\label{sec-13}
-
-\begin{verbatim}
-a = raw_input("Enter a number")
-try:
-      num = int(a)
- except:
-      print "Wrong input ..."
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
 \frametitle{Using idb}
-\label{sec-14}
+\label{sec-16}
 
 \small
 \begin{lstlisting}
@@ -247,30 +284,69 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-15}
+\label{sec-17}
+
+ In this tutorial, we have learnt to, 
+        
 
 \begin{itemize}
 \item Create simple tests for a function.
-\item Learn to Automate tests using many predefined test cases.
-\item Good coding standards.
-\item Difference between syntax error and exception.
-\item Handling exception using try and except.
-\item Using \%debug for debugging on ipython.
+\item Automate tests using many predefined test cases.
+\item Use the python coding standards.
+\item Differentiate between syntax error and exception.
+\item Handle exception using ``try'' and ``except''.
+\item Use ``\%debug'' for debugging on ipython.
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Thank you!}
-\label{sec-16}
+\frametitle{Evaluation}
+\label{sec-18}
+
+
+\begin{enumerate}
+\item What is proper indentation for python code according to style guidelines?
+\begin{itemize}
+\item two space identation
+\item three space identation
+\item four Space Indentation
+\item no Indentation
+\end{itemize}
+\vspace{3pt}
+\item How do you start the debugger on ipython?
+\begin{itemize}
+\item debug
+\item \%debug
+\item \%debugger
+\item start debugger
+\end{itemize}
+\vspace{3pt}
+\item What is the idiom used for running python scripts in a standalone manner?
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-19}
+
+
+\begin{enumerate}
+\item Four Space Indentation
+\vspace{12pt}
+\item \%debug
+\vspace{12pt}
+\item if \_\_name\_\_ == `\_\_main\_\_':
+\end{enumerate}
+\end{frame}
+\begin{frame}
 
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}

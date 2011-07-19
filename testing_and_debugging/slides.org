@@ -18,7 +18,7 @@
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{red},
 #+LaTeX_HEADER:  showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
-#+TITLE:     Testing and debugging
+#+TITLE:     
 #+AUTHOR:    FOSSEE
 #+EMAIL:     
 #+DATE:    
@@ -29,13 +29,37 @@
 #+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:not-in-toc
 
-* Outline 
-  - What software Testing is? 
-  - Learn to test simple functions for their functionality.
-  - Learn how to automate tests. 
-  -  Need for coding style and some of the standards followed by the Python Community.
-  -  Handling Errors and Exceptions.
+* 
+#+begin_latex
+\begin{center}
+\vspace{12pt}
+\textcolor{blue}{\huge Testing and Debugging}
+\end{center}
+\vspace{18pt}
+\begin{center}
+\vspace{10pt}
+\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
+\vspace{5pt}
+\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
+\scriptsize Funded by National Mission on Education through ICT\\
+\scriptsize  MHRD,Govt. of India\\
+\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
+\end{center}
+#+end_latex
+* Objectives 
+  At the end of the tutorial, you will be able to,
 
+ - Understand what is software testing.
+ - Test simple functions for their functionality.
+ - Automate tests. 
+ - Understand the need for coding style 
+ - Learn  some of the standards followed by the Python Community.
+ - Handle Errors and Exceptions.
+
+* Pre-requisite
+Spoken tutorial on -
+- Getting started with functions.
+- Advanced Features of functions.   
 * gcd function
   - Create gcd.py file with:
 #+begin_src python
@@ -61,42 +85,49 @@
 
 #+end_src
 
+* Idiom
+if \_\_name\_\_ == '\_\_main\_\_':
+* Exercise 1
+ - Write code for gcd and write tests for it  
+* Structure of file
+    |   12 |    28 |    4 |
+    |   18 |    36 |   18 |
+    | 4678 | 39763 | 2339 |
 * Automating tests
-#+begin_src python
-    if __name=__='__main__':
-    for line in open('numbers.txt'):
-        numbers = line.split()
-        x = int(numbers[0])
-        y = int(numbers[1])
-        result = int(numbers[2])
-        if gcd(x, y) != result:
-            print "Failed gcd test
-                          for", x, y
-#+end_src
+#+begin_src python 
+ if __name__ == '__main__':
+      for line in open('lcmtestcases.txt'):
+          numbers = line.split()
+          x = int(numbers[0])
+          y = int(numbers[1])
+          result = int(numbers[2])
+       	  if lcm(x, y) != result:
+              print "Failed lcm test for", x, y
+          else:
+              print "Test passed"
+#+end_src 
 
-* Question 1
-  For the same inputs as gcd write automated tests for LCM.
-* Solution 1
+* Exercise 2
+- For the same inputs as gcd write automated tests for LCM.
+* Solution 2
 #+begin_src python
   def gcd(a, b):
-        if a % b == 0: 
-            return b
-        return gcd(b, a%b)
-
-   def lcm(a, b):
-        return (a * b) / gcd(a, b)
-
-    if __name__ == '__main__':
+      if a % b == 0: 
+          return b
+      return gcd(b, a%b)
+  def lcm(a, b):
+      return (a * b) / gcd(a, b)
+  if __name__ == '__main__':
       for line in open('lcmtestcases.txt'):
-        numbers = line.split()
-        x = int(numbers[0])
-        y = int(numbers[1])
-        result = int(numbers[2])
-       	if lcm(x, y) != result:
-            print "Failed lcm test for", x, y
-
+          numbers = line.split()
+          x = int(numbers[0])
+          y = int(numbers[1])
+          result = int(numbers[2])
+       	  if lcm(x, y) != result:
+              print "Failed lcm test for", x, y
+          else:
+              print "Test passed", result
 #+end_src
-
 * Meaning full names
 #+begin_src python   
    
@@ -116,45 +147,16 @@
  - White space around operators 
    - l = 32 % 4
 
-* Question 2
+* Exercise 3
    - Give meaningful names to the variables in following
      code
 	
      - c = a / b
 
-* Solution 2
+* Solution 3
 #+begin_src python
 
   quotient = dividend / divisor
-
-#+end_src
-
-* Code Snippet
-#+begin_src python
-   
-  while True print 'Hello world'
-
-#+end_src
-
-* Error
-#+begin_latex
-\begin{lstlisting}
- while True print 'Hello world'
- \end{lstlisting}
-  \begin{lstlisting}
-  File "<stdin>", line 1, in ?
-    while True print 'Hello world'
-SyntaxError: invalid syntax
-\end{lstlisting}
-#+end_latex
-
-* Code Snippet
-#+begin_src python
-  a = raw_input("Enter a number")
-  try:
-	num = int(a)
-   except:
-	print "Wrong input ..."
 
 #+end_src
 
@@ -182,28 +184,50 @@ ipdb> total
 
 #+end_latex
 
-
-
 * Summary
+ In this tutorial, we have learnt to, 
+ 	
  - Create simple tests for a function.
- - Learn to Automate tests using many predefined test cases.
- - Good coding standards.
- - Difference between syntax error and exception.
- - Handling exception using try and except.
- - Using %debug for debugging on ipython.
+ - Automate tests using many predefined test cases.
+ - Use the python coding standards.
+ - Differentiate between syntax error and exception.
+ - Handle exception using ``try'' and ``except''.
+ - Use ``%debug'' for debugging on ipython.
 
-* Thank you!
+* Evaluation
+1. What is proper indentation for python code according to style guidelines?
+
+    - two space identation
+    - three space identation
+    - four Space Indentation
+    - no Indentation 
+   
+2. How do you start the debugger on ipython?
+    - debug
+    - %debug
+    - %debugger
+    - start debugger
+  
+3. What is the idiom used for running python scripts in a standalone manner?
+* Solutions
+1. Four Space Indentation
+
+2. %debug
+
+3. if \_\_name\_\_ == '\_\_main\_\_':
+* 
 #+begin_latex
   \begin{block}{}
   \begin{center}
-  This spoken tutorial has been produced by the
-  \textcolor{blue}{FOSSEE} team, which is funded by the 
+  \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
+  \end{block}
+\begin{block}{}
   \begin{center}
-    \textcolor{blue}{National Mission on Education through \\
-      Information \& Communication Technology \\ 
-      MHRD, Govt. of India}.
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 #+end_latex
+
 
