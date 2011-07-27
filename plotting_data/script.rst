@@ -35,7 +35,7 @@ team along with the logo of MHRD }}}
 
 .. R1 
 
-Hello Friens and Welcome to this tutorial on 
+Hello Friends and Welcome to this tutorial on 
 "Plotting Experimental data".
 
 .. L2
@@ -68,7 +68,7 @@ As we know for a simple pendulum, length L is directly  proportional to
 the square of time T. We shall be plotting L and T^2 values.
 
 First  we will have  to initiate L and  T values. We initiate them as 
-sequence of values.  We define a sequence by comma seperated values 
+sequence of values.  We define a sequence by comma separated values 
 inside two square brackets. This is also called a List.
 Let's create two sequences L and t.
 
@@ -118,7 +118,7 @@ You can also specify 'o' for big dots.For this let us clear the plot first.
 
 .. R8
 
-LKet us move further.For any experimental there is always an error in 
+Let us move further.For any experimental there is always an error in 
 measurements due to instrumental and human constraints.Now we shall try 
 and take these errors into account in our plots . 
 
@@ -145,7 +145,7 @@ The error data we will use is on your screen.
 
 .. R11
 
-We shall again intialize the sequence values in the same manner as we 
+We shall again initialize the sequence values in the same manner as we 
 did for L and T.
 
 .. L11
@@ -162,7 +162,7 @@ Now to plot L vs T^2 with an error bar we use the function ``errorbar()``.
 .. L12 
 ::
 
-    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='bo')
+    errorbar(L,Tsquare,xerr=delta_L, yerr=delta_T, fmt='bo')
 
 .. R13
 
@@ -177,7 +177,7 @@ the parameters of fmt to 'r.'.
 ::
 
     clf()
-    errorbar(L,tsquare,xerr=delta_L, yerr=delta_T, fmt='r.')
+    errorbar(L,Tsquare,xerr=delta_L, yerr=delta_T, fmt='r.')
 
 .. R14
 
@@ -219,10 +219,14 @@ This brings us to the end of the end of this tutorial.In this tutorial,
 we have learnt to, 
 
 1. to declare a sequence of numbers using the function ``array``.
-#. to perform elemtwise squaring using the ``square`` function.
+#. to perform elementwise squaring using the ``square`` function.
 #. to use the various options available for plotting like dots,lines.
 #. to Plot experimental data such that we can also represent error by 
    using the ``errorbar()`` function. 
+
+.. L18
+    
+{{Show self assessment questions slide}}
 
 .. R18
 
@@ -234,13 +238,9 @@ Here are some self assessment questions for you to solve
 
 2. Plot L v/s T in red plusses.
 
-.. L18
-    
-{{Show self assessment questions slide}}
-
 .. L19
 
-(solution of self assessment questions on slide)
+{{{ solution of self assessment questions on slide }}}
 
 .. R19
 
@@ -258,7 +258,7 @@ And the answers,
 
 .. L20
 
-{{{ Show the Thankyou slide }}}
+{{{ Show the Thank you slide }}}
 
 .. R20
 

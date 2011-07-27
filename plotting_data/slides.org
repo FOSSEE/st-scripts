@@ -108,11 +108,11 @@
   
 * Summary 
   In this tutorial, we have learnt to –
-  - Declare a sequence of numbers using the function ``array``.
-  - Perform elemtwise squaring using the ``square`` function.
+  - Declare a sequence of numbers using the function ``array''.
+  - Perform elementwise squaring using the ``square'' function.
   - Use the various options available for plotting like dots,lines.
   - Plot experimental data such that we can also represent error by using the
-    ``errorbar()`` function.
+    ``errorbar()'' function.
 * Evaluation
   1. Square the following sequence. 
      - distance\_values=[2.1,4.6,8.72,9.03]
