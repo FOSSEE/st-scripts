@@ -222,6 +222,8 @@ we have learnt to,
 
 .. R18
 
+Here are some self assessment questions for you to solve
+
 1. ``loadtxt`` can read data from a file with one column
    only. True or False?
 
@@ -243,15 +245,15 @@ And the answers,
 1. False. ``loadtxt`` command can read data from files having both single 
    columns as well as multiple columns.
 
-2. A file with three columns of data seperated by spaces to be read into 
-   3 seperate sequences,
+2. A file with three columns of data separated by spaces to be read into 
+   3 separate sequences,
    we use the loadtxt command as,
 ::
 
      x = loadtxt("data.txt", unpack=True)
 
-3. If a file with three columns of data seperated by delimiters,we read 
-   it into three seperate sequences by using an additional argument of 
+3. If a file with three columns of data separated by delimiters,we read 
+   it into three separate sequences by using an additional argument of 
    delimiter in the loadtxt command
 ::
 
@@ -259,7 +261,7 @@ And the answers,
 
 .. L20
 
-{{{ Show the Thankyou slide }}}
+{{{ Show the Thank you slide }}}
 
 .. R20
 
