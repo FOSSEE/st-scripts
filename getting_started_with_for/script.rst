@@ -67,10 +67,9 @@ tutorial on "Getting started with Lists".
 In Python whitespace is significant, and the blocks are visually
 separated.The best practice is to indent the code using four spaces.
 
-As you can see in the slide, “Block B” is an inner block, indented by 
-4 spaces.
-After “Block B” the next statement in ”Block A” starts from the same 
-indentation level of other ”Block A” Statements.
+As you can see in the slide, "Block B" is an inner block, indented by
+4 spaces.  After "Block B" the next statement in "Block A" starts from
+the same indentation level of other "Block A" Statements.
 
 .. R4
 
