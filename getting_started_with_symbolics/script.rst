@@ -140,7 +140,7 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R11
 
- Define following expressions as symbolic expressions in Sage. 
+Define following expressions as symbolic expressions in Sage. 
    
    1. x^2+y^2
    #. y^2-4ax
@@ -195,7 +195,7 @@ constants. For this we have to pass an argument -- digits.
 
 Apart from the constants Sage also has a lot of built-in functions
 like ``sin``, ``cos``, ``log``, ``factorial``, ``gamma``, ``exp``,
-``arcsin`` etc ...
+``arctan`` which stands for arctangent etc ...
 
 Lets try some of them out on the Sage notebook.
 
@@ -218,13 +218,13 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R18
 
- Find the values of the following constants upto 6 digits precision
+Find the values of the following constants upto 6 digits precision
    
    1. pi^2
    #. euler_gamma^2
 
 
- Find the value of the following.
+Find the value of the following.
 
    1. sin(pi/4)
    #. ln(23)  
@@ -233,10 +233,15 @@ Pause the video here, try out the following exercise and resume the video.
 
 {{{continue from paused state}}}
 {{{ show slide showing solution 2 }}}
-
+ 
 .. R19
 
 The solutions are on your screen.
+
+  n(pi^2,digits=6)
+  n(sin(pi/4))
+  n(log(23,e))
+ 
 <pause for sometime,then continue>
 
 .. R20
@@ -273,7 +278,9 @@ Evaluating this function f for the value x=pi returns pi/2.
 
 We can also define functions that are not continuous but defined
 piecewise.  Let us define a function which is a parabola between 0
-to 1 and a constant from 1 to 2 .  Type the following 
+to 1 and a constant from 1 to 2 .We shall use the function ``Piecewise`` 
+which returns a piecewise function from a list of pairs. 
+Type the following 
 
 .. L23
 ::
@@ -335,13 +342,13 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R28
 
- Define the piecewise function. 
+Define the piecewise function. 
    f(x)=3x+2 
    when x is in the closed interval 0 to 4.
    f(x)=4x^2
    between 4 to 6. 
    
- Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
+Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
 
 .. L29
 
@@ -351,11 +358,23 @@ Pause the video here, try out the following exercise and resume the video.
 .. R29
 
 The solution is on your screen
+
+var(’x’)
+h(x)=3*x+2
+g(x)= 4*x^2
+f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
+f
+
+var(’n’)
+f=1/(n^2-1)
+sum(f(n), n, 1, oo)
+
 <pause for sometime,then continue>
 
 .. R30
 
-Moving on let us see how to perform simple calculus operations using Sage
+Moving on let us see how to perform simple calculus operations 
+using Sage
 
 For example lets try an expression first 
 
@@ -414,7 +433,8 @@ Many a times we need to find factors of an expression, we can use the
 
 .. R35
 
-One can simplify complicated expression by using the function ``simplify``. 
+One can simplify complicated expression by using the 
+function ``simplify``. 
 
 .. L35
 ::
@@ -457,7 +477,7 @@ correct
 
 .. R39
 
-as we can see when we substitute the value the answer is almost = 0 showing 
+As we can see when we substitute the value the answer is almost = 0 showing 
 the solution we got was correct.
 
 Pause the video here, try out the following exercise and resume the video. 
@@ -470,16 +490,16 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R40
 
- Differentiate the following. 
+Differentiate the following. 
       
       1. sin(x^3)+log(3x)  , degree=2
       #. x^5*log(x^7)      , degree=4 
 
- Integrate the given expression 
+Integrate the given expression 
       
       sin(x^2)+exp(x^3) 
 
- Find x
+Find x
       cos(x^2)-log(x)=0
       Does the equation have a root between 1,2. 
 
@@ -491,6 +511,18 @@ Pause the video here, try out the following exercise and resume the video.
 .. R41
 
 The solution is on your screen
+
+var(’x’)
+f(x)= x^5*log(x^7)
+diff(f(x),x,5)
+
+var(’x’)
+integral(x*sin(x^2),x)
+
+var(’x’)
+f=cos(x^2)-log(x)
+find_root(f(x)==0,1,2)
+
 <pause for sometime,then continue>
 
 .. R42
@@ -536,11 +568,17 @@ Pause the video here, try out the following exercise and resume the video.
 .. L46
 
 {{{continue from paused state}}}
-{{{ show slide showing solution 4 }}}
+{{{ show slide showing solution 5 }}}
 
 .. R47
 
 The solution is on your screen
+
+var(’x,y,z’)
+A=matrix([[x,0,1],[y,1,0],[z,0,y]])
+A.det()
+A.inverse()
+
 <pause for sometime,then continue>
 
 .. L48
