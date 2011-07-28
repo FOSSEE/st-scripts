@@ -82,11 +82,13 @@ more evident when we use strings with newlines in them.
 
 .. R6
 
-As you can see, just typing ``b`` shows that b contains a newline character but
-While typing ``print b``,it prints the string and hence the newline.
+As you can see, just typing ``b`` shows that b contains a newline 
+character but While typing ``print b``,it prints the string and hence 
+the newline.
 
-Moreover when we type just ``a``, the value a is shown only in interactive mode and
-does not have any effect on the program while running it as a script.
+Moreover when we type just ``a``, the value a is shown only in 
+interactive mode and does not have any effect on the program while 
+running it as a script.
 
 We shall look at different ways of outputting the data.
 
@@ -105,8 +107,8 @@ type
 
 .. R7
 
-As you can see, the values of x, y and z are substituted in place of the modifiers
-``%2.1f``, ``%d`` and ``%s`` respectively.
+As you can see, the values of x, y and z are substituted in place of 
+the modifiers ``%2.1f``, ``%d`` and ``%s`` respectively.
 
 Pause the video here, try out the following exercise and resume the video.
 
@@ -141,7 +143,8 @@ We have seen that ``print`` statement prints a new line character
 everytime it is called. This can be suppressed
 by using a "," at the end of the ``print`` statement.
 
-Let us see this by typing out following code on an editor as print_example.py
+Let us see this by typing out following code on an editor as 
+print_example.py
 
 .. L10
 
@@ -156,10 +159,11 @@ Let us see this by typing out following code on an editor as print_example.py
 
 .. R11
 
-Save the script as 'print_example.py' and run it using %run /home/fossee/print_example.py
+Save the script as 'print_example.py' and run it using 
+%run /home/fossee/print_example.py
 
-As we can see, the print statement when used with comma in the end, prints a
-space instead of a new line.
+As we can see, the print statement when used with comma in the 
+end, prints a space instead of a new line.
 
 Now we shall look at taking input from the user.
 We will use the ~~raw_input~~ for this.
@@ -237,8 +241,8 @@ Now let us see the type of c.
 
 .. R19
 
-We see that c is a string. This implies that anything you enter as input,it will
-be taken as a string no matter what you enter.
+We see that c is a string. This implies that anything you enter as input,
+it will be taken as a string no matter what you enter.
 
 Pause the video here, try out the following exercise and resume the video.
 
@@ -268,7 +272,8 @@ Switch to the terminal for solution.
 
 .. R22
 
-We see that when nothing is entered, an empty string is considered as input.
+We see that when nothing is entered, an empty string is considered 
+as input.
 
 raw_input also can display a prompt to assist the user.
 
@@ -297,7 +302,8 @@ Pause the video here, try out the following exercise and resume the video.
 .. R25
 
 Switch to the terminal for solution.
-The trick is to include a newline character at the end of the prompt string.
+The trick is to include a newline character at the end of the 
+prompt string.
 
 .. L25
 
@@ -309,7 +315,8 @@ The trick is to include a newline character at the end of the prompt string.
 
 .. R26
 
-It prints the newline character and hence the user enters input in the next line
+It prints the newline character and hence the user enters input in the 
+next line
 
 .. L26
 
@@ -343,8 +350,8 @@ Here are some self assessment questions for you to solve
     - float
     - char
 
-2. ``a = 2`` and ``b = 4.5``. What does ``print "a is %d and b is %2.1f" %(b, a)``
-    print?
+2. ``a = 2`` and ``b = 4.5``. What does ``print "a is %d and b is %2.
+    1f" %(b, a)`` print?
 
    - a is 2 and b is 4.5
    - a is 4 and b is 2
@@ -359,11 +366,13 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. No matter what you enter, it will be taken as a string.Hence 2.5 is a string.
+1. No matter what you enter, it will be taken as a string.Hence 2.5 is 
+   a string.
 
 2. Since 'b' is called first, It will display  integer value of 'a' 
    because the modifier used is %d. Similarly, 'b' will get the float 
-   value of 'a' due to it's modifier %2.1f. Hence 'a' will be 4 and 'b' 2.0 . 
+   value of 'a' due to it's modifier %2.1f. Hence 'a' will be 4 
+   and 'b' 2.0 . 
 
 .. L30
 
