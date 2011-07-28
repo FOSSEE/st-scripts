@@ -72,6 +72,6 @@ This brings us to the end of this tutorial.In this tutorial,we have learnt to,
 
 
 
-{{{ Show the "thank you” slide}}}
+{{{ Show the "thank you" slide}}}
 Hope you have enjoyed and found it useful. Thank you!
 

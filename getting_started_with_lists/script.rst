@@ -188,7 +188,7 @@ Let us find out the length of the list 'nonempty'.
 
 .. L13
 ::
-	 
+
     len(nonempty)
 
 .. R14
@@ -317,21 +317,21 @@ Here are some self assessment questions for you to solve
 And the answers,
 
 1. We create an empty list just by leaving the space inside the square 
-brackets empty.
-::
+   brackets empty.
+   ::
 
     empty=[]
 
 2. Yes.List can contain all the other data types, including list.
    Here is an example
-::
+   ::
 
     list_in_list=[2.3,[2,4,6],'string,'all datatypes can be there']
 
 3. Using negative indices, we can access the list from the end using 
    negative indices.
    This is an example
-::
+   ::
 
     nonempty = ['spam', 'eggs', 100, 1.234]
     nonempty[-1]
