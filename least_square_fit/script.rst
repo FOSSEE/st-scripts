@@ -58,8 +58,8 @@ Let us start this tutorial with the help of an example.
 
 .. R4
 
-Generate a least square fit line for l v/s t^2 using the data in the file
-'pendulum.txt'.
+Generate a least square fit line for l v/s t^2 using the data in the 
+file 'pendulum.txt'.
 
 .. L5
 
@@ -69,11 +69,12 @@ Generate a least square fit line for l v/s t^2 using the data in the file
 
 We have an input file generated from a simple pendulum experiment.
 
-It contains two columns of data. The first column is the length of the
-pendulum and the second is the corresponding time period of the pendulum.
+It contains two columns of data. The first column is the length 
+of the pendulum and the second is the corresponding time period 
+of the pendulum.
 
-As we know, the square of time period of a pendulum is directly proportional to
-its length, we shall plot l vs t^2 and verify this. 
+As we know, the square of time period of a pendulum is directly 
+proportional to its length, we shall plot l vs t^2 and verify this. 
 
 To read the input file and parse the data, we are going to use the
 loadtxt function.Switch to the terminal.
@@ -88,8 +89,8 @@ loadtxt function.Switch to the terminal.
 
 .. R6
 
-We can see that l and t are two sequences containing length and time values
-correspondingly.
+We can see that l and t are two sequences containing length and time 
+values correspondingly.
 
 Let us first plot l vs t^2.
 
@@ -118,8 +119,8 @@ values of m and c.
 .. R8
 
 let us now generate the A matrix with l values.
-We shall first generate a 2 x 90 matrix with the first row as l values and the
-second row as ones. Then take the transpose of it. Type
+We shall first generate a 2 x 90 matrix with the first row as l values 
+and the second row as ones. Then take the transpose of it. Type
 
 .. L9
 ::
@@ -129,7 +130,8 @@ second row as ones. Then take the transpose of it. Type
 
 .. R9
 
-We see that we have intermediate matrix. Now we need the transpose. Type
+We see that we have intermediate matrix. Now we need the transpose. 
+Type
 
 .. L10
 ::
@@ -139,7 +141,8 @@ We see that we have intermediate matrix. Now we need the transpose. Type
 
 .. R10
 
-Now we have both the matrices A and tsq. We only need to use the ``lstsq``
+Now we have both the matrices A and tsq. We only need to use 
+the ``lstsq``
 Type
 
 .. L11
@@ -161,7 +164,8 @@ is the matrix p i.e., the values of m and c.
 
 .. R12
 
-Now that we have m and c, we need to generate the fitted values of t^2. Type
+Now that we have m and c, we need to generate the fitted values of t^2. 
+Type
 
 .. L13
 ::
@@ -202,7 +206,8 @@ Here are some self assessment questions for you to solve
    - Error
    
 2. The plot of ``u`` vs ``v`` is a bunch of scattered points that show a
-    linear trend. How do you find the least square fit line of ``u`` vs ``v``.
+   linear trend. How do you find the least square fit line 
+   of ``u`` vs ``v``.
 
 .. L16
 
@@ -214,7 +219,8 @@ And the answers,
 
 1. The function ``ones_like([1, 2, 3])`` will generate 'array([1, 1, 1])'.
 
-2. The following set of commands will produce the least square fit line of ``u`` vs ``v``
+2. The following set of commands will produce the least square fit 
+   line of ``u`` vs ``v``
 ::
 
     A = array(u, ones_like(u)).T
