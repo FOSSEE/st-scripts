@@ -27,8 +27,8 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Hello friends and welcome to the tutorial on 'Basic Data types and operators'
-in Python.
+Hello friends and welcome to the tutorial on 
+'Basic Data types and operators' in Python.
 
 .. L2
 
@@ -101,9 +101,9 @@ If we now see
 
 .. R8
 
-This means that 'a' is a type of int. There are lot of functions associated
-with the int datatype, to manipulate it in different ways. These can be
-explored by doing, 
+This means that 'a' is a type of int. There are lot of functions 
+associated with the int datatype, to manipulate it in different ways. 
+These can be explored by doing, 
 
 .. L8
 ::
@@ -112,7 +112,8 @@ explored by doing,
 
 .. R9	
 
-*int* datatype can hold integers of any size lets see this by an example.
+*int* datatype can hold integers of any size lets see this by an 
+example.
 
 .. L9
 ::
@@ -122,9 +123,9 @@ explored by doing,
 
 .. R10
 
-As you can see, even when we put a value of 9 repeated 20 times, python did
-not complain. This is because python's int data-type can hold integers of any
-size.
+As you can see, even when we put a value of 9 repeated 20 times, 
+python did not complain. This is because python's int data-type can 
+hold integers of any size.
 
 Let us now look at the float data-type. 
 Decimal numbers in python are represented by the float data-type 
@@ -137,10 +138,10 @@ Decimal numbers in python are represented by the float data-type
 
 .. R11
 
-If you notice the value of output of ``p`` isn't exactly equal to ``p``.
-This is because computer saves floating point values in a specific format.
-There is always an approximation. This is why we should never rely on
-equality of floating point numbers in a program.
+If you notice the value of output of ``p`` isn't exactly equal 
+to ``p``.This is because computer saves floating point values in a 
+specific format. There is always an approximation. This is why we 
+should never rely on equality of floating point numbers in a program.
 
 The last data type in the list is complex number 
 
@@ -152,8 +153,9 @@ The last data type in the list is complex number
 .. R12
 
 it's just a combination of two floats the
-imaginary part being defined by j notation instead of i. Complex numbers
-have a lot of functions specific to them. Let us look at these 
+imaginary part being defined by j notation instead of i. Complex 
+numbers have a lot of functions specific to them. Let us look at 
+some of these functions. 
 
 .. L12
 ::
@@ -369,9 +371,9 @@ and two stars for a exponent.
 
 .. R33
 
-In case one wishes to use the current value of variable in which the result
-is stored in the expression, one can do that by putting the operator before
-`equal to`. 
+In case one wishes to use the current value of variable in which the 
+result is stored in the expression, one can do that by putting the 
+operator before `equal to`. 
 
 .. L33
 ::
@@ -454,7 +456,8 @@ Let us try both these operations.
 
 .. R42
 
-As you can see,the first operation gives an integer,whereas the second one gives a float.
+As you can see,the first operation gives an integer,whereas the second 
+one gives a float.
 Hence,though both mean the same,they give different outputs.
 
 Let us now discuss sequence data types in Python. Sequence data types
@@ -475,8 +478,8 @@ The sequence datatypes in Python are
    * string
    * tuple
 
-The list type is a container that holds a number of other objects, in the
-given order.
+The list type is a container that holds a number of other objects, in 
+the given order.
 
 .. R44
 
@@ -563,9 +566,9 @@ They can be accessed using index numbers
 
 .. R50
 
-Indexing starts from 0, from left to right and from -1 when accessing lists
-in reverse. Thus num_list[2] refers to the third element 3. and greetings
-[-2] is the second element from the end , that is 'l'.
+Indexing starts from 0, from left to right and from -1 when accessing 
+lists in reverse. Thus num_list[2] refers to the third element 3. and 
+greetings [-2] is the second element from the end , that is 'l'.
 
 Addition gives a new sequence containing both sequences 
 
@@ -649,8 +652,8 @@ For this we can do
 .. R57
 
 The syntax for slicing is, sequence variable name, square bracket, first
-element index, colon, second element index. The last element however is not
-included in the resultant list
+element index, colon, second element index. The last element however is
+not included in the resultant list
 
 .. L57
 ::
@@ -684,13 +687,13 @@ Let us see an example
 
 .. R60
 
-The, colon two, added in the end signifies all the alternate elements. This
-is why we call this concept striding because we move through the list with
-a particular stride or step. The step in this example being 2.
+The, colon two, added in the end signifies all the alternate elements. 
+This is why we call this concept striding because we move through the 
+list with a particular stride or step. The step in this example being 2.
 
 We have talked about many similar features of lists, strings and tuples.
-But there are many important features in lists that differ from strings and
-tuples. Lets see this by example.
+But there are many important features in lists that differ from strings 
+and tuples. Lets see this by example.
 
 .. L60
 ::
@@ -700,8 +703,8 @@ tuples. Lets see this by example.
 
 .. R61
 
-As you can see while the first command executes with out a problem there is
-an error on the second one.
+As you can see while the first command executes with out a problem there 
+is an error on the second one.
   
 Now lets try 
 
@@ -716,9 +719,9 @@ Its the same error. This is because strings and tuples share the property
 of being immutable. We cannot change the value at a particular index just
 by assigning a new value at that position.
 
-We have looked at different types but we need to convert one data type into
-another. Well lets one by one go through methods by which we can convert
-one data type to other
+We have looked at different types but we need to convert one data type 
+into another. Well lets one by one go through methods by which we can 
+convert one data type to other
 
 .. L62
 ::
@@ -729,8 +732,8 @@ one data type to other
 
 .. R63
 
-Python has built in functions int, float and complex to convert one number
-type data structure to another.
+Python has built in functions int, float and complex to convert one 
+number type data structure to another.
 
 .. L63
 ::
@@ -741,8 +744,8 @@ type data structure to another.
 
 .. R64
 
-As you can see the decimal part of the number is simply stripped to get the
-integer.
+As you can see the decimal part of the number is simply stripped to get 
+the integer.
 
 .. L64
 ::
@@ -753,8 +756,8 @@ integer.
 
 .. R65
 
-In case of complex number to floating point only the real value of complex
-number is taken.
+In case of complex number to floating point only the real value of 
+complex number is taken.
 
 Similarly we can convert list to tuple and tuple to list 
 
@@ -781,8 +784,8 @@ interesting problem. Let's say we have a string
 
 .. R67
 
-This produces a list with the string split at whitespace. Similarly we can
-split on some other character.
+This produces a list with the string split at whitespace. Similarly we 
+can split on some other character.
 
 .. L67
 ::
@@ -899,7 +902,8 @@ learnt to,
 #. Know the boolean datatype and operators -- +, *, /, **, % .
 #. use the sequence data types -- List,String and Tuple.
 #. Slice sequences by using the row and column numbers.
-#. Split and join a list using ``split()`` and ``join()`` function respectively.
+#. Split and join a list using ``split()`` and ``join()`` function 
+   respectively.
 #. Convert to string to tuple and vice-versa.
 
 .. L79
@@ -925,9 +929,11 @@ Here are some self assessment questions for you to solve
 
 And the answers,
 
-1. The major diffence between tuples and lists is that Tuples are immutable while lists are not.
+1. The major diffence between tuples and lists is that Tuples are 
+   immutable while lists are not.
 
-2. To split the string on whitespace, we use the function `` split`` without any argument
+2. To split the string on whitespace, we use the function `` split`` 
+   without any argument
 ::
 
     string.split()
@@ -940,3 +946,4 @@ And the answers,
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank You.
+
