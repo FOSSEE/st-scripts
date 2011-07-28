@@ -57,10 +57,10 @@ At the end of this tutorial, you will be able to,
  #. Create matrices from lists.
  #. Do basic matrix operations like addition,multiplication.
  #. Perform operations to find out the --
-    - inverse of a matrix
-    - determinant of a matrix
-    - eigen values and eigen vectors of a matrix
-    - norm of a matrix
+    - inverse of a matrix.
+    - determinant of a matrix.
+    - eigen values and eigen vectors of a matrix.
+    - norm of a matrix.
     - singular value decomposition of a matrix.
 
 .. L3
@@ -132,60 +132,60 @@ elements 5, 6, 7, 8, 9, 10, 11, 12.
 
 .. R10
 
-Switch to terminal for solution
+Switch to terminal for solution.
 m3 can be created as,
 
-.. R11
+.. L10
 
 {{{ Switch to terminal }}}
 ::
 
     m3 = array([[5,6,7,8],[9,10,11,12]])
 
-.. R12
+.. R11
 
-Let us now move to matrix matrix operations
+Let us now move to matrix matrix operations.
 We can do matrix addition and subtraction easily.
 m3+m2 does element by element addition, that is matrix addition.
 Note that both the matrices are of the same order.
 
-.. L12
+.. L11
 ::
 
     m3 + m2
 
-.. R13
+.. R12
 
 Similarly,m3-m2 does matrix subtraction, that is element by element
 subtraction.
 
-.. L13
+.. L12
 ::
 
     m3 - m2
 
-.. R14
+.. R13
 
 Now let us try,matrix multiplication
 
-.. L14
+.. L13
 ::
 
     m3 * m2
 
-.. R15
+.. R14
 
 Note that in arrays ``m3 * m2`` does element wise multiplication and not
 matrix multiplication,
 
 Matrix multiplication in matrices are done using the function ``dot()``
 
-.. L15
+.. L14
 ::
 
     dot(m3, m2)
 
-.. R16
+.. R15
 
 Due to size mismatch the multiplication could not be done and it
 returned an error,
@@ -195,33 +195,33 @@ multiplication we need to have two matrices of the order n by m and m
 by r and the resulting matrix will be of the order n by r. Thus let us
 first create two matrices which are compatible for multiplication.
 
-.. L16
+.. L15
 ::
 
     m1.shape
 
-.. R17
+.. R16
 
 matrix m1 is of the shape one by four, let us create another one, of
 the order four by two,
 
-.. L17
+.. L16
 ::
 
     m4 = array([[1,2],[3,4],[5,6],[7,8]])
     dot(m1, m4)
 
-.. R18
+.. R17
 
 Thus the ``dot()`` function is used for matrix multiplication.
 
-.. L18
+.. L17
 
-.. L19
+.. L18
 
 {{{ switch to next slide, recall from arrays }}}
 
-.. R19
+.. R18
 
 As we already learnt in arrays, the function ``identity()`` which
 creates an identity matrix of the order n by n, the function ``zeros()`` 
@@ -232,11 +232,11 @@ order m by n with all ones, the function ``ones_like()`` which creates a
 matrix with ones with the shape of the matrix passed; all these 
 functions can also be used with matrices.
 
-.. R20
+.. R19
 
 Let us now see, how to find out the transpose of a matrix we can do,
 
-.. L20
+.. L19
 
 {{{ Switch to the terminal }}}
 ::
@@ -244,19 +244,19 @@ Let us now see, how to find out the transpose of a matrix we can do,
     print m4
     m4.T
 
-.. R21
+.. R20
 
 As you saw, Matrix name dot capital T will give the transpose of a matrix
 
 Pause the video here, try out the following exercise and resume the video.
 
-.. L21
+.. L20
 
-.. L22
+.. L21
 
 {{{ switch to next slide, exercise 2:Frobenius norm & inverse }}}
 
-.. R22
+.. R21
 
 Find out the Frobenius norm of inverse of a 4 by 4
 matrix, the matrix being,
@@ -265,12 +265,12 @@ matrix, the matrix being,
 The Frobenius norm of a matrix is defined as,
 the square root of the sum of the absolute squares of its elements
 
-.. R23
+.. R22
 
 Switch to terminal for the solution
 Let us create the matrix m5 by using the data provided in the question
 
-.. L23
+.. L22
 
 {{{continue from paused state}}}
 {{{ Switch to the terminal }}}
@@ -279,7 +279,7 @@ Let us create the matrix m5 by using the data provided in the question
     m5 = arange(1,17).reshape(4,4)
     print m5
 
-.. R24
+.. R23
 
 The inverse of a matrix A, A raise to minus one, is also called the
 reciprocal matrix, such that A multiplied by A inverse will give 1. The
@@ -287,16 +287,16 @@ Frobenius norm of a matrix is defined as square root of sum of squares
 of elements in the matrix. The inverse of a matrix can be found using the 
 function ``inv(A)``.
 
-.. L24
+.. L23
 ::
 
     im5 = inv(m5)
 
-.. R25
+.. R24
 
 And the Frobenius norm of the matrix ``im5`` can be found out as,
 
-.. L25
+.. L24
 ::
 
     sum = 0
@@ -304,29 +304,29 @@ And the Frobenius norm of the matrix ``im5`` can be found out as,
         sum += each * each
     print sqrt(sum)
 
-.. R26
+.. R25
 
 Thus we have successfully obtained the frobenius norm of the matrix m5
 
 Pause the video here, try out the following exercise and resume the video.
 
-.. L26
+.. L25
 
-.. L27
+.. L26
 
 {{{ switch to next slide,exercise 3: infinity norm }}}
 
-.. R27
+.. R26
 
 Find out the infinity norm of the matrix im5. 
 The infinity norm of a matrix is defined as the maximum value of sum of 
 the absolute of elements in each row. 
 
-.. R28
+.. R27
 
 Switch to terminal for the solution
 
-.. L28
+.. L27
 
 {{{continue from paused state}}}
 {{{ Switch to the terminal }}}
@@ -337,44 +337,44 @@ Switch to terminal for the solution
         sum_rows.append(abs(i).sum())
     print max(sum_rows)
 
-.. R29
+.. R28
 
 Well! to find the Frobenius norm and Infinity norm we have an even easier
 method, and let us see that now.
 
-.. L29
+.. L28
 
 {{{ switch to slide the ``norm()`` method }}}
 
-.. R30
+.. R29
 
 The norm of a matrix can be found out using the method
 ``norm()``. 
 
-.. L30
+.. L29
 
-.. R31
+.. R30
 
 Inorder to find out the Frobenius norm of the matrix im5,
 we do,
 
-.. L31
+.. L30
 
 {{{ Switch to the terminal }}}
 ::
 
     norm(im5)
 
-.. R32
+.. R31
 
 And to find out the Infinity norm of the matrix im5, we do,
 
-.. L32
+.. L31
 ::
 
     norm(im5,ord=inf)
 
-.. R33
+.. R32
 
 This is easier when compared to the code we wrote. Read the documentation 
 of ``norm`` to read up more about ord and the possible type of norms
@@ -385,73 +385,73 @@ Now let us find out the determinant of a the matrix m5.
 The determinant of a square matrix can be obtained by using the function
 ``det()`` and the determinant of m5 can be found out as,
 
-.. L33
+.. L32
 ::
 
     det(m5)
 
-.. R34
+.. R33
 
 Hence we get the determinant.
 Let us now move on to eigen vectors and eigen values
 
-.. L34
+.. L33
 
-.. L35
+.. L34
 
 {{{ switch to next slide, eigen vectors and eigen values }}}
 
-.. R35
+.. R34
 
 The eigen values and eigen vector of a square matrix can be computed
 using the function ``eig()`` and ``eigvals()``.
 
-.. R36
+.. R35
 
 Let us find out the eigen values and eigen vectors of the matrix
 m5. We find them as,
 
-.. L36
+.. L35
 
 {{{ Switch to the terminal }}}
 ::
 
     eig(m5)
 
-.. R37
+.. R36
 
 Note that it returned a tuple of two matrices. The first element in
 the tuple are the eigen values and the second element in the tuple are
 the eigen vectors. Thus the eigen values are given by,
 
-.. L37
+.. L36
 ::
 
     eig(m5)[0]
 
-.. R38
+.. R37
 
 and the eigen vectors are given by,
 
-.. L38
+.. L37
 ::
 
     eig(m5)[1]
 
-.. R39
+.. R38
 
 The eigen values can also be computed using the function ``eigvals()`` as,
 
-.. L39
+.. L38
 ::
 
     eigvals(m5)
 
-.. L40
+.. L39
 
 {{{ switch to next slide, singular value decomposition }}}
 
-.. R40
+.. R39
 
 Now let us learn how to do the singular value decomposition or S V D
 of a matrix.
@@ -468,29 +468,29 @@ diagonal, and V* is an (n by n) unitary matrix over K,which denotes the
 conjugate transpose of V. Such a factorization is called the
 singular-value decomposition of M.
 
-.. R41
+.. R40
 
 The SVD of matrix m5 can be found as
 
-.. L41
+.. L40
 
 {{{ Switch to the terminal }}}
 ::
 
     svd(m5)
 
-.. R42
+.. R41
 
 Notice that it returned a tuple of 3 elements. The first one U the
 next one Sigma and the third one V star.
  
-.. L42
+.. L41
 
-.. L43
+.. L42
    
 {{{ switch to summary slide }}}
 
-.. R43
+.. R42
 
 This brings us to the end of the end of this tutorial.In this tutorial, 
 we have learnt to, 
@@ -506,11 +506,11 @@ we have learnt to,
  #. Calculate singular value decomposition(SVD) of a matrix using the 
     function ``svd()``.
 
-.. L44
+.. L43
 
 {{{Show self assessment questions slide}}}
 
-.. R44
+.. R43
 
 Here are some self assessment questions for you to solve
 
@@ -532,11 +532,11 @@ Here are some self assessment questions for you to solve
    - True
    - False
 
-.. L45
+.. L44
 
 {{{solution of self assessment questions on slide}}}
 
-.. R45
+.. R44
 
 And the answers,
 
@@ -550,11 +550,11 @@ And the answers,
 3. ``norm(A,ord='fro')`` and ``norm(A)`` are same, since the order='fro' 
    stands for frobenius norm. Hence true.
 
-.. L46
+.. L45
 
 {{{ switch to Thank you slide }}}
 
-.. R46
+.. R45
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!
