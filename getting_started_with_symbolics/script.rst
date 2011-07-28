@@ -271,7 +271,7 @@ Evaluating this function f for the value x=pi returns pi/2.
 
 .. L22
 ::
-	   
+
     f(pi)
 
 .. R23
@@ -342,11 +342,12 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R28
 
-Define the piecewise function. 
-   f(x)=3x+2 
-   when x is in the closed interval 0 to 4.
-   f(x)=4x^2
-   between 4 to 6. 
+Define the piecewise function
+
+::
+  
+    f(x)=3x+2 when x is in the closed interval 0 to 4.  
+    f(x)=4x^2 between 4 to 6.
    
 Sum  of 1/(n^2-1) where n ranges from 1 to infinity. 
 
@@ -359,13 +360,13 @@ Sum  of 1/(n^2-1) where n ranges from 1 to infinity.
 
 The solution is on your screen
 
-var(’x’)
+var('x')
 h(x)=3*x+2
 g(x)= 4*x^2
-f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
+f = Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
 f
 
-var(’n’)
+var('n')
 f=1/(n^2-1)
 sum(f(n), n, 1, oo)
 
@@ -512,14 +513,14 @@ Find x
 
 The solution is on your screen
 
-var(’x’)
+var('x')
 f(x)= x^5*log(x^7)
 diff(f(x),x,5)
 
-var(’x’)
+var('x')
 integral(x*sin(x^2),x)
 
-var(’x’)
+var('x')
 f=cos(x^2)-log(x)
 find_root(f(x)==0,1,2)
 
@@ -574,7 +575,7 @@ Pause the video here, try out the following exercise and resume the video.
 
 The solution is on your screen
 
-var(’x,y,z’)
+var('x,y,z')
 A=matrix([[x,0,1],[y,1,0],[z,0,y]])
 A.det()
 A.inverse()
@@ -630,18 +631,18 @@ Here are some self assessment questions for you to solve
 And the answers,
 
 1. We define a symbol using the function ``var``.In this case it will be
-::
+   ::
 
     var('y')
 
 2. The value of pi upto precision 5 digits is given as,
-::
+   ::
 
     n(pi,5)
 
 3. The third order differential function can be found out by adding the 
    third argument which states the order.The syntax will be,
-::
+   ::
 
     diff(f(x),x,3)
 
