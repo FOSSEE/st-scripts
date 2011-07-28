@@ -13,6 +13,7 @@
 #+LaTeX_HEADER: \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 
 #+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage{amsmath}
 
 #+LaTeX_HEADER:\lstset{language=Python, basicstyle=\ttfamily\bfseries,
 #+LaTeX_HEADER:  commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
@@ -63,37 +64,23 @@
   - Getting started with Lists.
   - Getting started with Arrays.
   - Accessing parts of Arrays.
-* Creating a matrix
-  - Creating a matrix using direct data
-  : In []: m1 = array([1, 2, 3, 4])
-  - Creating a matrix using lists
-  : In []: l1 = [[1,2,3,4],[5,6,7,8]]
-  : In []: m2 = array(l1)
 * Exercise 1
-  Create a (2, 4) matrix ~m3~
-  : m3 = [[5,  6,  7,  8],
-  :       [9, 10, 11, 12
-* Matrix operations
-  - Element-wise addition (both matrix should be of order ~mXn~)
-    : In []: m3 + m2
-  - Element-wise subtraction (both matrix should be of order ~mXn~)
-    : In []: m3 - m2
-
+ - Create a two dimensional matrix ~m3~ of order (2, 4) with
+   elements 5, 6, 7, 8, 9, 10, 11, 12.
 * Recall from ~array~
-  - The functions 
-    - ~identity(n)~ - 
-      creates an identity matrix of order ~nXn~
-    - ~zeros((m,n))~ - 
-      creates a matrix of order ~mXn~ with 0's
-    - ~zeros_like(A)~ - 
-      creates a matrix with 0's similar to the shape of matrix ~A~
+  The following functions can also be used with matrices
+    - ~identity(n)~ 
+      - creates an identity matrix of order ~nXn~
+    - ~zeros((m,n))~ 
+      - creates a matrix of order ~mXn~ with 0's
+    - ~zeros\_like(A)~  
+      - creates a matrix with 0's similar to the shape of matrix ~A~
     - ~ones((m,n))~
-      creates a matrix of order ~mXn~ with 1's
-    - ~ones_like(A)~
-      creates a matrix with 1's similar to the shape of matrix ~A~
-  Can also be used with matrices
+      - creates a matrix of order ~mXn~ with 1's
+    - ~ones\_like(A)~
+      - creates a matrix with 1's similar to the shape of matrix ~A~
 * Exercise 2 : Frobenius norm \& inverse
-   Find out the Frobenius norm of inverse of a ~4 X 4~ matrix.
+  - Find out the Frobenius norm of inverse of a ~4 X 4~ matrix.
   : 
   The matrix is
   : m5 = arange(1,17).reshape(4,4)
@@ -108,7 +95,7 @@
         $||A||_F = [\sum_{i,j} abs(a_{i,j})^2]^{1/2}$
       #+end_latex
 * Exercise 3 : Infinity norm
-  Find the infinity norm of the matrix ~im5~
+  - Find the infinity norm of the matrix ~im5~
   : 
   - Infinity norm is defined as,
     #+begin_latex
@@ -120,17 +107,11 @@
   - Infinity norm
     : In []: norm(im5, ord=inf)
 * eigen values \& eigen vectors
-  Find out the eigen values and eigen vectors of the matrix ~m5~.
-  : 
-  - eigen values and vectors can be found out using
-    : In []: eig(m5)
-    returns a tuple of /eigen values/ and /eigen vectors/
-  - /eigen values/ in tuple
-    - ~In []: eig(m5)[0]~
-  - /eigen vectors/ in tuple
-    - ~In []: eig(m5)[1]~
-  - Computing /eigen values/ using ~eigvals()~
-    : In []: eigvals(m5)
+  eigen values and eigen vectors
+  - eig()
+ 
+  Only eigen values
+  - eigvals()
 * Singular Value Decomposition (~svd~)
   #+begin_latex
     $M = U \Sigma V^*$
@@ -153,15 +134,39 @@
 
   - Create matrices using arrays.
   - Add and multiply the elements of matrix.
-  - Find out the inverse of a matrix,using the function ``inv()``.
-  - Use the function ``det()`` to find the determinant of a matrix.
+  - Find out the inverse of a matrix,using the function ``inv()''.
+  - Use the function ``det()'' to find the determinant of a matrix.
   - Calculate the norm of a matrix using the for loop and also using 
-    the function ``norm()``.
+    the function ``norm()''.
   - Find out the eigen vectors and eigen values of a matrix, using 
-    functions ``eig()`` and ``eigvals()``.
+    functions ``eig()'' and ``eigvals()''.
   - Calculate singular value decomposition(SVD) of a matrix using the 
-    function ``svd()``.
+    function ``svd()''.
  
+* Evaluation
+1. A and B are two array objects. Element wise multiplication in
+   matrices are done by,
+
+   - A * B
+   - multiply(A, B)
+   - dot(A, B)
+   - element\_multiply(A,B)
+
+2. ``eig(A)[ 1 ]'' and ``eigvals(A)'' are the same.
+
+   - True
+   - False
+
+3. ``norm(A,ord='fro')'' is the same as ``norm(A)'' ?
+
+   - True
+   - False
+* Solutions
+1. A * B
+
+2. False 
+
+3. True
 * 
 #+begin_latex
   \begin{block}{}

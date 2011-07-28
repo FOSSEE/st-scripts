@@ -1,4 +1,4 @@
-% Created 2011-06-06 Mon 13:56
+% Created 2011-07-28 Thu 12:41
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,6 +18,7 @@
 \usepackage[english]{babel} \usepackage{ae,aecompl}
 \usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
 \usepackage{listings}
+\usepackage{amsmath}
 \lstset{language=Python, basicstyle=\ttfamily\bfseries,
 commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
 showstringspaces=false, keywordstyle=\color{blue}\bfseries}
@@ -90,82 +91,52 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Accessing parts of Arrays.
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Creating a matrix}
+\begin{frame}
+\frametitle{Exercise 1}
 \label{sec-4}
 
 
 \begin{itemize}
-\item Creating a matrix using direct data
-\end{itemize}
-\begin{verbatim}
-   In []: m1 = array([1, 2, 3, 4])
-\end{verbatim}
-
-
-\begin{itemize}
-\item Creating a matrix using lists
-\end{itemize}
-\begin{verbatim}
-   In []: l1 = [[1,2,3,4],[5,6,7,8]]
-   In []: m2 = array(l1)
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Exercise 1}
-\label{sec-5}
-
-  Create a (2, 4) matrix \verb~m3~
-\begin{verbatim}
-   m3 = [[5,  6,  7,  8],
-         [9, 10, 11, 12
-\end{verbatim}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Matrix operations}
-\label{sec-6}
-
-
-\begin{itemize}
-\item Element-wise addition (both matrix should be of order \verb~mXn~)
-\begin{verbatim}
-     In []: m3 + m2
-\end{verbatim}
-
-\item Element-wise subtraction (both matrix should be of order \verb~mXn~)
-\begin{verbatim}
-     In []: m3 - m2
-\end{verbatim}
-
+\item Create a two dimensional matrix \verb~m3~ of order (2, 4) with
+   elements \\ 5, 6, 7, 8, 9, 10, 11, 12.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Recall from \verb~array~}
-\label{sec-7}
+\label{sec-5}
 
+  The following functions can also be used with matrices
 
 \begin{itemize}
-\item The functions
+\item \verb~identity(n)~
 \begin{itemize}
-\item \verb~identity(n)~ - 
-      creates an identity matrix of order \verb~nXn~
-\item \verb~zeros((m,n))~ - 
-      creates a matrix of order \verb~mXn~ with 0's
-\item \verb~zeros_like(A)~ - 
-      creates a matrix with 0's similar to the shape of matrix \verb~A~
+\item creates an identity matrix of order \verb~nXn~
+\end{itemize}
+\item \verb~zeros((m,n))~
+\begin{itemize}
+\item creates a matrix of order \verb~mXn~ with 0's
+\end{itemize}
+\item \verb~zeros\_like(A)~
+\begin{itemize}
+\item creates a matrix with 0's similar to the shape of matrix \verb~A~
+\end{itemize}
 \item \verb~ones((m,n))~
-      creates a matrix of order \verb~mXn~ with 1's
-\item \verb~ones_like(A)~
-      creates a matrix with 1's similar to the shape of matrix \verb~A~
+\begin{itemize}
+\item creates a matrix of order \verb~mXn~ with 1's
+\end{itemize}
+\item \verb~ones\_like(A)~
+\begin{itemize}
+\item creates a matrix with 1's similar to the shape of matrix \verb~A~
 \end{itemize}
 \end{itemize}
-  Can also be used with matrices
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 2 : Frobenius norm \& inverse}
-\label{sec-8}
+\label{sec-6}
 
-   Find out the Frobenius norm of inverse of a \verb~4 X 4~ matrix.
+\begin{itemize}
+\item Find out the Frobenius norm of inverse of a \verb~4 X 4~ matrix.
+\end{itemize}
 \begin{verbatim}
    
 \end{verbatim}
@@ -189,9 +160,11 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Exercise 3 : Infinity norm}
-\label{sec-9}
+\label{sec-7}
 
-  Find the infinity norm of the matrix \verb~im5~
+\begin{itemize}
+\item Find the infinity norm of the matrix \verb~im5~
+\end{itemize}
 \begin{verbatim}
    
 \end{verbatim}
@@ -204,7 +177,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{\verb~norm()~ method}
-\label{sec-10}
+\label{sec-8}
 
 
 \begin{itemize}
@@ -220,41 +193,25 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
+\begin{frame}
 \frametitle{eigen values \& eigen vectors}
-\label{sec-11}
+\label{sec-9}
 
-  Find out the eigen values and eigen vectors of the matrix \verb~m5~.
-\begin{verbatim}
-   
-\end{verbatim}
-
+  eigen values and eigen vectors
 
 \begin{itemize}
-\item eigen values and vectors can be found out using
-\begin{verbatim}
-     In []: eig(m5)
-\end{verbatim}
-
-    returns a tuple of \emph{eigen values} and \emph{eigen vectors}
-\item \emph{eigen values} in tuple
-\begin{itemize}
-\item \verb~In []: eig(m5)[0]~
+\item eig()
 \end{itemize}
-\item \emph{eigen vectors} in tuple
-\begin{itemize}
-\item \verb~In []: eig(m5)[1]~
-\end{itemize}
-\item Computing \emph{eigen values} using \verb~eigvals()~
-\begin{verbatim}
-     In []: eigvals(m5)
-\end{verbatim}
+ 
+  Only eigen values
 
+\begin{itemize}
+\item eigvals()
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Singular Value Decomposition (\verb~svd~)}
-\label{sec-12}
+\label{sec-10}
 
     $M = U \Sigma V^*$
 
@@ -272,7 +229,7 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-13}
+\label{sec-11}
 
   In this tutorial, we have learnt to, 
 
@@ -280,16 +237,57 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \begin{itemize}
 \item Create matrices using arrays.
 \item Add and multiply the elements of matrix.
-\item Find out the inverse of a matrix,using the function ``inv()``.
-\item Use the function ``det()`` to find the determinant of a matrix.
+\item Find out the inverse of a matrix,using the function ``inv()''.
+\item Use the function ``det()'' to find the determinant of a matrix.
 \item Calculate the norm of a matrix using the for loop and also using 
-    the function ``norm()``.
+    the function ``norm()''.
 \item Find out the eigen vectors and eigen values of a matrix, using 
-    functions ``eig()`` and ``eigvals()``.
+    functions ``eig()'' and ``eigvals()''.
 \item Calculate singular value decomposition(SVD) of a matrix using the 
-    function ``svd()``.
+    function ``svd()''.
 \end{itemize}
  
+\end{frame}
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-12}
+
+
+\begin{enumerate}
+\item A and B are two array objects. Element wise multiplication in
+   matrices are done by,
+\begin{itemize}
+\item A * B
+\item multiply(A, B)
+\item dot(A, B)
+\item element\_multiply(A,B)
+\end{itemize}
+\vspace{5pt}
+\item ``eig(A)[ 1 ]'' and ``eigvals(A)'' are the same.
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\vspace{5pt}
+\item ``norm(A,ord='fro')'' is the same as ``norm(A)'' ?
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-13}
+
+
+\begin{enumerate}
+\item A * B
+\vspace{12pt}
+\item False
+\vspace{12pt}
+\item True
+\end{enumerate}
 \end{frame}
 \begin{frame}
 
