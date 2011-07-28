@@ -9,7 +9,7 @@
 .. #. define functions with arguments
 .. #. learn about docstrings
 .. #. learn about return values
-..     can return multiple values
+..    can return multiple values
 .. #. read code
 
 
@@ -40,7 +40,8 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Hello friends and welcome to the tutorial 'Getting started with functions'.
+Hello friends and welcome to the tutorial on 
+'Getting started with functions'.
 
 .. L2
 
@@ -63,7 +64,7 @@ At the end of this tutorial, you will be able to,
 .. R3
 
 Before beginning this tutorial,we would suggest you to complete the 
-tutorial on "Conditionals" and "Loops".
+tutorial on "Conditionals".
 
 .. L4
 
@@ -73,8 +74,8 @@ tutorial on "Conditionals" and "Loops".
 
 While writing code, we always want to reduce the number of lines of
 code, and functions is a way of reusing the code. Thus the same lines
-of code can be used as many times as needed. A function is a portion of code
-within a larger program that performs a specific task and is
+of code can be used as many times as needed. A function is a portion of 
+code within a larger program that performs a specific task and is
 relatively independent of the remaining code. Now let us get more
 familiar with functions,
 
@@ -181,7 +182,7 @@ World``.
 
 .. R14
 
-now we call the function as,
+Now we call the function as,
 
 .. L14
 ::
@@ -384,7 +385,8 @@ Pause here and try to figure out what the function ``what`` does.
      return True
 
 {{{continue from paused state}}}
-It will return true if ``n % 2`` is not equal to 1 and will return false, otherwise.
+It will return true if ``n % 2`` is not equal to 1 and will return 
+false, otherwise.
 
 .. L31
 
@@ -424,8 +426,9 @@ Pause here and try to figure out what the function ``what`` does.
      return i * i == n, i
 
 {{{continue from paused state}}}
-The function returns two values. One it returns the result of the while statement
-whether true of false, and second it prints the value that `ii`` currently holds.
+The function returns two values. One it returns the result of the while 
+statement whether true of false, and second it prints the value that `i`` 
+currently holds.
 
 .. L34
 
@@ -442,8 +445,8 @@ whether true of false, and second it prints the value that `ii`` currently holds
 
 .. R34
 
-Here, the function returns ``True`` and the square root of ``n`` if n is a
-perfect square, otherwise it returns ``False`` and the square root of
+Here, the function returns ``True`` and the square root of ``n`` if n is 
+a perfect square, otherwise it returns ``False`` and the square root of
 the next perfect square.
 
 .. L35
@@ -457,7 +460,8 @@ we have learnt to,
 
   1. Define functions in Python by using the keyword ``def``.
   #. Call the function by specifying the function name.
-  #. Assign a docstring to a function by putting it as a triple quoted string.
+  #. Assign a docstring to a function by putting it as a triple quoted 
+     string.
   #. Pass parameters to a function.
   #. Return values from a function.
 
@@ -518,3 +522,4 @@ And the answers,
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!
+
