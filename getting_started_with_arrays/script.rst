@@ -192,15 +192,14 @@ Pause the video here, try out the following exercise and resume the video.
 Find out the shape of the other arrays i.e. a1, a3, ar that we have 
 created.
 
+.. R15
+
+Switch to the terminal for solution
+
 .. L15
 
 {{{ Continue from paused state }}}
-
-.. R15
-
-It can be done as,
-
-.. L16
+{{{ Switch to the terminal }}}
 ::
 
     a1.shape
@@ -212,7 +211,7 @@ It can be done as,
 Now let us try to create a new array with a mix of elements and see what
 will happen,
 
-.. L17
+.. L16
 ::
 
     a4 = array([1,2,3,'a string'])
@@ -224,7 +223,7 @@ arrays handle elements with the same datatype, but it didn't raise an
 error. Let us check the values in the new array created. 
 Type a4 in the terminal,
 
-.. L18
+.. L17
 ::
 
     a4
@@ -239,6 +238,8 @@ strings, though our first three elements were meant to be integers.
 Also,if you have noticed,we got something like 'dtype S8' in the output.
 dtype is nothing but the datatype which is the minimum type required
 to hold the objects in the sequence.
+
+.. L18
 
 .. L19
 
@@ -257,6 +258,8 @@ The function ``identity()`` takes an integer argument which specifies the
 size of the desired matrix,
 
 .. L20
+
+{{{ Switch to the terminal }}}
 ::
 
     identity(3)
@@ -289,19 +292,18 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R22
 
-We learned two functions ``identity()`` and ``zeros()``, find out more
-about the functions ``zeros_like()``, ``ones()``, ``ones_like()``.
+Find out about the functions 
+    - zeros_like()
+    - ones()
+    - ones_like()
 
-.. L23
-
-{{{ continue from paused state }}}
-{{{ Switch to the terminal }}}
+< pause for some time and then continue >
 
 .. R23
 
 Try the following, first check the value of a1,
 
-.. L24
+.. L23
 ::
 
     a1
@@ -311,16 +313,17 @@ Try the following, first check the value of a1,
 We see that ``a1`` is a single dimensional array, 
 Let us now try a1*2
 
-.. L25
+.. L24
 ::
 
     a1 * 2
 
 .. R25
+
 It returned a new array with all the elements multiplied by 2.
 Now let us again check the contents of a1
 
-.. L26
+.. L25
 ::
 
     a1
@@ -329,17 +332,15 @@ Now let us again check the contents of a1
 
 note that the value of a1 still remains the same.
 
-.. R27
-
 Similarly with addition,
 
-.. L27
+.. L26
 ::
 
     a1 + 2
     a1
 
-.. R28
+.. R27
 
 it returns a new array, with all the elements summed with two. But
 again notice that the value of a1 has not been changed.
@@ -347,53 +348,53 @@ again notice that the value of a1 has not been changed.
 You may change the value of a1 by simply assigning the newly returned
 array as,
 
-.. L28
+.. L27
 ::
 
     a1 += 2
 
-.. R29
+.. R28
 
-Notice the change in elements of a,
+Notice the change in elements of a by typing 'a'
 
-.. L29
+.. L28
 ::
 
     a
 
-.. R30
+.. R29
 
 We can use all the mathematical operations with arrays, Now let us try 
 this
 
-.. L30
+.. L29
 ::
 
    a1 = array([1,2,3,4])
    a2 = array([1,2,3,4])
    a1 + a2
 
-.. R31
+.. R30
 
 This returns an array with element by element addition
 
-.. L31
+.. L30
 ::
 
     a1 * a2
 
-.. R32
+.. R31
 
 a1*a2 returns an array with element by element multiplication, notice 
 that it does not perform matrix multiplication.
 
-.. L32
+.. L31
 
-.. L33
+.. L32
 
 {{{ switch to summary slide }}}
 
-.. R33
+.. R32
 
 This brings us to the end of the end of this tutorial.In this tutorial, 
 we have learnt to, 
@@ -408,13 +409,13 @@ we have learnt to,
     - zeros() & zeros_like()
     - ones() & ones_like()
 
-.. L34
+.. L33
 
 {{{Show self assessment questions slide}}}
 
-.. R34
+.. R33
 
-Here are some self assessment questionss for you to solve
+Here are some self assessment questions for you to solve
 
 1. ``x = array([1, 2, 3], [5, 6, 7])`` is a valid statement
 
@@ -435,11 +436,11 @@ Here are some self assessment questionss for you to solve
    - Both statement A and B are correct.
    - Both statement A and B are incorrect.
 
-.. L35
+.. L34
 
 {{{solution of self assessment questions on slide}}}
 
-.. R35
+.. R34
 
 And the answers,
 
@@ -453,11 +454,11 @@ And the answers,
 2. The function ``ones_like()`` returns an array of ones with the same 
    shape and type as a given array.
 
-.. L36
+.. L35
     
 {{{ switch to thank you slide }}}
 
-.. R36
+.. R35
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!

@@ -317,7 +317,7 @@ We can see the contents of the image, using the command
 
 We do not see white and black because, ``pylab`` has mapped 
 white and black to different colors. 
-This can be changed by using a different colormap. 
+This can be changed by using a different color map. 
 
 To see that ``I`` is really, just an array, we say, I, at the prompt 
 
@@ -460,6 +460,10 @@ Pause the video here, try out the following exercise and resume the video.
 
  Obtain the elements [[23, 24], [33, -34]] from C. 
 
+.. R40
+
+Switch to the terminal for solution.
+
 .. L40
 
 {{{continue from paused state}}}
@@ -468,10 +472,8 @@ Pause the video here, try out the following exercise and resume the video.
 
     C[1:3, 2:4] 
 
-.. R40
+.. R41
 
-Switch to the terminal for solution.
-<Type the command>
 C[1:3, 2:4] will give us the required elements. 
 
 Now, we wish to obtain the top left quarter of the image. How do
@@ -484,35 +486,39 @@ columns.
 
     I[:150, :150]
 
-.. R41
+.. R42
 
 I[:150, :150] gives us the top-left corner of the image. 
 
-.. R42
+.. R43
 
 We use the ``imshow`` command to see the slice we obtained in the
 form of an image and confirm. 
 
-.. L42
+.. L43
 ::
 
     imshow(I[:150, :150])
 
-.. R43
+.. R44
 
 Pause the video here, try out the following exercise and resume the video.
 
-.. L43
-
 .. L44
+
+.. L45
 
 {{{ show slide containing exercise 5 }}} 
 
-.. R44
+.. R45
 
  Obtain the square in the center of the image.
 
-.. L45
+.. R46
+
+Switch to the terminal for solution.
+
+.. L46
 
 {{{continue from paused state}}}
 {{{ Switch to the terminal }}}
@@ -520,10 +526,8 @@ Pause the video here, try out the following exercise and resume the video.
 
     imshow(I[75:225, 75:225])
 
-.. R45
+.. R47
 
-Switch to the terminal for solution.
-<Type the command>
 Hence, we get the center of the image.
 
 Our next goal is to compress the image, using a very simple
@@ -537,78 +541,78 @@ We shall first learn the idea of striding using the smaller array
 C. Suppose we wish to access only the odd rows and columns (first,
 third, fifth). We do this by, 
 
-.. L46
+.. L47
 ::
 
     C[0:5:2, 0:5:2]
 
-.. R46
-
-.. R47
+.. R48
 
 if we wish to be explicit, we say, 
 
-.. L47
+.. L48
 ::
 
     C[::2, ::2]
 
-.. R48
+.. R49
 
 This is very similar to the step specified to the ``range``
 function. It specifies, the jump or step in which to move, while
 accessing the elements. If no step is specified, a default value
 of 1 is assumed. 
 
-.. L48
+.. L49
 ::
 
     C[1::2, ::2] 
 
-.. R49
+.. R50
 
 we get the elements, [[21, 23, 0], [41, 43, 0]]
 Pause the video here, try out the following exercise and resume the video.
 
-.. L49
-
 .. L50
+
+.. L51
 
 {{{ show slide containing exercise 6 }}} 
 
-.. R50
+.. R51
 
  Obtain the following. 
 [[12, 0], [42, 0]]
 [[12, 13, 14], [0, 0, 0]]
 
-.. L51
+.. R52
+
+The solution is on your screen.
+
+.. L52
 
 {{{continue from paused state}}}
 {{{ show slide containing Solution 6 }}} 
 
-.. R51
-
-The solution is on your screen.
+.. R53
 
 Now, that we know how to stride over an array, we can drop
 alternate rows and columns out of the image in I. 
 
-.. L52
+.. L53
 ::
 
     I[::2, ::2]
 
-.. R52
+.. R54
 
 To see this image, we say, 
 
-.. L53
+.. L54
 ::
 
     imshow(I[::2, ::2])
 
-.. R53
+.. R55
 
 This does not have much data to notice any real difference, but
 notice that the scale has reduced to show that we have dropped
@@ -616,18 +620,16 @@ alternate rows and columns. If you notice carefully, you will be
 able to observe some blurring near the edges. To notice this
 effect more clearly, increase the step to 4. 
 
-.. L54
+.. L55
 ::
 
     imshow(I[::4, ::4])
 
-.. R54
-
-.. L55
+.. L56
 
 {{{ show summary slide }}}
 
-.. R55
+.. R56
 
 This brings us to the end of this tutorial. In this tutorial, we
 have learnt to, 
@@ -639,11 +641,11 @@ have learnt to,
  #. Slice and stride on arrays.
  #. Read images into arrays and manipulate them.
 
-.. L56
+.. L57
 
 {{{Show self assessment questions slide}}}
 
-.. R56
+.. R57
 
 Here are some self assessment questions for you to solve
 
@@ -675,11 +677,11 @@ Change the array to
     B = array([[10, 11, 10, 11],
                [20, 21, 20, 21]])
 
-.. L57
+.. L58
   
 {{{solution of self assessment questions on slide}}}
 
-.. R57
+.. R58
 
 And the answers,
 
@@ -699,11 +701,11 @@ And the answers,
 
     B[:2, 2:] = B[:2, :2]
 
-.. L58
+.. L59
 
 {{{ Show the Thank you slide }}}
 
-.. R58
+.. R59
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!

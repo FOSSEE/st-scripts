@@ -144,10 +144,10 @@ m3 can be created as,
 
 .. R11
 
-Let us now move to matrix matrix operations.
+Let us now move to matrix operations.
 We can do matrix addition and subtraction easily.
 m3+m2 does element by element addition, that is matrix addition.
-Note that both the matrices are of the same order.
+Note that both the matrices should be of the same order.
 
 .. L11
 ::
@@ -187,8 +187,8 @@ Matrix multiplication in matrices are done using the function ``dot()``
 
 .. R15
 
-Due to size mismatch the multiplication could not be done and it
-returned an error,
+Due to size mismatch, the multiplication could not be done and it
+returned an error.
 
 Now let us see an example for matrix multiplication. For doing matrix
 multiplication we need to have two matrices of the order n by m and m
@@ -306,7 +306,7 @@ And the Frobenius norm of the matrix ``im5`` can be found out as,
 
 .. R25
 
-Thus we have successfully obtained the frobenius norm of the matrix m5
+Thus we have successfully obtained the Frobenius norm of the matrix m5
 
 Pause the video here, try out the following exercise and resume the video.
 
@@ -355,7 +355,7 @@ The norm of a matrix can be found out using the method
 
 .. R30
 
-Inorder to find out the Frobenius norm of the matrix im5,
+In order to find out the Frobenius norm of the matrix im5,
 we do,
 
 .. L30
@@ -377,7 +377,7 @@ And to find out the Infinity norm of the matrix im5, we do,
 .. R32
 
 This is easier when compared to the code we wrote. Read the documentation 
-of ``norm`` to read up more about ord and the possible type of norms
+of ``norm`` to read up more about ``ord`` and the possible type of norms
 the norm function produces.
 
 Now let us find out the determinant of a the matrix m5. 
@@ -545,10 +545,10 @@ And the answers,
 
 2. False.
    ``eig(A)[0]`` and ``eigvals(A)`` are same, that is both will give the 
-   eigen values of matrrix A.
+   eigen values of matrix A.
 
 3. ``norm(A,ord='fro')`` and ``norm(A)`` are same, since the order='fro' 
-   stands for frobenius norm. Hence true.
+   stands for Frobenius norm. Hence true.
 
 .. L45
 
