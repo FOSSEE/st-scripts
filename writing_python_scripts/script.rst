@@ -33,7 +33,7 @@ Hello friends and welcome to the tutorial on "Writing Python scripts".
 
 {{{ Show the slide containing the objectives }}}
 
-..R2
+.. R2
 
 At the end of this tutorial, you will be able to, 
 
@@ -100,7 +100,7 @@ every time the script is run.
 
 .. R8
 
-Let us save the file as script.py in ``/home/fossee/gcd_script.py``
+Let us save the file as gcd_script.py in ``/home/fossee/gcd_script.py``
 
 .. L8
 

@@ -175,9 +175,9 @@ Pause the video here, try out the following exercise and resume the video.
 .. R13
 
 Well thats where automating tests come in. We can run many tests to 
-check where our code can break. Lets see this with an example.First lets try 
-and automate tests on the  gcd function. For this we will write a file 
-with test cases and call the function for all of them.
+check where our code can break. Lets see this with an example.First lets 
+try and automate tests on the  gcd function. For this we will write a 
+file with test cases and call the function for all of them.
 
 .. L13
 
@@ -193,8 +193,8 @@ with test cases and call the function for all of them.
 
 The file structure is shown in form a table here.
 
-The structure of the file will be the two parameters and the output result 
-seperated by space
+The structure of the file will be the two parameters and the output 
+result seperated by space
     
 .. R15
    
@@ -230,11 +230,13 @@ We add this code piece to automate the test.
 .. L17
 
 Let us now test this code. 
-Open the file gcd.py which we had created before and add this piece of code
+Open the file gcd.py which we had created before and add this piece 
+of code
 
 .. R17
 
-{{{ Open the file gcd.py and add the above piece of code appropriately }}}
+{{{ Open the file gcd.py and add the above piece of code 
+    appropriately }}}
 
 .. R18
 
@@ -265,8 +267,8 @@ For the same inputs as gcd write automated tests for LCM.
 
 .. R21
 
-We shall make use of the same automated test code which we had used for GCD
-with minor changes.
+We shall make use of the same automated test code which we had used for 
+GCD with minor changes.
 The solution is on your screen.
 
 .. L21
@@ -295,14 +297,16 @@ The solution is on your screen.
 .. R22
 
 This is the complete solution for the problem
-You can test this code by running it on your terminal as we had done for gcd.py
+You can test this code by running it on your terminal as we had done 
+for gcd.py
 
 .. L22
 
 .. R23
 
-Thus, for any program there can be innumerable test cases. Hence practically, it is not
-possible to test cases. However there are many ideas to reduce the set of
+Thus, for any program there can be innumerable test cases.
+Hence practically, it is not possible to test cases. 
+However there are many ideas to reduce the set of
 test cases by testing those cases that are more likely to show errors.
 
 Moving from testing lets talk a bit about coding style now.
