@@ -456,8 +456,8 @@ The eigen values can also be computed using the function ``eigvals()`` as,
 Now let us learn how to do the singular value decomposition or S V D
 of a matrix.
 
-Suppose M is an m×n matrix, whose entries come from the field K, which
-is either the field of real numbers or the field of complex
+Suppose M is an m (cross) n matrix, whose entries come from the field
+K, which is either the field of real numbers or the field of complex
 numbers. Then there exists a factorization of the form
 
     M = U\Sigma V star
