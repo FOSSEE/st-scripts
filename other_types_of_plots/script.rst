@@ -23,7 +23,6 @@
    Language Reviewer   : Bhanukiran
    Checklist OK?       : <10-11-2010, Anand, OK> [2010-10-05]
 
-.. #[Puneeth: Quickref missing]
 
 ===================
 Types of plots
@@ -55,27 +54,18 @@ At the end of this tutorial, you will be able to
  #. Create log-log plots
  #. Use the matplotlib help
 
-Let us begin with the scatter plot. 
-
 .. L3
 
 {{{ Show slide with pre-requisite }}}
-
-{{{ switch to the next slide, scatter plot }}}
 
 .. R3
 
 Before beginning this tutorial,we would suggest you to complete the 
 tutorial on "Loading data from files" and "Plotting data".
 
-In a scatter plot, the data is displayed as a collection of points,
-where each point determines it's position on the horizontal axis and the 
-vertical axis respectively.This kind of plot is also called a
-scatter chart, a scatter diagram or a scatter graph.
-
 .. R4
 
-Before we proceed further, start your IPython interpreter
+Before we start with the topic, let us start our IPython interpreter
 
 .. L4
 
@@ -85,33 +75,44 @@ ipython -pylab }}}
 
     ipython -pylab
 
-
 .. L5
+
+{{{ switch to the next slide, scatter plot }}}
+
+.. R5
+
+In a scatter plot, the data is displayed as a collection of points,
+where each point determines it's position on the horizontal axis and the 
+vertical axis respectively.This kind of plot is also called a
+scatter chart, a scatter diagram or a scatter graph.
+Let us now generate a scatter plot with the help of an exercise
+
+.. L6
 
 {{{ switch to the slide having exercise 1 }}}
 
-.. R5
+.. R6
 
 Plot a scatter plot showing the percentage profit of
 a company A from the year 2000-2010. The data for the same is available
 in the file ``company-a-data.txt``.
 
-.. L6
+.. L7
 
 {{{ open the file company-a-data.txt and show the content }}}
 
-.. R6
+.. R7
 
 The data file has two lines with a set of values in each line, the
 first line representing years and the second line representing the
 profit percentages.
 
-.. R7
+.. R8
 
 To produce the scatter plot, we first need to load the data from the
 file using ``loadtxt`` command.  
 
-.. L7
+.. L8
 
 {{{ close the file and switch to the terminal }}}
 
@@ -121,179 +122,192 @@ file using ``loadtxt`` command.
     loadtxt('/home/fossee/other-plot/company-a-data.txt',dtype=type(int()))
 
 
-.. R8
+.. R9
 
 By default loadtxt converts the value to float. The
 ``dtype=type(int())`` argument in loadtxt converts the value to
 integer, as we require the data as integer further in the tutorial.
 
-.. L8
+.. L9
 
-.. R9
+.. R10
 
 Now in-order to generate the scatter graph we will use the function 
 ``scatter()`` 
 
-.. L9
+.. L10
 
 ::
 
     scatter(year,profit)
 
-.. L10
+.. L11
 
 {{{ switch to next slide, ``scatter`` function }}}
 
-.. R10
+.. R11
 
 Notice that we passed two arguments to ``scatter()`` function, first
 one the values in x-coordinate, year, and the other the values in
 y-coordinate, the profit percentage.
 
-.. L11
+.. L12
 
 {{{ switch to the next slide exercise 2 }}}
 
-.. R11
+.. R12
 
 Plot a scatter plot of the same data in company-a-data.txt with red
 diamond markers.
 Pause the video here, try out the following exercise and resume the video.
 
-.. L12
+.. L13
 
+{{{continue from paused state}}}
+{{{ Switch to the terminal }}}
 ::
   
+    clf()
     scatter(year,profit,color='r',marker='d')
 
-.. R12
+.. R13
 
+Thus, we got our scatter plot.
+It is always a good practice to clear the previous figure before 
+creating another one.
 Now let us see another kind of plot, the pie chart, for the same data.
 
-.. L13
+.. L14
 
 {{{ switch to the slide which says about pie chart }}}
 
-.. R13
+.. R14
 
 A pie chart or a circle graph is a circular chart divided into
 sectors, illustrating proportion.
 
-.. L14
+.. L15
 
 {{{ switch to the slide showing exercise 3 }}}
 
-.. R14
+.. R15
 
 Plot a pie chart representing the profit percentage of company A, with
-the same data from file ``company-a-data.txt``. So let us reuse the
-data we have loaded from the file previously.
+the same data from file ``company-a-data.txt``. 
 
-.. R15
+So let us reuse the data we have loaded from the file previously.
+
+.. R16
 
 We can plot the pie chart using the function ``pie()``.
 
-.. L15
+.. L16
 
+{{{ Switch to the terminal }}}
 ::
 
+    clf()
     pie(profit,labels=year)
 
-.. L16
+.. L17
 
 {{{ switch to next slide, ``pie()`` function }}}
 
-.. R16
+.. R17
 
 Notice that we passed two arguments to the function ``pie()``. First
 one the values and the next one the set of labels to be used in the
 pie chart.
 
-.. L17
+Pause the video here, try out the following exercise and resume the video.
+
+.. L18
 
 {{{ switch to the next slide with exercise 4 }}}
 
-.. R17
+.. R18
 
 Plot a pie chart with the same data with colors for each wedges 
 as white, red, black, magenta,yellow, blue, green, cyan, yellow, magenta 
 and blue respectively.
 
-Pause the video here, try out the following exercise and resume the video.
+.. L19
 
-.. L18
-
+{{{ Switch to the terminal }}}
 ::
 
+    clf()
     pie(t,labels=s,colors=('w','r','k','m','y','b','g','c','y','m','b'))
 
-.. R18
+.. R19
 
-.. L19
+.. L20
 
 {{{ switch to the slide which says about bar chart }}}
 
-.. R19
+.. R20
 
 Now let us move on to the bar charts. A bar chart or bar graph is a chart
 with rectangular bars with lengths proportional to the values that
 they represent.
 
-.. L20
+.. L21
 
 {{{ switch to the slide showing exercise 5 }}}
 
-.. R20
+.. R21
 
 Plot a bar chart representing the profit percentage of company A, with
 the same data from file ``company-a-data.txt``. 
 
 So let us reuse the data we have loaded from the file previously.
 
-.. R21
+.. R22
 
 We can plot the bar chart using the function ``bar()``.
 
-.. L21
+.. L22
 
+{{{ Switch to the terminal }}}
 ::
 
-   bar(year,profit)
+    clf()
+    bar(year,profit)
 
-.. R22
+.. R23
 
 {{{ switch to the next slide, ``bar()`` function }}}
 
-.. R22
+.. R23
  
 Note that the function ``bar()`` needs at least two arguments one the
 values in x-coordinate and the other values in y-coordinate which is
 used to determine the height of the bars.
 
-.. L23
+.. L24
 
 {{{ switch to the next slide with exercise 6 }}}
 
-.. R23
+.. R24
 
 Plot a bar chart which is not filled and which is hatched 
 with 45\ :sup:`o` slanting lines as shown in the image.The data for the 
 chart may be obtained from the file ``company-a-data.txt``.
 
-.. L24
+.. L25
 
 ::
 
-   bar(year,profit,fill=False,hatch='/')
+    clf()
+    bar(year,profit,fill=False,hatch='/')
 
-.. R24
+.. R25
 
-
-.. L25
+.. L26
 
 {{{ switch to the slide which says about log-log graph }}}
 
-.. R25
+.. R26
 
 Now let us move on to the log-log plot. A log-log graph or a log-log plot
 is a two-dimensional graph of numerical data that uses logarithmic scales
@@ -301,72 +315,75 @@ on both the horizontal and vertical axes. Because of the nonlinear
 scaling of the axes, a function of the form y = ax\ :sup:`b` will
 appear as a straight line on a log-log graph
 
-.. L26
+.. L27
 
 {{{ switch to the slide showing exercise 7 }}}
 
-.. R26
+.. R27
 
 Plot a `log-log` chart of y=5*x\ :sup:`3` for x from 1-20.
 
-.. R27
+.. R28
 
 Before we actually plot let us calculate the points needed for
 that. 
 
-.. L27
+.. L28
 
+{{{ Switch to the terminal }}}
 ::
 
     x = linspace(1,20,100)
     y = 5*x**3
 
-.. L28
+.. L29
 
 {{{ switch to next slide, ``loglog()`` function }}}
 
-.. R28
-
-Here is the syntax of the log-lof function.
-Now we can plot the log-log chart using ``loglog()`` function,
-
-.. L29
-
-::
-
-    loglog(x,y)
-
 .. R29
 
+Here is the syntax of the log-log function.
+Now we can plot the log-log chart using ``loglog()`` function,
+
+.. L30
+
+{{{ Switch to the terminal }}}
+::
+
+    clf()
+    loglog(x,y)
+
 .. R30
+
+.. R31
 
 To understand the difference between a normal ``plot`` and a ``log-log
 plot`` let us create another plot using the function ``plot``.
 
-.. L30
+.. L31
 
 ::
 
     figure(2)
     plot(x,y)
 
-.. L31
+.. L32
 
 {{{ show both the plots side by side }}}
 
-.. R31
+.. R32
 
-The differnce is clear.So that was ``log-log() plot``.
+The difference is clear.So that was ``log-log() plot``.
 
-.. L32
+.. L33
 
 {{{ switch to the next slide which says: "How to get help on
 matplotlib online"}}}
 
-.. R32
+.. R33
 
 Now we will see few more plots and also see how to access help of
-matplotlib over the internet.
+matplotlib over the Internet.
 
 Help about matplotlib can be obtained from
 matplotlib.sourceforge.net/contents.html
@@ -376,11 +393,11 @@ More plots can be seen at
 matplotlib.sourceforge.net/users/screenshots.html and also at
 matplotlib.sourceforge.net/gallery.html
 
-.. L33
+.. L34
 
 {{{ switch to summary slide }}}
 
-.. R33
+.. R34
 
 This brings us to the end of this tutorial. 
 In this tutorial we learnt to,
@@ -391,11 +408,11 @@ In this tutorial we learnt to,
   #. Plot a log-log graph using ``loglog()`` function
   #. Access the matplotlib online help.
 
-.. L34
+.. L35
 
 {{Show self assessment questions slide}}
 
-.. R34
+.. R35
 
 Here are some self assessment questions for you to solve.
 
@@ -413,23 +430,25 @@ Here are some self assessment questions for you to solve.
    - bar(x, y, fill=False, hatch='|')
    - bar(x, y, color='w', hatch='\')
 
-.. L35
+.. L36
 
 {{{solution of self assessment questions on slide}}}
 
-.. R35
+.. R36
 
 And the answers,
 
 1. False. Both functions do not produce the same kind of plot.
+
 2. ``bar(x, y, fill=False, hatch='|')`` is the correct option to generate 
    a bar chart with vertical line hatching.
 
-.. L36
+.. L37
 
 {{{ switch to the thank you slide }}}
 
-.. R36
+.. R37
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!
+
