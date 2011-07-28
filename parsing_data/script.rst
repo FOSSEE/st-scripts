@@ -57,7 +57,7 @@ Invoke the ipython interpreter by typing ipython on your terminal.
 
 .. L4
 
-{{{ Open the tutorial }}}
+{{{ Open the terminal }}}
 ::
 
     ipython
@@ -73,8 +73,6 @@ corresponds to a student.
 
 {{{ Open the file sslc.txt and show }}}
 
-.. R5
-
 .. L6
 
 {{{ show the slide 'Data set' }}}
@@ -88,14 +86,13 @@ language,first language, maths, science and social and total marks.
 Our job is to calculate the arithmetic mean of all the maths marks in 
 the region "B".
 
-Now let us understand, what is meant by 'parsing data'.
-
 .. L7
 
 {{{ Open the file sslc.txt and show }}}
 
 .. R7
 
+Now let us understand, what is meant by 'parsing data'.
 From the input file, we can see that the data we have is in the form of
 text. Parsing this data is all about reading it and converting it into a 
 form which can be used for computations -- in our case,it will be a 
@@ -135,8 +132,8 @@ all the spaces are treated as one big space.
 
 .. R11
 
-the function ``split`` can also split on a string of our choice. 
-This is acheived by passing that as an argument. But first lets define 
+The function ``split`` can also split on a string of our choice. 
+This is achieved by passing that as an argument. But first lets define 
 a sample record from the file.
 
 .. L11
@@ -167,17 +164,17 @@ Pause the video here, try out the following exercise and resume the video
  Split the variable line using a space as argument. Is it same as
  splitting without an argument ?
 
+.. R14
+
+Switch to terminal for the solution
+
 .. L14
 
 {{{ continue from paused state }}}
-
 {{{ Switch to the terminal }}}
-
 ::
 
     record.split()
-
-.. R14
 
 .. L15
 
@@ -186,7 +183,7 @@ Pause the video here, try out the following exercise and resume the video
 .. R15
 
 We see that when we split on space, multiple whitespaces are not clubbed 
-as one and there is an empty string everytime there are two consecutive 
+as one and there is an empty string every time there are two consecutive 
 spaces.
 
 .. L16
@@ -213,7 +210,7 @@ a string by typing
 
 .. R17
 
-We can see that strip removes all the whitespace around the sentence
+We can see that strip removes all the whitespace around the sentence.
 
 Pause the video here, try out the following exercise and resume the video 
 
@@ -225,23 +222,27 @@ Pause the video here, try out the following exercise and resume the video
 
  What happens to the white space inside the sentence when it is stripped
 
+.. R19
+
+Switch to the terminal for solution
+
 .. L19
 
 {{{ continue from paused state }}}
-
 {{{ Switch to the terminal }}}
-
 ::
 
     a_str = "         white      space            "
     a_str.strip()
 
-.. R19
+.. R20
 
 We see that, the whitespace inside the sentence is only removed and the 
 rest remains unaffected.
 
-.. R20
+.. L20
+
+.. R21
 
 By now we know enough to separate fields from the record and to strip 
 out any white space. The only road block we now have, is conversion of 
@@ -253,14 +254,14 @@ and mathematical operations are not possible on them. We must convert
 them into numbers (integers or floats), before we can perform mathematical 
 operations on them. 
 
-.. L20
+.. L21
 
-.. R21
+.. R22
 
-We shall look at converting strings into floats. We define a float string
+We shall now look at converting strings into floats. We define a float string
 first. Type 
 
-.. L21
+.. L22
 ::
 
     mark_str = "1.25"
@@ -268,39 +269,42 @@ first. Type
     type(mark_str)
     type(mark)
 
-.. R22
+.. R23
 
 We can see that string is converted to float. We can perform mathematical
 operations on them now.
 
  Pause the video here, try out the following exercise and resume the video 
 
-.. L22
-
-.. R23
-
-{{{ Show slide with Exercise 3 }}}
-
 .. L23
-
- What happens if you do int("1.25")
 
 .. L24
 
-{{{ continue from paused state }}}
+{{{ Show slide with Exercise 3 }}}
 
+.. R24
+
+ What happens if you do int("1.25")
+
+.. R25
+
+Switch to the terminal for solution
+
+.. L25
+
+{{{ continue from paused state }}}
 {{{ Switch to the terminal }}}
 ::
 
     int("1.25")
 
-.. R24
+.. R26
 
 It raises an error since converting a float string into integer directly 
 is not possible. It involves an intermediate step of converting to float.
 Hence we will have to do the following conversions.
 
-.. L25
+.. L26
 ::
 
     dcml_str = "1.25"
@@ -309,9 +313,9 @@ Hence we will have to do the following conversions.
     number = int(flt)
     number
 
-.. R25
-
 .. R26
+
+.. R27
 
 Using ``int``, it is also possible to convert float into integers.
 
@@ -320,9 +324,9 @@ solve the problem. We first read the file line by line and parse each
 record. We then see if the region code is B and store the marks 
 accordingly.
 
-.. L26
-
 .. L27
+
+.. L28
 ::
 
     math_marks_B = [] # an empty list to store the marks
@@ -338,46 +342,46 @@ accordingly.
         if region_code == "B":
             math_marks_B.append(math_mark)
             
-.. R27
-
 .. R28
+
+.. R29
 
 Now we have all the math marks of region "B" in the list math_marks_B.
 To get the mean, we just have to sum the marks and divide by the length.
 
-.. L28
+.. L29
 ::
 
         math_marks_mean = sum(math_marks_B) / len(math_marks_B)
         math_marks_mean
 
-.. R29
+.. R30
 
 Hence we get our final output. This is how we split and read such a huge 
 data and perform computations on it.
 
-.. L29
-
 .. L30
+
+.. L31
 
 {{{ Show summary slide }}}
 
-.. R30
+.. R31
 
 This brings us to the end of the tutorial.
 In this tutorial, we have learnt to, 
 
  1. Tokenize a string using various delimiters like semi-colons.
- #. Split a data seperated by delimiters by using the function ``split()``.
+ #. Split a data separated by delimiters by using the function ``split()``.
  #. Get rid of extra white spaces around using the ``strip()`` function.
  #. Convert datatypes of numbers from one type to another.
  #. Parse input data and perform computations on it.
 
-.. L31
+.. L32
 
 {{{Show self assessment questions slide}}}
 
-.. R31
+.. R32
 
 Here are some self assessment questions for you to solve
 
@@ -394,11 +398,11 @@ Here are some self assessment questions for you to solve
    - Error
    - "20"
 
-.. L32
+.. L33
 
 {{{solution of self assessment questions on slide}}}
 
-.. R32
+.. R33
 
 And the answers,
 
@@ -411,11 +415,11 @@ And the answers,
 3. int("20.0") will give an error, because converting a float string, 
    20.0, directly into integer is not possible.
 
-.. L33
+.. L34
 
 {{{ Show the Thank you slide }}}
 
-.. R33
+.. R34
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you.
