@@ -115,6 +115,10 @@ values of m and c.
 .. L8
 
 {{{ Switch to the terminal }}}
+::
+
+    inter_mat = array((l, ones_like(l)))
+    inter_mat
 
 .. R8
 
@@ -122,18 +126,12 @@ let us now generate the A matrix with l values.
 We shall first generate a 2 x 90 matrix with the first row as l values 
 and the second row as ones. Then take the transpose of it. Type
 
-.. L9
-::
-
-    inter_mat = array((l, ones_like(l)))
-    inter_mat
-
 .. R9
 
 We see that we have intermediate matrix. Now we need the transpose. 
 Type
 
-.. L10
+.. L9
 ::
 
     A = inter_mat.T
@@ -145,7 +143,7 @@ Now we have both the matrices A and tsq. We only need to use
 the ``lstsq``
 Type
 
-.. L11
+.. L10
 ::
 
     result = lstsq(A, tsq)
@@ -155,7 +153,7 @@ Type
 The result is a sequence of values. The first item in this sequence,
 is the matrix p i.e., the values of m and c. 
 
-.. L12
+.. L11
 ::
 
     m, c = result[0]
@@ -167,7 +165,7 @@ is the matrix p i.e., the values of m and c.
 Now that we have m and c, we need to generate the fitted values of t^2. 
 Type
 
-.. L13
+.. L12
 ::
 
     tsq_fit = m * l + c
@@ -177,6 +175,8 @@ Type
 .. R13
 
 We get the least square fit of l vs t^2.
+
+.. L13
 
 .. L14
 

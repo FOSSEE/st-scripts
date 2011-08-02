@@ -60,14 +60,14 @@ At the end of this tutorial, you will be able to,
 
 Before beginning this tutorial,we would suggest you to complete the 
 tutorial on "Getting started with arrays".
- 
-.. L4
-
-{{{ Open the terminal }}}
 
 .. R4
 
 As usual, we start IPython, using 
+
+.. L4
+
+{{{ Open the terminal }}}
 ::
 
     ipython -pylab 
@@ -211,7 +211,7 @@ just one particular element. We access the third column by saying,
 .. L16
 ::
   
-  C[:, 2]
+    C[:, 2]
 
 .. R17
 
@@ -225,12 +225,12 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R18
 
- Change the last column of C to zeroes. 
+ Change the last column of C to zeros. 
 
 .. R19
 
 Switch to the terminal for solution.To change the entire last column of 
-C to zeroes, we simply say,
+C to zeros, we simply say,
 
 .. L19
 
