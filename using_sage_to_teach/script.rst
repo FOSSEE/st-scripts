@@ -57,6 +57,8 @@ Let us start by looking at a typical example of demonstrating a
 damped oscillation.
 
 .. L4
+
+{{{ Open sage notebook }}}
 ::
 
     t = var('t')
@@ -292,7 +294,7 @@ worksheet itself.
 Let us open the worksheet and we see a link called ``share`` on the 
 top right corner of the worksheet. Click the link and we get a box 
 where we can type the usernames of users whom we want to share the 
-worksheet with. We can even specify multiple users by seperating their 
+worksheet with. We can even specify multiple users by separating their 
 names using commas. Once we have shared the worksheet, the worksheet 
 appears on the home of shared users.
 
@@ -305,7 +307,7 @@ appears on the home of shared users.
 This brings us to the end of this tutorial.In this tutorial,
 we have learnt to,
 
- 1. Use interactive feaures of SAGE using ``@interact``.
+ 1. Use interactive features of SAGE using ``@interact``.
  #. Publish our work.
  #. Edit a copy of one of the published worksheets.
  #. Share the worksheets with fellow users.

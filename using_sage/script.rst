@@ -77,7 +77,7 @@ To find the limit of the function x*sin(1/x), at x=0, we say
 
 We get the limit to be 0, as expected. 
 
-It is also possible to the limit at a point from one direction. For
+It is also possible to limit a point from one direction. For
 example, let us find the limit of 1/x at x=0, when approaching from
 the positive side.
 
@@ -129,8 +129,8 @@ one of the variables. Let us differentiate the expression
 
 Thus we get our partial differential solution.
 Now, let us look at integration. We shall use the expression obtained
-from the differentiation that we did before, ``diff(f, y)`` which gave us 
-the expression ---``e^(sin(-x^2 + y))*cos(-x^2 + y)/x``. 
+from the differentiation that we calculated before, ``diff(f, y)``
+which gave us the expression ---``e^(sin(-x^2 + y))*cos(-x^2 + y)/x``. 
 The ``integrate`` command is used to obtain the integral of an 
 expression or function.
 
@@ -167,7 +167,7 @@ degree 4 about 0.
 
 .. R13
 
-We easlily got the Taylor expansion,using the function ``taylor()``.
+We easily got the Taylor expansion,using the function ``taylor()``.
 This brings us to the end of the features of Sage for Calculus, that
 we will be looking at. For more, look at the Calculus quick-ref from
 the Sage Wiki. 
@@ -386,14 +386,14 @@ And the answers,
 
     x = A.solve_right(b)
 
-To view the ouput type x
+To view the output type x
 ::
     
     x 
 
 .. L29
 
-{{{ Switch to thankyou slide }}}
+{{{ Switch to thank you slide }}}
 
 .. R29
 

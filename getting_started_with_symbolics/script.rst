@@ -48,7 +48,7 @@ At the end of this tutorial, you will be able to,
  #. Perform Integration, differentiation using sage. 
  #. Define matrices. 
  #. Define Symbolic functions.  
- #. Simplify0and solve symbolic expressions and functions.
+ #. Simplify and solve symbolic expressions and functions.
 
 .. L3
 
@@ -69,7 +69,7 @@ we shall start with defining symbolic expressions in Sage.
 .. R4
 
 Have your Sage notebook opened. If not, pause the video and
-start you Sage notebook right now. 
+start you Sage notebook. 
 
 .. R5
 
@@ -153,6 +153,12 @@ Define following expressions as symbolic expressions in Sage.
 .. R12
 
 The solution is on your screen.
+
+var(’x,y’)
+x^2+y^2
+var(’a,x,y’)
+y^2-4*a*x
+
 <pause for sometime,then continue>
 
 .. R13

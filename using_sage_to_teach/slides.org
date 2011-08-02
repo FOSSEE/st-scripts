@@ -63,7 +63,7 @@
 * Summary
   In this tutorial,we have learnt to,
 
- - Use interactive feaures of SAGE using ``@interact``.
+ - Use interactive features of SAGE using ``@interact``.
  - Publish our work.
  - Edit a copy of one of the published worksheets.
  - Share the worksheets with fellow users.

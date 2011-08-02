@@ -66,12 +66,12 @@ At the end of this tutorial, you will be able to,
 
 .. R3
 
-To start with, What is Sage? Sage is a free, open-source mathematical
-software. Sage can do a lot of math stuff for you including, but not
-limited to, algebra, calculus, geometry, cryptography, graph theory
-among other things. It can also be used as an aid in teaching and
-research in any of the areas that Sage supports. So let us start Sage
-now
+To start with, let us first understand, what is Sage? Sage is a free, 
+open-source mathematical software. Sage can do a lot of math stuff for 
+you including, but not limited to, algebra, calculus, geometry, 
+cryptography, graph theory among other things. It can also be used as an 
+aid in teaching and research in any of the areas that Sage supports. 
+So let us start Sage now
 
 .. L4
 
@@ -79,7 +79,7 @@ now
 
 .. R4
 
-We are assuming that you have Sage installed on your computer now. If
+We assume that you have Sage installed on your computer now. If
 not please visit the page
 http://sagemath.org/doc/tutorial/introduction.html#installation for
 the tutorial on how to install Sage. 
@@ -101,7 +101,7 @@ Let us now learn how to start Sage. On the terminal type
 
 .. R6
 
-This should start a new Sage shell with the prompt sage: 
+This should start a new Sage shell with the prompt ``sage: ``
 
 So now we can type all the commands that Sage supports here. But Sage
 comes bundled with a much more elegant tool called Sage
@@ -144,7 +144,7 @@ Open your web browser to http://localhost:8000.
 
 .. L8
 
-{{{ Point towards it }}}
+{{{ Point towards it and say the following line }}}
 
 In our case it is http://localhost:{{{ Tell whatever is shown }}}
 
@@ -351,7 +351,7 @@ key
 .. R25
 
 To see all the commands starting with a specific name type those
-characters and hit tab
+characters and hit tab. For example, 
 
 .. L25
 ::
@@ -362,7 +362,7 @@ characters and hit tab
 
 To list all the methods that are available for a certain variable or
 a datatype, we can use the variable name followed by the dot to access
-the methods available on it and then hit tab
+the methods available on it and then hit tab.
 
 .. L26
 ::
@@ -508,5 +508,6 @@ And the answers,
 {{{ Show the Thankyou slide }}}
 
 .. R37
+
 Hope you have enjoyed This tutorial and found it useful.
 Thank you!
