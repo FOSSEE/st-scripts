@@ -668,13 +668,13 @@ Obtain the elements, ``[[21, 22], [31, 32]]``
 3. Given the array, 
 ::
    
-    B = array([[10, 11, 12, 13],
+    C = array([[10, 11, 12, 13],
                [20, 21, 22, 23]])
 
 Change the array to 
 ::
    
-    B = array([[10, 11, 10, 11],
+    C = array([[10, 11, 10, 11],
                [20, 21, 20, 21]])
 
 .. L58
@@ -699,7 +699,7 @@ And the answers,
 3. We can change the elements of array C,by using slicing and striding
 ::
 
-    B[:2, 2:] = B[:2, :2]
+    C[:2, 2:] = C[:2, :2]
 
 .. L59
 
