@@ -175,9 +175,9 @@ Pause the video here, try out the following exercise and resume the video.
 .. R13
 
 Well thats where automating tests come in. We can run many tests to 
-check where our code can break. Lets see this with an example.First lets 
-try and automate tests on the  gcd function. For this we will write a 
-file with test cases and call the function for all of them.
+check where our code can break. Lets see this with an example.First lets try 
+and automate tests on the  gcd function. For this we will write a file 
+with test cases and call the function for all of them.
 
 .. L13
 
@@ -193,8 +193,8 @@ file with test cases and call the function for all of them.
 
 The file structure is shown in form a table here.
 
-The structure of the file will be the two parameters and the output 
-result seperated by space
+The structure of the file will be the two parameters and the output result 
+seperated by space
     
 .. R15
    
@@ -218,10 +218,10 @@ We have seperated the elements by a space.
            x = int(numbers[0])
            y = int(numbers[1])
            result = int(numbers[2])
-       	   if gcd(x, y) != result:
-               print "Failed gcd test for", x, y
-           else:
-               print "Test passed", result
+       if gcd(x, y) != result:
+         print "Failed gcd test for", x, y
+       else:
+         print "Test passed", result
 
 .. R16
 
@@ -230,13 +230,11 @@ We add this code piece to automate the test.
 .. L17
 
 Let us now test this code. 
-Open the file gcd.py which we had created before and add this piece 
-of code
+Open the file gcd.py which we had created before and add this piece of code
 
 .. R17
 
-{{{ Open the file gcd.py and add the above piece of code 
-    appropriately }}}
+{{{ Open the file gcd.py and add the above piece of code appropriately }}}
 
 .. R18
 
@@ -267,8 +265,8 @@ For the same inputs as gcd write automated tests for LCM.
 
 .. R21
 
-We shall make use of the same automated test code which we had used for 
-GCD with minor changes.
+We shall make use of the same automated test code which we had used for GCD
+with minor changes.
 The solution is on your screen.
 
 .. L21
@@ -287,27 +285,26 @@ The solution is on your screen.
           x = int(numbers[0])
           y = int(numbers[1])
           result = int(numbers[2])
-       	  if lcm(x, y) != result:
-              print "Failed lcm test for", x, y
-          else:
-              print "Test passed", result
+   if lcm(x, y) != result:
+       print "Failed lcm test for", x, y
+   else:
+       print "Test passed", result
 
 {{{ Pause for some time and then continue }}}
 
 .. R22
 
 This is the complete solution for the problem
-You can test this code by running it on your terminal as we had done 
-for gcd.py
+You can test this code by running it on your terminal as we had done for gcd.py
 
 .. L22
 
 .. R23
 
-Thus, for any program there can be innumerable test cases.
-Hence practically, it is not possible to test cases. 
-However there are many ideas to reduce the set of
-test cases by testing those cases that are more likely to show errors.
+Thus, for any program there can be innumerable test cases. 
+Hence practically, it is not possible to test cases. However there are many 
+ideas to reduce the set of test cases by testing those cases that are
+ more likely to show errors.
 
 Moving from testing lets talk a bit about coding style now.
 
@@ -462,17 +459,16 @@ previous code slightly.
 {{{ Enter a decimal number }}}
 
 ::
-	
-    try:
-        num = int(a)
+
+   try:
+      num = int(a)
     except:
-	print "Wrong input ..."
+     print "Wrong input ..."
 
 .. R34
 
 In this piece of code, python tries to run the code inside the ``try``
 block but when if it fails it executes the code block in ``except``.
-	  
 In previous example we encountered a problem with running our conversion
 to integer code. We found out what caused the error and then deviced a 
 solution for it. This whole process is called debugging.
@@ -496,8 +492,8 @@ add the following code
 ::
     
     def test():
-       	total=1+1	
-	print spam
+     total=1+1
+     print spam
 
 {{{ Save it as file mymodule.py }}}
 
@@ -553,9 +549,8 @@ To exit from the ipdb prompt, press q
  
 .. R41
 	 
-This brings us to the end of this tutorial.In this tutorial, we have
-learnt to, 
- 	
+This brings us to the end of this tutorial.In this tutorial,we have learnt to,
+
  1. Create simple tests for a function.
  #. Automate tests using many predefined test cases.
  #. Use the python coding standards.

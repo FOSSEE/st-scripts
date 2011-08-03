@@ -223,7 +223,7 @@ As we go on hitting the enter key, we the the number of arguments this
 command has.Please read the content on your terminal.
 <pause>
 
-Again, Pause the video here, try out the following exercise and resume the video.
+Again,Pause the video here,try out the following exercise and resume the video.
 
 .. L18
 
