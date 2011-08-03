@@ -265,7 +265,7 @@ first. Type
 ::
 
     mark_str = "1.25"
-    mark = int(mark_str)
+    mark = int(float(mark_str))
     type(mark_str)
     type(mark)
 
