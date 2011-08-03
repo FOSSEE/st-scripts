@@ -307,7 +307,7 @@ Here are some self assessment questions for you to solve
 
 1. Use conditional statements for the following.
    Given a variable ``time``, print ``Good Morning`` if it is less
-   than 12, otherwise ``Hello``. 
+   than 12, otherwise print ``Hello``. 
 
 
 #. Convert the if else ladder below into a ternary conditional
