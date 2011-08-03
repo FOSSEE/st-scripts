@@ -138,7 +138,7 @@ then iterate over it and print the required stuff.
 
 .. R10
 
-We can see that we got the same ouput as before.Note that the lines of code
+We can see that we got the same output as before.Note that the lines of code
 are less.
 
 Pause the video here, try out the following exercise and resume the video.

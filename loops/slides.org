@@ -49,9 +49,9 @@
 * Objectives
   At the end of this tutorial, you will be able to,
 
- - use the ``for`` loop
- - use the ``while`` loop
- - Use ``break``, ``continue`` and ``pass`` statements to play around
+ - use the ``for'' loop
+ - use the ``while'' loop
+ - Use ``break'', ``continue'' and ``pass'' statements to play around
    with loops.
 * Pre-requisite
 Spoken tutorial on -
