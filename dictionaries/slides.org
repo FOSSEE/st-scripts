@@ -48,13 +48,17 @@
 #+end_latex
 
 * Objectives
-  - Creating dictionaries
-    - empty dictionaries
-    - with data
-  - Keys and values
-  - Checking for elements
-  - Iterating over elements
+  At the end of this tutorial, you will be able to,
 
+ - Create dictionaries.
+ - Add and delete data from dictionaries.
+ - Retrieve data from dictionaries.
+ - Check for container-ship of keys.
+ - Iterate over elements.
+
+* Pre-requiste
+Spoken tutorial on -
+  - Basic datatypes and operators
 * Overview of Dictionaries
   - A dictionary contains meaning of words
     - /Word/ is the /key/ here.
