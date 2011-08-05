@@ -9,7 +9,7 @@
 .. #. define functions with arguments
 .. #. learn about docstrings
 .. #. learn about return values
-..    can return multiple values
+..     can return multiple values
 .. #. read code
 
 
@@ -40,8 +40,7 @@ team along with the logo of MHRD }}}
 
 .. R1
 
-Hello friends and welcome to the tutorial on 
-'Getting started with functions'.
+Hello friends and welcome to the tutorial 'Getting started with functions'.
 
 .. L2
 
@@ -64,7 +63,7 @@ At the end of this tutorial, you will be able to,
 .. R3
 
 Before beginning this tutorial,we would suggest you to complete the 
-tutorial on "Conditionals".
+tutorial on "Conditionals" and "Loops".
 
 .. L4
 
@@ -74,8 +73,8 @@ tutorial on "Conditionals".
 
 While writing code, we always want to reduce the number of lines of
 code, and functions is a way of reusing the code. Thus the same lines
-of code can be used as many times as needed. A function is a portion of 
-code within a larger program that performs a specific task and is
+of code can be used as many times as needed. A function is a portion of code
+within a larger program that performs a specific task and is
 relatively independent of the remaining code. Now let us get more
 familiar with functions,
 
@@ -109,7 +108,7 @@ Let us define our function f(x)
 ::
 
     def f(x):
-    	return x*x
+     return x*x
 
 .. R8
 
@@ -155,7 +154,7 @@ Switch to your terminal for solution.The problem can be solved as,
 ::
 
     def cube(n):
-    	return n**3
+      return n**3
 
 .. R12
 
@@ -178,11 +177,11 @@ World``.
 ::
 
     def greet():
-    	print "Hello World!"
+       print "Hello World!"
 
 .. R14
 
-Now we call the function as,
+now we call the function as,
 
 .. L14
 ::
@@ -207,8 +206,8 @@ Pause the video here, try out the following exercise and resume the video.
 
 .. R16
 
- Write a python function named ``avg`` which computes the
- average of ``a`` and ``b``.
+Write a python function named ``avg`` which computes the
+average of ``a`` and ``b``.
 
 .. R17
 
@@ -221,11 +220,11 @@ Switch to your terminal for solution.
 ::
 
     def avg(a,b):
-    	return (a + b)/2
+        return (a + b)/2
 
 .. R18
 
-Let us test our function
+Let us test our function,
 
 .. L18
 ::
@@ -248,9 +247,9 @@ function ``avg`` and add docstring to it. Do the following,
 ::
 
     def avg(a,b):
-        """ avg takes two numbers as input (a & b), and
-	returns the average of a and b"""
-	return (a+b)/2
+      """ avg takes two numbers as input (a & b), and
+    returns the average of a and b"""
+    return (a+b)/2
 
 .. L20
 
@@ -315,9 +314,9 @@ We need to define the function again to add docstring to the function
 ::
 
     def f(x):
-    	"""Accepts a number x as argument and,
-	returns the square of the number x."""
-	return x*x
+    """Accepts a number x as argument and,
+    returns the square of the number x."""
+    return x*x
 
 Let us solve one more exercise
 Pause the video here, try out the following exercise and resume the video.
@@ -343,12 +342,12 @@ were doing till now. We can solve the problem as,
 {{{ Switch to the terminal }}}
 ::
 
-    def circle(r):
-    	"""returns area and perimeter of a circle given radius r"""
-	pi = 3.14
-	area = pi * r * r
-	perimeter = 2 * pi * r
-	return area, perimeter
+  def circle(r):
+   """returns area and perimeter of a circle given radius r"""
+   pi = 3.14
+   area = pi * r * r
+   perimeter = 2 * pi * r
+   return area, perimeter
 
 .. R29
 
@@ -385,8 +384,8 @@ Pause here and try to figure out what the function ``what`` does.
      return True
 
 {{{continue from paused state}}}
-It will return true if ``n % 2`` is not equal to 1 and will return 
-false, otherwise.
+It will return true if ``n % 2`` is not equal to 1 and will return false,
+ otherwise.
 
 .. L31
 
@@ -426,9 +425,9 @@ Pause here and try to figure out what the function ``what`` does.
      return i * i == n, i
 
 {{{continue from paused state}}}
-The function returns two values. One it returns the result of the while 
-statement whether true of false, and second it prints the value that `i`` 
-currently holds.
+The function returns two values. One it returns the result 
+of the while statement whether true of false, and second it 
+prints the value that `ii`` currently holds.
 
 .. L34
 
@@ -445,8 +444,8 @@ currently holds.
 
 .. R34
 
-Here, the function returns ``True`` and the square root of ``n`` if n is 
-a perfect square, otherwise it returns ``False`` and the square root of
+Here, the function returns ``True`` and the square root of ``n`` if n is a
+perfect square, otherwise it returns ``False`` and the square root of
 the next perfect square.
 
 .. L35
@@ -460,8 +459,7 @@ we have learnt to,
 
   1. Define functions in Python by using the keyword ``def``.
   #. Call the function by specifying the function name.
-  #. Assign a docstring to a function by putting it as a triple quoted 
-     string.
+  #. Assign a docstring to a function by putting it as a triple quoted string.
   #. Pass parameters to a function.
   #. Return values from a function.
 
@@ -522,4 +520,3 @@ And the answers,
 
 Hope you have enjoyed this tutorial and found it useful.
 Thank you!
-
