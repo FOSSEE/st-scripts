@@ -54,8 +54,8 @@ At the end of this tutorial, you will be able to,
 
 .. R3 
 
-IPython is an enhanced Python interpreter that provides features like	
-tabcompletion, easier access to help and many other functionalities
+IPython is an enhanced Python interpreter that provides features 
+like tabcompletion, easier access to help and many other functionalities
 which are not available in the vannila Python interpreter.
 
 Let us first see how to start the ``ipython`` interpreter.First
