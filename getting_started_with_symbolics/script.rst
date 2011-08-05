@@ -59,7 +59,7 @@ At the end of this tutorial, you will be able to,
 Before beginning this tutorial,we would suggest you to complete the 
 tutorial on "Getting started with sage notebook".
 
-In addtion to a lot of other things, Sage can do Symbolic Math and 
+In addition to a lot of other things, Sage can do Symbolic Math and 
 we shall start with defining symbolic expressions in Sage. 
 
 .. L4
@@ -114,8 +114,8 @@ Let us try out a few examples.
 
 .. R9
 
-We have defined 4 variables, ``x``, ``y``, ``alpha`` and ``beta`` and
-have defined a symbolic expression using them.
+We have defined 4 variables, ``x``, ``y``, ``alpha`` and ``beta`` and have 
+defined a symbolic expression using them.
  
 Here is an expression in ``theta``  
 
@@ -154,18 +154,18 @@ Define following expressions as symbolic expressions in Sage.
 
 The solution is on your screen.
 
-var(’x,y’)
-x^2+y^2
-var(’a,x,y’)
-y^2-4*a*x
+ var('x,y')
+ x^2+y^2
+ var('a,x,y')
+ y^2-4*a*x
 
 <pause for sometime,then continue>
 
 .. R13
 
-Sage also provides built-in constants which are commonly used in
-mathematics, for instance pi, e, infinity. The function ``n`` gives
-the numerical values of all these constants.
+Sage also provides built-in constants which are commonly used in mathematics, 
+for instance pi, e, infinity. The function ``n`` gives the numerical values of 
+all these constants.
 
 .. L13
 :: 
@@ -176,8 +176,8 @@ the numerical values of all these constants.
 
 .. R14
    
-If you look into the documentation of function ``n`` by doing
-n<tab>, You will see what all arguments it takes and what it returns.
+If you look into the documentation of function ``n`` by doing n<tab>, You 
+will see what all arguments it takes and what it returns.
 
 .. L14
 ::
@@ -186,9 +186,8 @@ n<tab>, You will see what all arguments it takes and what it returns.
 
 .. R15
 
-It will be very helpful if you look at the documentation of all 
-functions introduced in the course of this script.
-
+It will be very helpful if you look at the documentation of all functions 
+introduced in the course of this script.
 Also we can define the number of digits we wish to have in the
 constants. For this we have to pass an argument -- digits.
 
@@ -300,7 +299,6 @@ Type the following
 .. R24
 
 We can also define functions convergent series and other series. 
-
 We first define a function f(n) in the way discussed before.
 
 .. L24
@@ -313,7 +311,6 @@ We first define a function f(n) in the way discussed before.
 
 To sum the function for a range of discrete values of n, we use the
 sage function sum.
-
 For a convergent series , f(n)=1/n^2 we can say 
 
 .. L25
@@ -337,7 +334,6 @@ Let us now try another series
 .. R27
 
 This series converges to pi/4. 
-
 Pause the video here, try out the following exercise and resume the video. 
 
 .. L27
@@ -366,15 +362,15 @@ Sum  of 1/(n^2-1) where n ranges from 1 to infinity.
 
 The solution is on your screen
 
-var('x')
-h(x)=3*x+2
-g(x)= 4*x^2
-f = Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
-f
+ var('x')
+ h(x) = 3*x+2
+ g(x) = 4*x^2
+ f = Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
+ f
 
-var('n')
-f=1/(n^2-1)
-sum(f(n), n, 1, oo)
+ var('n')
+ f = 1/(n^2-1)
+ sum(f(n), n, 1, oo)
 
 <pause for sometime,then continue>
 
@@ -382,7 +378,6 @@ sum(f(n), n, 1, oo)
 
 Moving on let us see how to perform simple calculus operations 
 using Sage
-
 For example lets try an expression first 
 
 .. L30
@@ -395,13 +390,12 @@ For example lets try an expression first
 The ``diff`` function differentiates an expression or a function. It's
 first argument is expression or function and second argument is the
 independent variable.
-
 We have already tried an expression now lets try a function 
 
 .. L31
 ::
 
-    f=exp(x^2)+arcsin(x) 
+    f = exp(x^2) + arcsin(x) 
     diff(f(x),x)
 
 .. R32
@@ -417,7 +411,6 @@ for order
 .. R33
 
 in this case it is 3.
-
 Just like differentiation of expression you can also integrate them 
 
 .. L33
@@ -467,7 +460,7 @@ One can also find roots of an equation by using ``find_root`` function
 ::
 
     phi = var('phi') 
-    find_root(cos(phi)==sin(phi),0,pi/2)
+    find_root(cos(phi) == sin(phi),0,pi/2)
 
 .. R38
 
@@ -478,15 +471,14 @@ correct
 ::
 
     var('phi') 
-    f(phi)=cos(phi)-sin(phi)
-    root=find_root(f(phi)==0,0,pi/2) 
+    f(phi) = cos(phi)-sin(phi)
+    root = find_root(f(phi) == 0,0,pi/2) 
     f.substitute(phi=root)
 
 .. R39
 
 As we can see when we substitute the value the answer is almost = 0 showing 
 the solution we got was correct.
-
 Pause the video here, try out the following exercise and resume the video. 
 
 .. L39
@@ -499,16 +491,16 @@ Pause the video here, try out the following exercise and resume the video.
 
 Differentiate the following. 
       
-      1. sin(x^3)+log(3x)  , degree=2
-      #. x^5*log(x^7)      , degree=4 
+  1. sin(x^3)+log(3x)  , degree=2
+  #. x^5*log(x^7)      , degree=4 
 
 Integrate the given expression 
       
-      sin(x^2)+exp(x^3) 
+  sin(x^2)+exp(x^3) 
 
 Find x
-      cos(x^2)-log(x)=0
-      Does the equation have a root between 1,2. 
+  cos(x^2)-log(x)=0
+  Does the equation have a root between 1,2. 
 
 .. L41
 
@@ -519,16 +511,16 @@ Find x
 
 The solution is on your screen
 
-var('x')
-f(x)= x^5*log(x^7)
-diff(f(x),x,5)
+ var('x')
+ f(x)= x^5*log(x^7)
+ diff(f(x),x,5)
 
-var('x')
-integral(x*sin(x^2),x)
+ var('x')
+ integral(x*sin(x^2),x)
 
-var('x')
-f=cos(x^2)-log(x)
-find_root(f(x)==0,1,2)
+ var('x')
+ f=cos(x^2)-log(x)
+ find_root(f(x)==0,1,2)
 
 <pause for sometime,then continue>
 
@@ -557,7 +549,6 @@ Now lets do some of the matrix operations on this matrix
 
 As we can see, we got the determinant and the inverse of the matrix 
 respectively.
-
 Pause the video here, try out the following exercise and resume the video.
 
 .. L44
@@ -570,7 +561,7 @@ Pause the video here, try out the following exercise and resume the video.
 
  Find the determinant and inverse of 
 
-      A=[[x,0,1][y,1,0][z,0,y]]
+      A = [[x,0,1][y,1,0][z,0,y]]
 
 .. L46
 
@@ -581,10 +572,10 @@ Pause the video here, try out the following exercise and resume the video.
 
 The solution is on your screen
 
-var('x,y,z')
-A=matrix([[x,0,1],[y,1,0],[z,0,y]])
-A.det()
-A.inverse()
+ var('x,y,z')
+ A = matrix([[x,0,1],[y,1,0],[z,0,y]])
+ A.det()
+ A.inverse()
 
 <pause for sometime,then continue>
 
@@ -626,7 +617,7 @@ Here are some self assessment questions for you to solve
 
 3. Find third order differential function of
 
-   f(x)=sin(x^2)+exp(x^3)
+   f(x) = sin(x^2)+exp(x^3)
  
 .. L50
 
