@@ -178,6 +178,10 @@ Please, pause the video here. Do the exercise and then continue.
 .. R12
 
 The solution is on your screen
+  
+  listinlist[1]
+  listinlist[-5]
+
 As we can see nonempty is appended with 'onemore' and 6 at the end.
 
 .. R13
@@ -253,12 +257,13 @@ del gives us [1,2,3].
 .. L19
 ::
 
-    k.remove(x[2])
+    k.remove(k[2])
+    k
 
 .. R19
 
 remove will give us [2,1,3]. Since it deletes the first occurrence of 
-what is returned by x[2] which is 1.      
+what is returned by k[2] which is 1.      
 
 .. L20
 
@@ -278,6 +283,9 @@ Pause the video here, try out the following exercise and resume the video.
 .. R21
 
 The solution is on your screen.
+
+  del(listinlist[2])
+  listinlist.remove('and')
 
 .. L22
 
@@ -305,7 +313,9 @@ In this tutorial, we have learnt to,
 Here are some self assessment questions for you to solve
 
 1. How do you create an empty list? 
+
 2. Can you have a list inside a list ? 
+
 3. How would you access the end of a list without finding its length?
 
 .. L24
