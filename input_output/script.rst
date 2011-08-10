@@ -42,20 +42,20 @@ At the end of this tutorial,you will be able to,
  #. Take input from user.
  #. Display a prompt to the user before taking the input.
 
-.. L3
+.. R3
 
 Let us first start ipython on our teminal
 
-.. R3
+.. L3
 ::
 
     ipython
 
-.. L4
+.. R4
 
 Let us start this tutorial by typing a string
 
-.. R4
+.. L4
 ::
  
     a = "This is a string"
@@ -350,8 +350,8 @@ Here are some self assessment questions for you to solve
     - float
     - char
 
-2. ``a = 2`` and ``b = 4.5``. What does ``print "a is %d and b is %2.
-    1f" %(b, a)`` print?
+2. ``a = 2`` and ``b = 4.5``. What does ``print "a is %d and b is 
+    %2.1f" %(b, a)`` print?
 
    - a is 2 and b is 4.5
    - a is 4 and b is 2
