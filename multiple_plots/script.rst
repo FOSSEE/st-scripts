@@ -135,7 +135,7 @@ legend command does this for us.
 
 ::
 
-    legend(['sin(x)', 'cos(x)'])
+    legend(['sin(x)', 'sin(y)'])
 
 .. R9
 
