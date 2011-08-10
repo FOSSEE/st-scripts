@@ -154,27 +154,9 @@ if \_\_name\_\_ == `\_\_main\_\_':
 \end{tabular}
 \end{center}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Automating tests}
-\label{sec-9}
-
-\lstset{language=Python}
-\begin{lstlisting}
-if __name__ == '__main__':
-     for line in open('lcmtestcases.txt'):
-         numbers = line.split()
-         x = int(numbers[0])
-         y = int(numbers[1])
-         result = int(numbers[2])
-         if lcm(x, y) != result:
-             print "Failed lcm test for", x, y
-         else:
-             print "Test passed"
-\end{lstlisting}
-\end{frame}
 \begin{frame}
 \frametitle{Exercise 2}
-\label{sec-10}
+\label{sec-9}
 
 
 \begin{itemize}
@@ -183,7 +165,7 @@ if __name__ == '__main__':
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-11}
+\label{sec-10}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -207,7 +189,7 @@ if __name__ == '__main__':
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Meaning full names}
-\label{sec-12}
+\label{sec-11}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -220,7 +202,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}
 \frametitle{Code style}
-\label{sec-13}
+\label{sec-12}
 
 
 \begin{itemize}
@@ -237,7 +219,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 3}
-\label{sec-14}
+\label{sec-13}
 
 
 \begin{itemize}
@@ -250,7 +232,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 3}
-\label{sec-15}
+\label{sec-14}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -260,7 +242,7 @@ quotient = dividend / divisor
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Using idb}
-\label{sec-16}
+\label{sec-15}
 
 \small
 \begin{lstlisting}
@@ -284,7 +266,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-17}
+\label{sec-16}
 
  In this tutorial, we have learnt to, 
         
@@ -300,7 +282,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-18}
+\label{sec-17}
 
 
 \begin{enumerate}
@@ -325,7 +307,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Solutions}
-\label{sec-19}
+\label{sec-18}
 
 
 \begin{enumerate}
