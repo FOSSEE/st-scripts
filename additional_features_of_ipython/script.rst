@@ -90,6 +90,7 @@ xsin(x) is actually x * sin(x)
     xlabel("x")
     ylabel("$f(x)$")   
     title("x and xsin(x)")
+    title("$x and xsin(x)$")
 
 .. R6
 
