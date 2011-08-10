@@ -63,7 +63,7 @@ and determining that it meets its required results.
 ... R5
 
 Lets first write a simple function to calculate gcd of two numbers.
-Open an editor and type the code shown on the slide.
+Open an editor and type the code shown on the slide and save it as gcd.py
 
 .. L5
  
@@ -78,6 +78,14 @@ def gcd(a, b):
 
 .. R6
 
+Save the file as gcd.py in /home/fossee/ path
+
+.. L6
+
+{{{ Save the file as gcd.py }}}
+
+.. R7
+
 Now we need to evaluate this function. That is, we have to check whether 
 this function successfully gives us the gcd of two whole numbers. Thus 
 we need a set of inputs and the exact outputs that are expected for 
@@ -86,9 +94,9 @@ those input test cases.
 Let our test case be 48 and 64 as *a* and *b* respectively. For this 
 test case we know that the GCD is 16. So that is the expected output. 
 
-.. L6
-
 .. L7
+
+.. L8
 
 {{{ Show slide,Test for gcd.py }}}
 
@@ -105,19 +113,11 @@ test case we know that the GCD is 16. So that is the expected output.
 
 {{{ Pause for some time and then continue }}}
 
-.. R7
-
-Let us include code for testing in our  gcd.py file 
-Add the remaining lines of code to the file.
-    
 .. R8
 
-Save the file as gcd.py in /home/fossee/ path
-
-.. L8
-
-{{{ Save the file as gcd.py }}}
-
+Let us include code for testing in our file gcd.py and 
+add the remaining lines of code to the file.
+    
 .. R9
 
 Let us now run the script and test our code
@@ -128,7 +128,7 @@ We run the code by providing the entire path where the file is located.
 {{{ Open a terminal }}}
 ::
 
-    python /home/fossee/gcd_py
+    python /home/fossee/gcd.py
 
 .. R10
           
@@ -231,6 +231,7 @@ We add this code piece to automate the test.
 
 Let us now test this code. 
 Open the file gcd.py which we had created before and add this piece of code
+accordingly.
 
 .. R17
 
@@ -245,7 +246,7 @@ Now, we run it as,
 {{{ Switch to terminal }}}
 ::
 
-    python /home/fossee/gcd_py
+    python /home/fossee/gcd.py
 
 .. R19
 
@@ -266,7 +267,7 @@ For the same inputs as gcd write automated tests for LCM.
 .. R21
 
 We shall make use of the same automated test code which we had used for GCD
-with minor changes.
+with minor changes. Use the data from the file lcmtestcases.txt .
 The solution is on your screen.
 
 .. L21

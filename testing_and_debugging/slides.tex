@@ -1,4 +1,4 @@
-% Created 2011-07-19 Tue 16:14
+% Created 2011-08-10 Wed 14:46
 \documentclass[presentation]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -143,20 +143,34 @@ if \_\_name\_\_ == `\_\_main\_\_':
 
 
 \begin{center}
-\begin{tabular}{|l|c|c|c}
-\hline
-   12    &   28     &  4  \\
-\hline   
-   18    &   36     &  18  \\
-\hline   
-   4678  &   39763  &  2339  \\
-\hline 
+\begin{tabular}{rrr}
+   12  &     28  &     4  \\
+   18  &     36  &    18  \\
+ 4678  &  39763  &  2339  \\
 \end{tabular}
 \end{center}
 \end{frame}
+\begin{frame}[fragile]
+\frametitle{Code piece}
+\label{sec-9}
+
+\lstset{language=Python}
+\begin{lstlisting}
+if __name__ == '__main__':
+    for line in open('testcases.txt'):
+        numbers = line.split()
+        x = int(numbers[0])
+        y = int(numbers[1])
+        result = int(numbers[2])
+    if gcd(x, y) != result:
+        print "Failed gcd test for", x, y
+    else:
+        print "Test passed", result
+\end{lstlisting}
+\end{frame}
 \begin{frame}
 \frametitle{Exercise 2}
-\label{sec-9}
+\label{sec-10}
 
 
 \begin{itemize}
@@ -165,7 +179,7 @@ if \_\_name\_\_ == `\_\_main\_\_':
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-10}
+\label{sec-11}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -189,7 +203,7 @@ if __name__ == '__main__':
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Meaning full names}
-\label{sec-11}
+\label{sec-12}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -202,7 +216,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}
 \frametitle{Code style}
-\label{sec-12}
+\label{sec-13}
 
 
 \begin{itemize}
@@ -219,7 +233,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}
 \frametitle{Exercise 3}
-\label{sec-13}
+\label{sec-14}
 
 
 \begin{itemize}
@@ -232,7 +246,7 @@ rAmount = nCoins * denom
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Solution 3}
-\label{sec-14}
+\label{sec-15}
 
 \lstset{language=Python}
 \begin{lstlisting}
@@ -242,7 +256,7 @@ quotient = dividend / divisor
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Using idb}
-\label{sec-15}
+\label{sec-16}
 
 \small
 \begin{lstlisting}
@@ -266,7 +280,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Summary}
-\label{sec-16}
+\label{sec-17}
 
  In this tutorial, we have learnt to, 
         
@@ -282,7 +296,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-17}
+\label{sec-18}
 
 
 \begin{enumerate}
@@ -307,7 +321,7 @@ ipdb> total
 \end{frame}
 \begin{frame}
 \frametitle{Solutions}
-\label{sec-18}
+\label{sec-19}
 
 
 \begin{enumerate}

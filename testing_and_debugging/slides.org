@@ -93,6 +93,19 @@ if \_\_name\_\_ == '\_\_main\_\_':
     |   12 |    28 |    4 |
     |   18 |    36 |   18 |
     | 4678 | 39763 | 2339 |
+* Code piece
+#+begin_src python
+if __name__ == '__main__':
+    for line in open('testcases.txt'):
+        numbers = line.split()
+        x = int(numbers[0])
+        y = int(numbers[1])
+        result = int(numbers[2])
+    if gcd(x, y) != result:
+        print "Failed gcd test for", x, y
+    else:
+        print "Test passed", result
+#+end_src
 * Exercise 2
 - For the same inputs as gcd write automated tests for LCM.
 * Solution 2
