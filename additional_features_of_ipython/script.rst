@@ -304,9 +304,8 @@ Then save the script using
 
 ::
 
-    %save /home/fossee/show_included.py 1 3-6 8 10 13
-    %run -i /home/fossee/show_included.py
-    show()    
+    %save /home/fossee/show_included.py 1 3-6 8 14 17
+    %run -i /home/fossee/show_included.py   
 
 .. R23
 
@@ -335,7 +334,7 @@ Pause the video here, try out the following exercise and resume the video.
 
 ::
 
-    %run -i /home/fossee/show_included.py
+    %run  /home/fossee/show_included.py
 
 .. R25
 
