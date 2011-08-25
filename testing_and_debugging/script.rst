@@ -70,7 +70,7 @@ Open an editor and type the code shown on the slide and save it as gcd.py
 {{{ Show slide, gcd function }}}
 
 def gcd(a, b):
-    if b == 0:
+    if a % b == 0:
        return a
     return gcd(b, a%b)
 
@@ -101,7 +101,7 @@ test case we know that the GCD is 16. So that is the expected output.
 {{{ Show slide,Test for gcd.py }}}
 
     def gcd(a, b):
-        if b == 0:
+        if a % b == 0:
             return a
         return gcd(b, a%b)
   
