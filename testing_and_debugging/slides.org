@@ -64,7 +64,7 @@ Spoken tutorial on -
   - Create gcd.py file with:
 #+begin_src python
   def gcd(a, b):
-        if a % b == 0: 
+        if b == 0: 
             return b
         return gcd(b, a%b)
 #+end_src python
@@ -73,7 +73,7 @@ Spoken tutorial on -
   - Edit gcd.py file
 #+begin_src python 
   def gcd(a, b):
-      if a % b == 0:
+      if b == 0:
           return a
       return gcd(b, a%b)
   
