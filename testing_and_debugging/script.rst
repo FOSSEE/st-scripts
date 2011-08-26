@@ -275,7 +275,7 @@ The solution is on your screen.
 {{{ Switch to slide solution 2 }}}
  
   def gcd(a, b):
-      if a % b == 0: 
+      if a % b == 0:
           return b
       return gcd(b, a%b)
   def lcm(a, b):
@@ -286,10 +286,10 @@ The solution is on your screen.
           x = int(numbers[0])
           y = int(numbers[1])
           result = int(numbers[2])
-   if lcm(x, y) != result:
-       print "Failed lcm test for", x, y
-   else:
-       print "Test passed", result
+          if lcm(x, y) != result:
+              print "Failed lcm test for", x, y
+          else:
+              print "Test passed", result
 
 {{{ Pause for some time and then continue }}}
 
