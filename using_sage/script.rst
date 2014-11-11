@@ -13,19 +13,12 @@
 
 .. Getting Started -- Sage  
      
-.. Author              : Puneeth 
-   Internal Reviewer   : Anoop Jacob Thomas<anoop@fossee.in>
-   External Reviewer   :
-   Language Reviewer   : Bhanukiran
-   Checklist OK?       : <06-11-2010, Anand, OK> [2010-10-05]
-
 Script
 ------
 
 .. L1
 
-{{{ Show the  first slide containing title, name of the production
-team along with the logo of MHRD }}}
+{{{ Show the title slide }}}
 
 .. R1
 
@@ -33,7 +26,7 @@ Hello Friends and  Welcome to the tutorial on 'Using Sage'.
 
 .. L2
 
-{{{ show the slide with objectives }}} 
+{{{ show the 'objectives' slide }}} 
 
 .. R2
 
@@ -45,7 +38,7 @@ At the end of this tutorial, you will be able to,
 
 .. L3
 
-{{{ Switch to the pre-requisite slide }}}
+{{{ show the 'pre-requisite' slide }}}
 
 .. R3
 
@@ -66,7 +59,8 @@ start is using the command, ``sage --notebook``.
 
 .. R5
 
-To find the limit of the function x*sin(1/x), at x=0, we say
+To begin with, let us find the limit of the function x*sin(1/x), at x=0.
+To do this we say
 
 .. L5
 ::
@@ -75,7 +69,7 @@ To find the limit of the function x*sin(1/x), at x=0, we say
 
 .. R6
 
-We get the limit to be 0, as expected. 
+As expected, we get the limit to be 0. 
 
 It is also possible to limit a point from one direction. For
 example, let us find the limit of 1/x at x=0, when approaching from
@@ -88,6 +82,7 @@ the positive side.
 
 .. R7
 
+We get the limit from positive side.
 To find the limit from the negative side, we say,
 
 .. L7
@@ -95,14 +90,19 @@ To find the limit from the negative side, we say,
 
     lim(1/x, x=0, dir='left')   
 
+.. L8
+
+{{ Show the 'differential expression' slide }}
+
 .. R8
 
 Let us now see how to perform differentiation, using Sage. We shall 
 find the differential of the expression ``exp(sin(x^2))/x`` w.r.t ``x``.
 For this, we shall first define the expression, and then use the ``diff`` 
-function to obtain the differential of the expression.
+function to obtain the differential of the expression. So, switch to the sage
+notebook and type
 
-.. L8
+.. L9
 ::
 
     var('x')
@@ -111,11 +111,19 @@ function to obtain the differential of the expression.
 
 .. R9
 
-We can also obtain the partial differentiation of an expression w.r.t
-one of the variables. Let us differentiate the expression
-``exp(sin(y - x^2))/x`` w.r.t x and y.
+And we get the expected differential of the expression.
 
-.. L9
+.. L10
+
+{{{ Show the slide 'Partial Differentiation' }}}
+
+.. R10
+
+We can also obtain the partial differentiation of an expression with one of the
+vriables. Let us differentiate the expression
+``exp(sin(y - x^2))/x`` w.r.t x and y. Switch to sage notebook and type
+
+.. L11
 ::
 
     var('x y')
@@ -125,34 +133,39 @@ one of the variables. Let us differentiate the expression
 
     diff(f, y)
 
-.. R10
-
-Thus we get our partial differential solution.
-Now, let us look at integration. We shall use the expression obtained
-from the differentiation that we calculated before, ``diff(f, y)``
-which gave us the expression ---``e^(sin(-x^2 + y))*cos(-x^2 + y)/x``. 
-The ``integrate`` command is used to obtain the integral of an 
-expression or function.
-
-.. L10
-::
-
-    integrate(e^(sin(-x^2 + y))*cos(-x^2 + y)/x, y)
-
 .. R11
 
-As we can see,we get back the correct expression. The minus sign being 
+Thus we get our partial differential solution.
+
+.. L12
+
+{{{ Show the 'integration' slide }}}
+
+Now, let us look at integration. We shall use the expression obtained
+from the differentiation that we calculated before, ``diff(f, y)``
+which gave us the expression ---``cos(-x^2 + y)*e^(sin(-x^2 + y))/x``. 
+The ``integrate`` command is used to obtain the integral of an 
+expression or function. So, switch to sage notebook and type.
+
+.. L13
+::
+
+    integrate(cos(-x^2 + y)*e^(sin(-x^2 + y))/x, y)
+
+.. R13
+
+As we can see, we get back the correct expression. The minus sign being 
 inside or outside the ``sin`` function doesn't change much. 
 
 Now, let us find the value of the integral between the limits 0 and
 pi/2. 
 
-.. L11
+.. L14
 ::
 
     integral(e^(sin(-x^2 + y))*cos(-x^2 + y)/x, y, 0, pi/2)
 
-.. R12
+.. R14
 
 Hence we get our solution for the definite integration.
 Let us now see how to obtain the Taylor expansion of an expression
