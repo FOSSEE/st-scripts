@@ -1,0 +1,230 @@
+
+{| style="border-spacing:0;"
+| style="border-top:0.05pt double #808080;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <center>'''Visual Cue'''</center>
+| style="border:0.05pt double #808080;padding:0.049cm;"| <center>'''Narration'''</center>
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 1
+
+Title Slide
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hello friends and welcome to the tutorial on "Getting started with lists".
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 2
+
+Objectives
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| In this tutorial we will be getting acquainted with a python data structure called lists. At the end of this tutorial, you will be able to,
+
+# Create lists
+# Access list elements
+# Append elements to lists
+# Delete elements from lists
+# Find out length of lists
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 3
+
+Lists
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| List is a compound data type, it can contain data of mutually different data types. List is also a sequence data type where all the elements are arranged in a specific order. 
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| ipython
+
+<nowiki>empty = []</nowiki>
+
+type(empty)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Lets start with creating an empty list. So, start the ipython interpreter and first create an empty list with no elements. Go to the '''terminal''', type '''ipython''' and hit enter. Now, to create an empty list we say '''empty''' ''is equal to empty square brackets''. Note that '''empty''' is just a name of the variable. To check the type of the variable '''empty''' we say type ''within round brackets'' name of the variable which in our case is '''empty'''''.'' As you can see the type is '''list'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <nowiki>nonempty = ['spam', 'eggs', 100, 1.234]</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| That was about creating an empty list. Now, lets create a non empty list with some values in it. So, we say '''nonempty''''' is equal to within square brackets, in single quotes'' '''spam''' coma ''in single quotes'' '''eggs''' coma hundred coma one point two three four.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <nowiki>listinlist=[[4,2,3,4],'and', 1, 2, 3, 4]</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Thus, the simplest way of creating a list is typing out a sequence of comma-separated values (or items) between two square brackets.
+
+As we can see, lists can contain different kinds of data. In the previous example ''''spam'''' and ''''eggs'''' are strings whereas '''100''' and '''1.234''' is '''integer''' and '''float''' respectively. Thus, we can put elements of different data types in lists including lists itself. This property makes lists heterogeneous data structures.
+
+Let us include a list within a list. So, type '''listiinlist''' ''is equal to within square brackets opening sqare bracket'' four coma two coma three coma four ''closing square bracket'' coma ''in single quotes'' '''and''' coma one coma two coma three coma four
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <nowiki>nonempty[0]</nowiki>
+
+<nowiki>nonempty[1]</nowiki>
+
+<nowiki>nonempty[3]</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We can access an element of a list using its corresponding index. Index of the first element of a list is 0. So for the list nonempty, '''nonempty '''''within square brackets'' zero gives the first element, '''nonempty''' ''within square brackets one ''gives the second element and so on.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 4
+
+Excercise 1
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Pause the video here, try out the following exercise and resume the video.
+
+What happens when you do '''nonempty '''''within square brackets minus ''one.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch to the terminal
+
+<nowiki>nonempty[-1]</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| As you can see you get the last element which is 1.234.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <nowiki>nonempty[-2]</nowiki>
+
+<nowiki>nonempty[-4]</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| In '''python''' negative indices are used to access elements from the end. -1 gives the last element which is the 4th element , -2 gives second element to last and -4 gives the fourth from the last which, in this case, is the first element.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| nonempty.append('onemore')
+
+nonempty
+
+nonempty.append(6)
+
+nonempty
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We can also append elements to the end of a list using the ''append'' function. So, type '''nonempty''' ''dot append within round brackets in single quotes'' '''onemore'''. Then type '''nonempty''', as you can see the element '''onemore''' has been appended to the list. Type '''nonempty''' ''within square brackets'' '''six'''. Type '''nonempety '''and you can see '''six''' is appended to the list.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 5
+
+Exercise 2
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Please, pause the video here. Do the following exercise and then continue.
+
+# What is the syntax to get the element ''''and'''' in the list, '''listinlist'' '''''?
+# How would you get ''''and'''' using negative indices?
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 6
+
+Solution 2
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The solution is on your screen
+
+To get the element ''''''''and'''''''' from the list '''listlinlist''''' ''se say '''listinlist''''' within square brackets'' '''one'''. Next, to access the element ''''''''and'''''' ''using negative index, we say '''listinlist''''' within square brackets'' minus five
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <nowiki>del(nonempty[1])</nowiki>
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Just like we can append elements to a list, we can also remove them. There are two ways of doing it. One is by using index. We can use the '''del''' function to do this. So, type '''del''' ''within round brackets'' '''nonempty''' within ''square brackets'' '''one'''.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| nonempty.remove(100)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The function '''del''' deletes the element at index one, i.e the second element of the list which is ''''eggs''''.
+
+The other way is removing element is by content. Lets say one wishes to delete 100 from nonempty list. For this, one could use the function remove. So, type '''nonempty''' ''dot'' '''remove''' ''within round brackets'' hundred.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| nonempty.append('spam')
+
+nonempty
+
+nonempty.remove('spam')
+
+nonempty
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| But what if there were two 100's. To check that lets do a small experiment. We add one more element ''''spam'''' to our list '''nonempty'''. To do this we say '''nonempty''' ''dot'' '''append''' ''within round brackets'' in ''single quotes'' '''spam'''. Now, we remove the element '''spam''' using the '''remove''' function. If we now check, we will see that the first occurrence ''''spam'''' is removed and therefore the function '''remove''''' ''removes the first occurrence of the element in the sequence and leaves others untouched. One should remember this, that while '''del''' removes by index number, '''remove''''' ''removes on the basis of content being passed on.
+
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 7
+
+Exercise 3
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Pause the video here, try out the following exercise and resume the video.
+
+# Remove the third element from the list, '''listinlist'''.
+# Remove 'and' from the list, '''listinlist'''.
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 8
+
+Solution 3
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The solution is on your screen.
+
+'''Del '''''within round brackets '''''listinlist '''''within square brackets '''''two, '''this will remove the third element from the list '''listinlist. '''To remove the element '''and '''you can do '''listinlist '''''dot '''''remove '''''within round brackets in single quotes '''''and'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| len(nonempty)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Let us move further. We can use '''len''' function to check the number of elements in the list. Let us find out the length of the list ''''nonempty''''. Type '''len''' ''withing round brackets'' '''nonempty'''. It returns the number of elements in the list nonempty.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 9
+
+Summary
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| This brings us to the end of this tutorial. In this tutorial, we have learnt to,
+
+# Create lists.
+# Access lists using their index numbers.
+# Append elements to list using the function '''append'''.
+# Delete Element from lists by specifying the index number of the element to be deleted in the '''del''' function.
+# Delete element from list by content using '''remove''' function.
+# Find out the list length using '''len''' function.
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 10
+
+Evaluation
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Here are some self assessment questions for you to solve
+
+# How do you create an empty list ?
+# Can you have a list inside a list ?
+# How would you access the end of a list without finding its length?
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 11
+
+Solutions
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| And the answers,
+
+# We create an empty list just by leaving the space inside the square brackets empty.'''Empty''' ''is equal to empty square brackets''. 
+# 
+# Yes. List can contain all the other data types, including list. 
+# 
+# We can access the last element of the list without knowing its length using negative indices.
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 12
+
+FOSSEE
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| FOSSEE is Free and Open-source Software for Science and Engineering Education. The goal of this project is to enable all to use open source software tools. For more details, please visit the given link.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 13
+
+About the Spoken Tutorial Project
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Watch the video available at the following link. It summarizes the Spoken Tutorial project. If you do not have good bandwidth, you can download and watch it.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 14
+
+Spoken Tutorial Workshop
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The Spoken Tutorial Project Team conducts SELF workshops using spoken tutorials, gives certificates to those who pass an online test. For more details, you may write to contact@spoken-tutorial.org
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 15
+
+Acknowledgements
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Spoken Tutorial Project is a part of the "Talk to a Teacher" project. It is supported by the National Mission on Education through ICT, MHRD, Government of India. More information on this mission is available at the given link.
+
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 16
+
+Thank You
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hope you have enjoyed this tutorial and found it useful. Thank you!
+
+|}
+
