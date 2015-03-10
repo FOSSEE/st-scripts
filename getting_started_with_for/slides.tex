@@ -1,97 +1,82 @@
-% Created 2011-05-24 Tue 11:11
-\documentclass[presentation]{beamer}
+\documentclass[17pt]{beamer}
+%\documentclass{beamer}
+\usetheme{Madrid}
+\useoutertheme{noslidenum}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{beamerthemesplit}
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\definecolor{NavyBlue}{RGB}{0, 76, 153}
+\setbeamercolor{structure}{fg=NavyBlue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+
+% logo
+\logo{\includegraphics[height=1.30cm]{../images/3t-logo.pdf}}
+\logo{\includegraphics[height=0.6cm]{../images/fossee-logo.png}
+
+\hspace{200pt}
+\includegraphics[scale=0.5]{../images/fossee-logo.png}\\
+\hspace{275pt}
+\includegraphics[scale=0.9]{../images/3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Getting Started With For Loop]
+{Getting Started With For Loop}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\ [0.8cm]Script by: Hardik Ghaghada \\ Narration by: \\
+ [0.5cm]
+{\small 15 May 2013}}
 
-
-
-
-
-
-
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Getting started with \texttt{for}}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+  \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-\label{sec-2}
-
   At the end of this tutorial, you will be able to, 
-
 \begin{itemize}
-\item Write blocks of code in python.
-\item Use the ``for`` loop.
-\item Use ``range()`` function.
-\item Write blocks in python interpreter
-\item Write blocks in ipython interpreter.
+\item Understand indentation in Python
+\item Use the for loop
+\item Use range() function
+\item Write blocks in Python shell
+\item Write blocks in IPython interpreter
 \end{itemize}
 \end{frame}
-\begin{frame}
-\frametitle{Pre-requisite}
-\label{sec-3}
-
-  Spoken tutorial on-
-
-\begin{itemize}
-\item Getting started with Lists
-\end{itemize}
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Whitespace in Python}
-\label{sec-4}
-
-
 \begin{itemize}
 \item Whitespace is significant
-\begin{itemize}
-\item blocks are visually separated
-\end{itemize}
-\item Blocks are indented using 4 spaces
+\item Blocks are conventionally indented using 4 spaces
 \begin{verbatim}
      Block A
      Block A
@@ -99,157 +84,136 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
          Block B
      Block A
 \end{verbatim}
-
-    \verb~Block B~ is an inner block and is indented using 4 spaces
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 1}
-\label{sec-5}
-
   Write a \verb~for~ loop which iterates through a list of numbers and find
   the square root of each number.
-\begin{verbatim}
-   
-\end{verbatim}
-
   The numbers are,
 \begin{verbatim}
-   1369, 7225, 3364, 7056, 5625, 729, 7056, 
+   1369, 7225, 3364, 7056,
+   5625, 729, 7056, 
    576, 2916
 \end{verbatim}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Solution 1}
-\label{sec-6}
-
-
-\begin{itemize}
-\item Open text editor and type the following code
-\lstset{language=Python}
-\begin{lstlisting}
-numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 
-           576, 2916]
-
-for each in numbers:
-    print "Square root of", each, "is", sqrt(each)
-
-print "This is not in for loop!"
-\end{lstlisting}
-\end{itemize}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Save \& run script}
-\label{sec-7}
-
-
-\begin{itemize}
-\item Save the script as \verb~list_roots.py~
-\item Run in \verb~ipython~ interpreter as,
-\begin{verbatim}
-     In []: %run -i list_roots.py
-\end{verbatim}
-
-\end{itemize}
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 2}
-\label{sec-8}
-
   Print the square root of numbers in the list.
-\begin{verbatim}
-   
-\end{verbatim}
-
   Numbers are,
 \begin{verbatim}
-   7225, 3268, 3364, 2966, 7056, 5625, 729, 5547, 
-   7056, 576, 2916
+7225, 3268, 3364, 2966, 7056,
+5625, 729, 5547, 7056, 576, 2916
 \end{verbatim}
+\emph{do it in the ipython interpreter}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 3}
-\label{sec-9}
-
-  Find out the cube of all the numbers from 1 to 10.
-\begin{verbatim}
-   
-\end{verbatim}
-
-  \emph{do it in the python interpreter}
+  Find out the cube of all the numbers from 1 to 10. \\
+  \emph{do it in the python shell}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{\verb~range()~ function}
-\label{sec-10}
-
-
-\begin{itemize}
-\item in built function in Python
-\item generates a list of integers
-\begin{itemize}
-\item \emph{syntax:} range([start,] stop[, step])
-\item \emph{example:}
-\begin{itemize}
-\item range(1, 20) - \emph{generates integers from 1 to 20}
-\item range(20) - \emph{generates integers from 0 to 20}
-\end{itemize}
-\end{itemize}
-\end{itemize}
+    \begin{itemize}
+    \item built in function in Python
+    \item generates a list of integers
+        \begin{itemize}
+        \item \emph{syntax:} range([start,] stop[, step])
+        \item \emph{example:}
+            \begin{itemize}
+            \item range(1, 20) - \emph{generates integers from 1 to 20}
+            \item range(20) - \emph{generates integers from 0 to 20}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 4}
-\label{sec-11}
-
   Print all the odd numbers from 1 to 50.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-12}
-
   In this tutorial,we learnt to,
-
 \begin{itemize}
-\item Create blocks in python using ``for
+\item Create blocks in python using ``for''
 \item Indent the blocks of code
-\item Iterate over a list using ``for`` loop
-\item Use the ``range()`` function
+\item Iterate over a list using ``for'' loop
+\item Use the ``range()'' function
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-13}
-
-
 \begin{enumerate}
-\item Indentation is not mandatory in Python
-\begin{itemize}
-\item True
-\item False
-\end{itemize}
-\vspace{8pt}
-\item Write a code using ``for`` loop to print the product of all natural numbers from 1 to 20.
-\vspace{8pt}
-\item What will be the output of-
-     range(1,5)
+    \item Indentation is not mandatory in Python
+    \begin{itemize}
+        \item True
+        \item False
+    \end{itemize}
+    \vspace{8pt}
+    \item Write a ``for'' loop to print the product of all natural numbers from 1 to 20
+    \vspace{8pt}
+    \item What will be the output of-range(1,5)
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
-\label{sec-14}
-
-
 \begin{enumerate}
-\item False
-\vspace{8pt}
-\item y = 1\\
-for x in range(1,21):\\
-\hspace{12pt}
-          y*=x\\
-    print y 
-\vspace{8pt}      
-\item {[1,2,3,4]}
+    \item False
+    \vspace{8pt}
+    \item y = 1\\
+    for x in range(1,21):\\
+    \hspace{12pt}
+              y*=x\\
+        print y 
+    \vspace{8pt}      
+    \item {[1,2,3,4]}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{NavyBlue}Free and Open Source Software for \\Education} \\
+\begin{itemize}
+\item To enable the use of free and open source software tools
+\item For more details, please visit: {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}\url{http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}} 
+\item It summarises the Spoken Tutorial project 
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item Supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -260,9 +224,9 @@ for x in range(1,21):\\
 \begin{block}{}
   \begin{center}
     For more Information, visit our website\\
-    \url{http://fossee.in/}
+    {\color{blue}\url{http://fossee.in/}}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

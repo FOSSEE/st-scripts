@@ -1,0 +1,200 @@
+\documentclass[17pt]{beamer}
+\usetheme{Madrid}
+\useoutertheme{noslidenum}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{beamerthemesplit}
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+\definecolor{NavyBlue}{RGB}{0, 76, 153}
+\setbeamercolor{structure}{fg=NavyBlue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{../images/3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{../images/fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{../images/fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{../images/3t-logo.pdf}}
+
+\begin{document}
+
+\sffamily \bfseries
+\title
+[Using Sage for Calculus]
+{Using Sage for Calculus}
+\author
+[FOSSEE]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\ [0.8cm]Script by: Hardik Ghaghada \\Narration by:  \\ [0.7cm]
+{\small 15 May 2013}}
+
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+ At the end of this tutorial, you will be able to,
+\begin{itemize}
+\item Learn the range of things for which Sage can be used.
+\item Perform integrations \& other Calculus in Sage.
+\item Perform matrix algebra in sage.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Differential Expression}
+$exp(sin(x^2))/x$\\
+w.r.t $x$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Partial Differential Expression}
+$exp(sin(y - x^2))/x$\\
+w.r.t $x, y$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integration}
+\begin{itemize}
+\item $diff(f, y)$\\
+\item $cos(-x^2 + y)*e^(sin(-x^2 + y))/x$\\
+\item $integrate$
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{More on Calculus}
+\url{www.sagemath.org/help.html}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Equation}
+  $Ax = v$\\
+  where A is the matrix,\\ 
+  $matrix([[1,2],[3,4]])$\\
+  v is the vector,\\
+  $vector([1,2])$
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+In this tutorial, we have learnt to,  
+\begin{itemize}
+\item Use functions like lim(), integrate(), integral(), solve()
+\item Use sage for performing matrix algebra, integrations \& other calculus
+operations using the above mentioned functions.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation}
+\begin{enumerate}
+\item How do you find the limit of the function ``x/sin(x)'' as ``x'' tends 
+    to ``0'' from the negative side.
+\vspace{3pt}
+\vspace{3pt}
+\item Solve the system of linear equations
+    x-2y+3z = 7\\
+    2x+3y-z = 5\\
+    x+2y+4z = 9
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Solutions}
+\begin{enumerate}
+\item lim(x/sin(x), x=0, dir=`left')
+\vspace{4pt}
+\item A = Matrix([[1, -2, 3], \\
+\hspace{1.78cm}
+                  [2, 3, -1], \\
+\hspace{1.78cm}             
+                  [1, 2, 4]]) \\
+\vspace{2pt}
+   b = vector([7, 5, 9])\\
+\vspace{2pt}
+   x = A.solve$\_{\mathrm{right}}$(b)\\
+\vspace{2pt}
+   x   
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}\url{http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}} 
+\item It summarises the Spoken Tutorial project 
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    \url{http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

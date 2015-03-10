@@ -1,0 +1,269 @@
+
+{| style="border-spacing:0;"
+| style="border-top:0.05pt double #808080;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <center>'''Visual Cue'''</center>
+| style="border:0.05pt double #808080;padding:0.049cm;"| <center>'''Narration'''</center>
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 1
+
+Title Slide
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hello Friends and Welcome to the tutorial on 'Using Sage'.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 2
+
+Objectives
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| # At the end of this tutorial, you will be able to,
+# 
+# 1. Learn the range of things for which Sage can be used. 
+# 2. Perform integrations & other Calculus in Sage.
+# 3. Perform matrix algebra in sage.
+
+Let us begin with Calculus. We shall be looking at limits, differentiation, integration, and Taylor polynomial.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Open sage notebook
+
+lim(x*sin(1/x), x=0)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We have our '''Sage''' '''notebook''' running. In case, you don't have it running, start is using the command, '''sage''' ''space hyphen hyphen'' '''notebook.'''
+
+To begin with, let us find the limit of the function '''x*sin(1/x)''', at '''x=0'''. To do this we can use the '''lim''' '''funtcion''' as, '''lim''' ''within brackets'' '''x''' ''star '''''sin''' ''within brackets'' '''one''' ''divided by'' '''x '''''coma '''''x '''''is equal to '''''zero''' 
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| lim(1/x, x=0, dir='right')
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We get the limit to be 0, as expected.
+
+It is also possible to limit a point from one direction. For example, let us find the limit of '''1/x''' at '''x=0''', when approaching from the positive side. So we say '''lim '''''within brackets '''''one by x, x=0, dir '''''is equal to in single quotes '''''right.'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| lim(1/x, x=0, dir='left')
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The same way we can even find the limit from the negative side, we say, '''lim '''''within brackets '''''one by x, x=0, dir '''''is equal to in single quotes '''''left.'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 3
+
+
+Differential Expression
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Let us now see how to perform '''differentiation''', using '''Sage'''. We shall find the '''differential''' of the expression '''sin''' '''square''' '''by x''' with reference to '''x '''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| var('x')
+
+f = exp(sin(x^2))/x
+
+diff(f, x)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| So switch to the sage notebook.
+
+We shall first define the expression, and then use the '''diff '''function to obtain the differential of the expression.
+
+So, type '''var '''''within round brackets in single quotes '''''x. '''Now, '''f '''''is equal to '''''exp '''''within brackets '''''sin '''''within brackets '''''x '''''to the power '''''two by x.'''
+
+We have the expression now and will obtain the differential using the '''diff function.'''
+
+Type '''diff '''''within brackets '''''f '''''coma '''''x.'''
+
+We get the differential.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show slide 4
+
+Partial Differential Expression
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We can also obtain the partial differentiation of an expression with one of the vriables.
+
+Let us '''differentiate''' the '''expression '''shown on the slide with 
+
+reference to '''x''' and '''y'''. Switch to sage notebook
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| var('x y')
+
+f = exp(sin(y - x^2))/x
+
+
+diff(f, x)
+
+
+diff(f, y)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We first define the expression.
+
+So type, '''var '''''within round brackets in single quotes '''''x y'''
+
+Then, '''f '''''is equal to '''''exp '''''in brackets '''''sin '''''in brackets '''''y '''''minus '''''x '''''to the power''''' two by x.'''
+
+So the expression is ready now to get the partial differential of the expression we say '''diff '''''in brackets '''''f, x.'''
+
+Similarly for '''y '''we say '''diff '''''in brackets '''''f, y''.'''''
+
+Thus we get our partial differential solution.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 5
+
+Integration
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Now, let us look at integration. We shall use the expression obtained from the differentiation that we calculated before, diff(f, y) which gave us the expression shown on the slide.
+
+The integrate command is used to obtain the integral of an expression or function.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| integrate(cos(-x^2 + y)*e^(sin(-x^2 + y))/x, y)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| So, switch to sage notebook and type, '''integrate '''and the expression we got from the previous calculation. As we can see, we get back the correct expression.
+
+The minus sign being inside or outside the '''sin function''' doesn't change much.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| integral(e^(sin(-x^2 + y))*cos(-x^2 + y)/x, y, 0, pi/2)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| As we can see,we get back the correct expression. The minus sign being inside or outside the&nbsp;sin&nbsp;function doesn't change much.
+
+Now, let us find the value of the integral between the limits 0 and pi/2.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| var('x n')
+
+taylor((x+1)^n, x, 0, 4)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hence we get our solution for the definite integration. Let us now see how to obtain the Taylor expansion of an expression using sage using '''taylor function'''.
+
+Let us obtain the Taylor expansion of(x+1)^nup to degree 4 about 0.
+
+For this, type, '''var '''''in brackets '''''x n'''
+
+Now, '''taylor '''''in brackets again in brackets '''''x + one '''''the whole to the power '''''n '''''coma '''''x, zero, four.'''
+
+We easily got the Taylor expansion,using the function taylor().
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 6
+
+
+More on Calculus
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| That we will be all about the features of '''Sage '''for calculus we will be looking at. For more, look at the Calculus quick-ref from the Sage Wiki.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 7
+
+Equation
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Next let us move on to Matrix Algebra. Let us begin with solving the equation. Ax = v, where A is the matrix <nowiki>matrix([[1,2],[3,4]]) </nowiki>and v is the vector <nowiki>vector([1,2])</nowiki>.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch back to sage notebook page
+
+<nowiki>A = matrix([[1,2],</nowiki>
+
+             <nowiki>[3,4]])</nowiki>
+
+<nowiki>v = vector([1,2])</nowiki>
+
+x = A.solve_right(v)
+
+x
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| To solve the equation, Ax = v we simply say, 
+
+
+'''A '''''is equal to '''''matrix '''''within round brackets in square brackets '''''one, two, '''''again in square brackets '''''three, four'''
+
+'''v '''''is equal to '''''vector '''''within round brackets in square brackets '''''one, two'''
+
+'''x '''''is equal to '''''A '''''dot '''''solve_right '''''in brackets '''''v'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| x = A.solve_left(v)
+
+x
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| To solve the equation, xA = v we simply say,
+
+
+'''x '''''is equal to '''''A '''''dot '''''solve_left '''''in brackets '''''v'''
+
+
+'''The left and right here, denote the position of A, relative to x.'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 8
+
+Summary slide
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| # This brings us to the end of this tutorial. In this tutorial we have learned to
+# 
+# 1. Use functions like '''lim(), integrate(), integral(), solve()'''
+# <nowiki>#. Use </nowiki>'''sage''' for performing '''matrix algebra, integrations''' & other calculus operations using the above mentioned functions.
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 9
+
+Evaluation
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Here are some self assessment questions for you to solve
+
+1. How do you find the limit of the function '''x/sin(x)''' as '''x''' tends to '''0''' from the negative side.
+
+2. Solve the system of linear equations
+
+x-2y+3z = 7
+
+2x+3y-z = 5
+
+x+2y+4z = 9
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 10
+
+Solutions
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| And the answers,
+
+# 1. To find the limit of the function x/sin(x) as x tends to 0 from negative side, use the lim function as:
+# 
+
+ lim(x/sin(x), x=0, dir="left")
+
+# We shall first write the equations in '''matrix''' form and then use the '''solve()''' function
+# 
+
+ <nowiki>A = Matrix([[1, -2, 3],</nowiki>
+             <nowiki>[2, 3, -1],</nowiki>
+             <nowiki>[1, 2, 4]])</nowiki>
+
+<nowiki>b = vector([7, 5, 9])</nowiki>
+
+
+x = A.solve_right(b)
+
+To view the output type x
+
+x
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 11 
+
+FOSSEE 
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| FOSSEE is Free and Open-source Software for Science and Engineering Education. The goal of this project is to enable all to use open source software tools. For more details, please visit the given link. 
+
+|}
+
+{| style="border-spacing:0;"
+| style="border-top:0.05pt double #808080;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 12
+
+About the Spoken Tutorial Project
+| style="border:0.05pt double #808080;padding:0.049cm;"| Watch the video available at the following link. It summarizes the Spoken Tutorial project. If you do not have good bandwidth, you can download and watch it.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 13
+
+Spoken Tutorial Workshop
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The Spoken Tutorial Project Team conducts SELF workshops using spoken tutorials, gives certificates to those who pass an online test. For more details, you may write to contact@spoken-tutorial.org
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 14
+
+Acknowledgements
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Spoken Tutorial Project is a part of the "Talk to a Teacher" project. It is supported by the National Mission on Education through ICT, MHRD, Government of India. More information on this mission is available at the given link. 
+
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 15
+
+Thank You
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hope you have enjoyed this tutorial and found it useful. Thank you!
+
+|}
+

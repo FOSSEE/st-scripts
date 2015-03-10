@@ -1,70 +1,68 @@
-% Created 2011-05-24 Tue 09:52
-\documentclass[presentation]{beamer}
-\usepackage[utf8]{inputenc}
+\documentclass[17pt]{beamer}
+%\documentclass{beamer}
+\usetheme{Madrid}
+\useoutertheme{noslidenum}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{beamerthemesplit}
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color
-{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{2010-09-14 Tue}
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\definecolor{NavyBlue}{RGB}{0, 76, 153}
+\setbeamercolor{structure}{fg=NavyBlue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+
+% logo
+\logo{\includegraphics[height=1.30cm]{../images/3t-logo.pdf}}
+\logo{\includegraphics[height=0.6cm]{../images/fossee-logo.png}
+
+\hspace{200pt}
+\includegraphics[scale=0.5]{../images/fossee-logo.png}\\
+\hspace{275pt}
+\includegraphics[scale=0.9]{../images/3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Getting Started With Lists]
+{Getting Started With Lists}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\ [0.8cm]Script by: Hardik Ghaghada \\ Narration by: \\
+ [0.5cm]
+{\small 15 May 2013}}
 
-
-
-
-
-
-
-
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Getting started with Lists}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+  \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-\label{sec-2}
-
   At the end of this tutorial, you will be able to, 
-
 \begin{itemize}
 \item Create lists
 \item Access list elements
@@ -72,108 +70,130 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Delete elements from lists
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Lists}
+List is a compound data type, it can contain data of mutually
+different datatypes. List is also a sequence data type where all the
+elements are arranged in a specific order.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
-\label{sec-3}
-
-
 \begin{itemize}
 \item What happens when you do nonempty[-1].
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
-\label{sec-4}
-
-
 \begin{itemize}
 \item What is the syntax to get the element `and' 
      in the list,listinlist ?
 \item How would you get `and' using negative indices?
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 2}
-\label{sec-5}
-
-  
 \lstset{language=Python}
 \begin{lstlisting}
-
 listinlist[1]
 listinlist[-5]
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
-\label{sec-6}
-
-
-
 \begin{itemize}
 \item Remove the third element from the list, listinlist.
 \item Remove `and' from the list, listinlist.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 3}
-\label{sec-7}
-
 \lstset{language=Python}
 \begin{lstlisting}
-
 del(listinlist[2])
 listinlist.remove('and')
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Summary}
+	In this tutorial we have learnt how to,
+    \begin{itemize}
+        \item Create lists
+        \item Access elements
+        \item Use ``append'' function
+        \item Use ``del'' function
+        \item Use ``remove'' function.
+        \item Use ``len'' function.
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Evaluation}
+	\begin{enumerate}
+        \item How do you create an empty list ?
+        \vspace{8pt}
+        \item Can you have a list inside a list ?
+        \vspace{8pt}
+        \item How would you access the last element of a list without finding its length?
+    \end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Solutions}
+	\begin{enumerate}
+        \item empty=[]
+        \vspace{8pt}
+        \item Yes we can have list inside list\\
+        \vspace{8pt}
+        \item Use negative index to access the last element of the list
+    \end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Summary}
-\label{sec-8}
-
-  In this tutorial, we have learnt to –
-
+\frametitle{FOSSEE}
+{\color{NavyBlue}Free and Open Source Software for \\Education} \\
 \begin{itemize}
-\item Create lists.
-\item Access lists using their index numbers.
-\item Append elements to list using the function ``append``.
-\item Delete Element from lists by specifying the index number of the
-    element to be deleted in the ``del`` function.
-\item Delete element from list by content using ``remove`` function.
-\item Find out the list length using the ``len`` function.
+\item To enable the use of free and open source software tools
+\item For more details, please visit: {\color{blue}\url{http://fossee.in/}}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Evaluation}
-\label{sec-9}
-
-
-\begin{enumerate}
-\item How do you create an empty list?
-\vspace{8pt}
-\item Can you have a list inside a list ?
-\vspace{8pt}
-\item How would you access the end of a list without finding its length?
-\end{enumerate}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}\url{http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}} 
+\item It summarises the Spoken Tutorial project 
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Solutions}
-\label{sec-10}
-
-
-\begin{enumerate}
-\item empty=[]
-\vspace{8pt}
-\item Yes\\
-list\_in\_list=[2.3,[2,4,6],'string,'all datatypes can be there']
-\vspace{8pt}
-\item Using negative indices\\
-nonempty = ['spam', `eggs', 100, 1.234]\\
-     nonempty[-1]
-\end{enumerate}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item Supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
- \begin{block}{}
+  \begin{block}{}
   \begin{center}
   \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
@@ -181,9 +201,9 @@ nonempty = ['spam', `eggs', 100, 1.234]\\
 \begin{block}{}
   \begin{center}
     For more Information, visit our website\\
-    \url{http://fossee.in/}
+    {\color{blue}\url{http://fossee.in/}}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

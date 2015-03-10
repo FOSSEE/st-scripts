@@ -1,58 +1,32 @@
-.. Objectives
-.. ----------
-
-.. By the end of this tutorial, you will be able to
-
-.. Create Lists.
-.. Access List elements.
-.. Append elemets to list
-.. Delete list elemets
-
-.. 1. getting started with ipython 
-
-
-
-.. Prerequisites
-.. -------------
-
-..   1. getting started with strings
-..   #. getting started with lists
-..   #. basic datatypes
-     
-.. Author              : Amit 
-   Internal Reviewer   : Anoop Jacob Thomas <anoop@fossee.in>
-   External Reviewer   :
-   Language Reviewer   : Bhanukiran
-   Checklist OK?       : <12-11-2010, Anand, OK> [2010-10-05]
-
-
 Script
 ------
 
 .. L1
 
-{{{ Show the  first slide containing title, name of the production
-team along with the logo of MHRD }}}
+{{{ Show the Title slide }}}
 
 .. R1
 
 Hello friends and welcome to the tutorial on "Getting started with
-lists".
+Lists".
 
 .. L2
 
-{{{ Show slide with objectives }}}
+{{{ Show 'objectives' slide }}}
 
 .. R2
 
-In this tutorial we will be getting acquainted with a python data
-structure called lists.  
 At the end of this tutorial, you will be able to, 
  
  1. Create lists
  #. Access list elements
  #. Append elements to lists
  #. Delete elements from lists
+ #. Find length of the lists
+ 
+.. L3
+
+{{{ Show 'Lists' slide }}}
 
 .. R3
 
@@ -60,37 +34,38 @@ List is a compound data type, it can contain data of mutually
 different datatypes. List is also a sequence data type where all the
 elements are arranged in a specific order.
 
-Start the ipython interpreter and first create an empty list with no 
-elements. 
+.. L4
 
-.. L3
-::   
-   
     ipython
     empty = [] 
     type(empty)
 
 .. R4
-  
-This is an empty list without any elements.
 
-Lets define a non-empty list as: 
+Let us start the IPython interpreter and creat an empty list. So, type on the
+terminal ipython. Now, to create an empty list we say empty is equal to empty
+square brackets. Remember that 'empty' is just a name of the list, we could give
+any name required. Further, let us check the data type of the 'empty'. For this
+we say, type(empty) and hitenter. As we can see 'empty' variable is of type
+list.
 
-.. L4
+.. L5
+
 ::
-
     nonempty = ['spam', 'eggs', 100, 1.234]
 
 .. R5
+  
+That was about empty list. Now, let us define a non-empty list with some
+elements in it. So, we say, nonempty is equal to within square brackets in
+single quotes spam coma in single quotes eggs coma hundred coma one point two
+three four.
 
-Thus, the simplest way of creating a list is typing out a sequence 
-of comma-separated values (or items) between two square brackets. 
 
-As we can see, lists can contain different kinds of data. In the
-previous example 'spam' and 'eggs' are strings whereas 100 and 1.234 are
-integer and float respectively. Thus, we can put elements of different 
-datatypes in lists including lists itself. This property makes lists 
-heterogeneous data structures.
+.. L4
+
+.. R5
+
 
 Let us include a list within a list. 
 

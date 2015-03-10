@@ -1,0 +1,256 @@
+
+{| style="border-spacing:0;"
+| style="border-top:0.05pt double #808080;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| <center>'''Visual Cue'''</center>
+| style="border:0.05pt double #808080;padding:0.049cm;"| <center>'''Narration'''</center>
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 1
+
+Title Slide
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hello friends and welcome to the tutorial on '''“Getting Started with For Loop”'''
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 2
+
+Objectives
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| At the end of this tutorial, you will be able to,
+
+# Understand indentation in '''Python'''
+# Use the for '''loop'''.
+# Use '''range()''' '''function'''.
+# Write blocks in '''Python''' '''shell'''
+# Write blocks in '''IPython''' '''interpreter'''
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 3
+
+White-space
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| In '''Python''' whitespace is significant, and the blocks are visually separated. The convention is to indent the code using four spaces.
+
+As you can see in the slide, '''"Block B"''' is an '''inner block''', indented by 4 spaces. After '''"Block B"''' the next statement in '''"Block A" '''starts from the same indentation level of other '''"Block A" '''Statements.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 4
+
+Excercise 1
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Now, let us move straight into '''for''' '''loop'''. Write a '''for loop''' which iterates through a list of numbers and find the square root of each number. Numbers are 1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Open text editor
+
+<nowiki>numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916]</nowiki>
+
+for each in numbers:
+
+print “Suare root of”, each, “is ”, sqrt(each) 
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| For the problem, first we need to create a list of numbers and then iterate over the list and find the square root of each element in it. 
+
+Let us create a script, rather than typing it out in the '''interpreter''' itself. 
+
+Open your '''text editor''' and type '''numbers '''''is equal to within round brackets'' 1369 ''coma'' 7225 ''coma'' 3364, 7056, 5625, 729, 7056, 576, 2916.
+
+We have the list of numbers. Now, to iterate over it we say '''for''' '''each''' in '''numbers''' ''colon'' '''print''' ''opening double quotes'' Square root of ''closing double quotes'' ''coma'' '''each''' ''coma'' in ''double quotes'' '''is''' ''coma'' '''sqrt''' ''within'' ''round brackets'' '''each. '''Save the script as''' list_roots.py. '''
+
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| %run -i list_roots.py
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We will run the script from the '''IPython interpreter. '''So, switch to your terminal start the '''ipython interpreter''' and run the script as, ''percentage '''''run minus i list_roots.py '''and we get the square roots of the numbers.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch to text editor
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| So that was easy! All what we did was iterate over the list element by element and then use the element for calculation. Note that here we used two variables, the variable '''numbers''', which is a list, and the other variable '''each''', which is the element of list under consideration in each cycle of the '''for loop'''. The variable names can be chosen by you.
+
+Note that the lines after for statement, is indented using four spaces.
+
+It means that line is a part of the '''for loop''' and it is a block of code, although it is only a single statement in the block.
+
+Also, the fourth line or the immediate line after the for block is not '''indented'''.
+
+It means that it is not a part of the for loop and the lines after that don't fall in the scope of the for loop.
+
+Thus each block is separated by the '''indentation''' level and that marks the importance of white-spaces in '''Python'''.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 5
+
+Assignment 2
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Print the square root of numbers in the list. And this time let us do it right in the '''IPython''' '''interpreter'''.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch to the IPython interpreter
+
+<nowiki>numbers = [1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916]</nowiki>
+
+for each in numbers:
+
+print "Square root of", each,
+
+print "is", sqrt(each)
+
+Hit enter twice
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Switch to your '''terminal '''and type '''numbers '''''is equal to within round brackets'' 1369 ''coma'' 7225 ''coma'' 3364, 7056, 5625, 729, 7056, 576, 2916.
+
+We have the list of numbers.
+
+Write the same '''for loop '''we wrote in the script.
+
+Notice that, as soon as you press the enter key after for statement, the prompt changes to four dots and the cursor is not right after the four dots but there are four spaces from the dots. Please note that '''IPython '''automatically indents the block. The four dots tell you that you are inside the block.
+
+Now type the rest of the '''for loop'''.
+
+Now we have finished the statements in the block, and still the interpreter is showing four dots, this means that you are still inside the block. To exit from the block press the return key or the enter key twice without entering anything else.
+
+We get the expected ouput.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show slide 6 
+
+Exercise 3
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| We will now perform an exercise to find cubes of numbers from 1 to 10 in the '''Python shell'''. 
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch to the terminal
+
+python
+
+
+for i in range(1,11):
+
+Hit enter
+
+print i, "cube is", i**3
+
+Hit enter
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| You can start the '''shell '''by issuing the command '''python''' from your '''terminal'''.
+
+Type the '''for '''statement as for i in range''' '''''within round brackets ''one ''coma ''eleven ''colon. ''
+
+Press enter once, and we will see that this time it shows three dots, but the cursor is close to the dots, so we have to indent the block. The '''python shell '''does not indent the code automatically. So enter four spaces there and then type the following print i ''coma in double quotes ''cube is ''coma ''i star star three.
+
+Now when we hit enter, we still see the four dots. To get out of the block, hit enter once again.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 7
+
+range() function
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Okay! so the main thing we learned here is how to use the '''Python shell''' and the '''IPython interpreter''' to specify blocks. But while we were writing for loops we used something new, '''range() function'''.
+
+'''range() '''is a built in function in '''Python''' which can be used to generate a list of '''integers''' from a starting number to an ending number. Note that the ending number that you specify will not be included in the list.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 8
+
+Assignment 4
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Print all the odd numbers from 1 to 50. 
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Switch focus to ipython interpreter
+
+ipython
+
+print range(1,51,2)
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Let us do it in our '''IPython''' interpreter for ease of use.
+
+The problem can be solved by just using the range() function.
+
+It can be solved as, print range ''within square brackets ''one coma fifty one coma two
+
+This time we passed three parameters to range() function unlike the previous case where we passed only two parameters. The first parameter is the starting number of the sequence and the second parameter is the end of the range.
+
+Note that the sequence does not include the ending number. The third parameter is for stepping through the sequence.
+
+Here we gave two which means we are skipping every alternate element.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 9
+
+Summary
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| This brings us to the end of the tutorial. In this tutorial,we learned to,
+
+# create blocks in python using '''for loop'''
+# indent the blocks of code
+# iterate over a list using '''for loop'''
+# use the '''range() function'''
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 10
+
+Evaluation
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Here are some self assessment questions for you to solve
+
+# 1. '''Indentation''' is not mandatory in '''Python'''
+
+* 
+** True
+** False
+
+# 2. Write a code using '''for loop''' to print the product of all natural numbers from 1 to 20.
+
+3. What will be the output of -
+
+range ''within square brackets ''one ''coma ''five
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 11
+
+Solutions
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| And the answers,
+
+# 1. False. Indentation is essential in python.
+
+2. We use the '''for loop''' in the following manner.
+
+y = 1
+
+for x in range(1,21):
+
+     y*=x
+
+print y
+
+# '''range(1, 5)''' will produce a list of integers from 1 to 4.
+# <nowiki>[1,2,3,4]</nowiki>
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 12 
+
+FOSSEE 
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| FOSSEE is Free and Open-source Software for Science and Engineering Education. The goal of this project is to enable all to use open source software tools. For more details, please visit the given link. 
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 13
+
+About the Spoken Tutorial Project
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Watch the video available at the following link. It summarizes the Spoken Tutorial project. If you do not have good bandwidth, you can download and watch it.
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 14
+
+Spoken Tutorial Workshop
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| The Spoken Tutorial Project Team conducts SELF workshops using spoken tutorials, gives certificates to those who pass an online test. For more details, you may write to contact@spoken-tutorial.org
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 15
+
+Acknowledgements
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Spoken Tutorial Project is a part of the "Talk to a Teacher" project. It is supported by the National Mission on Education through ICT, MHRD, Government of India. More information on this mission is available at the given link. 
+
+
+
+
+|-
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:none;padding:0.049cm;"| Show Slide 16
+
+Thank You
+| style="border-top:none;border-bottom:0.05pt double #808080;border-left:0.05pt double #808080;border-right:0.05pt double #808080;padding:0.049cm;"| Hope you have enjoyed this tutorial and found it useful. Thank you!
+
+|}
+
