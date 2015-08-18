@@ -1,198 +1,218 @@
-% Created 2011-07-28 Thu 12:41
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\usepackage{amsmath}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Matrices]
+{Python - Matrices}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Matrices}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
 
-  At the end of this tutorial, you will be able to, 
-
+  In this tutorial we will learn, \pause
 
 \begin{itemize}
-\item Create matrices using data.
-\item Create matrices from lists.
-\item Do basic matrix operations like addition,multiplication.
-\item Perform operations to find out the --
-\begin{itemize}
-\item inverse of a matrix
-\item determinant of a matrix
-\item eigen values and eigen vectors of a matrix
-\item norm of a matrix
-\item singular value decomposition of a matrix.
-\end{itemize}
+\item Create matrices using data.\pause
+\item Create matrices from lists.\pause
+\item Do basic matrix operations like addition, multiplication.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{Objectives contd..}
+\label{sec-2.2}
+\begin{itemize}
+\item Perform operations to find out the
+	\begin{itemize}
+	\item inverse of a matrix\pause
+	\item determinant of a matrix\pause
+	\item eigen values and eigen vectors of a matrix\pause
+	\item norm of a matrix\pause
+	\item singular value decomposition of a matrix.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
-  Spoken tutorial on -
+  Spoken tutorial on -\pause
 
 \begin{itemize}
-\item Getting started with Lists.
-\item Getting started with Arrays.
+\item Getting started with Lists.\pause
+\item Getting started with Arrays.\pause
 \item Accessing parts of Arrays.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-4}
 
 
 \begin{itemize}
-\item Create a two dimensional matrix \verb~m3~ of order (2, 4) with
-   elements \\ 5, 6, 7, 8, 9, 10, 11, 12.
+\item Create a two dimensional matrix \texttt{m3} of order \texttt{(2, 4)} with
+   elements \\ \texttt{5, 6, 7, 8, 9, 10, 11, 12}.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Recall from \verb~array~}
-\label{sec-5}
+\frametitle{Recall from \texttt{array}}
+\label{sec-5.1}
 
-  The following functions can also be used with matrices
+  The following functions can also be used with matrices\pause
 
 \begin{itemize}
-\item \verb~identity(n)~
-\begin{itemize}
-\item creates an identity matrix of order \verb~nXn~
-\end{itemize}
-\item \verb~zeros((m,n))~
-\begin{itemize}
-\item creates a matrix of order \verb~mXn~ with 0's
-\end{itemize}
-\item \verb~zeros\_like(A)~
-\begin{itemize}
-\item creates a matrix with 0's similar to the shape of matrix \verb~A~
-\end{itemize}
-\item \verb~ones((m,n))~
-\begin{itemize}
-\item creates a matrix of order \verb~mXn~ with 1's
-\end{itemize}
-\item \verb~ones\_like(A)~
-\begin{itemize}
-\item creates a matrix with 1's similar to the shape of matrix \verb~A~
-\end{itemize}
+\item \texttt{identity(n)}
+	\begin{itemize}
+	\item creates an identity matrix of order \texttt{nXn}\pause
+	\end{itemize}
+\item \texttt{zeros((m,n))}
+	\begin{itemize}
+	\item creates a matrix of order \texttt{mXn} with 0's
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Recall from \texttt{array}}
+\label{sec-5.2}
+
+\begin{itemize}
+\item \texttt{zeros\_like(A)}
+	\begin{itemize}
+	\item creates a matrix with 0's similar to the shape of matrix \texttt{A}\pause
+	\end{itemize}
+\item \texttt{ones((m,n))}
+	\begin{itemize}
+	\item creates a matrix of order \texttt{mXn} with 1's\pause
+	\end{itemize}
+\item \texttt{ones\_like(A)}
+	\begin{itemize}
+	\item creates a matrix with 1's similar to the shape of matrix \texttt{A}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 2 : Frobenius norm \& inverse}
 \label{sec-6}
-
 \begin{itemize}
-\item Find out the Frobenius norm of inverse of a \verb~4 X 4~ matrix.
-\end{itemize}
-\begin{verbatim}
-   
-\end{verbatim}
-
-  The matrix is
-\begin{verbatim}
-   m5 = arange(1,17).reshape(4,4)
-\end{verbatim}
-
-
-\begin{itemize}
-\item Inverse of A,
-\begin{itemize}
-\item $A^{-1} = inv(A)$
-\end{itemize}
 \item Frobenius norm is defined as,
+	\begin{itemize}
+	\item $||A||_F = \sqrt{\sum_{i,j}|a_{i,j}|^2}$\pause
+	\end{itemize}
 \begin{itemize}
-\item $||A||_F = [\sum_{i,j} abs(a_{i,j})^2]^{1/2}$
+\item Find out the Frobenius norm of inverse of a \texttt{4 X 4} matrix.
 \end{itemize}
+\texttt{m5=arange(1,17).reshape(4,4)}\pause
+\item Inverse of A,
+	\begin{itemize}
+	\item $A^{-1} = inv(A)$
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 3 : Infinity norm}
 \label{sec-7}
-
-\begin{itemize}
-\item Find the infinity norm of the matrix \verb~im5~
-\end{itemize}
-\begin{verbatim}
-   
-\end{verbatim}
-
-
 \begin{itemize}
 \item Infinity norm is defined as,
-       $max([\sum_{i} abs(a_{i})^2])$
+       $max(\sum_{i} |a_{i}|^2)$
+\end{itemize}\pause
+\begin{itemize}
+\item Find the infinity norm of the matrix \texttt{im5}
 \end{itemize}
+
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{\verb~norm()~ method}
+\frametitle{\texttt{norm()} method}
 \label{sec-8}
 
 
 \begin{itemize}
-\item Frobenius norm
-\begin{verbatim}
-     In []: norm(im5)
-\end{verbatim}
-
-\item Infinity norm
-\begin{verbatim}
-     In []: norm(im5, ord=inf)
-\end{verbatim}
-
+\item Frobenius norm\\
+     \texttt{norm(im5)}\pause
+\item Infinity norm\\
+     \texttt{norm(im5, ord=inf)}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{eigen values \& eigen vectors}
 \label{sec-9}
@@ -200,95 +220,152 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   eigen values and eigen vectors
 
 \begin{itemize}
-\item eig()
+\item \texttt{eig()}\pause
 \end{itemize}
  
   Only eigen values
 
 \begin{itemize}
-\item eigvals()
+\item \texttt{eigvals()}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Singular Value Decomposition (\verb~svd~)}
-\label{sec-10}
-
-    $M = U \Sigma V^*$
-
+\frametitle{Singular Value Decomposition \texttt{svd}}
+\label{sec-10.1}
+   {\small  $M = U \Sigma V^*$}\pause
 \begin{itemize}
-\item U, an \verb~mXm~ unitary matrix over K.
-\item $\Sigma$
-        , an \verb~mXn~ diagonal matrix with non-negative real numbers on diagonal.
-\item $V^*$
-        , an \verb~nXn~ unitary matrix over K, denotes the conjugate transpose of V.
-\item SVD of matrix \verb~m5~ can be found out as,
+\item U, an \texttt{mXm} unitary matrix over K.\pause
+\item $\Sigma$, 
+		 an \texttt{mXn} diagonal matrix with non-negative real numbers on diagonal.
 \end{itemize}
-\begin{verbatim}
-     In []: svd(m5)
-\end{verbatim}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Singular Value Decomposition \texttt{svd} contd..}
+\label{sec-10.2}
+ 
+\begin{itemize}
+
+\item $V^*$,
+         an \texttt{nXn} unitary matrix over K, denotes the conjugate transpose of V.\pause
+\item SVD of matrix \texttt{m5} can be found out as, \\ \texttt{svd(m5)}
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-11}
+\label{sec-11.1}
 
-  In this tutorial, we have learnt to, 
-
-
+  In this tutorial, we have learnt to - 
+  
 \begin{itemize}
 \item Create matrices using arrays.
-\item Add and multiply the elements of matrix.
-\item Find out the inverse of a matrix,using the function ``inv()''.
-\item Use the function ``det()'' to find the determinant of a matrix.
-\item Calculate the norm of a matrix using the for loop and also using 
-    the function ``norm()''.
-\item Find out the eigen vectors and eigen values of a matrix, using 
-    functions ``eig()'' and ``eigvals()''.
-\item Calculate singular value decomposition(SVD) of a matrix using the 
-    function ``svd()''.
+\item Add and multiply the elements of matrix. 
+\item Find out the inverse of a matrix, using the function \texttt{inv()}. 
 \end{itemize}
- 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-11.2}
+\begin{itemize}
+\item Use the function \texttt{det()} to find the determinant of a matrix. 
+\item Calculate the norm of a matrix using the for loop and also using 
+    the function \texttt{norm()}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-11.3}
+\begin{itemize}
+\item Find out the eigen vectors and eigen values of a matrix, using 
+    functions \texttt{eig()} and \texttt{eigvals()}. 
+\item Calculate singular value decomposition(SVD) of a matrix using the 
+    function \texttt{svd()}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-12}
-
+\label{sec-12.1}
 
 \begin{enumerate}
-\item A and B are two array objects. Element wise multiplication in
-   matrices are done by,
+\item \texttt{A} and \texttt{B} are two array objects. Element wise multiplication in
+   matrices are done by,\pause
 \begin{itemize}
-\item A * B
-\item multiply(A, B)
-\item dot(A, B)
-\item element\_multiply(A,B)
+\item \texttt{A * B}
+\item \texttt{multiply(A, B)}
+\item \texttt{dot(A, B)}
+\item \texttt{element\_multiply(A,B)}\pause
 \end{itemize}
-\vspace{5pt}
-\item ``eig(A)[ 1 ]'' and ``eigvals(A)'' are the same.
-\begin{itemize}
-\item True
-\item False
-\end{itemize}
-\vspace{5pt}
-\item ``norm(A,ord='fro')'' is the same as ``norm(A)'' ?
-\begin{itemize}
-\item True
-\item False
-\end{itemize}
+\seti
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-12.2}
+
+\begin{enumerate}
+\conti
+\item \texttt{eig(A)[ 1 ]} and \texttt{eigvals(A)} are the same. (True of False)\pause
+\item \texttt{norm(A, ord = 'fro')} is the same as \texttt{norm(A)} (True of False)
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-13}
 
 
 \begin{enumerate}
-\item A * B
+\item \texttt{A * B}\pause
 \vspace{12pt}
-\item False
+\item False\pause
 \vspace{12pt}
 \item True
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -303,5 +380,5 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

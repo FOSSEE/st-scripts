@@ -1,96 +1,125 @@
-% Created 2011-08-10 Wed 14:46
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{red},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Testing and Debuggging]
+{Python - Testing and Debuggging}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Testing and Debugging}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-\label{sec-2}
+\label{sec-2.1}
 
-  At the end of the tutorial, you will be able to,
-
+At the end of this tutorial, you should be able, \pause
 
 \begin{itemize}
-\item Understand what is software testing.
-\item Test simple functions for their functionality.
+\item Understand what is software testing.\pause
+\item Test simple functions for their functionality.\pause
 \item Automate tests.
-\item Understand the need for coding style
-\item Learn  some of the standards followed by the Python Community.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives contd..}
+\label{sec-2.2}
+
+\begin{itemize}
+\item Understand the need for coding style.\pause
+\item Learn  some of the standards followed by the Python Community.\pause
 \item Handle Errors and Exceptions.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
 Spoken tutorial on -
 
 \begin{itemize}
-\item Getting started with functions.
+\item Getting started with functions.\pause
 \item Advanced Features of functions.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{gcd function}
 \label{sec-4}
 
-
 \begin{itemize}
 \item Create gcd.py file with:
+\begin{small}
 \lstset{language=Python}
 \begin{lstlisting}
 def gcd(a, b):
@@ -98,16 +127,18 @@ def gcd(a, b):
           return b
       return gcd(b, a%b)
 \end{lstlisting}
+\end{small}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Test for gcd.py}
 \label{sec-5}
 
-
 \begin{itemize}
 \item Edit gcd.py file
 \lstset{language=Python}
+\begin{small}
 \begin{lstlisting}
 def gcd(a, b):
     if b == 0:
@@ -120,27 +151,29 @@ if __name__=='__main__':
         print "Test failed"
     print "Test Passed"
 \end{lstlisting}
+\end{small}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Idiom}
 \label{sec-6}
 
-if \_\_name\_\_ == `\_\_main\_\_':
+\texttt{if \_\_name\_\_ == `\_\_main\_\_':}
 \end{frame}
+
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-7}
-
 
 \begin{itemize}
 \item Write code for gcd and write tests for it
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Structure of file}
 \label{sec-8}
-
 
 \begin{center}
 \begin{tabular}{rrr}
@@ -149,12 +182,15 @@ if \_\_name\_\_ == `\_\_main\_\_':
  4678  &  39763  &  2339  \\
 \end{tabular}
 \end{center}
+
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Code piece}
 \label{sec-9}
 
 \lstset{language=Python}
+\begin{footnotesize}
 \begin{lstlisting}
 if __name__ == '__main__':
     for line in open('testcases.txt'):
@@ -167,21 +203,24 @@ if __name__ == '__main__':
     else:
         print "Test passed", result
 \end{lstlisting}
+\end{footnotesize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-10}
-
 
 \begin{itemize}
 \item For the same inputs as gcd write automated tests for LCM.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 2}
 \label{sec-11}
 
 \lstset{language=Python}
+\begin{scriptsize}
 \begin{lstlisting}
 def gcd(a, b):
     if a % b == 0: 
@@ -200,7 +239,9 @@ if __name__ == '__main__':
         else:
             print "Test passed", result
 \end{lstlisting}
+\end{scriptsize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Meaning full names}
 \label{sec-12}
@@ -214,36 +255,37 @@ nCoins = round(amount / denom)
 rAmount = nCoins * denom
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Code style}
 \label{sec-13}
 
-
 \begin{itemize}
-\item Four Space Indentation
-\item 79 character limit on a line
+\item Four Space Indentation\pause
+\item 79 character limit on a line\pause
 \item Funtions should be seperated by 
-   blank line
-\item Use Docstring
+   blank line\pause
+\item Use Docstring\pause
 \item White space around operators
-\begin{itemize}
-\item l = 32 \% 4
-\end{itemize}
+	\begin{itemize}
+	\item l = 32 \% 4
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
 \label{sec-14}
 
-
 \begin{itemize}
 \item Give meaningful names to the variables in following
      code
-\begin{itemize}
-\item c = a / b
-\end{itemize}
+	\begin{itemize}
+	\item \texttt{c = a / b}
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 3}
 \label{sec-15}
@@ -254,11 +296,12 @@ rAmount = nCoins * denom
 quotient = dividend / divisor
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Using idb}
 \label{sec-16}
 
-\small
+\begin{scriptsize}
 \begin{lstlisting}
 In []: import mymodule
 In []: mymodule.test()
@@ -270,68 +313,131 @@ mymodule.py in test()
       2     total=1+1
 ----> 3     print spam
 NameError: global name 'spam' is not defined
-
 In []: %debug
 > mymodule.py(2)test()
       0     print spam
 ipdb> total
 2
 \end{lstlisting}
+\end{scriptsize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-17}
+\label{sec-17.1}
 
  In this tutorial, we have learnt to, 
         
-
 \begin{itemize}
 \item Create simple tests for a function.
 \item Automate tests using many predefined test cases.
 \item Use the python coding standards.
-\item Differentiate between syntax error and exception.
-\item Handle exception using ``try'' and ``except''.
-\item Use ``\%debug'' for debugging on ipython.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-17.2}
+        
+\begin{itemize}
+\item Differentiate between syntax error and exception.
+\item Handle exception using \texttt{try} and \texttt{except}.
+\item Use \texttt{\%debug} for debugging on \texttt{ipython}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-18}
-
+\label{sec-18.1}
 
 \begin{enumerate}
 \item What is proper indentation for python code according to style guidelines?
-\begin{itemize}
-\item two space identation
-\item three space identation
-\item four Space Indentation
-\item no Indentation
+	\begin{itemize}
+	\item two space indentation
+	\item three space indentation
+	\item four Space Indentation
+	\item no Indentation
 \end{itemize}
-\vspace{3pt}
-\item How do you start the debugger on ipython?
-\begin{itemize}
-\item debug
-\item \%debug
-\item \%debugger
-\item start debugger
-\end{itemize}
-\vspace{3pt}
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-18.2}
+
+\begin{enumerate}
+\conti
+\item How do you start the debugger on \texttt{ipython}?
+	\begin{itemize}
+	\item \texttt{debug}
+	\item \texttt{\%debug}
+	\item \texttt{\%debugger}
+	\item \texttt{start debugger}
+	\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-18.3}
+
+\begin{enumerate}
+\conti
 \item What is the idiom used for running python scripts in a standalone manner?
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-19}
 
-
 \begin{enumerate}
-\item Four Space Indentation
+\item Four Space Indentation\pause
 \vspace{12pt}
-\item \%debug
+\item \texttt{\%debug}\pause
 \vspace{12pt}
-\item if \_\_name\_\_ == `\_\_main\_\_':
+\item \texttt{if \_\_name\_\_ == `\_\_main\_\_':}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -346,5 +452,5 @@ ipdb> total
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

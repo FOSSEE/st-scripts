@@ -1,219 +1,269 @@
-% Created 2011-05-19 Thu 13:28
-\documentclass[presentation]{beamer}
-\usepackage[utf8]{inputenc}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{2010-10-11 Mon}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Saving Plots]
+{Python - Saving Plots}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Saving Plots}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Objectives}
+\frametitle{Objectives} 
 \label{sec-2}
-
-  At the end of this tutorial, you will be able to,
-
+In this tutorial, we will learn -\pause
 \begin{itemize}
-\item Save plots using ``savefig()`` function.
+\item Save plots using \texttt{savefig()}function. \pause
 \item Save plots in different formats.
 \end{itemize}
-  
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
-\label{sec-3}
-
-  Spoken tutorial on -
-
+\frametitle{System Specifications}\pause
 \begin{itemize}
-\item Using plot interactively.
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
+\label{sec-3}
+Spoken tutorial on -
+\begin{itemize}
+\item ``Using plot interactively''
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Creating a basic plot}
 \label{sec-4}
-
-  Plot a sine wave from -3pi to 3pi.
+Plot a sine wave from -3pi to 3pi.\pause
+\begin{small}
 \lstset{language=Python}
 \begin{lstlisting}
 In []: x = linspace(-3*pi,3*pi,100)
-
 In []: plot(x, sin(x))
 \end{lstlisting}
+\end{small}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{savefig()}
 \label{sec-5}
 \begin{itemize}
-
-\item savefig() - to save plots
+\item \texttt{savefig()} - to save plots\pause
 \label{sec-5_1}%
-\begin{verbatim}
-    syntax: savefig(fname)
-\end{verbatim}
 
+Syntax: \texttt{savefig(fname)}\pause
 
 \item example
 \label{sec-5_2}%
 \begin{itemize}
-
-\item savefig('/home/fossee/sine.png')\\
+\item savefig(`/home/fossee/sine.png')\\\pause
 \label{sec-5_2_1}%
 \begin{itemize}
-\item file sine.png saved to the folder /home/fossee
+\item file sine.png saved to the folder /home/fossee\pause
 \item .png - file type
 \end{itemize}
-
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{More on savefig()}
 \label{sec-6}
 \begin{itemize}
-
 \item Recall\\
 \label{sec-6_1}%
 \begin{itemize}
-\item .png - file type
+\item .png - file type\pause
 \end{itemize}
-
-\item File types supported
+\item File types supported\pause
 \label{sec-6_2}%
 \begin{itemize}
 
-\item .pdf - PDF(Portable Document Format)\\
+\begin{footnotesize}
+\item .pdf - PDF(Portable Document Format)\pause\\
 \label{sec-6_2_1}%
-\item .ps - PS(Post Script)\\
+\item .ps - PS(Post Script)\pause\\
 \label{sec-6_2_2}%
 \item .eps - Encapsulated Post Script\\
 \label{sec-6_2_3}%
-\verb~to be used with~ \LaTeX{} \verb~documents~
-
+\verb~to be used with~ \LaTeX{} \verb~documents~\pause
 \item .svg - Scalable Vector Graphics\\
 \label{sec-6_2_4}%
-\verb~vector graphics~
-
+\verb~vector graphics~\pause
 \item .png - Portable Network Graphics\\
 \label{sec-6_2_5}%
 \verb~supports transparency~
+\end{footnotesize}
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-7}
-
-  Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
+Save the sine plot in the format EPS which can be embedded in \LaTeX{} documents.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-8}
-
-  Save the sine plot in PDF, PS and SVG formats.
+Save the sine plot in PDF, PS and SVG formats.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
 \label{sec-9}
-
-  In this tutorial, we have learnt to –
-
+In this tutorial, we have learnt to -
 \begin{itemize}
-\item Save plots using the ``savefig()`` function.
-\item Save the plots in differnt formats.
+\item Save plots using the \texttt{savefig()} function.
+\item Save the plots in different formats.
 \begin{itemize}
-\item pdf
-\item ps
-\item png
-\item svg
-\item eps
+\item pdf, ps, png, svg, eps
 \end{itemize}
 \item Locate files in the file system.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
 \label{sec-10}
-
-
 \begin{enumerate}
-\item Which command is used to save a plot.
+\item Which command is used to save a plot.\pause
+	\begin{itemize}
+	\item \texttt{saveplot()}
+	\item \texttt{savefig()}
+	\item \texttt{savefigure()}
+	\item \texttt{saveplt()}
+	\end{itemize}
+	\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\begin{enumerate}
+\conti
+\item \texttt{savefig('sine.png')} saves the plot in,\pause
 \begin{itemize}
-\item saveplot()
-\item savefig()
-\item savefigure()
-\item saveplt()
-\end{itemize}
-\item ``savefig(`sine.png')`` saves the plot in,
-\begin{itemize}
-\item The root directory ``/`` (on GNU/Linux, Unix based systems),
-       ``c:\`` (on windows).
-\item Will result in an error as full path is not supplied.
-\item The current working directory.
-\item Predefined directory like ``/documents``.
+\item The root directory ``/'' (on GNU/Linux, Unix based systems),
+``C:'' (on windows).\pause
+\item Will result in an error as full path is not supplied.\pause
+\item The current working directory.\pause
+\item Predefined directory like ``/documents''.
 \end{itemize}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-11}
-
-
 \begin{enumerate}
-\item savefig()
+\item \texttt{savefig()}\pause
 \item The current working directory
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -228,6 +278,5 @@ In []: plot(x, sin(x))
   \end{center}  
   \end{block}
 \end{frame}
-\end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

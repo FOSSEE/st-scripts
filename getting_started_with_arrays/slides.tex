@@ -1,77 +1,98 @@
-% Created 2011-05-27 Fri 12:20
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Getting started with Arrays]
+{Python - Getting started with Arrays}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Getting started with Arrays}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
 
-  At the end of this tutorial, you will be able to, 
+  In this tutorial we will learn, \pause
 
 
 \begin{itemize}
-\item Create arrays using data.
-\item Create arrays from lists.
-\item Perform basic array operations.
-\item Create identity matrix.
-\item Use functions zeros(), zeros\_like(), ones(), ones\_like()
+\item Create arrays using data.\pause
+\item Create arrays from lists.\pause
+\item Perform basic array operations.\pause
+\item Create identity matrix.\pause
+\item Use functions: \texttt{zeros()}, \texttt{zeros\_like()}, \texttt{ones()}, \texttt{ones\_like()}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Pre-requisite}
 \label{sec-3}
@@ -82,56 +103,59 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Getting started with Lists.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Overview of Arrays}
 \label{sec-4}
 
 
 \begin{itemize}
-\item Arrays are homogeneous data structures.
-\begin{itemize}
-\item elements have to the same data type
-\end{itemize}
-\item Arrays are faster compared to lists
-\begin{itemize}
-\item at least \emph{80-100 times} faster than lists
-\end{itemize}
+\item Arrays are homogeneous data structures.\pause
+	\begin{itemize}
+	\item all elements in it have the same data type\pause
+	\end{itemize}
+\item Arrays are faster compared to lists\pause
+	\begin{itemize}
+	\item at least \emph{80-100 times} faster than lists
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{\verb~.shape~ of array}
 \label{sec-5}
 
 
 \begin{itemize}
-\item \verb~.shape~
-    To find the shape of the array
-\begin{verbatim}
-     In []: a2.shape
-\end{verbatim}
+\item \texttt{.shape}
+    To find the shape of the array\\
+     \texttt{a2.shape}\pause
 
-\item \verb~.shape~
+\item \texttt{.shape}
     returns a tuple of shape
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-6}
 
   Find out the shape of the other arrays(a1, a3, ar) that we have created.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{\verb~identity()~, \verb~zeros()~ methods}
+\frametitle{\texttt{identity()}, \texttt{zeros()} methods}
 \label{sec-7}
 
 
 \begin{itemize}
-\item \verb~identity(n)~
-    Creates an identity matrix, a square matrix of order (n, n) with diagonal elements 1 and others 0.
-\item \verb~zeros((m, n))~
-    Creates an \verb~m X n~ matrix with all elements 0.
+\item \texttt{identity(n)} :
+    Creates an identity matrix, a square matrix of order (n, n) with diagonal elements 1 and others 0.\pause
+\item \texttt{zeros((m, n))} :
+    Creates an \\\texttt{m X n} matrix with all elements 0.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Learning exercise}
 \label{sec-8}
@@ -139,11 +163,12 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   Find out about
 
 \begin{itemize}
-\item \verb~zeros\_like()~
-\item \verb~ones()~
-\item \verb~ones\_like()~
+\item \texttt{zeros\_like()}
+\item \texttt{ones()}
+\item \texttt{ones\_like()}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
 \label{sec-9}
@@ -151,22 +176,31 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   In this tutorial, we have learnt to,
 
 \begin{itemize}
-\item Create an array using the ``array()`` function.
+\item Create an array using the \texttt{array()} function.
 \item Convert a list to an array.
-\item Perform some basic operations on arrays like addition,multiplication.
-\item Use functions like
-\begin{itemize}
-\item .shape
-\item arrange()
-\item .reshape
-\item zeros() \& zeros\_like()
-\item ones() \& ones\_like()
-\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-9}
+
+\begin{itemize}
+\item Perform some basic operations on arrays like addition,multiplication.
+\item Use functions like
+	\begin{itemize}
+	\item .shape
+	\item arrange()
+	\item .reshape
+	\item zeros() \& zeros\_like()
+	\item ones() \& ones\_like()
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-10}
+\label{sec-10.1}
 
 
 \begin{enumerate}
@@ -175,23 +209,39 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item True
 \item False
 \end{itemize}
-\vspace{4pt}
-\item What does the ``ones\_like()`` function do?
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-10.2}
+
+
+\begin{enumerate}
+\conti
+\item What does the \texttt{ones\_like()} function do?
    
      (A) Returns an array of ones with the same shape and type as a
          given array.\\
      (B) Return a new array of given shape and type, filled with ones.
 \vspace{6pt}     
 
-     Read the statements and answer,
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-10.3}
+
 \begin{itemize}
 \item Only statement A is correct.
 \item Only statement B is correct.
 \item Both statement A and B are correct.
 \item Both statement A and B are incorrect.
 \end{itemize}
-\end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-11}
@@ -205,6 +255,43 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
                   given array.
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -219,5 +306,5 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

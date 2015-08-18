@@ -1,80 +1,100 @@
-% Created 2011-06-14 Tue 13:44
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Getting Started with Symbolics]
+{Python - Getting Started with Symbolics}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Getting started with Symbolics}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-\label{sec-2}
+\label{sec-2.1}
 
- At the end of this tutorial, you will be able to,
+ At the end of this tutorial, you will be able to,\pause
 
 
 \begin{itemize}
-\item Define symbolic expressions in sage.
+\item Define symbolic expressions in sage.\pause
 \item Use built-in constants and functions.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives contd..}
+\label{sec-2.2}
+
+\begin{itemize}
 \item Perform Integration, differentiation using sage.
-\item Define matrices.
-\item Define Symbolic functions.
+\item Define matrices.\pause
+\item Define Symbolic functions.\pause
 \item Simplify and solve symbolic expressions and functions.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
   Spoken tutorial on -
@@ -83,21 +103,22 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
 \item Getting started with Sage Notebook.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-4}
 
 
 \begin{itemize}
-\item Define the following expression as symbolic
-    expression in sage.
-\begin{itemize}
-\item x$^2$+y$^2$
-\item y$^2$-4ax
+\item Define the following expression as symbolic expression in sage.\pause
+	\begin{itemize}
+	\item x$^2$ + y$^2$
+	\item y$^2$ - 4ax
+	\end{itemize}
 \end{itemize}
-\end{itemize}
-  
+ 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 1}
 \label{sec-5}
@@ -111,6 +132,7 @@ var('a,x,y')
 y^2-4*a*x
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-6}
@@ -118,20 +140,21 @@ y^2-4*a*x
 
 \begin{itemize}
 \item Find the values of the following constants upto 6 digits  precision
-\begin{itemize}
-\item pi$^2$
-\item euler\_gamma$^2$
-\end{itemize}
-\end{itemize}
+	\begin{itemize}
+	\item pi$^2$
+	\item euler\_gamma$^2$
+	\end{itemize}
+\end{itemize}\pause
 
 \begin{itemize}
 \item Find the value of the following.
-\begin{itemize}
-\item sin(pi/4)
-\item ln(23)
-\end{itemize}
+	\begin{itemize}
+	\item sin(pi/4)
+	\item ln(23)
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 2}
 \label{sec-7}
@@ -143,6 +166,7 @@ n(sin(pi/4))
 n(log(23,e))
 \end{lstlisting}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
 \label{sec-8}
@@ -153,60 +177,62 @@ n(log(23,e))
    f(x)=3x+2 
    when x is in the closed interval 0 to 4\\
    f(x)=4x$^2$
-   between 4 to 6.
+   between 4 to 6.\pause
 \vspace{4pt}
 \item Sum  of 1/(n$^2$-1) where n ranges from 1 to infinity.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 3}
 \label{sec-9}
 
 \lstset{language=Python}
+\begin{small}
 \begin{lstlisting}
 var('x') 
 h(x)=3*x+2 
 g(x)= 4*x^2
 f=Piecewise([[(0,4),h(x)],[(4,6),g(x)]],x)
 f
-\end{lstlisting}
 
-\lstset{language=Python}
-\begin{lstlisting}
 var('n')
 f=1/(n^2-1) 
 sum(f(n), n, 1, oo)
 \end{lstlisting}
+\end{small}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 4}
 \label{sec-10}
 
-
 \begin{itemize}
 \item Differentiate the following.
-\begin{itemize}
-\item sin(x$^3$)+log(3x), to the second order
-\item x$^5$*log(x$^7$), to the fourth order
-\end{itemize}
+	\begin{itemize}
+	\item sin(x$^3$)+log(3x), to the second order
+	\item x$^5$*log(x$^7$), to the fourth order
+	\end{itemize}
 \vspace{4pt}
 \item Integrate the given expression
-\begin{itemize}
-\item x*sin(x$^2$)
-\end{itemize}
+	\begin{itemize}
+	\item x*sin(x$^2$)
+	\end{itemize}
 \vspace{4pt}
 \item Find x
-\begin{itemize}
-\item cos(x$^2$)-log(x)=0
-\item Does the equation have a root between 1,2.
-\end{itemize}
+	\begin{itemize}
+	\item cos(x$^2$)-log(x)=0
+	\item Does the equation have a root between 1,2.
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 4}
 \label{sec-11}
 
 \lstset{language=Python}
+\begin{footnotesize}
 \begin{lstlisting}
 var('x')
 f(x)= x^5*log(x^7) 
@@ -219,84 +245,144 @@ var('x')
 f=cos(x^2)-log(x)
 find_root(f(x)==0,1,2)
 \end{lstlisting}
+\end{footnotesize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 5}
 \label{sec-12}
 
-
 \begin{itemize}
 \item Find the determinant and inverse of 
 
-      A=[[x,0,1][y,1,0][z,0,y]]
 \end{itemize}
+ \hspace{9pt}          \texttt{A = [[x,0,1][y,1,0][z,0,y]]}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solution 5}
 \label{sec-13}
 
 \lstset{language=Python}
+\begin{small}
 \begin{lstlisting}
 var('x,y,z')
 A=matrix([[x,0,1],[y,1,0],[z,0,y]])
 A.det()
 A.inverse()
 \end{lstlisting}
+\end{small}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-14}
+\label{sec-14.1}
 
-In this tutorial, we have learnt to,
+In this tutorial, we have learnt to -
 
 
 \begin{itemize}
-\item Define symbolic expression and functions using the method ``var``.
-\item Use built-in constants like pi,e,oo and functions like 
-   sum,sin,cos,log,exp and many more.
-\item Use <Tab> to see the documentation of a function.
-\item Do simple calculus using functions like --
-\begin{itemize}
-\item diff()--to find a differential of a function
-\item integral()--to integrate an expression
-\item simplify--to simplify complicated expression.
-\end{itemize}
-\item Substitute values in expressions using ``substitute`` function.
-\item Create symbolic matrices and perform operations on them like --
-\begin{itemize}
-\item det()--to find out the determinant of a matrix
-\item inverse()--to find out the inverse of a matrix.
-\end{itemize}
+\item Define symbolic expression and functions using the method \texttt{var}.
+\item Use built-in constants like \texttt{pi,e,oo} and functions like 
+   \texttt{sum,sin,cos,log,exp} and many more.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-14.2}
+
+\begin{itemize}
+\item Use <Tab> to see the documentation of a function.
+\item Do simple calculus using functions like --
+	\begin{itemize}
+	\item diff()--to find a differential of a function
+	\item integral()--to integrate an expression
+	\item simplify--to simplify complicated expression.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-14.3}
+
+\begin{itemize}
+\item Substitute values in expressions using ``substitute`` function.
+\item Create symbolic matrices and perform operations on them like --
+	\begin{itemize}
+	\item det()--to find out the determinant of a matrix
+	\item inverse()--to find out the inverse of a matrix.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
 \label{sec-15}
 
 
 \begin{enumerate}
-\item How do you define a name `y' as a symbol?
+\item How do you define a name \texttt{y} as a symbol?\pause
 \vspace{8pt}
-\item Get the value of pi upto precision 5 digits using sage?
+\item Get the value of pi upto precision 5 digits using sage?\pause
 \vspace{8pt}
 \item Find third order differential function of
 
    f(x)=sin(x$^2$)+exp(x$^3$)
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-16}
 
 
 \begin{enumerate}
-\item var(`y')
+\item \texttt{var('y')}\pause
 \vspace{8pt}
-\item n(pi,5)
+\item \texttt{n(pi,5)}\pause
 \vspace{8pt}
-\item diff(f(x),x,3)
+\item \texttt{diff(f(x),x,3)}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -311,5 +397,5 @@ In this tutorial, we have learnt to,
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
