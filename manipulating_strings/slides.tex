@@ -1,93 +1,117 @@
-% Created 2011-07-04 Mon 12:31
-\documentclass[presentation]{beamer}
-\usepackage[utf8]{inputenc}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Manipulating Strings]
+{Python - Manipulating Strings}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Manipulating Strings}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-\label{sec-2}
+\label{sec-2.1}
 
-  At the end of this tutorial, you will be able to,
-
+  In this tutorial we will learn, \pause
 
 \begin{itemize}
-\item Slice strings and get sub-strings out of them.
+\item Slice strings and get sub-strings out of them.\pause
 \item Reverse strings.
-\item Replace characters in strings.
-\item Convert strings to upper or lower case.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives contd..}
+\label{sec-2.2}
+
+\begin{itemize}
+\item Replace characters in strings.\pause
+\item Convert strings to upper or lower case.\pause
 \item Join a list of strings.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
 Spoken tutorial on -
 \begin{itemize}
-\item Getting started with strings.
-\item Getting started with lists.
+\item Getting started with strings.\pause
+\item Getting started with lists.\pause
 \item Basic datatypes and operators.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Forms of ~s~}
+\frametitle{Forms of \texttt{s}}
 \label{sec-4}
-
-
 \begin{itemize}
 \item sat
 \item saturday
@@ -97,6 +121,7 @@ Spoken tutorial on -
 \item SATURDAY
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-5}
@@ -104,92 +129,145 @@ Spoken tutorial on -
 
 \begin{itemize}
 \item Obtain the sub-string excluding the first and last characters from
-  the string \verb~s~.
+  the string \texttt{s}.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-6}
 
 
 \begin{itemize}
-\item Given a list week,\\ week = [``sun'', ``mon'', ``tue'', ``wed'', ``thu'', ``fri'', ``sat''].\\
+\item Given a list week,\\ {\small \texttt{week = [''sun'', ''mon'', ''tue'', ''wed'', ''thu'', ''fri'', ''sat'']}}\\\pause
 \vspace{5pt}
 \begin{enumerate}
-\item Check if \verb~s~ is a valid name of a day of the
-  week.
+\item Check if \texttt{s} is a valid name of a day of the
+  week.\pause
 \item Change the solution to this problem, to include forms like,
   SAT, SATURDAY, Saturday and Sat.
 \end{enumerate}
 \end{itemize}  
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
 \label{sec-7}
 
 
 \begin{itemize}
-\item Given \verb~email~ -- \verb~info@fossee[dot]in~
+\item Given \texttt{email}-- \texttt{info@fossee[dot]in}
 
-  Replace the \verb~[dot]~ with \verb~.~ in \verb~email~
+  Replace the \texttt{[dot]} with \texttt{.} in \texttt{email}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 4}
 \label{sec-8}
 
 
 \begin{itemize}
-\item From the \verb~email\_str~ that we generated, change the separator to be a
+\item From the \texttt{email\_str} that we generated, change the separator to be a
   semicolon instead of a comma.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-9}
+\label{sec-9.1}
 
-  In this tutorial, we have learnt to, 
-
+  In this tutorial, we have learnt to - 
 
 \begin{itemize}
-\item Obtain sub-strings and reverse of strings by using the index numbers
-\item Use following functions -
-\begin{itemize}
-\item ``upper()'' -- to obtain the upper case of a string
-\item ``lower()'' -- to obtain the lower case of a string
-\item ``replace()'' -- to replace a character by another one
-\item ``join()'' -- to join a list of strings with an operator
-\end{itemize}
+\item Obtain sub-strings 
+\item Reversing strings by using the index numbers
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\label{sec-9.2}
+
+\begin{itemize}
+\item Use following functions -
+	\begin{itemize}
+	\item \texttt{upper()} -- to obtain the upper case of a string
+	\item \texttt{lower()} -- to obtain the lower case of a string
+	\item \texttt{replace()} -- to replace a character by another one
+	\item \texttt{join()} -- to join a list of strings with an operator
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
 \label{sec-10}
 
 
 \begin{enumerate}
-\item Given a string s = ``this is a string'', how will you change it
-   to ``this isn't a list''
+\item Given a string \texttt{s = ``this is a string''}, how will you change it
+   to \texttt{''this isn't a list''}\pause
 \vspace{12pt}   
-\item Given the string ``F.R.I.E.N.D.S'' in s, obtain the string ``friends''.
+\item Given the string \texttt{''F.R.I.E.N.D.S''} in \texttt{s}, obtain the string \texttt{''friends''}.
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Solutions}
 \label{sec-11}
 
 
 \begin{enumerate}
+\begin{small}
 \item \lstset{language=Python}
 \begin{lstlisting}
 s = s.replace("string", "list")
 s = s.replace("is", "isn't")
 s
-\end{lstlisting}
+\end{lstlisting}\pause
 \vspace{8pt}
-\item s[::2].lower()
+\item \texttt{s[::2].lower()}
+\end{small}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -204,5 +282,5 @@ s
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

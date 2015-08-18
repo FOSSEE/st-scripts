@@ -1,174 +1,251 @@
-% Created 2011-05-19 Thu 13:48
-\documentclass[presentation]{beamer}
-\usepackage[utf8]{inputenc}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Additional features of \texttt{ipython}]
+{Python - Additional features of \texttt{ipython}}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Additional features of \texttt{ipython}}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
-
-  At the end of this tutorial, you will be able to,
- 
-
+In this tutorial, we will learn -\pause
 \begin{itemize}
-\item Retrieve your ipython history.
-\item View a part of the history.
-\item Save a part of your history to a file.
-\item Run a script from within ipython.
+\item Retrieve your \texttt{ipython} history.\pause
+\item View a part of the history.\pause
+\item Save a part of your history to a file.\pause
+\item Run a script from within \texttt{ipython}.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
-
-  Spoken tuorial on -
-
+ Spoken tuorial on -
 \begin{itemize}
 \item Embellishing a Plot
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-4}
-
-  Read through the documentation of \texttt{\%hist} and find out how to
-  list all the commands between 5 and 10.
+Read through the documentation of \texttt{\%hist} and find out how to
+list all the commands between 5 and 10.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-5}
-
-  Change the label on y-axis to ``y'' and save the lines of code
-  accordingly
+Change the label on y-axis to ``y'' and save the lines of code
+accordingly
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
 \label{sec-6}
-
-  Use \texttt{\%hist} and \texttt{\%save} and create a script that has the function show()
-  in it.Run the script to produce the plot and display the same.
+\begin{itemize}
+\item Use \texttt{\%hist} and \texttt{\%save}, and create a script that has the function
+ \texttt{show()} in it. \pause
+\item Run the script to produce the plot and display the same.
+\end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 4}
 \label{sec-7}
-
-  Run the script without using the -i option. Do you find any
-  difference?
+Run the script without using the -i option. Do you find any difference?
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solution 4}
 \label{sec-8}
-
-  We see that it raises \verb~NameError~ saying the name \verb~linspace~ is not
-  found.
+We see that it raises \texttt{NameError} saying the name \texttt{linspace} is not
+found.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-9}
-
-  In this tutorial, we have learnt to –
-
+In this tutorial, we have learnt to -
+\label{sec-9.1}
 \begin{itemize}
 \item Retrieve the history using \texttt{\%hist} command.
-\item View only a part of history by passing an argument to \%hist.
-\item Save the required lines of code in required order using \%save command.
-\item Use \%run -i command to run the saved script.
+\item View only a part of history by passing an argument to \texttt{\%hist}.\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-9.2}
+\begin{itemize}
+\item Save the required lines of code in required order using \texttt{\%save} command.
+\item Use \texttt{\%run -i} command to run the saved script.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-10}
-
-
+\label{sec-10.1}
 \begin{enumerate}
-\item How do you retrieve the recent 5 commands
+\item How do you retrieve the recent 5 commands\pause
 \begin{itemize}
-\item ``\%hist``
-\item ``\%hist -5``
-\item ``\%hist 5``
-\item ``\%hist 5-10``
+\item \texttt{\%hist}
+\item \texttt{\%hist -5}
+\item \texttt{\%hist 5}
+\item \texttt{\%hist 5-10}
 \end{itemize}
-\item How do you save the lines 2 3 4 5 7 9 10 11
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-10.2}
+\begin{enumerate}
+\conti
+\item How do you save the lines 2 3 4 5 7 9 10 11\pause
 \begin{itemize}
-\item ``\%save filepath 2-5 7 9-11``
-\item ``\%save filepath 2-11``
-\item ``\%save filepath``
-\item ``\%save 2-5 7 9 10 11``
+\item \texttt{\%save} filepath \texttt{2-5 7 9-11}
+\item \texttt{\%save} filepath \texttt{2-11}
+\item \texttt{\%save} filepath
+\item \texttt{\%save} 2-5 7 9 10 11
 \end{itemize}
-\item What will the command ``\%hist 5 10`` display.
+\end{enumerate}
+\seti
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-10.3}
+\begin{enumerate}
+\conti
+\item What will the command `\texttt{\%hist 5 10}' display.\pause
 \begin{itemize}
-\item The recently typed commands from 5 to 10 inclusive of 
-      the history command
-\item The recently typed commands from 5 to 10 excluding 
-      the history command
+\item The recently typed commands from 5 to 10 inclusive of
+the history command
+\item The recently typed commands from 5 to 10 excluding
+the history command
 \end{itemize}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-11}
-
-
 \begin{enumerate}
-\item \%hist 5
-\item \%save filepath 2-5 7 9-11
-\item \%hist 5 10
+\item \texttt{\%hist 5}\pause
+\item \texttt{\%save} filepath \texttt{2-5 7 9-11}\pause
+\item The recently typed commands from 5 to 10 including the history command
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -183,5 +260,5 @@ showstringspaces=false, keywordstyle=\color{blue}\bfseries}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

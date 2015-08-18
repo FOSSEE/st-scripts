@@ -1,77 +1,98 @@
-% Created 2011-07-06 Wed 16:17
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Dictionaries]
+{Python - Dictionaries}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Dictionaries}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
 
-At the end of this tutorial, you will be able to,
+  In this tutorial we will learn, \pause
 \begin{itemize}
-\item Create dictionaries.
-\item Add and delete data from dictionaries.
-\item Retrieve data from dictionaries.
-\item Check for container-ship of keys.
+\item Create dictionaries.\pause
+\item Add and delete data from dictionaries.\pause
+\item Retrieve data from dictionaries.\pause
+\item Check for container-ship of keys.\pause
 \item Iterate over elements.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
 Spoken tutorial on -
@@ -79,56 +100,49 @@ Spoken tutorial on -
 \item Basic datatypes and operators
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Overview of Dictionaries}
 \label{sec-4}
 
 
 \begin{itemize}
-\item A dictionary contains meaning of words
-\begin{itemize}
-\item \emph{Word} is the \emph{key} here.
-\item \emph{Meaning} is the \emph{value} here.
-\end{itemize}
-\item A Key-Value pair data structure
-\begin{itemize}
-\item Provide key-value mappings
-\end{itemize}
+\item A dictionary contains meaning of words\pause
+	\begin{itemize}
+	\item \emph{Word} is the \emph{key} here.
+	\item \emph{Meaning} is the \emph{value} here.\pause
+	\end{itemize}
+\item A Key-Value pair data structure\pause
+	\begin{itemize}
+	\item Provide key-value mappings
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Accessing Elements}
 \label{sec-5}
 
-
 \begin{itemize}
-\item syntax
-\begin{verbatim}
-     extensions[key]
-\end{verbatim}
-
+\item syntax\\
+     \texttt{extensions[key]}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Retrieve keys and values}
 \label{sec-6}
 
-
 \begin{itemize}
-\item \verb~.keys()~ method
-\begin{verbatim}
-     In []: extensions.keys()
-\end{verbatim}
-
-    Returns a list of keys in the dictionary.
-\item \verb~.values()~ method
-\begin{verbatim}
-     In []: extensions.values()
-\end{verbatim}
-
+\item \texttt{keys()} method\\\pause
+\texttt{extensions.keys()}\\
+    Returns a list of keys in the dictionary.\pause
+\item \texttt{.values()} method\\\pause
+\texttt{extensions.values()}\\
     Returns the list of values in the dictionary.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-7}
@@ -137,70 +151,123 @@ Spoken tutorial on -
 \item Print the keys and values in the dictionary one by one.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-8}
+\label{sec-8.1}
 
-  In this tutorial, we have learnt to,
-
+  In this tutorial, we have learnt to -
 
 \begin{itemize}
 \item Create dictionaries namely --
-\begin{itemize}
-\item empty dictionaries
-\item dictionaries with data.
-\end{itemize}
+	\begin{itemize}
+	\item empty dictionaries
+	\item dictionaries with data.
+	\end{itemize}
 \item Access elements in the dictionaries using the keys.
 \item Add elements to a dictionary by assigning a value to a key.
-\item Delete elements from a dictionary by using the function ``del''.
-\item Retrieve the keys and values by using the methods ``.keys()'' and 
-    ``.values()'' respectively.
-\item Iterate over elements of a dictionary using a ``for'' loop.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-8.2}
+
+\begin{itemize}
+\item Delete elements from a dictionary by using the function \texttt{del}.
+\item Retrieve the keys and values by using the methods \texttt{.keys()''} and 
+    \texttt{.values()} respectively.
+\item Iterate over elements of a dictionary using a \texttt{for} loop.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Evaluation}
-\label{sec-9}
-
+\label{sec-9.1}
 
 \begin{enumerate}
 \item Container-ship of values can be checked in a python dictionary
-\begin{itemize}
-\item True
-\item False
-\vspace{5pt}
-\end{itemize}
-\item Consider the python dictionary 
-   
-\begin{verbatim}
-    x = {'a':['a','b','c'], 'b':(1, 2, 3),
-          1:{1:'one', 2:'two'},
-          10:{10:'ten', 11:'eleven'}}
-\end{verbatim}
-
-
-   What will the following code return?\\ 
-     \verb~(1, 2, 3) in x.values()~
-\vspace{3pt}     
-\begin{itemize}
-\item True
-\item False
-\item Container-ship of values cannot be checked in dictionaries
-\item The dictionary is invalid
-\end{itemize}
+	\begin{itemize}
+	\item True
+	\item False
+	\end{itemize}
+\seti
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-9.2}
+
+\begin{enumerate}
+\conti
+\item Consider the python dictionary 
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+x = {'a':['a','b','c'], 
+     'b':(1, 2, 3),
+	       1:{1:'one', 2:'two'},
+      10:{10:'ten', 11:'eleven'}}
+\end{lstlisting}
+\end{small}\pause
+What will the following code return?\\ 
+\texttt{(1, 2, 3) in x.values()}
+\vspace{3pt}     
+	\begin{itemize}
+	\item True
+	\item False
+	\end{itemize}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-10}
 
-
 \begin{enumerate}
-\item False
+\item False\pause
 \vspace{15pt}
 \item True
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -215,5 +282,5 @@ Spoken tutorial on -
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

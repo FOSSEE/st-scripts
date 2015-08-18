@@ -1,256 +1,329 @@
-% Created 2011-06-20 Mon 16:04
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{2010-09-14 Tue}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Basic Data-types and Operators]
+{Python - Basic Data-types and Operators}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Basic Datatypes and Operators}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
 
- At the end of the tutorial,you will be able to, 
+  In this tutorial we will learn, \pause
 \begin{itemize}
 
-\item Datatypes in Python
+\item Datatypes in Python\pause
 \label{sec-2_1}%
+	\begin{itemize}
+	\item Numbers\\
+	\label{sec-2_1_1}%
+	\item Boolean\\
+	\label{sec-2_1_2}%
+	\item Sequence\\
+	\end{itemize} % ends low level
+\end{itemize} % ends low level
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives contd..}
+\label{sec-2}
+
 \begin{itemize}
 
-\item Numbers\\
-\label{sec-2_1_1}%
-\item Boolean\\
-\label{sec-2_1_2}%
-\item Sequence\\
-\label{sec-2_1_3}%
-\end{itemize} % ends low level
-
-\item Operators in Python
+\item Operators in Python\pause
 \label{sec-2_2}%
 \begin{itemize}
 
 \item Arithmetic Operators\\
 \label{sec-2_2_1}%
-\item Boolean Operators\\
+\item Boolean Operators\\\pause
 \label{sec-2_2_2}%
 \end{itemize} % ends low level
 
-\item Python Sequence Datatypes
+\item Python Sequence Datatypes\pause
 \label{sec-2_3}%
 \begin{itemize}
 
-\item list\\
+\item list
 \label{sec-2_3_1}%
-\item string\\
+\item string
 \label{sec-2_3_2}%
-\item tuple\\
+\item tuple
 \label{sec-2_3_3}%
 \end{itemize} % ends low level
 \end{itemize} % ends low level
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Numbers}
 \label{sec-3}
 
 
 \begin{itemize}
-\item int
-\item float
-\item complex
+\item \texttt{int}
+\item \texttt{float}
+\item \texttt{complex}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-4}
 
 
 \begin{itemize}
-\item Find the absolute value of 3+4j
+\item Find the absolute value of \texttt{3 + 4j}
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \frametitle{Exercise 2}
 \label{sec-5}
-
-
 \begin{itemize}
-\item What is the datatype of number 999999999999999999? Is it
+\item What is the datatype of number 999999999999999999? Is it not \texttt{int}?
 \end{itemize}
-not int?
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solution 2}
 \label{sec-6}
 
-
 \begin{itemize}
-\item Long
-\item Large integers numbers are internally stored in python as Long
+\item \texttt{Long}
+\item Large integers numbers are internally stored in python as \texttt{Long}
     datatype.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 3}
 \label{sec-7}
 
-
 \begin{itemize}
-\item Using python find sqaure root of 3?
+\item Using python find square root of 3?
 \end{itemize}
 \end{frame}
+
 \begin{frame}
 \frametitle{Solution 3}
 \label{sec-8}
 
-
-
 \begin{itemize}
-\item 3**0.5
+\item \texttt{3**0.5}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 4}
 \label{sec-9}
 
-
 \begin{itemize}
-\item Is 3**1/2 and 3**0.5 same?
+\item Is \texttt{3**1/2} and \texttt{3**0.5} same?
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Sequence Data types}
 \label{sec-10}
 \begin{itemize}
 
-\item Properties\\
+\item Properties\\\pause
 \label{sec-10_1}%
 \begin{itemize}
 \item Data in Sequence
-\item Accessed using Index
+\item Accessed using Index\pause
 \end{itemize}
 
-\item Type\\
+\item Type\\\pause
 \label{sec-10_2}%
 \begin{itemize}
-\item list
-\item String
-\item Tuple
+\item \texttt{list}
+\item \texttt{string}
+\item \texttt{tuple}
 \end{itemize}
 
 \end{itemize} % ends low level
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 5}
 \label{sec-11}
 
-
 \begin{itemize}
-\item Check if 3 is an element of the list [1,7,5,3,4].\\ In case it is,
+\item Check if \texttt{3} is an element of the list \texttt{[1,7,5,3,4]}.\\ In case it is, 
+change it to \texttt{21}.
 \end{itemize}
-change it to 21.
+
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 6}
 \label{sec-12}
 
 
 \begin{itemize}
-\item Convert the string \~{}``Elizabeth is queen of england''\~{} to \~{}``Elizabeth is
+\item Convert the string ``Elizabeth is queen of england'' to ``Elizabeth is queen''
 \end{itemize}
-queen''\~{}
+
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-13}
+\label{sec-13.1}
 
   In this tutorial, we have learnt to,
 
 
 \begin{itemize}
-\item Understand the number Datatypes -- integer,float and complex.
-\item Know the boolean datatype and operators -- +, *, /, **, \% .
-\item use the sequence data types -- List,String and Tuple.
-\item Slice sequences by using the row and column numbers.
-\item Split and join a list using ``split()'' and ``join()'' function respectively.
-\item Convert to string to tuple and vice-versa.
+\item Understand the number Datatypes -- \texttt{integer}, \texttt{float} and \texttt{complex}.
+\item Know the boolean datatype and operators -- \texttt{+, *, /, **, \%} .
+\item Use the sequence data types -- \texttt{list},\texttt{string} and \texttt{tuple}.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-13.2}
+
+\begin{itemize}
+\item Slice sequences by using the row and column numbers.
+\item Split and join a list using \texttt{split()} and \texttt{join()} function respectively.
+\item Convert \texttt{string} to \texttt{tuple} and vice-versa.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
 \label{sec-14}
 
 
 \begin{enumerate}
-\item What is the major diffence between tuples and lists?
+\item What is the major difference between \texttt{tuples} and \texttt{lists}?\pause
 \vspace{12pt}
 \item Split this string on whitespaces
-\begin{itemize}
-\item string=``Split this string on whitespaces''
-\end{itemize}
+	\begin{itemize}
+	\item \texttt{string = ``Split this string on whitespaces''}
+	\end{itemize}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-15}
 
 
 \begin{enumerate}
-\item Tuples are immutable while lists are not.
+\item \texttt{tuples} are immutable while \texttt{lists} are not.\pause
 \vspace{12pt}
-\item string.split()
+\item \texttt{string.split()}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -265,5 +338,5 @@ queen''\~{}
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

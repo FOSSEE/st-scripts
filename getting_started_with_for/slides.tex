@@ -1,20 +1,29 @@
-\documentclass[17pt]{beamer}
-%\documentclass{beamer}
-\usetheme{Madrid}
-\useoutertheme{noslidenum}
-\setbeamertemplate{navigation symbols}{}
+\documentclass[17pt,compress]{beamer}
 \usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
 \usepackage{ae,aecompl}
 \usepackage[scaled=.95]{helvet}
+
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{mathpazo,courier,euler}
-\usepackage{listings}
-\lstset{language=sh,
-    basicstyle=\ttfamily\bfseries,
-  showstringspaces=false,
-  keywordstyle=\color{black}\bfseries}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
 
 % theme split
 \usepackage{verbatim}
@@ -27,56 +36,64 @@
 \endverbatim
 }%
 
-\definecolor{NavyBlue}{RGB}{0, 76, 153}
-\setbeamercolor{structure}{fg=NavyBlue}
-\author[FOSSEE]{}
-\institute[IIT Bombay]{}
-\date[]{}
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
 % logo
-\logo{\includegraphics[height=1.30cm]{../images/3t-logo.pdf}}
-\logo{\includegraphics[height=0.6cm]{../images/fossee-logo.png}
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\hspace{200pt}
-\includegraphics[scale=0.5]{../images/fossee-logo.png}\\
-\hspace{275pt}
-\includegraphics[scale=0.9]{../images/3t-logo.pdf}}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
 
 \begin{document}
 
 \sffamily \bfseries
 \title
-[Getting Started With For Loop]
-{Getting Started With For Loop}
+[Getting Started with for]
+{Python - Getting Started with for}
 \author
 [FOSSEE, IIT - Bombay]
 {\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
- through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\ [0.8cm]Script by: Hardik Ghaghada \\ Narration by: \\
- [0.5cm]
-{\small 15 May 2013}}
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% slide 1
 \begin{frame}
-  \titlepage
+   \titlepage
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
-  At the end of this tutorial, you will be able to, 
+  At the end of this tutorial, you will be able to, \pause
 \begin{itemize}
-\item Understand indentation in Python
-\item Use the for loop
-\item Use range() function
-\item Write blocks in Python shell
-\item Write blocks in IPython interpreter
+\item Understand indentation in Python\pause
+\item Use the for loop\pause
+\item Use range() function\pause
+\item Write blocks in \texttt{python} shell\pause
+\item Write blocks in \texttt{ipython} interpreter
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Whitespace in Python}
 \begin{itemize}
-\item Whitespace is significant
-\item Blocks are conventionally indented using 4 spaces
+\item Whitespace is significant\pause
+\item Blocks are conventionally indented using 4 spaces\pause
 \begin{verbatim}
      Block A
      Block A
@@ -89,44 +106,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 1}
-  Write a \verb~for~ loop which iterates through a list of numbers and find
-  the square root of each number.
-  The numbers are,
-\begin{verbatim}
-   1369, 7225, 3364, 7056,
-   5625, 729, 7056, 
-   576, 2916
-\end{verbatim}
+\begin{itemize}
+\item Write a \texttt{for} loop which iterates through a list of numbers and find
+  the square root of each number.\pause
+\item The numbers are,\pause\\
+\texttt{1369, 7225, 3364, 7056, 5625, 729, 7056, 576, 2916}
+\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 2}
-  Print the square root of numbers in the list.
-  Numbers are,
-\begin{verbatim}
-7225, 3268, 3364, 2966, 7056,
-5625, 729, 5547, 7056, 576, 2916
-\end{verbatim}
-\emph{do it in the ipython interpreter}
+\begin{itemize}
+\item In the \texttt{ipython} interpreter, print the square root of numbers in the list.\pause
+\item Numbers are,\pause\\
+\texttt{7225, 3268, 3364, 2966, 7056,
+5625, 729, 5547, 7056, 576, 2916}
+\end{itemize}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Exercise 3}
   Find out the cube of all the numbers from 1 to 10. \\
-  \emph{do it in the python shell}
+  \emph{(do it in the python shell)}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{\verb~range()~ function}
+\frametitle{\texttt{range()} function}
     \begin{itemize}
-    \item built in function in Python
-    \item generates a list of integers
+    \item built in function in Python\pause
+    \item generates a list of integers\pause
         \begin{itemize}
-        \item \emph{syntax:} range([start,] stop[, step])
-        \item \emph{example:}
+        \item Syntax :\\ \texttt{range([start,] stop[, step])}\pause
+        \item Example :
             \begin{itemize}
-            \item range(1, 20) - \emph{generates integers from 1 to 20}
-            \item range(20) - \emph{generates integers from 0 to 20}
+            \item \texttt{range(1, 20)} - \emph{generates integers from 1 to 20}\pause
+            \item \texttt{range(20)} - \emph{generates integers from 0 to 20}
             \end{itemize}
         \end{itemize}
     \end{itemize}
@@ -139,63 +154,59 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-  In this tutorial,we learnt to,
+  In this tutorial, we learnt to -
 \begin{itemize}
-\item Create blocks in python using ``for''
+\item Create blocks in python using \texttt{for}
 \item Indent the blocks of code
-\item Iterate over a list using ``for'' loop
-\item Use the ``range()'' function
+\item Iterate over a list using \texttt{for} loop
+\item Use the \texttt{range()} function
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
 \begin{enumerate}
-    \item Indentation is not mandatory in Python
-    \begin{itemize}
-        \item True
-        \item False
-    \end{itemize}
+    \item Indentation is not mandatory in Python. (True or False)\pause
     \vspace{8pt}
-    \item Write a ``for'' loop to print the product of all natural numbers from 1 to 20
+    \item Write a \texttt{for} loop to print the product of all natural numbers from 1 to 20\pause
     \vspace{8pt}
-    \item What will be the output of-range(1,5)
+    \item What will be the output of: \texttt{range(1,5)}
 \end{enumerate}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \begin{enumerate}
-    \item False
+    \item False\pause
     \vspace{8pt}
-    \item y = 1\\
-    for x in range(1,21):\\
+    \item \texttt{y = 1}\\
+    \texttt{for x in range(1,21):}\\
     \hspace{12pt}
-              y*=x\\
-        print y 
+              \texttt{y *= x}\\
+        \texttt{print y} \pause
     \vspace{8pt}      
-    \item {[1,2,3,4]}
+    \item \texttt{[1,2,3,4]}
 \end{enumerate}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{FOSSEE}
-{\color{NavyBlue}Free and Open Source Software for \\Education} \\
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
 \begin{itemize}
-\item To enable the use of free and open source software tools
-\item For more details, please visit: {\color{blue}\url{http://fossee.in/}}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{About the Spoken Tutorial Project}
 \begin{itemize}
-\item Watch the video available at {\color{blue}\url{http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}} 
-\item It summarises the Spoken Tutorial project 
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
 \item If you do not have good bandwidth, you can download and watch it
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
 \begin{itemize}
@@ -204,16 +215,16 @@
 \item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Acknowledgements}
 \begin{itemize}
 \item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
-\item Supported by the National Mission on Education through  ICT, MHRD, Government of India 
-\item More information: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
   \begin{block}{}
@@ -224,9 +235,9 @@
 \begin{block}{}
   \begin{center}
     For more Information, visit our website\\
-    {\color{blue}\url{http://fossee.in/}}
+    \url{http://fossee.in/}
   \end{center}  
   \end{block}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

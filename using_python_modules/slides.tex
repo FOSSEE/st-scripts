@@ -1,117 +1,133 @@
-% Created 2011-07-13 Wed 15:46
-\documentclass[presentation]{beamer}
+\documentclass[17pt,compress]{beamer}
+\usepackage{beamerthemesplit}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{navigation symbols}{}
+}
+% Taken from Fernando's slides.
+\usepackage{ae,aecompl}
+\usepackage[scaled=.95]{helvet}
+
+\usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{soul}
-\usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
-\usepackage{latexsym}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\tolerance=1000
-\usepackage[english]{babel} \usepackage{ae,aecompl}
-\usepackage{mathpazo,courier,euler} \usepackage[scaled=.95]{helvet}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
 \usepackage{listings}
-\lstset{language=Python, basicstyle=\ttfamily\bfseries,
-commentstyle=\color{red}\itshape, stringstyle=\color{darkgreen},
-showstringspaces=false, keywordstyle=\color{blue}\bfseries}
-\providecommand{\alert}[1]{\textbf{#1}}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
 
-\title{}
-\author{FOSSEE}
-\date{}
+% logo
+\logo{\includegraphics[height=1.30 cm]{3t-logo.pdf}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
 
-\usetheme{Warsaw}\usecolortheme{default}\useoutertheme{infolines}\setbeamercovered{transparent}
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.80]{3t-logo.pdf}}
+
 \begin{document}
 
+\sffamily \bfseries
+\title
+[Using Python Modules]
+{Python - Using Python Modules}
+\author
+[FOSSEE, IIT - Bombay]
+{\small Talk to a Teacher\\{\color{blue}\url{http://spoken-tutorial.org}}\\National Mission on Education
+ through ICT\\{\color{blue}\url{http://sakshat.ac.in}} \\[0.5cm]{\tiny Script by: Hardik ghaghada \\ Naration by: Hardik Ghaghada \\ 13 August 2015}}
 
-
-
-
-
-
-
-
-
-
+% slide 1
 \begin{frame}
-
-\begin{center}
-\vspace{12pt}
-\textcolor{blue}{\huge Using python modules}
-\end{center}
-\vspace{18pt}
-\begin{center}
-\vspace{10pt}
-\includegraphics[scale=0.95]{../images/fossee-logo.png}\\
-\vspace{5pt}
-\scriptsize Developed by FOSSEE Team, IIT-Bombay. \\ 
-\scriptsize Funded by National Mission on Education through ICT\\
-\scriptsize  MHRD,Govt. of India\\
-\includegraphics[scale=0.30]{../images/iitb-logo.png}\\
-\end{center}
+   \titlepage
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Objectives}
 \label{sec-2}
 
-  At the end of this tutorial, you will be able to ,
-
+  In this tutorial we will learn, \pause
 
 \begin{itemize}
-\item Execute python scripts from command line.
-\item Use import in scripts.
-\item Import scipy and pylab modules.
+\item Execute python scripts from command line.\pause
+\item Use import in scripts.\pause
+\item Import scipy and pylab modules.\pause
 \item Use python standard modules and 3rd party modules.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Pre-requisite}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Slackware Linux 14.1\pause
+\item \texttt{Python 2.7.5} \pause
+\item \texttt{IPython 2.3.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisites}
 \label{sec-3}
 
 Spoken tutorial on -
 
 \begin{itemize}
-\item Using plot interactively.
-\item Embellishing a plot.
+\item Using plot interactively.\pause
+\item Embellishing a plot.\pause
 \item Saving plots.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Running Python script from command line}
 \label{sec-4}
 
-
 \begin{itemize}
-\item Create a script, open text editor and type the following
-\begin{verbatim}
-     print "hello world!"
-     print
-\end{verbatim}
-
-\item Save the script as \verb~hello.py~
+\item Create a script, open text editor and type the following\\\pause
+     \texttt{print "hello world!"}\\
+     \texttt{print}\pause
+\item Save the script as \texttt{hello.py}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Running Python script from command line (cont'd)}
 \label{sec-5}
 
 
 \begin{itemize}
-\item Run the script
-\begin{verbatim}
-     $ python hello.py
-\end{verbatim}
-
+\item Run the script\\
+     \texttt{\$ python hello.py}
 \end{itemize}
   \emph{Syntax :} \textbf{python filename}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Four plot problem}
 \label{sec-6}
@@ -120,58 +136,55 @@ Spoken tutorial on -
       \includegraphics[scale=0.4]{four_plot}    
     \end{center}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Fix \verb~linspace()~ problem}
+\frametitle{Fix \texttt{linspace()} problem}
 \label{sec-7}
 
-\begin{verbatim}
-   from scipy import *
-\end{verbatim}
+\texttt{from scipy import *}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Fix \verb~plot()~ problem}
+\frametitle{Fix \texttt{plot()} problem}
 \label{sec-8}
-
-\begin{verbatim}
-   from pylab import *
-\end{verbatim}
+\texttt{from pylab import *}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Better way of fixing}
 \label{sec-9}
 
-\begin{verbatim}
-   from scipy import linspace
-\end{verbatim}
-
-  instead of
-\begin{verbatim}
-   from scipy import *
-\end{verbatim}
-
-    \verb~*~ means import all functions from name-space \verb~scipy~.
+\texttt{from scipy import linspace}\\\pause
+\vspace{5pt}
+  instead of\\\pause
+\vspace{5pt}
+\texttt{from scipy import *}\\\pause
+\vspace{5pt}
+\texttt{*} means import all functions from name-space \texttt{scipy}.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Instead of \verb~*~}
+\frametitle{Instead of \texttt{*}}
 \label{sec-10}
-
-\begin{verbatim}
-    from scipy import linspace, pi, sin
-    from pylab import plot, legend, annotate
-    from pylab import xlim, ylim, title, show
-\end{verbatim}
-
-  Is better than, \verb~from scipy import *~ \& \verb~from pylab import *~.
+\begin{small}
+\texttt{from scipy import linspace, pi, sin}
+\texttt{from pylab import plot, legend, annotate}
+  
+\texttt{from pylab import xlim, ylim, title, show}\pause
+\end{small}\\
+  Is better than,\\ {\small \texttt{from scipy import *} \& \texttt{from pylab import *}}.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{Another Fix}
 \label{sec-11}
 
 \lstset{language=Python}
+\begin{footnotesize}
 \begin{lstlisting}
 import scipy
 import pylab
-x = scipy.linspace(-5*scipy.pi, 5*scipy.pi, 500)
+x = scipy.linspace(-5*scipy.pi,5*scipy.pi,500)
 pylab.plot(x, x, 'b')
 pylab.plot(x, -x, 'b')
 pylab.plot(x, scipy.sin(x), 'g', linewidth=2)
@@ -181,114 +194,193 @@ pylab.annotate('origin', xy = (0, 0))
 pylab.xlim(-5*scipy.pi, 5*scipy.pi)
 pylab.ylim(-5*scipy.pi, 5*scipy.pi)
 \end{lstlisting}
+\end{footnotesize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Exercise 1}
 \label{sec-12}
 
-
 \begin{itemize}
 \item Write a python script to plot a sine wave from 
-    $-2\Pi$
+    $-2\pi$
   to 
-    $2\Pi$
+    $2\pi$
   .
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{What is a module?}
 \label{sec-13}
-
-  Module is simply a file containing Python definitions and
-  statements. Definitions from a module can be imported into other
+\begin{itemize}
+\item Module is simply a file containing Python definitions and
+  statements.\pause
+\item Definitions from a module can be imported into other
   modules or into the main module.
+\end{itemize}
+  
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Python standard library}
-\label{sec-14}
+\label{sec-14.1}
 
-  Python has a very rich standard library of modules.
+  Python has a very rich standard library of modules.\pause
 
 \begin{itemize}
 \item Few libraries
-\begin{itemize}
-\item Math: \verb~math~, \verb~random~
-\item Internet access: \verb~urllib2~, \verb~smtplib~
-\item System, Command line arguments: \verb~sys~
-\item Operating system interface: \verb~os~
-\item regular expressions: \verb~re~
-\item compression: \verb~gzip~, \verb~zipfile~, \verb~tarfile~
-\end{itemize}
-\item More information
-\begin{itemize}
-\item \href{http://docs.python.org/library}{http://docs.python.org/library}
-\end{itemize}
+	\begin{itemize}
+	\item Math: \texttt{math}, \texttt{random}\pause
+	\item Internet access: \texttt{urllib2}, \texttt{smtplib}\pause
+	\item System, Command line arguments: \texttt{sys}
+	\end{itemize}
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Python standard library}
+\label{sec-14.2}
+
+\begin{itemize}
+\item Few more libraries
+	\begin{itemize}
+	\item Operating system interface: \texttt{os}\pause
+	\item regular expressions: \texttt{re}\pause
+	\item compression: \texttt{gzip}, \texttt{zipfile}, \texttt{tarfile}
+	\end{itemize}\pause
+\item More information
+	\begin{itemize}
+	\item \href{http://docs.python.org/library}{http://docs.python.org/library}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Summary}
-\label{sec-15}
+\label{sec-15.1}
 
-  In this tutorial, we have learnt to,
-
+  In this tutorial, we have learnt to -
 
 \begin{itemize}
 \item Run scripts from command line,
 \item Import modules by specifying the module name followed by  
     an asterisk.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-15.2}
+
+\begin{itemize}
 \item Import only the required functions from modules by specifying 
     the function name.
 \item Use python standard library.
 \end{itemize}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Evaluation}
-\label{sec-16}
-
+\label{sec-16.1}
 
 \begin{enumerate}
-\item Which among this is correct ?
-\begin{itemize}
-\item from scipy import plot
-\item from numpy import plot
-\item from matplotlib import plot
-\item from pylab import plot
-\end{itemize}
-\vspace{2pt}
-\item Which among these libraries is part of python standard library ?
-\begin{itemize}
-\item Mayavi
-\item scipy
-\item matplotlib
-\item urllib2
-\end{itemize}
-\vspace{2pt}
-\item Functions ``xlim()'' and ``ylim()'' can be imported to the current
-   name-space as,
-\begin{itemize}
-\item from pylab import xlim, ylim
-\item import pylab
-\item from scipy import xlim, ylim
-\item import scipy
-\end{itemize}
+\item Which among this is correct ?\pause
+	\begin{itemize}
+	\item \texttt{from scipy import plot}
+	\item \texttt{from numpy import plot}
+	\item \texttt{from matplotlib import plot}
+	\item \texttt{from pylab import plot}
+	\end{itemize}\pause
+\seti
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-16.2}
+
+\begin{enumerate}
+\item Which among these libraries is part of python standard library ?\pause
+	\begin{itemize}
+	\item \texttt{Mayavi}
+	\item \texttt{scipy}
+	\item \texttt{matplotlib}
+	\item \texttt{urllib2}
+	\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation contd..}
+\label{sec-16.3}
+
+\begin{enumerate}
+\conti
+\item Functions \texttt{xlim()} and \texttt{ylim()} can be imported to the current
+   name-space as,\pause
+	\begin{itemize}
+	\item \texttt{from pylab import xlim, ylim}
+	\item \texttt{import pylab}
+	\item \texttt{from scipy import xlim, ylim}
+	\item \texttt{import scipy}
+	\end{itemize}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Solutions}
 \label{sec-17}
 
-
 \begin{enumerate}
-\item from pylab import plot
+\item \texttt{from pylab import plot}\pause
 \vspace{12pt}
-\item urllib2
+\item \texttt{urllib2}\pause
 \vspace{12pt}
-\item from pylab import xlim, ylim
+\item \texttt{from pylab import xlim, ylim}
 \end{enumerate}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{FOSSEE}
+{\color{blue}Free and Open-source Software for \\Science and Engineering Education} \\
+\begin{itemize}
+\item Goal - enabling all to use open source software tools
+\item For more details, please visit {\color{blue}\url{http://fossee.in/}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}http://spoken-tutorial.org /NMEICT-Intro}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 
- \begin{block}{}
+  \begin{block}{}
   \begin{center}
   \textcolor{blue}{\Large THANK YOU!} 
   \end{center}
@@ -300,5 +392,5 @@ pylab.ylim(-5*scipy.pi, 5*scipy.pi)
   \end{center}  
   \end{block}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
