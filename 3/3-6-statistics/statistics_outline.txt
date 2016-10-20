@@ -1,0 +1,6 @@
+Statistics
+
+    mean
+        summing
+    median
+    std

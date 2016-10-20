@@ -1,0 +1,9 @@
+Basic Matrix Operations
+
+   Create matrices using data.
+   Create matrices from lists.
+   Do basic matrix operations like addition, subtraction and multiplication.
+   Perform operations to find out the
+     determinant of a matrix. 
+     inverse of a matrix.
+     eigen values and eigen vectors of a    matrix. 

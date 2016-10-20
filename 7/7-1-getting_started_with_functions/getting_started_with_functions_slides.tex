@@ -1,0 +1,442 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+
+
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Python for Scientific Computing]
+%\hspace{0.5cm}
+%\insertframenumber/\inserttotalframenumber]
+{\large Getting started with functions}
+\author
+[FOSSEE, IIT Bombay]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\
+{\small Script: Thirumalesh H S}\\
+{\small Narrator: Kiran Kishore}\\
+{\small IIT Bombay}\\
+{\small 19 November 2015}}
+
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+
+  In this tutorial we will learn, \pause
+
+
+\begin{itemize}
+\item Define a function.\pause
+\item Define functions with arguments.\pause
+\item Learn about \texttt{docstrings}.\pause
+\item Learn about function return value.\pause
+\item Read and understand code.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 4.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  To practice this tutorial, you should know how to -\pause
+
+\begin{itemize}
+\item use conditionals\pause
+\item use loops\pause
+\end{itemize}
+If not, see the pre-requisite Python tutorials on {\color{blue}http://spoken-tutorial.org}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Function}
+\label{sec-4}
+\begin{itemize}
+\item Eliminate code redundancy\pause
+\item Help in code reuse\pause
+\item Subroutine
+	\begin{itemize}
+	\item relatively independent of remaining code
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Define \texttt{f(x)} in Python}
+\label{sec-5}
+
+\lstset{language=Python}
+\begin{lstlisting}
+def f(x):
+    return x*x
+\end{lstlisting}
+
+\begin{itemize}\pause
+\item \texttt{def} - keyword\pause
+\item \texttt{f} - function name\pause
+\item \texttt{x} - parameter / argument to function \texttt{f}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-6}
+
+\begin{itemize}
+\item Write a python function named \texttt{cube} which computes the cube of a given
+  number \texttt{n}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-7}
+
+\begin{itemize}
+\item Write a python function named \texttt{avg} which computes the average of
+  \texttt{a} and \texttt{b}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Docstring}
+\label{sec-8}
+
+\begin{itemize}
+\item Documenting/commenting code is a good practice\pause
+\lstset{language=Python}
+\begin{footnotesize}
+\begin{lstlisting}
+def avg(a,b):
+    """ avg takes two numbers as input 
+    (a & b), and returns the average 
+    of a and b"""
+    return (a+b)/2
+\end{lstlisting}\pause
+\end{footnotesize}
+\item Docstring
+\begin{itemize}
+\item written in the line after the \texttt{def} line.\pause
+\item Inside triple quote.\pause
+\end{itemize}
+\item Documentation :  
+     \texttt{avg?}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Exercise 3}
+\label{sec-9}
+\begin{itemize}
+\item Add \texttt{docstring} to the function \texttt{f}.
+
+\lstset{language=Python}
+\begin{lstlisting}
+def f(x):
+    return x*x
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\label{sec-10}
+
+\lstset{language=Python}
+\begin{lstlisting}
+def f(x):
+    """Accepts a number x as 
+    argument and, returns the
+    square of the number x."""
+    return x*x
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 4}
+\label{sec-11}
+
+\begin{itemize}
+\item Write a python function named \texttt{circle} which returns the area and
+  perimeter of a circle given radius \texttt{r}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{\texttt{what}}
+\label{sec-12}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+def what( n ):
+    if n < 0: n = -n
+    while n > 0:
+        if n % 2 == 1:
+            return False
+        n /= 10
+    return True
+\end{lstlisting}
+\end{small}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{\texttt{even\_digits}}
+\label{sec-13}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+def even_digits( n ):
+   """returns True if all the digits 
+   of number n is even returns False 
+   if all the digits of number n is 
+   not even"""
+    if n < 0: n = -n
+    while n > 0:
+        if n % 2 == 1:
+            return False
+        n /= 10
+    return True
+\end{lstlisting}
+\end{small}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{\texttt{what}}
+\label{sec-14}
+
+\lstset{language=Python}
+\begin{lstlisting}
+def what( n ):
+    i = 1
+    while i * i < n:
+        i += 1
+    return i * i == n, i
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{\texttt{is\_perfect\_square}}
+\label{sec-15}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+def is_perfect_square( n ):
+    """returns True and square root of 
+    n, if n is a perfect square, 
+    otherwise returns False and the 
+    square root of the next perfect 
+    square"""
+    i = 1
+    while i * i < n:
+        i += 1
+    return i * i == n, i
+\end{lstlisting}
+\end{small}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\label{sec-16.1}
+
+ In this tutorial, we have learnt to,
+
+\begin{itemize}
+\item Define functions in Python by using the keyword \texttt{def}.\pause
+\item Call the function by specifying the function name.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\label{sec-16.2}
+
+\begin{itemize}
+\item Assign a \texttt{docstring} to a function by putting it as a triple quoted string.\pause
+\item Pass parameters to a function.\pause
+\item Return values from a function.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-17.1}
+
+\begin{enumerate}
+\item What will the function do?
+\lstset{language=Python}
+\begin{lstlisting}
+def what(x)
+    return x*x
+\end{lstlisting}\pause
+\begin{itemize}
+\item Returns the square of x
+\item Returns x
+\item Function doesn't have docstring
+\item Error
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-17.2}
+
+\begin{enumerate}
+\conti
+\item How many arguments can be passed to a python function?
+\begin{itemize}\pause
+\item None
+\item One
+\item Two
+\item Any
+\end{itemize}\pause
+\item Write a function which calculates the area of a rectangle.
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Solutions}
+\label{sec-18}
+
+
+\begin{enumerate}
+\item Error
+\vspace{16pt}
+\item Any
+\vspace{12pt}
+\item \lstset{language=Python}
+\begin{lstlisting}
+def area(l,b):
+    return l * b
+\end{lstlisting}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

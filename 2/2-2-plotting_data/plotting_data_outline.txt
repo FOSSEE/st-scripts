@@ -1,0 +1,7 @@
+Plotting Experimental data
+
+    plot L vs. T2
+        using square function
+    problem with 3 cols
+        3rd column is error
+        error bar

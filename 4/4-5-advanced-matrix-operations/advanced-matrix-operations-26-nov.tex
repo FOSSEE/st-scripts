@@ -1,0 +1,287 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+
+
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Python for Scientific Computing]
+%\hspace{0.5cm}
+%\insertframenumber/\inserttotalframenumber]
+{\large Advanced Matrix Operations}
+\author
+[FOSSEE, IIT Bombay]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\
+{\small Script: Thirumalesh H S}\\
+{\small Narrator: Kiran Kishore}\\
+{\small IIT Bombay}\\
+{\small 19 November 2015}}
+
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+
+  At the end of this tutorial, you will be able to, \pause
+
+\begin{itemize}
+	\item find forbenius and infinity norm of a matrix. \pause
+	\item find singular value decomposition of a matrix.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 4.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisite}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+  To practice this tutorial, you should know how to -\pause
+
+\begin{itemize}
+\item use Lists, for loops, arrays and access parts of arrays\pause
+\item perform basic matrix opearitions\pause
+\end{itemize}
+If not, see the pre-requisite Python tutorials on {\color{blue}http://spoken-tutorial.org}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{flatten()}
+\begin{itemize}
+\item flatten() returns an multidimensoinal array into a single dimension array
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Frobenius norm of a matrix}
+\begin{itemize}
+\item Frobenius norm is defined as,
+	\begin{itemize}
+	\item $||A||_F = \sqrt{\sum_{i,j}|a_{i,j}|^2}$
+	\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Assignment 1: Frobenius norm}
+\label{sec-6}
+\begin{itemize}
+\item Find out the Frobenius norm of the inverse of a 4 by 4 matrix
+\\m = arange(1, 17).reshape(4, 4)
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Infinity norm}
+\label{sec-7}
+\begin{itemize}
+\item Infinity norm is defined as,
+       $max(\sum_{i} |a_{i}|^2)$
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Assignment 2: Infinity norm}
+\begin{itemize}
+\item Find the infinity norm of the matrix \texttt{im}
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{\texttt{norm()} method}
+\label{sec-8}
+
+
+\begin{itemize}
+\item Frobenius norm\\
+     \texttt{norm(im5)}\pause
+\item Infinity norm\\
+     \texttt{norm(im5, ord=inf)}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Singular Value Decomposition \texttt{svd}}
+\label{sec-10.1}
+
+   {\small  $M = U \Sigma V^*$}
+\begin{itemize}
+\item U, an \texttt{mXm} unitary matrix over K.
+\item $\Sigma$, 
+		 an \texttt{mXn} diagonal matrix with non-negative real numbers on diagonal.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Singular Value Decomposition \texttt{svd}}
+\label{sec-10.2}
+ 
+\begin{itemize}
+
+\item $V^*$,
+         an \texttt{nXn} unitary matrix over K, denotes the conjugate transpose of V.
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\label{sec-11.1}
+
+  In this tutorial, we have learnt to, \pause
+
+\begin{itemize}
+\item Calculate the norm of a matrix using the for loop and also using the function \texttt{norm()}.\pause
+\item Calculate singular value decomposition(SVD) of a matrix using the 
+    function \texttt{svd()}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-12.1}
+
+\begin{enumerate}
+\item \texttt{norm(A,ord='fro')} is the same as \texttt{norm(A)} ?\pause
+\begin{itemize}
+\item True
+\item False
+\end{itemize}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-13}
+
+
+\begin{enumerate}
+\item True
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

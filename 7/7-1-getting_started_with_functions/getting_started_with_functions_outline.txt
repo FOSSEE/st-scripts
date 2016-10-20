@@ -1,0 +1,10 @@
+Outline:
+
+ Getting started with functions
+
+    defining function
+    arguments
+    docstrings
+    return values
+        can return multiple values 
+    code reading exercises 

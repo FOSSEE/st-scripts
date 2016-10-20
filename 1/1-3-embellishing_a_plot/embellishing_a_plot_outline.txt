@@ -1,0 +1,13 @@
+Embellishing a plot
+    
+    plot
+
+    Title
+
+    Label
+
+    line width, color, line style
+
+    annotations 
+
+    limits

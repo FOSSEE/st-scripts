@@ -1,0 +1,215 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+
+
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Loading data from files]
+%\hspace{0.5cm}
+%\insertframenumber/\inserttotalframenumber]
+{Loading data from files}
+\author
+[Usha Vishwanathan]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\[0.1cm]
+{\small  Usha Vishwanathan}\\
+{\small IIT Bombay} \\ [0.1cm]
+{\small  16 October 2015}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+ \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Objectives}
+  In this tutorial, you will learn to, \\
+  Read data from files, which contain data in:
+\begin{itemize}
+\item Single column format \\ 
+\item Multiple columns separated by spaces or other delimiters
+  \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubunutu 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 3.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Assignment 1}
+
+Read the data from the file \verb~pendulum\_semicolon.txt~. This file contains data in two columns. These columns are separated by semi-colons.\\
+ Use the IPython help to see how to do this.
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Summary}  
+ To Read data from files using the \verb~loadtxt()~ command, the data can be in,
+  \begin{itemize}
+   \item A single column 
+   \item Multiple columns format separated by spaces or other delimiters   
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Evaluation}
+    \begin{itemize}
+     \item \verb~loadtxt()~ can read data only from a file with one column.
+     True or False?
+     \item Given a file ``data.txt`` with three columns of data separated by spaces. Read it into 3 separate simple sequences.
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Evaluation..}
+  \begin{itemize}
+  \item Given a file ``data.txt`` with three columns of data separated by ``:''. Read it into 3 separate simple sequences.
+  \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Solutions}
+    \begin{itemize}
+    \item False
+    \item x = loadtxt(``data.txt'', unpack=True)
+    \item x = loadtxt(``data.txt'', unpack=True, delimiter='':'')
+  \end{itemize} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

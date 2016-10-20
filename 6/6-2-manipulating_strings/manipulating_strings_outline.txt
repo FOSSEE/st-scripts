@@ -1,0 +1,8 @@
+Manipulating strings
+
+    upper, lower,
+    replace
+    slicing
+    [::-1]
+    reversed
+    palindrome check

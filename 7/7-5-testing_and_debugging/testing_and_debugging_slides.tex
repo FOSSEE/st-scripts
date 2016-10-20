@@ -1,0 +1,308 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+
+
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+	\color{blue}
+	\verbatim
+}%
+{%
+	\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+	basicstyle=\ttfamily\bfseries,
+	showstringspaces=false,
+	keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+	
+	\hspace{7.5cm}
+	\includegraphics[scale=0.3]{fossee-logo.png}\\
+	\hspace{281pt}
+	\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+	% sf family, bold font
+	\sffamily \bfseries
+	%\LARGE
+	\title
+	[Python for Scientific Computing]
+	%\hspace{0.5cm}
+	%\insertframenumber/\inserttotalframenumber]
+	{\large Testing and debugging}
+	\author
+	[FOSSEE, IIT Bombay]
+	{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\
+		{\small Script: Thirumalesh H S}\\
+		{\small Narrator: Kiran Kishore}\\
+		{\small IIT Bombay}\\
+		{\small 21 December 2015}}
+	
+	% slide 1
+	\begin{frame}
+		\titlepage
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2.1}
+
+At the end of this tutorial, you should be able, \pause
+
+\begin{itemize}
+\item Understand what is software testing.\pause
+\item Test simple functions for their functionality.\pause
+\item Automate tests.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives contd..}
+\label{sec-2.2}
+
+\begin{itemize}
+\item Understand the need for coding style.\pause
+\item Learn  some of the standards followed by the Python Community.\pause
+\item Handle Errors and Exceptions.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 4.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Pre-requisite}
+	\label{sec-3}
+	
+	To practice this tutorial, you should know how to -\pause
+	
+	\begin{itemize}
+		\item use functions\pause
+	\end{itemize}
+	If not, see the pre-requisite Python tutorials on {\color{blue}http://spoken-tutorial.org}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{What is Software testing?}
+	
+	\begin{itemize}
+		\item Software testing is an activity aimed at evaluating a program, and determining that it meets its required results.
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{gcd function}
+
+ Create find\_gcd.py file with:\\
+
+\begin{lstlisting}
+def gcd(a, b):
+    if b == 0:
+          return a
+     return gcd(b, a%b)   
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Assignment 1}
+
+\begin{itemize}
+\item For the same inputs as gcd write automated tests for LCM.\pause
+\item Use the data from the file lcmtestcases.txt
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Coding Style}
+	
+	\begin{itemize}
+		\item A good program should be readable\pause
+		\item Code is read more often than it is written. This is because, that way, other people can learn from it and extend and improve it. 
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+	\frametitle{Meaning full names}
+	
+	\texttt{mass = 10}\\
+	\texttt{acceleration = 2}\\
+	\texttt{force = mass * acceleration}\\
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Code style}
+
+
+\begin{itemize}
+\item Four Space Indentation\pause
+\item 79 characters limit on a line\pause
+\item Funtions and methods should be seperated with two 
+   blank lines\pause
+\item Use Docstring to explain units of code performing specific task\pause
+\item Use whitespace around operators and after punctuation.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\label{sec-17.1}
+
+ In this tutorial, we have learnt to, 
+        
+\begin{itemize}
+\item Create simple tests for a function.\pause
+\item Automate tests using many predefined test cases.\pause
+\item Use the python coding standards.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary contd..}
+\label{sec-17.1}
+        
+\begin{itemize}
+\item Handle exception using \texttt{try} and \texttt{except}.\pause
+\item Use \texttt{\%debug} for debugging on \texttt{ipython}.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Self assessment questions}
+\label{sec-18.1}
+
+\begin{enumerate}
+\item What is proper indentation for python code according to style guidelines?\pause
+	\begin{itemize}
+	\item two space identation
+	\item three space identation
+	\item four Space Indentation
+	\item no Indentation
+\end{itemize}
+\seti
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Self assessment questions}
+\label{sec-18.2}
+
+\begin{enumerate}
+\conti
+\item How do you start the debugger on ipython?\pause
+	\begin{itemize}
+	\item \texttt{debug}
+	\item \texttt{\%debug}
+	\item \texttt{\%debugger}
+	\item \texttt{start debugger}
+	\end{itemize}\pause
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-19}
+
+\begin{enumerate}
+\item Four Space Indentation\pause
+\vspace{12pt}
+\item \texttt{\%debug}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Forum to answer questions}
+	\begin{itemize}
+		\item Do you have questions in THIS Spoken Tutorial?
+		\item Choose the minute and second where you have the question.
+		\item Explain your question briefly.
+		\item Someone from the FOSSEE team will answer them. Please visit 
+	\end{itemize}
+	\begin{center}
+		{\color{blue}{http://forums.spoken-tutorial.org/}}
+	\end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Forum to answer questions}
+	\begin{itemize}
+		\item Questions not related to the Spoken Tutorial?
+		\item Do you have general / technical questions on the Software?
+		\item Please visit the FOSSEE Forum
+		\begin{center}
+			{\color{blue}{http://forums.fossee.in/}}
+		\end{center}
+		\item Choose the Software and post your question.
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Textbook Companion Project}
+	\begin{itemize}
+		\item The FOSSEE team coordinates coding of solved examples of popular
+		books 
+		\item We give honorarium and certificate to those who do this
+	\end{itemize}
+	For more details, please visit this site:
+	\begin{center}
+		{\color{blue}{http://tbc-python.fossee.in/}}
+	\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Acknowledgements}
+	\begin{itemize}
+		\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+		\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+		\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	
+	\begin{block}{}
+		\begin{center}
+			\textcolor{blue}{\Large THANK YOU!} 
+		\end{center}
+	\end{block}
+	\begin{block}{}
+		\begin{center}
+			For more Information, visit our website\\
+			{http://fossee.in/}
+		\end{center}  
+	\end{block}
+\end{frame}
+
+\end{document}

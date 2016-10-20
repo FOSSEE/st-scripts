@@ -1,0 +1,294 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+
+
+
+
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Getting started with IPython]
+%\hspace{0.5cm}
+%\insertframenumber/\inserttotalframenumber]
+{\large Getting started with IPython}
+\author
+[Script: Thirumalesh H S, Narrator: Prabhu R.]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\
+{\small Script: Thirumalesh H S}\\
+{\small Narrator: Prabhu R.}\\
+{\small IIT Bombay}\\
+{\small  12 February 2016}}
+
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+At the end of this tutorial, you will be able to,\pause
+\begin{itemize}
+\item invoke the IPython interpreter \pause 
+\item quit the IPython interpreter \pause
+\item navigate the IPython session history 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\begin{itemize}
+\item use tab-completion within IPython \pause
+\item look-up documentation in IPython \pause
+\item interrupt incomplete or incorrect commands
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 3.5.2} \pause
+\item \texttt{IPython 5.1.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{What is IPython?}
+\begin{itemize}
+\item IPython is an enhanced interactive Python interpreter.\pause
+\item It provides features like tab-completion, and easier access to help.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 1}
+\begin{enumerate}
+\item find out the commands starting with \texttt{ab} \pause
+\item list out the commands starting with \texttt{a}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 2}
+Look-up the documentation of \texttt{round} and see how to use it
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Exercise 3}
+Check the output of
+\lstset{language=Python}
+\begin{lstlisting}
+round(2.48)
+round(2.48, 1)
+round(2.484)
+round(2.484, 2)
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Solution 3}
+\lstset{language=Python}
+\begin{lstlisting}
+round(2.48)     = 2.0
+round(2.48, 1)  = 2.5
+round(2.484)    = 2.0 
+round(2.484, 2) = 2.48
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 4}
+\begin{enumerate}
+\item Type \texttt{round(2.484}  and press \textbf{Enter} 
+\item Then cancel the command using \texttt{Ctrl + C}\pause
+\item Type the command, \texttt{round(2.484, 2)}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item invoke the \texttt{IPython} interpreter by typing \texttt{ipython} in the terminal.\pause
+\item quit the \texttt{IPython} interpreter by using \texttt{Ctrl + D}.\pause
+\item navigate \texttt{IPython} session history by using the arrow keys.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item use tab-completion to work faster.\pause
+\item see the documentation of functions using question mark.\pause
+\item interrupt commands using \texttt{Ctrl + C} when we make an error.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Assignment}
+\begin{enumerate}
+\item \texttt{IPython} is a programming language similar to Python.
+\begin{itemize}
+\item True or False\pause
+\end{itemize}
+\item Which key combination quits \texttt{IPython}?
+\begin{itemize}
+\item \texttt{Ctrl + C}
+\item \texttt{Ctrl + D}
+\item \texttt{Alt + C}
+\item \texttt{Alt + D}
+	\seti
+\end{itemize}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Assignment}
+\begin{enumerate}
+	\conti
+\item Which character is used at the end of a command, in \texttt{IPython} to
+display the documentation.
+\begin{itemize}
+\item under score (\_)
+\item question mark (?)
+\item exclamation mark (!)
+\item ampersand (\&)
+\end{itemize}
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Solutions}
+\begin{enumerate}
+\item False
+\item \texttt{Ctrl + D}
+\item question mark (?)
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue}http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+\item It summarises the Spoken Tutorial project \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

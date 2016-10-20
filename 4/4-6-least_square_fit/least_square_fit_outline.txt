@@ -1,0 +1,7 @@
+Outline:
+
+ Least square fit
+
+    show pendulum
+        use loadtxt
+    lstsq 

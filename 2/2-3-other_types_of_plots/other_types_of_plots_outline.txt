@@ -1,0 +1,7 @@
+Other types of plots
+
+    scatter
+    pie chart
+    bar chart
+    log
+    illustration of other plots, matplotlib help 

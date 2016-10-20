@@ -1,0 +1,5 @@
+loading data from files
+
+    loadtxt with unpack=True
+        primes.list (one col)
+        pendulum.txt (two col)

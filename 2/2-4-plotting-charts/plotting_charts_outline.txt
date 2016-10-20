@@ -1,0 +1,4 @@
+plotting charts
+Create pie charts
+Create bar charts
+Find more information on matplotlib

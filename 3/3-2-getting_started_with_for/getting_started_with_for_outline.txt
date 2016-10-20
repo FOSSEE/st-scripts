@@ -1,0 +1,9 @@
+ Getting started with for
+
+    blocks in python
+        (indentation)
+    blocks in ipython
+        … prompt
+        
+    for with a list
+    range function

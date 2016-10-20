@@ -1,0 +1,11 @@
+ Parsing data
+
+    explain what is parsing
+    strip (with strings)
+    split (with strings)
+        with delimiters
+            specify space as delimiter
+    datatype conversion
+    reading from files
+        do the same problem done with loadtxt (for pendulum)
+        basic parse sslc text 

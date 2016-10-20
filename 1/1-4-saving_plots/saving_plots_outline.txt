@@ -1,0 +1,6 @@
+ Saving plots
+
+    basic savefig
+    saving in different formats like -
+        png, pdf, ps, eps, svg
+    locating files in OS filepath

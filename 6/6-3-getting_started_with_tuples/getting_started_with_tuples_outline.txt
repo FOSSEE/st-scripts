@@ -1,0 +1,7 @@
+Getting started with tuples
+
+    immutability
+    tuple packing, unpacking
+        a, b = b, a
+    accessing individual elements
+    slicing, striding

@@ -1,0 +1,10 @@
+Outline:
+
+ Using the plot command interactively
+
+    ipython --pylab
+    linspace
+    len
+    plotting functions using plot command
+    clf
+    using the plot UI

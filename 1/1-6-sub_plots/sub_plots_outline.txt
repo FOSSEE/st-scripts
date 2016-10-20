@@ -1,0 +1,7 @@
+Sub Plots
+    plot
+
+    Title
+
+Create plots 
+switch between subplots.

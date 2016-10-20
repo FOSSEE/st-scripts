@@ -1,0 +1,22 @@
+ Basic datatypes & operators
+
+    int
+        L, long
+    float
+        repr, str
+    complex
+    boolean
+    conversion functions
+    sequence datatypes & mutability
+        list available sequence datatypes
+            string
+            list
+            tuple
+        mutability
+        conversion
+        common stuff
+            len
+            in
+            max, min, sum, sorted, reversed
+            accessing individual elements
+            slicing, striding 

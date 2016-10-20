@@ -1,0 +1,9 @@
+Multiple plots
+
+    overlays
+        linspace
+            give one with very few points, more points
+            show smoothness of the curve
+    legend
+    figure 1, figure2
+   

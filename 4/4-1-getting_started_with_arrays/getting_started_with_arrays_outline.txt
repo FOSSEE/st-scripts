@@ -1,0 +1,11 @@
+Getting started with arrays
+
+    creating arrays
+        direct data
+        homogeneous
+    reshape()
+    .shape
+    identity()
+    zeros()
+    array operations
+        + - * 

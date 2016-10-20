@@ -1,0 +1,8 @@
+Dictionaries
+
+    empty
+    filled
+    accessing via keys
+    .values(), .keys()
+    in
+    iteration

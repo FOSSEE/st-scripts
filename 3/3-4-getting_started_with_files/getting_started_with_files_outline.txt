@@ -1,0 +1,8 @@
+Getting started with files
+
+    show file object
+    read the file with read
+    closing the file
+    for line in file:
+    print a line
+    append the lines to a list

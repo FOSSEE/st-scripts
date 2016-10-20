@@ -1,0 +1,265 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Python for Scientific Computing]
+%\hspace{0.5cm}
+%\insertframenumber/\inserttotalframenumber]
+{Parsing Data}
+\author
+[FOSSEE, IIT BOMBAY]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\[0.1cm]
+{\small  Script:Aditya Palaparthy}\\ 
+{\small Narration: Kiran K}\\
+{\small IIT Bombay} \\ [0.1cm]
+{\small  23 October 2015}}
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2}
+At the end of this tutorial, we will learn to-  \pause
+\begin{itemize}
+\item Split a string using a delimiter.\pause
+\item Remove the whitespace around the string.\pause
+\item Convert the datatypes of variables from one type to other.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 4.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+
+To practise this tutorial, you should know how to
+\begin{itemize}
+\item run basic Python commands on the  ipython console
+\item use lists.
+\end{itemize}
+If not, see the pre-requisite Python tutorials on {\color{blue} http://spoken-tutorial.org.}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Data set}
+\begin{itemize}
+\item File sslc.txt contains data as:
+\item A;015163;JOSEPH RAJ S;083;042;47;00;72;244;;;
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Data set}
+\label{sec-4}
+  The following are the fields in any given line.
+\begin{itemize}
+\begin{small}
+\item Region Code which is `A'
+\item Roll Number 015163
+\item Name JOSEPH RAJ S
+\item Marks of 5 subjects: -- English 083 -- 
+     Hindi 042 -- Maths 47 --
+     Science 00 -- Social 72
+\item Total marks 244
+\end{small}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-5}
+Split the variable line using a space as argument  \\
+Is it same as splitting without an argument ?
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Exercise 2}
+\label{sec-8}
+
+  What happens if you do \texttt{int("1.25")}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\label{sec-9.1}
+In this tutorial, we have learnt to,\pause
+\begin{itemize}
+\item Tokenize a string using various delimiters like semi-colons.\pause
+\item Split a data separated by delimiters by using the function \texttt{split()}.\pause
+\item Get rid of extra white spaces around using the \texttt{strip()} function.\pause
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\label{sec-9.2}
+\begin{itemize}
+\item Convert datatypes of numbers from one type to another.\pause
+\item Parse input data and perform computations on it.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-10.1}
+
+\begin{enumerate}
+\item How do you split the string ``Guido;Rossum;Python'' to get the words.\pause
+\item How will you remove the extra whitespace in this sentence\\
+     ``~~~~~~Hello~~~~World~~~~~~``
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evaluation}
+\label{sec-10.2}
+\begin{enumerate}    
+\setcounter{enumi}{2}
+\item What does int(``20.0'') produce.\pause
+\begin{itemize}
+\item 20
+\item 20.0
+\item Error
+\item ``20''
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-11}
+
+
+\begin{enumerate}
+\item line.split(';')\pause
+\item ''~~~~~~Hello~~~~World~~~~~~''.strip()\pause
+\item Error
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+
+\end{document}

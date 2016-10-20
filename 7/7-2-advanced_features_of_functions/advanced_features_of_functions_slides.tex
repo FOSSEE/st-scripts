@@ -1,0 +1,368 @@
+\documentclass[17pt]{beamer}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{framed}
+\definecolor{Blue}{RGB}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\usepackage{beamerthemesplit}
+\definecolor{blue}{rgb}{0.16,0.32,0.75}
+\setbeamercolor{structure}{fg=blue}
+\author[FOSSEE]{}
+\institute[IIT Bombay]{}
+\date[]{}
+% \setbeamercovered{transparent}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+
+\usepackage{mathpazo,courier,euler}
+\usepackage{listings}
+\lstset{language=sh,
+    basicstyle=\ttfamily\bfseries,
+  showstringspaces=false,
+  keywordstyle=\color{black}\bfseries}
+
+% logo
+\logo{\includegraphics[height=1.30 cm]{St-logo.png}}
+\logo{\includegraphics[height=1.30 cm]{fossee-logo.png}
+
+\hspace{7.5cm}
+\includegraphics[scale=0.3]{fossee-logo.png}\\
+\hspace{281pt}
+\includegraphics[scale=0.08]{St-logo.png}}
+
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+%\LARGE
+\title
+[Python for Scientific Computing]
+%\hspace{0.3cm}
+%\insertframenumber/\inserttotalframenumber]
+{\large Features of Functions}
+\author
+[FOSSEE, IIT BOMBAY]
+{{\small Spoken Tutorial Project \\ http://spoken-tutorial.org \\ National Mission on Education  through ICT  \\ http://sakshat.ac.in } \\[0.1cm]
+{\small Script: Aditya Palaparthy }\\
+{\small Narration: Kiran K}\\
+{\small IIT Bombay} \\ [0.1cm]
+{\small  10 December 2015}}
+% slide 1
+\begin{frame}
+   \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2.1}
+
+  In this tutorial we will learn, \pause
+\begin{itemize}
+\item Assign default values to arguments, when defining functions.\pause
+\item Define and call functions with keyword arguments.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Objectives}
+\label{sec-2.2}
+\begin{itemize}
+\item Learn some of the built-in functions available in Python standard 
+    library and the scientific computing libraries.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{System Specifications}\pause
+\begin{itemize}
+\item Ubuntu Linux 14.04\pause
+\item \texttt{Python 2.7.6} \pause
+\item \texttt{IPython 4.0.0}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Pre-requisite}
+\label{sec-3}
+To practise this tutorial, you should know how to 
+\begin{itemize}
+\item run basic Python commands on the ipython console.
+\item use functions
+\end{itemize}
+If not, see the pre-requisite Python tutorials on {\color{blue}http://spoken-tutorial.org}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]
+\frametitle{Functions}
+\label{sec-4.1}
+\begin{itemize}
+\lstset{language=Python}
+
+\item s.strip() strips on spaces. 
+\item s.strip('@') strips the string of '@' 
+symbols.
+
+\item plot(x, y) plots x v/s y using default 
+line style. 
+\item plot(x, y, 'o') plots x v/s y with 
+circle markers. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functions}
+\label{sec-4.2}
+\begin{itemize}
+\lstset{language=Python}
+\item linspace(0,2*pi,100) returns 100 pts between 0 and 2pi
+
+\item linspace(0,2*pi) returns 50 pts between 0 and 2pi
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercise 1}
+\label{sec-5}
+
+\begin{itemize}
+\item Redefine the function \texttt{welcome}, by interchanging it's
+  arguments.
+\vspace{3pt}  
+  Place the \texttt{name} argument with it's default value of
+  ``World'' before the \texttt{greet} argument.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Solution 1}
+\label{sec-6}
+\begin{itemize}
+\item 
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+def welcome(name="World", greet):
+    print greet, name
+\end{lstlisting}
+\end{small}\pause
+\item  We get an error that reads, \\
+  \begin{small}
+  \verb~SyntaxError: non-default argument~
+  \verb~follows default argument~.
+  \end{small}\pause
+\item When defining a function all the
+  argument with default values should come at the end.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercise2}
+\label{sec-8}
+
+\begin{itemize}
+\item Redefine the function \texttt{welcome} with a default value of
+  ``Hello'' to the \texttt{greet} argument.\\ 
+  Then, call the function without any arguments.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Keyword arguments examples}
+\label{sec-9}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+legend(['sin(2y)'], loc = 'center')
+
+plot(y, sin(y), 'g', linewidth = 2)
+
+annotate('local max', xy = (1.5, 1))
+
+pie(science.values(),      
+            labels = science.keys())
+\end{lstlisting}
+\end{small}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Built-in functions}
+\label{sec-10}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+Math functions - abs, sin, ....
+ 
+Plot functions - plot, bar, pie ...
+ 
+Boolean functions - and, or, not ...
+\end{lstlisting}
+\end{small}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Classes of functions}
+\label{sec-11}
+
+\lstset{language=Python}
+\begin{small}
+\begin{lstlisting}
+- pylab
+  - plot, bar, contour, boxplot, 
+    errorbar, log, polar, quiver, 
+    semilog
+
+- scipy (modules)
+  - fftpack, stats, linalg, ndimage, 
+    signal, optimize, integrate
+\end{lstlisting}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\label{sec-12}
+
+ In this tutorial, we have learnt to, 
+
+\begin{itemize}
+\item Define functions with default arguments.\pause
+\item Call functions using keyword arguments.\pause
+\item Use the range of functions available in the Python standard library 
+   and the Scientific Computing related packages.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-13.1}
+
+\begin{enumerate}
+\item All arguments of a function cannot have default values.
+ True or False?\pause
+\vspace{3pt} 
+\item The following is a valid function definition. True or False? \pause
+\lstset{language=Python}
+\begin{footnotesize}
+\begin{lstlisting}
+def separator(count=40, char, show=False):
+     if show:
+          print char * count
+     return char * count
+\end{lstlisting}
+\end{footnotesize}
+\seti
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Evaluation}
+\label{sec-13.2}
+
+\begin{enumerate}
+\conti
+\item When calling a function,
+\begin{itemize}
+\item the arguments should always be in the order in which they are defined.\pause
+\item only keyword arguments can be in any order, but should be called
+     at the beginning.\pause
+\item only keyword arguments can be in any order, but should be called at the end.
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solutions}
+\label{sec-14}
+
+\begin{enumerate}
+\item False\pause
+\vspace{12pt}
+\item False\pause
+\vspace{12pt}
+\item Only keyword arguments can be in any order, 
+   but should be called at the end.
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Do you have questions in THIS Spoken Tutorial?
+\item Choose the minute and second where you have the question.
+\item Explain your question briefly.
+\item Someone from the FOSSEE team will answer them. Please visit 
+\end{itemize}
+\begin{center}
+{\color{blue}{http://forums.spoken-tutorial.org/}}
+ \end{center} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Forum to answer questions}
+\begin{itemize}
+\item Questions not related to the Spoken Tutorial?
+\item Do you have general / technical questions on the Software?
+\item Please visit the FOSSEE Forum
+\begin{center}
+{\color{blue}{http://forums.fossee.in/}}
+ \end{center}
+\item Choose the Software and post your question.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Textbook Companion Project}
+\begin{itemize}
+\item The FOSSEE team coordinates coding of solved examples of popular
+  books 
+\item We give honorarium and certificate to those who do this
+\end{itemize}
+For more details, please visit this site:
+\begin{center}
+{\color{blue}{http://tbc-python.fossee.in/}}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\{\color{blue}\url{http://spoken-tutorial.org/NMEICT-Intro}}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{}
+  \begin{center}
+  \textcolor{blue}{\Large THANK YOU!} 
+  \end{center}
+  \end{block}
+\begin{block}{}
+  \begin{center}
+    For more Information, visit our website\\
+    {http://fossee.in/}
+  \end{center}  
+  \end{block}
+\end{frame}
+
+\end{document}

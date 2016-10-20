@@ -1,0 +1,5 @@
+Using python modules
+
+    scipy
+    pylab
+    sys 

@@ -1,0 +1,7 @@
+Getting started with strings
+
+    strings
+        single, double, triple quoted
+    accessing elements
+    show immutability
+    tell that there are methods for manipulation 
